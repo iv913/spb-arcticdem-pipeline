@@ -1,0 +1,628 @@
+     1→#!/usr/bin/env python3
+     2→"""
+     3→============================================================================
+     4→ 01_owner_map.py — семантическое разбиение DEM по объектам OSM (ТЗ 5.1 v2)
+     5→============================================================================
+     6→
+     7→Заменяет "ось ± 8м" на реальную геометрию:
+     8→  1. Обе проезжие части дуальных проспектов (все way с точным именем,
+     9→     БЕЗ выбрасывания веток MultiLineString).
+    10→  2. Ширина каждого way: тег width → lanes×3.25+1.0 → дефолт по классу.
+    11→     Полигоны area:highway используются напрямую, если размечены.
+    12→  3. Бульвар/зелень/деревья (landuse, leisure, natural, tree_row) —
+    13→     ВЫЧИТАЮТСЯ из проезжей части и получают своего владельца.
+    14→  4. Здания (way + multipolygon-relation) с буфером +3м.
+    15→
+    16→Выход — owner map: uint8-растр на сетке DEM (2м), каждому пикселю — владелец:
+    17→  0 other | 1 road (проезжая часть) | 2 sidewalk | 3 green | 4 building(+3м)
+    18→  5 water | + band 2: quality (0 clean, 1 mixed — пиксель на границе владельцев)
+    19→
+    20→QA-выходы (проверить ГЛАЗАМИ до фильтрации):
+    21→  outputs/owner_map.tif           — растр владельцев (2 band)
+    22→  outputs/carriageway.geojson     — полигоны проезжих частей
+    23→  outputs/owner_qa_map.html       — folium: полигоны+растр на спутнике + точки
+    24→  outputs/control_points_qa.csv   — каждая опорная точка: владелец, h_DEM,
+    25→                                    внутри ли патча (чинит "(nodata)"-багу)
+    26→  outputs/owner_qa.json           — числовые метрики
+    27→
+    28→Следующий шаг (отдельный модуль 02): робастная модель h=f(picket)+g(offset)
+    29→по пикселям владельца 1 (road) — здесь только геометрия и разнесение.
+    30→"""
+    31→import json
+    32→import re
+    33→import sys
+    34→from pathlib import Path
+    35→from datetime import datetime
+    36→
+    37→import numpy as np
+    38→import pandas as pd
+    39→import geopandas as gpd
+    40→import rasterio
+    41→from rasterio.features import rasterize
+    42→from rasterio.windows import from_bounds
+    43→from rasterio.warp import transform as warp_transform, transform_bounds
+    44→from shapely.geometry import LineString, Point, Polygon, MultiPolygon, box, shape
+    45→from shapely.ops import unary_union, linemerge
+    46→import requests
+    47→import folium
+    48→
+    49→# ============================================================
+    50→# КОНФИГУРАЦИЯ
+    51→# ============================================================
+    52→HOME = Path('/home/z/my-project')
+    53→UPLOAD = HOME / 'upload'
+    54→CACHE = HOME / 'scripts' / 'dem_cache'
+    55→OUT = HOME / 'download'
+    56→for d in (CACHE / 'osm', OUT):
+    57→    d.mkdir(parents=True, exist_ok=True)
+    58→
+    59→DEM_PATH = CACHE / 'arctic' / 'spb_center_arcticdem.tif'
+    60→UTM = 'EPSG:32636'
+    61→
+    62→MVP_BBOX = (30.20, 59.92, 30.32, 59.95)          # W, S, E, N
+    63→MVP_NAME = "Большой проспект В.О."
+    64→PATCH_MARGIN_M = 60          # запас патча вокруг проезжих частей
+    65→
+    66→LANE_W = 3.25                # м на полосу
+    67→ROAD_EXTRA = 1.0             # лотки/примыкание к бордюру, суммарно на way
+    68→BLD_BUFFER = 3.0             # буфер зданий (стены "наклоняются" в стерео-DSM)
+    69→GREEN_BUFFER = 2.0           # буфер зелени (кроны шире контура)
+    70→TREE_ROW_HALF_W = 4.0        # полуширина полосы деревьев из линии tree_row
+    71→SIDEWALK_W = 2.5             # дефолтная ширина тротуара
+    72→GEOID_FALLBACK = 15.9        # только для QA-колонки h_bs77 в CSV
+    73→
+    74→# дефолтные ЧИСЛА ПОЛОС для одного way, если нет тегов width/lanes.
+    75→# NB: у односторонних way дуальных проспектов lanes задаётся на направление.
+    76→DEFAULT_LANES = {
+    77→    'motorway': 3, 'trunk': 3, 'primary': 3, 'secondary': 2,
+    78→    'tertiary': 2, 'residential': 2, 'unclassified': 2, 'service': 1,
+    79→    'living_street': 1,
+    80→}
+    81→# сервисные классы, которые не считаем проезжей частью объекта
+    82→SKIP_HIGHWAY = {'footway', 'path', 'steps', 'cycleway', 'pedestrian',
+    83→                'platform', 'construction', 'proposed'}
+    84→
+    85→OWNER_CODES = {'other': 0, 'road': 1, 'sidewalk': 2, 'green': 3,
+    86→               'building': 4, 'water': 5}
+    87→OWNER_NAMES = {v: k for k, v in OWNER_CODES.items()}
+    88→OWNER_COLORS = {0: (200, 200, 200), 1: (60, 60, 60), 2: (250, 170, 90),
+    89→                3: (80, 170, 80), 4: (200, 60, 60), 5: (70, 120, 220)}
+    90→
+    91→
+    92→def log(msg):
+    93→    print(f'[{datetime.now():%H:%M:%S}] {msg}', flush=True)
+    94→
+    95→
+    96→# ============================================================
+    97→# OSM: скачивание и разбор
+    98→# ============================================================
+    99→def fetch_osm(bbox):
+   100→    """Highways + area:highway + buildings(way,relation) + green + water."""
+   101→    W, S, E, N = bbox
+   102→    cache = CACHE / 'osm' / 'owner_map_osm.json'
+   103→    if cache.exists():
+   104→        log(f'  OSM из кэша: {cache}')
+   105→        return json.loads(cache.read_text())
+   106→    q = f"""[out:json][timeout:240];
+   107→(
+   108→  way["highway"]({S},{W},{N},{E});
+   109→  way["area:highway"]({S},{W},{N},{E});
+   110→  way["building"]({S},{W},{N},{E});
+   111→  relation["building"]({S},{W},{N},{E});
+   112→  way["landuse"~"^(grass|forest|meadow|village_green|flowerbed)$"]({S},{W},{N},{E});
+   113→  way["leisure"~"^(park|garden|playground|common)$"]({S},{W},{N},{E});
+   114→  way["natural"~"^(water|wood|scrub|tree_row|wetland)$"]({S},{W},{N},{E});
+   115→  relation["natural"="water"]({S},{W},{N},{E});
+   116→  way["waterway"~"^(river|canal|riverbank)$"]({S},{W},{N},{E});
+   117→);
+   118→out geom;"""
+   119→    for url in ('https://maps.mail.ru/osm/tools/overpass/api/interpreter',
+   120→                'https://overpass-api.de/api/interpreter'):
+   121→        try:
+   122→            log(f'  Overpass: {url}')
+   123→            r = requests.post(url, data={'data': q}, timeout=240)
+   124→            if r.status_code == 200 and r.text.strip():
+   125→                data = r.json()
+   126→                cache.write_text(json.dumps(data))
+   127→                log(f'  OK: {len(data.get("elements", []))} элементов, кэш → {cache}')
+   128→                return data
+   129→        except Exception as e:
+   130→            log(f'  ! {e}')
+   131→    log('  ! Overpass недоступен'); return {'elements': []}
+   132→
+   133→
+   134→def _way_line(el):
+   135→    if el.get('type') != 'way' or 'geometry' not in el:
+   136→        return None
+   137→    c = [(p['lon'], p['lat']) for p in el['geometry']]
+   138→    return c if len(c) >= 2 else None
+   139→
+   140→
+   141→def _iter_polygons(el):
+   142→    """Полигоны из way (замкнутый) или multipolygon-relation (outer-члены)."""
+   143→    if el.get('type') == 'way':
+   144→        c = _way_line(el)
+   145→        if c and len(c) >= 4 and c[0] == c[-1]:
+   146→            try:
+   147→                p = Polygon(c)
+   148→                if p.is_valid and p.area > 0:
+   149→                    yield p
+   150→            except Exception:
+   151→                pass
+   152→    elif el.get('type') == 'relation':
+   153→        for m in el.get('members', []):
+   154→            if m.get('role') == 'inner' or 'geometry' not in m:
+   155→                continue
+   156→            c = [(p['lon'], p['lat']) for p in m['geometry']]
+   157→            if len(c) >= 4:
+   158→                if c[0] != c[-1]:
+   159→                    c.append(c[0])
+   160→                try:
+   161→                    p = Polygon(c)
+   162→                    if p.is_valid and p.area > 0:
+   163→                        yield p
+   164→                except Exception:
+   165→                    pass
+   166→
+   167→
+   168→def parse_width_m(tags):
+   169→    """width → метры; поддержка '12', '12.5', '12,5', '12 m'. None если нет."""
+   170→    for key in ('width', 'width:carriageway'):
+   171→        v = tags.get(key)
+   172→        if not v:
+   173→            continue
+   174→        m = re.match(r'^\s*(\d+(?:[.,]\d+)?)\s*(?:m|м)?\s*$', str(v))
+   175→        if m:
+   176→            w = float(m.group(1).replace(',', '.'))
+   177→            if 2.0 <= w <= 60.0:
+   178→                return w
+   179→    return None
+   180→
+   181→
+   182→def way_carriageway_width(tags):
+   183→    """Ширина проезжей части одного way, м."""
+   184→    w = parse_width_m(tags)
+   185→    if w is not None:
+   186→        return w
+   187→    lanes = tags.get('lanes')
+   188→    try:
+   189→        lanes = int(str(lanes).split(';')[0])
+   190→    except (TypeError, ValueError):
+   191→        lanes = None
+   192→    if lanes is None:
+   193→        lanes = DEFAULT_LANES.get(tags.get('highway', ''), 2)
+   194→    return lanes * LANE_W + ROAD_EXTRA
+   195→
+   196→
+   197→# ============================================================
+   198→# Геометрия объекта: ВСЕ проезжие части + справочная ось
+   199→# ============================================================
+   200→def build_object_geometry(osm_data, bbox, object_name):
+   201→    W, S, E, N = bbox
+   202→    log(f'Геометрия объекта: {object_name}')
+   203→
+   204→    def name_match(tags):
+   205→        return tags.get('name', '').strip() == object_name
+   206→
+   207→    def name_match_fuzzy(tags):
+   208→        n = tags.get('name', '')
+   209→        return 'ольшой' in n and ('В.О' in n or 'Васильевск' in n)
+   210→
+   211→    for matcher, label in ((name_match, 'точное имя'),
+   212→                           (name_match_fuzzy, 'fuzzy')):
+   213→        ways, area_polys = [], []
+   214→        for el in osm_data.get('elements', []):
+   215→            tags = el.get('tags', {})
+   216→            if not matcher(tags):
+   217→                continue
+   218→            # площадной контур асфальта, если размечен
+   219→            if tags.get('area:highway') or tags.get('area') == 'yes':
+   220→                for p in _iter_polygons(el):
+   221→                    area_polys.append(p)
+   222→                continue
+   223→            hw = tags.get('highway')
+   224→            if not hw or hw in SKIP_HIGHWAY:
+   225→                continue
+   226→            c = _way_line(el)
+   227→            if not c:
+   228→                continue
+   229→            if any(W <= x <= E and S <= y <= N for x, y in c):
+   230→                ways.append({'line': LineString(c), 'tags': tags})
+   231→        if ways or area_polys:
+   232→            log(f'  Совпадение по "{label}": {len(ways)} way, '
+   233→                f'{len(area_polys)} area:highway')
+   234→            break
+   235→    else:
+   236→        raise RuntimeError(f'В OSM не найдено ни одного way "{object_name}"')
+   237→
+   238→    # --- проезжая часть: union буферов всех way (обе стороны дуали!) ---
+   239→    gdf = gpd.GeoDataFrame(
+   240→        {'geometry': [w['line'] for w in ways],
+   241→         'width': [way_carriageway_width(w['tags']) for w in ways],
+   242→         'highway': [w['tags'].get('highway') for w in ways],
+   243→         'oneway': [w['tags'].get('oneway', 'no') for w in ways],
+   244→         'lanes': [w['tags'].get('lanes') for w in ways],
+   245→         'width_tag': [w['tags'].get('width') for w in ways]},
+   246→        crs='EPSG:4326').to_crs(UTM)
+   247→    log('  Ширины way (м): ' +
+   248→        ', '.join(f'{w:.1f}' for w in sorted(set(round(x, 1) for x in gdf["width"]))))
+   249→
+   250→    # cap_style=2 (flat): буфер не вылезает за торцы way
+   251→    buffers = [geom.buffer(w / 2.0, cap_style=2)
+   252→               for geom, w in zip(gdf.geometry, gdf['width'])]
+   253→    carriageway_utm = unary_union(buffers)
+   254→    if area_polys:
+   255→        ap = gpd.GeoDataFrame({'geometry': area_polys},
+   256→                              crs='EPSG:4326').to_crs(UTM)
+   257→        carriageway_utm = unary_union([carriageway_utm] + list(ap.geometry))
+   258→    log(f'  Проезжая часть: {carriageway_utm.area:.0f} м² '
+   259→        f'({carriageway_utm.area / max(1e-9, gdf.length.sum()):.1f} м '
+   260→        f'средней ширины на суммарную длину)')
+   261→
+   262→    # --- справочная ось для пикетажа (координатная система, НЕ маска) ---
+   263→    merged = linemerge(unary_union(list(gdf.geometry)))
+   264→    n_parts = 1
+   265→    if merged.geom_type == 'MultiLineString':
+   266→        n_parts = len(merged.geoms)
+   267→        axis_utm = max(merged.geoms, key=lambda g: g.length)
+   268→        log(f'  Ось: MultiLineString из {n_parts} веток; самая длинная '
+   269→            f'{axis_utm.length:.0f} м взята как ось пикетажа '
+   270→            f'(маска при этом включает ВСЕ ветки)')
+   271→    else:
+   272→        axis_utm = merged
+   273→        log(f'  Ось: {axis_utm.length:.0f} м')
+   274→
+   275→    # тротуары объекта: footway рядом с проезжей частью
+   276→    sidewalks = []
+   277→    near = carriageway_utm.buffer(20.0)
+   278→    for el in osm_data.get('elements', []):
+   279→        tags = el.get('tags', {})
+   280→        if tags.get('highway') not in ('footway', 'pedestrian', 'path'):
+   281→            continue
+   282→        c = _way_line(el)
+   283→        if not c:
+   284→            continue
+   285→        ls = gpd.GeoSeries([LineString(c)], crs='EPSG:4326').to_crs(UTM).iloc[0]
+   286→        if ls.intersects(near):
+   287→            w = parse_width_m(tags) or SIDEWALK_W
+   288→            sidewalks.append(ls.buffer(w / 2.0, cap_style=2))
+   289→    sidewalk_utm = unary_union(sidewalks) if sidewalks else None
+   290→    log(f'  Тротуары рядом: {len(sidewalks)} way')
+   291→
+   292→    return carriageway_utm, axis_utm, gdf, sidewalk_utm
+   293→
+   294→
+   295→def collect_layers(osm_data):
+   296→    """Здания / зелень / вода со всего bbox (EPSG:4326)."""
+   297→    buildings, greens, waters = [], [], []
+   298→    for el in osm_data.get('elements', []):
+   299→        tags = el.get('tags', {})
+   300→        if 'building' in tags:
+   301→            buildings.extend(_iter_polygons(el))
+   302→            continue
+   303→        if (tags.get('landuse') in {'grass', 'forest', 'meadow',
+   304→                                    'village_green', 'flowerbed'}
+   305→                or tags.get('leisure') in {'park', 'garden', 'playground',
+   306→                                           'common'}
+   307→                or tags.get('natural') in {'wood', 'scrub', 'wetland'}):
+   308→            greens.extend(_iter_polygons(el))
+   309→            continue
+   310→        if tags.get('natural') == 'tree_row':
+   311→            c = _way_line(el)
+   312→            if c:
+   313→                greens.append(('tree_row', LineString(c)))
+   314→            continue
+   315→        if tags.get('natural') == 'water' or \
+   316→                tags.get('waterway') in {'river', 'canal', 'riverbank'}:
+   317→            got = list(_iter_polygons(el))
+   318→            if got:
+   319→                waters.extend(got)
+   320→            else:
+   321→                c = _way_line(el)
+   322→                if c:
+   323→                    waters.append(('line', LineString(c)))
+   324→    log(f'Слои OSM: buildings={len(buildings)}, green={len(greens)}, '
+   325→        f'water={len(waters)}')
+   326→    if len(buildings) == 0:
+   327→        log('  ⚠ НОЛЬ зданий — проверьте Overpass-ответ/кэш, это критично!')
+   328→    return buildings, greens, waters
+   329→
+   330→
+   331→def _to_utm_buffered(items, buffer_m, line_half_w):
+   332→    """Список Polygon | ('tree_row'|'line', LineString) → union в UTM."""
+   333→    geoms = []
+   334→    for it in items:
+   335→        if isinstance(it, tuple):
+   336→            g = gpd.GeoSeries([it[1]], crs='EPSG:4326').to_crs(UTM).iloc[0]
+   337→            geoms.append(g.buffer(line_half_w, cap_style=2))
+   338→        else:
+   339→            g = gpd.GeoSeries([it], crs='EPSG:4326').to_crs(UTM).iloc[0]
+   340→            geoms.append(g.buffer(buffer_m) if buffer_m else g)
+   341→    return unary_union(geoms) if geoms else None
+   342→
+   343→
+   344→# ============================================================
+   345→# Owner map: растеризация на сетке DEM
+   346→# ============================================================
+   347→def rasterize_owners(dem_path, carriageway_utm, sidewalk_utm,
+   348→                     buildings_utm, green_utm, water_utm):
+   349→    log('Растеризация owner map на сетке DEM')
+   350→    with rasterio.open(str(dem_path)) as src:
+   351→        dem_crs = src.crs
+   352→        pad = carriageway_utm.buffer(PATCH_MARGIN_M)
+   353→        pad_dem = gpd.GeoSeries([pad], crs=UTM).to_crs(dem_crs).iloc[0]
+   354→        win = from_bounds(*pad_dem.bounds, src.transform)
+   355→        win = win.round_offsets(op='floor').round_lengths(op='ceil')
+   356→        transform = rasterio.windows.transform(win, src.transform)
+   357→        H = int(win.height)
+   358→        Wd = int(win.width)
+   359→        dem = src.read(1, window=win).astype('float32')
+   360→        if src.nodata is not None:
+   361→            dem[dem == src.nodata] = np.nan
+   362→    log(f'  Патч: {Wd}×{H} px (2м)')
+   363→
+   364→    def to_dem(geom):
+   365→        if geom is None or geom.is_empty:
+   366→            return []
+   367→        g = gpd.GeoSeries([geom], crs=UTM).to_crs(dem_crs).iloc[0]
+   368→        return [g]
+   369→
+   370→    owner = np.zeros((H, Wd), dtype='uint8')  # 0 = other
+   371→    # приоритет снизу вверх: следующая растеризация ПЕРЕЗАПИСЫВАЕТ предыдущую
+   372→    layers = [
+   373→        ('sidewalk', to_dem(sidewalk_utm)),
+   374→        ('road',     to_dem(carriageway_utm)),
+   375→        ('green',    to_dem(green_utm)),      # бульвар режет проезжую часть
+   376→        ('water',    to_dem(water_utm)),
+   377→        ('building', to_dem(buildings_utm)),  # здания — высший приоритет
+   378→    ]
+   379→    for name, geoms in layers:
+   380→        if not geoms:
+   381→            continue
+   382→        m = rasterize([(g, 1) for g in geoms], out_shape=(H, Wd),
+   383→                      transform=transform, fill=0, all_touched=True,
+   384→                      dtype='uint8')
+   385→        owner[m == 1] = OWNER_CODES[name]
+   386→
+   387→    # mixed: пиксель, у которого 4-сосед другого владельца (бордюр/стена)
+   388→    mixed = np.zeros_like(owner, dtype=bool)
+   389→    for dy, dx in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+   390→        nb = np.roll(owner, (dy, dx), axis=(0, 1))
+   391→        if dy == -1: nb[0, :] = owner[0, :]
+   392→        if dy == 1:  nb[-1, :] = owner[-1, :]
+   393→        if dx == -1: nb[:, 0] = owner[:, 0]
+   394→        if dx == 1:  nb[:, -1] = owner[:, -1]
+   395→        mixed |= (nb != owner)
+   396→    quality = mixed.astype('uint8')  # 0 clean, 1 mixed
+   397→
+   398→    counts = {OWNER_NAMES[c]: int((owner == c).sum())
+   399→              for c in np.unique(owner)}
+   400→    road_clean = int(((owner == OWNER_CODES['road']) & ~mixed).sum())
+   401→    log(f'  Владельцы (px): {counts}')
+   402→    log(f'  road clean (без границ): {road_clean:,} px '
+   403→        f'= {road_clean * 4 / 1e4:.2f} га')
+   404→
+   405→    out_path = OUT / 'owner_map.tif'
+   406→    prof = {'driver': 'GTiff', 'dtype': 'uint8', 'count': 2, 'crs': dem_crs,
+   407→            'transform': transform, 'width': Wd, 'height': H,
+   408→            'compress': 'deflate', 'nodata': None}
+   409→    with rasterio.open(str(out_path), 'w', **prof) as dst:
+   410→        dst.write(owner, 1)
+   411→        dst.write(quality, 2)
+   412→        dst.set_band_description(1, 'owner: 0 other 1 road 2 sidewalk '
+   413→                                    '3 green 4 building 5 water')
+   414→        dst.set_band_description(2, 'quality: 0 clean, 1 mixed boundary')
+   415→    log(f'  ✓ {out_path}')
+   416→    return owner, quality, dem, transform, dem_crs, counts, road_clean
+   417→
+   418→
+   419→# ============================================================
+   420→# Опорные точки: правильное сэмплирование (чинит "(nodata)")
+   421→# ============================================================
+   422→def load_control_points():
+   423→    pts = []
+   424→    path = UPLOAD / 'Отметки.txt'
+   425→    if not path.exists():
+   426→        log(f'  ! Нет {path}')
+   427→        return pd.DataFrame(columns=['lat', 'lon', 'h_pas'])
+   428→    for raw in open(path, encoding='utf-8'):
+   429→        line = raw.strip()
+   430→        if not line or ':' not in line:
+   431→            continue
+   432→        l, r = line.split(':', 1)
+   433→        m = re.match(r'^(\d+[.,]\d+)\s*,\s*(\d+[.,]\d+)$', l.strip())
+   434→        if not m:
+   435→            continue
+   436→        lat = float(m.group(1).replace(',', '.'))
+   437→        lon = float(m.group(2).replace(',', '.'))
+   438→        m2 = re.match(r'^(-?\d+[.,]?\d*)', r.strip())
+   439→        if not m2:
+   440→            continue
+   441→        pts.append({'lat': lat, 'lon': lon,
+   442→                    'h_pas': float(m2.group(1).replace(',', '.'))})
+   443→    return pd.DataFrame(pts)
+   444→
+   445→
+   446→def sample_control_points(cp, dem, owner, quality, transform, dem_crs,
+   447→                          carriageway_utm):
+   448→    """Каждой точке: row/col, h_DEM, владелец, качество, расстояние до дороги.
+   449→    Это диагностический CSV — по нему видно, почему точка (не)валидна."""
+   450→    log('Сэмплирование опорных точек на owner map')
+   451→    if cp.empty:
+   452→        return cp
+   453→    xs, ys = warp_transform('EPSG:4326', dem_crs,
+   454→                            cp['lon'].tolist(), cp['lat'].tolist())
+   455→    inv = ~transform
+   456→    rows, cols, hdem, own, qual = [], [], [], [], []
+   457→    for x, y in zip(xs, ys):
+   458→        fc, fr = inv * (x, y)
+   459→        r, c = int(np.floor(fr)), int(np.floor(fc))
+   460→        rows.append(r); cols.append(c)
+   461→        if 0 <= r < dem.shape[0] and 0 <= c < dem.shape[1]:
+   462→            v = dem[r, c]
+   463→            hdem.append(float(v) if np.isfinite(v) else np.nan)
+   464→            own.append(OWNER_NAMES[int(owner[r, c])])
+   465→            qual.append(int(quality[r, c]))
+   466→        else:
+   467→            hdem.append(np.nan); own.append('out_of_patch'); qual.append(-1)
+   468→    cp = cp.copy()
+   469→    cp['row'], cp['col'] = rows, cols
+   470→    cp['h_dem_ell'] = hdem
+   471→    cp['h_dem_bs77'] = cp['h_dem_ell'] - GEOID_FALLBACK
+   472→    cp['owner'] = own
+   473→    cp['mixed'] = qual
+   474→    pts_utm = gpd.GeoDataFrame(
+   475→        cp, geometry=gpd.points_from_xy(cp['lon'], cp['lat']),
+   476→        crs='EPSG:4326').to_crs(UTM)
+   477→    cp['dist_to_road_m'] = pts_utm.geometry.distance(carriageway_utm).values
+   478→    cp['dH_raw'] = cp['h_dem_bs77'] - cp['h_pas']
+   479→
+   480→    n_in = int((cp['owner'] != 'out_of_patch').sum())
+   481→    n_road = int((cp['owner'] == 'road').sum())
+   482→    n_valid = int(np.isfinite(cp['h_dem_ell']).sum())
+   483→    log(f'  Всего точек: {len(cp)}; в патче: {n_in}; с валидной h_DEM: '
+   484→        f'{n_valid}; владелец=road: {n_road}')
+   485→    if n_valid:
+   486→        sub = cp[np.isfinite(cp['dH_raw'])]
+   487→        log(f'  dH_raw (DEM-BS77 − паспорт): median='
+   488→            f'{sub["dH_raw"].median():+.2f}м, '
+   489→            f'IQR=[{sub["dH_raw"].quantile(.25):+.2f}, '
+   490→            f'{sub["dH_raw"].quantile(.75):+.2f}]')
+   491→    csv_path = OUT / 'control_points_qa.csv'
+   492→    cp.drop(columns='geometry', errors='ignore').to_csv(csv_path, index=False)
+   493→    log(f'  ✓ {csv_path}')
+   494→    return cp
+   495→
+   496→
+   497→# ============================================================
+   498→# QA-карта
+   499→# ============================================================
+   500→def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
+   501→           cp, green_utm, buildings_utm):
+   502→    log('QA-карта')
+   503→    import io, base64
+   504→    from PIL import Image
+   505→
+   506→    # owner → RGBA (mixed полупрозрачнее)
+   507→    rgba = np.zeros((*owner.shape, 4), dtype='uint8')
+   508→    for code, col in OWNER_COLORS.items():
+   509→        m = owner == code
+   510→        rgba[m, 0], rgba[m, 1], rgba[m, 2] = col
+   511→        rgba[m, 3] = 90 if code == 0 else 170
+   512→    rgba[quality == 1, 3] = np.minimum(rgba[quality == 1, 3], 90)
+   513→
+   514→    # bounds патча в 4326
+   515→    H, Wd = owner.shape
+   516→    xs = [transform.c, transform.c + transform.a * Wd]
+   517→    ys = [transform.f, transform.f + transform.e * H]
+   518→    w4, s4, e4, n4 = transform_bounds(dem_crs, 'EPSG:4326',
+   519→                                      min(xs), min(ys), max(xs), max(ys))
+   520→    buf = io.BytesIO()
+   521→    Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
+   522→    b64 = base64.b64encode(buf.getvalue()).decode()
+   523→
+   524→    cw_4326 = gpd.GeoSeries([carriageway_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
+   525→    ax_4326 = gpd.GeoSeries([axis_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
+   526→
+   527→    m = folium.Map(location=[(s4 + n4) / 2, (w4 + e4) / 2], zoom_start=15,
+   528→                   control_scale=True, tiles=None)
+   529→    folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(m)
+   530→    folium.TileLayer(
+   531→        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/'
+   532→              'World_Imagery/MapServer/tile/{z}/{y}/{x}',
+   533→        attr='Esri', name='Спутник', max_zoom=19, show=True).add_to(m)
+   534→    folium.raster_layers.ImageOverlay(
+   535→        image=f'data:image/png;base64,{b64}',
+   536→        bounds=[[s4, w4], [n4, e4]], opacity=0.65,
+   537→        name='Owner map (сер=other, тёмн=road, оранж=sidewalk, зел=green, '
+   538→             'красн=building, син=water)').add_to(m)
+   539→    folium.GeoJson(cw_4326.__geo_interface__, name='Проезжая часть (полигон)',
+   540→                   style_function=lambda x: {'color': 'yellow', 'weight': 2,
+   541→                                             'fillOpacity': 0}).add_to(m)
+   542→    folium.GeoJson(ax_4326.__geo_interface__, name='Ось пикетажа',
+   543→                   style_function=lambda x: {'color': 'magenta',
+   544→                                             'weight': 3}).add_to(m)
+   545→    if cp is not None and not cp.empty:
+   546→        for _, p in cp.iterrows():
+   547→            if p['owner'] == 'out_of_patch':
+   548→                continue
+   549→            col = {'road': 'green', 'sidewalk': 'lightgreen',
+   550→                   'other': 'orange'}.get(p['owner'], 'red')
+   551→            folium.CircleMarker(
+   552→                [p['lat'], p['lon']], radius=5, color='white', weight=1,
+   553→                fill=True, fill_color=col, fill_opacity=0.9,
+   554→                popup=folium.Popup(
+   555→                    f"h_pas={p['h_pas']:.2f}<br>owner={p['owner']}"
+   556→                    f"<br>h_dem_bs77={p['h_dem_bs77']:.2f}"
+   557→                    f"<br>dH_raw={p['dH_raw']:+.2f}"
+   558→                    f"<br>до дороги {p['dist_to_road_m']:.0f}м",
+   559→                    max_width=260)).add_to(m)
+   560→    folium.LayerControl(collapsed=False).add_to(m)
+   561→    path = OUT / 'owner_qa_map.html'
+   562→    m.save(str(path))
+   563→    log(f'  ✓ {path}')
+   564→
+   565→    gpd.GeoDataFrame({'geometry': [cw_4326]}, crs='EPSG:4326').to_file(
+   566→        OUT / 'carriageway.geojson', driver='GeoJSON')
+   567→    log(f'  ✓ {OUT / "carriageway.geojson"}')
+   568→
+   569→
+   570→# ============================================================
+   571→# MAIN
+   572→# ============================================================
+   573→def main():
+   574→    log('=' * 60)
+   575→    log('01_owner_map: семантическое разбиение DEM по OSM')
+   576→    log('=' * 60)
+   577→    if not DEM_PATH.exists():
+   578→        log(f'ERROR: нет DEM {DEM_PATH}'); sys.exit(1)
+   579→
+   580→    osm = fetch_osm(MVP_BBOX)
+   581→    carriageway, axis, ways_gdf, sidewalk = build_object_geometry(
+   582→        osm, MVP_BBOX, MVP_NAME)
+   583→    buildings, greens, waters = collect_layers(osm)
+   584→    buildings_utm = _to_utm_buffered(buildings, BLD_BUFFER, 0)
+   585→    green_utm = _to_utm_buffered(greens, GREEN_BUFFER, TREE_ROW_HALF_W)
+   586→    water_utm = _to_utm_buffered(waters, 0.0, 10.0)
+   587→
+   588→    (owner, quality, dem, transform, dem_crs,
+   589→     counts, road_clean) = rasterize_owners(
+   590→        DEM_PATH, carriageway, sidewalk, buildings_utm, green_utm, water_utm)
+   591→
+   592→    cp = load_control_points()
+   593→    cp = sample_control_points(cp, dem, owner, quality, transform, dem_crs,
+   594→                               carriageway)
+   595→
+   596→    qa_map(owner, quality, transform, dem_crs, carriageway, axis,
+   597→           cp, green_utm, buildings_utm)
+   598→
+   599→    qa = {
+   600→        'object': MVP_NAME,
+   601→        'n_ways': int(len(ways_gdf)),
+   602→        'axis_len_m': float(axis.length),
+   603→        'carriageway_area_m2': float(carriageway.area),
+   604→        'owner_px': counts,
+   605→        'road_clean_px': road_clean,
+   606→        'green_cuts_road': bool(green_utm is not None and
+   607→                                green_utm.intersects(carriageway)),
+   608→        'checks': {
+   609→            'маска на асфальте, не на бульваре':
+   610→                'открыть owner_qa_map.html на спутнике: тёмное = road '
+   611→                'должно лежать на проезжих частях ПО ОБЕ стороны бульвара',
+   612→            'обе стороны дуали': 'жёлтый полигон должен покрывать обе '
+   613→                'проезжие части по всей длине',
+   614→            'точки': 'в control_points_qa.csv точки с owner=road и '
+   615→                'dist_to_road_m<5 — рабочий набор для калибровки',
+   616→        },
+   617→    }
+   618→    (OUT / 'owner_qa.json').write_text(
+   619→        json.dumps(qa, ensure_ascii=False, indent=2))
+   620→    log(f'  ✓ {OUT / "owner_qa.json"}')
+   621→    log('')
+   622→    log('ГОТОВО. Проверить глазами owner_qa_map.html, затем модуль 02 '
+   623→        '(робастная реконструкция по владельцу road).')
+   624→
+   625→
+   626→if __name__ == '__main__':
+   627→    main()
+   628→

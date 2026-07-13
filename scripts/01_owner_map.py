@@ -503,13 +503,20 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
     import io, base64
     from PIL import Image
 
-    # owner → RGBA (mixed полупрозрачнее)
+    # owner → RGBA. "other" полностью прозрачен, чтобы не заливать спутник.
+    # meaningful owners — насыщенные и непрозрачные, mixed пиксели чуть прозрачнее.
+    # Цель: на спутнике должно быть чётко видно, где road / green / building.
     rgba = np.zeros((*owner.shape, 4), dtype='uint8')
     for code, col in OWNER_COLORS.items():
         m = owner == code
         rgba[m, 0], rgba[m, 1], rgba[m, 2] = col
-        rgba[m, 3] = 90 if code == 0 else 170
-    rgba[quality == 1, 3] = np.minimum(rgba[quality == 1, 3], 90)
+        if code == 0:
+            rgba[m, 3] = 0           # other — не рисуем, видим спутник
+        else:
+            rgba[m, 3] = 230         # владельцы — почти непрозрачные
+    # mixed (boundary) — полупрозрачно, чтобы видеть "шов"
+    rgba[quality == 1, 3] = np.minimum(rgba[quality == 1, 3].astype(int), 110)\
+                                .astype('uint8')
 
     # bounds патча в 4326
     H, Wd = owner.shape
@@ -524,7 +531,10 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
     cw_4326 = gpd.GeoSeries([carriageway_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
     ax_4326 = gpd.GeoSeries([axis_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
 
-    m = folium.Map(location=[(s4 + n4) / 2, (w4 + e4) / 2], zoom_start=15,
+    # Легенда по точкам пути
+    center_lat = (s4 + n4) / 2
+    center_lon = (w4 + e4) / 2
+    m = folium.Map(location=[center_lat, center_lon], zoom_start=15,
                    control_scale=True, tiles=None)
     folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(m)
     folium.TileLayer(
@@ -533,12 +543,13 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
         attr='Esri', name='Спутник', max_zoom=19, show=True).add_to(m)
     folium.raster_layers.ImageOverlay(
         image=f'data:image/png;base64,{b64}',
-        bounds=[[s4, w4], [n4, e4]], opacity=0.65,
-        name='Owner map (сер=other, тёмн=road, оранж=sidewalk, зел=green, '
+        bounds=[[s4, w4], [n4, e4]], opacity=0.95,
+        name='Owner map (тёмн=road, оранж=sidewalk, зел=green, '
              'красн=building, син=water)').add_to(m)
     folium.GeoJson(cw_4326.__geo_interface__, name='Проезжая часть (полигон)',
-                   style_function=lambda x: {'color': 'yellow', 'weight': 2,
-                                             'fillOpacity': 0}).add_to(m)
+                   style_function=lambda x: {'color': 'yellow', 'weight': 3,
+                                             'fillOpacity': 0,
+                                             'dashArray': '5,3'}).add_to(m)
     folium.GeoJson(ax_4326.__geo_interface__, name='Ось пикетажа',
                    style_function=lambda x: {'color': 'magenta',
                                              'weight': 3}).add_to(m)
@@ -546,17 +557,20 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
         for _, p in cp.iterrows():
             if p['owner'] == 'out_of_patch':
                 continue
-            col = {'road': 'green', 'sidewalk': 'lightgreen',
-                   'other': 'orange'}.get(p['owner'], 'red')
+            col = {'road': 'lime', 'sidewalk': 'yellow',
+                   'other': 'orange', 'green': 'green',
+                   'building': 'red', 'water': 'cyan'}.get(p['owner'], 'white')
             folium.CircleMarker(
-                [p['lat'], p['lon']], radius=5, color='white', weight=1,
-                fill=True, fill_color=col, fill_opacity=0.9,
+                [p['lat'], p['lon']], radius=6, color='white', weight=2,
+                fill=True, fill_color=col, fill_opacity=0.95,
                 popup=folium.Popup(
                     f"h_pas={p['h_pas']:.2f}<br>owner={p['owner']}"
                     f"<br>h_dem_bs77={p['h_dem_bs77']:.2f}"
                     f"<br>dH_raw={p['dH_raw']:+.2f}"
                     f"<br>до дороги {p['dist_to_road_m']:.0f}м",
                     max_width=260)).add_to(m)
+    # Авто-fit по bounds патча, чтобы сразу видеть весь кусок
+    m.fit_bounds([[s4, w4], [n4, e4]])
     folium.LayerControl(collapsed=False).add_to(m)
     path = OUT / 'owner_qa_map.html'
     m.save(str(path))
