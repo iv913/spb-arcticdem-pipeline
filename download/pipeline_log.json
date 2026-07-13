@@ -1,0 +1,249 @@
+{
+  "start": "2026-07-13T10:27:01.339264",
+  "steps": [
+    {
+      "t": "10:27:01",
+      "msg": "============================================================"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "PIPELINE rev 5: MVP Большой пр. В.О."
+    },
+    {
+      "t": "10:27:01",
+      "msg": "Geoid: 15.9м, Pixel: 2.0м"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "============================================================"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "2.1: Проверка покрытия ArcticDEM"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "  ✓ ArcticDEM: 5957×6798 px, 2м/px, CRS=EPSG:3413"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "  Coverage: W=30.1606 S=59.8753 E=30.4389 N=60.0046"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "  ✓ MVP bbox inside coverage"
+    },
+    {
+      "t": "10:27:01",
+      "msg": "2.2: Проверка датума"
+    },
+    {
+      "t": "10:27:02",
+      "msg": "  ATL08 water: 755 pts, h_te median=16.21м (ell)"
+    },
+    {
+      "t": "10:27:02",
+      "msg": "  Water BS-77 = 0.3м → geoid offset = 15.91м"
+    },
+    {
+      "t": "10:27:02",
+      "msg": "  h_unc median = 0.087м (высокая точность)"
+    },
+    {
+      "t": "10:27:02",
+      "msg": "  ✓ Datum OK: GEOID = 15.9м"
+    },
+    {
+      "t": "10:27:02",
+      "msg": "5.1: Геометрия объекта (Большой пр. В.О.)"
+    },
+    {
+      "t": "10:27:03",
+      "msg": "  Highways: 37"
+    },
+    {
+      "t": "10:27:03",
+      "msg": "  Center line: 492m"
+    },
+    {
+      "t": "10:27:03",
+      "msg": "  Road polygon: 4994 m²"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Buildings: 20669"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "5.2: Фильтрация ground pixels"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  DEM patch: 73×252 px (2м/px)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  DEM range (ell): [18.7, 38.9]"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Road pixels: 1,670"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Buildings near road: 29"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  SCL pass: 18396/18396 (100%)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  NDVI < 0.4: 18396/18396 (100%)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Combined: 1,623 (97.2% of road)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Percentile filter (p=10, w=15м=7px)..."
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Candidates: 169"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Slope constraint (max=0.06 м/м)..."
+    },
+    {
+      "t": "10:27:05",
+      "msg": "    Iter 1: -77, 92 remain"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Final ground: 92 (5.5% of road)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Picketage..."
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Ground points: 92"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Picket: [0, 432]m"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  h_bs77: [3.80, 7.12]"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "5.3: Калибровка по опорным точкам"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Passport within 200m: 2"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Calibration: 2, Holdout: 0"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Cal dH: median=+1.162, RMSE=1.162м"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "5.4: Интерполяция (пикетаж + сплайн)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Bins: 34 (5.0m each)"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  h_median: [3.90, 7.12]"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Spline: [3.85, 6.23]"
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Building 2D surface (all road pixels)..."
+    },
+    {
+      "t": "10:27:05",
+      "msg": "  Cleaned: 1,670 px"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  Profile plot: /home/z/my-project/download/profile.png"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "5.5: Валидация"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  ⚠ No holdout points"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "5.6: Сборка результата"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  ✓ DEM: /home/z/my-project/download/cleaned_dem.tif (0.0 MB, 2м/px)"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  QA: needs_review (RMSE=None)"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "8: Карта затопления"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  DEM 4326: (76, 293) → (76, 293) (factor 1)"
+    },
+    {
+      "t": "10:27:06",
+      "msg": "  ✓ Map: /home/z/my-project/download/flood_map.html (0.2 MB)"
+    }
+  ],
+  "end": "2026-07-13T10:27:06.412649",
+  "qa": {
+    "object_id": "bolshoy_pr_vo",
+    "name": "Большой пр. В.О.",
+    "object_type": "road",
+    "geometry_source": "osm",
+    "n_pixels_total": 1670,
+    "n_pixels_retained_as_ground": 92,
+    "pct_retained": 5.508982035928144,
+    "n_control_points": 2,
+    "n_holdout": 0,
+    "rmse_holdout_m": null,
+    "mae_holdout_m": null,
+    "qa_flag": "needs_review",
+    "geoid_offset_m": 15.9,
+    "filter_params": {
+      "low_percentile": 10,
+      "window_m": 15,
+      "max_slope": 0.06,
+      "tolerance_m": 0.3,
+      "ndvi_max": 0.4
+    },
+    "profile_range_m": [
+      3.848869915558133,
+      6.231889238982107
+    ],
+    "profile_length_m": 430.09219948923635
+  }
+}

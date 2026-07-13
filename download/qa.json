@@ -1,0 +1,27 @@
+{
+  "object_id": "bolshoy_pr_vo",
+  "name": "Большой пр. В.О.",
+  "object_type": "road",
+  "geometry_source": "osm",
+  "n_pixels_total": 1670,
+  "n_pixels_retained_as_ground": 92,
+  "pct_retained": 5.508982035928144,
+  "n_control_points": 2,
+  "n_holdout": 0,
+  "rmse_holdout_m": null,
+  "mae_holdout_m": null,
+  "qa_flag": "needs_review",
+  "geoid_offset_m": 15.9,
+  "filter_params": {
+    "low_percentile": 10,
+    "window_m": 15,
+    "max_slope": 0.06,
+    "tolerance_m": 0.3,
+    "ndvi_max": 0.4
+  },
+  "profile_range_m": [
+    3.848869915558133,
+    6.231889238982107
+  ],
+  "profile_length_m": 430.09219948923635
+}
