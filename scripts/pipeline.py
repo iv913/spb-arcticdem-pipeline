@@ -19,7 +19,8 @@ MVP: Большой проспект В.О. (этап 1, раздел 9).
     - RBF по пасп. точкам = переобучение (DSM-эффект)
   rev 4: без RBF, h=h_ell-15.9
     - правильный datum, но без объектной фильтрации
-  rev 5 (этот): ПОЛНАЯ реализация ТЗ
+  rev 6: linemerge + exact name + no round + dual-layer map
+  rev 5: ПОЛНАЯ реализация ТЗ
     - 5.1: OSM geometry + buffer + center line
     - 5.2: percentile_filter + slope + SCL + NDVI + buildings
     - 5.3: calibration (holdout 25%)
@@ -149,7 +150,10 @@ def check_datum():
 # 5.1 Подготовка геометрии объекта
 # ============================================================
 def prepare_geometry(bbox, object_name=""):
-    """Скачать OSM highways для bbox, найти осевую линию, создать полигон дороги."""
+    """Скачать OSM highways, найти осевую линию, создать полигон дороги.
+
+    rev 6: точное имя + linemerge + QA map
+    """
     log(f'5.1: Геометрия объекта ({object_name})')
 
     W, S, E, N = bbox
@@ -173,59 +177,57 @@ def prepare_geometry(bbox, object_name=""):
         else:
             osm_data = {'elements': []}
 
-    # Find target highway by name
+    # 1. ТОЧНЫЙ фильтр по имени
     highways = []
     for el in osm_data.get('elements', []):
-        if el.get('type') != 'way' or 'geometry' not in el:
-            continue
+        if el.get('type') != 'way' or 'geometry' not in el: continue
         tags = el.get('tags', {})
-        name = tags.get('name', '')
+        name = tags.get('name', '').strip()
         coords = [(p['lon'], p['lat']) for p in el['geometry']]
-        if len(coords) < 2:
-            continue
-        # Filter by name if specified
-        if object_name and 'ольшой' in name and ('асиль' in name or 'В.О' in name):
-            highways.append(LineString(coords))
+        if len(coords) < 2: continue
+        if object_name and name == object_name:
+            if any(W <= c[0] <= E and S <= c[1] <= N for c in coords):
+                highways.append(LineString(coords))
         elif not object_name:
             highways.append(LineString(coords))
+    log(f'  Highways (exact name): {len(highways)}')
 
     if not highways:
-        # Fallback: all highways in bbox
-        log('  ! Target not found, using all highways')
+        log('  ! No exact match, fallback to substring')
         for el in osm_data.get('elements', []):
-            if el.get('type') == 'way' and 'geometry' in el:
-                coords = [(p['lon'], p['lat']) for p in el['geometry']]
-                if len(coords) >= 2:
+            if el.get('type') != 'way' or 'geometry' not in el: continue
+            name = el.get('tags', {}).get('name', '')
+            coords = [(p['lon'], p['lat']) for p in el['geometry']]
+            if len(coords) < 2: continue
+            if 'ольшой' in name and 'В.О' in name:
+                if any(W <= c[0] <= E and S <= c[1] <= N for c in coords):
                     highways.append(LineString(coords))
 
-    log(f'  Highways: {len(highways)}')
-
-    # Merge into single center line (UTM)
+    # 2. linemerge (топологическая склейка, не unary_union!)
+    from shapely.ops import linemerge
     hw_gdf = gpd.GeoDataFrame({'geometry': highways}, crs='EPSG:4326').to_crs(UTM)
-    merged = unary_union(hw_gdf.geometry.tolist())
+    merged = linemerge(unary_union(hw_gdf.geometry.tolist()))
     if merged.geom_type == 'MultiLineString':
+        n_parts = len(merged.geoms)
+        log(f'  ⚠ MultiLineString: {n_parts} parts, taking longest')
         merged = max(merged.geoms, key=lambda g: g.length)
-
     log(f'  Center line: {merged.length:.0f}m')
 
-    # Road polygon: buffer → erode (убрать бордюры/стены)
+    # Road polygon
     road_poly = merged.buffer(ROAD_BUFFER).buffer(-ROAD_ERODE)
-    log(f'  Road polygon: {road_poly.area:.0f} m²')
+    log(f'  Road area: {road_poly.area:.0f} m2')
 
-    # Load buildings for mask
+    # Buildings
     bld_polys = []
     for el in osm_data.get('elements', []):
-        if 'building' not in el.get('tags', {}):
-            continue
-        if el.get('type') != 'way' or 'geometry' not in el:
-            continue
+        if 'building' not in el.get('tags', {}): continue
+        if el.get('type') != 'way' or 'geometry' not in el: continue
         coords = [(p['lon'], p['lat']) for p in el['geometry']]
         if len(coords) >= 4 and coords[0] == coords[-1]:
             bld_polys.append(Polygon(coords))
     log(f'  Buildings: {len(bld_polys)}')
 
     return merged, road_poly, bld_polys, osm_data
-
 
 # ============================================================
 # 5.2 Фильтрация ground pixels
@@ -256,7 +258,7 @@ def filter_ground(dem_path, center_line_utm, road_poly_utm, bld_polys, geoid):
 
         # Window covering road polygon
         bounds = road_poly_dem.bounds
-        win = from_bounds(*bounds, src.transform).round_offsets().round_lengths()
+        win = from_bounds(*bounds, src.transform)  # NO round — exact bounds
         dem_patch = src.read(1, window=win).astype('float32')
         if nodata is not None:
             dem_patch[dem_patch == nodata] = np.nan
@@ -598,147 +600,136 @@ def merge_result(dem_patch, cleaned, road_mask, ground_mask, win_transform, geoi
 # ============================================================
 # 8. Карта затопления
 # ============================================================
-def flood_map(merged_arr, win_transform, dem_crs, geoid, df_cal, road_mask):
-    """Создать интерактивную карту с DEM overlay + flood levels."""
-    log('8: Карта затопления')
+def flood_map(dem_patch, cleaned, ground_mask, road_mask, win_transform,
+               geoid, dem_crs, center_line_dem, road_poly_dem, road_poly_utm):
+    """Карта: v1 (raw DEM) + v2 (cleaned) + road polygon + passport points."""
+    log('8: Карта (v1 raw + v2 cleaned)')
 
-    # Reproject to EPSG:4326 for folium (сохраняя 2м пиксели в исходном,
-    # но для folium уменьшаем до ~500px)
-    from rasterio.warp import calculate_default_transform
-    tmp_4326 = CACHE / 'merged_4326.tif'
-    with rasterio.open(str(OUT / 'cleaned_dem.tif')) as src:
-        t, w, h = calculate_default_transform(src.crs, 'EPSG:4326', src.width, src.height, *src.bounds)
-        arr4 = np.full((h, w), -9999, dtype='float32')
-        reproject(source=rasterio.band(src, 1), destination=arr4,
-                  src_transform=src.transform, src_crs=src.crs,
-                  dst_transform=t, dst_crs='EPSG:4326',
-                  resampling=Resampling.bilinear, src_nodata=-9999, dst_nodata=-9999)
-        p4 = src.profile.copy()
-        p4.update({'crs': 'EPSG:4326', 'transform': t, 'width': w, 'height': h})
-        with rasterio.open(str(tmp_4326), 'w', **p4) as d:
-            d.write(arr4, 1)
+    # Road polygon in 4326
+    road_4326 = gpd.GeoDataFrame({'geometry': [road_poly_utm]}, crs=UTM).to_crs('EPSG:4326').geometry.iloc[0]
+    w4326, s4326, e4326, n4326 = road_4326.bounds
 
-    with rasterio.open(str(tmp_4326)) as src:
-        dem4 = src.read(1).astype('float32')
-        dem4[dem4 == -9999] = np.nan
-        bounds = [[src.bounds.bottom, src.bounds.left], [src.bounds.top, src.bounds.right]]
+    # Reproject to 4326 with exact 2m pixel size
+    lat_ref = (s4326 + n4326) / 2
+    px_lon = 2.0 / (111320 * np.cos(np.radians(lat_ref)))
+    px_lat = 2.0 / 111320
+    dst_w = int((e4326 - w4326) / px_lon) + 1
+    dst_h = int((n4326 - s4326) / px_lat) + 1
+    from rasterio.transform import from_origin
+    dst_transform = from_origin(w4326, n4326, px_lon, px_lat)
+    log(f'  Dst: {dst_w}x{dst_h} px, ~2m/px')
 
-    # Subsample for folium (keep detail but reduce file size)
-    max_dim = 600
-    factor = max(1, max(dem4.shape) // max_dim)
-    dem4_small = dem4[::factor, ::factor]
-    log(f'  DEM 4326: {dem4.shape} → {dem4_small.shape} (factor {factor})')
+    # Reproject raw DEM
+    raw_4326 = np.full((dst_h, dst_w), -9999, dtype='float32')
+    reproject(source=dem_patch, destination=raw_4326,
+              src_transform=win_transform, src_crs=dem_crs,
+              dst_transform=dst_transform, dst_crs='EPSG:4326',
+              resampling=Resampling.bilinear, src_nodata=np.nan, dst_nodata=-9999)
+    raw_4326 = raw_4326.astype('float32')
+    raw_valid = raw_4326 != -9999
+    raw_4326[raw_valid] -= geoid
+
+    # Reproject cleaned
+    clean_4326 = np.full((dst_h, dst_w), -9999, dtype='float32')
+    reproject(source=cleaned, destination=clean_4326,
+              src_transform=win_transform, src_crs=dem_crs,
+              dst_transform=dst_transform, dst_crs='EPSG:4326',
+              resampling=Resampling.bilinear, src_nodata=np.nan, dst_nodata=-9999)
+    clean_4326 = clean_4326.astype('float32')
+
+    # Road mask in 4326
+    road_mask_4326 = ~geometry_mask([road_4326.__geo_interface__],
+                                    transform=dst_transform, out_shape=(dst_h, dst_w), all_touched=True)
 
     # RGBA overlays
-    def make_rgba(arr, vmin=0, vmax=8, alpha=180):
-        norm = mcolors.Normalize(vmin=vmin, vmax=vmax, clip=True)
-        cmap = plt.get_cmap('terrain')
-        valid = np.isfinite(arr) & (arr > -1000)
+    vmin, vmax = 0, 8
+    norm = mcolors.Normalize(vmin=vmin, vmax=vmax, clip=True)
+    cmap = plt.get_cmap('terrain')
+
+    def make_rgba(arr, mask=None, alpha=180):
         rgba = np.zeros((*arr.shape, 4), dtype=np.uint8)
-        if valid.any():
-            colors = cmap(norm(arr[valid]))
-            rgba[valid] = (colors * 255).astype(np.uint8)
-            rgba[valid, 3] = alpha
+        if mask is None: m = (arr != -9999) & np.isfinite(arr)
+        else: m = mask & (arr != -9999) & np.isfinite(arr)
+        if m.any():
+            colors = cmap(norm(arr[m]))
+            rgba[m] = (colors * 255).astype(np.uint8)
+            rgba[m, 3] = alpha
         return rgba
 
-    def rgba_to_b64(rgba):
-        from PIL import Image
+    rgba_v1 = make_rgba(raw_4326, alpha=160)
+    rgba_v2 = make_rgba(clean_4326, mask=road_mask_4326, alpha=220)
+
+    # Base64
+    import io, base64
+    from PIL import Image
+    def to_b64(rgba):
         buf = io.BytesIO()
         Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
         return base64.b64encode(buf.getvalue()).decode()
+    v1_b64 = to_b64(rgba_v1)
+    v2_b64 = to_b64(rgba_v2)
 
-    raw_rgba = make_rgba(dem4_small)
-    raw_b64 = rgba_to_b64(raw_rgba)
-
-    flood_b64s = {}
-    for level in FLOOD_LEVELS:
-        mask = (dem4_small <= level) & np.isfinite(dem4_small)
-        if mask.sum() == 0:
-            continue
-        rgba = np.zeros((*dem4_small.shape, 4), dtype=np.uint8)
-        rgba[mask] = [0, 80, 200, 140]
-        flood_b64s[level] = rgba_to_b64(rgba)
+    # Map
+    map_s = n4326 - px_lat * dst_h
+    map_w = w4326
+    bounds = [[map_s, map_w], [n4326, w4326 + px_lon * dst_w]]
+    cl = (s4326 + n4326) / 2
+    clo = (w4326 + e4326) / 2
+    m = folium.Map(location=[cl, clo], zoom_start=15, control_scale=True, tiles=None)
+    folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(m)
+    folium.TileLayer(tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+                     attr='Esri', name='Satellite', max_zoom=19).add_to(m)
+    folium.raster_layers.ImageOverlay(image=f'data:image/png;base64,{v1_b64}', bounds=bounds, opacity=0.6,
+                                      name='v1: Raw DEM (BS-77, 2m/px)').add_to(m)
+    folium.raster_layers.ImageOverlay(image=f'data:image/png;base64,{v2_b64}', bounds=bounds, opacity=0.8,
+                                      name='v2: Cleaned+Interpolated (BS-77)', show=False).add_to(m)
+    folium.GeoJson(road_4326.__geo_interface__, name='Road polygon',
+                   style_function=lambda x: {'color':'yellow','weight':2,'fillOpacity':0}).add_to(m)
 
     # Passport points
     pts = []
     with open(UPLOAD / 'Отметки.txt', 'r', encoding='utf-8') as f:
         for raw in f:
             line = raw.strip()
-            if not line or ':' not in line:
-                continue
+            if not line or ':' not in line: continue
             l, r = line.split(':', 1)
-            m = re.match(r'^(\d+\.\d+)\s*,\s*(\d+\.\d+)$', l.strip())
-            if not m:
-                continue
-            lat, lon = float(m.group(1)), float(m.group(2))
+            mm = re.match(r'^(\d+\.\d+)\s*,\s*(\d+\.\d+)$', l.strip())
+            if not mm: continue
+            lat, lon = float(mm.group(1)), float(mm.group(2))
             m2 = re.match(r'^(\d+[.,]?\d*)\s*(.*)$', r.strip())
-            if not m2:
-                continue
-            try:
-                h = float(m2.group(1).replace(',', '.'))
-            except:
-                continue
-            pts.append({'lat': lat, 'lon': lon, 'h_pas': h, 'desc': m2.group(2).strip()})
-
-    # Sample DEM at passport points
+            if not m2: continue
+            try: h = float(m2.group(1).replace(',', '.'))
+            except: continue
+            pts.append({'lat':lat,'lon':lon,'h_pas':h})
     for p in pts:
-        row = int((p['lat'] - bounds[0][0]) / (bounds[1][0] - bounds[0][0]) * dem4_small.shape[0])
-        col = int((p['lon'] - bounds[0][1]) / (bounds[1][1] - bounds[0][1]) * dem4_small.shape[1])
-        if 0 <= row < dem4_small.shape[0] and 0 <= col < dem4_small.shape[1]:
-            v = dem4_small[row, col]
-            p['h_dem'] = float(v) if np.isfinite(v) else None
+        col = int((p['lon'] - map_w) / px_lon)
+        row = int((n4326 - p['lat']) / px_lat)
+        h_dem = None
+        if 0 <= row < dst_h and 0 <= col < dst_w:
+            v = raw_4326[row, col]
+            if v != -9999: h_dem = float(v)
+        if h_dem is not None:
+            d = h_dem - p['h_pas']
+            c = 'green' if abs(d)<1 else 'orange' if abs(d)<3 else 'red'
+            popup = f"h_pas={p['h_pas']:.2f}<br>v1={h_dem:.2f} dH={d:+.2f}"
         else:
-            p['h_dem'] = None
-        p['dH'] = p['h_dem'] - p['h_pas'] if p['h_dem'] is not None else None
-
-    # Map
-    m = folium.Map(location=[59.935, 30.27], zoom_start=14, control_scale=True, tiles=None)
-    folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(m)
-    folium.TileLayer(
-        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-        attr='Esri', name='Satellite', max_zoom=19).add_to(m)
-
-    # DEM overlay
-    folium.raster_layers.ImageOverlay(
-        image=f'data:image/png;base64,{raw_b64}', bounds=bounds, opacity=0.7,
-        name='DEM (BS-77, cleaned)').add_to(m)
-
-    # Flood levels
-    for level, b64 in flood_b64s.items():
-        folium.raster_layers.ImageOverlay(
-            image=f'data:image/png;base64,{b64}', bounds=bounds, opacity=0.5,
-            name=f'Flood {level:.1f}m', show=False).add_to(m)
-
-    # Passport points
-    for p in pts:
-        if p['h_dem'] is None:
             c = 'gray'
-        else:
-            d = p['dH']
-            c = 'green' if abs(d) < 1 else 'orange' if abs(d) < 3 else 'red'
-        popup = (f"<b>{p['desc'] or '-'}</b><br>"
-                 f"pas={p['h_pas']:.2f}<br>"
-                 f"DEM={p['h_dem']:.2f}<br>"
-                 f"dH={p['dH']:+.2f}") if p['h_dem'] else f"pas={p['h_pas']:.2f} (nodata)"
-        folium.CircleMarker(
-            location=[p['lat'], p['lon']], radius=5, color='black', weight=0.5,
-            fill=True, fill_color=c, fill_opacity=0.8,
-            popup=folium.Popup(popup, max_width=300)).add_to(m)
+            popup = f"h_pas={p['h_pas']:.2f} (nodata)"
+        folium.CircleMarker(location=[p['lat'],p['lon']], radius=5, color='white', weight=1,
+                           fill=True, fill_color=c, fill_opacity=0.9,
+                           popup=folium.Popup(popup, max_width=250)).add_to(m)
 
     folium.LayerControl(collapsed=False).add_to(m)
     Fullscreen().add_to(m)
     MousePosition().add_to(m)
     MiniMap(toggle_display=True).add_to(m)
-
-    # Legend
-    legend = """<div style="position:fixed;bottom:30px;left:30px;z-index:9999;background:white;padding:10px;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,0.3);font-size:11px;"><b>Height (m BS-77)</b><br><div style="width:180px;height:12px;margin:4px 0;background:linear-gradient(to right,#008080,#00FF00,#FFFF00,#FF0000,#8B4513);"></div><div style="display:flex;justify-content:space-between;width:180px;font-size:10px;"><span>0</span><span>2</span><span>4</span><span>6</span><span>8+</span></div><hr><b>Points:</b> green&lt;1m orange&lt;3m red&gt;3m</div>"""
+    legend = '<div style="position:fixed;bottom:30px;left:30px;z-index:9999;background:white;padding:10px;border-radius:5px;box-shadow:0 0 10px rgba(0,0,0,0.3);font-size:11px;"><b>Высота (м БС-77)</b><br><div style="width:180px;height:12px;margin:4px 0;background:linear-gradient(to right,#008080,#00FF00,#FFFF00,#FF0000,#8B4513);"></div><div style="display:flex;justify-content:space-between;width:180px;font-size:10px;"><span>0</span><span>2</span><span>4</span><span>6</span><span>8+</span></div><hr><b>v1</b>: raw DEM<br><b>v2</b>: cleaned+interpolated</div>'
     m.get_root().html.add_child(folium.Element(legend))
 
-    map_path = OUT / 'flood_map.html'
+    map_path = OUT / 'bolshoy_heatmap.html'
     m.save(str(map_path))
-    log(f'  ✓ Map: {map_path} ({map_path.stat().st_size/1e6:.1f} MB)')
+    log(f'  Map: {map_path} ({map_path.stat().st_size/1e6:.1f} MB)')
     return map_path
-
 
 # ============================================================
 # QA METADATA
@@ -823,7 +814,8 @@ def main():
     qa = save_qa(road_mask, ground_mask, df_cal, validation, profile, h_profile)
 
     # 8. Flood map
-    map_path = flood_map(merged_arr, win_transform, dem_crs, geoid, df_cal, road_mask)
+    map_path = flood_map(dem_patch, cleaned, ground_mask, road_mask, win_transform,
+                        geoid, dem_crs, center_line_dem, road_poly_dem, road_poly)
 
     # Save log
     log_data['end'] = datetime.now().isoformat()
