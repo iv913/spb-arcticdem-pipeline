@@ -4,12 +4,12 @@
   "axis_len_m": 2842.68586721337,
   "carriageway_area_m2": 45921.643192023555,
   "owner_px": {
-    "other": 336587,
+    "other": 229211,
     "road": 12182,
-    "sidewalk": 5649,
-    "green": 179533,
-    "building": 373689,
-    "water": 14848
+    "sidewalk": 5521,
+    "green": 179494,
+    "building": 379953,
+    "water": 116127
   },
   "road_clean_px": 8797,
   "green_cuts_road": true,

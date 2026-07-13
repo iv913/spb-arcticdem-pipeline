@@ -139,7 +139,13 @@ def _way_line(el):
 
 
 def _iter_polygons(el):
-    """Полигоны из way (замкнутый) или multipolygon-relation (outer-члены)."""
+    """Полигоны из way (замкнутый) или multipolygon-relation.
+
+    Для relation: члены (way-фрагменты) сначала сшиваются в замкнутые кольца
+    по принципу "конечная точка way_i == начальная точка way_{i+1}". Только
+    потом из outer-колец строятся полигоны, а inner-кольца уходят в дыры.
+    Это критично для крупных рек (Нева: 469 way-фрагментов в одном outer).
+    """
     if el.get('type') == 'way':
         c = _way_line(el)
         if c and len(c) >= 4 and c[0] == c[-1]:
@@ -147,22 +153,129 @@ def _iter_polygons(el):
                 p = Polygon(c)
                 if p.is_valid and p.area > 0:
                     yield p
+                elif not p.is_valid and p.buffer(0).area > 0:
+                    yield p.buffer(0)
             except Exception:
                 pass
-    elif el.get('type') == 'relation':
-        for m in el.get('members', []):
-            if m.get('role') == 'inner' or 'geometry' not in m:
+        return
+    if el.get('type') != 'relation':
+        return
+
+    # Собираем way-фрагменты по ролям
+    outer_segs, inner_segs = [], []
+    for m in el.get('members', []):
+        if 'geometry' not in m or len(m['geometry']) < 2:
+            continue
+        coords = [(p['lon'], p['lat']) for p in m['geometry']]
+        if m.get('role') == 'inner':
+            inner_segs.append(coords)
+        else:
+            outer_segs.append(coords)
+
+    # Сшиваем сегменты в замкнутые кольца (linerings)
+    def stitch_rings(segments):
+        """Сшиваем line-сегменты в замкнутые кольца. Возвращает list[list[coord]]."""
+        rings = []
+        # Копируем, чтобы мутировать
+        segs = [list(s) for s in segments]
+        # Сначала: уже замкнутые → сразу в rings
+        new_segs = []
+        for s in segs:
+            if len(s) >= 4 and s[0] == s[-1]:
+                rings.append(s)
+            else:
+                new_segs.append(s)
+        segs = new_segs
+
+        # Жадная сшивка: пока есть сегменты, берём первый, пытаемся приклеить
+        # следующий, чья начальная точка == нашей конечной (с точностью до 1e-9)
+        EPS = 1e-9
+        while segs:
+            cur = segs.pop(0)
+            changed = True
+            while changed and segs:
+                changed = False
+                last = cur[-1]
+                # Ищем сегмент, который начинается там же, где заканчивается cur
+                for i, s in enumerate(segs):
+                    if abs(s[0][0] - last[0]) < EPS and abs(s[0][1] - last[1]) < EPS:
+                        cur.extend(s[1:])
+                        segs.pop(i)
+                        changed = True
+                        break
+                    # или заканчивается там же — переворачиваем
+                    if abs(s[-1][0] - last[0]) < EPS and abs(s[-1][1] - last[1]) < EPS:
+                        cur.extend(list(reversed(s))[1:])
+                        segs.pop(i)
+                        changed = True
+                        break
+                # Проверка замкнутости
+                if len(cur) >= 4 and cur[0] == cur[-1]:
+                    rings.append(cur)
+                    break
+            else:
+                # Не сшился в замкнутое кольцо — добавим принудительное замыкание
+                # (если начало и конец близко — замкнём; иначе выкинем)
+                if len(cur) >= 3:
+                    d = ((cur[0][0] - cur[-1][0])**2 +
+                         (cur[0][1] - cur[-1][1])**2) ** 0.5
+                    if d < 1e-6:  # ~10 см на широте СПб
+                        cur.append(cur[0])
+                        rings.append(cur)
+        return rings
+
+    outer_rings = stitch_rings(outer_segs)
+    inner_rings = stitch_rings(inner_segs)
+
+    if not outer_rings:
+        return
+
+    # Построим Polygon для каждого outer, с подходящими inner-дырами
+    inner_polys = []
+    for r in inner_rings:
+        try:
+            ip = Polygon(r)
+            if not ip.is_valid:
+                ip = ip.buffer(0)
+            if not ip.is_empty and ip.area > 0:
+                inner_polys.append(ip)
+        except Exception:
+            pass
+
+    used = set()
+    for ring in outer_rings:
+        try:
+            outer_poly = Polygon(ring)
+            if not outer_poly.is_valid:
+                outer_poly = outer_poly.buffer(0)
+            if outer_poly.is_empty or outer_poly.area <= 0:
                 continue
-            c = [(p['lon'], p['lat']) for p in m['geometry']]
-            if len(c) >= 4:
-                if c[0] != c[-1]:
-                    c.append(c[0])
-                try:
-                    p = Polygon(c)
-                    if p.is_valid and p.area > 0:
-                        yield p
-                except Exception:
-                    pass
+        except Exception:
+            continue
+        holes = []
+        # outer_poly может быть MultiPolygon — берём каждый Polygon отдельно
+        if outer_poly.geom_type == 'MultiPolygon':
+            outer_polys = [g for g in outer_poly.geoms if g.geom_type == 'Polygon']
+        elif outer_poly.geom_type == 'Polygon':
+            outer_polys = [outer_poly]
+        else:
+            continue
+        for op in outer_polys:
+            holes = []
+            for j, ip in enumerate(inner_polys):
+                if j in used:
+                    continue
+                if op.contains(ip.representative_point()):
+                    holes.append(ip.exterior)
+                    used.add(j)
+            try:
+                poly = Polygon(op.exterior, holes)
+                if not poly.is_valid:
+                    poly = poly.buffer(0)
+                if poly.is_valid and not poly.is_empty and poly.area > 0:
+                    yield poly
+            except Exception:
+                yield op
 
 
 def parse_width_m(tags):
@@ -293,8 +406,21 @@ def build_object_geometry(osm_data, bbox, object_name):
 
 
 def collect_layers(osm_data):
-    """Здания / зелень / вода со всего bbox (EPSG:4326)."""
+    """Здания / зелень / вода со всего bbox (EPSG:4326).
+
+    ВАЖНО для воды: в OSM реки/каналы заданы одновременно как
+      • way["waterway"="river"|"canal"] — ЦЕНТРАЛЬНАЯ ЛИНИЯ (без ширины)
+      • relation["natural"="water","water"="river"|"canal"] — ПОЛИГОН (русло)
+    Линии нужны только если у реки НЕТ полигонного представления.
+    Берём ВСЕ multipolygon-relations с natural=water, плюс way[natural=water]
+    (полигоны), плюс way[waterway=riverbank] (полигон). way[waterway=river|canal]
+    берём как fallback (линия) ТОЛЬКО если нет полигонного объекта с тем же name.
+    """
     buildings, greens, waters = [], [], []
+    water_poly_names = set()  # имена рек/каналов, у которых есть полигон
+    water_polys = []
+    water_lines = []  # (name, LineString) — fallback для отсутствующих полигонов
+
     for el in osm_data.get('elements', []):
         tags = el.get('tags', {})
         if 'building' in tags:
@@ -312,19 +438,50 @@ def collect_layers(osm_data):
             if c:
                 greens.append(('tree_row', LineString(c)))
             continue
-        if tags.get('natural') == 'water' or \
-                tags.get('waterway') in {'river', 'canal', 'riverbank'}:
-            got = list(_iter_polygons(el))
-            if got:
-                waters.extend(got)
-            else:
-                c = _way_line(el)
-                if c:
-                    waters.append(('line', LineString(c)))
+
+        # --- Вода ---
+        # 1. natural=water (way или relation) → полигон
+        if tags.get('natural') == 'water':
+            polys = list(_iter_polygons(el))
+            if polys:
+                water_polys.extend(polys)
+                nm = tags.get('name', '').strip()
+                if nm:
+                    water_poly_names.add(nm)
+            continue
+        # 2. waterway=riverbank (полигон — реально русло)
+        if tags.get('waterway') == 'riverbank':
+            polys = list(_iter_polygons(el))
+            if polys:
+                water_polys.extend(polys)
+                nm = tags.get('name', '').strip()
+                if nm:
+                    water_poly_names.add(nm)
+            continue
+        # 3. waterway=river|canal (линия) — собираем, отложим решение до конца
+        if tags.get('waterway') in {'river', 'canal'}:
+            c = _way_line(el)
+            if c:
+                water_lines.append((tags.get('name', '').strip(),
+                                    LineString(c)))
+            continue
+
+    # Линии добавляем только если НЕТ полигонного объекта с тем же name
+    added_lines = 0
+    for nm, ls in water_lines:
+        if nm and nm in water_poly_names:
+            continue  # есть полигон с тем же именем — линию выкидываем
+        waters.append(('line', ls))
+        added_lines += 1
+    waters.extend(water_polys)
+
     log(f'Слои OSM: buildings={len(buildings)}, green={len(greens)}, '
-        f'water={len(waters)}')
+        f'water={len(waters)} (полигонов={len(water_polys)}, '
+        f'линий={added_lines}, имён с полигоном={len(water_poly_names)})')
     if len(buildings) == 0:
         log('  ⚠ НОЛЬ зданий — проверьте Overpass-ответ/кэш, это критично!')
+    if len(water_polys) == 0:
+        log('  ⚠ НОЛЬ water-полигонов — multipolygon-relations не загрузились?')
     return buildings, greens, waters
 
 
