@@ -68,3 +68,39 @@ Next:
 - Пользователь должен открыть новый owner_qa_map.html и проверить, что синие площади совпадают с реальными реками на спутнике.
 - Затем модуль 02: робастная реконструкция h=f(picket)+g(offset) по владельцу road.
 
+---
+Task ID: 5.1-fix-crs-rotation
+Agent: main
+Task: Пользователь сообщил "owner map повёрнут на 90° относительно OSM". VLM подтвердил: растр развёрнут относительно спутника.
+
+Work Log:
+- Проанализировал transform DEM (EPSG:3413): a=2.0, b=0, d=0, e=-2.0 — axis-aligned в projected CRS.
+- Но проверка конверсии углов патча выявила root cause: EPSG:3413 (polar stereographic) в СПб **развёрнут ~75° относительно true north**.
+  · 'East' в 4326 → (+922, +3505) в 3413 (в основном +Y)
+  · 'North' в 4326 → (-1848, +486) в 3413 (в основном -X)
+- Patch 532×1734 px (1064×3468м) в 3413 — физически ТОНКИЙ и ДЛИННЫЙ, вытянутый по Y.
+- В 4326 этот же patch — ШИРОКИЙ (Δlon=0.062°) и КОРОТКИЙ (Δlat=0.016°).
+- Folium.raster_layers.ImageOverlay умеет только axis-aligned bbox `[[S,W],[N,E]]` → растягивает ТОНКИЙ-ДЛИННЫЙ png в ШИРОКИЙ-КОРОТКИЙ прямоугольник → поворот на ~75° (выглядит как 90°).
+- Решение: перед ImageOverlay перепроецировать owner raster из EPSG:3413 в **EPSG:3857 (Web Mercator)**, который выровнен по true north.
+- Использовал rasterio.warp.reproject с Resampling.nearest, pixel_size=2м.
+- Изменил qa_map():
+  · Считает bounds патча в 3857
+  · Создаёт target grid (w_target × h_target) через from_origin
+  · reproject для owner и quality
+  · RGBA строится из owner_3857/quality_3857
+  · Сохраняет owner_map_3857.tif для удобства
+  · Bounds в 4326 вычисляются из 3857-патча
+- Результат: 532×1734 (3413) → **3471×1833 (3857)** — ориентация сменилась на правильную (широкий, не длинный).
+- Spatial verification: тестовые точки (30.2395, 59.9264) и (30.290, 59.941) дают ОДИНАКОВЫЕ owner-значения в обоих растрах → репроекция не внесла ошибок.
+- Playwright screenshot HTML → VLM подтвердил: "совпадает, тёмная дорожная полоса лежит поверх реальной дороги, жёлтый полигон обводит ту же дорогу, красные блоки покрывают реальные здания. Смещения или повороты не обнаружены".
+
+Stage Summary:
+- Root cause: EPSG:3413 (polar stereographic) развёрнут относительно true north в СПб.
+- Folium ImageOverlay не умеет повёрнутые растры → нужно перепроецировать в Web Mercator.
+- Файлы обновлены: scripts/01_owner_map.py, download/owner_map.tif (исходный в 3413), download/owner_map_3857.tif (новый, для folium), download/owner_qa_map.html, download/owner_qa.json, download/control_points_qa.csv, download/carriageway.geojson.
+
+Next:
+- Пользователь открывает новый owner_qa_map.html. Растр должен совпадать со спутником.
+- Затем модуль 02: робастная реконструкция h=f(picket)+g(offset) по владельцу road.
+
+

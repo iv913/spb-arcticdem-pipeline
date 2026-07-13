@@ -659,34 +659,82 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
     log('QA-карта')
     import io, base64
     from PIL import Image
+    from rasterio.warp import reproject, calculate_default_transform
+    from rasterio.enums import Resampling
 
-    # owner → RGBA. "other" полностью прозрачен, чтобы не заливать спутник.
-    # meaningful owners — насыщенные и непрозрачные, mixed пиксели чуть прозрачнее.
-    # Цель: на спутнике должно быть чётко видно, где road / green / building.
-    rgba = np.zeros((*owner.shape, 4), dtype='uint8')
+    # --- критично: перепроецировать owner в EPSG:3857 (Web Mercator) ---
+    # В исходном DEM CRS (EPSG:3413 — polar stereographic) оси X/Y НЕ
+    # выровнены с N-S/E-W. Patch 1064×3468м в 3413 → параллелограмм в 4326.
+    # folium.raster_layers.ImageOverlay умеет только axis-aligned bbox,
+    # поэтому рисует растр растянутым в прямоугольник — отсюда "поворот на 90°".
+    # Web Mercator (3857) выровнен по true north, после репроекции растр
+    # встанет на спутник правильно.
+    WEBM = 'EPSG:3857'
+    H_src, W_src = owner.shape
+    # Целевые transform/size в 3857: считаем по bounds патча в 3857
+    xs = [transform.c, transform.c + transform.a * W_src]
+    ys = [transform.f, transform.f + transform.e * H_src]
+    bounds_src = (min(xs), min(ys), max(xs), max(ys))
+    # Конвертируем bounds в 3857
+    from rasterio.warp import transform_bounds as _tb
+    b_3857 = _tb(dem_crs, WEBM, *bounds_src)
+    # Целевой pixel size: сохраняем физическое разрешение 2м
+    px_size = 2.0
+    w_target = int(np.ceil((b_3857[2] - b_3857[0]) / px_size))
+    h_target = int(np.ceil((b_3857[3] - b_3857[1]) / px_size))
+    from rasterio.transform import from_origin
+    transform_3857 = from_origin(b_3857[0], b_3857[3], px_size, px_size)
+
+    log(f'  Репроекция {W_src}×{H_src} ({dem_crs}) → '
+        f'{w_target}×{h_target} ({WEBM})')
+
+    owner_3857 = np.zeros((h_target, w_target), dtype='uint8')
+    quality_3857 = np.zeros((h_target, w_target), dtype='uint8')
+    for src, dst in ((owner, owner_3857), (quality, quality_3857)):
+        reproject(
+            source=src, destination=dst,
+            src_transform=transform, src_crs=dem_crs,
+            dst_transform=transform_3857, dst_crs=WEBM,
+            resample=Resampling.nearest, src_nodata=255, dst_nodata=255,
+        )
+
+    # owner → RGBA в новых координатах
+    rgba = np.zeros((*owner_3857.shape, 4), dtype='uint8')
     for code, col in OWNER_COLORS.items():
-        m = owner == code
+        m = owner_3857 == code
         rgba[m, 0], rgba[m, 1], rgba[m, 2] = col
         if code == 0:
             rgba[m, 3] = 0           # other — не рисуем, видим спутник
         else:
             rgba[m, 3] = 230         # владельцы — почти непрозрачные
-    # mixed (boundary) — полупрозрачно, чтобы видеть "шов"
-    rgba[quality == 1, 3] = np.minimum(rgba[quality == 1, 3].astype(int), 110)\
-                                .astype('uint8')
+    rgba[quality_3857 == 1, 3] = np.minimum(
+        rgba[quality_3857 == 1, 3].astype(int), 110).astype('uint8')
 
-    # bounds патча в 4326
-    H, Wd = owner.shape
-    xs = [transform.c, transform.c + transform.a * Wd]
-    ys = [transform.f, transform.f + transform.e * H]
-    w4, s4, e4, n4 = transform_bounds(dem_crs, 'EPSG:4326',
-                                      min(xs), min(ys), max(xs), max(ys))
+    # bounds патча в 4326 (для folium)
+    w4, s4, e4, n4 = _tb(WEBM, 'EPSG:4326',
+                         b_3857[0], b_3857[1], b_3857[2], b_3857[3])
+    log(f'  Patch в 4326: W={w4:.6f} S={s4:.6f} E={e4:.6f} N={n4:.6f}')
+
     buf = io.BytesIO()
     Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
     b64 = base64.b64encode(buf.getvalue()).decode()
 
     cw_4326 = gpd.GeoSeries([carriageway_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
     ax_4326 = gpd.GeoSeries([axis_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
+
+    # Также сохраняем репроецированный owner_map_3857.tif для удобства
+    out_path_webm = OUT / 'owner_map_3857.tif'
+    prof_webm = {'driver': 'GTiff', 'dtype': 'uint8', 'count': 2,
+                 'crs': WEBM, 'transform': transform_3857,
+                 'width': w_target, 'height': h_target,
+                 'compress': 'deflate', 'nodata': 255}
+    with rasterio.open(str(out_path_webm), 'w', **prof_webm) as dst:
+        dst.write(owner_3857, 1)
+        dst.write(quality_3857, 2)
+        dst.set_band_description(1, 'owner: 0 other 1 road 2 sidewalk '
+                                    '3 green 4 building 5 water (EPSG:3857)')
+        dst.set_band_description(2, 'quality: 0 clean, 1 mixed boundary')
+    log(f'  ✓ {out_path_webm}')
 
     # Легенда по точкам пути
     center_lat = (s4 + n4) / 2
