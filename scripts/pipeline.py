@@ -81,7 +81,7 @@ FLOOD_LEVELS = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0]
 
 # MVP object
 MVP_BBOX = (30.20, 59.92, 30.32, 59.95)  # W, S, E, N — Bolshoy pr V.O.
-MVP_NAME = "Большой пр. В.О."
+MVP_NAME = "Большой проспект В.О."
 
 log_data = {'start': datetime.now().isoformat(), 'steps': []}
 
