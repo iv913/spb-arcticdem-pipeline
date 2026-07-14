@@ -42,7 +42,7 @@ from rasterio.features import rasterize
 from rasterio.windows import from_bounds
 from rasterio.warp import transform as warp_transform, transform_bounds
 from shapely.geometry import LineString, Point, Polygon, MultiPolygon, box, shape
-from shapely.ops import unary_union, linemerge
+from shapely.ops import unary_union, linemerge, polygonize
 import requests
 import folium
 
@@ -138,14 +138,52 @@ def _way_line(el):
     return c if len(c) >= 2 else None
 
 
+def _stitch_rings(lines, gap_tol_deg=5e-4):
+    """Сшивка фрагментов кольца мультиполигона: linemerge → polygonize.
+    Кольца с микроразрывом (< gap_tol, ~50м) дозамыкаются принудительно.
+    Возвращает список Polygon."""
+    if not lines:
+        return []
+    # отдельно: уже замкнутые way-фрагменты (skip linemerge, который в новой
+    # shapely бросает ValueError на одиночной замкнутой LineString)
+    already_closed = []
+    open_frags = []
+    for ls in lines:
+        c = list(ls.coords)
+        if len(c) >= 4 and c[0] == c[-1]:
+            already_closed.append(LineString(c))
+        else:
+            open_frags.append(ls)
+    # сшиваем только открытые фрагменты
+    if open_frags:
+        merged = linemerge(unary_union(open_frags))
+        parts = list(merged.geoms) if merged.geom_type == 'MultiLineString' \
+            else [merged]
+    else:
+        parts = []
+    closed = list(already_closed)
+    for ls in parts:
+        c = list(ls.coords)
+        if len(c) < 4:
+            continue
+        if c[0] != c[-1]:
+            dx = c[0][0] - c[-1][0]
+            dy = c[0][1] - c[-1][1]
+            if (dx * dx + dy * dy) ** 0.5 > gap_tol_deg:
+                continue  # честно открытая линия — не кольцо
+            c.append(c[0])
+        closed.append(LineString(c))
+    polys = []
+    for p in polygonize(closed):
+        if p.is_valid and p.area > 0:
+            polys.append(p)
+    return polys
+
+
 def _iter_polygons(el):
     """Полигоны из way (замкнутый) или multipolygon-relation.
-
-    Для relation: члены (way-фрагменты) сначала сшиваются в замкнутые кольца
-    по принципу "конечная точка way_i == начальная точка way_{i+1}". Только
-    потом из outer-колец строятся полигоны, а inner-кольца уходят в дыры.
-    Это критично для крупных рек (Нева: 469 way-фрагментов в одном outer).
-    """
+    ВАЖНО: outer-члены relation — незамкнутые фрагменты ЕДИНОГО кольца
+    (у Невы их сотни); их нельзя замыкать поодиночке — только сшивать."""
     if el.get('type') == 'way':
         c = _way_line(el)
         if c and len(c) >= 4 and c[0] == c[-1]:
@@ -153,129 +191,34 @@ def _iter_polygons(el):
                 p = Polygon(c)
                 if p.is_valid and p.area > 0:
                     yield p
-                elif not p.is_valid and p.buffer(0).area > 0:
-                    yield p.buffer(0)
             except Exception:
                 pass
-        return
-    if el.get('type') != 'relation':
-        return
-
-    # Собираем way-фрагменты по ролям
-    outer_segs, inner_segs = [], []
-    for m in el.get('members', []):
-        if 'geometry' not in m or len(m['geometry']) < 2:
-            continue
-        coords = [(p['lon'], p['lat']) for p in m['geometry']]
-        if m.get('role') == 'inner':
-            inner_segs.append(coords)
-        else:
-            outer_segs.append(coords)
-
-    # Сшиваем сегменты в замкнутые кольца (linerings)
-    def stitch_rings(segments):
-        """Сшиваем line-сегменты в замкнутые кольца. Возвращает list[list[coord]]."""
-        rings = []
-        # Копируем, чтобы мутировать
-        segs = [list(s) for s in segments]
-        # Сначала: уже замкнутые → сразу в rings
-        new_segs = []
-        for s in segs:
-            if len(s) >= 4 and s[0] == s[-1]:
-                rings.append(s)
-            else:
-                new_segs.append(s)
-        segs = new_segs
-
-        # Жадная сшивка: пока есть сегменты, берём первый, пытаемся приклеить
-        # следующий, чья начальная точка == нашей конечной (с точностью до 1e-9)
-        EPS = 1e-9
-        while segs:
-            cur = segs.pop(0)
-            changed = True
-            while changed and segs:
-                changed = False
-                last = cur[-1]
-                # Ищем сегмент, который начинается там же, где заканчивается cur
-                for i, s in enumerate(segs):
-                    if abs(s[0][0] - last[0]) < EPS and abs(s[0][1] - last[1]) < EPS:
-                        cur.extend(s[1:])
-                        segs.pop(i)
-                        changed = True
-                        break
-                    # или заканчивается там же — переворачиваем
-                    if abs(s[-1][0] - last[0]) < EPS and abs(s[-1][1] - last[1]) < EPS:
-                        cur.extend(list(reversed(s))[1:])
-                        segs.pop(i)
-                        changed = True
-                        break
-                # Проверка замкнутости
-                if len(cur) >= 4 and cur[0] == cur[-1]:
-                    rings.append(cur)
-                    break
-            else:
-                # Не сшился в замкнутое кольцо — добавим принудительное замыкание
-                # (если начало и конец близко — замкнём; иначе выкинем)
-                if len(cur) >= 3:
-                    d = ((cur[0][0] - cur[-1][0])**2 +
-                         (cur[0][1] - cur[-1][1])**2) ** 0.5
-                    if d < 1e-6:  # ~10 см на широте СПб
-                        cur.append(cur[0])
-                        rings.append(cur)
-        return rings
-
-    outer_rings = stitch_rings(outer_segs)
-    inner_rings = stitch_rings(inner_segs)
-
-    if not outer_rings:
-        return
-
-    # Построим Polygon для каждого outer, с подходящими inner-дырами
-    inner_polys = []
-    for r in inner_rings:
-        try:
-            ip = Polygon(r)
-            if not ip.is_valid:
-                ip = ip.buffer(0)
-            if not ip.is_empty and ip.area > 0:
-                inner_polys.append(ip)
-        except Exception:
-            pass
-
-    used = set()
-    for ring in outer_rings:
-        try:
-            outer_poly = Polygon(ring)
-            if not outer_poly.is_valid:
-                outer_poly = outer_poly.buffer(0)
-            if outer_poly.is_empty or outer_poly.area <= 0:
+    elif el.get('type') == 'relation':
+        outers, inners = [], []
+        for mm in el.get('members', []):
+            if 'geometry' not in mm:
                 continue
-        except Exception:
-            continue
-        holes = []
-        # outer_poly может быть MultiPolygon — берём каждый Polygon отдельно
-        if outer_poly.geom_type == 'MultiPolygon':
-            outer_polys = [g for g in outer_poly.geoms if g.geom_type == 'Polygon']
-        elif outer_poly.geom_type == 'Polygon':
-            outer_polys = [outer_poly]
-        else:
-            continue
-        for op in outer_polys:
-            holes = []
-            for j, ip in enumerate(inner_polys):
-                if j in used:
-                    continue
-                if op.contains(ip.representative_point()):
-                    holes.append(ip.exterior)
-                    used.add(j)
-            try:
-                poly = Polygon(op.exterior, holes)
-                if not poly.is_valid:
-                    poly = poly.buffer(0)
-                if poly.is_valid and not poly.is_empty and poly.area > 0:
-                    yield poly
-            except Exception:
-                yield op
+            c = [(p['lon'], p['lat']) for p in mm['geometry']]
+            if len(c) < 2:
+                continue
+            (inners if mm.get('role') == 'inner' else outers).append(
+                LineString(c))
+        outer_polys = _stitch_rings(outers)
+        if not outer_polys:
+            return
+        holes = _stitch_rings(inners)
+        holes_u = unary_union(holes) if holes else None
+        for p in outer_polys:
+            if holes_u is not None:
+                p = p.difference(holes_u)
+            if p.is_empty:
+                continue
+            if p.geom_type == 'MultiPolygon':
+                for q in p.geoms:
+                    if q.is_valid and q.area > 0:
+                        yield q
+            elif p.is_valid and p.area > 0:
+                yield p
 
 
 def parse_width_m(tags):
@@ -406,21 +349,8 @@ def build_object_geometry(osm_data, bbox, object_name):
 
 
 def collect_layers(osm_data):
-    """Здания / зелень / вода со всего bbox (EPSG:4326).
-
-    ВАЖНО для воды: в OSM реки/каналы заданы одновременно как
-      • way["waterway"="river"|"canal"] — ЦЕНТРАЛЬНАЯ ЛИНИЯ (без ширины)
-      • relation["natural"="water","water"="river"|"canal"] — ПОЛИГОН (русло)
-    Линии нужны только если у реки НЕТ полигонного представления.
-    Берём ВСЕ multipolygon-relations с natural=water, плюс way[natural=water]
-    (полигоны), плюс way[waterway=riverbank] (полигон). way[waterway=river|canal]
-    берём как fallback (линия) ТОЛЬКО если нет полигонного объекта с тем же name.
-    """
+    """Здания / зелень / вода со всего bbox (EPSG:4326)."""
     buildings, greens, waters = [], [], []
-    water_poly_names = set()  # имена рек/каналов, у которых есть полигон
-    water_polys = []
-    water_lines = []  # (name, LineString) — fallback для отсутствующих полигонов
-
     for el in osm_data.get('elements', []):
         tags = el.get('tags', {})
         if 'building' in tags:
@@ -438,50 +368,19 @@ def collect_layers(osm_data):
             if c:
                 greens.append(('tree_row', LineString(c)))
             continue
-
-        # --- Вода ---
-        # 1. natural=water (way или relation) → полигон
-        if tags.get('natural') == 'water':
-            polys = list(_iter_polygons(el))
-            if polys:
-                water_polys.extend(polys)
-                nm = tags.get('name', '').strip()
-                if nm:
-                    water_poly_names.add(nm)
-            continue
-        # 2. waterway=riverbank (полигон — реально русло)
-        if tags.get('waterway') == 'riverbank':
-            polys = list(_iter_polygons(el))
-            if polys:
-                water_polys.extend(polys)
-                nm = tags.get('name', '').strip()
-                if nm:
-                    water_poly_names.add(nm)
-            continue
-        # 3. waterway=river|canal (линия) — собираем, отложим решение до конца
-        if tags.get('waterway') in {'river', 'canal'}:
-            c = _way_line(el)
-            if c:
-                water_lines.append((tags.get('name', '').strip(),
-                                    LineString(c)))
-            continue
-
-    # Линии добавляем только если НЕТ полигонного объекта с тем же name
-    added_lines = 0
-    for nm, ls in water_lines:
-        if nm and nm in water_poly_names:
-            continue  # есть полигон с тем же именем — линию выкидываем
-        waters.append(('line', ls))
-        added_lines += 1
-    waters.extend(water_polys)
-
+        if tags.get('natural') == 'water' or \
+                tags.get('waterway') in {'river', 'canal', 'riverbank'}:
+            got = list(_iter_polygons(el))
+            if got:
+                waters.extend(got)
+            else:
+                c = _way_line(el)
+                if c:
+                    waters.append(('line', LineString(c)))
     log(f'Слои OSM: buildings={len(buildings)}, green={len(greens)}, '
-        f'water={len(waters)} (полигонов={len(water_polys)}, '
-        f'линий={added_lines}, имён с полигоном={len(water_poly_names)})')
+        f'water={len(waters)}')
     if len(buildings) == 0:
         log('  ⚠ НОЛЬ зданий — проверьте Overpass-ответ/кэш, это критично!')
-    if len(water_polys) == 0:
-        log('  ⚠ НОЛЬ water-полигонов — multipolygon-relations не загрузились?')
     return buildings, greens, waters
 
 
@@ -496,6 +395,34 @@ def _to_utm_buffered(items, buffer_m, line_half_w):
             g = gpd.GeoSeries([it], crs='EPSG:4326').to_crs(UTM).iloc[0]
             geoms.append(g.buffer(buffer_m) if buffer_m else g)
     return unary_union(geoms) if geoms else None
+
+
+def merge_water(waters, line_half_w=10.0, covered_frac=0.6):
+    """Вода: полигоны — приоритет; осевые waterway-линии буферизуются
+    ТОЛЬКО если < covered_frac их длины лежит в полигонах воды.
+    Иначе полоса от фарватера Невы рисуется поверх/за пределами берега."""
+    polys, lines = [], []
+    for it in waters:
+        if isinstance(it, tuple):
+            lines.append(it[1])
+        else:
+            polys.append(it)
+    polys_utm = [gpd.GeoSeries([p], crs='EPSG:4326').to_crs(UTM).iloc[0]
+                 for p in polys]
+    poly_u = unary_union(polys_utm) if polys_utm else None
+    kept_lines = 0
+    out = list(polys_utm)
+    for ls in lines:
+        g = gpd.GeoSeries([ls], crs='EPSG:4326').to_crs(UTM).iloc[0]
+        if poly_u is not None and g.length > 0:
+            frac = g.intersection(poly_u).length / g.length
+            if frac >= covered_frac:
+                continue  # русло уже размечено полигоном
+        out.append(g.buffer(line_half_w, cap_style=2))
+        kept_lines += 1
+    log(f'  Вода: {len(polys_utm)} полигонов, линий буферизовано '
+        f'{kept_lines}/{len(lines)} (остальные покрыты полигонами)')
+    return unary_union(out) if out else None
 
 
 # ============================================================
@@ -603,7 +530,7 @@ def load_control_points():
 def sample_control_points(cp, dem, owner, quality, transform, dem_crs,
                           carriageway_utm):
     """Каждой точке: row/col, h_DEM, владелец, качество, расстояние до дороги.
-    Это диагностический CSV — по нему видно, почему точка (не)валидна."""
+    Это диагностический CSV — по нему видно, почему точка (не)валиден."""
     log('Сэмплирование опорных точек на owner map')
     if cp.empty:
         return cp
@@ -654,66 +581,64 @@ def sample_control_points(cp, dem, owner, quality, transform, dem_crs,
 # ============================================================
 # QA-карта
 # ============================================================
+NODATA_DISPLAY = 255  # код "вне патча" после перепроецирования
+
+
+def _reproject_categorical_for_display(owner, quality, transform, dem_crs,
+                                       res_m=None):
+    """EPSG:3413 повёрнут на ~75° у СПб: folium ImageOverlay растягивает
+    растр по осевому lat/lon-боксу и ломает ориентацию. Перед наложением
+    категориальные банды варпятся на регулярную северо-ориентированную
+    сетку EPSG:3857 (nearest!). Возвращает (owner_d, quality_d, bounds4326).
+    Углы повёрнутого патча получают код 255 → прозрачность."""
+    from rasterio.warp import calculate_default_transform, reproject, Resampling
+    from rasterio.transform import array_bounds
+    H, W = owner.shape
+    src_bounds = array_bounds(H, W, transform)
+    if res_m is None:
+        # масштаб Меркатора 1/cos(lat): держим ~2м НА МЕСТНОСТИ
+        _, s4t, _, n4t = transform_bounds(dem_crs, 'EPSG:4326', *src_bounds)
+        res_m = 2.0 / max(0.2, np.cos(np.radians((s4t + n4t) / 2)))
+    dst_t, dst_w, dst_h = calculate_default_transform(
+        dem_crs, 'EPSG:3857', W, H, *src_bounds, resolution=res_m)
+
+    def warp(band):
+        out = np.full((dst_h, dst_w), NODATA_DISPLAY, dtype='uint8')
+        reproject(source=band, destination=out,
+                  src_transform=transform, src_crs=dem_crs,
+                  dst_transform=dst_t, dst_crs='EPSG:3857',
+                  resampling=Resampling.nearest,
+                  src_nodata=NODATA_DISPLAY,   # в данных не встречается
+                  dst_nodata=NODATA_DISPLAY)
+        return out
+
+    owner_d, quality_d = warp(owner), warp(quality)
+    b3857 = array_bounds(dst_h, dst_w, dst_t)
+    w4, s4, e4, n4 = transform_bounds('EPSG:3857', 'EPSG:4326', *b3857)
+    log(f'  Дисплей-сетка 3857: {dst_w}×{dst_h} px, '
+        f'валидных {int((owner_d != NODATA_DISPLAY).sum()):,}')
+    return owner_d, quality_d, (w4, s4, e4, n4)
+
+
 def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
            cp, green_utm, buildings_utm):
     log('QA-карта')
     import io, base64
     from PIL import Image
-    from rasterio.warp import reproject, calculate_default_transform
-    from rasterio.enums import Resampling
 
-    # --- критично: перепроецировать owner в EPSG:3857 (Web Mercator) ---
-    # В исходном DEM CRS (EPSG:3413 — polar stereographic) оси X/Y НЕ
-    # выровнены с N-S/E-W. Patch 1064×3468м в 3413 → параллелограмм в 4326.
-    # folium.raster_layers.ImageOverlay умеет только axis-aligned bbox,
-    # поэтому рисует растр растянутым в прямоугольник — отсюда "поворот на 90°".
-    # Web Mercator (3857) выровнен по true north, после репроекции растр
-    # встанет на спутник правильно.
-    WEBM = 'EPSG:3857'
-    H_src, W_src = owner.shape
-    # Целевые transform/size в 3857: считаем по bounds патча в 3857
-    xs = [transform.c, transform.c + transform.a * W_src]
-    ys = [transform.f, transform.f + transform.e * H_src]
-    bounds_src = (min(xs), min(ys), max(xs), max(ys))
-    # Конвертируем bounds в 3857
-    from rasterio.warp import transform_bounds as _tb
-    b_3857 = _tb(dem_crs, WEBM, *bounds_src)
-    # Целевой pixel size: сохраняем физическое разрешение 2м
-    px_size = 2.0
-    w_target = int(np.ceil((b_3857[2] - b_3857[0]) / px_size))
-    h_target = int(np.ceil((b_3857[3] - b_3857[1]) / px_size))
-    from rasterio.transform import from_origin
-    transform_3857 = from_origin(b_3857[0], b_3857[3], px_size, px_size)
+    # FIX(75° rotation): сначала на северо-ориентированную сетку
+    owner_d, quality_d, (w4, s4, e4, n4) = \
+        _reproject_categorical_for_display(owner, quality, transform, dem_crs)
 
-    log(f'  Репроекция {W_src}×{H_src} ({dem_crs}) → '
-        f'{w_target}×{h_target} ({WEBM})')
-
-    owner_3857 = np.zeros((h_target, w_target), dtype='uint8')
-    quality_3857 = np.zeros((h_target, w_target), dtype='uint8')
-    for src, dst in ((owner, owner_3857), (quality, quality_3857)):
-        reproject(
-            source=src, destination=dst,
-            src_transform=transform, src_crs=dem_crs,
-            dst_transform=transform_3857, dst_crs=WEBM,
-            resample=Resampling.nearest, src_nodata=255, dst_nodata=255,
-        )
-
-    # owner → RGBA в новых координатах
-    rgba = np.zeros((*owner_3857.shape, 4), dtype='uint8')
+    # owner → RGBA: классы плотные (α=235), other прозрачен, mixed приглушён.
+    # Валидация маски требует ЧИТАЕМЫХ цветов, спутник виден через opacity слоя.
+    rgba = np.zeros((*owner_d.shape, 4), dtype='uint8')
     for code, col in OWNER_COLORS.items():
-        m = owner_3857 == code
+        m = owner_d == code
         rgba[m, 0], rgba[m, 1], rgba[m, 2] = col
-        if code == 0:
-            rgba[m, 3] = 0           # other — не рисуем, видим спутник
-        else:
-            rgba[m, 3] = 230         # владельцы — почти непрозрачные
-    rgba[quality_3857 == 1, 3] = np.minimum(
-        rgba[quality_3857 == 1, 3].astype(int), 110).astype('uint8')
-
-    # bounds патча в 4326 (для folium)
-    w4, s4, e4, n4 = _tb(WEBM, 'EPSG:4326',
-                         b_3857[0], b_3857[1], b_3857[2], b_3857[3])
-    log(f'  Patch в 4326: W={w4:.6f} S={s4:.6f} E={e4:.6f} N={n4:.6f}')
+        rgba[m, 3] = 0 if code == 0 else 235
+    rgba[(quality_d == 1) & (owner_d != 0), 3] = 120
+    rgba[owner_d == NODATA_DISPLAY, 3] = 0
 
     buf = io.BytesIO()
     Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
@@ -722,25 +647,13 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
     cw_4326 = gpd.GeoSeries([carriageway_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
     ax_4326 = gpd.GeoSeries([axis_utm], crs=UTM).to_crs('EPSG:4326').iloc[0]
 
-    # Также сохраняем репроецированный owner_map_3857.tif для удобства
-    out_path_webm = OUT / 'owner_map_3857.tif'
-    prof_webm = {'driver': 'GTiff', 'dtype': 'uint8', 'count': 2,
-                 'crs': WEBM, 'transform': transform_3857,
-                 'width': w_target, 'height': h_target,
-                 'compress': 'deflate', 'nodata': 255}
-    with rasterio.open(str(out_path_webm), 'w', **prof_webm) as dst:
-        dst.write(owner_3857, 1)
-        dst.write(quality_3857, 2)
-        dst.set_band_description(1, 'owner: 0 other 1 road 2 sidewalk '
-                                    '3 green 4 building 5 water (EPSG:3857)')
-        dst.set_band_description(2, 'quality: 0 clean, 1 mixed boundary')
-    log(f'  ✓ {out_path_webm}')
-
-    # Легенда по точкам пути
-    center_lat = (s4 + n4) / 2
-    center_lon = (w4 + e4) / 2
-    m = folium.Map(location=[center_lat, center_lon], zoom_start=15,
+    m = folium.Map(location=[(s4 + n4) / 2, (w4 + e4) / 2], zoom_start=15,
                    control_scale=True, tiles=None)
+    # браузер сглаживает ImageOverlay при зуме и размывает категориальные
+    # цвета в градиенты — принудительно отключаем интерполяцию
+    m.get_root().html.add_child(folium.Element(
+        '<style>.leaflet-image-layer{image-rendering:pixelated;'
+        'image-rendering:crisp-edges;}</style>'))
     folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(m)
     folium.TileLayer(
         tiles='https://server.arcgisonline.com/ArcGIS/rest/services/'
@@ -748,13 +661,12 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
         attr='Esri', name='Спутник', max_zoom=19, show=True).add_to(m)
     folium.raster_layers.ImageOverlay(
         image=f'data:image/png;base64,{b64}',
-        bounds=[[s4, w4], [n4, e4]], opacity=0.95,
-        name='Owner map (тёмн=road, оранж=sidewalk, зел=green, '
+        bounds=[[s4, w4], [n4, e4]], opacity=0.8,
+        name='Owner map (сер=other, тёмн=road, оранж=sidewalk, зел=green, '
              'красн=building, син=water)').add_to(m)
     folium.GeoJson(cw_4326.__geo_interface__, name='Проезжая часть (полигон)',
-                   style_function=lambda x: {'color': 'yellow', 'weight': 3,
-                                             'fillOpacity': 0,
-                                             'dashArray': '5,3'}).add_to(m)
+                   style_function=lambda x: {'color': 'yellow', 'weight': 2,
+                                             'fillOpacity': 0}).add_to(m)
     folium.GeoJson(ax_4326.__geo_interface__, name='Ось пикетажа',
                    style_function=lambda x: {'color': 'magenta',
                                              'weight': 3}).add_to(m)
@@ -762,20 +674,18 @@ def qa_map(owner, quality, transform, dem_crs, carriageway_utm, axis_utm,
         for _, p in cp.iterrows():
             if p['owner'] == 'out_of_patch':
                 continue
-            col = {'road': 'lime', 'sidewalk': 'yellow',
-                   'other': 'orange', 'green': 'green',
-                   'building': 'red', 'water': 'cyan'}.get(p['owner'], 'white')
+            col = {'road': 'green', 'sidewalk': 'lightgreen',
+                   'other': 'orange'}.get(p['owner'], 'red')
             folium.CircleMarker(
-                [p['lat'], p['lon']], radius=6, color='white', weight=2,
-                fill=True, fill_color=col, fill_opacity=0.95,
+                [p['lat'], p['lon']], radius=5, color='white', weight=1,
+                fill=True, fill_color=col, fill_opacity=0.9,
                 popup=folium.Popup(
                     f"h_pas={p['h_pas']:.2f}<br>owner={p['owner']}"
                     f"<br>h_dem_bs77={p['h_dem_bs77']:.2f}"
                     f"<br>dH_raw={p['dH_raw']:+.2f}"
                     f"<br>до дороги {p['dist_to_road_m']:.0f}м",
                     max_width=260)).add_to(m)
-    # Авто-fit по bounds патча, чтобы сразу видеть весь кусок
-    m.fit_bounds([[s4, w4], [n4, e4]])
+    m.fit_bounds([[s4, w4], [n4, e4]])  # авто-зум на патч
     folium.LayerControl(collapsed=False).add_to(m)
     path = OUT / 'owner_qa_map.html'
     m.save(str(path))
@@ -802,7 +712,7 @@ def main():
     buildings, greens, waters = collect_layers(osm)
     buildings_utm = _to_utm_buffered(buildings, BLD_BUFFER, 0)
     green_utm = _to_utm_buffered(greens, GREEN_BUFFER, TREE_ROW_HALF_W)
-    water_utm = _to_utm_buffered(waters, 0.0, 10.0)
+    water_utm = merge_water(waters)
 
     (owner, quality, dem, transform, dem_crs,
      counts, road_clean) = rasterize_owners(

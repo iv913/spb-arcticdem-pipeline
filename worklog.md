@@ -103,4 +103,57 @@ Next:
 - Пользователь открывает новый owner_qa_map.html. Растр должен совпадать со спутником.
 - Затем модуль 02: робастная реконструкция h=f(picket)+g(offset) по владельцу road.
 
+---
+Task ID: 5.1+5.2-merge-user-revision
+Agent: main
+Task: Пользователь прислал объединённую ревизию 01_owner_map.py + новый модуль 02_road_reconstruct.py. Записать, запустить, провалидировать.
+
+Work Log:
+- Записал scripts/01_owner_map.py (чистая версия, без дублей из paste) — включает:
+  · _stitch_rings через linemerge + polygonize (идиоматичнее моего жадного цикла)
+  · merge_water с covered_frac=0.6 (геометрический критерий вместо name-match)
+  · _reproject_categorical_for_display (calculate_default_transform + NODATA_DISPLAY=255)
+  · CSS image-rendering: pixelated (отключает браузерную интерполяцию категориальных цветов)
+  · alpha=235 для владельцев, alpha=0 для other, m.fit_bounds для авто-зума
+- Записал scripts/02_road_reconstruct.py — 2-pass робастная реконструкция:
+  · Итерация 1: продольный профиль f(picket) — P20 + UP_REJECT=0.4м → медиана → сглаживание
+  · Итерация 2: поперечный g(offset) на остатках, затем переобучение f на h-g(off)
+  · source band: 1=measured(inlier), 2=reconstructed, 3=extrapolated
+  · Вертикальная привязка по опорным точкам (cal/holdout split, медиана по cal)
+  · Использует m01._reproject_categorical_for_display для road_qa_map.html
+- Bug fix в _stitch_rings: linemerge в новой shapely бросает ValueError на одиночную
+  замкнутую LineString. Разделил already_closed и open_frags, linemerge только open.
+- Module 01: ✓ Слои: buildings=5262, green=3131, water=68 (28 полигонов, 2 линии буферизовано из 40).
+  · Water px: 116127 (как и раньше), road px: 12182, road clean: 8797.
+  · owner_qa_map.html регенерирован, ImageOverlay без поворота (EPSG:3857).
+- Module 02: ✓
+  · train_px=8797, inlier_pct=80.5%, MAD=0.291м
+  · surface: measured=6774, reconstructed=4376, extrapolated=1032
+  · profile_h_bs77: [1.86, 16.71] — max=16.71 это мосты/путепроводы
+  · Вертикальная привязка: ⚠ только 1 точка в 5м от дороги, fallback на GEOID_FALLBACK=15.9
+- VLM проверил road_profile.png: 2 пика на pk=100-200 (17.5м) и pk=900-1000 (13м) —
+  это мосты/путепроводы Большого пр-та, попавшие в маску road.
+- VLM проверил road_qa_map.html: "цвет поверхности вдоль дороги — плавный градиент,
+  без резких перепадов или пятнистости. Красные/оранжевые пятна не видны."
+- DEM-диагностика: ArcticDEM — это DSM (включая здания/мосты), не DTM.
+  · h_ell на road clean px: median=19.99м, P5=18.02, P95=30.04
+  · После геоида (−16м): median=4.0м БС-77 ✓ (паспортная 3.61м)
+  · P95 = 14м БС-77 = мосты, которые робастный фит не подавил полностью (P20+0.4м срез
+    работает только если в бине достаточно road-surface px; на мосту весь бин = мост)
+
+Stage Summary:
+- Оба модуля работают. Архитектура 01+02 корректна.
+- Module 01: stitch_rings (linemerge+polygonize), merge_water (coverage_frac),
+  display warp в EPSG:3857, image-rendering:pixelated.
+- Module 02: 2-pass робастный фит, source-band (measured/reconstructed/extrapolated),
+  авто-extrap по gap detection.
+- Артефакты на профиле (пики 17м/14м) — это мосты в road-маске, не bug.
+- Вертикальная привязка не сработала (мало точек в 5м от дороги) — shift=GEOID_FALLBACK.
+
+Next:
+- Пользователь смотрит road_profile.png и road_qa_map.html.
+- Если продольный профиль всё ещё "прыгает" на мостах — добавить в collect_layers
+  фильтр мостов (highway=bridge, man_made=bridge) или просто отрезать бины с h>P95.
+- Если нужна калибровка — собрать точки именно на Большом пр-те (не на боковых улицах).
+
 
