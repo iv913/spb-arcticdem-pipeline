@@ -68,7 +68,8 @@ SMOOTH_HALF_BINS = 2    # полуокно сглаживания профиля
 CROSS_CLIP = 0.40       # м, физический предел поперечной поправки
 INLIER_TOL = 0.25       # м, |резидуал| для класса measured
 MAX_GAP_BINS = 4        # >этого подряд пустых бинов → extrapolated
-CAL_DIST_MAX = 5.0      # м, точка годна для привязки, если ближе к дороге
+CAL_DIST_MAX = 5.0      # м, tier 1: точка строго у проезжей части
+CAL_DIST_LOOSE = 15.0   # м, tier 2: рядом (тротуар/двор), если tier 1 пуст
 HOLDOUT_PCT = 25
 RANDOM_STATE = 42
 GEOID_FALLBACK = m01.GEOID_FALLBACK
@@ -83,6 +84,11 @@ GEOID_FALLBACK = m01.GEOID_FALLBACK
 MAX_SHADOW_JUMP = 1.0   # м вверх над локальной базой профиля → тень
 BASELINE_WIN_BINS = 15  # окно скользящей медианы базы (15×5м = 75м)
 MAX_LONG_SLOPE = 0.05   # м/м, физический предел продольного уклона улицы
+ZONE_CLOSE_BINS = 2     # замыкание зон: уцелевшие "провалы" ≤2 бинов
+                        # между прореженными тоже выбрасываются
+BASE_MIN_PERIODS = 5    # мин. соседей для базы (устойчивость у краёв оси)
+INLIER_TOL_MAX = 0.50   # м, потолок порога inlier — сырой DSM с бОльшим
+                        # отклонением НИКОГДА не пишется как measured
 
 
 def log(msg):
@@ -144,25 +150,38 @@ def picket_offset(xs_dem, ys_dem, dem_crs, axis_utm):
 # ============================================================
 # Асимметрично-робастный продольный профиль
 # ============================================================
-def _prune_bins(pk_arr, h_arr, max_jump=MAX_SHADOW_JUMP,
+def _prune_bins(b_arr, pk_arr, h_arr, max_jump=MAX_SHADOW_JUMP,
                 max_slope=MAX_LONG_SLOPE, base_win=BASELINE_WIN_BINS):
     """Итеративное прореживание бинов профиля.
     (а) shadow_jump: бин выше скользящей медианы соседей на > max_jump
-        (стереотень всегда ВВЕРХ — проверка асимметричная);
+        (стереотень всегда ВВЕРХ — проверка асимметричная); у краёв оси
+        (< base_win/2 бинов до конца) требуется 3× превышение — там база
+        неустойчива и возможны ложные срабатывания;
     (б) slope: пара соседних бинов с |уклоном| > max_slope — выбрасывается
-        ВЕРХНИЙ из пары (нижний, скорее всего, асфальт).
+        ВЕРХНИЙ из пары (нижний, скорее всего, асфальт);
+    (в) zone_fill: консолидация — уцелевшие бины-«провалы» (нижняя фаза
+        осцилляции тени) длиной ≤ ZONE_CLOSE_BINS между прореженными
+        тоже выбрасываются, чтобы модель мостила зону ПО ЧИСТЫМ БЕРЕГАМ,
+        а не через полутень.
     Возвращает (keep_mask, reason_array)."""
+    from scipy.ndimage import binary_closing
     n = len(h_arr)
     keep = np.ones(n, dtype=bool)
     reason = np.array([''] * n, dtype=object)
+    edge_m = (base_win / 2) * PK_BIN
     for _ in range(30):
         idx = np.where(keep)[0]
         if len(idx) < 4:
             break
         hv, pkv = h_arr[idx], pk_arr[idx]
         base = pd.Series(hv).rolling(base_win, center=True,
-                                     min_periods=3).median().values
-        bad_jump = (hv - base) > max_jump
+                                     min_periods=BASE_MIN_PERIODS
+                                     ).median().values
+        up = hv - base  # NaN у самых краёв → сравнения дают False
+        near_edge = ((pkv - pk_arr.min()) < edge_m) | \
+                    ((pk_arr.max() - pkv) < edge_m)
+        bad_jump = np.where(near_edge, up > 3 * max_jump, up > max_jump)
+        bad_jump = np.nan_to_num(bad_jump.astype(float)).astype(bool)
         bad_slope = np.zeros(len(idx), dtype=bool)
         s = np.diff(hv) / np.maximum(np.diff(pkv), 1e-6)
         for i in np.where(np.abs(s) > max_slope)[0]:
@@ -174,6 +193,21 @@ def _prune_bins(pk_arr, h_arr, max_jump=MAX_SHADOW_JUMP,
         keep[idx[bad]] = False
         reason[idx[bad_jump]] = 'shadow_jump'
         reason[idx[bad_slope & ~bad_jump]] = 'slope'
+
+    # (в) консолидация зон по непрерывной шкале бинов
+    if (~keep).any():
+        bmin = int(b_arr.min())
+        full = np.zeros(int(b_arr.max()) - bmin + 1, dtype=bool)
+        full[(b_arr[~keep] - bmin).astype(int)] = True
+        closed = binary_closing(full,
+                                structure=np.ones(2 * ZONE_CLOSE_BINS + 1))
+        newly = closed & ~full
+        pos = {int(bb): i for i, bb in enumerate(b_arr)}
+        for bb in np.nonzero(newly)[0] + bmin:
+            i = pos.get(int(bb))
+            if i is not None and keep[i]:
+                keep[i] = False
+                reason[i] = 'zone_fill'
     return keep, reason
 
 
@@ -202,16 +236,16 @@ def fit_longitudinal(pk, h):
     if len(prof) < 4:
         raise RuntimeError('слишком мало валидных бинов профиля')
 
-    # --- прореживание: тени зданий и невозможные уклоны ---
-    keep, reason = _prune_bins(prof['pk'].values, prof['h'].values)
+    # --- прореживание: тени зданий, невозможные уклоны, консолидация зон ---
+    keep, reason = _prune_bins(prof['b'].values.astype(float),
+                               prof['pk'].values, prof['h'].values)
     prof['kept'] = keep
     prof['reject_reason'] = reason
     n_rej = int((~keep).sum())
     if n_rej:
         rej = prof[~prof['kept']]
-        log(f'  Прорежено бинов: {n_rej}/{len(prof)} '
-            f'(shadow_jump={int((rej["reject_reason"] == "shadow_jump").sum())}, '
-            f'slope={int((rej["reject_reason"] == "slope").sum())}); '
+        cnt = rej['reject_reason'].value_counts().to_dict()
+        log(f'  Прорежено бинов: {n_rej}/{len(prof)} {cnt}; '
             f'пикеты: {", ".join(f"{p:.0f}" for p in rej["pk"].head(20))}'
             f'{"..." if n_rej > 20 else ""}')
     kept_prof = prof[prof['kept']].reset_index(drop=True)
@@ -332,10 +366,21 @@ def main():
     f_long, is_extrap, prof = fit_longitudinal(pk, h - g_cross(off))
     model_train = f_long(pk) + g_cross(off)
     resid = h - model_train
-    mad = np.median(np.abs(resid - np.median(resid))) * 1.4826
-    inlier = np.abs(resid) <= max(INLIER_TOL, 3 * mad)
-    log(f'Итог обучения: MAD={mad:.3f}м, inliers={inlier.mean()*100:.1f}% '
-        f'({inlier.sum():,}/{len(inlier):,})')
+
+    # MAD — ТОЛЬКО по чистым (непрореженным) зонам: иначе тени раздувают
+    # порог и полутень записывается в поверхность "как измеренная"
+    rej_bins2 = np.array(sorted(prof.loc[~prof['kept'], 'b']), dtype=int)
+    clean_zone = ~np.isin(np.floor(pk / PK_BIN).astype(int), rej_bins2)
+    r_cl = resid[clean_zone]
+    mad = np.median(np.abs(r_cl - np.median(r_cl))) * 1.4826
+    tol = float(np.clip(3 * mad, INLIER_TOL, INLIER_TOL_MAX))
+    # пиксель прореженного бина НИКОГДА не measured, каким бы ни был резидуал
+    inlier = clean_zone & (np.abs(resid) <= tol)
+    log(f'Итог обучения: MAD(clean)={mad:.3f}м, tol={tol:.2f}м, '
+        f'inliers={inlier.mean()*100:.1f}% всего '
+        f'({100*inlier[clean_zone].mean() if clean_zone.any() else 0:.1f}% '
+        f'в чистых зонах), clean-зоны покрывают '
+        f'{clean_zone.mean()*100:.0f}% обучающих px')
 
     # --- поверхность на всех пикселях владельца road (вкл. mixed) ---
     surf_mask = (owner == OWNER['road'])
@@ -377,8 +422,34 @@ def main():
             crs='EPSG:4326').to_crs(UTM)
         cp = cp.copy()
         cp['dist'] = pts_utm.geometry.distance(carriageway_utm).values
-        near = cp[cp['dist'] <= CAL_DIST_MAX].copy()
-        log(f'Точек в {CAL_DIST_MAX}м от проезжей части: {len(near)}')
+        # владелец пикселя точки (не привязываемся к точкам на зданиях/воде)
+        xs0, ys0 = warp_transform('EPSG:4326', dem_crs,
+                                  cp['lon'].tolist(), cp['lat'].tolist())
+        inv = ~transform
+        own = []
+        for x0, y0 in zip(xs0, ys0):
+            c0, r0 = inv * (x0, y0)
+            r0, c0 = int(np.floor(r0)), int(np.floor(c0))
+            if 0 <= r0 < owner.shape[0] and 0 <= c0 < owner.shape[1]:
+                own.append(int(owner[r0, c0]))
+            else:
+                own.append(-1)
+        cp['owner_code'] = own
+        bad_owner = cp['owner_code'].isin([OWNER['building'], OWNER['water'],
+                                           -1])
+        # tier 1: строго на проезжей части; tier 2: рядом (тротуар/двор),
+        # кроме зданий и воды — отметки паспортов обычно на земле у фасада
+        tier1 = cp[(cp['dist'] <= CAL_DIST_MAX) & ~bad_owner].copy()
+        near = tier1
+        tier = 1
+        if len(near) < 4:
+            near = cp[(cp['dist'] <= CAL_DIST_LOOSE) & ~bad_owner].copy()
+            tier = 2
+            log(f'⚠ Точек в {CAL_DIST_MAX}м лишь {len(tier1)} — '
+                f'ослабляю до {CAL_DIST_LOOSE}м (tier 2): {len(near)}. '
+                f'Возможен систематический сдвиг ~0.1-0.2м (бордюр/двор).')
+        else:
+            log(f'Точек в {CAL_DIST_MAX}м от проезжей части: {len(near)}')
         if len(near) >= 4:
             xs3, ys3 = warp_transform('EPSG:4326', dem_crs,
                                       near['lon'].tolist(),
@@ -402,7 +473,7 @@ def main():
             ho = near[near['holdout']]
             near['dH_bs77'] = near['dH_ell'] - shift
             val = {'n_cal': int(len(ok)), 'n_holdout': int(len(ho)),
-                   'shift_m': shift, 'shift_source': 'control_points',
+                   'shift_m': shift, 'shift_source': f'control_points_tier{tier}',
                    'rmse': float(np.sqrt(np.mean(
                        (ho['dH_ell'] - shift) ** 2))) if len(ho) else None,
                    'mae': float(np.mean(
@@ -588,7 +659,7 @@ def main():
     qa = {
         'object': m01.MVP_NAME,
         'train_px': int(len(rows)), 'inlier_pct': float(inlier.mean() * 100),
-        'mad_m': float(mad),
+        'mad_m': float(mad), 'inlier_tol_m': float(tol),
         'surface_px': {'measured': n_meas, 'reconstructed': n_rec,
                        'extrapolated': n_ext},
         'profile_bins': int(len(prof)),
@@ -596,6 +667,7 @@ def main():
             'total': int((~prof['kept']).sum()),
             'shadow_jump': int((prof['reject_reason'] == 'shadow_jump').sum()),
             'slope': int((prof['reject_reason'] == 'slope').sum()),
+            'zone_fill': int((prof['reject_reason'] == 'zone_fill').sum()),
             'pickets': [float(x) for x in
                         prof.loc[~prof['kept'], 'pk'].round(0)],
         },
@@ -606,7 +678,11 @@ def main():
         'vertical': val,
         'params': {'PK_BIN': PK_BIN, 'OFF_BIN': OFF_BIN,
                    'UP_REJECT': UP_REJECT, 'LOW_ANCHOR_PCT': LOW_ANCHOR_PCT,
-                   'INLIER_TOL': INLIER_TOL, 'CROSS_CLIP': CROSS_CLIP},
+                   'INLIER_TOL': INLIER_TOL, 'INLIER_TOL_MAX': INLIER_TOL_MAX,
+                   'CROSS_CLIP': CROSS_CLIP,
+                   'ZONE_CLOSE_BINS': ZONE_CLOSE_BINS,
+                   'MAX_SHADOW_JUMP': MAX_SHADOW_JUMP,
+                   'BASE_MIN_PERIODS': BASE_MIN_PERIODS},
     }
     (OUT / 'road_qa.json').write_text(json.dumps(qa, ensure_ascii=False,
                                                  indent=2))
