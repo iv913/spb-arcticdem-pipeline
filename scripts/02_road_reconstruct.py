@@ -464,41 +464,109 @@ def main():
     plt.close()
     log(f'✓ {OUT / "road_profile.png"}')
 
-    # --- QA-карта: поверхность через дисплей-варп модуля 01 ---
+    # --- QA-карта: 3 растровых слоя + спутник + точки ---
+    # слои: (1) Поверхность БС-77 (модуль 02), (2) Owner map (модуль 01),
+    #        (3) Сырой DEM в полосе 100м от проезжей части (для QA теней)
     import io, base64
     from PIL import Image
     import matplotlib.colors as mcolors
     from matplotlib import colormaps
-    # высоты → uint8-код для nearest-варпа (шаг 5см от p2 до p98)
+    import folium
+    from rasterio.features import rasterize as _rasterize
+
+    # общий bbox в 4326 для всех слоёв (одна дисплей-сетка 3857 — общая)
+    # сначала поверхность как раньше, она задаёт bounds
     v = surface_bs[np.isfinite(surface_bs)]
-    lo, hi = np.percentile(v, 2), np.percentile(v, 98)
+    lo_s, hi_s = np.percentile(v, 2), np.percentile(v, 98)
     code = np.full(surface_bs.shape, 255, dtype='uint8')
     fin = np.isfinite(surface_bs)
-    code[fin] = np.clip((surface_bs[fin] - lo) / max(1e-6, hi - lo) * 254,
-                        0, 254).astype('uint8')
+    code[fin] = np.clip((surface_bs[fin] - lo_s) / max(1e-6, hi_s - lo_s)
+                        * 254, 0, 254).astype('uint8')
     code_d, src_d, (w4, s4, e4, n4) = m01._reproject_categorical_for_display(
         code, source, transform, dem_crs)
-    rgba = np.zeros((*code_d.shape, 4), dtype='uint8')
-    cmap = colormaps['turbo']
+
+    rgba_surf = np.zeros((*code_d.shape, 4), dtype='uint8')
+    cmap_turbo = colormaps['turbo']
     mval = code_d != 255
-    rgba[mval] = (cmap(code_d[mval] / 254.0) * 255).astype('uint8')
-    rgba[mval, 3] = 210
-    rgba[(src_d == 3) & mval, 3] = 110   # extrapolated — полупрозрачно
+    rgba_surf[mval] = (cmap_turbo(code_d[mval] / 254.0) * 255).astype('uint8')
+    rgba_surf[mval, 3] = 210
+    rgba_surf[(src_d == 3) & mval, 3] = 110   # extrapolated — полупрозрачно
     buf = io.BytesIO()
-    Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
-    b64 = base64.b64encode(buf.getvalue()).decode()
-    import folium
+    Image.fromarray(rgba_surf).save(buf, format='PNG', optimize=True)
+    b64_surf = base64.b64encode(buf.getvalue()).decode()
+
+    # --- (2) Owner map: owner + quality → RGBA (как в m01.qa_map) ---
+    owner_d, qual_d, _ = m01._reproject_categorical_for_display(
+        owner, quality, transform, dem_crs)
+    rgba_owner = np.zeros((*owner_d.shape, 4), dtype='uint8')
+    for code_v, col in m01.OWNER_COLORS.items():
+        mm = owner_d == code_v
+        rgba_owner[mm, 0], rgba_owner[mm, 1], rgba_owner[mm, 2] = col
+        rgba_owner[mm, 3] = 0 if code_v == 0 else 235
+    rgba_owner[(qual_d == 1) & (owner_d != 0), 3] = 120
+    rgba_owner[owner_d == m01.NODATA_DISPLAY, 3] = 0
+    buf = io.BytesIO()
+    Image.fromarray(rgba_owner).save(buf, format='PNG', optimize=True)
+    b64_owner = base64.b64encode(buf.getvalue()).decode()
+
+    # --- (3) Сырой DEM в полосе 100м от проезжей части ---
+    # маска: буфер 100м от carriageway_utm, растеризуем на сетке DEM
+    strip_utm = carriageway_utm.buffer(100.0)
+    strip_dem = m01.gpd.GeoSeries([strip_utm], crs=UTM).to_crs(dem_crs).iloc[0]
+    strip_mask = _rasterize([(strip_dem, 1)], out_shape=dem.shape,
+                            transform=transform, fill=0, all_touched=True,
+                            dtype='uint8').astype(bool)
+    # высоты → uint8 (диапазон по p2/p98 в полосе, шаг ~5см)
+    dem_strip = dem.copy()
+    dem_strip[~strip_mask] = np.nan
+    v_raw = dem_strip[np.isfinite(dem_strip)]
+    lo_r, hi_r = float(np.percentile(v_raw, 2)), float(np.percentile(v_raw, 98))
+    dem_code = np.full(dem.shape, 255, dtype='uint8')
+    fin_r = np.isfinite(dem_strip)
+    dem_code[fin_r] = np.clip((dem_strip[fin_r] - lo_r) /
+                              max(1e-6, hi_r - lo_r) * 254, 0, 254).astype('uint8')
+    # band2 для dem-слоя: 1=valid, 0=nodata (для прозрачности краёв)
+    dem_src = np.where(fin_r, 1, 0).astype('uint8')
+    dem_d, dem_src_d, _ = m01._reproject_categorical_for_display(
+        dem_code, dem_src, transform, dem_crs)
+    rgba_dem = np.zeros((*dem_d.shape, 4), dtype='uint8')
+    cmap_dem = colormaps['viridis']  # отличается от turbo — визуально разделимо
+    mdem = (dem_d != 255) & (dem_src_d == 1)
+    rgba_dem[mdem] = (cmap_dem(dem_d[mdem] / 254.0) * 255).astype('uint8')
+    rgba_dem[mdem, 3] = 200
+    buf = io.BytesIO()
+    Image.fromarray(rgba_dem).save(buf, format='PNG', optimize=True)
+    b64_dem = base64.b64encode(buf.getvalue()).decode()
+    log(f'  DEM raw: полоса 100м, px={int(mdem.sum()):,}, '
+        f'диапазон h_ell [{lo_r:.1f}..{hi_r:.1f}]м')
+
+    # --- карта: 3 ImageOverlay со switch'ером; по умолчанию только surface ---
     fm = folium.Map(location=[(s4 + n4) / 2, (w4 + e4) / 2], zoom_start=15,
                     control_scale=True, tiles=None)
+    fm.get_root().html.add_child(folium.Element(
+        '<style>.leaflet-image-layer{image-rendering:pixelated;'
+        'image-rendering:crisp-edges;}</style>'))
     folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(fm)
     folium.TileLayer(tiles='https://server.arcgisonline.com/ArcGIS/rest/'
                            'services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-                     attr='Esri', name='Спутник', max_zoom=19).add_to(fm)
+                     attr='Esri', name='Спутник', max_zoom=19, show=True).add_to(fm)
     folium.raster_layers.ImageOverlay(
-        image=f'data:image/png;base64,{b64}',
+        image=f'data:image/png;base64,{b64_dem}',
+        bounds=[[s4, w4], [n4, e4]], opacity=0.70,
+        name=f'DEM сырой (100м от дороги) [{lo_r:.1f}..{hi_r:.1f}м элл]',
+        show=False).add_to(fm)
+    folium.raster_layers.ImageOverlay(
+        image=f'data:image/png;base64,{b64_owner}',
+        bounds=[[s4, w4], [n4, e4]], opacity=0.80,
+        name='Owner map (тёмн=road, оранж=sidewalk, зел=green, '
+             'красн=building, син=water)',
+        show=False).add_to(fm)
+    folium.raster_layers.ImageOverlay(
+        image=f'data:image/png;base64,{b64_surf}',
         bounds=[[s4, w4], [n4, e4]], opacity=0.85,
-        name=f'Поверхность БС-77 [{lo:.1f}..{hi:.1f}м], '
-             'блёкло = extrapolated').add_to(fm)
+        name=f'Поверхность БС-77 [{lo_s:.1f}..{hi_s:.1f}м], '
+             'блёкло = extrapolated',
+        show=True).add_to(fm)
     if report is not None:
         for _, p in report.iterrows():
             d = p['dH_bs77']
@@ -512,6 +580,7 @@ def main():
                     f"h_pas={p['h_pas']:.2f}<br>h_model="
                     f"{p['h_model_ell'] - shift:.2f}<br>dH={d:+.2f}{tag}",
                     max_width=240)).add_to(fm)
+    fm.fit_bounds([[s4, w4], [n4, e4]])
     folium.LayerControl(collapsed=False).add_to(fm)
     fm.save(str(OUT / 'road_qa_map.html'))
     log(f'✓ {OUT / "road_qa_map.html"}')
