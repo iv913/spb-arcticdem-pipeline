@@ -1,0 +1,32 @@
+{
+  "object": "Большой проспект В.О.",
+  "train_px": 8797,
+  "inlier_pct": 80.45924747072866,
+  "mad_m": 0.2910204509970525,
+  "surface_px": {
+    "measured": 6774,
+    "reconstructed": 4376,
+    "extrapolated": 1032
+  },
+  "profile_bins": 542,
+  "profile_h_bs77": [
+    1.858166209173044,
+    16.706610171382472
+  ],
+  "cross_bins": 14,
+  "vertical": {
+    "n_cal": 0,
+    "n_holdout": 0,
+    "rmse": null,
+    "mae": null,
+    "shift_source": "GEOID_FALLBACK"
+  },
+  "params": {
+    "PK_BIN": 5.0,
+    "OFF_BIN": 1.0,
+    "UP_REJECT": 0.4,
+    "LOW_ANCHOR_PCT": 20,
+    "INLIER_TOL": 0.25,
+    "CROSS_CLIP": 0.4
+  }
+}
