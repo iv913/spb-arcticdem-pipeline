@@ -74,6 +74,25 @@ HOLDOUT_PCT = 25
 RANDOM_STATE = 42
 GEOID_FALLBACK = m01.GEOID_FALLBACK
 
+# Городская калибровка (модуль city_calibration.py): shift = geoid + bias DEM.
+# Если city_calibration.json существует — используем его, иначе fallback на
+# GEOID_FALLBACK (только геоид, без bias-коррекции).
+_CITY_CAL_PATH = OUT / 'city_calibration.json'
+if _CITY_CAL_PATH.exists():
+    try:
+        _cc = json.loads(_CITY_CAL_PATH.read_text())
+        CITY_SHIFT = float(_cc['shift_m'])
+        CITY_SHIFT_SOURCE = _cc.get('shift_source', 'city_calibration')
+        CITY_RMSE = _cc.get('rmse_holdout_m')
+    except Exception:
+        CITY_SHIFT = GEOID_FALLBACK
+        CITY_SHIFT_SOURCE = 'GEOID_FALLBACK'
+        CITY_RMSE = None
+else:
+    CITY_SHIFT = GEOID_FALLBACK
+    CITY_SHIFT_SOURCE = 'GEOID_FALLBACK'
+    CITY_RMSE = None
+
 # --- прореживание бинов профиля (стереотени зданий, мосты) ---
 # Тень высокого здания в стерео-DSM накрывает дорогу ПО ВСЕЙ ширине:
 # в таком бине нет чистых пикселей, и P20+UP_REJECT сам сидит на тени.
@@ -410,11 +429,19 @@ def main():
     log(f'Пиксели поверхности: measured={n_meas:,}, reconstructed={n_rec:,}, '
         f'extrapolated={n_ext:,}')
 
-    # --- вертикальная привязка по опорным точкам ---
+    # --- вертикальная привязка: city_shift по умолчанию, уточняется
+    #     локальными точками, если точек рядом с проезжей частью достаточно ---
     cp = m01.load_control_points()
-    shift = GEOID_FALLBACK
-    val = {'n_cal': 0, 'n_holdout': 0, 'rmse': None, 'mae': None,
-           'shift_source': 'GEOID_FALLBACK'}
+    # стартуем с городского shift (если city_calibration.json есть),
+    # иначе геоид; локальные точки могут его уточнить, но не заменить на
+    # голый геоид, если точек нет
+    shift = CITY_SHIFT
+    val = {'n_cal': 0, 'n_holdout': 0, 'rmse': CITY_RMSE, 'mae': None,
+           'shift_m': CITY_SHIFT,
+           'shift_source': CITY_SHIFT_SOURCE,
+           'city_rmse_holdout_m': CITY_RMSE}
+    log(f'Стартовый shift: {CITY_SHIFT:.3f}м ({CITY_SHIFT_SOURCE}, '
+        f'city RMSE={CITY_RMSE})')
     report = None
     if not cp.empty:
         pts_utm = gpd.GeoDataFrame(
@@ -483,7 +510,8 @@ def main():
             report = near.drop(columns='geometry', errors='ignore')
             report.to_csv(OUT / 'road_points_report.csv', index=False)
         else:
-            log('⚠ Точек мало — сдвиг по умолчанию (GEOID_FALLBACK)')
+            log(f'⚠ Локальных точек мало — shift = CITY_SHIFT={CITY_SHIFT:.2f}м '
+                f'(без локального уточнения)')
     surface_bs = surface - shift
 
     # --- запись GeoTIFF ---
