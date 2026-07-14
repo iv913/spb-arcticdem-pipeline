@@ -73,6 +73,17 @@ HOLDOUT_PCT = 25
 RANDOM_STATE = 42
 GEOID_FALLBACK = m01.GEOID_FALLBACK
 
+# --- прореживание бинов профиля (стереотени зданий, мосты) ---
+# Тень высокого здания в стерео-DSM накрывает дорогу ПО ВСЕЙ ширине:
+# в таком бине нет чистых пикселей, и P20+UP_REJECT сам сидит на тени.
+# Лечится на уровне БИНОВ: бин выбрасывается, если он (а) торчит вверх
+# над скользящей медианой профиля, либо (б) создаёт физически невозможный
+# продольный уклон. Модель интерполирует через разрыв С ДВУХ СТОРОН —
+# от уцелевших участков/перекрёстков ("двухстороннее движение").
+MAX_SHADOW_JUMP = 1.0   # м вверх над локальной базой профиля → тень
+BASELINE_WIN_BINS = 15  # окно скользящей медианы базы (15×5м = 75м)
+MAX_LONG_SLOPE = 0.05   # м/м, физический предел продольного уклона улицы
+
 
 def log(msg):
     print(f'[{datetime.now():%H:%M:%S}] {msg}', flush=True)
@@ -133,10 +144,46 @@ def picket_offset(xs_dem, ys_dem, dem_crs, axis_utm):
 # ============================================================
 # Асимметрично-робастный продольный профиль
 # ============================================================
+def _prune_bins(pk_arr, h_arr, max_jump=MAX_SHADOW_JUMP,
+                max_slope=MAX_LONG_SLOPE, base_win=BASELINE_WIN_BINS):
+    """Итеративное прореживание бинов профиля.
+    (а) shadow_jump: бин выше скользящей медианы соседей на > max_jump
+        (стереотень всегда ВВЕРХ — проверка асимметричная);
+    (б) slope: пара соседних бинов с |уклоном| > max_slope — выбрасывается
+        ВЕРХНИЙ из пары (нижний, скорее всего, асфальт).
+    Возвращает (keep_mask, reason_array)."""
+    n = len(h_arr)
+    keep = np.ones(n, dtype=bool)
+    reason = np.array([''] * n, dtype=object)
+    for _ in range(30):
+        idx = np.where(keep)[0]
+        if len(idx) < 4:
+            break
+        hv, pkv = h_arr[idx], pk_arr[idx]
+        base = pd.Series(hv).rolling(base_win, center=True,
+                                     min_periods=3).median().values
+        bad_jump = (hv - base) > max_jump
+        bad_slope = np.zeros(len(idx), dtype=bool)
+        s = np.diff(hv) / np.maximum(np.diff(pkv), 1e-6)
+        for i in np.where(np.abs(s) > max_slope)[0]:
+            j = i if hv[i] > hv[i + 1] else i + 1
+            bad_slope[j] = True
+        bad = bad_jump | bad_slope
+        if not bad.any():
+            break
+        keep[idx[bad]] = False
+        reason[idx[bad_jump]] = 'shadow_jump'
+        reason[idx[bad_slope & ~bad_jump]] = 'slope'
+    return keep, reason
+
+
 def fit_longitudinal(pk, h):
     """Бин 5м: нижняя опора (P20) → срез вверх (+UP_REJECT) → медиана
-    оставшихся → сглаживание скользящей медианой по бинам.
-    Возвращает (края бинов, f(pk)-функцию, таблицу профиля)."""
+    оставшихся → прореживание бинов (стереотени/мосты) → сглаживание
+    скользящей медианой по УЦЕЛЕВШИМ бинам; разрывы интерполируются
+    линейно между уцелевшими участками (заякорено с двух сторон).
+    Возвращает (f(pk), is_extrap(pk), таблицу профиля со столбцами
+    kept/reject_reason)."""
     b = np.floor(pk / PK_BIN).astype(int)
     df = pd.DataFrame({'b': b, 'pk': pk, 'h': h})
     rows = []
@@ -155,19 +202,38 @@ def fit_longitudinal(pk, h):
     if len(prof) < 4:
         raise RuntimeError('слишком мало валидных бинов профиля')
 
-    # сглаживание: скользящая медиана ±SMOOTH_HALF_BINS (робастнее сплайна
-    # к одиночным грязным бинам; сплайн можно включить вторым проходом)
-    hs = prof['h'].values.copy()
+    # --- прореживание: тени зданий и невозможные уклоны ---
+    keep, reason = _prune_bins(prof['pk'].values, prof['h'].values)
+    prof['kept'] = keep
+    prof['reject_reason'] = reason
+    n_rej = int((~keep).sum())
+    if n_rej:
+        rej = prof[~prof['kept']]
+        log(f'  Прорежено бинов: {n_rej}/{len(prof)} '
+            f'(shadow_jump={int((rej["reject_reason"] == "shadow_jump").sum())}, '
+            f'slope={int((rej["reject_reason"] == "slope").sum())}); '
+            f'пикеты: {", ".join(f"{p:.0f}" for p in rej["pk"].head(20))}'
+            f'{"..." if n_rej > 20 else ""}')
+    kept_prof = prof[prof['kept']].reset_index(drop=True)
+    if len(kept_prof) < 4:
+        raise RuntimeError('после прореживания осталось <4 бинов')
+
+    # сглаживание: скользящая медиана ±SMOOTH_HALF_BINS по уцелевшим
+    hs = kept_prof['h'].values.copy()
     sm = hs.copy()
     for i in range(len(hs)):
-        lo, hi = max(0, i - SMOOTH_HALF_BINS), min(len(hs), i + SMOOTH_HALF_BINS + 1)
+        lo, hi = max(0, i - SMOOTH_HALF_BINS), \
+            min(len(hs), i + SMOOTH_HALF_BINS + 1)
         sm[i] = np.median(hs[lo:hi])
-    prof['h_smooth'] = sm
+    kept_prof = kept_prof.copy()
+    kept_prof['h_smooth'] = sm
+    prof = prof.merge(kept_prof[['b', 'h_smooth']], on='b', how='left')
 
-    # разрывы: подряд пропущенные бины
+    # разрывы: пустые И прореженные бины считаются отсутствующими;
+    # интерполяция всё равно заполняет их (мост между двумя берегами),
+    # но длинные разрывы получают метку extrapolated (низкое доверие)
     full = np.arange(prof['b'].min(), prof['b'].max() + 1)
-    have = np.isin(full, prof['b'].values)
-    # для каждого пустого бина длина его разрыва (вперёд+назад)
+    have = np.isin(full, kept_prof['b'].values)
     gap_len = {}
     i = 0
     while i < len(full):
@@ -181,8 +247,8 @@ def fit_longitudinal(pk, h):
         else:
             i += 1
 
-    pk_grid = prof['pk'].values
-    h_grid = prof['h_smooth'].values
+    pk_grid = kept_prof['pk'].values
+    h_grid = kept_prof['h_smooth'].values
 
     def f_long(q):
         q = np.asarray(q, dtype=float)
@@ -251,8 +317,15 @@ def main():
     f_long, is_extrap, prof = fit_longitudinal(pk, h)
     resid1 = h - f_long(pk)
 
-    # --- поперечный профиль по остаткам инлайеров 1-го прохода ---
-    keep1 = np.abs(resid1) <= 3 * max(0.15, np.median(np.abs(resid1)) * 1.4826)
+    # --- поперечный профиль по остаткам инлайеров 1-го прохода;
+    #     пиксели прореженных (теневых) бинов исключаются: их остатки
+    #     огромны и не описывают поперечный скат ---
+    rej_bins = np.array(sorted(prof.loc[~prof['kept'], 'b']), dtype=int)
+    px_bin = np.floor(pk / PK_BIN).astype(int)
+    not_shadow = ~np.isin(px_bin, rej_bins)
+    keep1 = not_shadow & (np.abs(resid1) <=
+                          3 * max(0.15, np.median(np.abs(resid1[not_shadow]))
+                                  * 1.4826))
     g_cross, cross_tab = fit_cross(off[keep1], resid1[keep1])
 
     # --- итерация 2: переучиваем продольный на h - g(off) ---
@@ -363,8 +436,15 @@ def main():
                                           replace=False)
     axes[0].scatter(pk[sub], h[sub] - shift, s=1, alpha=0.15, c='steelblue',
                     label='road clean px')
-    axes[0].plot(prof['pk'], prof['h_smooth'] - shift, 'r-', lw=2,
+    kp = prof[prof['kept']]
+    rj = prof[~prof['kept']]
+    axes[0].plot(kp['pk'], kp['h_smooth'] - shift, 'r-', lw=2,
                  label='f(picket)')
+    if len(rj):
+        axes[0].scatter(rj['pk'], rj['h'] - shift, marker='x', s=45,
+                        c='black', zorder=5,
+                        label=f'прорежено бинов: {len(rj)} '
+                              '(стереотени/уклон)')
     axes[0].set_xlabel('пикетаж, м'); axes[0].set_ylabel('м БС-77')
     axes[0].legend(); axes[0].grid(alpha=.3)
     axes[0].set_title(f'{m01.MVP_NAME}: продольный профиль')
@@ -410,9 +490,6 @@ def main():
     import folium
     fm = folium.Map(location=[(s4 + n4) / 2, (w4 + e4) / 2], zoom_start=15,
                     control_scale=True, tiles=None)
-    fm.get_root().html.add_child(folium.Element(
-        '<style>.leaflet-image-layer{image-rendering:pixelated;'
-        'image-rendering:crisp-edges;}</style>'))
     folium.TileLayer('OpenStreetMap', name='OSM', max_zoom=19).add_to(fm)
     folium.TileLayer(tiles='https://server.arcgisonline.com/ArcGIS/rest/'
                            'services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -435,7 +512,6 @@ def main():
                     f"h_pas={p['h_pas']:.2f}<br>h_model="
                     f"{p['h_model_ell'] - shift:.2f}<br>dH={d:+.2f}{tag}",
                     max_width=240)).add_to(fm)
-    fm.fit_bounds([[s4, w4], [n4, e4]])
     folium.LayerControl(collapsed=False).add_to(fm)
     fm.save(str(OUT / 'road_qa_map.html'))
     log(f'✓ {OUT / "road_qa_map.html"}')
@@ -447,8 +523,16 @@ def main():
         'surface_px': {'measured': n_meas, 'reconstructed': n_rec,
                        'extrapolated': n_ext},
         'profile_bins': int(len(prof)),
-        'profile_h_bs77': [float(prof['h_smooth'].min() - shift),
-                           float(prof['h_smooth'].max() - shift)],
+        'bins_rejected': {
+            'total': int((~prof['kept']).sum()),
+            'shadow_jump': int((prof['reject_reason'] == 'shadow_jump').sum()),
+            'slope': int((prof['reject_reason'] == 'slope').sum()),
+            'pickets': [float(x) for x in
+                        prof.loc[~prof['kept'], 'pk'].round(0)],
+        },
+        'profile_h_bs77': [
+            float(np.nanmin(prof['h_smooth']) - shift),
+            float(np.nanmax(prof['h_smooth']) - shift)],
         'cross_bins': int(len(cross_tab)),
         'vertical': val,
         'params': {'PK_BIN': PK_BIN, 'OFF_BIN': OFF_BIN,
