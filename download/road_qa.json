@@ -321,16 +321,18 @@
     ]
   },
   "profile_h_bs77": [
-    1.8886286643679728,
-    4.397971721714901
+    -0.686683835632028,
+    1.8226592217149005
   ],
   "cross_bins": 14,
   "vertical": {
     "n_cal": 0,
     "n_holdout": 0,
-    "rmse": null,
+    "rmse": 4.339918515520097,
     "mae": null,
-    "shift_source": "GEOID_FALLBACK"
+    "shift_m": 18.4753125,
+    "shift_source": "city_calibration",
+    "city_rmse_holdout_m": 4.339918515520097
   },
   "params": {
     "PK_BIN": 5.0,
