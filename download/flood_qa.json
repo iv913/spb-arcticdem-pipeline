@@ -1,0 +1,103 @@
+{
+  "object": "Большой проспект В.О.",
+  "model": "priority-flood spill levels; tile-render client-side",
+  "error_budget": {
+    "form": 0.107,
+    "shift": 0.6286,
+    "shift_source": "city_calibration_v3",
+    "class": {
+      "1": 0.15,
+      "2": 0.3,
+      "3": 0.8
+    },
+    "total_u": {
+      "1": 0.6550472960023574,
+      "2": 0.7046892648536659,
+      "3": 1.0230283280535295
+    }
+  },
+  "report_levels": {
+    "0.5": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 0.0,
+      "depth_med": null,
+      "depth_max": null,
+      "by_class": {
+        "meas": 0.0,
+        "rec": 0.0,
+        "ext": 0.0
+      },
+      "kzs": false
+    },
+    "1.0": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 0.0,
+      "depth_med": null,
+      "depth_max": null,
+      "by_class": {
+        "meas": 0.0,
+        "rec": 0.0,
+        "ext": 0.0
+      },
+      "kzs": false
+    },
+    "1.5": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 8.5,
+      "depth_med": null,
+      "depth_max": null,
+      "by_class": {
+        "meas": 0.0,
+        "rec": 0.0,
+        "ext": 0.0
+      },
+      "kzs": false
+    },
+    "2.0": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 16.9,
+      "depth_med": null,
+      "depth_max": null,
+      "by_class": {
+        "meas": 0.0,
+        "rec": 0.0,
+        "ext": 0.0
+      },
+      "kzs": true
+    },
+    "2.5": {
+      "pct_pess": 0.0,
+      "pct_best": 11.0,
+      "pct_opt": 35.4,
+      "depth_med": 0.11,
+      "depth_max": 0.44,
+      "by_class": {
+        "meas": 6.5,
+        "rec": 4.8,
+        "ext": 14.5
+      },
+      "kzs": true
+    },
+    "3.0": {
+      "pct_pess": 4.3,
+      "pct_best": 19.9,
+      "pct_opt": 43.6,
+      "depth_med": 0.61,
+      "depth_max": 1.07,
+      "by_class": {
+        "meas": 30.1,
+        "rec": 21.8,
+        "ext": 14.7
+      },
+      "kzs": true
+    }
+  },
+  "products": {
+    "gis": "flood_surface.tif (h,u,z_spill,source)",
+    "web": "flood_map_bolshoy.html (tile slider 0.1m)"
+  }
+}

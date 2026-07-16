@@ -321,18 +321,18 @@
     ]
   },
   "profile_h_bs77": [
-    -0.686683835632028,
-    1.8226592217149005
+    2.1159286643679724,
+    4.625271721714901
   ],
   "cross_bins": 14,
   "vertical": {
     "n_cal": 0,
     "n_holdout": 0,
-    "rmse": 4.339918515520097,
+    "rmse": 3.5795,
     "mae": null,
-    "shift_m": 18.4753125,
-    "shift_source": "city_calibration",
-    "city_rmse_holdout_m": 4.339918515520097
+    "shift_m": 15.6727,
+    "shift_source": "city_calibration_v3",
+    "city_rmse_holdout_m": 3.5795
   },
   "params": {
     "PK_BIN": 5.0,
