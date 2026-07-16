@@ -1,0 +1,62 @@
+{
+  "object": "Васильевский остров",
+  "model": "priority-flood spill levels; tile-render; water-seed only (gate 4)",
+  "error_budget": {
+    "form": 0.107,
+    "shift": 0.6286,
+    "class": {
+      "1": 0.15,
+      "2": 0.3,
+      "3": 0.8
+    }
+  },
+  "report_levels": {
+    "0.5": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 0.0,
+      "depth_max": null,
+      "kzs": false
+    },
+    "1.0": {
+      "pct_pess": 0.0,
+      "pct_best": 0.0,
+      "pct_opt": 0.2,
+      "depth_max": null,
+      "kzs": false
+    },
+    "1.5": {
+      "pct_pess": 0.0,
+      "pct_best": 0.1,
+      "pct_opt": 1.8,
+      "depth_max": 0.27,
+      "kzs": false
+    },
+    "2.0": {
+      "pct_pess": 0.0,
+      "pct_best": 0.4,
+      "pct_opt": 6.1,
+      "depth_max": 0.77,
+      "kzs": true
+    },
+    "2.5": {
+      "pct_pess": 0.5,
+      "pct_best": 2.9,
+      "pct_opt": 16.5,
+      "depth_max": 1.27,
+      "kzs": true
+    },
+    "3.0": {
+      "pct_pess": 1.4,
+      "pct_best": 6.3,
+      "pct_opt": 24.4,
+      "depth_max": 1.77,
+      "kzs": true
+    }
+  },
+  "road_px": 284149,
+  "products": {
+    "gis": "vo_flood_surface.tif",
+    "web": "vo_flood_map.html"
+  }
+}
