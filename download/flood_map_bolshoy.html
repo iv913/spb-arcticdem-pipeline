@@ -30,7 +30,7 @@ const tc=t.getContext('2d');tc.drawImage(img,0,0);const d=tc.getImageData(0,0,DW
 hArr=new Float32Array(DW*DH);zArr=new Float32Array(DW*DH);sArr=new Uint8Array(DW*DH);
 for(let i=0;i<DW*DH;i++){if(d[4*i+3]===0||d[4*i]===0){hArr[i]=NaN;continue;}
 hArr[i]=LO+(d[4*i]-1)/253*(HI-LO);zArr[i]=LO+(d[4*i+1]-1)/253*(HI-LO);sArr[i]=d[4*i+2];}
-grid=new FloodGrid({tileSize:256,opacity:0.9,bounds:[[S4,W4],[N4,E4]]});grid.addTo(map);updateStats();};
+grid=new FloodGrid({tileSize:256,opacity:0.9,bounds:[[S4,W4],[N4,E4]]});grid.addTo(map);initPoints();updateStats();};
 img.src="data:image/png;base64,"+B64;
 function blues(t){return[Math.round(190-160*t),Math.round(220-150*t),Math.round(240-70*t)];}
 const FloodGrid=L.GridLayer.extend({
@@ -50,9 +50,22 @@ if(curH>zs&&depth>u){const c=blues(Math.min(depth,3)/3);o[i]=c[0];o[i+1]=c[1];o[
 }else if(curH>zs-u&&depth>-u){o[i]=120;o[i+1]=170;o[i+2]=220;o[i+3]=120;
 }else{o[i]=120;o[i+1]=120;o[i+2]=120;o[i+3]=55;}}}
 ctx.putImageData(outd,0,0);}});
+const PTS=[{"lat": 59.940769, "lon": 30.288205, "hp": 2.84, "hs": 2.39, "zs": 2.39, "u": 1.02}];const ptMarkers=[];
+function initPoints(){for(const p of PTS){
+const m=L.circleMarker([p.lat,p.lon],{radius:6,color:'#fff',weight:1.5,fillOpacity:0.95,fillColor:'#888'}).addTo(map);
+m.bindPopup('');ptMarkers.push([m,p]);}}
+function updatePoints(){let mism=0;
+for(const [m,p] of ptMarkers){
+const obsWet=curH>p.hp,predWet=curH>p.zs;
+const agree=(obsWet===predWet)||(Math.abs(curH-p.hp)<=p.u);
+let col;if(!agree){col='#d62728';mism++;}else col=obsWet?'#1f77b4':'#7a7a7a';
+m.setStyle({fillColor:col});
+m.setPopupContent('h_пасп='+p.hp.toFixed(2)+' м<br>h_модель='+p.hs.toFixed(2)+' м (dH='+(p.hs-p.hp).toFixed(2)+')<br>z_spill='+p.zs.toFixed(2)+' м, ±u='+p.u.toFixed(2)+'<br>при H='+curH.toFixed(1)+': паспорт '+(obsWet?'ПОД водой':'сухо')+', модель '+(predWet?'ПОД водой':'сухо'));}
+return mism;}
 function updateStats(){if(!hArr)return;let wet=0,valid=0;
 for(let k=0;k<DW*DH;k++){if(!isFinite(hArr[k]))continue;valid++;if(curH>zArr[k])wet++;}
-document.getElementById('stats').textContent=' — под водой '+(100*wet/Math.max(1,valid)).toFixed(1)+'%';}
+const mism=updatePoints();
+document.getElementById('stats').textContent=' — под водой '+(100*wet/Math.max(1,valid)).toFixed(1)+'%'+(PTS.length?(' | точки: '+(PTS.length-mism)+'✓ '+(mism?mism+'✗':'')):'');}
 const slider=document.getElementById('hslider');let raf=null;
 slider.addEventListener('input',()=>{curH=parseFloat(slider.value);
 document.getElementById('hval').textContent=curH.toFixed(1);

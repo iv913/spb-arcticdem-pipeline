@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""03_flood_map.py v2 — поверхность затопления с тайловым рендером."""
+"""03_flood_map.py v2 — поверхность затопления с тайловым рендером + паспортные точки."""
 import io, json, base64, heapq, sys
 from pathlib import Path
 from datetime import datetime
@@ -76,7 +76,7 @@ def encode_u8(a, lo, hi):
     out[m] = 1 + np.clip((a[m] - lo) / (hi - lo) * 253, 0, 253).astype('uint8'); return out
 
 def main():
-    log('='*60); log('03_flood_map v2: поверхность + тайловый ползунок'); log('='*60)
+    log('='*60); log('03_flood_map v2: поверхность + тайловый ползунок + точки'); log('='*60)
     shift_sigma, cc = load_shift_sigma()
     h, source, transform, crs = load_surface(); road = np.isfinite(h)
     log(f'Поверхность: {int(road.sum()):,} px')
@@ -87,12 +87,14 @@ def main():
     seeds = water_seed_mask(h.shape, transform, crs) | street_end_seeds(road, transform, crs)
     log('Priority-flood...'); zs = spill_levels(h, seeds)
     log(f'  Z_spill: [{np.nanmin(zs):.2f}, {np.nanmax(zs):.2f}] м БС')
+    # GIS-продукт
     tif = OUT / 'flood_surface.tif'
     prof = {'driver':'GTiff','dtype':'float32','count':4,'crs':crs,'transform':transform,'width':h.shape[1],'height':h.shape[0],'compress':'deflate','nodata':-9999}
     with rasterio.open(str(tif), 'w', **prof) as dst:
         for bi, (arr, name) in enumerate([(h,'h_bs77'),(u,'uncertainty_m'),(zs,'z_spill_bs77'),(source.astype('float32'),'source 1/2/3')], start=1):
             a = arr.copy(); a[~np.isfinite(a)] = -9999; dst.write(a.astype('float32'), bi); dst.set_band_description(bi, name)
     log(f'✓ {tif}')
+    # Контрольная таблица
     total = int(road.sum()); qa_levels = {}
     for H in REPORT_LEVELS:
         wet = road & (zs < H); depth = np.where(wet, H - h, np.nan)
@@ -105,6 +107,7 @@ def main():
                         'ext':round(100*(wet&(source==3)).sum()/max(1,(road&(source==3)).sum()),1)},
             'kzs':H > KZS_NOTE_LEVEL}
         log(f'  H={H:.1f}: {qa_levels[f"{H:.1f}"]["pct_best"]}% [{qa_levels[f"{H:.1f}"]["pct_pess"]}..{qa_levels[f"{H:.1f}"]["pct_opt"]}]' + (' [КЗС]' if H > KZS_NOTE_LEVEL else ''))
+    # Дисплей-варп
     enc_lo = float(np.floor(min(np.nanmin(h), np.nanmin(zs)) * 2) / 2 - 0.1)
     enc_hi = float(np.ceil(max(np.nanmax(h), np.nanmax(zs)) * 2) / 2 + 0.1)
     log(f'  Кодирование: [{enc_lo:.1f}, {enc_hi:.1f}], шаг {(enc_hi-enc_lo)/253*100:.1f}см')
@@ -119,17 +122,49 @@ def main():
     buf = io.BytesIO(); Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
     b64 = base64.b64encode(buf.getvalue()).decode()
     log(f'  Дисплей-пак: {h8d.shape[1]}x{h8d.shape[0]} px, {len(b64)/1e6:.1f} МБ')
+
+    # Паспортные точки: живая валидация на ползунке
+    pts_js = []
+    try:
+        cp = m01.load_control_points()
+        if len(cp):
+            from rasterio.warp import transform as warp_transform
+            xs, ys = warp_transform('EPSG:4326', crs, cp['lon'].tolist(), cp['lat'].tolist())
+            inv = ~transform
+            for (_, p), x, y in zip(cp.iterrows(), xs, ys):
+                c0, r0 = inv * (x, y)
+                r0, c0 = int(np.floor(r0)), int(np.floor(c0))
+                if not (0 <= r0 < h.shape[0] and 0 <= c0 < h.shape[1]): continue
+                hv, zv, uv = np.nan, np.nan, np.nan
+                for rad in (0, 2, 5, 8):
+                    r1, r2 = max(0, r0-rad), min(h.shape[0], r0+rad+1)
+                    c1, c2 = max(0, c0-rad), min(h.shape[1], c0+rad+1)
+                    sub = h[r1:r2, c1:c2]
+                    if np.isfinite(sub).any():
+                        ri, ci = np.unravel_index(np.nanargmin(np.abs(sub - p['h_pas'])), sub.shape)
+                        hv = float(sub[ri, ci]); zv = float(zs[r1+ri, c1+ci]); uv = float(u[r1+ri, c1+ci])
+                        break
+                if not np.isfinite(hv): continue
+                pts_js.append({'lat': round(float(p['lat']),6), 'lon': round(float(p['lon']),6),
+                               'hp': round(float(p['h_pas']),2), 'hs': round(hv,2),
+                               'zs': round(zv,2), 'u': round(uv,2)})
+            log(f'  Паспортных точек на поверхности: {len(pts_js)}')
+    except Exception as e:
+        log(f'  ⚠ точки не вшиты: {e}')
+
     us = {1: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.15**2)), 2: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.30**2)), 3: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.80**2))}
     html = HTML_TEMPLATE
     for k, v in {'__B64__':b64,'__W4__':repr(w4),'__S4__':repr(s4),'__E4__':repr(e4),'__N4__':repr(n4),
         '__LO__':repr(enc_lo),'__HI__':repr(enc_hi),'__U1__':f'{us[1]:.3f}','__U2__':f'{us[2]:.3f}','__U3__':f'{us[3]:.3f}',
         '__KZS__':f'{KZS_NOTE_LEVEL:.1f}','__HMIN__':f'{SLIDER_MIN:.1f}','__HMAX__':f'{SLIDER_MAX:.1f}','__HSTEP__':f'{SLIDER_STEP:.2f}',
-        '__TITLE__':m01.MVP_NAME}.items(): html = html.replace(k, v)
+        '__TITLE__':m01.MVP_NAME, '__PTS__': json.dumps(pts_js, ensure_ascii=False)}.items():
+        html = html.replace(k, v)
     (OUT / 'flood_map_bolshoy.html').write_text(html, encoding='utf-8')
-    log(f'✓ flood_map_bolshoy.html (тайловый ползунок {SLIDER_MIN}–{SLIDER_MAX}м)')
-    qa = {'object':m01.MVP_NAME,'model':'priority-flood spill levels; tile-render client-side',
+    log(f'✓ flood_map_bolshoy.html (тайловый ползунок + {len(pts_js)} точек)')
+    qa = {'object':m01.MVP_NAME,'model':'priority-flood spill levels; tile-render + passport validation',
           'error_budget':{'form':FORM_SIGMA,'shift':shift_sigma,'shift_source':(cc or {}).get('shift_source','default'),'class':CLASS_SIGMA,'total_u':us},
-          'report_levels':qa_levels,'products':{'gis':'flood_surface.tif (h,u,z_spill,source)','web':'flood_map_bolshoy.html (tile slider 0.1m)'}}
+          'report_levels':qa_levels,'n_passport_points':len(pts_js),
+          'products':{'gis':'flood_surface.tif (h,u,z_spill,source)','web':'flood_map_bolshoy.html (tile slider + points)'}}
     (OUT / 'flood_qa.json').write_text(json.dumps(qa, ensure_ascii=False, indent=2)); log(f'✓ flood_qa.json')
 
 HTML_TEMPLATE = r"""<!DOCTYPE html>
@@ -164,7 +199,7 @@ const tc=t.getContext('2d');tc.drawImage(img,0,0);const d=tc.getImageData(0,0,DW
 hArr=new Float32Array(DW*DH);zArr=new Float32Array(DW*DH);sArr=new Uint8Array(DW*DH);
 for(let i=0;i<DW*DH;i++){if(d[4*i+3]===0||d[4*i]===0){hArr[i]=NaN;continue;}
 hArr[i]=LO+(d[4*i]-1)/253*(HI-LO);zArr[i]=LO+(d[4*i+1]-1)/253*(HI-LO);sArr[i]=d[4*i+2];}
-grid=new FloodGrid({tileSize:256,opacity:0.9,bounds:[[S4,W4],[N4,E4]]});grid.addTo(map);updateStats();};
+grid=new FloodGrid({tileSize:256,opacity:0.9,bounds:[[S4,W4],[N4,E4]]});grid.addTo(map);initPoints();updateStats();};
 img.src="data:image/png;base64,"+B64;
 function blues(t){return[Math.round(190-160*t),Math.round(220-150*t),Math.round(240-70*t)];}
 const FloodGrid=L.GridLayer.extend({
@@ -184,9 +219,22 @@ if(curH>zs&&depth>u){const c=blues(Math.min(depth,3)/3);o[i]=c[0];o[i+1]=c[1];o[
 }else if(curH>zs-u&&depth>-u){o[i]=120;o[i+1]=170;o[i+2]=220;o[i+3]=120;
 }else{o[i]=120;o[i+1]=120;o[i+2]=120;o[i+3]=55;}}}
 ctx.putImageData(outd,0,0);}});
+const PTS=__PTS__;const ptMarkers=[];
+function initPoints(){for(const p of PTS){
+const m=L.circleMarker([p.lat,p.lon],{radius:6,color:'#fff',weight:1.5,fillOpacity:0.95,fillColor:'#888'}).addTo(map);
+m.bindPopup('');ptMarkers.push([m,p]);}}
+function updatePoints(){let mism=0;
+for(const [m,p] of ptMarkers){
+const obsWet=curH>p.hp,predWet=curH>p.zs;
+const agree=(obsWet===predWet)||(Math.abs(curH-p.hp)<=p.u);
+let col;if(!agree){col='#d62728';mism++;}else col=obsWet?'#1f77b4':'#7a7a7a';
+m.setStyle({fillColor:col});
+m.setPopupContent('h_пасп='+p.hp.toFixed(2)+' м<br>h_модель='+p.hs.toFixed(2)+' м (dH='+(p.hs-p.hp).toFixed(2)+')<br>z_spill='+p.zs.toFixed(2)+' м, ±u='+p.u.toFixed(2)+'<br>при H='+curH.toFixed(1)+': паспорт '+(obsWet?'ПОД водой':'сухо')+', модель '+(predWet?'ПОД водой':'сухо'));}
+return mism;}
 function updateStats(){if(!hArr)return;let wet=0,valid=0;
 for(let k=0;k<DW*DH;k++){if(!isFinite(hArr[k]))continue;valid++;if(curH>zArr[k])wet++;}
-document.getElementById('stats').textContent=' — под водой '+(100*wet/Math.max(1,valid)).toFixed(1)+'%';}
+const mism=updatePoints();
+document.getElementById('stats').textContent=' — под водой '+(100*wet/Math.max(1,valid)).toFixed(1)+'%'+(PTS.length?(' | точки: '+(PTS.length-mism)+'✓ '+(mism?mism+'✗':'')):'');}
 const slider=document.getElementById('hslider');let raf=null;
 slider.addEventListener('input',()=>{curH=parseFloat(slider.value);
 document.getElementById('hval').textContent=curH.toFixed(1);
