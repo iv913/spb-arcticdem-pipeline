@@ -1,33 +1,35 @@
 {
+  "version": "v3",
+  "estimator": "corridor_ground (block-median lower envelope, adaptive corridor, anchor intersections)",
   "n_total": 202,
-  "n_with_dem": 139,
-  "n_near_road_50m": 189,
-  "n_near_road_15m": 163,
-  "n_clean_calibration": 63,
-  "shift_m": 18.4753125,
-  "shift_source": "city_calibration",
-  "geoid_fallback_m": 15.9,
-  "bias_dem_m": 2.575312500000001,
-  "rmse_holdout_m": 4.339918515520097,
-  "mae_holdout_m": 3.6816249999999995,
-  "n_holdout": 15,
-  "streets_with_3plus_points": 2,
-  "streets_top": [
-    {
-      "street": "Биржевой проезд",
-      "n": 3,
-      "median_dH": 17.6471875,
-      "mad_dH": 0.5337359999999991,
-      "median_h_pas": 3.02,
-      "median_h_dem_ell": 20.3671875
+  "n_matched": 177,
+  "n_ok": 79,
+  "n_cal": 60,
+  "n_holdout": 19,
+  "shift_m": 15.6727,
+  "shift_source": "city_calibration_v3",
+  "between_street_mad_m": 0.6286,
+  "n_streets": 42,
+  "n_streets_inlier": 28,
+  "rmse_holdout_m": 3.5795,
+  "mae_holdout_m": 2.4412,
+  "regional": {
+    "vo": {
+      "label": "vo",
+      "n_streets_raw": 21,
+      "n_streets_dedup": 17,
+      "shift": 17.054,
+      "mad": 2.483
     },
-    {
-      "street": "площадь Ленина",
-      "n": 3,
-      "median_dH": 19.2671875,
-      "mad_dH": 0.03938156249999578,
-      "median_h_pas": 4.76,
-      "median_h_dem_ell": 24.140625
-    }
-  ]
+    "mainland": {
+      "label": "mainland",
+      "n_streets_raw": 21,
+      "n_streets_dedup": 19,
+      "shift": 15.754,
+      "mad": 0.623
+    },
+    "delta_m": 1.3,
+    "significant": false,
+    "dedup_dist_m": 300.0
+  }
 }
