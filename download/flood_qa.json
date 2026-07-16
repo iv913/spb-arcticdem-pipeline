@@ -1,6 +1,6 @@
 {
   "object": "Большой проспект В.О.",
-  "model": "priority-flood spill levels; tile-render client-side",
+  "model": "priority-flood spill levels; tile-render + passport validation",
   "error_budget": {
     "form": 0.107,
     "shift": 0.6286,
@@ -96,8 +96,9 @@
       "kzs": true
     }
   },
+  "n_passport_points": 1,
   "products": {
     "gis": "flood_surface.tif (h,u,z_spill,source)",
-    "web": "flood_map_bolshoy.html (tile slider 0.1m)"
+    "web": "flood_map_bolshoy.html (tile slider + points)"
   }
 }
