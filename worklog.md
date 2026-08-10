@@ -409,3 +409,104 @@ Next:
 - **bias_gate_passed: false** — достижимость 0.89 для блока 120м < 0.90
   · Можно снизить target_cover с 0.90 до 0.88 → блок 120м станет feasible
   · Или ослабить open_min_m с 6 до 4м → больше опоры → выше достижимость
+
+---
+Task ID: 5.15-audit
+Agent: main
+Task: Пользователь попросил полный аудит: (1) diff восстановленных файлов, (2) паспортная таблица с джойном диагностики, (3) city_calibration.json, (4) anchor_ground_qa, (5) vo_anchor_agreement + vo_streets_qa, (6) ground_surface_qa, (7) road_qa + fusion_qa, (8) owner_qa, (9) flood QA. Плюс проверка конкретных пунктов: anchor_suspect, nearest_finite, гейт 4, prune_bins, канарейка, знаменатели stat, стек 02, FORM_SIGMA.
+
+Work Log:
+- **АУДИТ: diff восстановленных файлов против patch_v6_3:**
+  · 01_owner_map.py ✓ совпадает
+  · 03_flood_map.py ✓ совпадает
+  · 04_vo_pipeline.py ✗ ОТЛИЧАЕТСЯ — фикс pct_anchor (anchor→pct_anchor)
+  · 04_ground_surface.py ✓ совпадает
+  · 04a_anchor_ground.py ✓ совпадает
+  · 04b_ground_flood_map.py ✓ совпадает
+  · 04c_compare_raw_filtered.py ✓ совпадает
+  · lib_ground.py ✗ ОТЛИЧАЕТСЯ — добавлен estimate_relief_trend (v6.4)
+  · lib_vertical.py ✓ совпадает
+  · multi_dem_profile.py ✓ совпадает
+  · Файлы восстановленные из worklog (не в патчах): fetch_vo_polygon.py, 01b_vo_owner_map.py, measure_dH_by_class.py, test_ground_v6.py (обновлён тестами 15-16)
+- **ПУНКТ 1: Паспортная таблица с джойном диагностики** (download/passport_diagnostics_v6_4.csv):
+  · 44 точки с: lat, lon, hp, hs, dH, detail, anchor_q, dist_to_anchor_m, u, z_spill, stat
+  · **Корреляция |dH| vs dist_to_anchor: +0.284** — положительная → лечится плотностью опоры
+  · По квартилям расстояния:
+    - Q1 (0-9м): |dH| median=0.51м, n=11
+    - Q2 (13-35м): |dH| median=0.37м, n=10
+    - Q3 (40-106м): |dH| median=0.71м, n=10
+    - Q4 (107-256м): |dH| median=0.84м, n=11
+  · Вывод: ошибка растёт с расстоянием → главная гипотеза — редкая опора, не датум
+- **ПУНКТ 2: city_calibration.json:**
+  · regional.significant = **false** (Δ В.О.−материк = 1.3м, но V.O. MAD=2.483м → не значимо)
+  · regional.vo.shift = 17.054м (vs city 15.673м) — НЕ применяется, т.к. significant=false
+  · regional.vo.mad = 2.483м — очень высокая дисперсия dH на В.О.
+  · regional.mainland.shift = 15.754м, mad = 0.623м
+  · between_street_mad = 0.629м — это σ_привязки, доминирует в бюджете
+- **ПУНКТ 3: anchor_ground_qa.json (v6.4):**
+  · trend.slope_m_per_km = 0.667 (глобальная плоскость, n=898206)
+  · trend.roughness_mad_m = 1.165 — шероховатость после снятия тренда
+  · block_m = 180м (окно 540м), fallback = false
+  · block 120м: reach_cover=0.885 < 0.90 → не feasible (разница 0.015!)
+  · cap_calibration.offset_m = 0.736, mad = 0.757, допуск = 1.492м
+  · dist_to_anchor: median=60м, p95=209.9м
+  · stale_dem: 1,265,058 px (5.06 km²) — намыв
+  · water.bodies_px = 841,729, edges_kept_as_land = 43,609
+- **ПУНКТ 4: vo_anchor_agreement.json + vo_streets_qa.csv:**
+  · bias_gate_passed: **false** (bias=+0.57м, MAD=0.83м, n=53 улиц)
+  · Распределение: 23 ok, 29 bridged, 22 failed_street, 1 anchor_suspect
+  · anchor_suspect: 8-я линия (Δ=-1.82м) — присутствует, предохранитель работает
+- **ПУНКТ 5: ground_surface_qa.json:**
+  · stat_area_km2 = 9.273 (суша минус здания минус вода)
+  · detail=42 (reclaimed_stale_dem): 61,332 px — намыв, интерполяция
+  · street_bridged: 6,530 px (5% от 131,591 сравнённых)
+- **ПУНКТ 6: road_qa.json — ЕСТЬ, fusion_qa.json — НЕТ:**
+  · road_qa.json: Большой пр-т, train_px=8797, MAD=0.133м, measured=3355 px
+  · **fused_profile.csv и fusion_qa.json ОТСУТСТВУЮТ** — модуль 02b НЕ запускался
+  · road_surface.tif от Jul 16 (старый прогон) — стек работает, measured=34486 в vo_surface включает 3355 Большого
+  · FORM_SIGMA=0.107 применяется как константа ко всему острову (в 04b и lib_vertical)
+- **ПУНКТ 7: owner_qa.json:**
+  · owner_px: building=379,953 (но это для patch Большого, не для всего В.О.)
+  · Для В.О.: vo_owner_map.tif building=1,877,226 px (7.5 km²) из 15.26 km² суши
+- **ПУНКТ 8: flood QA:**
+  · H=3.0м: 40.7% best [27.8..60.9%]
+  · Знаменатель: 2,318,359 px суши (9.27 km²)
+- **АУДИТ: конкретные пункты:**
+  1. anchor_suspect ✓ — 1 улица (8-я линия) в vo_streets_qa.csv
+  2. nearest_finite ✓ в 03/04b; ✗ в 04c — ИСПОЛЬЗУЕТ nanargmin (ближайший по высоте, подыгрывает модели) — РЕГРЕССИЯ
+  3. Гейт 4 ✓ — water_seed в 04b
+  4. prune_bins ✓ — из lib_profile в vo_pipeline
+  5. Канарейка имён ✓ — norm_street_name + Гороховая в 01_owner_map
+  6. Знаменатель по stat ✓ в 04b/04c
+  7. Стек 02 ✓ — road_surface.tif наложен (34486 measured включает 3355 Большого)
+  8. FORM_SIGMA=0.107 — применяется как константа, fusion НЕ запускался
+
+Stage Summary:
+- **Главная находка: корреляция |dH| vs dist_to_anchor = +0.284**
+  - Ошибка растёт с расстоянием до опоры (Q1=0.51м → Q4=0.84м)
+  - Гипотеза: редкая опора (p95=210м), а не датум
+  - Лечится: плотностью опоры (ослабить open_min_m, узлы-перекрёстки, многовременной стек)
+- **РЕГРЕССИЯ: 04c использует nanargmin вместо nearest_finite**
+  - 04c_compare_raw_filtered.py строка 279: nanargmin(|sub_f - h_pas|) — подыгрывает модели
+  - Должно быть nearest_finite (ближайший геометрически)
+  - В 03 и 04b исправлено, в 04c — НЕТ
+- **fusion_qa.json отсутствует** — модуль 02b не запускался
+  · road_surface.tif от Jul 16 (старый, но рабочий)
+  · FORM_SIGMA=0.107 — константа, измерена на Большом, применяется ко всему острову
+- **city_calibration: regional.significant=false**
+  · V.O. MAD=2.483м — слишком высокая дисперсия, чтобы считать региональный сдвиг значимым
+  · Δ(В.О.−материк)=1.3м не применяется
+  · σ_привязки=0.629м — доминирует в бюджете (MAD модели 0.90м vs σ 0.63м)
+- **Пользователь прав: сигнал < шума**
+  · σ паспортных отметок 0.54м, MAD ошибки 0.90м, корреляция +0.32
+  · Модель добавляет свою вариацию поверх более слабого сигнала
+  · Пока MAD не станет <0.54м, карта не различает рельеф
+- **Достижимость 0.885 для блока 120м vs 0.90 порог** — разница 0.015 решает выбор окна
+  · Пользователь: «требовать 0.90 нет физических оснований, непокрытые блоки заполняются диффузией»
+  · Предложение: брать наименьшее окно, проходящее по рельефу, у которого достижимость не хуже максимальной на 0.03
+
+Next:
+- **Починить 04c**: заменить nanargmin на nearest_finite (РЕГРЕССИЯ)
+- **Запустить 02b_profile_fusion**: восстановить fused_profile.csv + fusion_qa.json
+- **Снизить target_cover** в choose_block_px с 0.90 до 0.87 → блок 120м станет feasible
+- **Многовременной стек** (драйвер dsm_stack) — главная надежда на снижение MAD <0.54м
