@@ -30,6 +30,10 @@ _spec = _ilu.spec_from_file_location('m01', Path(__file__).parent / '01_owner_ma
 m01 = _ilu.module_from_spec(_spec); _spec.loader.exec_module(m01)
 _spec2 = _ilu.spec_from_file_location('libp', Path(__file__).parent / 'lib_profile.py')
 libp = _ilu.module_from_spec(_spec2); _spec2.loader.exec_module(libp)
+_spec4 = _ilu.spec_from_file_location('libv', Path(__file__).parent / 'lib_vertical.py')
+libv = _ilu.module_from_spec(_spec4); _spec4.loader.exec_module(libv)
+_spec5 = _ilu.spec_from_file_location('libg', Path(__file__).parent / 'lib_ground.py')
+libg = _ilu.module_from_spec(_spec5); _spec5.loader.exec_module(libg)
 
 HOME = Path('/home/z/my-project'); OUT = HOME / 'download'
 CACHE = HOME / 'scripts' / 'dem_cache'; UTM = 'EPSG:32636'
@@ -44,21 +48,46 @@ KZS_NOTE_LEVEL = 1.6; REPORT_LEVELS = [0.5,1.0,1.5,2.0,2.5,3.0]
 STREET_H_MIN = 0.5; STREET_H_MAX = 8.0; STREET_RANGE_MAX = 6.0
 # ГЕЙТ 3: нижний гейт пикселя
 PIXEL_H_MIN = 0.3; WATER_CLIP_BUFFER = 3.0
+# выборка пикета: только пиксели road_mask (см. дефект №2)
+RADIUS_PX = 5; RADIUS_PX_WIDE = 8; MIN_PX_PICKET = 5
+# v5: улица проверяется против опорного поля открытой земли (модуль 04a)
+ANCHOR_TIF_NAME = 'anchor_ground.tif'
+STREET_TOL_M = 0.50        # согласие улицы с опорой
+ANCHOR_BIAS_MAX = 0.50     # допустимое смещение опоры по совокупности улиц
+STREET_MIN_PX = 20
 
 def log(msg): print(f'[{datetime.now():%H:%M:%S}] {msg}', flush=True)
 
 
+def read_on_grid(path, ref_transform, ref_crs, shape, band=1):
+    """Чтение чужого растра НА НАШУ сетку через общий CRS.
+    Совпадение сеток не требуется — в отличие от read(window=...),
+    который интерпретирует смещения относительно чужого начала отсчёта."""
+    from rasterio.warp import reproject, Resampling
+    with rasterio.open(str(path)) as src:
+        out = np.full(shape, np.nan, dtype='float32')
+        reproject(source=rasterio.band(src, band), destination=out,
+                  src_nodata=src.nodata, dst_nodata=np.nan,
+                  dst_transform=ref_transform, dst_crs=ref_crs,
+                  resampling=Resampling.nearest)
+    return out
+
+
 def fetch_vo_polygon():
-    """ГЕЙТ 1: получить полигон Васильевского острова из OSM admin-границы."""
-    W, S, E, N = VO_BBOX
+    """ГЕЙТ 1: получить полигон Васильевского острова из OSM (relation #1576083,
+    place=island 'Васильевский остров'). Использует _stitch_rings из 01_owner_map
+    для сшивки 101 outer way в замкнутое кольцо. Canary-тест: Гороховая улица
+    НЕ внутри полигона (она на материке)."""
+    from shapely.geometry import Point
     cache = CACHE / 'osm' / 'vo_polygon.json'
     if cache.exists():
         data = json.loads(cache.read_text())
     else:
-        q = f"""[out:json][timeout:120];
-        relation["admin_level"="5"]["name"~"Васильевский"]({S},{W},{N},{E});
-        way(r)["admin_level"]({S},{W},{N},{E});
-        out geom;"""
+        q = """[out:json][timeout:120];
+        relation(1576083);
+        (._;>;);
+        out geom;
+        """
         import requests
         data = {'elements': []}
         for url in ('https://maps.mail.ru/osm/tools/overpass/api/interpreter',
@@ -68,49 +97,56 @@ def fetch_vo_polygon():
                 if r.status_code == 200 and r.text.strip():
                     data = r.json(); cache.write_text(json.dumps(data)); break
             except: pass
-    # Собрать полигон из ways relation
+    # ways → координаты
     ways = {}
     for el in data.get('elements', []):
         if el['type'] == 'way' and 'geometry' in el:
             coords = [(p['lon'], p['lat']) for p in el['geometry']]
             if len(coords) >= 2:
                 ways[el['id']] = coords
-    # Попытка замкнуть кольцо: найти relation с members
-    polygons = []
+    # outer ways из relation
+    outer_ls, inner_ls = [], []
     for el in data.get('elements', []):
-        if el['type'] == 'relation':
-            outer = [m['ref'] for m in el.get('members', []) if m.get('role') == 'outer']
-            ring = []
-            for w_id in outer:
-                if w_id in ways:
-                    c = ways[w_id]
-                    if ring and ring[-1] != c[0]:
-                        if ring[-1] == c[-1]: c = c[::-1]
-                    ring.extend(c if not ring else c[1:])
-            if len(ring) >= 4 and ring[0] == ring[-1]:
-                from shapely.geometry import Polygon
-                polygons.append(Polygon(ring))
-    if polygons:
-        poly = unary_union(polygons)
-        log(f'  Полигон В.О.: {poly.area:.4f}°², {len(polygons)} колец')
-        return poly
-    # Fallback: береговая линия из natural=coastline
-    log('  ⚠ admin-граница не найдена, fallback на береговую линию')
-    osm = m01.fetch_osm(VO_BBOX)
-    waters = []
-    for el in osm['elements']:
-        tags = el.get('tags', {})
-        if tags.get('natural') == 'water' or tags.get('waterway') in ('river','canal','riverbank'):
-            polys = list(m01._iter_polygons(el))
-            waters.extend(polys)
-    if not waters:
-        log('  ⚠ нет воды — fallback на bbox')
-        return box(*VO_BBOX)
-    water_u = unary_union(waters)
-    # Остров = bbox минус вода
-    island = box(*VO_BBOX).difference(water_u)
-    log(f'  Полигон В.О. (береговая): {island.area:.4f}°²')
-    return island
+        if el['type'] != 'relation':
+            continue
+        for m in el.get('members', []):
+            if m['ref'] not in ways:
+                continue
+            ls = LineString(ways[m['ref']])
+            (inner_ls if m.get('role') == 'inner' else outer_ls).append(ls)
+    outer_polys = m01._stitch_rings(outer_ls)
+    if not outer_polys:
+        log('  ⚠ stitch_rings не собрал полигон — fallback на береговую линию')
+        osm = m01.fetch_osm(VO_BBOX)
+        waters = []
+        for el in osm['elements']:
+            tags = el.get('tags', {})
+            if tags.get('natural') == 'water' or tags.get('waterway') in ('river','canal','riverbank'):
+                polys = list(m01._iter_polygons(el))
+                waters.extend(polys)
+        if not waters:
+            log('  ⚠ нет воды — fallback на bbox'); return box(*VO_BBOX)
+        water_u = unary_union(waters)
+        island = box(*VO_BBOX).difference(water_u)
+        log(f'  Полигон В.О. (береговая): {island.area:.4f}°²')
+        return island
+    poly = unary_union(outer_polys)
+    if inner_ls:
+        holes = unary_union(m01._stitch_rings(inner_ls))
+        poly = poly.difference(holes)
+    if not poly.is_valid:
+        poly = poly.buffer(0)
+    # Canary assertions
+    pt_bolshoy = Point(30.265, 59.933)
+    pt_gorohovaya = Point(30.32, 59.93)
+    if not poly.contains(pt_bolshoy):
+        log('  ⚠ Canary WARN: Большой пр. В.О. НЕ внутри полигона — возможно bbox-артефакт')
+    if poly.contains(pt_gorohovaya):
+        log('  ⚠ Canary WARN: Гороховая улица (материк) внутри полигона — утечка на материк!')
+    import geopandas as gpd
+    area_km2 = gpd.GeoSeries([poly], crs='EPSG:4326').to_crs(UTM).iloc[0].area / 1e6
+    log(f'  Полигон В.О.: {poly.geom_type}, площадь {area_km2:.2f} км²')
+    return poly
 
 
 def load_vo_streets(vo_polygon):
@@ -158,7 +194,11 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
     pad = streets_dem.buffer(PATCH_MARGIN_M).union_all()
     win = from_bounds(*pad.bounds, src.transform)
     win = win.round_offsets(op='floor').round_lengths(op='ceil')
-    dem = src.read(1, window=win).astype('float32')
+    # ДЕФЕКТ РЕВЬЮ №11: без boundless=True окно, вылезающее за край DEM,
+    # возвращает массив МЕНЬШЕГО размера, а transform считается на полное
+    # окно — георефереренс молча уезжает. boundless фиксирует форму.
+    dem = src.read(1, window=win, boundless=True,
+                   fill_value=np.nan).astype('float32')
     if src.nodata is not None: dem[dem == src.nodata] = np.nan
     transform = rasterio.windows.transform(win, src.transform)
     H, W = dem.shape
@@ -196,9 +236,28 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
         road_mask &= ~water_mask
         log(f'  Water-clip: убрано {n_before - int(road_mask.sum()):,} px')
 
+    # --- v5: опорное поле открытой земли (модуль 04a) ---
+    anchor_path = OUT / ANCHOR_TIF_NAME
+    if anchor_path.exists():
+        anchor = read_on_grid(anchor_path, transform, dem_crs, (H, W), band=1)
+        anchor_q = read_on_grid(anchor_path, transform, dem_crs, (H, W), band=2)
+        log(f'  Опорное поле: {int(np.isfinite(anchor).sum()):,} px, '
+            f'измеренной опоры {int((anchor_q == 1).sum()):,} px')
+    else:
+        anchor = np.full((H, W), np.nan, dtype='float32')
+        anchor_q = np.zeros((H, W), dtype='float32')
+        log(f'  ⚠ нет {anchor_path.name} — улицы не с чем сверять. '
+            'Запустите 04a_anchor_ground.py; без него v5 вырождается в v4, '
+            'то есть улицы снова верят сами себе.')
+
     surface = np.full((H, W), np.nan, dtype='float32')
     source = np.zeros((H, W), dtype='uint8')
-    n_done = 0; n_fail = 0; n_gate_fail = 0; profiles = []
+    # ДЕФЕКТ РЕВЬЮ №7: пиксели ниже водного гейта не должны попадать в
+    # знаменатель процентов затопления (иначе площадь Невы и кромок
+    # причалов считается «сушей под водой»). stat=1 — учитывать.
+    stat = np.zeros((H, W), dtype='uint8')
+    n_done = 0; n_fail = 0; n_gate_fail = 0; n_bridged = 0
+    n_anchor_suspect = 0; profiles = []
 
     for idx, row in streets_gdf.iterrows():
         name = row['name']
@@ -218,17 +277,36 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
         pks = np.linspace(0, L, n_pk)
         axis_dem_g = gpd.GeoSeries([axis], crs=UTM).to_crs(dem_crs).iloc[0]
         h_vals = []
+        n_no_road = 0
         for pk in pks:
             pt = axis_dem_g.interpolate(float(pk))
-            r_px = 5; col = int((pt.x - transform.c) / transform.a)
+            col = int((pt.x - transform.c) / transform.a)
             row_px = int((pt.y - transform.f) / transform.e)
-            r0, c0 = max(0, row_px-r_px), max(0, col-r_px)
-            r1, c1 = min(H, row_px+r_px+1), min(W, col+r_px+1)
-            win_vals = dem[r0:r1, c0:c1].ravel()
-            win_vals = win_vals[np.isfinite(win_vals)]
-            if len(win_vals) < 5: h_vals.append(np.nan); continue
-            anchor = np.percentile(win_vals, LOW_ANCHOR_PCT)
-            kept_v = win_vals[win_vals <= anchor + UP_REJECT]
+            # ДЕФЕКТ РЕВЬЮ №2 (главный для тиража). Раньше здесь бралcя
+            # СЫРОЙ квадрат DSM ±5 px (21x21 м) — без owner map, без масок
+            # зданий и зелени, при том что road_mask посчитан выше и уже
+            # обрезан по воде (гейт 3). На Большом (проезжая часть 45 м)
+            # квадрат почти весь на асфальте и метод работал; на линии В.О.
+            # с проезжей частью 7-9 м в ту же выборку попадают тротуары,
+            # фасады и дворы, и P20 берётся по смеси. Именно поэтому
+            # «Большой отдельно корректнее», а модуль 02 строился вокруг
+            # того, что владелец пикселя известен ДО статистики.
+            # Теперь выборка ограничена маской дороги; окно расширяется
+            # только если чистых пикселей мало.
+            got = None
+            for r_px in (RADIUS_PX, RADIUS_PX_WIDE):
+                r0, c0 = max(0, row_px-r_px), max(0, col-r_px)
+                r1, c1 = min(H, row_px+r_px+1), min(W, col+r_px+1)
+                sub = dem[r0:r1, c0:c1]
+                sub_road = road_mask[r0:r1, c0:c1]
+                vals = sub[sub_road & np.isfinite(sub)]
+                if len(vals) >= MIN_PX_PICKET:
+                    got = vals
+                    break
+            if got is None:
+                n_no_road += 1; h_vals.append(np.nan); continue
+            pct_anchor = np.percentile(got, LOW_ANCHOR_PCT)
+            kept_v = got[got <= pct_anchor + UP_REJECT]
             h_vals.append(float(np.median(kept_v)) if len(kept_v) >= 2 else np.nan)
 
         h_vals = np.array(h_vals)
@@ -240,8 +318,8 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
         for bi in np.unique(b[ok]):
             mask = (b == bi) & ok
             if mask.sum() < 1: continue
-            anchor = np.percentile(h_vals[mask], LOW_ANCHOR_PCT)
-            kept_v = h_vals[mask][h_vals[mask] <= anchor + UP_REJECT]
+            pct_anchor = np.percentile(h_vals[mask], LOW_ANCHOR_PCT)
+            kept_v = h_vals[mask][h_vals[mask] <= pct_anchor + UP_REJECT]
             if len(kept_v) < 1: continue
             bin_rows.append({'b': int(bi), 'pk': float(pks[mask].mean()),
                              'h': float(np.median(kept_v))})
@@ -302,6 +380,43 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
         ext = (pk_px < pk_grid.min()) | (pk_px > pk_grid.max())
         ext |= np.array([gap_len.get(int(x), 0) > MAX_GAP_BINS for x in bq])
 
+        # === v5: сверка улицы с независимой опорой ===
+        h_street_bs = h_model - shift
+        anch_px = anchor[rows, cols]
+        verdict, delta, n_cmp = libg.street_verdict(
+            h_street_bs, anch_px, tol_m=STREET_TOL_M, min_px=STREET_MIN_PX)
+        if verdict == 'anchor_suspect':
+            # Улица НИЖЕ опоры: физически невозможно, чтобы проезжая
+            # часть лежала на метры ниже соседних дворов. Значит завышена
+            # опора. Улицу оставляем измеренной и помечаем — это заявка
+            # на разбор опорного поля в этом квартале.
+            log(f'    ⚠ {name}: улица ниже опоры на {abs(delta):.2f} м — '
+                'опора подозрительна, улица оставлена как есть')
+            n_anchor_suspect += 1
+        if verdict == 'bridged':
+            # Улица систематически расходится с открытой землёй вокруг:
+            # это каньон без отражений от дна, а не рельеф. Раньше такую
+            # улицу спасти было нечем — прореживание по скользящей медиане
+            # видит только выбросы ВНУТРИ улицы, а сдвинута она целиком.
+            # Теперь берём уровень из опорного поля.
+            use_anchor = np.isfinite(anch_px)
+            surface[rows[use_anchor], cols[use_anchor]] = anch_px[use_anchor]
+            source[rows[use_anchor], cols[use_anchor]] = 2
+            stat[rows[use_anchor], cols[use_anchor]] = 1
+            if (~use_anchor).any():
+                surface[rows[~use_anchor], cols[~use_anchor]] = \
+                    h_street_bs[~use_anchor]
+                source[rows[~use_anchor], cols[~use_anchor]] = 3
+                stat[rows[~use_anchor], cols[~use_anchor]] = 1
+            profiles.append({'name': name, 'length_m': L, 'status': 'bridged',
+                             'h_bs_median': round(h_bs_median, 2),
+                             'h_bs_range': round(h_bs_range, 2),
+                             'anchor_delta_m': round(delta, 2),
+                             'n_cmp_px': n_cmp,
+                             'n_bins': len(prof), 'n_kept': int(keep.sum())})
+            n_bridged += 1
+            continue
+
         surface[rows, cols] = h_model - shift
         source[rows, cols] = 3
         dem_vals = dem[rows, cols]
@@ -317,57 +432,76 @@ def build_vo_surface(streets_gdf, dem_path, shift, vo_polygon):
         # Пиксели < PIXEL_H_MIN → extrapolated (максимальная неопределённость)
         below = valid & ~valid_suspect
         source[rows[below], cols[below]] = 3
+        stat[rows, cols] = 1
+        stat[rows[below], cols[below]] = 0
 
-        profiles.append({'name': name, 'length_m': L, 'status': 'ok',
+        profiles.append({'name': name, 'length_m': L,
+                         'status': ('anchor_suspect'
+                                    if verdict == 'anchor_suspect' else 'ok'),
                          'h_bs_median': round(h_bs_median, 2),
                          'h_bs_range': round(h_bs_range, 2),
+                         'anchor_delta_m': (round(delta, 2)
+                                            if np.isfinite(delta) else None),
+                         'n_cmp_px': n_cmp,
                          'n_bins': len(prof), 'n_kept': int(keep.sum())})
         n_done += 1
         if n_done % 30 == 0: log(f'  ...{n_done}/{len(streets_gdf)}')
 
     src.close()
-    log(f'  Готово: {n_done} ok, {n_fail} пропущено, {n_gate_fail} failed_street')
+    log(f'  Готово: {n_done} measured (из них {n_anchor_suspect} с '
+        f'подозрительной опорой), {n_bridged} bridged, '
+        f'{n_fail} пропущено, {n_gate_fail} failed_street')
 
     # Стек приоритетов: продукт модуля 02 (Большой) поверх быстрого
     bolshoy_path = OUT / 'road_surface.tif'
     if bolshoy_path.exists():
         log('  Стек приоритетов: накладываем road_surface.tif (Большой пр.)...')
-        with rasterio.open(str(bolshoy_path)) as bs:
-            # Прочитать в той же сетке (должна совпадать — тот же DEM bbox)
-            try:
-                b_h = bs.read(1, window=win).astype('float32')
-                b_s = bs.read(2, window=win).astype('uint8')
-                if bs.nodata is not None: b_h[b_h == bs.nodata] = np.nan
-                bolshoy_mask = np.isfinite(b_h)
-                surface[bolshoy_mask] = b_h[bolshoy_mask]
-                source[bolshoy_mask] = b_s[bolshoy_mask]
-                log(f'    Наложено: {int(bolshoy_mask.sum()):,} px из road_surface.tif')
-            except Exception as e:
-                log(f'    ⚠ не удалось наложить: {e}')
+        # ДЕФЕКТ РЕВЬЮ №3. Раньше здесь было `bs.read(1, window=win)`, где
+        # `win` построен от transform ОСТРОВНОГО DEM, а road_surface.tif
+        # записан модулем 02 в сетке owner map — другое начало отсчёта.
+        # Смещения col_off/row_off в чужом файле означают другое место на
+        # земле: либо Большой вклеивался со сдвигом, либо read падал и
+        # `except Exception` печатал мягкое «не удалось наложить», то есть
+        # молчаливый no-op. Правильная операция — перепроекция на нашу
+        # сетку через общий CRS (совпадение сеток не требуется).
+        b_h = read_on_grid(bolshoy_path, transform, dem_crs, (H, W), band=1)
+        b_s = read_on_grid(bolshoy_path, transform, dem_crs, (H, W), band=2)
+        bolshoy_mask = np.isfinite(b_h)
+        n_paste = int(bolshoy_mask.sum())
+        if n_paste == 0:
+            log('    ⚠ 0 px — road_surface.tif не пересекается с окном острова. '
+                'Проверьте, что модуль 02 отработал на этом же DEM.')
+        else:
+            surface[bolshoy_mask] = b_h[bolshoy_mask]
+            source[bolshoy_mask] = np.nan_to_num(b_s[bolshoy_mask]).astype('uint8')
+            stat[bolshoy_mask] = 1
+            log(f'    Наложено: {n_paste:,} px из road_surface.tif '
+                f'(перепроекция на сетку острова)')
 
     # Сохранить
     out_path = OUT / 'vo_surface.tif'
-    prof_r = {'driver': 'GTiff', 'dtype': 'float32', 'count': 2, 'crs': dem_crs,
+    prof_r = {'driver': 'GTiff', 'dtype': 'float32', 'count': 3, 'crs': dem_crs,
               'transform': transform, 'width': W, 'height': H,
               'compress': 'deflate', 'nodata': -9999}
     with rasterio.open(str(out_path), 'w', **prof_r) as dst:
         b1 = surface.copy(); b1[~np.isfinite(b1)] = -9999
         dst.write(b1, 1); dst.write(source.astype('float32'), 2)
+        dst.write(stat.astype('float32'), 3)
         dst.set_band_description(1, 'h BS-77 (stack: 02 over fast estimator)')
         dst.set_band_description(2, '1 measured, 2 reconstructed, 3 extrapolated')
+        dst.set_band_description(3, 'stat 1=учитывать в % затопления')
     log(f'✓ {out_path}')
-    return surface, source, transform, dem_crs, profiles
+    return surface, source, stat, transform, dem_crs, profiles
 
 
-def vo_flood_map(surface, source, transform, crs, shift_sigma):
+def vo_flood_map(surface, source, stat, transform, crs, shift_sigma):
     """Priority-flood для В.О. с ГЕЙТ 4: seed только от воды/береговой линии."""
     log('Priority-flood для В.О....')
     road = np.isfinite(surface)
     h = surface
-    u = np.full(h.shape, np.nan, dtype='float32')
-    for cls, s in CLASS_SIGMA.items():
-        m = road & (source == cls)
-        u[m] = np.sqrt(FORM_SIGMA**2 + shift_sigma**2 + s**2)
+    u = libv.pixel_sigma(source=source, shift_sigma=shift_sigma,
+                         form_sigma=FORM_SIGMA)
+    u[~road] = np.nan
 
     # ГЕЙТ 4: seed = вода OSM + пиксели дороги в контакте с береговой линией
     osm = m01.fetch_osm(VO_BBOX)
@@ -417,15 +551,21 @@ def vo_flood_map(surface, source, transform, crs, shift_sigma):
     log(f'✓ {tif}')
 
     # Контрольная таблица
-    total = int(road.sum()); qa_levels = {}
+    # ДЕФЕКТ РЕВЬЮ №7: знаменатель — только суша (stat==1), без пикселей
+    # ниже водного гейта. ДЕФЕКТ №6: pess/opt симметричны по u.
+    denom_mask = libv.stat_denominator(stat_band=stat, valid=road) & road
+    total = int(denom_mask.sum())
+    log(f'  Знаменатель процентов: {total:,} px суши '
+        f'(исключено {int(road.sum()) - total:,} px ниже водного гейта)')
+    qa_levels = {}
     for Hl in REPORT_LEVELS:
-        wet = road & (Z < Hl); depth = np.where(wet, Hl - h, np.nan)
-        core = wet & ((Hl - h) > u)
-        opt = road & ((Z - u) < Hl) & ((Hl - h) > -u)
+        pess, wet, opt = libv.flood_masks(h, Z, u, Hl)
+        pess &= denom_mask; wet &= denom_mask; opt &= denom_mask
+        depth = np.where(wet, Hl - h, np.nan)
         qa_levels[f'{Hl:.1f}'] = {
-            'pct_pess': round(100*core.sum()/total, 1),
-            'pct_best': round(100*wet.sum()/total, 1),
-            'pct_opt': round(100*opt.sum()/total, 1),
+            'pct_pess': round(100*pess.sum()/max(1, total), 1),
+            'pct_best': round(100*wet.sum()/max(1, total), 1),
+            'pct_opt': round(100*opt.sum()/max(1, total), 1),
             'depth_max': round(float(np.nanmax(depth)), 2) if wet.any() else None,
             'kzs': Hl > KZS_NOTE_LEVEL}
         log(f'  H={Hl:.1f}м: {qa_levels[f"{Hl:.1f}"]["pct_best"]}% '
@@ -453,9 +593,11 @@ def vo_flood_map(surface, source, transform, crs, shift_sigma):
     buf = io.BytesIO(); Image.fromarray(rgba).save(buf, format='PNG', optimize=True)
     b64 = base64.b64encode(buf.getvalue()).decode()
 
-    us = {1: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.15**2)),
-          2: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.30**2)),
-          3: float(np.sqrt(FORM_SIGMA**2+shift_sigma**2+0.80**2))}
+    us = {}
+    for cls in (1, 2, 3):
+        m = road & (source == cls) & np.isfinite(u)
+        us[cls] = float(np.median(u[m])) if m.any() else \
+            float(np.sqrt(FORM_SIGMA**2 + shift_sigma**2 + libv.SOURCE_SIGMA[cls]**2))
 
     # Импортируем HTML_TEMPLATE из 03_flood_map
     import importlib.util as _ilu3
@@ -474,7 +616,8 @@ def vo_flood_map(surface, source, transform, crs, shift_sigma):
           'model': 'priority-flood spill levels; tile-render; water-seed only (gate 4)',
           'error_budget': {'form': FORM_SIGMA, 'shift': shift_sigma, 'class': CLASS_SIGMA},
           'report_levels': qa_levels,
-          'road_px': total,
+          'denominator_px_land': total,
+          'road_px': int(road.sum()),
           'products': {'gis': 'vo_flood_surface.tif', 'web': 'vo_flood_map.html'}}
     (OUT / 'vo_flood_qa.json').write_text(json.dumps(qa, ensure_ascii=False, indent=2))
     log(f'✓ vo_flood_qa.json')
@@ -486,15 +629,12 @@ def main():
     log('='*60)
 
     # Shift из city_calibration v3
-    cc_path = OUT / 'city_calibration.json'
-    if cc_path.exists():
-        cc = json.loads(cc_path.read_text())
-        shift = float(cc.get('shift_m', 15.9))
-        shift_sigma = float(cc.get('between_street_mad_m', 0.80))
-        log(f'Shift: {shift:.3f}м, SIGMA: {shift_sigma:.3f}м (v{cc.get("version","?")})')
-    else:
-        shift = 15.9; shift_sigma = 0.80
-        log(f'⚠ city_calibration.json не найден — defaults')
+    # ДЕФЕКТ РЕВЬЮ №4: датум выбирается ОДНОЙ функцией для всех модулей.
+    # Раньше vo_pipeline брал городской shift, а 04_ground_surface —
+    # региональный В.О. при significant; разница ~0.55 м делала prior и
+    # dsm несопоставимыми в guided acceptance модуля 04.
+    vert = libv.load_vertical(OUT, region='vo', logger=log)
+    shift = vert['shift_m']; shift_sigma = vert['sigma_m']
 
     # ГЕЙТ 1: полигон острова
     log('ГЕЙТ 1: полигон В.О....')
@@ -504,13 +644,67 @@ def main():
     streets = load_vo_streets(vo_poly)
 
     # Поверхность (с ГЕЙТ 2, 3, стек приоритетов)
-    surface, source, transform, crs, profiles = build_vo_surface(
+    surface, source, stat, transform, crs, profiles = build_vo_surface(
         streets, DEM_PATH, shift, vo_poly)
 
     # График профилей
     log('График профилей...')
-    ok_profiles = [p for p in profiles if p.get('status') == 'ok']
-    fail_profiles = [p for p in profiles if p.get('status') == 'failed_street']
+    ok_profiles = [p for p in profiles if p.get('status') in ('ok', 'anchor_suspect')]
+    suspect_profiles = [p for p in profiles if p.get('status') == 'anchor_suspect']
+    bridged_profiles = [p for p in profiles if p.get('status') == 'bridged']
+    fail_profiles = [p for p in profiles if p.get('status') in
+                     ('failed_street', 'bridged')]
+
+    # --- v5: сводная таблица по улицам — это и есть ответ на вопрос
+    # «какие улицы в тени». Раньше его можно было получить только
+    # косвенно, по провалу санитарного гейта; теперь у каждой улицы есть
+    # число: расхождение с независимой опорой открытой земли.
+    qa_rows = []
+    for pr in sorted(profiles, key=lambda x: -x.get('length_m', 0)):
+        qa_rows.append({'name': pr['name'],
+                        'length_m': round(pr.get('length_m', 0)),
+                        'status': pr.get('status'),
+                        'h_bs_median': pr.get('h_bs_median'),
+                        'h_bs_range': pr.get('h_bs_range'),
+                        'anchor_delta_m': pr.get('anchor_delta_m'),
+                        'n_cmp_px': pr.get('n_cmp_px'),
+                        'n_bins': pr.get('n_bins'),
+                        'n_kept': pr.get('n_kept')})
+    pd.DataFrame(qa_rows).to_csv(OUT / 'vo_streets_qa.csv', index=False)
+    log(f'✓ vo_streets_qa.csv ({len(qa_rows)} улиц)')
+    _bias_out = {}
+    deltas = [r['anchor_delta_m'] for r in qa_rows
+              if r['anchor_delta_m'] is not None]
+    anchor_bias = None
+    if deltas:
+        d = np.array(deltas, dtype=float)
+        anchor_bias = float(np.median(d))
+        mad = float(np.median(np.abs(d - anchor_bias)) * 1.4826)
+        log(f'  расхождение улиц с опорой: медиана {anchor_bias:+.2f} м, '
+            f'MAD {mad:.2f} м, '
+            f'|Δ|>{STREET_TOL_M} м у {(np.abs(d) > STREET_TOL_M).sum()} из {len(d)}')
+        # Улицы — независимая от опоры величина: тот же DSM, но другой
+        # оценщик и другие пиксели. Если медиана расхождения по ВСЕМУ
+        # множеству улиц заметно отлична от нуля, смещена опора, а не
+        # улицы. В v6 было +0.06 при MAD 0.30 — признак согласия; в v6.1
+        # стало +0.96 при MAD 1.32, и 35 улиц из 54 ушли в мост.
+        if abs(anchor_bias) > ANCHOR_BIAS_MAX:
+            log(f'  ⚠⚠ ОПОРА СМЕЩЕНА на {anchor_bias:+.2f} м относительно '
+                'всей совокупности улиц. Мосты в этом прогоне подозрительны: '
+                'улицы мостятся смещённым полем. Разбирайтесь с 04a '
+                '(масштаб огибающей и калибровка поправки) прежде, чем '
+                'читать цифры затопления.')
+        if mad > 0.6:
+            log(f'  ⚠ разброс согласия улиц с опорой MAD {mad:.2f} м — '
+                'опорное поле шумное; в согласованном прогоне было 0.30 м')
+        _bias_out = {'anchor_bias_vs_streets_m': round(anchor_bias, 3),
+                     'anchor_agreement_mad_m': round(mad, 3),
+                     'n_streets_compared': int(len(d)),
+                     'bias_gate_m': ANCHOR_BIAS_MAX,
+                     'bias_gate_passed': bool(abs(anchor_bias) <= ANCHOR_BIAS_MAX)}
+    (OUT / 'vo_anchor_agreement.json').write_text(
+        json.dumps(_bias_out, ensure_ascii=False, indent=2))
+    log('✓ vo_anchor_agreement.json — независимая проверка опоры по улицам')
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(16, 10), constrained_layout=True)
     # OK streets
     colors = plt.cm.tab20(np.linspace(0, 1, min(20, len(ok_profiles))))
@@ -529,14 +723,16 @@ def main():
                     height=0.7, color='red', alpha=0.5)
         ax2.set_yticks(range(min(20, len(fail_profiles))))
         ax2.set_yticklabels([p['name'][:30] for p in fail_profiles[:20]], fontsize=7)
-        ax2.set_xlabel('h_bs77, м'); ax2.set_title(f'Failed streets ({len(fail_profiles)}) — очередь на полный конвейер')
+        ax2.set_xlabel('h_bs77, м')
+        ax2.set_title(f'Не приняты по DSM: {len(fail_profiles)} '
+                      f'(из них {len(bridged_profiles)} замощены опорой)')
         ax2.axvline(0, color='red', ls='--', alpha=0.5); ax2.axvline(8, color='red', ls='--', alpha=0.5)
         ax2.grid(alpha=0.3)
     plt.savefig(OUT / 'vo_profiles.png', dpi=140); plt.close()
     log(f'✓ vo_profiles.png (ok={len(ok_profiles)}, failed={len(fail_profiles)})')
 
     # Затопление (с ГЕЙТ 4)
-    vo_flood_map(surface, source, transform, crs, shift_sigma)
+    vo_flood_map(surface, source, stat, transform, crs, shift_sigma)
 
     # Итог
     n_meas = int((source == 1).sum()); n_rec = int((source == 2).sum())
@@ -544,7 +740,9 @@ def main():
     log('')
     log('='*60)
     log('ИТОГ В.О. (4 гейта):')
-    log(f'  Улиц: ok={len(ok_profiles)}, failed_street={len(fail_profiles)}, пропущено={len(profiles)-len(ok_profiles)-len(fail_profiles)}')
+    log(f'  Улиц: measured={len(ok_profiles)} (anchor_suspect={len(suspect_profiles)}), '
+        f'bridged={len(bridged_profiles)}, '
+        f'failed_street={len(fail_profiles)-len(bridged_profiles)}')
     log(f'  Road px: {total:,} ({total*4/1e6:.1f} га)')
     if total:
         log(f'  measured: {n_meas:,} ({100*n_meas/total:.0f}%)')

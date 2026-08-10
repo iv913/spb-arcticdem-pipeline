@@ -1,0 +1,143 @@
+{
+  "shift_m": 15.6727,
+  "shift_sigma_m": 0.6286,
+  "datum_source": "city_v3",
+  "px": {
+    "candidates": 6183285,
+    "ground_filtered": 2816704,
+    "anchors": 255617,
+    "measured": 255617,
+    "near": 1149945,
+    "far": 2347209
+  },
+  "anchor_frac_of_candidates": 0.0413,
+  "anchor_frac_inside_island": 0.1105,
+  "far_field_capped_px": 813307,
+  "dist_to_anchor_m": {
+    "median": 60.0,
+    "p95": 209.9
+  },
+  "land_km2": 15.011,
+  "water": {
+    "osm_px": 1224199,
+    "bodies_px": 841729,
+    "edges_kept_as_land_px": 43609
+  },
+  "open_min_m": 6.0,
+  "envelope": {
+    "cap_allow_above_m": 1.492,
+    "cap_calibration": {
+      "n": 724026,
+      "offset_m": 0.736,
+      "mad_m": 0.757
+    },
+    "block_px": 90,
+    "block_m": 180.0,
+    "block_report": {
+      "relief_slope_m_per_km": 0.667,
+      "trend": {
+        "status": "ok",
+        "n": 898206,
+        "slope_m_per_km": 0.667,
+        "bx_m_per_km": -0.599,
+        "by_m_per_km": -0.295,
+        "roughness_mad_m": 1.165
+      },
+      "candidates": [
+        {
+          "block_m": 20.0,
+          "window_m": 60.0,
+          "reach_cover": 0.635,
+          "terrain_cost_m": 0.04,
+          "feasible": false
+        },
+        {
+          "block_m": 30.0,
+          "window_m": 90.0,
+          "reach_cover": 0.735,
+          "terrain_cost_m": 0.06,
+          "feasible": false
+        },
+        {
+          "block_m": 50.0,
+          "window_m": 150.0,
+          "reach_cover": 0.809,
+          "terrain_cost_m": 0.1,
+          "feasible": false
+        },
+        {
+          "block_m": 80.0,
+          "window_m": 240.0,
+          "reach_cover": 0.853,
+          "terrain_cost_m": 0.16,
+          "feasible": false
+        },
+        {
+          "block_m": 120.0,
+          "window_m": 360.0,
+          "reach_cover": 0.885,
+          "terrain_cost_m": 0.24,
+          "feasible": false
+        },
+        {
+          "block_m": 180.0,
+          "window_m": 540.0,
+          "reach_cover": 0.909,
+          "terrain_cost_m": 0.36,
+          "feasible": true
+        }
+      ],
+      "fallback": false,
+      "chosen_block_m": 180.0,
+      "chosen_window_m": 540.0
+    },
+    "rise_max_m": 1.5,
+    "max_step_m": 0.25,
+    "rejected_above_envelope_px": 1805414,
+    "rejected_steep_px": 109523,
+    "anchors_v5_px": 2638963,
+    "anchors_px": 724026
+  },
+  "island_polygon_applied": true,
+  "stale_dem": {
+    "px": 1265058,
+    "area_km2": 5.06,
+    "components_km2": [
+      5.04,
+      0.02
+    ],
+    "gate_bs": 1.0
+  },
+  "pmf": {
+    "windows": [
+      1,
+      3,
+      7,
+      15,
+      31
+    ],
+    "slope": 0.02,
+    "dh0": 0.25,
+    "dh_max": 1.5
+  },
+  "land_components_top10": [
+    {
+      "component": 1,
+      "px": 3752771,
+      "area_km2": 15.011,
+      "anchor_px": 255617
+    },
+    {
+      "component": 2,
+      "px": 125,
+      "area_km2": 0.001,
+      "anchor_px": 0
+    },
+    {
+      "component": 3,
+      "px": 111,
+      "area_km2": 0.0,
+      "anchor_px": 0
+    }
+  ]
+}

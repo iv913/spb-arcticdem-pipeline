@@ -96,13 +96,42 @@ def log(msg):
 # ============================================================
 # OSM: скачивание и разбор
 # ============================================================
-def fetch_osm(bbox):
-    """Highways + area:highway + buildings(way,relation) + green + water."""
+def _osm_cache_key(bbox, water_margin_deg):
+    """Ключ кэша OSM: bbox с точностью ~11 м + маргин водного запроса.
+    Два разных окна (или один и тот же bbox с разным маргином) никогда
+    не делят один файл; повторный запуск тех же параметров — попадает."""
+    return '_'.join(f'{v:.4f}' for v in bbox) + f'_w{water_margin_deg:.4f}'
+
+
+def fetch_osm(bbox, water_margin_deg=0.025):
+    """Highways + area:highway + buildings(way,relation) + green + water.
+    water_margin_deg: расширяет bbox на ~2км для water-запроса,
+    чтобы водные relations (Нева) были замкнуты и могли быть polygonized.
+    """
     W, S, E, N = bbox
-    cache = CACHE / 'osm' / 'owner_map_osm.json'
+    # ДЕФЕКТ РЕВЬЮ №1 (критический). Имя кэша было константным
+    # ('owner_map_osm.json') — без bbox и без water_margin_deg. Это
+    # обесценивало сразу два фикса: (а) при тираже по нескольким улицам
+    # первое окно навсегда фиксировало OSM-выборку для всех остальных;
+    # (б) расширение bbox для воды (чтобы relation Невы замкнулся и
+    # полигонизовался) не имело эффекта, потому что возвращался СТАРЫЙ
+    # файл, собранный до фикса. Следствия шли по всей цепочке: пустая
+    # маска воды -> барьер диффузии в модуле 04 не работает -> prior
+    # течёт через Неву; пиксели реки уходят в open-домен и попадают в
+    # поверхность как «земля» на уровне prior (те самые 472 822 px
+    # suspect_water = 1.9 км²).
+    cache = CACHE / 'osm' / f'owner_map_osm_{_osm_cache_key(bbox, water_margin_deg)}.json'
+    legacy = CACHE / 'osm' / 'owner_map_osm.json'
+    if legacy.exists():
+        log(f'  ⚠ найден кэш без ключа ({legacy.name}) — ИГНОРИРУЮ: он мог '
+            'быть собран для другого окна и/или до фикса water_margin. '
+            'Удалите его вручную.')
     if cache.exists():
         log(f'  OSM из кэша: {cache}')
         return json.loads(cache.read_text())
+    # Wider bbox for water (to close Neva river relation rings)
+    wW, wS, wE, wN = W - water_margin_deg, S - water_margin_deg, \
+                     E + water_margin_deg, N + water_margin_deg
     q = f"""[out:json][timeout:240];
 (
   way["highway"]({S},{W},{N},{E});
@@ -112,8 +141,8 @@ def fetch_osm(bbox):
   way["landuse"~"^(grass|forest|meadow|village_green|flowerbed)$"]({S},{W},{N},{E});
   way["leisure"~"^(park|garden|playground|common)$"]({S},{W},{N},{E});
   way["natural"~"^(water|wood|scrub|tree_row|wetland)$"]({S},{W},{N},{E});
-  relation["natural"="water"]({S},{W},{N},{E});
-  way["waterway"~"^(river|canal|riverbank)$"]({S},{W},{N},{E});
+  relation["natural"="water"]({wS},{wW},{wN},{wE});
+  way["waterway"~"^(river|canal|riverbank)$"]({wS},{wW},{wN},{wE});
 );
 out geom;"""
     for url in ('https://maps.mail.ru/osm/tools/overpass/api/interpreter',
@@ -253,6 +282,32 @@ def way_carriageway_width(tags):
 # ============================================================
 # Геометрия объекта: ВСЕ проезжие части + справочная ось
 # ============================================================
+_ABBR = [
+    (r'\bпр-?кт\b|\bпр-?т\b|\bпросп\b|\bпр\b', 'проспект'),
+    (r'\bул\b', 'улица'),
+    (r'\bнаб\b', 'набережная'),
+    (r'\bб-?р\b|\bбул\b', 'бульвар'),
+    (r'\bпер\b', 'переулок'),
+    (r'\bпл\b', 'площадь'),
+    (r'\bлин\b', 'линия'),
+    (r'\bкан\b', 'канал'),
+    (r'\bв\s*о\b|\bвасильевского\s+острова\b', 'во'),
+]
+
+
+def norm_street_name(name):
+    """Нормализация названия улицы для сопоставления: регистр, ё,
+    пунктуация, типовые сокращения, порядок слов.
+    'Большой пр. В.О.' == 'Большой проспект Васильевского острова'."""
+    s = (name or '').lower().replace('\u0451', '\u0435')
+    s = re.sub(r'[^\w\s-]', ' ', s)
+    s = re.sub(r'\s+', ' ', s).strip()
+    for pat, rep in _ABBR:
+        s = re.sub(pat, rep, s)
+    s = re.sub(r'\s+', ' ', s).strip()
+    return ' '.join(sorted(s.split()))
+
+
 def build_object_geometry(osm_data, bbox, object_name):
     W, S, E, N = bbox
     log(f'Геометрия объекта: {object_name}')
@@ -260,9 +315,15 @@ def build_object_geometry(osm_data, bbox, object_name):
     def name_match(tags):
         return tags.get('name', '').strip() == object_name
 
+    # ДЕФЕКТ РЕВЬЮ №10. Здесь стоял фоллбэк, ЗАХАРДКОЖЕННЫЙ под Большой
+    # проспект ('ольшой' in n and 'В.О'/'Васильевск'). При тираже по списку
+    # улиц он срабатывал для ЛЮБОЙ улицы, чьё точное имя не нашлось, и молча
+    # возвращал геометрию Большого проспекта под чужим именем.
+    _target_norm = norm_street_name(object_name)
+
     def name_match_fuzzy(tags):
         n = tags.get('name', '')
-        return 'ольшой' in n and ('В.О' in n or 'Васильевск' in n)
+        return bool(n) and norm_street_name(n) == _target_norm
 
     for matcher, label in ((name_match, 'точное имя'),
                            (name_match_fuzzy, 'fuzzy')):
@@ -285,8 +346,17 @@ def build_object_geometry(osm_data, bbox, object_name):
             if any(W <= x <= E and S <= y <= N for x, y in c):
                 ways.append({'line': LineString(c), 'tags': tags})
         if ways or area_polys:
+            matched_names = sorted({w['tags'].get('name', '')
+                                    for w in ways if w['tags'].get('name')})
             log(f'  Совпадение по "{label}": {len(ways)} way, '
-                f'{len(area_polys)} area:highway')
+                f'{len(area_polys)} area:highway; имена: {matched_names}')
+            bad = [n for n in matched_names
+                   if norm_street_name(n) != _target_norm]
+            if bad:
+                raise RuntimeError(
+                    f'Матчер "{label}" вернул чужие объекты для '
+                    f'"{object_name}": {bad}. Прогон остановлен, чтобы '
+                    'геометрия чужой улицы не попала в продукт.')
             break
     else:
         raise RuntimeError(f'В OSM не найдено ни одного way "{object_name}"')

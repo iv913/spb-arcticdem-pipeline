@@ -1,0 +1,38 @@
+{
+  "version": "v5-anchor-first",
+  "px": {
+    "street_meas": 30593,
+    "street_rec": 94468,
+    "street_ext": 0,
+    "street_bridged": 6530,
+    "open_accepted": 419078,
+    "open_near_anchor": 559774,
+    "open_far_anchor": 1110975,
+    "edge": 35609,
+    "water_body": 1489488,
+    "no_anchor": 236,
+    "reclaimed_stale_dem": 61332
+  },
+  "total_px": 3807847,
+  "stat_px": 2318359,
+  "stat_area_km2": 9.273,
+  "shift_m": 15.6727,
+  "shift_sigma_m": 0.6286,
+  "datum_source": "city_v3",
+  "tol_accept_up_m": 0.5,
+  "tol_accept_down_m": 1.5,
+  "tol_street_m": 0.75,
+  "street_check": {
+    "compared_px": 131591,
+    "bridged_px": 6530,
+    "median_abs_dev_m": 0.0
+  },
+  "skeleton_rejected": {
+    "source": 57283,
+    "sane": 1191
+  },
+  "skeleton_stack": [
+    "road_surface.tif",
+    "vo_surface.tif"
+  ]
+}

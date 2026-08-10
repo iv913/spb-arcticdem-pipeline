@@ -8,6 +8,10 @@ from rasterio.features import geometry_mask
 import importlib.util as _ilu
 _spec = _ilu.spec_from_file_location('m01', Path(__file__).parent / '01_owner_map.py')
 m01 = _ilu.module_from_spec(_spec); _spec.loader.exec_module(m01)
+_spec4 = _ilu.spec_from_file_location('libv', Path(__file__).parent / 'lib_vertical.py')
+libv = _ilu.module_from_spec(_spec4); _spec4.loader.exec_module(libv)
+_spec5 = _ilu.spec_from_file_location('libg', Path(__file__).parent / 'lib_ground.py')
+libg = _ilu.module_from_spec(_spec5); _spec5.loader.exec_module(libg)
 OUT = m01.OUT
 REPORT_LEVELS = [0.5,1.0,1.5,2.0,2.5,3.0]; KZS_NOTE_LEVEL = 1.6; PIXEL_M = 2.0
 FORM_SIGMA = 0.107; CLASS_SIGMA = {1:0.15, 2:0.30, 3:0.80}; STREET_END_M = 30.0
@@ -97,8 +101,11 @@ def main():
     # Контрольная таблица
     total = int(road.sum()); qa_levels = {}
     for H in REPORT_LEVELS:
-        wet = road & (zs < H); depth = np.where(wet, H - h, np.nan)
-        core = wet & ((H - h) > u); opt = road & ((zs - u) < H) & ((H - h) > -u)
+        # ДЕФЕКТ РЕВЬЮ №6: неопределённость должна входить и в порог
+        # перелива, и в глубину — симметрично для обоих сценариев.
+        core, wet, opt = libv.flood_masks(h, zs, u, H)
+        core &= road; wet &= road; opt &= road
+        depth = np.where(wet, H - h, np.nan)
         qa_levels[f'{H:.1f}'] = {'pct_pess':round(100*core.sum()/total,1),'pct_best':round(100*wet.sum()/total,1),
             'pct_opt':round(100*opt.sum()/total,1),'depth_med':round(float(np.nanmedian(depth)),2) if wet.any() else None,
             'depth_max':round(float(np.nanmax(depth)),2) if wet.any() else None,
@@ -135,15 +142,10 @@ def main():
                 c0, r0 = inv * (x, y)
                 r0, c0 = int(np.floor(r0)), int(np.floor(c0))
                 if not (0 <= r0 < h.shape[0] and 0 <= c0 < h.shape[1]): continue
-                hv, zv, uv = np.nan, np.nan, np.nan
-                for rad in (0, 2, 5, 8):
-                    r1, r2 = max(0, r0-rad), min(h.shape[0], r0+rad+1)
-                    c1, c2 = max(0, c0-rad), min(h.shape[1], c0+rad+1)
-                    sub = h[r1:r2, c1:c2]
-                    if np.isfinite(sub).any():
-                        ri, ci = np.unravel_index(np.nanargmin(np.abs(sub - p['h_pas'])), sub.shape)
-                        hv = float(sub[ri, ci]); zv = float(zs[r1+ri, c1+ci]); uv = float(u[r1+ri, c1+ci])
-                        break
+                rc = libg.nearest_finite(h, r0, c0)   # честное снятие точки
+                if rc is None: continue
+                ri, ci = rc
+                hv = float(h[ri, ci]); zv = float(zs[ri, ci]); uv = float(u[ri, ci])
                 if not np.isfinite(hv): continue
                 pts_js.append({'lat': round(float(p['lat']),6), 'lon': round(float(p['lon']),6),
                                'hp': round(float(p['h_pas']),2), 'hs': round(hv,2),
@@ -215,7 +217,7 @@ const dx=Math.floor((mx-MX0)/(MX1-MX0)*DW),dy=Math.floor((MY0-my)/(MY0-MY1)*DH);
 if(dx<0||dx>=DW||dy<0||dy>=DH){o[i+3]=0;continue;}
 const k=dy*DW+dx,h=hArr[k];if(!isFinite(h)){o[i+3]=0;continue;}
 const zs=zArr[k],u=U[sArr[k]]||0.8,depth=curH-h;
-if(curH>zs&&depth>u){const c=blues(Math.min(depth,3)/3);o[i]=c[0];o[i+1]=c[1];o[i+2]=c[2];o[i+3]=225;
+if(curH>zs+u&&depth>u){const c=blues(Math.min(depth,3)/3);o[i]=c[0];o[i+1]=c[1];o[i+2]=c[2];o[i+3]=225;
 }else if(curH>zs-u&&depth>-u){o[i]=120;o[i+1]=170;o[i+2]=220;o[i+3]=120;
 }else{o[i]=120;o[i+1]=120;o[i+2]=120;o[i+3]=55;}}}
 ctx.putImageData(outd,0,0);}});
