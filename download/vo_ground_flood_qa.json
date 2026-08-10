@@ -1,0 +1,109 @@
+{
+  "object": "В.О. ground surface (газоны+дворы+площади)",
+  "model": "priority-flood on ground_surface; tile-render; water-seed only (gate 4)",
+  "error_budget": {
+    "form_skeleton_only": 0.107,
+    "shift": 0.6286,
+    "datum_source": "city_v3",
+    "detail_sigma": {
+      "11": 0.15,
+      "12": 0.3,
+      "13": 0.8,
+      "14": 0.6,
+      "21": 0.45,
+      "22": 0.6,
+      "23": 0.8,
+      "31": 0.8,
+      "42": 1.5,
+      "32": null,
+      "41": null
+    }
+  },
+  "report_levels": {
+    "0.5": {
+      "pct_pess": 4.7,
+      "pct_best": 5.9,
+      "pct_opt": 17.4,
+      "depth_med": 3.33,
+      "depth_max": 8.87,
+      "by_class": {
+        "meas": 0.3,
+        "rec": 0.7,
+        "ext": 10.9
+      },
+      "kzs": false
+    },
+    "1.0": {
+      "pct_pess": 5.2,
+      "pct_best": 6.9,
+      "pct_opt": 26.5,
+      "depth_med": 2.88,
+      "depth_max": 9.37,
+      "by_class": {
+        "meas": 1.0,
+        "rec": 1.2,
+        "ext": 12.3
+      },
+      "kzs": false
+    },
+    "1.5": {
+      "pct_pess": 6.0,
+      "pct_best": 17.9,
+      "pct_opt": 32.7,
+      "depth_med": 0.58,
+      "depth_max": 9.87,
+      "by_class": {
+        "meas": 5.7,
+        "rec": 9.9,
+        "ext": 26.8
+      },
+      "kzs": false
+    },
+    "2.0": {
+      "pct_pess": 8.9,
+      "pct_best": 27.2,
+      "pct_opt": 39.1,
+      "depth_med": 0.88,
+      "depth_max": 10.37,
+      "by_class": {
+        "meas": 9.9,
+        "rec": 16.9,
+        "ext": 39.3
+      },
+      "kzs": true
+    },
+    "2.5": {
+      "pct_pess": 16.0,
+      "pct_best": 33.7,
+      "pct_opt": 46.9,
+      "depth_med": 1.15,
+      "depth_max": 10.87,
+      "by_class": {
+        "meas": 15.1,
+        "rec": 22.7,
+        "ext": 46.6
+      },
+      "kzs": true
+    },
+    "3.0": {
+      "pct_pess": 27.8,
+      "pct_best": 40.7,
+      "pct_opt": 60.9,
+      "depth_med": 1.31,
+      "depth_max": 11.37,
+      "by_class": {
+        "meas": 27.7,
+        "rec": 27.6,
+        "ext": 52.7
+      },
+      "kzs": true
+    }
+  },
+  "n_passport_points": 44,
+  "ground_px": 3807847,
+  "denominator_px_land": 2318359,
+  "products": {
+    "gis": "vo_ground_flood_surface.tif",
+    "web": "vo_ground_flood_map.html"
+  }
+}

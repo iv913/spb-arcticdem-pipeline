@@ -11,6 +11,12 @@ import importlib.util as _ilu
 _spec = _ilu.spec_from_file_location('m01', Path(__file__).parent / '01_owner_map.py')
 m01 = _ilu.module_from_spec(_spec); _spec.loader.exec_module(m01)
 import city_local_ground_v3 as clg_v3
+_spec2 = _ilu.spec_from_file_location('libp', Path(__file__).parent / 'lib_profile.py')
+libp = _ilu.module_from_spec(_spec2); _spec2.loader.exec_module(libp)
+# ДЕФЕКТ РЕВЬЮ: локальная копия _prune_bins с ЗАХАРДКОЖЕННЫМИ константами
+# (1.0 / 3.0 / 0.05 / closing=5 / edge=37.5) снова разошлась бы с 02 при
+# первой же подкрутке порогов. Используем единственную копию из lib_profile.
+_prune_bins = libp.prune_bins
 
 OUT = m01.OUT; UTM = m01.UTM
 def log(msg): print(f'[{datetime.now():%H:%M:%S}] {msg}', flush=True)
@@ -81,36 +87,6 @@ def _profile_coarse(src, axis_utm, dem_crs, n_pickets, res_m, anchor_ways_utm):
         floor = med[0]; sel = med[med <= floor+0.6]
         rows.append({'pk':float(pk),'ground_ell':float(np.median(sel)),'qflag':'ok' if len(sel)>=2 else 'too_few_ground'})
     return pd.DataFrame(rows)
-
-def _prune_bins(b_arr, pk_arr, h_arr):
-    from scipy.ndimage import binary_closing
-    n = len(h_arr); keep = np.ones(n, dtype=bool); reason = np.array(['']*n, dtype=object)
-    edge_m = 7.5 * 5.0
-    for _ in range(30):
-        idx = np.where(keep)[0]
-        if len(idx) < 4: break
-        hv, pkv = h_arr[idx], pk_arr[idx]
-        base = pd.Series(hv).rolling(15, center=True, min_periods=5).median().values
-        up = hv - base
-        near_edge = ((pkv - pk_arr.min()) < edge_m) | ((pk_arr.max() - pkv) < edge_m)
-        bad_jump = np.where(near_edge, up > 3.0, up > 1.0)
-        bad_jump = np.nan_to_num(bad_jump.astype(float)).astype(bool)
-        bad_slope = np.zeros(len(idx), dtype=bool)
-        s = np.diff(hv) / np.maximum(np.diff(pkv), 1e-6)
-        for i in np.where(np.abs(s) > 0.05)[0]:
-            j = i if hv[i] > hv[i+1] else i+1; bad_slope[j] = True
-        bad = bad_jump | bad_slope
-        if not bad.any(): break
-        keep[idx[bad]] = False; reason[idx[bad_jump]] = 'shadow_jump'; reason[idx[bad_slope & ~bad_jump]] = 'slope'
-    if (~keep).any():
-        bmin = int(b_arr.min()); full = np.zeros(int(b_arr.max())-bmin+1, dtype=bool)
-        full[(b_arr[~keep]-bmin).astype(int)] = True
-        closed = binary_closing(full, structure=np.ones(5))
-        newly = closed & ~full; pos = {int(bb): i for i,bb in enumerate(b_arr)}
-        for bb in np.nonzero(newly)[0]+bmin:
-            i = pos.get(int(bb))
-            if i is not None and keep[i]: keep[i] = False; reason[i] = 'zone_fill'
-    return keep, reason
 
 def main():
     log('='*60); log('multi_dem_profile'); log('='*60)

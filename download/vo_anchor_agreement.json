@@ -1,0 +1,7 @@
+{
+  "anchor_bias_vs_streets_m": 0.57,
+  "anchor_agreement_mad_m": 0.83,
+  "n_streets_compared": 53,
+  "bias_gate_m": 0.5,
+  "bias_gate_passed": false
+}
