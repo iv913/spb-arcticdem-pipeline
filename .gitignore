@@ -1,0 +1,24 @@
+# Credentials
+oss_config.env
+*.env
+.git-credentials
+oauth_token.json
+
+# Large files (use Google Drive instead)
+*.tif
+*.bin
+spb_tif_part_*
+cop_*.tif
+spb_osm_*.geojson
+osm_*.zip
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+{
+  "cop_water_total_km2": 541.7,
+  "osm_water_total_km2": 2.8,
+  "overlap_km2": 0.6,
+  "cop_only_low_land_km2": 541.1,
+  "pct_cop_covered_by_osm": 0.1,
+  "pct_cop_isolated": 0.6,
+  "largest_component_km2": 538.5,
+  "isolated_low_land_km2": 3.2,
+  "n_components": 236,
+  "pixel_area_m2_corrected": 831.6
+}

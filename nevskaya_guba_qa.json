@@ -1,0 +1,126 @@
+{
+  "pixel_m_projected": 2.0,
+  "pixel_m_true": 1.9209,
+  "area_px_m2": 3.6897,
+  "n_px_total": 144977743,
+  "n_px_water": 115390841,
+  "n_px_land": 29586902,
+  "mirror_at_ordinar_km2": 425.754,
+  "sigma_z_m": 1.9,
+  "levels": [
+    {
+      "level_m": 0.5,
+      "area_km2": 445.56,
+      "volume_mln_m3": 221.55,
+      "mean_depth_m": 0.497,
+      "n_px": 120758872,
+      "volume_sigma_mln_m3": 846.56
+    },
+    {
+      "level_m": 1.0,
+      "area_km2": 451.458,
+      "volume_mln_m3": 445.77,
+      "mean_depth_m": 0.987,
+      "n_px": 122357276,
+      "volume_sigma_mln_m3": 857.77
+    },
+    {
+      "level_m": 1.6,
+      "area_km2": 459.35,
+      "volume_mln_m3": 718.99,
+      "mean_depth_m": 1.565,
+      "n_px": 124496228,
+      "volume_sigma_mln_m3": 872.76
+    },
+    {
+      "level_m": 2.0,
+      "area_km2": 463.91,
+      "volume_mln_m3": 903.67,
+      "mean_depth_m": 1.948,
+      "n_px": 125732089,
+      "volume_sigma_mln_m3": 881.43
+    },
+    {
+      "level_m": 2.5,
+      "area_km2": 468.433,
+      "volume_mln_m3": 1136.77,
+      "mean_depth_m": 2.427,
+      "n_px": 126957911,
+      "volume_sigma_mln_m3": 890.02
+    },
+    {
+      "level_m": 2.93,
+      "area_km2": 472.08,
+      "volume_mln_m3": 1338.99,
+      "mean_depth_m": 2.836,
+      "n_px": 127946304,
+      "volume_sigma_mln_m3": 896.95
+    },
+    {
+      "level_m": 3.0,
+      "area_km2": 472.659,
+      "volume_mln_m3": 1372.05,
+      "mean_depth_m": 2.903,
+      "n_px": 128103247,
+      "volume_sigma_mln_m3": 898.05
+    },
+    {
+      "level_m": 3.5,
+      "area_km2": 477.118,
+      "volume_mln_m3": 1609.47,
+      "mean_depth_m": 3.373,
+      "n_px": 129311974,
+      "volume_sigma_mln_m3": 906.53
+    },
+    {
+      "level_m": 3.8,
+      "area_km2": 480.058,
+      "volume_mln_m3": 1753.03,
+      "mean_depth_m": 3.652,
+      "n_px": 130108529,
+      "volume_sigma_mln_m3": 912.11
+    },
+    {
+      "level_m": 4.0,
+      "area_km2": 482.309,
+      "volume_mln_m3": 1849.27,
+      "mean_depth_m": 3.834,
+      "n_px": 130718759,
+      "volume_sigma_mln_m3": 916.39
+    },
+    {
+      "level_m": 4.21,
+      "area_km2": 484.868,
+      "volume_mln_m3": 1950.81,
+      "mean_depth_m": 4.023,
+      "n_px": 131412249,
+      "volume_sigma_mln_m3": 921.25
+    },
+    {
+      "level_m": 5.0,
+      "area_km2": 493.825,
+      "volume_mln_m3": 2337.58,
+      "mean_depth_m": 4.734,
+      "n_px": 133839879,
+      "volume_sigma_mln_m3": 938.27
+    }
+  ],
+  "without_namyv": null,
+  "neva_discharge_m3s": 2500.0,
+  "neva_mln_m3_per_day": 216.0,
+  "fill_days": [
+    1.03,
+    2.06,
+    3.33,
+    4.18,
+    5.26,
+    6.2,
+    6.35,
+    7.45,
+    8.12,
+    8.56,
+    9.03,
+    10.82
+  ],
+  "note": "объём — ПРИРАЩЕНИЕ над ординаром; батиметрия не нужна и не использована, абсолютный объём губы этим методом не считается"
+}

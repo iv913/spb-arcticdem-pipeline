@@ -1,0 +1,109 @@
+{
+  "analysis": "Влияние намывных территорий В.О. на объём Невской губы",
+  "namyv_area_km2": 21.68,
+  "namyv_n_land_px": 5875304,
+  "namyv_n_water_px": 295619,
+  "namyv_median_height_m": 3.41,
+  "namyv_mean_height_m": 3.33,
+  "bay_water_px": 89525103,
+  "bay_land_px": 1384665,
+  "levels": [
+    {
+      "H_m": 0.5,
+      "V_with_namyv_mln_m3": 165.7,
+      "V_without_namyv_mln_m3": 176.6,
+      "delta_V_mln_m3": 10.8,
+      "delta_V_pct": 6.54,
+      "extra_fill_days": 0.05
+    },
+    {
+      "H_m": 1.0,
+      "V_with_namyv_mln_m3": 331.7,
+      "V_without_namyv_mln_m3": 353.3,
+      "delta_V_mln_m3": 21.7,
+      "delta_V_pct": 6.54,
+      "extra_fill_days": 0.1
+    },
+    {
+      "H_m": 1.6,
+      "V_with_namyv_mln_m3": 531.4,
+      "V_without_namyv_mln_m3": 566.1,
+      "delta_V_mln_m3": 34.7,
+      "delta_V_pct": 6.53,
+      "extra_fill_days": 0.16
+    },
+    {
+      "H_m": 2.0,
+      "V_with_namyv_mln_m3": 665.1,
+      "V_without_namyv_mln_m3": 708.4,
+      "delta_V_mln_m3": 43.4,
+      "delta_V_pct": 6.52,
+      "extra_fill_days": 0.2
+    },
+    {
+      "H_m": 2.5,
+      "V_with_namyv_mln_m3": 832.4,
+      "V_without_namyv_mln_m3": 886.6,
+      "delta_V_mln_m3": 54.2,
+      "delta_V_pct": 6.51,
+      "extra_fill_days": 0.25
+    },
+    {
+      "H_m": 2.93,
+      "V_with_namyv_mln_m3": 976.5,
+      "V_without_namyv_mln_m3": 1040.1,
+      "delta_V_mln_m3": 63.5,
+      "delta_V_pct": 6.5,
+      "extra_fill_days": 0.29
+    },
+    {
+      "H_m": 3.0,
+      "V_with_namyv_mln_m3": 1000.0,
+      "V_without_namyv_mln_m3": 1065.0,
+      "delta_V_mln_m3": 65.0,
+      "delta_V_pct": 6.5,
+      "extra_fill_days": 0.3
+    },
+    {
+      "H_m": 3.5,
+      "V_with_namyv_mln_m3": 1167.6,
+      "V_without_namyv_mln_m3": 1243.5,
+      "delta_V_mln_m3": 75.9,
+      "delta_V_pct": 6.5,
+      "extra_fill_days": 0.35
+    },
+    {
+      "H_m": 3.8,
+      "V_with_namyv_mln_m3": 1268.2,
+      "V_without_namyv_mln_m3": 1350.6,
+      "delta_V_mln_m3": 82.4,
+      "delta_V_pct": 6.5,
+      "extra_fill_days": 0.38
+    },
+    {
+      "H_m": 4.0,
+      "V_with_namyv_mln_m3": 1335.3,
+      "V_without_namyv_mln_m3": 1422.0,
+      "delta_V_mln_m3": 86.7,
+      "delta_V_pct": 6.49,
+      "extra_fill_days": 0.4
+    },
+    {
+      "H_m": 4.21,
+      "V_with_namyv_mln_m3": 1405.7,
+      "V_without_namyv_mln_m3": 1497.0,
+      "delta_V_mln_m3": 91.3,
+      "delta_V_pct": 6.49,
+      "extra_fill_days": 0.42
+    },
+    {
+      "H_m": 5.0,
+      "V_with_namyv_mln_m3": 1670.7,
+      "V_without_namyv_mln_m3": 1779.1,
+      "delta_V_mln_m3": 108.4,
+      "delta_V_pct": 6.49,
+      "extra_fill_days": 0.5
+    }
+  ],
+  "note": "Намыв = land pixels (detail!=32) near В.О. (lon 30.10-30.30, lat 59.91-59.97) OUTSIDE bay polygon. Без намыва: these pixels become water (z_eff=0), adding to bay area."
+}

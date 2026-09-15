@@ -1,0 +1,39 @@
+spb_ground_surface_2m.tif — split into 32 parts (90MB each)
+Total size: 2.8 GB
+Re-assembly: 
+  1. Download all 32 .bin parts
+  2. cat spb_tif_part_*.bin > spb_ground_surface_2m.tif
+  3. Verify size: 2857MB
+
+spb_tif_part_aa https://tmpfiles.org/wRwOmTOv2EWC/spb_tif_part_aa.bin
+spb_tif_part_ab https://tmpfiles.org/w1wemXOc2gXG/spb_tif_part_ab.bin
+spb_tif_part_ac https://tmpfiles.org/wewtmwOW2N1v/spb_tif_part_ac.bin
+spb_tif_part_ad https://tmpfiles.org/wFwMmVOI21hP/spb_tif_part_ad.bin
+spb_tif_part_ae https://tmpfiles.org/wHw4mXOg2e8g/spb_tif_part_ae.bin
+spb_tif_part_af https://tmpfiles.org/w0wAmgOCGSoa/spb_tif_part_af.bin
+spb_tif_part_ag https://tmpfiles.org/wwwTmuOlGktl/spb_tif_part_ag.bin
+spb_tif_part_ah https://tmpfiles.org/wdwOm9OyGAzg/spb_tif_part_ah.bin
+spb_tif_part_ai https://tmpfiles.org/wxwqmwOyGySI/spb_tif_part_ai.bin
+spb_tif_part_aj https://tmpfiles.org/wgwnmvO3G8Po/spb_tif_part_aj.bin
+spb_tif_part_ak https://tmpfiles.org/wvwqmCOLBBgg/spb_tif_part_ak.bin
+spb_tif_part_al https://tmpfiles.org/w9w8mWOYBgtZ/spb_tif_part_al.bin
+spb_tif_part_am https://tmpfiles.org/w9wYmrOgBKih/spb_tif_part_am.bin
+spb_tif_part_an https://tmpfiles.org/w2wQmIOLBxsi/spb_tif_part_an.bin
+spb_tif_part_ao https://tmpfiles.org/wPwOmaODB8m6/spb_tif_part_ao.bin
+spb_tif_part_ap https://tmpfiles.org/wPw4mpOABgx4/spb_tif_part_ap.bin
+spb_tif_part_aq https://tmpfiles.org/wuwPmEOwstee/spb_tif_part_aq.bin
+spb_tif_part_ar https://tmpfiles.org/wJwrmLOWs7nA/spb_tif_part_ar.bin
+spb_tif_part_as https://tmpfiles.org/wCwlmUOrs2dY/spb_tif_part_as.bin
+spb_tif_part_at https://tmpfiles.org/wcwQmgOMsAye/spb_tif_part_at.bin
+spb_tif_part_au https://tmpfiles.org/wjwOmEOnsJ1o/spb_tif_part_au.bin
+spb_tif_part_av https://tmpfiles.org/wnwvmuOQs6Rr/spb_tif_part_av.bin
+spb_tif_part_aw https://tmpfiles.org/wmwGmeOGsO2E/spb_tif_part_aw.bin
+spb_tif_part_ax https://tmpfiles.org/wtwImOOch5eH/spb_tif_part_ax.bin
+spb_tif_part_ay https://tmpfiles.org/w4w2mgOnhwU6/spb_tif_part_ay.bin
+spb_tif_part_az https://tmpfiles.org/wawumGOehaWf/spb_tif_part_az.bin
+spb_tif_part_ba https://tmpfiles.org/wMwGmrOXhbvv/spb_tif_part_ba.bin
+spb_tif_part_bb https://tmpfiles.org/w7wTmvODhSOO/spb_tif_part_bb.bin
+spb_tif_part_bc https://tmpfiles.org/wPwYmuO0h1k5/spb_tif_part_bc.bin
+spb_tif_part_bd https://tmpfiles.org/w0wimgOghwpV/spb_tif_part_bd.bin
+spb_tif_part_be https://tmpfiles.org/wZwBmTOXk0Kl/spb_tif_part_be.bin
+spb_tif_part_bf https://tmpfiles.org/wJw5mBOdkzL6/spb_tif_part_bf.bin

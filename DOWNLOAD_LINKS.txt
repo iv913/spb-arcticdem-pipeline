@@ -1,0 +1,171 @@
+================================================================
+СПб ArcticDEM Pipeline — All Files Downloaded to tmpfiles.org
+================================================================
+
+All files publicly available at tmpfiles.org (1 hour expiry).
+Direct download: replace URL with https://tmpfiles.org/dl/<ID>/<filename>
+
+=== 1. Скрипты (15 .py файлов) ===
+
+13_nevskaya_guba.py:
+  https://tmpfiles.org/wowNmIOTRIPe/13_nevskaya_guba.py
+
+lib_geo.py:
+  https://tmpfiles.org/wLwOmhOcRgqD/lib_geo.py
+
+lib_ground.py:
+  https://tmpfiles.org/wrw7mFOxRINq/lib_ground.py
+
+lib_profile.py:
+  https://tmpfiles.org/w7wqmSO6R9Eg/lib_profile.py
+
+lib_vertical.py:
+  https://tmpfiles.org/wRwUmzOYRTpQ/lib_vertical.py
+
+spb_check_geoshift.py:
+  https://tmpfiles.org/wHw2mCOYI2Ac/spb_check_geoshift.py
+
+spb_check_geoshift_per_tile.py:
+  https://tmpfiles.org/w0wqmOO5IxeF/spb_check_geoshift_per_tile.py
+
+spb_create_bay_polygon.py:
+  https://tmpfiles.org/w1wgmwOQIfl9/spb_create_bay_polygon.py
+
+spb_full_run_v2.py:
+  https://tmpfiles.org/wQwAmROmIj6X/spb_full_run_v2.py
+
+spb_missing_17.py:
+  https://tmpfiles.org/wIw8meOEINZW/spb_missing_17.py
+
+spb_missing_17_no_tiff.py:
+  https://tmpfiles.org/wmwHmfO2I2cC/spb_missing_17_no_tiff.py
+
+spb_water_mask_analysis.py:
+  https://tmpfiles.org/wkwDmcOZIlnh/spb_water_mask_analysis.py
+
+test_guba.py:
+  https://tmpfiles.org/w3wJmZOWILMP/test_guba.py
+
+upload_to_gdrive.py:
+  https://tmpfiles.org/wlwsmZONIXVR/upload_to_gdrive.py
+
+upload_to_gdrive_oauth.py:
+  https://tmpfiles.org/wWwEmeONISHJ/upload_to_gdrive_oauth.py
+
+=== 2. Результаты (.json, .csv) ===
+
+nevskaya_guba_qa.json:
+  https://tmpfiles.org/wvwtmKOeI1ox/nevskaya_guba_qa.json
+
+spb_geoshift_per_tile.json:
+  https://tmpfiles.org/wowHm2OiIBJV/spb_geoshift_per_tile.json
+
+spb_geoshift_stats.json:
+  https://tmpfiles.org/w3wXm6OdIS5w/spb_geoshift_stats.json
+
+spb_qa_2m.json:
+  https://tmpfiles.org/wjwRmNOiI00B/spb_qa_2m.json
+
+spb_water_mask_analysis.json:
+  https://tmpfiles.org/wLwImJOlI6yY/spb_water_mask_analysis.json
+
+spb_geoshift_check.csv:
+  https://tmpfiles.org/wJwpmaO5Iot6/spb_geoshift_check.csv
+
+spb_missing_17_analysis.csv:
+  https://tmpfiles.org/w5wXmyOeI3bj/spb_missing_17_analysis.csv
+
+spb_passport_validation_v3.csv:
+  https://tmpfiles.org/wGwtmpO0IiaS/spb_passport_validation_v3.csv
+
+spb_passport_validation_v4.csv:
+  https://tmpfiles.org/wEwLmBOaIK3B/spb_passport_validation_v4.csv
+
+README.md:
+  https://tmpfiles.org/wewgmUOrR7Q6/readme.md
+
+=== 3. Архивы (ZIP) ===
+
+spb_pipeline_scripts.zip (101KB, all 15 scripts + JSON + CSV + README):
+  https://tmpfiles.org/wvwbmDOkio9I/spb_pipeline_scripts.zip
+
+nevskaya_guba.zip (779B):
+  https://tmpfiles.org/wfwwmtOAFFJQ/nevskaya_guba.zip
+
+osm_water.zip (454KB):
+  https://tmpfiles.org/w0wFmwOrFA7B/osm_water.zip
+
+osm_green.zip (3.7MB):
+  https://tmpfiles.org/wBwsmiOsFmjk/osm_green.zip
+
+osm_buildings.zip (9.8MB, 142K buildings):
+  https://tmpfiles.org/wgw6mIOyFv3Z/osm_buildings.zip
+
+=== 4. Copernicus DEM 30m (5 files, 100MB total) ===
+
+cop_N59_00_E029_00.tif (29MB):
+  https://tmpfiles.org/wuwnmSOOIikC/cop_n59_00_e029_00.tif
+
+cop_N59_00_E030_00.tif (31MB):
+  https://tmpfiles.org/wbwEmbOfINmU/cop_n59_00_e030_00.tif
+
+cop_N60_00_E029_00.tif (20MB):
+  https://tmpfiles.org/wgw5mcOSICqw/cop_n60_00_e029_00.tif
+
+cop_N60_00_E030_00.tif (17MB):
+  https://tmpfiles.org/wKwhmrOVIfxf/cop_n60_00_e030_00.tif
+
+cop_spb_3413_30m.tif (7.9MB — merged, ready to use):
+  https://tmpfiles.org/wAwKmSONIipx/cop_spb_3413_30m.tif
+
+=== 5. Pipeline checkpoint ===
+
+spb_progress.json (per-block metrics):
+  https://tmpfiles.org/wswom7OhFM1A/spb_progress.json
+
+=== 6. spb_ground_surface_2m.tif — split into 32 parts ===
+
+Total: 2.8 GB. Each part ~90MB. Re-assembly:
+  for f in spb_tif_part_*.bin; do cat "$f" >> spb_ground_surface_2m.tif; done
+
+See TIF_MANIFEST.txt for all 32 URLs (also uploaded separately).
+
+spb_ground_surface_2m.tif — split into 32 parts (90MB each)
+Total size: 2.8 GB
+Re-assembly: 
+  1. Download all 32 .bin parts
+  2. cat spb_tif_part_*.bin > spb_ground_surface_2m.tif
+  3. Verify size: 2857MB
+
+spb_tif_part_aa https://tmpfiles.org/wRwOmTOv2EWC/spb_tif_part_aa.bin
+spb_tif_part_ab https://tmpfiles.org/w1wemXOc2gXG/spb_tif_part_ab.bin
+spb_tif_part_ac https://tmpfiles.org/wewtmwOW2N1v/spb_tif_part_ac.bin
+spb_tif_part_ad https://tmpfiles.org/wFwMmVOI21hP/spb_tif_part_ad.bin
+spb_tif_part_ae https://tmpfiles.org/wHw4mXOg2e8g/spb_tif_part_ae.bin
+spb_tif_part_af https://tmpfiles.org/w0wAmgOCGSoa/spb_tif_part_af.bin
+spb_tif_part_ag https://tmpfiles.org/wwwTmuOlGktl/spb_tif_part_ag.bin
+spb_tif_part_ah https://tmpfiles.org/wdwOm9OyGAzg/spb_tif_part_ah.bin
+spb_tif_part_ai https://tmpfiles.org/wxwqmwOyGySI/spb_tif_part_ai.bin
+spb_tif_part_aj https://tmpfiles.org/wgwnmvO3G8Po/spb_tif_part_aj.bin
+spb_tif_part_ak https://tmpfiles.org/wvwqmCOLBBgg/spb_tif_part_ak.bin
+spb_tif_part_al https://tmpfiles.org/w9w8mWOYBgtZ/spb_tif_part_al.bin
+spb_tif_part_am https://tmpfiles.org/w9wYmrOgBKih/spb_tif_part_am.bin
+spb_tif_part_an https://tmpfiles.org/w2wQmIOLBxsi/spb_tif_part_an.bin
+spb_tif_part_ao https://tmpfiles.org/wPwOmaODB8m6/spb_tif_part_ao.bin
+spb_tif_part_ap https://tmpfiles.org/wPw4mpOABgx4/spb_tif_part_ap.bin
+spb_tif_part_aq https://tmpfiles.org/wuwPmEOwstee/spb_tif_part_aq.bin
+spb_tif_part_ar https://tmpfiles.org/wJwrmLOWs7nA/spb_tif_part_ar.bin
+spb_tif_part_as https://tmpfiles.org/wCwlmUOrs2dY/spb_tif_part_as.bin
+spb_tif_part_at https://tmpfiles.org/wcwQmgOMsAye/spb_tif_part_at.bin
+spb_tif_part_au https://tmpfiles.org/wjwOmEOnsJ1o/spb_tif_part_au.bin
+spb_tif_part_av https://tmpfiles.org/wnwvmuOQs6Rr/spb_tif_part_av.bin
+spb_tif_part_aw https://tmpfiles.org/wmwGmeOGsO2E/spb_tif_part_aw.bin
+spb_tif_part_ax https://tmpfiles.org/wtwImOOch5eH/spb_tif_part_ax.bin
+spb_tif_part_ay https://tmpfiles.org/w4w2mgOnhwU6/spb_tif_part_ay.bin
+spb_tif_part_az https://tmpfiles.org/wawumGOehaWf/spb_tif_part_az.bin
+spb_tif_part_ba https://tmpfiles.org/wMwGmrOXhbvv/spb_tif_part_ba.bin
+spb_tif_part_bb https://tmpfiles.org/w7wTmvODhSOO/spb_tif_part_bb.bin
+spb_tif_part_bc https://tmpfiles.org/wPwYmuO0h1k5/spb_tif_part_bc.bin
+spb_tif_part_bd https://tmpfiles.org/w0wimgOghwpV/spb_tif_part_bd.bin
+spb_tif_part_be https://tmpfiles.org/wZwBmTOXk0Kl/spb_tif_part_be.bin
+spb_tif_part_bf https://tmpfiles.org/wJw5mBOdkzL6/spb_tif_part_bf.bin
