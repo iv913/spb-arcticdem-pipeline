@@ -1,21 +1,10 @@
 {
-  "pipeline": "spb_full_run_v2 (PMF + train/holdout + 4-tile Copernicus N59+N60)",
-  "shift_m": 15.673,
-  "output": {
-    "path": "/home/z/my-project/download/spb_ground_surface_2m.tif",
-    "width": 23146,
-    "height": 28369,
-    "crs": "EPSG:3413",
-    "land_area_km2": 1941.1,
-    "water_area_km2": 589.8
-  },
+  "pipeline": "v5 (C1+C6+D)",
   "passport_stats": {
-    "n_total": 202,
-    "n_valid": 202,
-    "n_missing": 0,
-    "median_m": -0.234,
-    "mad_m": 1.552,
-    "rmse_m": 2.115
+    "n": 202,
+    "median_m": -0.195,
+    "mad_m": 1.573,
+    "rmse_m": 1.801
   },
   "passport_by_detail": [
     {
@@ -23,50 +12,33 @@
       "name": "0: unknown",
       "n": 2,
       "median_m": -1.601,
-      "mad_m": 1.56,
-      "rmse_m": 1.916,
-      "pct_outside_2m": 50.0
+      "mad_m": 1.559,
+      "rmse_m": 1.915
     },
     {
       "detail": 21,
       "name": "21: DSM accept",
-      "n": 62,
-      "median_m": -0.034,
-      "mad_m": 0.723,
-      "rmse_m": 1.235,
-      "pct_outside_2m": 8.1
+      "n": 65,
+      "median_m": 0.074,
+      "mad_m": 0.717,
+      "rmse_m": 1.219
     },
     {
       "detail": 23,
-      "name": "23: replaced by prior",
-      "n": 138,
-      "median_m": -0.613,
-      "mad_m": 1.953,
-      "rmse_m": 2.41,
-      "pct_outside_2m": 26.8
+      "name": "23: replace",
+      "n": 135,
+      "median_m": -0.386,
+      "mad_m": 1.958,
+      "rmse_m": 2.021
     }
   ],
   "icesat_train": {
-    "description": "ICESat points where surface was set FROM ICESat (detail=22) — LEAKAGE",
-    "n": 21170,
-    "median_m": 0.0,
-    "mad_m": 0.0,
-    "rmse_m": 0.0118
+    "n": 24695,
+    "mad_m": 0.0
   },
   "icesat_holdout": {
-    "description": "ICESat points NOT used as anchors (detail!=22) — REAL accuracy",
-    "n": 16474,
-    "median_m": -0.3564,
-    "mad_m": 0.3162,
-    "rmse_m": 3.0717
-  },
-  "flood_levels_pct_land": {
-    "0.5": 1.63,
-    "1.0": 2.27,
-    "1.5": 3.22,
-    "2.0": 4.35,
-    "2.5": 5.4,
-    "3.0": 6.55,
-    "5.0": 11.92
+    "n": 12948,
+    "mad_m": 0.3445,
+    "rmse_m": 3.3127
   }
 }

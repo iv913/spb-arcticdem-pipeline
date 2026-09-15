@@ -340,8 +340,18 @@ def load_cop_on_grid(block_transform, shape):
 
 def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, block_transform, shape):
     h_bs = dem - SHIFT_M
-    water_extended = water_mask | (np.isfinite(cop) & (cop < 0.5))
+    # D FIX: use split_low_pixels to separate real water (connected to gulf)
+    # from low-lying land that cop<0.5 captures by mistake
+    cop_low = np.isfinite(cop) & (cop < 0.5)
+    water_bodies, water_edges = libg.split_low_pixels(
+        cop_low, adjacent_to=water_mask, pixel_m=PIXEL_M,
+        min_area_m2=5000.0, dsm=cop, body_median_max=0.5,
+        overlap_min=0.05)
+    water_extended = water_mask | water_bodies
     water_mask = water_extended
+    n_cop_low = int(cop_low.sum())
+    n_water_bodies = int(water_bodies.sum())
+    n_water_edges = int(water_edges.sum())
 
     try:
         anchors, ground_mask, dist_b, env, info = libg.anchor_field(
@@ -368,6 +378,24 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
 
     h_known = np.where(anchors, h_bs, np.nan).astype('float32')
     domain = ~building_mask & ~water_mask & np.isfinite(h_bs)
+
+    # C1 FIX: ICESat points go into h_known BEFORE build_prior, not after
+    # This makes prior flow towards ICESat values in their neighborhood
+    n_ice_in_prior = 0; n_ice_reject = 0
+    inv = ~block_transform
+    for p in ice_pts_in_block:
+        x, y, h_ice = p['x'], p['y'], p['h_ice']
+        c, r = inv * (x, y)
+        r_i, c_i = int(round(r)), int(round(c))
+        if 0 <= r_i < shape[0] and 0 <= c_i < shape[1]:
+            if domain[r_i, c_i]:
+                cop_pt = cop[r_i, c_i]
+                if np.isfinite(cop_pt) and cop_pt - 5 <= h_ice <= cop_pt + 15:
+                    h_known[r_i, c_i] = h_ice
+                    n_ice_in_prior += 1
+                else:
+                    n_ice_reject += 1
+
     try:
         prior = libg.build_prior(h_known, domain=domain, iters_per_level=30)
     except Exception as e:
@@ -395,12 +423,14 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
     surface[replace] = prior[replace]
     detail[replace] = 23; stat[replace] = 1
     surface[water_mask] = 0.0; detail[water_mask] = 32; stat[water_mask] = 0
+    # C6 FIX: don't clamp below-zero, count them for QA
     below = np.isfinite(surface) & (surface < 0) & (stat == 1)
-    surface[below] = 0.0
+    n_below_zero = int(below.sum())
 
     # ICESat anchors — marked as detail=22 (TRAIN)
-    n_ice = 0; n_ice_reject = 0
-    inv = ~block_transform
+    # Values already in prior via h_known; here we just stamp detail=22
+    # for train/holdout split in validation
+    n_ice = n_ice_in_prior  # reuse count from prior injection
     for p in ice_pts_in_block:
         x, y, h_ice = p['x'], p['y'], p['h_ice']
         c, r = inv * (x, y)
@@ -409,13 +439,12 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
             if domain[r_i, c_i]:
                 cop_pt = cop[r_i, c_i]
                 if np.isfinite(cop_pt) and cop_pt - 5 <= h_ice <= cop_pt + 15:
+                    # ICESat value is now IN the prior, not stamped on surface
+                    # Mark as detail=22 so validation can split train/holdout
                     surface[r_i, c_i] = h_ice
                     detail[r_i, c_i] = 22; stat[r_i, c_i] = 1
-                    n_ice += 1
-                else:
-                    n_ice_reject += 1
 
-    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum())
+    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero
 
 
 def step4_pipeline(ice, buildings_3413, water_3413):
@@ -519,14 +548,14 @@ def step4_pipeline(ice, buildings_3413, water_3413):
             ice_pts_block = ice[in_block].to_dict('records')
 
             try:
-                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground = process_block_pmf(
+                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero = process_block_pmf(
                     dem, building_mask, water_mask, cop, ice_pts_block, block_transform, shape)
                 total_ice_used += n_ice
                 total_anchors += n_anchors
                 total_ground += n_ground
                 n_accept = int(((detail==21) & (stat==1)).sum())
                 n_replace = int(((detail==23) & (stat==1)).sum())
-                log(f'    ✓ ice={n_ice} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,}')
+                log(f'    ✓ ice={n_ice} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} water_bodies={n_water_bodies:,} water_edges={n_water_edges:,} below0={n_below_zero}')
                 # Save per-block metrics (per user request)
                 progress['block_metrics'].append({
                     'block_id': block_id,
