@@ -1,0 +1,42 @@
+{
+  "step": "C2",
+  "expectation": {
+    "name": "веса в build_prior",
+    "expect": "класс 23 улучшается; класс 21 не портится",
+    "watch": [
+      "detail_23_mad",
+      "detail_21_mad"
+    ]
+  },
+  "n_common_passport": 200,
+  "passport": {
+    "label": "паспорт (общее множество)",
+    "before": {
+      "n": 202,
+      "median": -0.234,
+      "mad": 1.552,
+      "rmse": 2.115,
+      "frac_gt_1m": 0.485,
+      "frac_gt_2m": 0.213,
+      "rmse_over_mad": 1.36
+    },
+    "after": {
+      "n": 202,
+      "median": -0.195,
+      "mad": 1.622,
+      "rmse": 2.12,
+      "frac_gt_1m": 0.505,
+      "frac_gt_2m": 0.248,
+      "rmse_over_mad": 1.31
+    },
+    "d_mad": 0.07,
+    "d_median_abs": -0.039,
+    "d_frac_gt_2m": 0.035,
+    "verdict": "ХУЖЕ",
+    "note": "смещение улучшилось, разброс ухудшился — признак подгонки или постоянного сдвига"
+  },
+  "laser": {
+    "label": "лазер"
+  },
+  "tradeoff": null
+}
