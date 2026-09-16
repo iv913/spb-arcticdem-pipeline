@@ -193,58 +193,94 @@ def street_verdict(h_street_bs, h_anchor_bs, tol_m=0.50, min_px=20):
     return 'measured', delta, n
 
 
-def build_prior(h_known, domain=None, iters_per_level=60):
+def build_prior(h_known, domain=None, iters_per_level=60, weights=None):
     """Пирамида nanmean вниз + МАСКИРОВАННЫЙ Jacobi вверх.
 
     domain — где prior имеет смысл и через что он вправе течь. Соседи
     вне домена не участвуют в среднем, поэтому вода работает барьером:
     уровень одного берега не протекает на другой.
+
+    weights — массив тех же размера, что h_known. Если задан, используется
+    взвешенное среднее вместо nanmean. Это даёт ICESat (σ=0.10, вес=100)
+    приоритет над DSM-опорой (σ=0.50, вес=4). Веса применяются на обоих
+    уровнях: пирамида вниз и Jacobi вверх.
     """
     h_known = np.asarray(h_known, dtype='float64')
     if domain is None:
         domain = np.ones(h_known.shape, dtype=bool)
     known = np.isfinite(h_known) & domain
 
-    vals = [np.where(known, h_known, np.nan)]
+    if weights is None:
+        weights = np.ones_like(h_known, dtype='float64')
+    else:
+        weights = np.asarray(weights, dtype='float64')
+    # Known pixels get their weights; unknown pixels get 0 weight
+    w_known = np.where(known, weights, 0.0)
+
+    # --- Pyramid down: weighted nanmean ---
+    vals = [np.where(known, h_known, 0.0)]
+    wts = [w_known.copy()]
     doms = [domain.copy()]
     while min(vals[-1].shape) > 8:
-        a, d = vals[-1], doms[-1]
+        a, w_arr, d = vals[-1], wts[-1], doms[-1]
         H2, W2 = (a.shape[0] + 1) // 2, (a.shape[1] + 1) // 2
-        pa = np.full((H2 * 2, W2 * 2), np.nan)
+        pa = np.zeros((H2 * 2, W2 * 2))
+        pw = np.zeros((H2 * 2, W2 * 2))
         pd = np.zeros((H2 * 2, W2 * 2), dtype=bool)
         pa[:a.shape[0], :a.shape[1]] = a
+        pw[:w_arr.shape[0], :w_arr.shape[1]] = w_arr
         pd[:d.shape[0], :d.shape[1]] = d
+        # Reshape to 2x2 blocks and compute weighted mean
+        a_blk = pa.reshape(H2, 2, W2, 2)
+        w_blk = pw.reshape(H2, 2, W2, 2)
+        d_blk = pd.reshape(H2, 2, W2, 2)
+        w_sum = w_blk.sum(axis=(1, 3))  # sum of weights per 2x2 block
+        aw_sum = (a_blk * w_blk).sum(axis=(1, 3))  # weighted sum
         with warnings.catch_warnings():
             warnings.simplefilter('ignore')
-            vals.append(np.nanmean(np.nanmean(
-                pa.reshape(H2, 2, W2, 2), axis=3), axis=1))
-        doms.append(pd.reshape(H2, 2, W2, 2).any(axis=3).any(axis=1))
+            vals.append(np.divide(aw_sum, w_sum,
+                                   out=np.zeros_like(aw_sum),
+                                   where=w_sum > 0))
+        wts.append(w_sum)
+        doms.append(d_blk.any(axis=3).any(axis=1))
 
-    top, dtop = vals[-1], doms[-1]
+    top, wtop, dtop = vals[-1], wts[-1], doms[-1]
     with warnings.catch_warnings():
         warnings.simplefilter('ignore')
-        fill = (np.nanmedian(top[dtop])
-                if np.isfinite(top[dtop]).any() else 0.0)
-    est = np.where(np.isfinite(top), top, fill)
+        wm = (wtop > 0) & dtop
+        if wm.any():
+            fill = float(np.sum(top[wm] * wtop[wm]) / np.sum(wtop[wm]))
+        else:
+            fill = 0.0
+    est = np.where(wtop > 0, top, fill)
 
+    # --- Jacobi up: weighted diffusion ---
     for lev in range(len(vals) - 2, -1, -1):
-        a, d = vals[lev], doms[lev]
+        a, w_lev, d = vals[lev], wts[lev], doms[lev]
         up = np.repeat(np.repeat(est, 2, 0), 2, 1)[:a.shape[0], :a.shape[1]]
-        est = np.where(np.isfinite(a), a, up)
+        known_lev = w_lev > 0
+        est = np.where(known_lev, a, up)
         est = np.nan_to_num(est, nan=fill)
-        k = np.isfinite(a)
-        free = d & ~k
+        free = d & ~known_lev
         if not free.any():
             continue
-        for _ in range(iters_per_level):
-            v = np.where(d, est, 0.0)
-            w = d.astype('float64')
-            pv = np.pad(v, 1, mode='edge')
-            pw = np.pad(w, 1, mode='edge')
-            num = (pv[:-2, 1:-1] + pv[2:, 1:-1] + pv[1:-1, :-2] + pv[1:-1, 2:])
-            den = (pw[:-2, 1:-1] + pw[2:, 1:-1] + pw[1:-1, :-2] + pw[1:-1, 2:])
-            nb = np.divide(num, den, out=est.copy(), where=den > 0)
-            est = np.where(free, nb, est)
+        # Weighted Jacobi: num = Σ(neighbor * weight), den = Σ(weight)
+        # But in diffusion, each pixel's own weight matters for how it
+        # influences neighbors. We carry forward the weights propagated
+        # from known values.
+        w_diff = np.where(d, w_lev + 0.01, 0.0)  # small epsilon for free pixels
+        v = np.where(d, est, 0.0)
+        pv = np.pad(v, 1, mode='edge')
+        pw = np.pad(w_diff, 1, mode='edge')
+        num = (pv[:-2, 1:-1] * pw[:-2, 1:-1] + pv[2:, 1:-1] * pw[2:, 1:-1] +
+               pv[1:-1, :-2] * pw[1:-1, :-2] + pv[1:-1, 2:] * pw[1:-1, 2:])
+        den = (pw[:-2, 1:-1] + pw[2:, 1:-1] + pw[1:-1, :-2] + pw[1:-1, 2:])
+        nb = np.divide(num, den, out=est.copy(), where=den > 0)
+        est = np.where(free, nb, est)
+        # Update weights: free pixels get average of neighbor weights
+        w_up = np.repeat(np.repeat(w_lev, 2, 0), 2, 1)[:a.shape[0], :a.shape[1]]
+        w_lev = np.where(known_lev, w_lev,
+                         np.maximum(w_up * 0.25, 0.01))  # decay weight for diffused
 
     out = est.astype('float32')
     out[~domain] = np.nan

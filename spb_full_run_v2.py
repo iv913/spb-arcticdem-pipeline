@@ -55,7 +55,7 @@ COP_TIF = COP_DIR / 'cop_spb_3413_30m.tif'
 
 SHIFT_M = 15.673
 PIXEL_M = 2.0
-BLOCK = 4096
+BLOCK = 2048  # reduced from 4096 for C2 weighted build_prior memory
 
 SPB_BBOX = (29.70, 59.75, 30.55, 60.05)
 
@@ -377,6 +377,8 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
         info = {'block_px': 60, 'anchors_px': int(anchors.sum())}
 
     h_known = np.where(anchors, h_bs, np.nan).astype('float32')
+    # C2: weights array — ICESat gets 1/σ²=100, DSM anchors get 1/σ²=4
+    w_prior = np.where(anchors, 1.0 / 0.50**2, 0.0).astype('float64')  # σ_dsm=0.50
     domain = ~building_mask & ~water_mask & np.isfinite(h_bs)
 
     # C1 FIX: ICESat points go into h_known BEFORE build_prior, not after
@@ -392,12 +394,14 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
                 cop_pt = cop[r_i, c_i]
                 if np.isfinite(cop_pt) and cop_pt - 5 <= h_ice <= cop_pt + 15:
                     h_known[r_i, c_i] = h_ice
+                    w_prior[r_i, c_i] = 1.0 / 0.10**2  # σ_ice=0.10, weight=100
                     n_ice_in_prior += 1
                 else:
                     n_ice_reject += 1
 
     try:
-        prior = libg.build_prior(h_known, domain=domain, iters_per_level=30)
+        prior = libg.build_prior(h_known, domain=domain, iters_per_level=30,
+                                 weights=w_prior)
     except Exception as e:
         log(f'    build_prior ERROR: {e}, fallback')
         prior = h_bs.copy()
