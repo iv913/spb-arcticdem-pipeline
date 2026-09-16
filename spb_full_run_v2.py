@@ -420,21 +420,8 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
     detail = np.zeros(shape, dtype='uint8')
     stat = np.zeros(shape, dtype='uint8')
 
-    accept = libg.accept_dsm(h_bs, prior, tol_up=0.50, tol_down=1.50) & domain & ground_mask
-    replace = domain & ~accept & np.isfinite(prior)
-    surface[accept] = h_bs[accept]
-    detail[accept] = 21; stat[accept] = 1
-    surface[replace] = prior[replace]
-    detail[replace] = 23; stat[replace] = 1
-    surface[water_mask] = 0.0; detail[water_mask] = 32; stat[water_mask] = 0
-    # C6 FIX: don't clamp below-zero, count them for QA
-    below = np.isfinite(surface) & (surface < 0) & (stat == 1)
-    n_below_zero = int(below.sum())
-
-    # ICESat anchors — marked as detail=22 (TRAIN)
-    # Values already in prior via h_known; here we just stamp detail=22
-    # for train/holdout split in validation
-    n_ice = n_ice_in_prior  # reuse count from prior injection
+    # Build ice_pixel mask for excluding from accept/replace
+    ice_pixels = np.zeros(shape, dtype=bool)
     for p in ice_pts_in_block:
         x, y, h_ice = p['x'], p['y'], p['h_ice']
         c, r = inv * (x, y)
@@ -443,10 +430,25 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
             if domain[r_i, c_i]:
                 cop_pt = cop[r_i, c_i]
                 if np.isfinite(cop_pt) and cop_pt - 5 <= h_ice <= cop_pt + 15:
-                    # ICESat value is now IN the prior, not stamped on surface
-                    # Mark as detail=22 so validation can split train/holdout
-                    surface[r_i, c_i] = h_ice
-                    detail[r_i, c_i] = 22; stat[r_i, c_i] = 1
+                    ice_pixels[r_i, c_i] = True
+
+    accept = libg.accept_dsm(h_bs, prior, tol_up=0.50, tol_down=1.50) & domain & ground_mask & ~ice_pixels
+    replace = domain & ~accept & ~ice_pixels & np.isfinite(prior)
+    # ICESat pixels: use prior value (which includes their weighted influence)
+    ice_accept = ice_pixels & domain & np.isfinite(prior)
+    surface[accept] = h_bs[accept]
+    detail[accept] = 21; stat[accept] = 1
+    surface[replace] = prior[replace]
+    detail[replace] = 23; stat[replace] = 1
+    surface[ice_accept] = prior[ice_accept]
+    detail[ice_accept] = 22; stat[ice_accept] = 1
+    surface[water_mask] = 0.0; detail[water_mask] = 32; stat[water_mask] = 0
+    # C6 FIX: don't clamp below-zero, count them for QA
+    below = np.isfinite(surface) & (surface < 0) & (stat == 1)
+    n_below_zero = int(below.sum())
+
+    # ICESat pixels already handled above (ice_accept → detail=22, surface=prior)
+    n_ice = n_ice_in_prior
 
     return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero
 

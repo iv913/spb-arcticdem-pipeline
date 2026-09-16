@@ -264,23 +264,19 @@ def build_prior(h_known, domain=None, iters_per_level=60, weights=None):
         free = d & ~known_lev
         if not free.any():
             continue
-        # Weighted Jacobi: num = Σ(neighbor * weight), den = Σ(weight)
-        # But in diffusion, each pixel's own weight matters for how it
-        # influences neighbors. We carry forward the weights propagated
-        # from known values.
-        w_diff = np.where(d, w_lev + 0.01, 0.0)  # small epsilon for free pixels
-        v = np.where(d, est, 0.0)
-        pv = np.pad(v, 1, mode='edge')
-        pw = np.pad(w_diff, 1, mode='edge')
-        num = (pv[:-2, 1:-1] * pw[:-2, 1:-1] + pv[2:, 1:-1] * pw[2:, 1:-1] +
-               pv[1:-1, :-2] * pw[1:-1, :-2] + pv[1:-1, 2:] * pw[1:-1, 2:])
-        den = (pw[:-2, 1:-1] + pw[2:, 1:-1] + pw[1:-1, :-2] + pw[1:-1, 2:])
-        nb = np.divide(num, den, out=est.copy(), where=den > 0)
-        est = np.where(free, nb, est)
-        # Update weights: free pixels get average of neighbor weights
-        w_up = np.repeat(np.repeat(w_lev, 2, 0), 2, 1)[:a.shape[0], :a.shape[1]]
-        w_lev = np.where(known_lev, w_lev,
-                         np.maximum(w_up * 0.25, 0.01))  # decay weight for diffused
+        # Weighted Jacobi: run iters_per_level iterations
+        # Weights for diffusion: known pixels keep their weight,
+        # free pixels get small epsilon so they participate in averaging
+        w_diff = np.where(d, w_lev + 0.01, 0.0)
+        for _ in range(iters_per_level):
+            v = np.where(d, est, 0.0)
+            pv = np.pad(v, 1, mode='edge')
+            pw = np.pad(w_diff, 1, mode='edge')
+            num = (pv[:-2, 1:-1] * pw[:-2, 1:-1] + pv[2:, 1:-1] * pw[2:, 1:-1] +
+                   pv[1:-1, :-2] * pw[1:-1, :-2] + pv[1:-1, 2:] * pw[1:-1, 2:])
+            den = (pw[:-2, 1:-1] + pw[2:, 1:-1] + pw[1:-1, :-2] + pw[1:-1, 2:])
+            nb = np.divide(num, den, out=est.copy(), where=den > 0)
+            est = np.where(free, nb, est)
 
     out = est.astype('float32')
     out[~domain] = np.nan
