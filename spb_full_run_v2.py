@@ -338,7 +338,7 @@ def load_cop_on_grid(block_transform, shape):
     return cop
 
 
-def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, block_transform, shape):
+def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, passport_pts_in_block, block_transform, shape):
     h_bs = dem - SHIFT_M
     # D FIX: use split_low_pixels to separate real water (connected to gulf)
     # from low-lying land that cop<0.5 captures by mistake
@@ -399,6 +399,19 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
                 else:
                     n_ice_reject += 1
 
+    # Этап 1.5: Passport train points as high-weight anchors
+    # σ_passport=0.05 m → weight = 1/0.05² = 400 (dominates over ICESat=100, DSM=4)
+    n_passport_in_prior = 0
+    for p in passport_pts_in_block:
+        x, y, hp = p['x'], p['y'], p['hp']
+        c, r = inv * (x, y)
+        r_i, c_i = int(round(r)), int(round(c))
+        if 0 <= r_i < shape[0] and 0 <= c_i < shape[1]:
+            if domain[r_i, c_i]:
+                h_known[r_i, c_i] = hp  # passport height in BS-77
+                w_prior[r_i, c_i] = 1.0 / 0.05**2  # σ_passport=0.05, weight=400
+                n_passport_in_prior += 1
+
     try:
         prior = libg.build_prior(h_known, domain=domain, iters_per_level=30,
                                  weights=w_prior)
@@ -448,12 +461,25 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, blo
     n_below_zero = int(below.sum())
 
     # ICESat pixels already handled above (ice_accept → detail=22, surface=prior)
+    # Passport pixels: mark as detail=24 (train anchor), surface=prior
     n_ice = n_ice_in_prior
+    pp_mask = np.zeros(shape, dtype=bool)
+    for p in passport_pts_in_block:
+        x, y, hp = p['x'], p['y'], p['hp']
+        c, r = inv * (x, y)
+        r_i, c_i = int(round(r)), int(round(c))
+        if 0 <= r_i < shape[0] and 0 <= c_i < shape[1]:
+            if domain[r_i, c_i]:
+                pp_mask[r_i, c_i] = True
 
-    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero
+    pp_accept = pp_mask & domain & np.isfinite(prior) & ~ice_pixels
+    surface[pp_accept] = prior[pp_accept]
+    detail[pp_accept] = 24; stat[pp_accept] = 1
+
+    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero, n_passport_in_prior
 
 
-def step4_pipeline(ice, buildings_3413, water_3413):
+def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
     os.environ['AWS_NO_SIGN_REQUEST'] = 'YES'
     os.environ['VSI_CACHE'] = 'TRUE'
     os.environ['VSI_CACHE_SIZE'] = '500000000'
@@ -552,16 +578,22 @@ def step4_pipeline(ice, buildings_3413, water_3413):
             in_block = ((ice.x >= b_left) & (ice.x <= b_right) &
                         (ice.y >= b_bottom) & (ice.y <= b_top))
             ice_pts_block = ice[in_block].to_dict('records')
+            
+            # Passport train points in this block
+            in_block_pp = ((pp_train.x >= b_left) & (pp_train.x <= b_right) &
+                           (pp_train.y >= b_bottom) & (pp_train.y <= b_top))
+            pp_pts_block = pp_train[in_block_pp].to_dict('records')
 
             try:
-                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero = process_block_pmf(
-                    dem, building_mask, water_mask, cop, ice_pts_block, block_transform, shape)
+                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero, n_pp = process_block_pmf(
+                    dem, building_mask, water_mask, cop, ice_pts_block, pp_pts_block, block_transform, shape)
                 total_ice_used += n_ice
                 total_anchors += n_anchors
                 total_ground += n_ground
                 n_accept = int(((detail==21) & (stat==1)).sum())
                 n_replace = int(((detail==23) & (stat==1)).sum())
-                log(f'    ✓ ice={n_ice} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} water_bodies={n_water_bodies:,} water_edges={n_water_edges:,} below0={n_below_zero}')
+                n_pp_px = int(((detail==24) & (stat==1)).sum())
+                log(f'    ✓ ice={n_ice} pp={n_pp} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} pp_px={n_pp_px}')
                 # Save per-block metrics (per user request)
                 progress['block_metrics'].append({
                     'block_id': block_id,
@@ -923,7 +955,20 @@ def main():
     log(f'  projected')
 
     log('\nStep 4: Pipeline...')
-    out_path, transform, shape = step4_pipeline(ice, buildings_3413, water_3413)
+    # Load passport split for train/holdout
+    pp_split_path = OUT / 'passport_split.csv'
+    pp_split_path_persist = Path('/tmp/my-project/upload/scripts_persistent/passport_split.csv')
+    if pp_split_path.exists():
+        pp_split = pd.read_csv(str(pp_split_path))
+    elif pp_split_path_persist.exists():
+        pp_split = pd.read_csv(str(pp_split_path_persist))
+    else:
+        log('WARNING: passport_split.csv not found, running without passport in prior')
+        pp_split = pd.DataFrame(columns=['lat','lon','hp','x','y','dist_to_ice_m','role'])
+    pp_train = pp_split[pp_split.role == 'train'].copy()
+    log(f'  Passport: {len(pp_train)} train (in prior), {len(pp_split)-len(pp_train)} holdout (validation)')
+    
+    out_path, transform, shape = step4_pipeline(ice, buildings_3413, water_3413, pp_train)
 
     log('\nStep 5: Validation...')
     step5_validate(out_path, transform, shape, ice)
