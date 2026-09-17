@@ -353,6 +353,15 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
     n_water_bodies = int(water_bodies.sum())
     n_water_edges = int(water_edges.sum())
 
+    # Этап 1.2: stale_dem_mask — find reclaimed land where DEM is outdated
+    # (OSM says road/building, but DSM says water level → DEM predates land reclamation)
+    # These pixels cannot be anchors, water, or ground — fill from neighbors
+    domain_init = ~building_mask & ~water_mask & np.isfinite(h_bs)
+    stale, stale_info = libg.stale_dem_mask(
+        h_bs, building_mask, domain=domain_init, pixel_m=PIXEL_M)
+    # Stale areas: exclude from domain and water, mark as detail=42
+    n_stale = int(stale.sum())
+
     try:
         anchors, ground_mask, dist_b, env, info = libg.anchor_field(
             h_bs, building_mask, water_mask, pixel_m=PIXEL_M)  # block_px=None → choose_block_px
@@ -380,7 +389,7 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
     h_known = np.where(anchors, h_bs, np.nan).astype('float32')
     # C2: weights array — ICESat gets 1/σ²=100, DSM anchors get 1/σ²=4
     w_prior = np.where(anchors, 1.0 / 0.50**2, 0.0).astype('float64')  # σ_dsm=0.50
-    domain = ~building_mask & ~water_mask & np.isfinite(h_bs)
+    domain = ~building_mask & ~water_mask & ~stale & np.isfinite(h_bs)
 
     # C1 FIX: ICESat points go into h_known BEFORE build_prior, not after
     # This makes prior flow towards ICESat values in their neighborhood
@@ -462,6 +471,11 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
     surface[ice_accept] = prior[ice_accept]
     detail[ice_accept] = 22; stat[ice_accept] = 1
     surface[water_mask] = 0.0; detail[water_mask] = 32; stat[water_mask] = 0
+    # Этап 1.2: stale DEM areas — fill from prior (interpolated from neighbors)
+    if n_stale > 0:
+        stale_fill = stale & np.isfinite(prior)
+        surface[stale_fill] = prior[stale_fill]
+        detail[stale_fill] = 42; stat[stale_fill] = 1
     # C6 FIX: don't clamp below-zero, count them for QA
     below = np.isfinite(surface) & (surface < 0) & (stat == 1)
     n_below_zero = int(below.sum())
@@ -482,7 +496,7 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
     surface[pp_accept] = prior[pp_accept]
     detail[pp_accept] = 24; stat[pp_accept] = 1
 
-    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero, n_passport_in_prior, n_far_capped, info.get('block_px', 60)
+    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero, n_passport_in_prior, n_far_capped, info.get('block_px', 60), n_stale
 
 
 def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
@@ -591,7 +605,7 @@ def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
             pp_pts_block = pp_train[in_block_pp].to_dict('records')
 
             try:
-                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero, n_pp, n_capped, block_px = process_block_pmf(
+                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero, n_pp, n_capped, block_px, n_stale = process_block_pmf(
                     dem, building_mask, water_mask, cop, ice_pts_block, pp_pts_block, block_transform, shape)
                 total_ice_used += n_ice
                 total_anchors += n_anchors
@@ -599,7 +613,7 @@ def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
                 n_accept = int(((detail==21) & (stat==1)).sum())
                 n_replace = int(((detail==23) & (stat==1)).sum())
                 n_pp_px = int(((detail==24) & (stat==1)).sum())
-                log(f'    ✓ ice={n_ice} pp={n_pp} blk={block_px} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} pp_px={n_pp_px} capped={n_capped:,}')
+                log(f'    ✓ ice={n_ice} pp={n_pp} blk={block_px} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} pp_px={n_pp_px} stale={n_stale:,}')
                 # Save per-block metrics (per user request)
                 progress['block_metrics'].append({
                     'block_id': block_id,
