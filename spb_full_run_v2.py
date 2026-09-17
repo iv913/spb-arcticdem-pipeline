@@ -355,7 +355,7 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
 
     try:
         anchors, ground_mask, dist_b, env, info = libg.anchor_field(
-            h_bs, building_mask, water_mask, pixel_m=PIXEL_M, block_px=60)
+            h_bs, building_mask, water_mask, pixel_m=PIXEL_M)  # block_px=None → choose_block_px
     except Exception as e:
         log(f'    PMF ERROR: {e}, fallback')
         fin = np.isfinite(h_bs) & ~building_mask & ~water_mask
@@ -374,7 +374,8 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
         anchors = fin & ~rough
         ground_mask = anchors
         env = np.full(shape, np.nan, dtype='float32')
-        info = {'block_px': 60, 'anchors_px': int(anchors.sum())}
+        dist_b = np.full(shape, np.nan, dtype='float32')
+        info = {'block_px': 60, 'anchors_px': int(anchors.sum()), 'cap_allow_above_m': 0.50}
 
     h_known = np.where(anchors, h_bs, np.nan).astype('float32')
     # C2: weights array — ICESat gets 1/σ²=100, DSM anchors get 1/σ²=4
@@ -429,6 +430,11 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
         cnt = uniform_filter(w, size=15, mode='nearest')
         prior = np.where(cnt > 0.1, m1 / np.maximum(cnt, 1e-6), np.nan)
 
+    # C4 (cap_far_field) REMOVED — it's a field correction after сшивка
+    # Architecture revision: no field corrections after build_prior
+    # cap was overriding passport (w=400) influence, hurting holdout: MAD 1.058→1.515
+    n_far_capped = 0
+
     surface = np.full(shape, np.nan, dtype='float32')
     detail = np.zeros(shape, dtype='uint8')
     stat = np.zeros(shape, dtype='uint8')
@@ -476,7 +482,7 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
     surface[pp_accept] = prior[pp_accept]
     detail[pp_accept] = 24; stat[pp_accept] = 1
 
-    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero, n_passport_in_prior
+    return surface, detail, stat, n_ice, n_ice_reject, int(anchors.sum()), int(ground_mask.sum()), n_water_bodies, n_water_edges, n_below_zero, n_passport_in_prior, n_far_capped, info.get('block_px', 60)
 
 
 def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
@@ -585,7 +591,7 @@ def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
             pp_pts_block = pp_train[in_block_pp].to_dict('records')
 
             try:
-                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero, n_pp = process_block_pmf(
+                surface, detail, stat, n_ice, n_ice_reject, n_anchors, n_ground, n_water_bodies, n_water_edges, n_below_zero, n_pp, n_capped, block_px = process_block_pmf(
                     dem, building_mask, water_mask, cop, ice_pts_block, pp_pts_block, block_transform, shape)
                 total_ice_used += n_ice
                 total_anchors += n_anchors
@@ -593,7 +599,7 @@ def step4_pipeline(ice, buildings_3413, water_3413, pp_train):
                 n_accept = int(((detail==21) & (stat==1)).sum())
                 n_replace = int(((detail==23) & (stat==1)).sum())
                 n_pp_px = int(((detail==24) & (stat==1)).sum())
-                log(f'    ✓ ice={n_ice} pp={n_pp} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} pp_px={n_pp_px}')
+                log(f'    ✓ ice={n_ice} pp={n_pp} blk={block_px} anchors={n_anchors:,} accept={n_accept:,} replace={n_replace:,} pp_px={n_pp_px} capped={n_capped:,}')
                 # Save per-block metrics (per user request)
                 progress['block_metrics'].append({
                     'block_id': block_id,
