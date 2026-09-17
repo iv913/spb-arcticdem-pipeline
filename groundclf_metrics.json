@@ -1,0 +1,39 @@
+{
+  "n_train": 11693,
+  "n_val": 4537,
+  "n_test": 6872,
+  "auc_val": 0.9426066116742784,
+  "auc_test": 0.9934257240734974,
+  "feature_importance": {
+    "h_cop": 505,
+    "roughness_3x3": 502,
+    "roughness_9x9": 360,
+    "h_min_9x9": 363,
+    "h_cop_minus_min": 739,
+    "slope": 425
+  },
+  "features": [
+    "h_cop",
+    "roughness_3x3",
+    "roughness_9x9",
+    "h_min_9x9",
+    "h_cop_minus_min",
+    "slope"
+  ],
+  "train_rgts": [
+    251,
+    289,
+    312,
+    731,
+    754,
+    792
+  ],
+  "val_rgts": [
+    1173,
+    1196
+  ],
+  "test_rgts": [
+    1234,
+    1257
+  ]
+}
