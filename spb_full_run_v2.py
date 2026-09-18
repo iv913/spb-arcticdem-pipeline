@@ -460,7 +460,7 @@ def process_block_pmf(dem, building_mask, water_mask, cop, ice_pts_in_block, pas
                 if np.isfinite(cop_pt) and cop_pt - 5 <= h_ice <= cop_pt + 15:
                     ice_pixels[r_i, c_i] = True
 
-    accept = libg.accept_dsm(h_bs, prior, tol_up=0.50, tol_down=1.50) & domain & ground_mask & ~ice_pixels
+    accept = libg.accept_dsm_with_relief(h_bs, prior, tol_up=0.50, tol_down=1.50) & domain & ground_mask & ~ice_pixels
     replace = domain & ~accept & ~ice_pixels & np.isfinite(prior)
     # ICESat pixels: use prior value (which includes their weighted influence)
     ice_accept = ice_pixels & domain & np.isfinite(prior)

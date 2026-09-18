@@ -696,3 +696,37 @@ def stale_dem_mask(dsm, built, domain=None, pixel_m=2.0,
                  'area_km2': round(int(out.sum()) * pixel_m ** 2 / 1e6, 3),
                  'components_km2': sorted(areas, reverse=True)[:10],
                  'gate_bs': gate_bs}
+
+
+def accept_dsm_with_relief(dsm, prior, tol_up=0.50, tol_down=1.50,
+                           max_step_m=0.25, pixel_m=2.0):
+    """Приёмка DSM с учётом связности рельефа.
+
+    Стандартный accept_dsm отбраковывает пиксели, где DSM выше prior
+    больше чем на tol_up. Но на склонах, спусках к воде и пандусах
+    prior (интерполяция) слишком плоский, а DSM правильно видит уклон.
+
+    Дополнительное условие: пиксель принимается, если
+    1. Он согласован с соседями (не выброс): |dsm - median(3x3)| <= max_step_m * 3
+    2. Локальный уклон объясняет разность с prior
+
+    Возвращает маску accept.
+    """
+    from scipy.ndimage import median_filter
+    d = dsm - prior
+    # Standard accept
+    accept = np.isfinite(d) & (d <= tol_up) & (d >= -tol_down)
+    
+    # Relief accept: DSM above prior but consistent with local terrain
+    above = np.isfinite(d) & (d > tol_up) & (d < 5.0)  # not too far above
+    if above.any():
+        # Check local consistency: is DSM close to 3x3 median?
+        dsm_med = median_filter(np.where(np.isfinite(dsm), dsm, np.nan),
+                                size=3, mode='nearest')
+        consistent = np.abs(dsm - dsm_med) <= max_step_m * 3  # within 0.75m of neighbors
+        # And prior is below DSM (prior is too flat, not DSM too high)
+        prior_below = np.isfinite(prior) & (prior < dsm)
+        relief_accept = above & consistent & prior_below
+        accept = accept | relief_accept
+    
+    return accept
