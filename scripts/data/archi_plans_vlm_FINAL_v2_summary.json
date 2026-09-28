@@ -1,0 +1,32 @@
+{
+  "source": "archi_plans VLM extraction (all Dunaisky project images)",
+  "images_processed": 18,
+  "marks_extracted_total": 209,
+  "marks_plausible_z_10_20": 209,
+  "marks_valid_model_hits": 175,
+  "location": {
+    "address": "Дунайский проспект, 27",
+    "project_id_archi_ru": "21359",
+    "lat_center": 59.832,
+    "lon_center": 30.362,
+    "lat_spread": 0.002,
+    "lon_spread": 0.003
+  },
+  "stats": {
+    "survey_z_median": 14.37,
+    "model_z_median": 14.03012466430664,
+    "dH_median": 0.36175033569336,
+    "dH_mean": 0.3520012263706752,
+    "abs_dH_mad": 0.41675033569335973,
+    "abs_dH_mean": 0.5108382014683316,
+    "abs_dH_p95": 1.0557815856933597,
+    "n_pos": 141,
+    "n_neg": 34,
+    "wilcoxon_p": 1.3138131894852467e-16,
+    "sign_test_p": 1.0979594727348803e-16,
+    "bootstrap_ci_95": [
+      0.3095628356933595,
+      0.4207503356933585
+    ]
+  }
+}

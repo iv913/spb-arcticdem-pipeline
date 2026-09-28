@@ -1,0 +1,23 @@
+{
+  "total_vlm_files": 420,
+  "parse_errors": 0,
+  "categories": {
+    "photo": 194,
+    "engineering_plan": 6,
+    "blank": 131,
+    "unknown": 45,
+    "section": 2,
+    "architectural_plan": 12,
+    "facade": 2,
+    "photograph": 19,
+    "фотография": 7,
+    "elevation_marks": 2
+  },
+  "total_marks": 272,
+  "plausible_marks_z_10_200": 263,
+  "value_range": [
+    -5.5,
+    500.0
+  ],
+  "value_median": 14.3
+}

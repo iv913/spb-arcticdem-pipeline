@@ -1,0 +1,138 @@
+{
+  "sources_combined": [
+    {
+      "name": "archi_ru_514913_VLM",
+      "n": 175,
+      "mad_m": 0.4167503356933597
+    },
+    {
+      "name": "all_dwg_v2 (5 surveys)",
+      "n": 4275,
+      "mad_m": 1.2565551757812514
+    }
+  ],
+  "aggregate": {
+    "n_total": 4450,
+    "dH_median": -0.518729286193846,
+    "dH_mean": -0.6007576665714074,
+    "abs_dH_mad": 1.186139259338379,
+    "abs_dH_mean": 1.8025226877260656,
+    "abs_dH_p95": 6.323213340759277,
+    "wilcoxon_p": 1.523985587104505e-79,
+    "sign_test_p": 1.5389835018506177e-53,
+    "bootstrap_ci_95": [
+      -0.5907821575911019,
+      -0.451845016479492
+    ]
+  },
+  "comparison_table": [
+    {
+      "source": "archi.ru 514913 (Дунайский 27) VLM v2",
+      "n": 175,
+      "mad_m": 0.4167503356933597,
+      "dH_median_m": 0.36175033569336,
+      "location": "Гавань (намыв)"
+    },
+    {
+      "source": "archi.ru 514913 (previous VLM)",
+      "n": 71,
+      "mad_m": 0.47,
+      "dH_median_m": 0.17,
+      "location": "Гавань (намыв)"
+    },
+    {
+      "source": "DWG #1 Охта Парк",
+      "n": 2191,
+      "mad_m": 1.65,
+      "dH_median_m": -0.87,
+      "location": "Всеволожский р-н"
+    },
+    {
+      "source": "DWG #2 Лигово/Ульянка (ТОПО)",
+      "n": 1728,
+      "mad_m": 0.79,
+      "dH_median_m": -0.62,
+      "location": "юго-запад СПб"
+    },
+    {
+      "source": "DWG #3 Кронштадт (ПЗУ)",
+      "n": 238,
+      "mad_m": 0.62,
+      "dH_median_m": 0.61,
+      "location": "Кронштадт"
+    },
+    {
+      "source": "DWG #4 Кронштадт (Топосъёмка)",
+      "n": 64,
+      "mad_m": 1.41,
+      "dH_median_m": -1.14,
+      "location": "Кронштадт"
+    },
+    {
+      "source": "DWG #5 Токсово (СПб-Приозерск)",
+      "n": 54,
+      "mad_m": 0.18,
+      "dH_median_m": 0.16,
+      "location": "Токсово"
+    },
+    {
+      "source": "Passport holdout (40 points, role=holdout)",
+      "n": 40,
+      "mad_m": 1.117870440483093,
+      "dH_median_m": -0.46091314315795806,
+      "location": "city-wide"
+    },
+    {
+      "source": "ICESat per-RGT",
+      "n": 11,
+      "mad_m": 0.7,
+      "dH_median_m": 0.0,
+      "location": "open areas"
+    }
+  ],
+  "aggregate_excluding_passport_icesat": {
+    "n_total": 4450,
+    "mad_m": 1.186139259338379,
+    "dH_median_m": -0.518729286193846,
+    "wilcoxon_p": 1.523985587104505e-79,
+    "sign_test_p": 1.5389835018506177e-53,
+    "bootstrap_ci_95": [
+      -0.5907821575911019,
+      -0.451845016479492
+    ]
+  },
+  "GRAND_TOTAL": {
+    "n_total_all_sources": 4490,
+    "n_total_excluding_icesat": 4490,
+    "sources": [
+      {
+        "name": "archi.ru 514913 VLM v2",
+        "n": 175,
+        "mad_m": 0.42,
+        "dH_median_m": 0.36,
+        "location": "Дунайский 27, Гавань"
+      },
+      {
+        "name": "DWG v2 (5 surveys)",
+        "n": 4275,
+        "mad_m": 1.26,
+        "dH_median_m": -0.61,
+        "location": "5 sites SPb+LO"
+      },
+      {
+        "name": "Passport holdout",
+        "n": 40,
+        "mad_m": 1.117870440483093,
+        "dH_median_m": -0.46091314315795806,
+        "location": "city-wide"
+      },
+      {
+        "name": "ICESat per-RGT",
+        "n": 11,
+        "mad_m": 0.7,
+        "dH_median_m": 0.0,
+        "location": "open areas (per-RGT not per-point)"
+      }
+    ]
+  }
+}
