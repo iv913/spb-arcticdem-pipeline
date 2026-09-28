@@ -2,3 +2,5 @@ skills/
 node_modules/
 scripts/dem_cache/raw_4326.tif
 scripts/dem_cache/
+scripts/dem_cache/raw_dem_4326.tif
+scripts/dem_cache/raw_4326.tif
