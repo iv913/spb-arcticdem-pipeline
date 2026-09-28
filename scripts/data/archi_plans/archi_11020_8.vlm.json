@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\"category\":\"photo\",\"marks\":[]}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1790601877,
+  "id": "20260928212436b053af9ab38a4629",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260928212436b053af9ab38a4629",
+  "usage": {
+    "completion_tokens": 14,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 250,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 264
+  }
+}

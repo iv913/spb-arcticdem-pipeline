@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "```json\n{\n  \"category\": \"architectural_plan\",\n  \"marks\": []\n}\n```",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1790601914,
+  "id": "20260928212514bb0eef97b40c445c",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20260928212514bb0eef97b40c445c",
+  "usage": {
+    "completion_tokens": 22,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 810,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 832
+  }
+}

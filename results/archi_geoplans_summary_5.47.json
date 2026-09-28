@@ -1,0 +1,235 @@
+[
+ {
+  "img": "434384.jpg",
+  "n_marks": 4,
+  "n_ground": 4,
+  "streets": [],
+  "proj_lat": 59.924408,
+  "proj_lon": 30.275709,
+  "marks_ground": 4,
+  "median_mark": 1.5,
+  "min": 1.0,
+  "max": 2.0,
+  "glo30_at_site": 6.67,
+  "datum_dH_glo30": 5.17
+ },
+ {
+  "img": "465048.jpg",
+  "n_marks": 0,
+  "n_ground": 0,
+  "streets": [
+   "Приморское шоссе"
+  ],
+  "proj_lat": 60.149544,
+  "proj_lon": 29.932849,
+  "marks_ground": 0,
+  "glo30_at_site": 22.41
+ },
+ {
+  "img": "465070.jpg",
+  "n_marks": 5,
+  "n_ground": 2,
+  "streets": [],
+  "proj_lat": 60.149544,
+  "proj_lon": 29.932849,
+  "marks_ground": 1,
+  "median_mark": 4.95,
+  "min": 4.95,
+  "max": 4.95,
+  "glo30_at_site": 22.41,
+  "datum_dH_glo30": 17.46
+ },
+ {
+  "img": "257941.jpg",
+  "n_marks": 10,
+  "n_ground": 10,
+  "streets": [
+   "НЕВСКАЯ ГУБА",
+   "Р. БОЛЬШАЯ НЕВКА",
+   "ГРЕБНОЙ КАНАЛ"
+  ],
+  "proj_lat": 59.97744,
+  "proj_lon": 30.22829,
+  "marks_ground": 10,
+  "median_mark": 3.45,
+  "min": 3.1,
+  "max": 3.9,
+  "consistency_median_m": 0.1,
+  "n_pairs": 5,
+  "glo30_at_site": 4.77,
+  "datum_dH_glo30": 1.32
+ },
+ {
+  "img": "314154.jpg",
+  "n_marks": 77,
+  "n_ground": 77,
+  "streets": [],
+  "proj_lat": 59.87234,
+  "proj_lon": 30.469802,
+  "marks_ground": 77,
+  "median_mark": 5.96,
+  "min": 4.47,
+  "max": 7.83,
+  "consistency_median_m": 0.12,
+  "n_pairs": 43,
+  "glo30_at_site": 7.92,
+  "datum_dH_glo30": 1.96
+ },
+ {
+  "img": "317703.jpg",
+  "n_marks": 3,
+  "n_ground": 2,
+  "streets": [
+   "Проспект Энгельса",
+   "Северный Проспект"
+  ],
+  "proj_lat": 60.030858,
+  "proj_lon": 30.320734,
+  "marks_ground": 2,
+  "median_mark": 7.92,
+  "min": 2.0,
+  "max": 13.83,
+  "glo30_at_site": 45.29,
+  "datum_dH_glo30": 37.37
+ },
+ {
+  "img": "422695.jpg",
+  "n_marks": 17,
+  "n_ground": 17,
+  "streets": [
+   "Галерная набережная",
+   "Невская набережная",
+   "Средний проспект",
+   "Средне-Гаванский проспект",
+   "пр. Морской",
+   "Большой проспект",
+   "Шкиперский проток"
+  ],
+  "proj_lat": 59.930571,
+  "proj_lon": 30.234707,
+  "marks_ground": 17,
+  "median_mark": 10.9,
+  "min": 1.2,
+  "max": 32.3,
+  "consistency_median_m": 1.1,
+  "n_pairs": 3,
+  "glo30_at_site": 5.0,
+  "datum_dH_glo30": -5.9
+ },
+ {
+  "img": "424159.jpg",
+  "n_marks": 6,
+  "n_ground": 1,
+  "streets": [
+   "ДНЕПРОПЕТРОВСКАЯ УЛ.",
+   "КУРСКАЯ УЛ.",
+   "ТАМБОВСКАЯ УЛ."
+  ],
+  "proj_lat": 59.931591,
+  "proj_lon": 30.378868,
+  "marks_ground": 0,
+  "glo30_at_site": 9.35
+ },
+ {
+  "img": "428282.jpg",
+  "n_marks": 2,
+  "n_ground": 0,
+  "streets": [],
+  "proj_lat": 59.947769,
+  "proj_lon": 30.384216,
+  "marks_ground": 0,
+  "glo30_at_site": 10.68
+ },
+ {
+  "img": "448114.jpg",
+  "n_marks": 43,
+  "n_ground": 43,
+  "streets": [
+   "Румяновская улица",
+   "р. Утка"
+  ],
+  "proj_lat": 59.864641,
+  "proj_lon": 30.502834,
+  "marks_ground": 43,
+  "median_mark": 2.0,
+  "min": 0.5,
+  "max": 9.9,
+  "consistency_median_m": 1.1,
+  "n_pairs": 28,
+  "glo30_at_site": 6.69,
+  "datum_dH_glo30": 4.69
+ },
+ {
+  "img": "456577.jpg",
+  "n_marks": 41,
+  "n_ground": 37,
+  "streets": [
+   "КАНАЛ ГРИБОЕДОВА"
+  ],
+  "proj_lat": 59.921389,
+  "proj_lon": 30.287699,
+  "marks_ground": 37,
+  "median_mark": 3.67,
+  "min": 2.7,
+  "max": 4.2,
+  "consistency_median_m": 0.15,
+  "n_pairs": 35,
+  "glo30_at_site": 17.48,
+  "datum_dH_glo30": 13.81
+ },
+ {
+  "img": "456598.jpg",
+  "n_marks": 3,
+  "n_ground": 0,
+  "streets": [],
+  "proj_lat": 59.921389,
+  "proj_lon": 30.287699,
+  "marks_ground": 0,
+  "glo30_at_site": 17.48
+ },
+ {
+  "img": "456638.jpg",
+  "n_marks": 4,
+  "n_ground": 4,
+  "streets": [
+   "СТАРОРУССКАЯ УЛ.",
+   "ПРОСП. БАКУНИНА",
+   "ПЕРЕВАЛОЧНАЯ УЛ."
+  ],
+  "proj_lat": 59.931591,
+  "proj_lon": 30.378868,
+  "marks_ground": 4,
+  "median_mark": 2.25,
+  "min": 2.1,
+  "max": 2.4,
+  "glo30_at_site": 9.35,
+  "datum_dH_glo30": 7.1
+ },
+ {
+  "img": "483622.jpg",
+  "n_marks": 0,
+  "n_ground": 0,
+  "streets": [
+   "УЛИЦА КРАСНОГО ТЕКСТИЛЬЩИКА",
+   "СПАССКАЯ НАБЕРЕЖНАЯ",
+   "УЛИЦА МОИСЕЕНКО"
+  ],
+  "proj_lat": null,
+  "proj_lon": null,
+  "marks_ground": 0
+ },
+ {
+  "img": "493731.jpg",
+  "n_marks": 9,
+  "n_ground": 9,
+  "streets": [],
+  "proj_lat": 59.850605,
+  "proj_lon": 30.30464,
+  "marks_ground": 9,
+  "median_mark": 4.13,
+  "min": 2.74,
+  "max": 9.73,
+  "glo30_at_site": 11.53,
+  "datum_dH_glo30": 7.4
+ }
+]

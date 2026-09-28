@@ -1,0 +1,12 @@
+{
+ "n_marks": 156,
+ "n_pairs_30m": 1128,
+ "consistency_median_m": 0.19,
+ "consistency_p90_m": 1.073,
+ "glo30_n": 156,
+ "glo30_median_dH": 0.57,
+ "glo30_MAD_m": 0.731,
+ "peer_model_n": 71,
+ "peer_model_median_dH": -0.17,
+ "peer_model_MAD_m": 0.308
+}

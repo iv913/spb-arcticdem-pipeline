@@ -1,0 +1,6139 @@
+[
+ {
+  "img": "archi_11000_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_10.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.187,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_11.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_12.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_4.png",
+  "size": [
+   650,
+   492
+  ],
+  "white_frac": 0.054,
+  "edge_frac": 0.232,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_7.png",
+  "size": [
+   650,
+   1022
+  ],
+  "white_frac": 0.009,
+  "edge_frac": 0.179,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11000_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_1.png",
+  "size": [
+   650,
+   433
+  ],
+  "white_frac": 0.014,
+  "edge_frac": 0.108,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_6.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.017,
+  "edge_frac": 0.094,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11001_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_1.png",
+  "size": [
+   650,
+   424
+  ],
+  "white_frac": 0.541,
+  "edge_frac": 0.112,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_12.png",
+  "size": [
+   650,
+   461
+  ],
+  "white_frac": 0.212,
+  "edge_frac": 0.123,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_13.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_5.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_6.png",
+  "size": [
+   650,
+   387
+  ],
+  "white_frac": 0.736,
+  "edge_frac": 0.212,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_7.png",
+  "size": [
+   650,
+   515
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.09,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11002_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_0.png",
+  "size": [
+   650,
+   465
+  ],
+  "white_frac": 0.029,
+  "edge_frac": 0.038,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_5.png",
+  "size": [
+   650,
+   468
+  ],
+  "white_frac": 0.024,
+  "edge_frac": 0.081,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11003_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_11.png",
+  "size": [
+   650,
+   406
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.102,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_3.png",
+  "size": [
+   650,
+   430
+  ],
+  "white_frac": 0.011,
+  "edge_frac": 0.065,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11004_9.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_1.png",
+  "size": [
+   650,
+   430
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.082,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_6.png",
+  "size": [
+   650,
+   448
+  ],
+  "white_frac": 0.007,
+  "edge_frac": 0.078,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11005_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_10.png",
+  "size": [
+   650,
+   406
+  ],
+  "white_frac": 0.028,
+  "edge_frac": 0.166,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_4.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_6.png",
+  "size": [
+   650,
+   433
+  ],
+  "white_frac": 0.052,
+  "edge_frac": 0.12,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11006_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_1.png",
+  "size": [
+   650,
+   450
+  ],
+  "white_frac": 0.054,
+  "edge_frac": 0.179,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11007_9.png",
+  "size": [
+   650,
+   430
+  ],
+  "white_frac": 0.009,
+  "edge_frac": 0.125,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_0.png",
+  "size": [
+   650,
+   447
+  ],
+  "white_frac": 0.025,
+  "edge_frac": 0.127,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_7.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.029,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11008_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_4.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_11020_9.png",
+  "size": [
+   650,
+   430
+  ],
+  "white_frac": 0.007,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_4.png",
+  "size": [
+   650,
+   494
+  ],
+  "white_frac": 0.179,
+  "edge_frac": 0.074,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_7.png",
+  "size": [
+   650,
+   360
+  ],
+  "white_frac": 0.213,
+  "edge_frac": 0.116,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_15000_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21070_0.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.052,
+  "edge_frac": 0.082,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21070_1.png",
+  "size": [
+   650,
+   485
+  ],
+  "white_frac": 0.024,
+  "edge_frac": 0.108,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_1.png",
+  "size": [
+   650,
+   909
+  ],
+  "white_frac": 0.036,
+  "edge_frac": 0.06,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_10.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_11.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_12.png",
+  "size": [
+   650,
+   909
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.031,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_5.png",
+  "size": [
+   650,
+   909
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.02,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_21120_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_333500.png",
+  "size": [
+   1200,
+   849
+  ],
+  "white_frac": 0.147,
+  "edge_frac": 0.163,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_361000.png",
+  "size": [
+   2500,
+   1316
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.117,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_393000.png",
+  "size": [
+   800,
+   450
+  ],
+  "white_frac": 0.144,
+  "edge_frac": 0.236,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_401000.png",
+  "size": [
+   2500,
+   2500
+  ],
+  "white_frac": 0.222,
+  "edge_frac": 0.064,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_464000.png",
+  "size": [
+   2300,
+   2300
+  ],
+  "white_frac": 0.788,
+  "edge_frac": 0.04,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_473500.png",
+  "size": [
+   1912,
+   1030
+  ],
+  "white_frac": 0.358,
+  "edge_frac": 0.091,
+  "planish": false,
+  "n_marks": 4,
+  "vals": [
+   4.0,
+   4.3,
+   51.1,
+   61.1
+  ],
+  "marks": [
+   {
+    "val": 4.3,
+    "x": 1430,
+    "y": 700,
+    "w": 31,
+    "h": 18,
+    "conf": "82.039818",
+    "pass": "up2x"
+   },
+   {
+    "val": 51.1,
+    "x": 1336,
+    "y": 886,
+    "w": 21,
+    "h": 9,
+    "conf": "81.762810",
+    "pass": "psm6"
+   },
+   {
+    "val": 61.1,
+    "x": 1336,
+    "y": 886,
+    "w": 41,
+    "h": 18,
+    "conf": "74.756706",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.0,
+    "x": 1459,
+    "y": 700,
+    "w": 31,
+    "h": 18,
+    "conf": "66.551056",
+    "pass": "up2x"
+   }
+  ]
+ },
+ {
+  "img": "archi_475400.png",
+  "size": [
+   960,
+   1280
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.065,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_477600.png",
+  "error": "image file is truncated"
+ },
+ {
+  "img": "archi_483700.png",
+  "size": [
+   2274,
+   1510
+  ],
+  "white_frac": 0.051,
+  "edge_frac": 0.026,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_484800.png",
+  "size": [
+   2274,
+   1706
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.047,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_486300.png",
+  "size": [
+   2274,
+   1274
+  ],
+  "white_frac": 0.014,
+  "edge_frac": 0.063,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_488600.png",
+  "size": [
+   1500,
+   388
+  ],
+  "white_frac": 0.043,
+  "edge_frac": 0.09,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_490500.png",
+  "size": [
+   1794,
+   2394
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.04,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_491200.png",
+  "size": [
+   2318,
+   1412
+  ],
+  "white_frac": 0.455,
+  "edge_frac": 0.123,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   23.4
+  ],
+  "marks": [
+   {
+    "val": 23.4,
+    "x": 625,
+    "y": 407,
+    "w": 72,
+    "h": 12,
+    "conf": "5.945702",
+    "pass": "psm6"
+   }
+  ]
+ },
+ {
+  "img": "archi_492100.png",
+  "size": [
+   2500,
+   1364
+  ],
+  "white_frac": 0.871,
+  "edge_frac": 0.053,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   3.2
+  ],
+  "marks": [
+   {
+    "val": 3.2,
+    "x": 358,
+    "y": 585,
+    "w": 78,
+    "h": 27,
+    "conf": "14.009293",
+    "pass": "psm6"
+   }
+  ]
+ },
+ {
+  "img": "archi_494700.png",
+  "size": [
+   2500,
+   1494
+  ],
+  "white_frac": 0.87,
+  "edge_frac": 0.109,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   3.6
+  ],
+  "marks": [
+   {
+    "val": 3.6,
+    "x": 1940,
+    "y": 922,
+    "w": 36,
+    "h": 30,
+    "conf": "91.080109",
+    "pass": "up2x"
+   }
+  ]
+ },
+ {
+  "img": "archi_497500.png",
+  "size": [
+   1536,
+   1024
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.101,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_497700.png",
+  "size": [
+   2500,
+   978
+  ],
+  "white_frac": 0.563,
+  "edge_frac": 0.033,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_497900.png",
+  "size": [
+   2500,
+   1204
+  ],
+  "white_frac": 0.794,
+  "edge_frac": 0.072,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   6.6
+  ],
+  "marks": [
+   {
+    "val": 6.6,
+    "x": 261,
+    "y": 995,
+    "w": 46,
+    "h": 32,
+    "conf": "60.970890",
+    "pass": "up2x"
+   }
+  ]
+ },
+ {
+  "img": "archi_498300.png",
+  "size": [
+   2396,
+   1594
+  ],
+  "white_frac": 0.041,
+  "edge_frac": 0.015,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_498900.png",
+  "size": [
+   2122,
+   1164
+  ],
+  "white_frac": 0.118,
+  "edge_frac": 0.031,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_508900.png",
+  "size": [
+   1500,
+   2000
+  ],
+  "white_frac": 0.963,
+  "edge_frac": 0.038,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_510160.png",
+  "size": [
+   2500,
+   1126
+  ],
+  "white_frac": 0.719,
+  "edge_frac": 0.069,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_510220.png",
+  "size": [
+   2500,
+   1406
+  ],
+  "white_frac": 0.007,
+  "edge_frac": 0.114,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_510420.png",
+  "size": [
+   1649,
+   2500
+  ],
+  "white_frac": 0.096,
+  "edge_frac": 0.111,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_511000.png",
+  "size": [
+   856,
+   510
+  ],
+  "white_frac": 0.009,
+  "edge_frac": 0.049,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_511200.png",
+  "size": [
+   2500,
+   1406
+  ],
+  "white_frac": 0.515,
+  "edge_frac": 0.038,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_511220.png",
+  "size": [
+   2500,
+   1406
+  ],
+  "white_frac": 0.755,
+  "edge_frac": 0.076,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_511900.png",
+  "size": [
+   1680,
+   945
+  ],
+  "white_frac": 0.698,
+  "edge_frac": 0.055,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   4.5
+  ],
+  "marks": [
+   {
+    "val": 4.5,
+    "x": 1041,
+    "y": 349,
+    "w": 38,
+    "h": 34,
+    "conf": "39.065224",
+    "pass": "psm11"
+   }
+  ]
+ },
+ {
+  "img": "archi_512480.png",
+  "size": [
+   1430,
+   656
+  ],
+  "white_frac": 0.917,
+  "edge_frac": 0.032,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_513820.png",
+  "size": [
+   2458,
+   2066
+  ],
+  "white_frac": 0.306,
+  "edge_frac": 0.047,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_513820.png.up2x.png",
+  "error": "[Errno 2] No such file or directory: '/home/z/my-project/spb45/scripts/data/archi_plans/archi_513820.png.up2x.png'"
+ },
+ {
+  "img": "archi_513940.png",
+  "size": [
+   1600,
+   1067
+  ],
+  "white_frac": 0.017,
+  "edge_frac": 0.064,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514800.png",
+  "size": [
+   2500,
+   1593
+  ],
+  "white_frac": 0.734,
+  "edge_frac": 0.145,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514912.png",
+  "size": [
+   2500,
+   1626
+  ],
+  "white_frac": 0.008,
+  "edge_frac": 0.179,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514913.png",
+  "size": [
+   2500,
+   1871
+  ],
+  "white_frac": 0.81,
+  "edge_frac": 0.113,
+  "planish": true,
+  "n_marks": 28,
+  "vals": [
+   2.5,
+   3.85,
+   4.0,
+   4.08,
+   4.22,
+   4.31,
+   4.46,
+   5.97,
+   7.0,
+   12.9,
+   13.04,
+   13.18,
+   13.74,
+   13.83,
+   13.85,
+   14.08,
+   14.13,
+   14.2,
+   14.29,
+   14.31,
+   14.39,
+   14.58,
+   15.97,
+   43.78,
+   43.79,
+   43.82,
+   43.85,
+   44.63
+  ],
+  "marks": [
+   {
+    "val": 14.2,
+    "x": 273,
+    "y": 557,
+    "w": 64,
+    "h": 24,
+    "conf": "96.193794",
+    "pass": "up2x"
+   },
+   {
+    "val": 12.9,
+    "x": 160,
+    "y": 417,
+    "w": 50,
+    "h": 43,
+    "conf": "93.905884",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.31,
+    "x": 1012,
+    "y": 484,
+    "w": 58,
+    "h": 22,
+    "conf": "90.064430",
+    "pass": "up2x"
+   },
+   {
+    "val": 43.82,
+    "x": 570,
+    "y": 178,
+    "w": 61,
+    "h": 36,
+    "conf": "89.176994",
+    "pass": "up2x"
+   },
+   {
+    "val": 43.79,
+    "x": 876,
+    "y": 128,
+    "w": 58,
+    "h": 35,
+    "conf": "88.766983",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.29,
+    "x": 1246,
+    "y": 1346,
+    "w": 63,
+    "h": 24,
+    "conf": "88.113571",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.85,
+    "x": 970,
+    "y": 99,
+    "w": 61,
+    "h": 35,
+    "conf": "87.151070",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.0,
+    "x": 289,
+    "y": 644,
+    "w": 36,
+    "h": 18,
+    "conf": "85.167030",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.13,
+    "x": 289,
+    "y": 533,
+    "w": 22,
+    "h": 11,
+    "conf": "84.823692",
+    "pass": "psm11"
+   },
+   {
+    "val": 43.85,
+    "x": 431,
+    "y": 217,
+    "w": 30,
+    "h": 19,
+    "conf": "84.313278",
+    "pass": "psm11"
+   },
+   {
+    "val": 14.08,
+    "x": 400,
+    "y": 425,
+    "w": 32,
+    "h": 11,
+    "conf": "84.063843",
+    "pass": "psm11"
+   },
+   {
+    "val": 4.08,
+    "x": 1004,
+    "y": 224,
+    "w": 57,
+    "h": 24,
+    "conf": "81.535614",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.22,
+    "x": 1017,
+    "y": 941,
+    "w": 65,
+    "h": 23,
+    "conf": "80.816307",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.39,
+    "x": 514,
+    "y": 492,
+    "w": 64,
+    "h": 23,
+    "conf": "79.705658",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.46,
+    "x": 559,
+    "y": 511,
+    "w": 65,
+    "h": 24,
+    "conf": "79.450920",
+    "pass": "up2x"
+   },
+   {
+    "val": 15.97,
+    "x": 558,
+    "y": 367,
+    "w": 23,
+    "h": 9,
+    "conf": "78.839226",
+    "pass": "psm11"
+   },
+   {
+    "val": 44.63,
+    "x": 634,
+    "y": 1668,
+    "w": 61,
+    "h": 38,
+    "conf": "77.924561",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.74,
+    "x": 159,
+    "y": 479,
+    "w": 60,
+    "h": 24,
+    "conf": "77.250694",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.83,
+    "x": 430,
+    "y": 217,
+    "w": 61,
+    "h": 37,
+    "conf": "76.684814",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.04,
+    "x": 224,
+    "y": 259,
+    "w": 61,
+    "h": 37,
+    "conf": "75.550781",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.18,
+    "x": 131,
+    "y": 352,
+    "w": 30,
+    "h": 17,
+    "conf": "73.294380",
+    "pass": "psm11"
+   },
+   {
+    "val": 43.78,
+    "x": 131,
+    "y": 352,
+    "w": 59,
+    "h": 35,
+    "conf": "71.344238",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.58,
+    "x": 772,
+    "y": 1435,
+    "w": 71,
+    "h": 24,
+    "conf": "63.165073",
+    "pass": "up2x"
+   },
+   {
+    "val": 7.0,
+    "x": 509,
+    "y": 376,
+    "w": 25,
+    "h": 9,
+    "conf": "62.166931",
+    "pass": "psm11"
+   },
+   {
+    "val": 3.85,
+    "x": 970,
+    "y": 99,
+    "w": 31,
+    "h": 18,
+    "conf": "60.104519",
+    "pass": "psm11"
+   },
+   {
+    "val": 4.31,
+    "x": 1013,
+    "y": 484,
+    "w": 28,
+    "h": 11,
+    "conf": "58.709686",
+    "pass": "psm11"
+   },
+   {
+    "val": 2.5,
+    "x": 1035,
+    "y": 776,
+    "w": 64,
+    "h": 47,
+    "conf": "56.382698",
+    "pass": "up2x"
+   },
+   {
+    "val": 5.97,
+    "x": 558,
+    "y": 367,
+    "w": 47,
+    "h": 18,
+    "conf": "42.757816",
+    "pass": "up2x"
+   }
+  ]
+ },
+ {
+  "img": "archi_514914.png",
+  "size": [
+   2500,
+   1626
+  ],
+  "white_frac": 0.032,
+  "edge_frac": 0.109,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514915.png",
+  "size": [
+   2500,
+   1628
+  ],
+  "white_frac": 0.06,
+  "edge_frac": 0.113,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514916.png",
+  "size": [
+   2500,
+   1626
+  ],
+  "white_frac": 0.012,
+  "edge_frac": 0.066,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_514920.png",
+  "size": [
+   2500,
+   1624
+  ],
+  "white_frac": 0.059,
+  "edge_frac": 0.11,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_515750.png",
+  "size": [
+   1999,
+   786
+  ],
+  "white_frac": 0.541,
+  "edge_frac": 0.176,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_515760.png",
+  "size": [
+   2500,
+   1435
+  ],
+  "white_frac": 0.012,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_515780.png",
+  "size": [
+   1176,
+   1582
+  ],
+  "white_frac": 0.009,
+  "edge_frac": 0.081,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_515820.png",
+  "size": [
+   2500,
+   1407
+  ],
+  "white_frac": 0.16,
+  "edge_frac": 0.034,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_515850.png",
+  "size": [
+   2500,
+   1667
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.058,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_516050.png",
+  "size": [
+   2500,
+   1455
+  ],
+  "white_frac": 0.166,
+  "edge_frac": 0.046,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_516060.png",
+  "size": [
+   2500,
+   1406
+  ],
+  "white_frac": 0.763,
+  "edge_frac": 0.024,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_0.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.002,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.495,
+  "edge_frac": 0.281,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_11.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.061,
+  "edge_frac": 0.11,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_12.png",
+  "size": [
+   420,
+   300
+  ],
+  "white_frac": 0.035,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_13.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.079,
+  "edge_frac": 0.21,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.195,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_4.png",
+  "size": [
+   650,
+   508
+  ],
+  "white_frac": 0.099,
+  "edge_frac": 0.201,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.006,
+  "edge_frac": 0.311,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_6.png",
+  "size": [
+   649,
+   701
+  ],
+  "white_frac": 0.838,
+  "edge_frac": 0.153,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.004,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_8.png",
+  "size": [
+   650,
+   484
+  ],
+  "white_frac": 0.761,
+  "edge_frac": 0.195,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "archi_7000_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.143,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "dunaisky_514913.png",
+  "size": [
+   2500,
+   1871
+  ],
+  "white_frac": 0.81,
+  "edge_frac": 0.113,
+  "planish": true,
+  "n_marks": 28,
+  "vals": [
+   2.5,
+   3.85,
+   4.0,
+   4.08,
+   4.22,
+   4.31,
+   4.46,
+   5.97,
+   7.0,
+   12.9,
+   13.04,
+   13.18,
+   13.74,
+   13.83,
+   13.85,
+   14.08,
+   14.13,
+   14.2,
+   14.29,
+   14.31,
+   14.39,
+   14.58,
+   15.97,
+   43.78,
+   43.79,
+   43.82,
+   43.85,
+   44.63
+  ],
+  "marks": [
+   {
+    "val": 14.2,
+    "x": 273,
+    "y": 557,
+    "w": 64,
+    "h": 24,
+    "conf": "96.193794",
+    "pass": "up2x"
+   },
+   {
+    "val": 12.9,
+    "x": 160,
+    "y": 417,
+    "w": 50,
+    "h": 43,
+    "conf": "93.905884",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.31,
+    "x": 1012,
+    "y": 484,
+    "w": 58,
+    "h": 22,
+    "conf": "90.064430",
+    "pass": "up2x"
+   },
+   {
+    "val": 43.82,
+    "x": 570,
+    "y": 178,
+    "w": 61,
+    "h": 36,
+    "conf": "89.176994",
+    "pass": "up2x"
+   },
+   {
+    "val": 43.79,
+    "x": 876,
+    "y": 128,
+    "w": 58,
+    "h": 35,
+    "conf": "88.766983",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.29,
+    "x": 1246,
+    "y": 1346,
+    "w": 63,
+    "h": 24,
+    "conf": "88.113571",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.85,
+    "x": 970,
+    "y": 99,
+    "w": 61,
+    "h": 35,
+    "conf": "87.151070",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.0,
+    "x": 289,
+    "y": 644,
+    "w": 36,
+    "h": 18,
+    "conf": "85.167030",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.13,
+    "x": 289,
+    "y": 533,
+    "w": 22,
+    "h": 11,
+    "conf": "84.823692",
+    "pass": "psm11"
+   },
+   {
+    "val": 43.85,
+    "x": 431,
+    "y": 217,
+    "w": 30,
+    "h": 19,
+    "conf": "84.313278",
+    "pass": "psm11"
+   },
+   {
+    "val": 14.08,
+    "x": 400,
+    "y": 425,
+    "w": 32,
+    "h": 11,
+    "conf": "84.063843",
+    "pass": "psm11"
+   },
+   {
+    "val": 4.08,
+    "x": 1004,
+    "y": 224,
+    "w": 57,
+    "h": 24,
+    "conf": "81.535614",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.22,
+    "x": 1017,
+    "y": 941,
+    "w": 65,
+    "h": 23,
+    "conf": "80.816307",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.39,
+    "x": 514,
+    "y": 492,
+    "w": 64,
+    "h": 23,
+    "conf": "79.705658",
+    "pass": "up2x"
+   },
+   {
+    "val": 4.46,
+    "x": 559,
+    "y": 511,
+    "w": 65,
+    "h": 24,
+    "conf": "79.450920",
+    "pass": "up2x"
+   },
+   {
+    "val": 15.97,
+    "x": 558,
+    "y": 367,
+    "w": 23,
+    "h": 9,
+    "conf": "78.839226",
+    "pass": "psm11"
+   },
+   {
+    "val": 44.63,
+    "x": 634,
+    "y": 1668,
+    "w": 61,
+    "h": 38,
+    "conf": "77.924561",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.74,
+    "x": 159,
+    "y": 479,
+    "w": 60,
+    "h": 24,
+    "conf": "77.250694",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.83,
+    "x": 430,
+    "y": 217,
+    "w": 61,
+    "h": 37,
+    "conf": "76.684814",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.04,
+    "x": 224,
+    "y": 259,
+    "w": 61,
+    "h": 37,
+    "conf": "75.550781",
+    "pass": "up2x"
+   },
+   {
+    "val": 13.18,
+    "x": 131,
+    "y": 352,
+    "w": 30,
+    "h": 17,
+    "conf": "73.294380",
+    "pass": "psm11"
+   },
+   {
+    "val": 43.78,
+    "x": 131,
+    "y": 352,
+    "w": 59,
+    "h": 35,
+    "conf": "71.344238",
+    "pass": "up2x"
+   },
+   {
+    "val": 14.58,
+    "x": 772,
+    "y": 1435,
+    "w": 71,
+    "h": 24,
+    "conf": "63.165073",
+    "pass": "up2x"
+   },
+   {
+    "val": 7.0,
+    "x": 509,
+    "y": 376,
+    "w": 25,
+    "h": 9,
+    "conf": "62.166931",
+    "pass": "psm11"
+   },
+   {
+    "val": 3.85,
+    "x": 970,
+    "y": 99,
+    "w": 31,
+    "h": 18,
+    "conf": "60.104519",
+    "pass": "psm11"
+   },
+   {
+    "val": 4.31,
+    "x": 1013,
+    "y": 484,
+    "w": 28,
+    "h": 11,
+    "conf": "58.709686",
+    "pass": "psm11"
+   },
+   {
+    "val": 2.5,
+    "x": 1035,
+    "y": 776,
+    "w": 64,
+    "h": 47,
+    "conf": "56.382698",
+    "pass": "up2x"
+   },
+   {
+    "val": 5.97,
+    "x": 558,
+    "y": 367,
+    "w": 47,
+    "h": 18,
+    "conf": "42.757816",
+    "pass": "up2x"
+   }
+  ]
+ },
+ {
+  "img": "dunaisky_514914.png",
+  "size": [
+   2500,
+   1626
+  ],
+  "white_frac": 0.032,
+  "edge_frac": 0.109,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "dunaisky_514915.png",
+  "size": [
+   2500,
+   1628
+  ],
+  "white_frac": 0.06,
+  "edge_frac": 0.113,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "dunaisky_514916.png",
+  "size": [
+   2500,
+   1626
+  ],
+  "white_frac": 0.012,
+  "edge_frac": 0.066,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_16034_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_16034_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_16034_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_16034_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_16034_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17153_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17153_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17153_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17153_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17153_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17893_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17893_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17893_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17893_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_17893_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18132_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18132_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18132_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18132_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18132_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18569_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18569_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18569_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18569_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18569_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18913_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18913_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18913_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18913_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_18913_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19715_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19715_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19715_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19715_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19715_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19943_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19943_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19943_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19943_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_19943_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_20516_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_20516_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_20516_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_20516_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_20516_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21359_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21359_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21359_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21359_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21359_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21383_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21383_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21383_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21383_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_21383_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_6887_1.png",
+  "size": [
+   280,
+   280
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_6887_1.png.up2x.png",
+  "error": "[Errno 2] No such file or directory: '/home/z/my-project/spb45/scripts/data/archi_plans/plan_6887_1.png.up2x.png'"
+ },
+ {
+  "img": "plan_6887_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.022,
+  "edge_frac": 0.2,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_6887_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.001,
+  "edge_frac": 0.144,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_6887_4.png",
+  "size": [
+   420,
+   266
+  ],
+  "white_frac": 0.411,
+  "edge_frac": 0.161,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "plan_6887_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.147,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_16034_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_2.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.02,
+  "edge_frac": 0.225,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17153_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_17893_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18132_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18569_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_2.png",
+  "size": [
+   650,
+   487
+  ],
+  "white_frac": 0.05,
+  "edge_frac": 0.145,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_18913_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19715_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_19943_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_20516_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21050_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21060_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21359_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_21383_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_1.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.123,
+  "edge_frac": 0.244,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_10.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.104,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_2.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.073,
+  "edge_frac": 0.203,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_3.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.121,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_4.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.018,
+  "edge_frac": 0.198,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_5.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.196,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_6.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.126,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_7.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.005,
+  "edge_frac": 0.141,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_8.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.103,
+  "edge_frac": 0.112,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "proj_6887_9.png",
+  "size": [
+   80,
+   80
+  ],
+  "white_frac": 0.233,
+  "edge_frac": 0.204,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_511000.png",
+  "size": [
+   856,
+   510
+  ],
+  "white_frac": 0.009,
+  "edge_frac": 0.049,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_511200.png",
+  "size": [
+   2500,
+   1406
+  ],
+  "white_frac": 0.515,
+  "edge_frac": 0.038,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_511900.png",
+  "size": [
+   1680,
+   945
+  ],
+  "white_frac": 0.698,
+  "edge_frac": 0.055,
+  "planish": true,
+  "n_marks": 1,
+  "vals": [
+   4.5
+  ],
+  "marks": [
+   {
+    "val": 4.5,
+    "x": 1041,
+    "y": 349,
+    "w": 38,
+    "h": 34,
+    "conf": "39.065224",
+    "pass": "psm11"
+   }
+  ]
+ },
+ {
+  "img": "scan_514800.png",
+  "size": [
+   2500,
+   1593
+  ],
+  "white_frac": 0.734,
+  "edge_frac": 0.145,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_515750.png",
+  "size": [
+   1999,
+   786
+  ],
+  "white_frac": 0.541,
+  "edge_frac": 0.176,
+  "planish": true,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_515850.png",
+  "size": [
+   2500,
+   1667
+  ],
+  "white_frac": 0.0,
+  "edge_frac": 0.058,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_516050.png",
+  "size": [
+   2500,
+   1455
+  ],
+  "white_frac": 0.166,
+  "edge_frac": 0.046,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ },
+ {
+  "img": "scan_516350.png",
+  "size": [
+   2500,
+   1403
+  ],
+  "white_frac": 0.356,
+  "edge_frac": 0.148,
+  "planish": false,
+  "n_marks": 0,
+  "vals": [],
+  "marks": []
+ }
+]
