@@ -237,10 +237,21 @@ def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 5
     groups = json.load(open(f"{REPO}/results/lenobl_groups_all_5.48.json"))
     manifest = json.load(open(MANIFEST)) if os.path.exists(MANIFEST) else {}
-    done_pairs = {m.get("group_base", "") for m in manifest.values()
-                  if m.get("status") == "ok"}
+    done_urls = set()
+    for m in manifest.values():
+        if m.get("status") == "ok":
+            done_urls.update(m.get("files", []))
+            gb = m.get("group_base", "")
+            if gb:
+                b = gb.split("|")[0]
+                t = gb.split("|", 1)[1] if "|" in gb else ""
+                for gg in groups:
+                    if gg["base"] == b and gg["title"][:60].startswith(t[:30]):
+                        done_urls.update(gg["files"])
+            if m.get("url"):
+                done_urls.add(m["url"])
     todo = [g for g in groups if g["mb"] > 0 and
-            (g["base"] + "|" + g["title"][:60]) not in done_pairs]
+            len(set(g["files"]) & done_urls) < max(1, int(0.5 * len(g["files"])))]
     print(f"к обработке: {len(todo)} из {len(groups)}", flush=True)
     for k, g in enumerate(todo[:n], 1):
         print(f"[{k}] {g['mb']:.1f} MB {g['title'][:70]}", flush=True)
@@ -251,6 +262,7 @@ def main():
             rec = {"id": "?", "status": f"error: {str(e)[:80]}",
                    "title": g["title"][:160]}
         rec["group_base"] = g["base"] + "|" + g["title"][:60]
+        rec["files"] = g["files"]
         rec["sec"] = round(time.time() - t0)
         manifest[g["base"] + "|" + str(k)] = rec
         json.dump(manifest, open(MANIFEST, "w", encoding="utf-8"),
