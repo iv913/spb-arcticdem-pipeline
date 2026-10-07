@@ -1,2 +1,7 @@
 skills/
 node_modules/
+
+# 5.7x+ line: тяжёлые кэши вне git
+scripts/dem_cache/
+scripts/data/consensus_dtm_5.71/
+.oss_tmp/

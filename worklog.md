@@ -510,3 +510,19 @@ Next:
 - **Запустить 02b_profile_fusion**: восстановить fused_profile.csv + fusion_qa.json
 - **Снизить target_cover** в choose_block_px с 0.90 до 0.87 → блок 120м станет feasible
 - **Многовременной стек** (драйвер dsm_stack) — главная надежда на снижение MAD <0.54м
+
+---
+Task ID: 5.82-recovery
+Agent: main (Super Z, новая среда zai-web)
+Task: Восстановление состояния 5.76-5.82 в новой среде после утери sandbox-линейки (GitHub содержал только экспорт 5.67).
+
+Work Log:
+- GitHub iv913/spb-arcticdem-pipeline: HEAD d3241d1 «5.67: Full export» — коммиты 5.68-5.82 (1a0f1b9..936aad0) на remote ОТСУТСТВУЮТ; единственный носитель — снапшоты PolarFS/OSS старой среды (недоступны) и лог чата c9c249cc.
+- Извлечено из share-API чата (batch 161 сообщение, ~161 МБ): 809 операций Write/Edit/MultiEdit; реконструкция 393 файлов (784 применено, 24 промаха — только старые файлы map/spb53).
+- В репо восстановлены: полный стек 5.76-5.82 (scripts: strips_recover_5.76, hybrid_2m_5.76, v2_prior_pilot_5.76, strips_zoneA_5.77, strips_crosszone_5.77, v2_prior_zone_5.77, hybrid_crosszone_5.77, diag_*, h5_canopy_gate_5.78, composite_mask_5.79, strips_xzone_leafoff_5.79, adaptive_quantile_5.80, diag_prior_signed_5.80, openoffset_5.81, hybrid_maps_5.82; results: hybrid_2m_5.76, zoneA_verdict_5.77, zoneB_adaptive_5.78, batch_zones_5.79, crosszone_h3_5.77, h5_canopy_gate_5.78, composite_mask_5.79, hybrid_final_5.80-81, hybrid_maps_5.82).
+- Цепочка данных: icesat2_clean.csv восстановлена из icesat2_corrected.csv (GitHub 5.67) фильтром 5.68-C — 33908/36620 точек, точное совпадение с каноном (MAD 0.37, med −0.036, r 0.9994).
+- Впереди регенерация: consensus_dtm_5.71 (FABDEM+GEDTM+GLO-30), mclf_v2_model_5.74.joblib, инвентарь 473 пар (strips_inventory_5.74, STAC).
+
+Stage Summary:
+- Код и протоколы 5.76-5.82 полностью восстановлены и закоммичены; рецепт тиража: leaf-off STAC -> open-offsets (canopy<1м) -> MAD-фильтр -> blend w=clip((1.5-σ)/1,0,1) -> H2 med31(clip±1); правило тиража 5.78: prior train MAD >= 0.45 -> гибрид, иначе prior; стек отбракован -> prior-only.
+- Next: 5.83 — пакетный тираж на 473 пары по density grid (жадные окна 0.10x0.05, n>=6, icesat2_clean >= 150 тчк, исключая 6 готовых зон).
