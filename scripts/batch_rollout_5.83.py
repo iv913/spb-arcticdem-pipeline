@@ -62,8 +62,8 @@ DONE = [
     (30.46, 59.9743, 30.56, 60.0243),  # N2 (5.83, партия 1)
 ]
 WIN_W, WIN_H = 0.10, 0.05
-CITY_BBOX = (29.60, 59.70, 31.10, 60.30)   # СПб + пригороды (Кронштадт,
-# Зеленогорск, Пушкин, Колпино); полное расширение 29.20-31.20 на след. партии
+CITY_BBOX = (29.20, 59.55, 31.20, 60.30)   # полный bbox тиража 5.74
+# (СПб с пригородами: Кронштадт 28.7E, Зеленогорск 60.2N, Пушкин, Колпино)
 DENS_MIN, ICESAT_MIN = 6, 150
 
 os.environ['AWS_NO_SIGN_REQUEST'] = 'YES'
@@ -93,14 +93,26 @@ def glo_tiles_for(bbox):
 
 
 # ---------------------------------------------------------------- density grid
+def done_zones():
+    """Статичные DONE + все зоны из прогресс-журнала (авто-дозагрузка)."""
+    out = [tuple(z) for z in DONE]
+    if PROG.exists():
+        for line in PROG.read_text().splitlines():
+            try:
+                rec = json.loads(line)
+                out.append(tuple(rec['bbox']))
+            except Exception:
+                continue
+    return out
+
+
 def stage_plan():
     import requests
     from shapely.geometry import shape, box
     ic = pd.read_csv(IC_CSV)
     inv = pd.read_csv(HOME / 'results/arcticdem_strips_inventory_5.74.csv')
     inv = inv[inv.scope == 'full']
-    strip_pts = []
-    # плотность стрипов: точки пересечения пар с окнами считаем по STAC один раз
+    # плотность стрипов: окно с >=6 валидными стрипами (STAC, один запрос)
     r = requests.post("https://stac.pgc.umn.edu/api/v1/search", json={
         "collections": ["arcticdem-strips-s2s041-2m"],
         "bbox": list(CITY_BBOX), "limit": 1000}, timeout=180)
@@ -154,7 +166,7 @@ def stage_plan():
                   round(CITY_BBOX[0] + ix * step_x + WIN_W, 4),
                   round(CITY_BBOX[1] + jy * step_y + WIN_H, 4))
             overl = any(not (bb[2] <= x[0] or bb[0] >= x[2] or
-                             bb[3] <= x[1] or bb[1] >= x[3]) for x in DONE)
+                             bb[3] <= x[1] or bb[1] >= x[3]) for x in done_zones())
             if overl:
                 continue
             n_ic = int(I[jy + wn_y, ix + wn_x] - I[jy, ix + wn_x] -
