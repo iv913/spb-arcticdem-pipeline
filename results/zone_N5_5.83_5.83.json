@@ -1,0 +1,45 @@
+{
+ "zone": [
+  29.88,
+  59.9794,
+  29.98,
+  60.0294
+ ],
+ "tag": "N5_5.83",
+ "train_n": 301,
+ "valid_n": 345,
+ "prior": {
+  "train": {
+   "resid_off": 0.004,
+   "mad": 0.045,
+   "p95": 0.271,
+   "n": 301
+  },
+  "holdout": {
+   "resid_off": 0.019,
+   "mad": 0.044,
+   "p95": 0.283,
+   "n": 345
+  }
+ },
+ "H2": {
+  "train": {
+   "resid_off": -0.198,
+   "mad": 0.28,
+   "p95": 1.05,
+   "n": 301
+  },
+  "holdout": {
+   "resid_off": -0.128,
+   "mad": 0.168,
+   "p95": 0.865,
+   "n": 345
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.045,
+  "use_hybrid": false
+ },
+ "product": "prior_v2_30m",
+ "minutes": 1.9
+}
