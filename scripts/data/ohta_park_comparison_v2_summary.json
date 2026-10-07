@@ -1,0 +1,44 @@
+{
+  "source_file": "\u0422\u043e\u043f\u043e\u0433\u0440\u0430\u0444\u0438\u044f-\u041f\u041f\u0438\u041c\u0422-\u041e\u0445\u0442\u0430 \u041f\u0430\u0440\u043a.dwg (ODA-converted, topo_v2)",
+  "n_points_total": 2215,
+  "crs_cm_deg_east": 31.13,
+  "crs_false_easting": 2250000,
+  "crs_false_northing": -6180000,
+  "crs_datum": "Pulkovo 1942 (CK-42)",
+  "lat_range": [
+    59.84384633009262,
+    59.84905866184467
+  ],
+  "lon_range": [
+    30.62521719953921,
+    30.635836326656445
+  ],
+  "lat_center": 59.84594256557317,
+  "lon_center": 30.630968231675798,
+  "survey_z_range": [
+    20.87,
+    55.19
+  ],
+  "survey_z_median": 27.79,
+  "model_z_range": [
+    20.00153923034668,
+    32.31137466430664
+  ],
+  "model_z_median": 29.382646560668945,
+  "dH_median": -0.8410066986083997,
+  "dH_mean": -0.1203467277716298,
+  "dH_std": 3.704068218435665,
+  "abs_dH_mad": 1.6669461822509746,
+  "abs_dH_mean": 2.4303133656521143,
+  "abs_dH_p95": 6.972819618225095,
+  "pct_survey_higher": 0.3580135440180587,
+  "wilcoxon_stat": 918701.0,
+  "wilcoxon_p": 1.2468313617013526e-24,
+  "sign_test_n_pos": 793,
+  "sign_test_n_neg": 1422,
+  "sign_test_p": 3.762946460118855e-41,
+  "bootstrap_median_ci_95": [
+    -0.9426860809326172,
+    -0.7487340545654284
+  ]
+}

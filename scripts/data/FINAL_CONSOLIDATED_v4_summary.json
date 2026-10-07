@@ -1,0 +1,140 @@
+{
+  "methodology": "FINAL CONSOLIDATED VALIDATION — independent sources only",
+  "note": "Excludes Soviet topo (datum mismatch) and circular DWG (height-fit georef)",
+  "sources": [
+    {
+      "source": "Passport holdout",
+      "n": 40,
+      "mad_m": 1.117870440483093,
+      "dH_median_m": -0.46091314315795806,
+      "pearson_r": null,
+      "method": "original split (train+test)",
+      "independent": true,
+      "file": "spb_passport_validation_v11.csv"
+    },
+    {
+      "source": "archi.ru 514913 VLM",
+      "n": 175,
+      "mad_m": 0.4167503356933597,
+      "dH_median_m": 0.36175033569336,
+      "pearson_r": null,
+      "method": "VLM extraction + address lookup",
+      "independent": true,
+      "file": "archi_plans_vlm_FINAL.csv"
+    },
+    {
+      "source": "Отметки.txt (manual extraction, ALL)",
+      "n": 200,
+      "mad_m": 0.9932105493545532,
+      "dH_median_m": 0.21852779388427762,
+      "pearson_r": 0.952,
+      "method": "manual extraction from archi.ru plans",
+      "independent": true,
+      "file": "otmetki_independent.csv"
+    },
+    {
+      "source": "Отметки.txt (central only, lat<60)",
+      "n": 184,
+      "mad_m": 0.9416365289688111,
+      "dH_median_m": 0.03074055194854705,
+      "pearson_r": 0.908,
+      "method": "manual extraction from archi.ru plans",
+      "independent": true,
+      "file": "otmetki_independent.csv"
+    },
+    {
+      "source": "ICESat per-RGT",
+      "n": 11,
+      "mad_m": 0.7,
+      "dH_median_m": 0.0,
+      "pearson_r": null,
+      "method": "satellite laser altimetry, per-track aggregates",
+      "independent": true,
+      "file": "icesat_per_rgt_retest.json"
+    },
+    {
+      "source": "DWG ICP #1 (dwg_57, 7 buildings)",
+      "n": 335,
+      "mad_m": 6.305452639342381,
+      "dH_median_m": 6.305452639342381,
+      "pearson_r": 0.127,
+      "method": "ICP building contour match (CM=30.5°E)",
+      "independent": true,
+      "file": "icp_dwg_57.csv"
+    },
+    {
+      "source": "DWG ICP #2 (toposemka, 35 buildings)",
+      "n": 72,
+      "mad_m": 9.12190658569336,
+      "dH_median_m": 9.030969085693359,
+      "pearson_r": -0.164,
+      "method": "ICP building contour match (CM=30.5°E)",
+      "independent": true,
+      "file": "icp_dwg_70.csv"
+    },
+    {
+      "source": "DWG ICP #3 (dwg_58, 153 roads)",
+      "n": 44,
+      "mad_m": 5.67343799091141,
+      "dH_median_m": 5.4137658259944175,
+      "pearson_r": 0.156,
+      "method": "ICP road contour match (CM=30.5°E)",
+      "independent": true,
+      "file": "icp_dwg_58_roads.csv"
+    },
+    {
+      "source": "DWG ICP #4 (dwg_59, 391 roads)",
+      "n": 19,
+      "mad_m": 18.922554930543047,
+      "dH_median_m": 2.8395628356933607,
+      "pearson_r": 0.186,
+      "method": "ICP road contour match (CM=30.5°E)",
+      "independent": true,
+      "file": "icp_dwg_59_roads.csv"
+    },
+    {
+      "source": "Soviet topo maps (NOISY, datum issue)",
+      "n": 131,
+      "mad_m": 37.54384613037109,
+      "dH_median_m": 0.6516788005828857,
+      "pearson_r": 0.095,
+      "method": "manual extraction from 1:10000 scans (Baltic 1977 datum)",
+      "independent": false,
+      "file": "soviet_topo_comparison.csv"
+    },
+    {
+      "source": "DWG v2 (CIRCULAR — height-fit, upper bound only)",
+      "n": 4275,
+      "mad_m": 1.26,
+      "dH_median_m": -0.61,
+      "pearson_r": null,
+      "method": "CRS brute-force by minimizing |dH|",
+      "independent": false,
+      "file": "all_dwg_FINAL_v2.csv"
+    }
+  ],
+  "aggregate_independent": {
+    "total_n_independent": 1080,
+    "reliable_sources_n": 610
+  },
+  "key_findings": {
+    "best_per_point_accuracy": "archi.ru 514913 VLM (MAD=0.42m, n=175)",
+    "best_independent_correlation": "Отметки.txt (Pearson r=0.952, n=200)",
+    "central_SPb_MAD": "0.94m (Отметки.txt, lat<60, n=184)",
+    "icp_dwg_results": [
+      "dwg_57: dH=+6.31m, MAD=6.31m (south SPb, model UNDERESTIMATES)",
+      "dwg_70 (toposemka): dH=+9.03m, MAD=9.12m",
+      "dwg_58: dH=+5.41m, MAD=5.67m",
+      "dwg_59: dH=+2.84m, MAD=18.92m (noisy)"
+    ],
+    "regional_bias_pattern": "South SPb (lat 59.85-59.88, lon 29.92-29.97) has systematic model UNDERESTIMATION of +5 to +9m",
+    "circular_method_gap": "Previous circular DWG method gave MAD=1.26m at these same areas → hid 5-9m real bias"
+  },
+  "sources_NOT_processed": [
+    "atayanc-2013-01.jpg — file not uploaded by user",
+    "434 archives on arch.lenobl.ru — deferred (need better filtering)",
+    "Soviet topo maps — extracted but unusable (datum mismatch, MAD=37.5m)",
+    "PPT marks from 8 archives — only constant value 6.25m (filter artifact)",
+    "Гаванская sheet (Z 2.51-3.20m, V.O.) — different document, not in archive"
+  ]
+}

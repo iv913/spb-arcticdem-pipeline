@@ -1,0 +1,543 @@
+{
+ "314154": {
+  "project_url": "https://archi.ru/projects/russia/15315/zhiloi-dom-na-oktyabrskoi-naberezhnoi",
+  "name": "Жилой дом на Октябрьской набережной",
+  "address": "Санкт-Петербург",
+  "lat": 59.8737032,
+  "lon": 30.4608983,
+  "address_full": "Октябрьская набережная, дом 86, корпус 2, литер А.",
+  "geocoded": "Октябрьская набережная, Сосновка, Народный округ, Санкт-Петербург, Северо-Западный федеральный округ",
+  "dormitory_anchor": {
+   "object": "Бывшее общежитие при ТЭЦ-5 (на плане: 4К общежитие ТЭЦ-5 = 4-этажный корпус)",
+   "address": "Санкт-Петербург, Октябрьская набережная, дом 88, корпус 2 (88/2)",
+   "lat": 59.8718931,
+   "lon": 30.4698941,
+   "source": "user-provided anchor, session 5.65",
+   "verified": "дом 88 = многокорпусный комплекс к1..к6, все корпуса существуют; к2: 59.871893, 30.469894"
+  },
+  "project_address_anchor": {
+   "object": "Жилой дом на Октябрьской набережной (проект, адрес archi.ru)",
+   "address": "Санкт-Петербург, Октябрьская набережная, дом 86, корпус 2, литер А",
+   "lat": 59.8723521,
+   "lon": 30.4691565,
+   "source": "user-confirmed anchor (5.53 REF point)"
+  },
+  "site_status": "site CONFIRMED by user anchors (block 86-88 Oktyabrskaya nab, Sosnovka); per-mark georef still REJECTED (see results/georef_314154_anchors_5.65.md)"
+ },
+ "314393": {
+  "project_url": "https://archi.ru/projects/russia/15321/mnogokvartirnyi-zhiloi-dom-na-dvinskoi",
+  "name": "Многоквартирный жилой дом на Двинской",
+  "address": "Санкт-Петербург",
+  "lat": 59.9086584,
+  "lon": 30.2524275,
+  "address_full": "ул. Двинская, 6",
+  "geocoded": "6, Двинская улица, округ Морские ворота, Санкт-Петербург, Северо-Западный федеральный округ, 198035,"
+ },
+ "315425": {
+  "project_url": "https://archi.ru/projects/russia/15368/biznes-centr-na-pulkovskom-shosse",
+  "name": "Бизнес-центр на Пулковском шоссе",
+  "address": "Санкт-Петербург",
+  "lat": 59.8245227,
+  "lon": 30.3279401,
+  "address_full": "Пулковское шоссе 32",
+  "geocoded": "32 к2, Пулковское шоссе, Ленинградская сторона, Средняя Рогатка, округ Звёздное, Санкт-Петербург, Се"
+ },
+ "317623": {
+  "project_url": "https://archi.ru/projects/russia/15437/pamyatnik-voinam-desantnikam--i-parashyutno-desantnoi-roty",
+  "name": "Памятник воинам-десантникам 6-й парашютно-десантной роты",
+  "address": "Санкт-Петербург",
+  "lat": 59.9192312,
+  "lon": 30.449594,
+  "address_full": "Парк Боевого Братства",
+  "geocoded": "парк Боевого Братства, округ Правобережный, Санкт-Петербург, Северо-Западный федеральный округ, Росс"
+ },
+ "317621": {
+  "project_url": "https://archi.ru/projects/russia/15437/pamyatnik-voinam-desantnikam--i-parashyutno-desantnoi-roty",
+  "name": "Памятник воинам-десантникам 6-й парашютно-десантной роты",
+  "address": "Санкт-Петербург",
+  "lat": 59.9192312,
+  "lon": 30.449594,
+  "address_full": "Парк Боевого Братства",
+  "geocoded": "парк Боевого Братства, округ Правобережный, Санкт-Петербург, Северо-Западный федеральный округ, Росс"
+ },
+ "317703": {
+  "project_url": "https://archi.ru/projects/russia/15443/bc-na-poklonnoi-gore",
+  "name": "БЦ на Поклонной горе",
+  "address": "Санкт-Петербург",
+  "lat": 59.938732,
+  "lon": 30.316229,
+  "address_full": "пр. Энгельса, дом 107, литер А",
+  "geocoded": "Санкт-Петербург, Северо-Западный федеральный округ, Россия"
+ },
+ "320480": {
+  "project_url": "https://archi.ru/projects/russia/15558/koncepciya-razvitiya-territorii-okhtinskogo-mysa",
+  "name": "Концепция развития территории Охтинского мыса",
+  "address": "Санкт-Петербург",
+  "lat": 59.9355993,
+  "lon": 30.4022113,
+  "address_full": "Малоохтинская набережная",
+  "geocoded": "Малоохтинская набережная, Малая Охта, округ Малая Охта, Санкт-Петербург, Северо-Западный федеральный"
+ },
+ "358850": {
+  "project_url": "https://archi.ru/projects/russia/17070/zhk-na-mirgorodskoi-ulice",
+  "name": "ЖК на Миргородской улице",
+  "address": "Санкт-Петербург",
+  "lat": 59.9251197,
+  "lon": 30.3723964,
+  "address_full": "Миргородская улица, д. 1 литер А",
+  "geocoded": "Миргородская улица, округ Лиговка-Ямская, Санкт-Петербург, Северо-Западный федеральный округ, 191024"
+ },
+ "372029": {
+  "project_url": "https://archi.ru/projects/russia/17397/mfk-morskaya-rezidenciya",
+  "name": "МФК «Морская резиденция»",
+  "address": "Санкт-Петербург",
+  "lat": 59.9606739,
+  "lon": 30.1586551,
+  "address_full": "",
+  "geocoded": "Санкт-Петербург, Северо-Западный федеральный округ, Россия"
+ },
+ "372030": {
+  "project_url": "https://archi.ru/projects/russia/17397/mfk-morskaya-rezidenciya",
+  "name": "МФК «Морская резиденция»",
+  "address": "Санкт-Петербург",
+  "lat": 59.9606739,
+  "lon": 30.1586551,
+  "address_full": "",
+  "geocoded": "Санкт-Петербург, Северо-Западный федеральный округ, Россия"
+ },
+ "287970": {
+  "project_url": "https://archi.ru/projects/russia/14602/zhk-na-ul-prilukskaya",
+  "name": "ЖК на ул. Прилукская",
+  "address": "Прилукская ул., д. 28, лит. А",
+  "source": "yandex_reverse_search",
+  "lat": 59.9093922,
+  "lon": 30.3494937
+ },
+ "295727": {
+  "project_url": "https://new.archi.ru/russia/83589/gradsovet-peterburga-5-06-2019",
+  "name": "Градсовет Петербурга 5.06.2019",
+  "address": "",
+  "source": "yandex_reverse_search"
+ },
+ "296457": {
+  "project_url": "https://archi.ru/projects/russia/14819/gostinica-3*-na-prospekte-veteranov",
+  "name": "Гостиница 3* на проспекте Ветеранов",
+  "address": "проспект Ветеранов, дом 91, корпус 1, литера А",
+  "source": "yandex_reverse_search",
+  "lat": 59.8419498,
+  "lon": 30.2520176,
+  "geocoded": "Проспект Ветеранов, бульвар Новаторов, Дачное, округ Дачное, Санкт-Петербург, Северо-Западный федера"
+ },
+ "296757": {
+  "project_url": "https://archi.ru/projects/russia/14829/yakht-klub-na-krestovskom-ostrove",
+  "name": "Яхт-клуб на Крестовском острове",
+  "address": "набережная Мартынова, д. 92, лит. А.",
+  "source": "yandex_reverse_search",
+  "lat": 59.9754799,
+  "lon": 30.2517632
+ },
+ "296812": {
+  "project_url": "https://archi.ru/projects/russia/14830/zhiloi-kompleks-privilegiya",
+  "name": "Жилой комплекс «Привилегия»",
+  "address": "ул. Вязовая, д.8",
+  "source": "yandex_reverse_search",
+  "lat": 59.9684747,
+  "lon": 30.277769,
+  "geocoded": "Вязовая улица, Острова, округ Чкаловское, Санкт-Петербург, Северо-Западный федеральный округ, 197110"
+ },
+ "314539": {
+  "project_url": "https://archi.ru/projects/russia/15326/zhk-amo",
+  "name": "ЖК «Amo»",
+  "address": "12-я линия В.О., д. 41",
+  "source": "yandex_reverse_search"
+ },
+ "314550": {
+  "project_url": "https://archi.ru/projects/russia/15327/zhiloi-dom-na-prospekte-toreza",
+  "name": "Жилой дом на проспекте Тореза",
+  "address": "пр. Тореза, д. 42",
+  "source": "yandex_reverse_search",
+  "lat": 60.0028117,
+  "lon": 30.3594196
+ },
+ "322656": {
+  "project_url": "https://archi.ru/projects/russia/15651/zhiloi-dom-na-zanevskom-prospekte",
+  "name": "Жилой дом на Заневском проспекте",
+  "address": "Заневский проспект, дом 65 л.А",
+  "source": "yandex_reverse_search",
+  "lat": 59.9295155,
+  "lon": 30.4143014,
+  "geocoded": "Заневский проспект, Малая Охта, округ Малая Охта, Санкт-Петербург, Северо-Западный федеральный округ"
+ },
+ "322679": {
+  "project_url": "https://archi.ru/projects/russia/15654/rekonstrukciya-vestibyulya-stancii-politekhnicheskaya-i-stroitelstvo-mfk",
+  "name": "Реконструкция вестибюля станции «Политехническая» и строительство МФК",
+  "address": "ул. Политехническая, д. 29, литер А",
+  "source": "yandex_reverse_search",
+  "lat": 59.9997604,
+  "lon": 30.365186
+ },
+ "322684": {
+  "project_url": "https://archi.ru/projects/russia/15654/rekonstrukciya-vestibyulya-stancii-politekhnicheskaya-i-stroitelstvo-mfk",
+  "name": "Реконструкция вестибюля станции «Политехническая» и строительство МФК",
+  "address": "ул. Политехническая, д. 29, литер А",
+  "source": "yandex_reverse_search",
+  "lat": 59.9997604,
+  "lon": 30.365186
+ },
+ "328016": {
+  "project_url": "https://archi.ru/projects/russia/15950/zhiloi-dom-na-zastavskoi",
+  "name": "Жилой дом на Заставской",
+  "address": "ул. Заставская, дом 30, литер А",
+  "source": "yandex_reverse_search",
+  "lat": 59.8886881,
+  "lon": 30.3275335,
+  "geocoded": "Банк Санкт-Петербург, Заставская улица, Ближняя Рогатка, округ Московская застава, Санкт-Петербург, "
+ },
+ "328585": {
+  "project_url": "https://archi.ru/projects/russia/15964/kovorking-avenue-page",
+  "name": "Коворкинг Avenue Page",
+  "address": "ул. Академика Павлова, 5К",
+  "source": "yandex_reverse_search",
+  "lat": 59.8252797,
+  "lon": 30.0895529,
+  "geocoded": "улица Академика Павлова, Сергиево, округ Константиновское, Санкт-Петербург, Северо-Западный федераль"
+ },
+ "329342": {
+  "project_url": "https://new.archi.ru/russia/86900/gradsovet-udalenno---",
+  "name": "Градсовет удаленно 5.08.2020",
+  "address": "",
+  "source": "yandex_reverse_search"
+ },
+ "331143": {
+  "project_url": "https://archi.ru/projects/russia/16070/dom-na-naberezhnoi-martynova",
+  "name": "Дом на набережной Мартынова",
+  "address": "наб. Мартынова, д.60",
+  "source": "yandex_reverse_search",
+  "lat": 59.9754799,
+  "lon": 30.2517632,
+  "geocoded": "набережная Мартынова, Острова, округ Чкаловское, Санкт-Петербург, Северо-Западный федеральный округ,"
+ },
+ "332602": {
+  "project_url": "https://archi.ru/projects/russia/16116/zhk-alter",
+  "name": "ЖК “Alter”",
+  "address": "Магнитогорская, 11",
+  "source": "yandex_reverse_search",
+  "lat": 59.9382931,
+  "lon": 30.420731,
+  "geocoded": "11, Магнитогорская улица, Большая Охта, округ Большая Охта, Санкт-Петербург, Северо-Западный федерал"
+ },
+ "332631": {
+  "project_url": "https://archi.ru/russia/100247/nedra-zemli-potoki-vody",
+  "name": "Недра земли, потоки воды",
+  "address": "",
+  "source": "yandex_reverse_search"
+ },
+ "335213": {
+  "project_url": "https://archi.ru/projects/russia/16213/zhk-veren-place",
+  "name": "ЖК Veren Place",
+  "address": "ул. 10-я Советская, 8",
+  "source": "yandex_reverse_search",
+  "lat": 59.994882,
+  "lon": 30.247893,
+  "geocoded": "Санкт-Петербург, улица Оптиков, Старая Деревня, округ № 65, Санкт-Петербург, Северо-Западный федерал"
+ },
+ "338117": {
+  "project_url": "https://archi.ru/projects/russia/16330/zhk-na-oktyabrskoi",
+  "name": "ЖК на Октябрьской",
+  "address": "Октябрьская набережная",
+  "source": "yandex_reverse_search",
+  "lat": 59.864599,
+  "lon": 30.490231,
+  "geocoded": "Октябрьская набережная, Уткина Заводь, Народный округ, Санкт-Петербург, Северо-Западный федеральный "
+ },
+ "341906": {
+  "project_url": "https://archi.ru/projects/russia/16442/id-moskovskiy",
+  "name": "ID Moskovskiy",
+  "address": "Московский проспект, д. 72",
+  "source": "yandex_reverse_search",
+  "lat": 59.912673,
+  "lon": 30.3181679,
+  "geocoded": "Московский проспект, округ Измайловское, Санкт-Петербург, Северо-Западный федеральный округ, 190005,"
+ },
+ "343880": {
+  "project_url": "https://archi.ru/projects/russia/16513/mnogokvartirnyi-dom-na-kubinskoi",
+  "name": "Многоквартирный дом на Кубинской",
+  "address": "Кубинская улица, дом 82",
+  "source": "yandex_reverse_search",
+  "lat": 59.8391226,
+  "lon": 30.3022964,
+  "geocoded": "82 к3 с1, Кубинская улица, Предпортовая, округ Новоизмайловское, Санкт-Петербург, Северо-Западный фе"
+ },
+ "345591": {
+  "project_url": "https://archi.ru/projects/russia/16579/zhiloi-dom-na-kondratevskom-prospekte",
+  "name": "Жилой дом на Кондратьевском проспекте",
+  "address": "Кондратьевский проспект, участок 3, (пересечения проспекта Металлистов и Лабораторной ул.)",
+  "source": "yandex_reverse_search",
+  "lat": 59.9802201,
+  "lon": 30.3954094
+ },
+ "345592": {
+  "project_url": "https://archi.ru/projects/russia/16579/zhiloi-dom-na-kondratevskom-prospekte",
+  "name": "Жилой дом на Кондратьевском проспекте",
+  "address": "Кондратьевский проспект, участок 3, (пересечения проспекта Металлистов и Лабораторной ул.)",
+  "source": "yandex_reverse_search",
+  "lat": 59.9802201,
+  "lon": 30.3954094
+ },
+ "349338": {
+  "project_url": "https://archi.ru/projects/russia/16685/gostinica-na-prospekte-energetikov",
+  "name": "Гостиница на проспекте Энергетиков",
+  "address": "пр. Энергетиков, дом 6, корпус 2, литера А",
+  "source": "yandex_reverse_search",
+  "lat": 59.9506165,
+  "lon": 30.4364711
+ },
+ "204719": {
+  "project_url": "https://new.archi.ru/russia/66888/nebesnaya-liniya-namyva",
+  "name": "Небесная линия намыва",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "289895": {
+  "project_url": "https://archi.ru/russia/82555/gradsovet-peterburga-20-02-2019",
+  "name": "Градсовет Петербурга 20.02.2019",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "350928": {
+  "project_url": "https://archi.ru/projects/russia/16755/zhiloi-kompleks-krasin",
+  "name": "Жилой комплекс «Красин»",
+  "address": "Косая линия В.О., д. 16, корп. 30а / 23-я линия В.О. д. 2а",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "364230": {
+  "project_url": "https://archi.ru/projects/russia/17192/ano-futbolnyi-klub-kolomyagi",
+  "name": "АНО Футбольный клуб «Коломяги»",
+  "address": "Солунская улица, участок 17",
+  "lat": 60.0181484,
+  "lon": 30.3023044,
+  "source": "yandex_retry_correct_url"
+ },
+ "370747": {
+  "project_url": "https://archi.ru/russia/95211/tikhaya-gavan",
+  "name": "Тихая гавань",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "371998": {
+  "project_url": "https://archi.ru/projects/russia/17138/rekonstrukciya-vestibyulya-stancii-metropolitena-frunzenskaya-s-sozdaniem-edinogo-dispetcherskogo-centra",
+  "name": "Реконструкция вестибюля станции метрополитена «Фрунзенская» с созданием Единого диспетчерского центра",
+  "address": "Московский проспект, д. 71 А",
+  "lat": 59.912673,
+  "lon": 30.3181679,
+  "source": "yandex_retry_correct_url"
+ },
+ "372066": {
+  "project_url": "https://new.archi.ru/russia/95350/gradsovet-peterburga--",
+  "name": "Градсовет Петербурга 14.01.2022",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "373063": {
+  "project_url": "https://archi.ru/projects/russia/16834/gostinica-na-uralskoi",
+  "name": "Гостиница на Уральской",
+  "address": "улица Уральская, дом 8б, литера А",
+  "lat": 59.9497576,
+  "lon": 30.2673268,
+  "source": "yandex_retry_correct_url"
+ },
+ "378096": {
+  "project_url": "https://archi.ru/projects/russia/16834/gostinica-na-uralskoi",
+  "name": "Гостиница на Уральской",
+  "address": "улица Уральская, дом 8б, литера А",
+  "lat": 59.9497576,
+  "lon": 30.2673268,
+  "source": "yandex_retry_correct_url"
+ },
+ "386480": {
+  "project_url": "https://archi.ru/projects/russia/17829/gostinichnyi-kompleks-na-ploschadi-lenina",
+  "name": "Гостиничный комплекс на площади Ленина",
+  "address": "пл. Ленина, участок 21",
+  "lat": 59.9572163,
+  "lon": 30.3553493,
+  "source": "yandex_retry_correct_url"
+ },
+ "386481": {
+  "project_url": "https://archi.ru/projects/russia/17829/gostinichnyi-kompleks-na-ploschadi-lenina",
+  "name": "Гостиничный комплекс на площади Ленина",
+  "address": "пл. Ленина, участок 21",
+  "lat": 59.9572163,
+  "lon": 30.3553493,
+  "source": "yandex_retry_correct_url"
+ },
+ "391398": {
+  "project_url": "https://archi.ru/russia/97663/gradsovet-peterburga--",
+  "name": "Градсовет Петербурга 28.09.2022",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "409876": {
+  "project_url": "https://archi.ru/projects/russia/18510/blagoustroistvo-territorii-zhk-svetlana-park",
+  "name": "Благоустройство территории ЖК SVETLANA PARK",
+  "address": "проспект Энгельса, участок 2",
+  "lat": 60.0893186,
+  "lon": 30.365059,
+  "source": "yandex_retry_correct_url"
+ },
+ "422637": {
+  "project_url": "https://new.archi.ru/russia/99258/ansambl-petrov",
+  "name": "Ансамбль Петров",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "422644": {
+  "project_url": "https://new.archi.ru/russia/99258/ansambl-petrov",
+  "name": "Ансамбль Петров",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "422695": {
+  "project_url": "https://archi.ru/projects/russia/18834/mfk--i-ostrov",
+  "name": "МФК «101-й остров»",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "422881": {
+  "project_url": "https://archi.ru/russia/99270/dostizhenie-ravnovesiya",
+  "name": "Достижение равновесия",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "428282": {
+  "project_url": "https://archi.ru/projects/russia/18974/zhk-shpalernaya",
+  "name": "ЖК Шпалерная, 51",
+  "address": "ул. Шпалерная, д. 51, литер К",
+  "lat": 59.94883,
+  "lon": 30.3741056,
+  "source": "yandex_retry_correct_url"
+ },
+ "448113": {
+  "project_url": "https://archi.ru/russia/100245/utka-arka-i-trilistnik",
+  "name": "Утка, арка и трилистник",
+  "address": "",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "448379": {
+  "project_url": "https://archi.ru/projects/russia/9071/uchebno-administrativnyi-korpus-2-v-g-mytischi",
+  "name": "Учебно-административный корпус №2 в г. Мытищи",
+  "address": "г. Мытищи, ул. Веры Волошиной, д. 16",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_retry_correct_url"
+ },
+ "456550": {
+  "project_url": "https://archi.ru/projects/russia/19768/dom-na-prospekte-rimskogo-korsakova",
+  "name": "Дом на проспекте Римского-Корсакова",
+  "address": "просп. Римского Корсакова, д. 69, литер А",
+  "lat": 59.9243855,
+  "lon": 30.308902,
+  "source": "yandex_retry_2"
+ },
+ "456638": {
+  "project_url": "https://archi.ru/projects/russia/17244/zhk-ilona",
+  "name": "ЖК iLona",
+  "address": "Нейшлотский переулок, д. 19/23",
+  "lat": 59.9677584,
+  "lon": 30.3519956,
+  "source": "yandex_retry_2"
+ },
+ "463524": {
+  "project_url": "https://archi.ru/projects/russia/19954/obyekt-kulturnogo-naslediya-federalnogo-znacheniya-gerbarii",
+  "name": "Объект культурного наследия федерального значения «Гербарий и библиотека»",
+  "address": "ул. Профессора Попова, дом 2, лит. А",
+  "lat": 59.9706188,
+  "lon": 30.2892268,
+  "source": "yandex_retry_2"
+ },
+ "470483": {
+  "project_url": "https://archi.ru/projects/russia/20119/zhk-taim-skver",
+  "name": "ЖК Тайм Сквер",
+  "address": "Планерная ул., 99",
+  "lat": 60.034346,
+  "lon": 30.1946554,
+  "source": "yandex_retry_2"
+ },
+ "485362": {
+  "project_url": "https://archi.ru/projects/russia/20505/mnogofunkcionalnyi-kompleks-na-territorii-elektrostancii-n2",
+  "name": "Многофункциональный комплекс на территории Электростанции N2",
+  "address": "Новгородская улица, дом 11",
+  "lat": 59.9346734,
+  "lon": 30.3883397,
+  "source": "yandex_retry_2"
+ },
+ "485363": {
+  "project_url": "https://archi.ru/projects/russia/20505/mnogofunkcionalnyi-kompleks-na-territorii-elektrostancii-n2",
+  "name": "Многофункциональный комплекс на территории Электростанции N2",
+  "address": "Новгородская улица, дом 11",
+  "lat": 59.9346734,
+  "lon": 30.3883397,
+  "source": "yandex_retry_2"
+ },
+ "487567": {
+  "project_url": "https://archi.ru/projects/russia/20567/zhk-aquatoria",
+  "name": "ЖК AQUATORIA",
+  "address": "Выборгская набережная, дом 61",
+  "lat": 59.9765329,
+  "lon": 30.3296676,
+  "source": "yandex_retry_2"
+ },
+ "493731": {
+  "project_url": "https://archi.ru/projects/russia/20773/delovoi-centr",
+  "name": "Деловой центр",
+  "address": "площадь Конституции, дом 1-3",
+  "lat": 59.8524874,
+  "lon": 30.3043856,
+  "source": "yandex_retry_2"
+ },
+ "345639": {
+  "project_url": "https://archi.ru/projects/russia/21359/delovoi-kompleks-na-dunaiskom-prospekte",
+  "name": "Деловой комплекс на Дунайском проспекте",
+  "address": "Дунайский проспект, 27",
+  "lat": 59.832,
+  "lon": 30.362,
+  "source": "yandex_sites_tab"
+ },
+ "326777": {
+  "project_url": "https://archi.ru/projects/russia/20066/bolshoi-palashevskii",
+  "name": "Большой Палашевский, 11–15",
+  "address": "Большой Палашевский, 11–15",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_sites_tab"
+ },
+ "394969": {
+  "project_url": "https://archi.ru/projects/russia/8928/zhk-vorobev-dom",
+  "name": "ЖК «Воробьев дом»",
+  "address": "Воробьевское шоссе, 4, 4а",
+  "lat": null,
+  "lon": null,
+  "source": "yandex_sites_tab"
+ }
+}

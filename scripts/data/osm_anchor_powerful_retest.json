@@ -1,0 +1,64 @@
+{
+  "experiment": "OSM-as-anchor RE-TEST with powerful per-point tests",
+  "context": "Replaces weak MAD-bootstrap from 5.22 (which gave INDISTINGUISHABLE).",
+  "part_1_passport_25_pts": {
+    "n_points": 25,
+    "mad_model": 1.0305530576820374,
+    "mad_combined": 0.8223826765530456,
+    "sign_test": {
+      "n_better": 14,
+      "n_worse": 11,
+      "n_tied": 0,
+      "p_value": 0.6900379657745361,
+      "pct_better": 56.0
+    },
+    "wilcoxon": {
+      "statistic": 160.0,
+      "p_value": 0.9578450322151184,
+      "median_diff": 0.09689674766858225
+    },
+    "per_point_median_bootstrap": {
+      "median": 0.09689674766858225,
+      "ci_95": [
+        -0.17509702403010463,
+        0.2625891887809759
+      ]
+    },
+    "paired_mad_bootstrap_weak": {
+      "delta_mad": 0.20817038112899178,
+      "ci_95": [
+        -0.9598548709461298,
+        0.7206256409422594
+      ]
+    }
+  },
+  "part_2_icesat_near_tagged": {
+    "n_points": 1088,
+    "mad_baseline": 2.8933249156951906,
+    "mad_current": 1.1787059958457946,
+    "sign_test": {
+      "n_better": 775,
+      "n_worse": 313,
+      "n_tied": 0,
+      "p_value": 9.30060935409723e-46,
+      "pct_better": 71.23161764705883
+    },
+    "wilcoxon": {
+      "statistic": 133110.0,
+      "p_value": 9.061986727649938e-56,
+      "median_diff": 0.6554334163665771
+    },
+    "per_point_median_bootstrap": {
+      "median": 0.6554334163665771,
+      "ci_95": [
+        0.5284302353858947,
+        0.9245123744010925
+      ]
+    }
+  },
+  "combined_verdict": {
+    "passport_tests_passing": 0,
+    "icesat_tests_passing": 3,
+    "verdict": "PASSPORT: OSM-as-anchor NOT confirmed (0/3 tests). ICESat result is pipeline-vs-raw (expected, not OSM-specific). To properly test OSM-as-anchor on ICESat: need pipeline run with OSM anchor."
+  }
+}

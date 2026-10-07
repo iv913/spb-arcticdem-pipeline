@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-09-21T07:56:12.864668",
+  "status": "NEGATIVE_RESULT",
+  "verdict": "ARTIFACT \u2014 0.03 m MAD is reproduced by zero-inflated noise, not ML signal",
+  "sigma_passport_threshold": 0.54,
+  "baseline_mad_holdout": 1.4497048125000005,
+  "single_split_gp_corrected_mad": 1.4237338332324396,
+  "single_split_gp_rmse": 1.9314441563013056,
+  "spatial_cv_mad_real_dH": 0.2625161240920603,
+  "spatial_cv_mad_zero_inflated_noise": 0.03696646349986268,
+  "artifact_confirmed": false,
+  "n_train_zeros": 163,
+  "n_train_total": 174,
+  "zero_inflation_pct": 93.67816091954023,
+  "implications": [
+    "05_ml_residual_correction.py is a NEGATIVE result \u2014 do not use ml_gp_model.pkl in production",
+    "v8 must NOT be modified (real gain: detail 23 MAD 2.031 \u2192 1.074)",
+    "0.03 m is NOT a result of ML learning \u2014 it is reproduced by zero-inflated noise (94% zeros)",
+    "No spatial CV can fix this \u2014 the leak is in sample composition, not geography",
+    "Recommendation to remove passport-train from prior is WRONG (would lose real v8 gain)"
+  ],
+  "next_step": "Stage 2 of REVISED_ARCHITECTURE.md \u2014 source equalization BEFORE stitching: joint least-squares solution of bias b_j across ICESat, passport, DSM, Copernicus. z_ij = Z_i + b_j. This is the only structural move not yet tried."
+}

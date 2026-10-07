@@ -1,0 +1,21 @@
+{
+  "total_dwg_files": 167,
+  "oda_converted": 166,
+  "oda_failed": 1,
+  "files_with_z_data": 42,
+  "files_z_zero_inserts": 75,
+  "files_no_inserts": 49,
+  "unique_surveys": 15,
+  "surveys_included": 5,
+  "surveys_rejected": {
+    "3__Схема_ОКН": "negative Pearson r=-0.330, Z quantized (likely codes not elevations)"
+  },
+  "surveys_too_few_points": 9,
+  "surveys_not_elevation": 4,
+  "final_dataset": {
+    "n_points": 4275,
+    "mad_m": 1.26,
+    "dH_median_m": -0.611,
+    "wilcoxon_p": 4.09e-85
+  }
+}

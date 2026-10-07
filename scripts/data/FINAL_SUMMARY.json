@@ -1,0 +1,41 @@
+{
+  "sources": {
+    "archi.ru": {
+      "n": 71,
+      "method": "VLM OCR",
+      "vlm": "Yes"
+    },
+    "PPT road projects": {
+      "n": 183,
+      "method": "pdftotext",
+      "vlm": "No"
+    },
+    "DWG topographic survey (\u041e\u0445\u0442\u0430 \u041f\u0430\u0440\u043a)": {
+      "n": 38,
+      "method": "strings binary extraction",
+      "vlm": "No",
+      "note": "Filtered 5-15m from 64 total (rest are coordinates)"
+    },
+    "topo": {
+      "n": 181,
+      "method": "VLM OCR",
+      "vlm": "Yes"
+    },
+    "Passport holdout": {
+      "n": 40,
+      "method": "GPS survey marks",
+      "vlm": "No"
+    },
+    "ICESat (paired)": {
+      "n": 37322,
+      "method": "ATL08 laser",
+      "vlm": "No"
+    }
+  },
+  "total_independent": 473,
+  "total_all": 37835,
+  "vlm_images_processed": 226,
+  "vlm_images_total": 421,
+  "arch_lenobl_downloaded": 5,
+  "arch_lenobl_available": 442
+}

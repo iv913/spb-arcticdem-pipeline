@@ -1,0 +1,88 @@
+{
+  "experiment": "Paired bootstrap + LOO sigma + coverage",
+  "step_1_paired_bootstrap": {
+    "unpaired_model_mad": 1.0305530576820374,
+    "unpaired_model_ci": [
+      0.5411490000000003,
+      1.6895853383395625
+    ],
+    "unpaired_combined_mad": 0.8223826765530456,
+    "unpaired_combined_ci": [
+      0.4472960599443914,
+      2.0108095575358784
+    ],
+    "paired_diff": 0.20817038112899178,
+    "paired_ci_95": [
+      -0.9598548709461296,
+      0.7206256409422594
+    ],
+    "paired_ci_width": 1.6804805118883892,
+    "unpaired_ci_width": 1.1484363383395622,
+    "paired_to_unpaired_ratio": 1.4632770278917417,
+    "p_value": 0.7592,
+    "verdict": "INDISTINGUISHABLE: CI includes 0"
+  },
+  "step_2_loo_sigma": {
+    "sigma_loo_median": 1.7000000000000002,
+    "sigma_loo_p25": 1.6,
+    "sigma_loo_p75": 1.8,
+    "loo_combined_mad": 0.8626734577740098,
+    "loo_diff_vs_model": 0.1678795999080276,
+    "loo_ci_95": [
+      -1.11066608016302,
+      0.7753355264620329
+    ],
+    "loo_p_value": 0.7616,
+    "verdict": "INDISTINGUISHABLE: CI includes 0"
+  },
+  "step_3_coverage": {
+    "n_tagged_buildings": 50320,
+    "n_total_buildings": 141765,
+    "tagged_pct": 35.49536204281734,
+    "tagged_building_area_km2": 40.649301779297666,
+    "total_building_area_km2": 79.29819452684502,
+    "building_area_tagged_pct": 51.26132066668498,
+    "coverage_within_100m_pct": 20.489508141682055,
+    "coverage_within_250m_pct": 33.8982709417492,
+    "coverage_within_500m_pct": 45.98153432936042,
+    "class23_pct_land": 0.69,
+    "expected_class23_within_100m_pct": 14.137760617760616,
+    "expected_citywide_improvement_pct": 2.8275521235521235
+  },
+  "step_4_rejected_edits_recheck": {
+    "cap_far_field": {
+      "delta_mad": 0.16,
+      "ci_width_v8": 1.0,
+      "verdict_was": "REJECTED as worse",
+      "paired_bootstrap_possible": false,
+      "reason": "no per-point dH saved for both versions",
+      "recommendation": "RE-RUN with per-point dH, then paired bootstrap",
+      "current_status": "UNCERTAIN \u2014 point estimate within noise"
+    },
+    "choose_block_px": {
+      "delta_mad": -0.15,
+      "ci_width_v8": 1.0,
+      "verdict_was": "kept (detail 23 hurt)",
+      "paired_bootstrap_possible": false,
+      "reason": "no per-point dH saved for both versions",
+      "recommendation": "RE-RUN with per-point dH, then paired bootstrap",
+      "current_status": "UNCERTAIN \u2014 improvement might be real"
+    },
+    "accept_dsm_with_relief": {
+      "delta_mad": null,
+      "ci_width_v8": 1.0,
+      "verdict_was": "REVERTED",
+      "paired_bootstrap_possible": false,
+      "reason": "no per-point dH saved",
+      "recommendation": "RE-RUN with per-point dH, then paired bootstrap",
+      "current_status": "UNCERTAIN \u2014 \"HURT\" was point estimate"
+    }
+  },
+  "implications": [
+    "Paired bootstrap CI width = 1.680m (vs unpaired 1.148m)",
+    "LOO \u03c3_s eliminates test-set tuning \u2014 verdict: INDISTINGUISHABLE: CI includes 0",
+    "Coverage: only 20.5% of SPb within 100m of tagged buildings",
+    "Expected city-wide improvement: ~2.8% (not 20%)",
+    "Three previously rejected edits have \u0394 within CI width \u2014 should be re-tested with paired bootstrap"
+  ]
+}

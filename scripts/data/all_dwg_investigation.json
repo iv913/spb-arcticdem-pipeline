@@ -1,0 +1,25 @@
+{
+  "rejected_with_offset_search": {
+    "3__Схема_ОКН": {
+      "cm": 31.13,
+      "fn": -6245000,
+      "z_offset": 12.607377243041988,
+      "mad": 3.3405344967644908,
+      "median_dH": 2.0000000000000036,
+      "n_valid": 92
+    },
+    "Топо": {
+      "cm": 31.0,
+      "fn": -6208000,
+      "z_offset": -0.07438758850097926,
+      "mad": 1.9226438903808614,
+      "median_dH": -1.0,
+      "n_valid": 200
+    }
+  },
+  "small_files_valid": [],
+  "flagged_not_elevation_files": {
+    "2__Схема_использования_территории": "Z range 484m, likely land use codes not elevations",
+    "СЛОЙ_АД": "Z range 4953m, likely attribute codes"
+  }
+}

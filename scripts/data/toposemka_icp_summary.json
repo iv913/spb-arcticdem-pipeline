@@ -1,0 +1,39 @@
+{
+  "methodology": "HONEST GEOREF via building contour KDTree grid search",
+  "dxf_file": "dwg_34.dxf (= toposemka)",
+  "dxf_layer": "03_Здания и строения",
+  "crs_cm_deg_east": 30.5,
+  "crs_fe": 2250000,
+  "crs_fn": -6190000.0,
+  "dxf_center_local": [
+    2220306.5863434137,
+    449033.03044677764
+  ],
+  "expected_center_wgs84": [
+    59.86285865608009,
+    29.967803458802706
+  ],
+  "icp_translation_tx_m": -75.0,
+  "icp_translation_ty_m": 400.0,
+  "dxf_buildings": 29,
+  "osm_buildings": 9179,
+  "matched_dxf_buildings": 20,
+  "match_distance_median_m": 12.682046474077264,
+  "match_distance_max_m": 19.70860682285581,
+  "n_elevation_points": 72,
+  "dH_median": 8.713156585693358,
+  "abs_dH_mad": 8.769250335693359,
+  "pearson_r": -0.47011263309144663,
+  "pearson_p": 3.0913726918721214e-05,
+  "spearman_rho": -0.6096368503077878,
+  "wilcoxon_p": 2.399003161372536e-12,
+  "sign_test_p": 3.091670257478196e-20,
+  "bootstrap_ci_95": [
+    7.472153248786926,
+    9.610363044738769
+  ],
+  "location": {
+    "lat": 59.865599904366164,
+    "lon": 29.96704403822249
+  }
+}

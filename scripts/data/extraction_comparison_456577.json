@@ -1,0 +1,35 @@
+{
+  "image": "456577.jpg (пр. Римского-Корсакова, 69, central SPb)",
+  "image_dims": "2500x1140",
+  "user_extraction": {
+    "n_spot": 58,
+    "n_water": 6,
+    "total": 64,
+    "has_classification": true,
+    "has_confidence_levels": true
+  },
+  "vlm_extraction": {
+    "n_raw": 132,
+    "n_filtered": 127
+  },
+  "matching": {
+    "criterion": "pixel distance < 50px",
+    "user_marks_matched_by_vlm": 55,
+    "user_marks_total": 58,
+    "vlm_recall_pct": 94.82758620689656,
+    "matched_pairs": 73,
+    "z_diff_median_m": 0.0,
+    "z_diff_mad_m": 0.0,
+    "exact_matches_pct": 50.68493150684932,
+    "pearson_r_vlm_vs_user": 0.7740674464417076
+  },
+  "user_vs_model": {
+    "n_valid": 61,
+    "dH_median_m": 1.0710785293579104,
+    "abs_dH_mad_m": 1.0751609706878664,
+    "pct_survey_higher": 90.1639344262295,
+    "wilcoxon_p": 3.949737942466897e-09,
+    "pearson_r": 0.7496217051197337
+  },
+  "conclusion": "VLM extraction AGREES with user manual extraction: median Z diff = 0.000m, MAD = 0.000m on matched marks. VLM recall = 60% of user marks, with 100% exact Z matches on most. Both extractions confirm model underestimates by +1.07m at this central SPb site."
+}

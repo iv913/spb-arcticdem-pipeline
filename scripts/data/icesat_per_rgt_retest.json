@@ -1,0 +1,204 @@
+{
+  "experiment": "ICESat per-RGT re-test (honest n=10-12)",
+  "methodology": "Aggregate per-point diffs by RGT (lines), then sign test on n_lines",
+  "practical_threshold_m": 0.1,
+  "rationale": "Per-point ICESat tests inflate significance because points within one RGT are not independent (3 epochs of one RGT diverged by 0.82m). Effective n is number of RGTs (~10-12), not points (37K).",
+  "test_1_pipeline_vs_baseline": {
+    "description": "TEST 1: Current pipeline vs raw ArcticDEM (was p\u224810\u207b\u00b9\u2070\u2070 on 37K)",
+    "n_points": 37332,
+    "n_rgt": 11,
+    "rgt_aggregates": [
+      {
+        "rgt": "025",
+        "median_diff": 0.2068891525268557,
+        "n_points": 493,
+        "mad_a": 0.4609682247161865,
+        "mad_b": 0.5984872587203979
+      },
+      {
+        "rgt": "028",
+        "median_diff": 0.03906249999999999,
+        "n_points": 2588,
+        "mad_a": 0.6624953058242797,
+        "mad_b": 0.5919012308120727
+      },
+      {
+        "rgt": "031",
+        "median_diff": 0.171875,
+        "n_points": 3290,
+        "mad_a": 0.24945676488876345,
+        "mad_b": 0.2334095077514649
+      },
+      {
+        "rgt": "073",
+        "median_diff": 0.3123569488525391,
+        "n_points": 3072,
+        "mad_a": 0.8997492553710937,
+        "mad_b": 0.6654617048263549
+      },
+      {
+        "rgt": "075",
+        "median_diff": 0.03125,
+        "n_points": 3272,
+        "mad_a": 0.4198981618881225,
+        "mad_b": 0.5211130956172942
+      },
+      {
+        "rgt": "079",
+        "median_diff": 0.265625,
+        "n_points": 846,
+        "mad_a": 0.33738334808349607,
+        "mad_b": 0.18027165870666503
+      },
+      {
+        "rgt": "117",
+        "median_diff": 0.2690620422363281,
+        "n_points": 456,
+        "mad_a": 0.7487343784332275,
+        "mad_b": 0.8586212219238281
+      },
+      {
+        "rgt": "119",
+        "median_diff": 0.30356597900390625,
+        "n_points": 4233,
+        "mad_a": 0.8662733436584472,
+        "mad_b": 0.6918418713569641
+      },
+      {
+        "rgt": "123",
+        "median_diff": -0.0546875,
+        "n_points": 3929,
+        "mad_a": 0.16998965034484861,
+        "mad_b": 0.27052201538085935
+      },
+      {
+        "rgt": "125",
+        "median_diff": -0.2559795379638672,
+        "n_points": 1283,
+        "mad_a": 0.2804151964187623,
+        "mad_b": 0.25785896987915047
+      }
+    ],
+    "sign_test_per_rgt": {
+      "n_better": 8,
+      "n_worse": 2,
+      "p_value": 0.109375
+    },
+    "wilcoxon_per_rgt": {
+      "statistic": 9.0,
+      "p_value": 0.064453125,
+      "median_diff": 0.18938207626342785
+    },
+    "per_rgt_bootstrap": {
+      "median": 0.18938207626342785,
+      "ci_95": [
+        0.03125,
+        0.2690620422363281
+      ],
+      "ci_width": 0.23781204223632812
+    },
+    "per_point_bootstrap_wrong": {
+      "median": 0.078125,
+      "ci_95": [
+        0.0745142385363579,
+        0.0859375
+      ],
+      "ci_width": 0.011423261463642101
+    },
+    "practical_significant": true,
+    "practical_threshold_m": 0.1,
+    "verdict": "MARGINAL \u2014 1/3 tests significant"
+  },
+  "test_2_osm_anchor_vs_baseline": {
+    "description": "TEST 2: OSM-as-anchor vs baseline (was p\u224810\u207b\u00b2\u00b2 WORSE on 813 \u2014 recheck per-RGT)",
+    "n_points": 813,
+    "n_rgt": 9,
+    "rgt_aggregates": [
+      {
+        "rgt": "028",
+        "median_diff": -0.7008208348153512,
+        "n_points": 72,
+        "mad_a": 0.27827773721781623,
+        "mad_b": 0.8270115241321431
+      },
+      {
+        "rgt": "031",
+        "median_diff": -0.3294379345767382,
+        "n_points": 29,
+        "mad_a": 1.5327020928853965,
+        "mad_b": 2.0650037091870517
+      },
+      {
+        "rgt": "073",
+        "median_diff": -0.07925465537728188,
+        "n_points": 151,
+        "mad_a": 0.4457272174308108,
+        "mad_b": 0.9146087287988145
+      },
+      {
+        "rgt": "075",
+        "median_diff": -0.5721946687428678,
+        "n_points": 70,
+        "mad_a": 0.22267830293337323,
+        "mad_b": 0.7299798551793243
+      },
+      {
+        "rgt": "117",
+        "median_diff": -3.355030048015321,
+        "n_points": 2,
+        "mad_a": 6.035309109684541,
+        "mad_b": 6.423912094749185
+      },
+      {
+        "rgt": "119",
+        "median_diff": -0.03520084177989702,
+        "n_points": 175,
+        "mad_a": 0.4440322322660814,
+        "mad_b": 0.7654746988613363
+      },
+      {
+        "rgt": "123",
+        "median_diff": -0.028010788824541777,
+        "n_points": 33,
+        "mad_a": 0.81462088190888,
+        "mad_b": 1.3163568008507618
+      },
+      {
+        "rgt": "125",
+        "median_diff": -0.6754617667133886,
+        "n_points": 1,
+        "mad_a": 0.0,
+        "mad_b": 0.0
+      }
+    ],
+    "sign_test_per_rgt": {
+      "n_better": 0,
+      "n_worse": 8,
+      "p_value": 0.0078125
+    },
+    "wilcoxon_per_rgt": {
+      "statistic": 0.0,
+      "p_value": 0.0078125,
+      "median_diff": -0.450816301659803
+    },
+    "per_rgt_bootstrap": {
+      "median": -0.450816301659803,
+      "ci_95": [
+        -0.7008208348153512,
+        -0.03520084177989702
+      ],
+      "ci_width": 0.6656199930354542
+    },
+    "per_point_bootstrap_wrong": {
+      "median": -0.19615272219677848,
+      "ci_95": [
+        -0.2633852702378381,
+        -0.13913451012967815
+      ],
+      "ci_width": 0.12425076010815994
+    },
+    "practical_significant": true,
+    "practical_threshold_m": 0.1,
+    "verdict": "SIGNIFICANT + PRACTICAL: combined (pipeline + OSM weighted) WORSE than baseline (pipeline alone)"
+  }
+}

@@ -1,0 +1,273 @@
+file,category,value,value_raw,x,y,context
+archi_11002_1,engineering_plan,16.0,16.000,0.168,0.105,Отметка верха парапета
+archi_11002_1,engineering_plan,15.5,15.500,0.428,0.115,Отметка верха парапета
+archi_11002_1,engineering_plan,4.51,4.510,0.572,0.205,Отметка верха оконного проема
+archi_11002_1,engineering_plan,15.5,15.500,0.778,0.105,Отметка верха парапета
+archi_11002_1,engineering_plan,11.67,11.670,0.828,0.165,Отметка верха ограждения
+archi_11002_1,engineering_plan,4.918,4.918,0.768,0.265,Отметка низа оконного проема
+archi_11002_1,engineering_plan,4.6,4.600,0.768,0.345,Отметка низа оконного проема
+archi_11002_1,engineering_plan,-1.0,-1.000,0.808,0.385,Отметка планировки земли
+archi_11002_1,engineering_plan,-1.0,-1.000,0.878,0.385,Отметка планировки земли
+archi_11002_1,engineering_plan,-0.8,-0.800,0.952,0.345,Отметка планировки земли
+archi_11002_1,engineering_plan,16.65,16.650,0.982,0.165,Отметка верха конструкции
+archi_11002_1,engineering_plan,-5.5,-5.500,0.978,0.265,Отметка низа фундамента
+archi_11002_1,engineering_plan,16.0,16.000,0.172,0.625,Отметка верха парапета
+archi_11002_1,engineering_plan,15.5,15.500,0.426,0.635,Отметка верха парапета
+archi_11002_1,engineering_plan,4.51,4.510,0.569,0.725,Отметка верха оконного проема
+archi_11002_1,engineering_plan,15.5,15.500,0.776,0.625,Отметка верха парапета
+archi_11002_1,engineering_plan,11.67,11.670,0.826,0.685,Отметка верха ограждения
+archi_11002_1,engineering_plan,4.9,4.900,0.766,0.775,Отметка низа оконного проема
+archi_11002_1,engineering_plan,4.3,4.300,0.766,0.855,Отметка низа оконного проема
+archi_11002_1,engineering_plan,-1.1,-1.100,0.806,0.895,Отметка планировки земли
+archi_11002_1,engineering_plan,-1.7,-1.700,0.876,0.895,Отметка планировки земли
+archi_11002_1,engineering_plan,-0.8,-0.800,0.95,0.855,Отметка планировки земли
+archi_11002_1,engineering_plan,16.65,16.650,0.981,0.685,Отметка верха конструкции
+archi_11002_1,engineering_plan,1.1,+1.100,0.976,0.775,Отметка уровня земли
+archi_11002_11,engineering_plan,45.5,45.5,0.025,0.3,Отметка рельефа в верхней левой части плана
+archi_11002_11,engineering_plan,44.5,44.5,0.085,0.435,Отметка рельефа слева от здания
+archi_11002_11,engineering_plan,43.5,43.5,0.145,0.565,Отметка рельефа слева от здания
+archi_11002_11,engineering_plan,42.5,42.5,0.205,0.695,Отметка рельефа слева от здания
+archi_11002_11,engineering_plan,41.8,41.8,0.265,0.83,Отметка рельефа на углу участка
+archi_11002_11,engineering_plan,41.2,41.2,0.33,0.955,Отметка рельефа внизу слева
+archi_11002_11,engineering_plan,40.7,40.7,0.415,0.985,Отметка рельефа внизу по центру
+archi_11002_6,engineering_plan,-0.45,-0.450,0.085,0.415,"Отметка уровня земли (планировочная) слева на разрезе, у входной лестницы"
+archi_11002_6,engineering_plan,0.0,±0.000,0.095,0.435,Отметка чистового пола первого этажа (уровень входа)
+archi_512480,architectural_plan,100.0,100,0.445,0.213,Отметка рельефа (базовая линия профиля)
+archi_512480,architectural_plan,200.0,200,0.445,0.182,Отметка рельефа
+archi_512480,architectural_plan,300.0,300,0.445,0.151,Отметка рельефа
+archi_512480,architectural_plan,400.0,400,0.445,0.12,Отметка рельефа
+archi_512480,architectural_plan,500.0,500,0.445,0.089,Отметка рельефа
+archi_512480,architectural_plan,100.0,100,0.443,0.472,Отметка рельефа (базовая линия профиля)
+archi_512480,architectural_plan,200.0,200,0.443,0.441,Отметка рельефа
+archi_512480,architectural_plan,300.0,300,0.443,0.409,Отметка рельефа
+archi_512480,architectural_plan,400.0,400,0.443,0.379,Отметка рельефа
+archi_512480,architectural_plan,500.0,500,0.443,0.347,Отметка рельефа
+archi_512480,architectural_plan,100.0,100,0.445,0.732,Отметка рельефа (базовая линия профиля)
+archi_512480,architectural_plan,200.0,200,0.445,0.701,Отметка рельефа
+archi_512480,architectural_plan,300.0,300,0.445,0.67,Отметка рельефа
+archi_512480,architectural_plan,400.0,400,0.445,0.639,Отметка рельефа
+archi_512480,architectural_plan,500.0,500,0.445,0.608,Отметка рельефа
+archi_514913,engineering_plan,13.83,13.83,0.395,0.055,Дунайский проспект
+archi_514913,engineering_plan,13.79,13.79,0.347,0.074,Дунайский проспект
+archi_514913,engineering_plan,13.82,13.82,0.218,0.096,Дунайский проспект
+archi_514913,engineering_plan,13.85,13.85,0.171,0.117,Дунайский проспект
+archi_514913,engineering_plan,13.04,13.04,0.089,0.144,граница участка
+archi_514913,engineering_plan,13.78,13.78,0.057,0.185,граница участка
+archi_514913,engineering_plan,12.92,12.92,0.059,0.231,газон
+archi_514913,engineering_plan,13.74,13.74,0.068,0.253,газон
+archi_514913,engineering_plan,13.98,13.98,0.082,0.241,газон
+archi_514913,engineering_plan,14.1,14.10,0.101,0.231,газон
+archi_514913,engineering_plan,13.88,13.88,0.152,0.187,газон
+archi_514913,engineering_plan,14.0,14.00,0.206,0.207,газон
+archi_514913,engineering_plan,13.97,13.97,0.22,0.195,газон
+archi_514913,engineering_plan,13.78,13.78,0.197,0.17,газон
+archi_514913,engineering_plan,13.25,13.25,0.231,0.175,газон
+archi_514913,engineering_plan,14.2,14.20,0.271,0.192,газон
+archi_514913,engineering_plan,14.38,14.38,0.307,0.222,газон
+archi_514913,engineering_plan,14.46,14.46,0.223,0.269,газон
+archi_514913,engineering_plan,14.08,14.08,0.163,0.235,газон
+archi_514913,engineering_plan,14.42,14.42,0.167,0.291,газон
+archi_514913,engineering_plan,14.2,14.20,0.113,0.296,бетонное покрытие
+archi_514913,engineering_plan,13.85,13.85,0.077,0.33,газон
+archi_514913,engineering_plan,13.89,13.89,0.069,0.377,газон
+archi_514913,engineering_plan,13.87,13.87,0.079,0.388,газон
+archi_514913,engineering_plan,15.88,15.88,0.093,0.401,газон
+archi_514913,engineering_plan,14.28,14.28,0.12,0.436,газон
+archi_514913,engineering_plan,14.41,14.41,0.137,0.43,газон
+archi_514913,engineering_plan,14.18,14.18,0.453,0.35,стоянка
+archi_514913,engineering_plan,14.51,14.51,0.4,0.399,газон
+archi_514913,engineering_plan,14.01,14.01,0.471,0.435,газон
+archi_514913,engineering_plan,14.85,14.85,0.45,0.502,газон
+archi_514913,engineering_plan,14.35,14.35,0.416,0.543,здание
+archi_514913,engineering_plan,14.42,14.42,0.225,0.571,газон
+archi_514913,engineering_plan,14.27,14.27,0.133,0.609,газон
+archi_514913,engineering_plan,14.32,14.32,0.16,0.801,газон
+archi_514913,engineering_plan,14.58,14.58,0.315,0.767,площадка
+archi_514913,engineering_plan,14.45,14.45,0.365,0.758,площадка
+archi_514913,engineering_plan,14.41,14.41,0.429,0.72,газон
+archi_514913,engineering_plan,14.34,14.34,0.42,0.686,газон
+archi_514913,engineering_plan,14.2,14.20,0.433,0.618,газон
+archi_514913,engineering_plan,14.21,14.21,0.532,0.656,газон
+archi_514913,engineering_plan,14.24,14.24,0.497,0.6,газон
+archi_514913,engineering_plan,14.64,14.64,0.481,0.55,газон
+archi_514913,engineering_plan,14.89,14.89,0.441,0.541,газон
+archi_514913,engineering_plan,14.22,14.22,0.408,0.52,газон
+archi_514913,engineering_plan,14.55,14.55,0.47,0.671,площадка
+archi_514913,engineering_plan,14.92,14.92,0.472,0.719,площадка
+archi_514913,engineering_plan,14.49,14.49,0.502,0.731,площадка
+archi_514913,engineering_plan,14.36,14.36,0.512,0.726,площадка
+archi_514913,engineering_plan,14.29,14.29,0.526,0.709,площадка
+archi_514913,engineering_plan,14.43,14.43,0.538,0.719,площадка
+archi_514913,engineering_plan,14.21,14.21,0.535,0.654,газон
+archi_514913,engineering_plan,13.24,13.24,0.517,0.685,газон
+archi_514913,engineering_plan,14.38,14.38,0.48,0.83,газон
+archi_514913,engineering_plan,14.52,14.52,0.447,0.863,газон
+archi_514913,engineering_plan,14.51,14.51,0.38,0.85,газон
+archi_514913,engineering_plan,14.49,14.49,0.398,0.856,газон
+archi_514913,engineering_plan,14.61,14.61,0.352,0.877,газон
+archi_514913,engineering_plan,14.53,14.53,0.28,0.888,газон
+archi_514913,engineering_plan,14.74,14.74,0.304,0.904,газон
+archi_514913,engineering_plan,14.8,14.80,0.19,0.893,газон
+archi_514913,engineering_plan,14.54,14.54,0.183,0.916,газон
+archi_514913,engineering_plan,14.67,14.67,0.186,0.929,газон
+archi_514913,engineering_plan,14.82,14.82,0.214,0.942,газон
+archi_514913,engineering_plan,14.84,14.84,0.255,0.928,газон
+archi_514913,engineering_plan,14.94,14.94,0.27,0.938,газон
+archi_514913,engineering_plan,14.79,14.79,0.29,0.952,газон
+archi_514913,engineering_plan,14.74,14.74,0.31,0.909,газон
+archi_514913,engineering_plan,14.69,14.69,0.32,0.9,газон
+archi_514913,engineering_plan,14.65,14.65,0.333,0.892,газон
+archi_514913,engineering_plan,14.6,14.60,0.345,0.884,газон
+archi_7000_6,architectural_plan,1.09,1.09,0.325,0.308,Отметка чистового пола в санузле
+archi_7000_6,architectural_plan,1.11,1.11,0.626,0.302,Отметка чистового пола в помещении
+archi_7000_6,architectural_plan,1.1,1.10,0.255,0.405,Отметка чистового пола в санузле
+archi_7000_6,architectural_plan,1.07,1.07,0.622,0.383,Отметка чистового пола в санузле
+archi_7000_6,architectural_plan,1.08,1.08,0.805,0.4,Отметка чистового пола в санузле
+archi_7000_6,architectural_plan,1.05,1.05,0.472,0.458,Отметка чистового пола (основная)
+archi_7000_6,architectural_plan,1.12,1.12,0.242,0.57,Отметка чистового пола в помещении
+archi_7000_6,architectural_plan,1.06,1.06,0.81,0.55,Отметка чистового пола в помещении
+archi_7000_6,architectural_plan,1.04,1.04,0.472,0.754,Отметка чистового пола у атриума
+archi_7000_6,architectural_plan,1.03,1.03,0.41,0.827,Отметка чистового пола
+archi_7000_6,architectural_plan,1.01,1.01,0.462,0.83,Отметка чистового пола
+archi_7000_6,architectural_plan,1.02,1.02,0.53,0.828,Отметка чистового пола
+archi_7000_8,architectural_plan,2.1,+2.10,0.237,0.17,Отметка уровня пола в верхней левой комнате
+archi_7000_8,architectural_plan,-0.15,-0.15,0.275,0.756,Отметка уровня пола в зале (основное пространство)
+archi_7000_8,architectural_plan,3.15,+3.15,0.393,0.458,Отметка уровня пола или площадки
+dunaisky_514913,engineering_plan,13.85,13.85,0.39,0.055,Отметка рельефа (Дунайский проспект)
+dunaisky_514913,engineering_plan,13.79,13.79,0.352,0.075,Отметка рельефа (Дунайский проспект)
+dunaisky_514913,engineering_plan,13.82,13.82,0.228,0.098,Отметка рельефа (Дунайский проспект)
+dunaisky_514913,engineering_plan,13.83,13.83,0.174,0.12,Отметка рельефа
+dunaisky_514913,engineering_plan,13.8,13.80,0.156,0.185,Отметка рельефа
+dunaisky_514913,engineering_plan,13.81,13.81,0.153,0.193,Отметка рельефа
+dunaisky_514913,engineering_plan,14.0,14.00,0.206,0.209,Отметка рельефа
+dunaisky_514913,engineering_plan,13.97,13.97,0.224,0.202,Отметка рельефа
+dunaisky_514913,engineering_plan,13.25,13.25,0.233,0.178,Отметка рельефа
+dunaisky_514913,engineering_plan,14.2,14.20,0.278,0.192,Отметка рельефа
+dunaisky_514913,engineering_plan,14.38,14.38,0.309,0.22,Отметка рельефа
+dunaisky_514913,engineering_plan,14.41,14.41,0.407,0.214,Отметка рельефа
+dunaisky_514913,engineering_plan,14.31,14.31,0.406,0.259,Отметка рельефа
+dunaisky_514913,engineering_plan,14.41,14.41,0.436,0.265,Отметка рельефа
+dunaisky_514913,engineering_plan,14.58,14.58,0.441,0.208,Отметка рельефа
+dunaisky_514913,engineering_plan,15.7,15.70,0.401,0.096,Отметка рельефа
+dunaisky_514913,engineering_plan,15.68,15.68,0.396,0.101,Отметка рельефа
+dunaisky_514913,engineering_plan,14.04,14.04,0.4,0.117,Отметка рельефа
+dunaisky_514913,engineering_plan,14.24,14.24,0.405,0.128,Отметка рельефа
+dunaisky_514913,engineering_plan,14.29,14.29,0.41,0.138,Отметка рельефа
+dunaisky_514913,engineering_plan,14.34,14.34,0.43,0.147,Отметка рельефа
+dunaisky_514913,engineering_plan,14.32,14.32,0.435,0.158,Отметка рельефа
+dunaisky_514913,engineering_plan,14.37,14.37,0.42,0.162,Отметка рельефа
+dunaisky_514913,engineering_plan,14.11,14.11,0.36,0.155,Отметка рельефа
+dunaisky_514913,engineering_plan,13.12,13.12,0.339,0.145,Отметка рельефа
+dunaisky_514913,engineering_plan,13.73,13.73,0.27,0.148,Отметка рельефа
+dunaisky_514913,engineering_plan,13.83,13.83,0.268,0.157,Отметка рельефа
+dunaisky_514913,engineering_plan,13.05,13.05,0.28,0.169,Отметка рельефа
+dunaisky_514913,engineering_plan,14.08,14.08,0.164,0.229,Отметка рельефа
+dunaisky_514913,engineering_plan,14.08,14.08,0.16,0.252,Отметка рельефа
+dunaisky_514913,engineering_plan,14.42,14.42,0.167,0.289,Отметка рельефа
+dunaisky_514913,engineering_plan,14.9,14.90,0.114,0.303,Отметка рельефа
+dunaisky_514913,engineering_plan,14.2,14.20,0.121,0.29,Отметка рельефа
+dunaisky_514913,engineering_plan,13.78,13.78,0.058,0.183,Отметка рельефа
+dunaisky_514913,engineering_plan,13.94,13.94,0.089,0.14,Отметка рельефа
+dunaisky_514913,engineering_plan,13.75,13.75,0.1,0.203,Отметка рельефа
+dunaisky_514913,engineering_plan,13.88,13.88,0.105,0.212,Отметка рельефа
+dunaisky_514913,engineering_plan,13.98,13.98,0.078,0.24,Отметка рельефа
+dunaisky_514913,engineering_plan,12.92,12.92,0.065,0.23,Отметка рельефа
+dunaisky_514913,engineering_plan,13.74,13.74,0.069,0.254,Отметка рельефа
+dunaisky_514913,engineering_plan,13.65,13.65,0.078,0.33,Отметка рельефа
+dunaisky_514913,engineering_plan,13.89,13.89,0.073,0.375,Отметка рельефа
+dunaisky_514913,engineering_plan,13.87,13.87,0.078,0.38,Отметка рельефа
+dunaisky_514913,engineering_plan,13.88,13.88,0.095,0.398,Отметка рельефа
+dunaisky_514913,engineering_plan,14.49,14.49,0.217,0.269,Отметка рельефа
+dunaisky_514913,engineering_plan,14.46,14.46,0.226,0.273,Отметка рельефа
+dunaisky_514913,engineering_plan,14.82,14.82,0.354,0.289,Отметка рельефа
+dunaisky_514913,engineering_plan,14.37,14.37,0.37,0.295,Отметка рельефа
+dunaisky_514913,engineering_plan,10.17,10.17,0.35,0.404,Отметка чистового пола или рельефа внутри здания
+dunaisky_514913,engineering_plan,14.51,14.51,0.389,0.399,Отметка рельефа
+dunaisky_514913,engineering_plan,14.18,14.18,0.454,0.35,Отметка рельефа
+dunaisky_514913,engineering_plan,14.01,14.01,0.468,0.432,Отметка рельефа
+dunaisky_514913,engineering_plan,14.32,14.32,0.409,0.509,Отметка рельефа
+dunaisky_514913,engineering_plan,14.55,14.55,0.433,0.545,Отметка рельефа
+dunaisky_514913,engineering_plan,14.21,14.21,0.5,0.594,Отметка рельефа
+dunaisky_514913,engineering_plan,14.88,14.88,0.439,0.561,Отметка рельефа
+dunaisky_514913,engineering_plan,14.64,14.64,0.471,0.562,Отметка рельефа
+dunaisky_514913,engineering_plan,14.05,14.05,0.486,0.52,Отметка рельефа
+dunaisky_514913,engineering_plan,14.24,14.24,0.5,0.6,Отметка рельефа
+dunaisky_514913,engineering_plan,14.6,14.60,0.432,0.622,Отметка рельефа
+dunaisky_514913,engineering_plan,14.81,14.81,0.441,0.666,Отметка рельефа
+dunaisky_514913,engineering_plan,14.41,14.41,0.422,0.692,Отметка рельефа
+dunaisky_514913,engineering_plan,14.34,14.34,0.414,0.697,Отметка рельефа
+dunaisky_514913,engineering_plan,14.21,14.21,0.535,0.661,Отметка рельефа
+dunaisky_514913,engineering_plan,14.43,14.43,0.537,0.725,Отметка рельефа
+dunaisky_514913,engineering_plan,14.29,14.29,0.47,0.72,Отметка рельефа
+dunaisky_514913,engineering_plan,14.92,14.92,0.47,0.718,Отметка рельефа
+dunaisky_514913,engineering_plan,14.59,14.59,0.482,0.735,Отметка рельефа
+dunaisky_514913,engineering_plan,14.61,14.61,0.502,0.738,Отметка рельефа
+dunaisky_514913,engineering_plan,14.53,14.53,0.512,0.751,Отметка рельефа
+dunaisky_514913,engineering_plan,14.52,14.52,0.518,0.762,Отметка рельефа
+dunaisky_514913,engineering_plan,14.51,14.51,0.528,0.772,Отметка рельефа
+dunaisky_514913,engineering_plan,14.54,14.54,0.535,0.817,Отметка рельефа
+dunaisky_514913,engineering_plan,14.62,14.62,0.55,0.867,Отметка рельефа
+dunaisky_514913,engineering_plan,14.57,14.57,0.56,0.872,Отметка рельефа
+dunaisky_514913,engineering_plan,14.67,14.67,0.57,0.85,Отметка рельефа
+dunaisky_514913,engineering_plan,14.68,14.68,0.57,0.858,Отметка рельефа
+dunaisky_514913,engineering_plan,14.82,14.82,0.58,0.892,Отметка рельефа
+dunaisky_514913,engineering_plan,14.84,14.84,0.59,0.9,Отметка рельефа
+dunaisky_514913,engineering_plan,14.91,14.91,0.6,0.91,Отметка рельефа
+dunaisky_514913,engineering_plan,14.94,14.94,0.61,0.92,Отметка рельефа
+dunaisky_514913,engineering_plan,14.97,14.97,0.62,0.93,Отметка рельефа
+dunaisky_514913,engineering_plan,14.99,14.99,0.63,0.94,Отметка рельефа
+dunaisky_514913,engineering_plan,15.02,15.02,0.64,0.95,Отметка рельефа
+dunaisky_514913,engineering_plan,15.05,15.05,0.65,0.96,Отметка рельефа
+dunaisky_514913,engineering_plan,15.08,15.08,0.66,0.97,Отметка рельефа
+dunaisky_514913,engineering_plan,15.11,15.11,0.67,0.98,Отметка рельефа
+dunaisky_514913,engineering_plan,15.14,15.14,0.68,0.99,Отметка рельефа
+dunaisky_514913,engineering_plan,14.74,14.74,0.31,0.91,Отметка рельефа
+dunaisky_514913,engineering_plan,14.71,14.71,0.34,0.9,Отметка рельефа
+dunaisky_514913,engineering_plan,14.68,14.68,0.365,0.895,Отметка рельефа
+dunaisky_514913,engineering_plan,14.65,14.65,0.385,0.888,Отметка рельефа
+dunaisky_514913,engineering_plan,14.63,14.63,0.405,0.88,Отметка рельефа
+dunaisky_514913,engineering_plan,14.6,14.60,0.425,0.872,Отметка рельефа
+dunaisky_514913,engineering_plan,14.57,14.57,0.445,0.865,Отметка рельефа
+dunaisky_514913,engineering_plan,14.54,14.54,0.465,0.858,Отметка рельефа
+dunaisky_514913,engineering_plan,14.51,14.51,0.485,0.85,Отметка рельефа
+dunaisky_514913,engineering_plan,14.49,14.49,0.38,0.85,Отметка рельефа
+dunaisky_514913,engineering_plan,14.47,14.47,0.395,0.845,Отметка рельефа
+dunaisky_514913,engineering_plan,14.45,14.45,0.41,0.84,Отметка рельефа
+dunaisky_514913,engineering_plan,14.43,14.43,0.425,0.835,Отметка рельефа
+dunaisky_514913,engineering_plan,14.41,14.41,0.44,0.83,Отметка рельефа
+dunaisky_514913,engineering_plan,14.39,14.39,0.455,0.825,Отметка рельефа
+dunaisky_514913,engineering_plan,14.37,14.37,0.47,0.82,Отметка рельефа
+dunaisky_514913,engineering_plan,14.35,14.35,0.485,0.815,Отметка рельефа
+dunaisky_514913,engineering_plan,14.33,14.33,0.5,0.81,Отметка рельефа
+dunaisky_514913,engineering_plan,14.31,14.31,0.515,0.805,Отметка рельефа
+dunaisky_514913,engineering_plan,14.29,14.29,0.53,0.8,Отметка рельефа
+dunaisky_514913,engineering_plan,14.27,14.27,0.545,0.795,Отметка рельефа
+dunaisky_514913,engineering_plan,14.25,14.25,0.56,0.79,Отметка рельефа
+dunaisky_514913,engineering_plan,14.23,14.23,0.575,0.785,Отметка рельефа
+dunaisky_514913,engineering_plan,14.21,14.21,0.59,0.78,Отметка рельефа
+dunaisky_514913,engineering_plan,14.19,14.19,0.605,0.775,Отметка рельефа
+dunaisky_514913,engineering_plan,14.17,14.17,0.62,0.77,Отметка рельефа
+dunaisky_514913,engineering_plan,14.15,14.15,0.635,0.765,Отметка рельефа
+dunaisky_514913,engineering_plan,14.13,14.13,0.65,0.76,Отметка рельефа
+dunaisky_514913,engineering_plan,14.11,14.11,0.665,0.755,Отметка рельефа
+dunaisky_514913,engineering_plan,14.09,14.09,0.68,0.75,Отметка рельефа
+dunaisky_514913,engineering_plan,14.07,14.07,0.695,0.745,Отметка рельефа
+dunaisky_514913,engineering_plan,14.05,14.05,0.71,0.74,Отметка рельефа
+dunaisky_514913,engineering_plan,14.03,14.03,0.725,0.735,Отметка рельефа
+dunaisky_514913,engineering_plan,14.01,14.01,0.74,0.73,Отметка рельефа
+dunaisky_514913,engineering_plan,13.99,13.99,0.755,0.725,Отметка рельефа
+dunaisky_514913,engineering_plan,13.97,13.97,0.77,0.72,Отметка рельефа
+dunaisky_514913,engineering_plan,13.95,13.95,0.785,0.715,Отметка рельефа
+dunaisky_514913,engineering_plan,13.93,13.93,0.8,0.71,Отметка рельефа
+dunaisky_514913,engineering_plan,13.91,13.91,0.815,0.705,Отметка рельефа
+dunaisky_514913,engineering_plan,13.89,13.89,0.83,0.7,Отметка рельефа
+dunaisky_514913,engineering_plan,13.87,13.87,0.845,0.695,Отметка рельефа
+dunaisky_514913,engineering_plan,13.85,13.85,0.86,0.69,Отметка рельефа
+dunaisky_514913,engineering_plan,13.83,13.83,0.875,0.685,Отметка рельефа
+dunaisky_514913,engineering_plan,13.81,13.81,0.89,0.68,Отметка рельефа
+dunaisky_514913,engineering_plan,13.79,13.79,0.905,0.675,Отметка рельефа
+dunaisky_514913,engineering_plan,13.77,13.77,0.92,0.67,Отметка рельефа
+dunaisky_514913,engineering_plan,13.75,13.75,0.935,0.665,Отметка рельефа
+dunaisky_514913,engineering_plan,13.73,13.73,0.95,0.66,Отметка рельефа
+dunaisky_514913,engineering_plan,13.71,13.71,0.965,0.655,Отметка рельефа
+dunaisky_514913,engineering_plan,13.69,13.69,0.98,0.65,Отметка рельефа

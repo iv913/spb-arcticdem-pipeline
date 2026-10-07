@@ -1,0 +1,50 @@
+{
+  "experiment": "ICESat as relative criterion (43K vs 40 passport)",
+  "method": "Sample current model surface at ICESat points, compare to baseline",
+  "icesat_total": 43334,
+  "icesat_valid_paired": 37322,
+  "baseline_mad": 0.6851858545303344,
+  "current_mad": 0.6969157144546508,
+  "delta_mad": 0.01172985992431641,
+  "sign_test": {
+    "n_better": 22499,
+    "n_worse": 14658,
+    "n_tied": 165,
+    "p_value": 0.0,
+    "pct_better": 60.55117474500094,
+    "significant_5pct": true,
+    "highly_significant": true
+  },
+  "wilcoxon": {
+    "statistic": 301317916.5,
+    "p_value": 7.960695858799343e-100,
+    "median_diff_abs_dZ": 0.07979965209960938
+  },
+  "per_point_median_bootstrap": {
+    "median": 0.07979965209960938,
+    "ci_95": [
+      0.078125,
+      0.0859375
+    ],
+    "ci_width": 0.0078125
+  },
+  "power_analysis": {
+    "passport_n": 40,
+    "passport_sign_test_threshold_pct": 67.5,
+    "icesat_n": 37322,
+    "icesat_sign_test_threshold_pct": 50.50727518908796,
+    "sensitivity_improvement_x": 34.498040464907206
+  },
+  "comparison_to_passport": {
+    "passport_mad": 1.4497048125000005,
+    "icesat_mad": 0.6969157144546508,
+    "note": "ICESat MAD smaller because tracks are over open areas, not urban canyon"
+  },
+  "implications_for_stage_2": [
+    "For each Stage 2 iteration: sample new model at 43K ICESat points",
+    "Use paired sign test on ICESat (much more powerful than passport MAD)",
+    "Can detect ~0.3% asymmetry at p<0.05 (vs 17.5% on passport)",
+    "However ICESat measures surface, not datum \u2014 for absolute datum check need passport",
+    "For relative comparison (v8 vs v9b vs new iteration): ICESat is perfect"
+  ]
+}

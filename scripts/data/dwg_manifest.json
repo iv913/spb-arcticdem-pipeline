@@ -1,0 +1,1004 @@
+[
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/1. Схема расположения элемента планировочной структуры.dwg",
+    "relative_path": "1. Графическая часть/1. Схема расположения элемента планировочной структуры.dwg",
+    "flat_name": "1__Схема_расположения_элемента_планировочной_структуры__18e09b1b.dwg",
+    "size_bytes": 128268
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/2. Схема использования территории в период подготовки ППТ.dwg",
+    "relative_path": "1. Графическая часть/2. Схема использования территории в период подготовки ППТ.dwg",
+    "flat_name": "2__Схема_использования_территории_в_период_подготовки_ППТ__799cb829.dwg",
+    "size_bytes": 840956
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/3. Схема организации улично-дорожной сети.dwg",
+    "relative_path": "1. Графическая часть/3. Схема организации улично-дорожной сети.dwg",
+    "flat_name": "3__Схема_организации_улично-дорожной_сети__d8035be8.dwg",
+    "size_bytes": 3365231
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/4. Схема вертикальной планировки территории.dwg",
+    "relative_path": "1. Графическая часть/4. Схема вертикальной планировки территории.dwg",
+    "flat_name": "4__Схема_вертикальной_планировки_территории__75da8480.dwg",
+    "size_bytes": 3321865
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/5. Схема границ территории объектов культурного наследия.dwg",
+    "relative_path": "1. Графическая часть/5. Схема границ территории объектов культурного наследия.dwg",
+    "flat_name": "5__Схема_границ_территории_объектов_культурного_наследия__adde067f.dwg",
+    "size_bytes": 55088019
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/6. Схема границ зон с особыми условиями использования территорий.dwg",
+    "relative_path": "1. Графическая часть/6. Схема границ зон с особыми условиями использования территорий.dwg",
+    "flat_name": "6__Схема_границ_зон_с_особыми_условиями_использования_террит__8d6f994c.dwg",
+    "size_bytes": 307378
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/7. Схема границ зон, подверженных риску возникновения ЧС.dwg",
+    "relative_path": "1. Графическая часть/7. Схема границ зон, подверженных риску возникновения ЧС.dwg",
+    "flat_name": "7__Схема_границ_зон__подверженных_риску_возникновения_ЧС__adcaa5de.dwg",
+    "size_bytes": 1372819
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/1. Графическая часть/8. Схема конструктивных и планировочных решений.dwg",
+    "relative_path": "1. Графическая часть/8. Схема конструктивных и планировочных решений.dwg",
+    "flat_name": "8__Схема_конструктивных_и_планировочных_решений__0255ac7a.dwg",
+    "size_bytes": 1431355
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "relative_path": "new/ppt3/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "flat_name": "1__Схема_разположения_ЭПС__4e4d2370.dwg",
+    "size_bytes": 3701708
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/2. Схема использования территории.dwg",
+    "relative_path": "new/ppt3/Графическая часть/2. Схема использования территории.dwg",
+    "flat_name": "2__Схема_использования_территории__b11bfc34.dwg",
+    "size_bytes": 3880236
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/3. Схема ОКН.dwg",
+    "relative_path": "new/ppt3/Графическая часть/3. Схема ОКН.dwg",
+    "flat_name": "3__Схема_ОКН__c11c5dbf.dwg",
+    "size_bytes": 5477058
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "relative_path": "new/ppt3/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "flat_name": "4__Схема_ЗОУИТ__3293a1b7.dwg",
+    "size_bytes": 6309113
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/5. Схема ЧС.dwg",
+    "relative_path": "new/ppt3/Графическая часть/5. Схема ЧС.dwg",
+    "flat_name": "5__Схема_ЧС__98a1a4ba.dwg",
+    "size_bytes": 5510106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt3/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "relative_path": "new/ppt3/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "flat_name": "6__Схема_конструктивных_и_планировочных_решений__58251a43.dwg",
+    "size_bytes": 5818432
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "relative_path": "new/ppt4/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "flat_name": "1__Схема_разположения_ЭПС__210d4c76.dwg",
+    "size_bytes": 3701708
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/2. Схема использования территории.dwg",
+    "relative_path": "new/ppt4/Графическая часть/2. Схема использования территории.dwg",
+    "flat_name": "2__Схема_использования_территории__2c197230.dwg",
+    "size_bytes": 3880236
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/3. Схема ОКН.dwg",
+    "relative_path": "new/ppt4/Графическая часть/3. Схема ОКН.dwg",
+    "flat_name": "3__Схема_ОКН__45aee894.dwg",
+    "size_bytes": 5477058
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "relative_path": "new/ppt4/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "flat_name": "4__Схема_ЗОУИТ__15abbbab.dwg",
+    "size_bytes": 6309113
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/5. Схема ЧС.dwg",
+    "relative_path": "new/ppt4/Графическая часть/5. Схема ЧС.dwg",
+    "flat_name": "5__Схема_ЧС__bb416dd8.dwg",
+    "size_bytes": 5510106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt4/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "relative_path": "new/ppt4/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "flat_name": "6__Схема_конструктивных_и_планировочных_решений__f3964057.dwg",
+    "size_bytes": 5818432
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "relative_path": "new/ppt5/Графическая часть/1. Схема разположения ЭПС.dwg",
+    "flat_name": "1__Схема_разположения_ЭПС__f292924d.dwg",
+    "size_bytes": 3701708
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/2. Схема использования территории.dwg",
+    "relative_path": "new/ppt5/Графическая часть/2. Схема использования территории.dwg",
+    "flat_name": "2__Схема_использования_территории__b522bec7.dwg",
+    "size_bytes": 3880236
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/3. Схема ОКН.dwg",
+    "relative_path": "new/ppt5/Графическая часть/3. Схема ОКН.dwg",
+    "flat_name": "3__Схема_ОКН__0aa7bef9.dwg",
+    "size_bytes": 5477058
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "relative_path": "new/ppt5/Графическая часть/4. Схема ЗОУИТ.dwg",
+    "flat_name": "4__Схема_ЗОУИТ__f8d9fc04.dwg",
+    "size_bytes": 6309113
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/5. Схема ЧС.dwg",
+    "relative_path": "new/ppt5/Графическая часть/5. Схема ЧС.dwg",
+    "flat_name": "5__Схема_ЧС__8d84cb08.dwg",
+    "size_bytes": 5510106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/new/ppt5/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "relative_path": "new/ppt5/Графическая часть/6. Схема конструктивных и планировочных решений.dwg",
+    "flat_name": "6__Схема_конструктивных_и_планировочных_решений__dd0b28f1.dwg",
+    "size_bytes": 5818432
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_1/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_1/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Изм-ППиМТ-Охта_Парк__b3bbd719.dwg",
+    "size_bytes": 1258698
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_1/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_1/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Топография-ППиМТ-Охта_Парк__d8960d4a.dwg",
+    "size_bytes": 1412600
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_2/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_2/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Изм-ППиМТ-Охта_Парк__4ea4841a.dwg",
+    "size_bytes": 1258698
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_2/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_2/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Топография-ППиМТ-Охта_Парк__c321ecf5.dwg",
+    "size_bytes": 1412600
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_3/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_3/Материалы по обоснованию/Изм-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Изм-ППиМТ-Охта_Парк__3c765c76.dwg",
+    "size_bytes": 1258698
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new/road_ppt_3/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "relative_path": "road_new/road_ppt_3/Материалы по обоснованию/Топография-ППиМТ-Охта Парк.dwg",
+    "flat_name": "Топография-ППиМТ-Охта_Парк__78b0d61d.dwg",
+    "size_bytes": 1412600
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "flat_name": "1__Схема_расположения__b878cda4.dwg",
+    "size_bytes": 1055091
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "flat_name": "2_Схема_использования__6204a47d.dwg",
+    "size_bytes": 337722
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "flat_name": "3_Схема_УДС__cbb00c6a.dwg",
+    "size_bytes": 1271301
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "flat_name": "4_2_Схема_вертик_план_профили__00eca54c.dwg",
+    "size_bytes": 444692
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "flat_name": "4_Схема_вертик_план__999538fe.dwg",
+    "size_bytes": 1272457
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "flat_name": "5_Схема_ЗОУИТ__03b4dc9b.dwg",
+    "size_bytes": 325941
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "flat_name": "6_Схема_ГОиЧС__6803223f.dwg",
+    "size_bytes": 339898
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "flat_name": "7_Схема_конструктивных_решений__10daa724.dwg",
+    "size_bytes": 1795201
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "flat_name": "05_01-24-П-ТКР1-02-03_План_М1500__11185895.dwg",
+    "size_bytes": 3152094
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "flat_name": "Gr_DPT__ab143fe5.dwg",
+    "size_bytes": 36910
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "flat_name": "Gr_planir_strukt__07c94e6a.dwg",
+    "size_bytes": 36691
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "flat_name": "Gr_zon_OKS__0cbc45fa.dwg",
+    "size_bytes": 43173
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "flat_name": "Gr_zon_OKS_R__cd3549d5.dwg",
+    "size_bytes": 39987
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "flat_name": "Krasnye_linii__f9a65f7a.dwg",
+    "size_bytes": 36048
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "flat_name": "ZU_ROSREESTR__9b22ef48.dwg",
+    "size_bytes": 520265
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "flat_name": "Демонтаж__d0fe6bfb.dwg",
+    "size_bytes": 114080
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "flat_name": "ЗОУИТ_проект__8e803eb2.dwg",
+    "size_bytes": 69849
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "flat_name": "ЗОУИТ_сущ_и_ГКН__3872b349.dwg",
+    "size_bytes": 473248
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "flat_name": "КЗ__0703226a.dwg",
+    "size_bytes": 65310
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "flat_name": "НК_НВ_ЛОС_ТС_1__6268df99.dwg",
+    "size_bytes": 105346
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "flat_name": "Направление_движения_пешеход__6a465eb5.dwg",
+    "size_bytes": 180522
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "flat_name": "Направление_движения_трансп__1d3795f1.dwg",
+    "size_bytes": 158897
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "flat_name": "Ось__b89ac1bc.dwg",
+    "size_bytes": 107392
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "flat_name": "Проектные_решения__e27978f3.dwg",
+    "size_bytes": 1547076
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "flat_name": "СЛОЙ_НО__a41a88a6.dwg",
+    "size_bytes": 798887
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "flat_name": "СЛОЙ_ЭС__190d9ee3.dwg",
+    "size_bytes": 149251
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "flat_name": "СЛОЙ_ЭС_П__f751a1f1.dwg",
+    "size_bytes": 91029
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "flat_name": "Топо__eee01f16.dwg",
+    "size_bytes": 928084
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "flat_name": "Чертеж1_recover__1f89530a.dwg",
+    "size_bytes": 84106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "relative_path": "road_new2/road2_ppt_1/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "flat_name": "вертикальная_планировка__feb95c3b.dwg",
+    "size_bytes": 214778
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "flat_name": "1__Схема_расположения__94d15dbe.dwg",
+    "size_bytes": 1055091
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "flat_name": "2_Схема_использования__ef3b1ff6.dwg",
+    "size_bytes": 337722
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "flat_name": "3_Схема_УДС__2c321caa.dwg",
+    "size_bytes": 1271301
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "flat_name": "4_2_Схема_вертик_план_профили__0ec8134f.dwg",
+    "size_bytes": 444692
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "flat_name": "4_Схема_вертик_план__56e701db.dwg",
+    "size_bytes": 1272457
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "flat_name": "5_Схема_ЗОУИТ__a668b26b.dwg",
+    "size_bytes": 325941
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "flat_name": "6_Схема_ГОиЧС__c4b814bb.dwg",
+    "size_bytes": 339898
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "flat_name": "7_Схема_конструктивных_решений__01a79602.dwg",
+    "size_bytes": 1795201
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "flat_name": "05_01-24-П-ТКР1-02-03_План_М1500__749f6b32.dwg",
+    "size_bytes": 3152094
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "flat_name": "Gr_DPT__580e9432.dwg",
+    "size_bytes": 36910
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "flat_name": "Gr_planir_strukt__f0f93dd9.dwg",
+    "size_bytes": 36691
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "flat_name": "Gr_zon_OKS__093c0e45.dwg",
+    "size_bytes": 43173
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "flat_name": "Gr_zon_OKS_R__315c75de.dwg",
+    "size_bytes": 39987
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "flat_name": "Krasnye_linii__89c23190.dwg",
+    "size_bytes": 36048
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "flat_name": "ZU_ROSREESTR__1bb7c633.dwg",
+    "size_bytes": 520265
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "flat_name": "Демонтаж__170dee84.dwg",
+    "size_bytes": 114080
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "flat_name": "ЗОУИТ_проект__aeb660db.dwg",
+    "size_bytes": 69849
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "flat_name": "ЗОУИТ_сущ_и_ГКН__25f66e76.dwg",
+    "size_bytes": 473248
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "flat_name": "КЗ__10ccd2c6.dwg",
+    "size_bytes": 65310
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "flat_name": "НК_НВ_ЛОС_ТС_1__45b3a96d.dwg",
+    "size_bytes": 105346
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "flat_name": "Направление_движения_пешеход__f9618b2e.dwg",
+    "size_bytes": 180522
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "flat_name": "Направление_движения_трансп__243ed8cc.dwg",
+    "size_bytes": 158897
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "flat_name": "Ось__a8c5fc90.dwg",
+    "size_bytes": 107392
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "flat_name": "Проектные_решения__79ae12c7.dwg",
+    "size_bytes": 1547076
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "flat_name": "СЛОЙ_НО__5cfa5b0d.dwg",
+    "size_bytes": 798887
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "flat_name": "СЛОЙ_ЭС__92a74635.dwg",
+    "size_bytes": 149251
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "flat_name": "СЛОЙ_ЭС_П__912976f2.dwg",
+    "size_bytes": 91029
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "flat_name": "Топо__a1592400.dwg",
+    "size_bytes": 928084
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "flat_name": "Чертеж1_recover__adef1d2e.dwg",
+    "size_bytes": 84106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "relative_path": "road_new2/road2_ppt_2/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "flat_name": "вертикальная_планировка__12d96b28.dwg",
+    "size_bytes": 214778
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/1. Схема расположения.dwg",
+    "flat_name": "1__Схема_расположения__aade0208.dwg",
+    "size_bytes": 1055091
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/2.Схема использования.dwg",
+    "flat_name": "2_Схема_использования__09188a97.dwg",
+    "size_bytes": 337722
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/3.Схема УДС.dwg",
+    "flat_name": "3_Схема_УДС__e724555d.dwg",
+    "size_bytes": 1271301
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/4.2.Схема вертик_план_профили.dwg",
+    "flat_name": "4_2_Схема_вертик_план_профили__72bd3d9a.dwg",
+    "size_bytes": 444692
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/4.Схема вертик_план.dwg",
+    "flat_name": "4_Схема_вертик_план__2208ed11.dwg",
+    "size_bytes": 1272457
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "flat_name": "5_Схема_ЗОУИТ__ba89caf9.dwg",
+    "size_bytes": 325941
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "flat_name": "6_Схема_ГОиЧС__8f43f2b0.dwg",
+    "size_bytes": 339898
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/7.Схема конструктивных решений.dwg",
+    "flat_name": "7_Схема_конструктивных_решений__0212b8a1.dwg",
+    "size_bytes": 1795201
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/05_01-24-П-ТКР1-02-03 План М1500.dwg",
+    "flat_name": "05_01-24-П-ТКР1-02-03_План_М1500__bef4bb61.dwg",
+    "size_bytes": 3152094
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "flat_name": "Gr_DPT__d4a86cb0.dwg",
+    "size_bytes": 36910
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "flat_name": "Gr_planir_strukt__50416945.dwg",
+    "size_bytes": 36691
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "flat_name": "Gr_zon_OKS__d6b65c6b.dwg",
+    "size_bytes": 43173
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "flat_name": "Gr_zon_OKS_R__815f62aa.dwg",
+    "size_bytes": 39987
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Krasnye_linii.dwg",
+    "flat_name": "Krasnye_linii__2d399965.dwg",
+    "size_bytes": 36048
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ZU_ROSREESTR.dwg",
+    "flat_name": "ZU_ROSREESTR__ed6b7cac.dwg",
+    "size_bytes": 520265
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Демонтаж.dwg",
+    "flat_name": "Демонтаж__94af01d0.dwg",
+    "size_bytes": 114080
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ проект.dwg",
+    "flat_name": "ЗОУИТ_проект__1662491e.dwg",
+    "size_bytes": 69849
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/ЗОУИТ сущ и ГКН.dwg",
+    "flat_name": "ЗОУИТ_сущ_и_ГКН__bd0443ed.dwg",
+    "size_bytes": 473248
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/КЗ.dwg",
+    "flat_name": "КЗ__c9dc6fa4.dwg",
+    "size_bytes": 65310
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/НК_НВ_ЛОС_ТС_1.dwg",
+    "flat_name": "НК_НВ_ЛОС_ТС_1__62b0fdd1.dwg",
+    "size_bytes": 105346
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения пешеход.dwg",
+    "flat_name": "Направление_движения_пешеход__cd751812.dwg",
+    "size_bytes": 180522
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Направление движения трансп.dwg",
+    "flat_name": "Направление_движения_трансп__ed6e55d7.dwg",
+    "size_bytes": 158897
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Ось.dwg",
+    "flat_name": "Ось__8d5f6b57.dwg",
+    "size_bytes": 107392
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Проектные решения.dwg",
+    "flat_name": "Проектные_решения__1be64922.dwg",
+    "size_bytes": 1547076
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_НО.dwg",
+    "flat_name": "СЛОЙ_НО__3d5dc875.dwg",
+    "size_bytes": 798887
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС.DWG",
+    "flat_name": "СЛОЙ_ЭС__2f30e7e6.dwg",
+    "size_bytes": 149251
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "flat_name": "СЛОЙ_ЭС_П__9ec4ddaa.dwg",
+    "size_bytes": 91029
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Топо.dwg",
+    "flat_name": "Топо__2f13a329.dwg",
+    "size_bytes": 928084
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/Чертеж1_recover.dwg",
+    "flat_name": "Чертеж1_recover__35750178.dwg",
+    "size_bytes": 84106
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "relative_path": "road_new2/road2_ppt_3/Материалы_по_обоснованию/Графическая_часть/Внешние ссылки/вертикальная планировка.dwg",
+    "flat_name": "вертикальная_планировка__8856f1ad.dwg",
+    "size_bytes": 214778
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/1.Схема расположения ЭПС.dwg",
+    "relative_path": "Графическая_часть/1.Схема расположения ЭПС.dwg",
+    "flat_name": "1_Схема_расположения_ЭПС__84f1b6b5.dwg",
+    "size_bytes": 1707767
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/2.Схема использования.dwg",
+    "relative_path": "Графическая_часть/2.Схема использования.dwg",
+    "flat_name": "2_Схема_использования__e1be35df.dwg",
+    "size_bytes": 403537
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/3.Схема УДС.dwg",
+    "relative_path": "Графическая_часть/3.Схема УДС.dwg",
+    "flat_name": "3_Схема_УДС__511bcfea.dwg",
+    "size_bytes": 831203
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/4.1.Схема вертикальной планировки.dwg",
+    "relative_path": "Графическая_часть/4.1.Схема вертикальной планировки.dwg",
+    "flat_name": "4_1_Схема_вертикальной_планировки__1cc67626.dwg",
+    "size_bytes": 434566
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/4.2.Схема вертикальной планировки поперечн дор.dwg",
+    "relative_path": "Графическая_часть/4.2.Схема вертикальной планировки поперечн дор.dwg",
+    "flat_name": "4_2_Схема_вертикальной_планировки_поперечн_дор__84fe51bb.dwg",
+    "size_bytes": 2037240
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/4.3.Схема верт план ПП прим.dwg",
+    "relative_path": "Графическая_часть/4.3.Схема верт план ПП прим.dwg",
+    "flat_name": "4_3_Схема_верт_план_ПП_прим__dda87449.dwg",
+    "size_bytes": 1108159
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "relative_path": "Графическая_часть/5.Схема ЗОУИТ.dwg",
+    "flat_name": "5_Схема_ЗОУИТ__617af63a.dwg",
+    "size_bytes": 405936
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/6.Схема ГОиЧС.dwg",
+    "relative_path": "Графическая_часть/6.Схема ГОиЧС.dwg",
+    "flat_name": "6_Схема_ГОиЧС__1eb22c54.dwg",
+    "size_bytes": 425470
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/7.Схема конструкт_и_план_решений.dwg",
+    "relative_path": "Графическая_часть/7.Схема конструкт_и_план_решений.dwg",
+    "flat_name": "7_Схема_конструкт_и_план_решений__3221bf14.dwg",
+    "size_bytes": 1438368
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/3.1.Вертикальная планировка.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/3.1.Вертикальная планировка.dwg",
+    "flat_name": "3_1_Вертикальная_планировка__7b92d592.dwg",
+    "size_bytes": 470522
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/3.Схема УДС.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/3.Схема УДС.dwg",
+    "flat_name": "3_Схема_УДС__2b224a6a.dwg",
+    "size_bytes": 808813
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/3.Схема УДС_линии движения.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/3.Схема УДС_линии движения.dwg",
+    "flat_name": "3_Схема_УДС_линии_движения__60ae7b8b.dwg",
+    "size_bytes": 136964
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/47 СК ПЗУ Паркинг №14_ПЗУ от 09.2022_ПЗУ.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/47 СК ПЗУ Паркинг №14_ПЗУ от 09.2022_ПЗУ.dwg",
+    "flat_name": "47_СК_ПЗУ_Паркинг__14_ПЗУ_от_09_2022_ПЗУ__7b00a8dc.dwg",
+    "size_bytes": 6298053
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/7.Схема конструкт_и_план_решений.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/7.Схема конструкт_и_план_решений.dwg",
+    "flat_name": "7_Схема_конструкт_и_план_решений__ab72e5e9.dwg",
+    "size_bytes": 1325026
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Gr_DPT.dwg",
+    "flat_name": "Gr_DPT__5dd1965d.dwg",
+    "size_bytes": 55127
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Gr_planir_strukt.dwg",
+    "flat_name": "Gr_planir_strukt__d2205836.dwg",
+    "size_bytes": 3953147
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Gr_zon_OKS.dwg",
+    "flat_name": "Gr_zon_OKS__0da71e6c.dwg",
+    "size_bytes": 84894
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Gr_zon_OKS_R.dwg",
+    "flat_name": "Gr_zon_OKS_R__f4d8092e.dwg",
+    "size_bytes": 221943
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ГОиЧС.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ГОиЧС.dwg",
+    "flat_name": "ГОиЧС__507cf946.dwg",
+    "size_bytes": 226472
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Горизонтали Этап 3.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Горизонтали Этап 3.dwg",
+    "flat_name": "Горизонтали_Этап_3__60b7bd2b.dwg",
+    "size_bytes": 455867
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Граница полосы отвода.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Граница полосы отвода.dwg",
+    "flat_name": "Граница_полосы_отвода__1b77bb20.dwg",
+    "size_bytes": 447142
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ДПТ_Шоссейная.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ДПТ_Шоссейная.dwg",
+    "flat_name": "ДПТ_Шоссейная__02b86041.dwg",
+    "size_bytes": 886907
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ЗОУИТ_ГКН.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ЗОУИТ_ГКН.dwg",
+    "flat_name": "ЗОУИТ_ГКН__a70d63bd.dwg",
+    "size_bytes": 255143
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ЗОУИТ_проект.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ЗОУИТ_проект.dwg",
+    "flat_name": "ЗОУИТ_проект__ef26d59b.dwg",
+    "size_bytes": 66880
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ЗОУИТ_топо.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ЗОУИТ_топо.dwg",
+    "flat_name": "ЗОУИТ_топо__6f20ed99.dwg",
+    "size_bytes": 93376
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Здания_ГКН.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Здания_ГКН.dwg",
+    "flat_name": "Здания_ГКН__b37508fd.dwg",
+    "size_bytes": 2223350
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/КПТ Участки.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/КПТ Участки.dwg",
+    "flat_name": "КПТ_Участки__248a66ab.dwg",
+    "size_bytes": 11763836
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Красные линии точки.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Красные линии точки.dwg",
+    "flat_name": "Красные_линии_точки__58959e28.dwg",
+    "size_bytes": 190338
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Красные линии.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Красные линии.dwg",
+    "flat_name": "Красные_линии__26033f31.dwg",
+    "size_bytes": 74800
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/ПЗУ и ППТ.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/ПЗУ и ППТ.dwg",
+    "flat_name": "ПЗУ_и_ППТ__0d670c19.dwg",
+    "size_bytes": 574133
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/План реконструкции СПб-Приозерск.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/План реконструкции СПб-Приозерск.dwg",
+    "flat_name": "План_реконструкции_СПб-Приозерск__96d9b75d.dwg",
+    "size_bytes": 279418
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ АД.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ АД.dwg",
+    "flat_name": "СЛОЙ_АД__429bc9de.dwg",
+    "size_bytes": 1262069
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ Демонтаж.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ Демонтаж.dwg",
+    "flat_name": "СЛОЙ_Демонтаж__92add870.dwg",
+    "size_bytes": 103435
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ НВК.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ НВК.dwg",
+    "flat_name": "СЛОЙ_НВК__5967e567.dwg",
+    "size_bytes": 346172
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ НО.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ НО.dwg",
+    "flat_name": "СЛОЙ_НО__30776534.dwg",
+    "size_bytes": 1005439
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ СС.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ СС.dwg",
+    "flat_name": "СЛОЙ_СС__7cdab2e8.dwg",
+    "size_bytes": 946368
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ ТС.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ ТС.dwg",
+    "flat_name": "СЛОЙ_ТС__9306c234.dwg",
+    "size_bytes": 113792
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ ТС_с демонт_11.02.25.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ ТС_с демонт_11.02.25.dwg",
+    "flat_name": "СЛОЙ_ТС_с_демонт_11_02_25__532d0b85.dwg",
+    "size_bytes": 99838
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ ЭС.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ ЭС.dwg",
+    "flat_name": "СЛОЙ_ЭС__9448a828.dwg",
+    "size_bytes": 251325
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/СЛОЙ_ЭС_П.dwg",
+    "flat_name": "СЛОЙ_ЭС_П__9624ff55.dwg",
+    "size_bytes": 94585
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Сети _Gr_zon_OKS_R.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Сети _Gr_zon_OKS_R.dwg",
+    "flat_name": "Сети__Gr_zon_OKS_R__c2ae17aa.dwg",
+    "size_bytes": 695650
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Сущ.ППТ.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Сущ.ППТ.dwg",
+    "flat_name": "Сущ_ППТ__24711f51.dwg",
+    "size_bytes": 231468
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Топосъемка.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Топосъемка.dwg",
+    "flat_name": "Топосъемка__a2da56d7.dwg",
+    "size_bytes": 958962
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/Участки ППТ.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/Участки ППТ.dwg",
+    "flat_name": "Участки_ППТ__81e809aa.dwg",
+    "size_bytes": 109589
+  },
+  {
+    "source_path": "/tmp/my-project/scripts/data/ppt_documents/Графическая_часть/Внешние ссылки/смежные ГЗПРЛО.dwg",
+    "relative_path": "Графическая_часть/Внешние ссылки/смежные ГЗПРЛО.dwg",
+    "flat_name": "смежные_ГЗПРЛО__854a907a.dwg",
+    "size_bytes": 153568
+  }
+]

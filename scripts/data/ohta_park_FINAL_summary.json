@@ -1,0 +1,52 @@
+{
+  "source": "\u041e\u0445\u0442\u0430 \u041f\u0430\u0440\u043a DWG topo_v2 (ODA File Converter)",
+  "block_type": "g_330 (topographic point symbol)",
+  "n_points": 2079,
+  "crs": {
+    "cm_deg_east": 31.13,
+    "false_easting": 2250000,
+    "false_northing": -6180000,
+    "datum": "Pulkovo 1942 (CK-42)",
+    "proj4": "+proj=tmerc +lat_0=0 +lon_0=31.13 +k=1 +x_0=2250000 +y_0=-6180000 +ellps=krass +towgs84=23.92,-141.27,-80.9,0,0.35,0.82,-0.12 +units=m +no_defs"
+  },
+  "location": {
+    "lat_center": 59.84584679559404,
+    "lon_center": 30.631167140655045,
+    "lat_range": [
+      59.84384633009262,
+      59.84905866184467
+    ],
+    "lon_range": [
+      30.625474607847867,
+      30.635836326656445
+    ]
+  },
+  "survey_z": {
+    "range": [
+      20.87,
+      35.0
+    ],
+    "median": 27.54
+  },
+  "model_z": {
+    "range": [
+      20.00153923034668,
+      32.14484405517578
+    ],
+    "median": 29.257083892822266
+  },
+  "dH_stats": {
+    "median": -0.9563089752197272,
+    "mean": -0.7053231960881954,
+    "std": 2.3857952825009194,
+    "wilcoxon_p": 2.0108120646167253e-52,
+    "sign_test_p": 6.783100243135906e-59,
+    "n_pos": 674,
+    "n_neg": 1405
+  },
+  "abs_dH_stats": {
+    "mad": 1.597775192260741,
+    "mean": 1.9334215050973014,
+    "p95": 5.395500289916992
+  }
+}

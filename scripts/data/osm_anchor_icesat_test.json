@@ -1,0 +1,36 @@
+{
+  "experiment": "OSM-as-anchor test on ICESat (no pipeline re-run)",
+  "method": "For each ICESat near tagged building: OSM-pred + weighted combine + sign test",
+  "n_paired_points": 813,
+  "sigma_model": 1.07,
+  "sigma_source": 2.03,
+  "floor_h": 3.5,
+  "mad_baseline": 0.667190562433133,
+  "mad_combined": 1.1457996871102045,
+  "mad_osm_alone": 3.437185709999998,
+  "delta_mad": 0.4786091246770715,
+  "sign_test": {
+    "n_better": 301,
+    "n_worse": 512,
+    "n_tied": 0,
+    "p_value": 1.2995331645518365e-13,
+    "pct_better": 37.02337023370234,
+    "significant": true
+  },
+  "wilcoxon": {
+    "statistic": 99755.0,
+    "p_value": 1.0455830917368329e-22,
+    "median_diff": -0.19615272219677848,
+    "significant": true
+  },
+  "per_point_median_bootstrap": {
+    "median": -0.19615272219677848,
+    "ci_95": [
+      -0.26338527023783814,
+      -0.13913451012967792
+    ],
+    "significant": true
+  },
+  "tests_passing": 3,
+  "verdict": "OSM-as-anchor HURTS model (WORSE) \u2014 close direction"
+}

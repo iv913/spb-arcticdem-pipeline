@@ -1,0 +1,230 @@
+{
+  "experiment": "Systematic topo scraping via nakarte.me + VLM OCR",
+  "method": "Grid 0.05\u00b0 step, agent-browser screenshot + z-ai vision OCR",
+  "n_grid_points": 20,
+  "n_marks_found": 68,
+  "summary_per_point": [
+    {
+      "lat": 59.7,
+      "lon": 29.7,
+      "status": "OK",
+      "n_marks": 0
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.75,
+      "status": "OK",
+      "n_marks": 1
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.8,
+      "status": "OK",
+      "n_marks": 1
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.85,
+      "status": "OK",
+      "n_marks": 0
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.900000000000002,
+      "status": "OK",
+      "n_marks": 5
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.950000000000003,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.000000000000004,
+      "status": "OK",
+      "n_marks": 3
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.050000000000004,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.100000000000005,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.150000000000006,
+      "status": "OK",
+      "n_marks": 2
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.200000000000006,
+      "status": "OK",
+      "n_marks": 2
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.250000000000007,
+      "status": "OK",
+      "n_marks": 3
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.300000000000008,
+      "status": "OK",
+      "n_marks": 2
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.35000000000001,
+      "status": "OK",
+      "n_marks": 2
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.40000000000001,
+      "status": "OK",
+      "n_marks": 1
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.45000000000001,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.50000000000001,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.55000000000001,
+      "status": "OK",
+      "n_marks": 6
+    },
+    {
+      "lat": 59.7,
+      "lon": 30.600000000000012,
+      "status": "OK",
+      "n_marks": 4
+    },
+    {
+      "lat": 59.75,
+      "lon": 29.7,
+      "status": "OK",
+      "n_marks": 6
+    }
+  ],
+  "marks_sample": [
+    {
+      "lat": 59.7,
+      "lon": 29.75,
+      "elevation_m": 26.5,
+      "position_desc": "\u0446\u0435\u043d\u0442\u0440-\u043d\u0438\u0437",
+      "near": "\u041a\u041f '\u0411\u043e\u043b\u044c\u0448\u0430\u044f \u0421\u043b\u043e\u0431\u043e\u0434\u0430', \u043f\u0440\u0443\u0434",
+      "source_screenshot": "topo_59.7000_29.7500.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.75
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.8,
+      "elevation_m": 2.0,
+      "position_desc": "\u0446\u0435\u043d\u0442\u0440-\u043d\u0438\u0437",
+      "near": "\u041a\u041f \u0421\u0430\u043c\u043f\u0441\u043e\u043d\u0438\u0435\u0432\u0441\u043a\u043e\u0435 \u0421\u043b\u043e\u0431\u043e\u0434\u0430",
+      "source_screenshot": "topo_59.7000_29.8000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.8
+    },
+    {
+      "lat": 59.722522522522524,
+      "lon": 29.900000000000002,
+      "elevation_m": 26.5,
+      "position_desc": "\u043d\u0438\u0437-\u0446\u0435\u043d\u0442\u0440",
+      "near": "\u041f\u043e\u043b\u044f\u043d\u0430 \u0432 \u043b\u0435\u0441\u0443, \u044e\u0433\u043e-\u0432\u043e\u0441\u0442\u043e\u0447\u043d\u0435\u0435 \u043a\u043b\u0430\u0434\u0431\u0438\u0449\u0430 '\u0411\u043e\u0433\u043e\u0441\u043b\u043e\u0432\u0441\u043a\u043e\u0435'",
+      "source_screenshot": "topo_59.7000_29.9000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.900000000000002
+    },
+    {
+      "lat": 59.71351351351352,
+      "lon": 29.94504504504505,
+      "elevation_m": 30.0,
+      "position_desc": "\u043d\u0438\u0437-\u043b\u0435\u0432\u043e",
+      "near": "\u0420\u0430\u0439\u043e\u043d \u041a\u0422 '\u041c\u0430\u043b\u0438\u043d\u043e\u0432\u044b\u0435 \u043e\u0437\u0435\u0440\u0430', \u0437\u0430\u043f\u0430\u0434\u043d\u0435\u0435 \u043a\u043b\u0430\u0434\u0431\u0438\u0449\u0430",
+      "source_screenshot": "topo_59.7000_29.9000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.900000000000002
+    },
+    {
+      "lat": 59.7,
+      "lon": 29.94504504504505,
+      "elevation_m": 61.0,
+      "position_desc": "\u0446\u0435\u043d\u0442\u0440-\u043b\u0435\u0432\u043e",
+      "near": "\u041a\u043b\u0430\u0434\u0431\u0438\u0449\u0435 '\u0411\u043e\u0433\u043e\u0441\u043b\u043e\u0432\u0441\u043a\u043e\u0435', \u0440\u0430\u0439\u043e\u043d \u041a\u0422 '\u042e\u0436\u043d\u0430\u044f \u0414\u0430\u0447\u0430'",
+      "source_screenshot": "topo_59.7000_29.9000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.900000000000002
+    },
+    {
+      "lat": 59.68648648648649,
+      "lon": 29.94504504504505,
+      "elevation_m": 80.0,
+      "position_desc": "\u0432\u0435\u0440\u0445-\u043b\u0435\u0432\u043e",
+      "near": "\u0420\u0430\u0439\u043e\u043d \u041a\u0422 '\u042e\u0436\u043d\u044b\u0439 \u041a\u0443\u0440\u043c\u044c\u0435\u0440', \u0441\u0435\u0432\u0435\u0440\u043e-\u0437\u0430\u043f\u0430\u0434\u043d\u0435\u0435 \u043a\u043b\u0430\u0434\u0431\u0438\u0449\u0430",
+      "source_screenshot": "topo_59.7000_29.9000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.900000000000002
+    },
+    {
+      "lat": 59.68648648648649,
+      "lon": 29.94504504504505,
+      "elevation_m": 120.0,
+      "position_desc": "\u0432\u0435\u0440\u0445-\u043b\u0435\u0432\u043e (\u043a\u0440\u0430\u0439)",
+      "near": "\u0421\u0435\u0432\u0435\u0440\u043e-\u0437\u0430\u043f\u0430\u0434\u043d\u044b\u0439 \u0443\u0433\u043e\u043b \u043a\u0430\u0440\u0442\u044b, \u0440\u0430\u0439\u043e\u043d \u041a\u0422 '\u0417\u0435\u043b\u0435\u043d\u044b\u0439 \u041a\u0443\u0440\u043c\u044c\u0435\u0440'",
+      "source_screenshot": "topo_59.7000_29.9000.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.900000000000002
+    },
+    {
+      "lat": 59.68648648648649,
+      "lon": 29.99504504504505,
+      "elevation_m": 120.0,
+      "position_desc": "\u0432\u0435\u0440\u0445-\u043b\u0435\u0432\u043e",
+      "near": "\u0420\u0430\u0439\u043e\u043d \u041a\u0422 \u00ab\u041e\u0445\u0442\u0438\u043d\u0441\u043a\u0438\u0439 \u0434\u0432\u043e\u0440\u00bb, \u0441\u0435\u0432\u0435\u0440\u043d\u0435\u0435",
+      "source_screenshot": "topo_59.7000_29.9500.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.950000000000003
+    },
+    {
+      "lat": 59.67747747747748,
+      "lon": 29.950000000000003,
+      "elevation_m": 80.0,
+      "position_desc": "\u0432\u0435\u0440\u0445-\u0446\u0435\u043d\u0442\u0440-\u043b\u0435\u0432\u043e",
+      "near": "\u0420\u0430\u0439\u043e\u043d \u0430\u044d\u0440\u043e\u0434\u0440\u043e\u043c\u0430 \u0420\u0443\u043c\u043f\u043e\u0432\u0430, \u0441\u0435\u0432\u0435\u0440\u043e-\u0437\u0430\u043f\u0430\u0434\u043d\u0435\u0435",
+      "source_screenshot": "topo_59.7000_29.9500.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.950000000000003
+    },
+    {
+      "lat": 59.71351351351352,
+      "lon": 29.904954954954956,
+      "elevation_m": 61.0,
+      "position_desc": "\u043d\u0438\u0437-\u043f\u0440\u0430\u0432\u043e",
+      "near": "\u0412\u043e\u0434\u043e\u0451\u043c (\u043e\u0437\u0435\u0440\u043e), \u044e\u0433\u043e-\u0432\u043e\u0441\u0442\u043e\u0447\u043d\u0435\u0435 \u0436\u0438\u043b\u043e\u0439 \u0437\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",
+      "source_screenshot": "topo_59.7000_29.9500.png",
+      "grid_center_lat": 59.7,
+      "grid_center_lon": 29.950000000000003
+    }
+  ]
+}

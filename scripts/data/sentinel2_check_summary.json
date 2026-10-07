@@ -1,0 +1,52 @@
+{
+  "sentinel2_data": {
+    "ndvi_100m": {
+      "resolution_m": 100,
+      "coverage": "SPb full",
+      "range": "-0.334 to 0.724"
+    },
+    "scl_100m": {
+      "resolution_m": 100,
+      "coverage": "SPb full",
+      "classes_pct": {
+        "vegetation": 74.7,
+        "water": 18.8,
+        "bare_soil": 6.4,
+        "cloud": 0.3
+      }
+    }
+  },
+  "check_a": {
+    "correlation_ndvi_vs_abs_dH": 0.02305168816564108,
+    "n_holdout": 40,
+    "ndvi_distribution": {
+      "water (<0)": 1,
+      "bare (0-0.2)": 27,
+      "sparse (0.2-0.4)": 12,
+      "veg (0.4-0.6)": 0,
+      "dense (>0.6)": 0
+    }
+  },
+  "check_b": {
+    "scl_water_pixels": 225694,
+    "scl_water_pct": 18.75909096198378,
+    "approx_scl_water_km2": 269.94331894294663,
+    "cop_0_5_water_km2": 425.0,
+    "truth_water_km2": 329.0,
+    "scl_closer_to_truth": "True"
+  },
+  "check_c": {
+    "all_holdout_mad": 1.4497048125000005,
+    "urban_ndvi_lt_0_4_mad": 1.4497048125000005,
+    "vegetated_ndvi_ge_0_4_mad": null,
+    "n_urban": 40,
+    "n_vegetated": 0
+  },
+  "next_steps_for_real_use": [
+    "Download 10m Sentinel-2 B04+B08 for SPb (~600MB)",
+    "Compute NDVI at 10m \u2192 mask tree canopy inside building polygons",
+    "This should improve OSM building heights h_roof sampling (currently 2.53m MAD)",
+    "For now, 100m NDVI is too coarse for per-building filtering",
+    "But SCL water at 100m is good enough to replace cop<0.5 mask immediately"
+  ]
+}

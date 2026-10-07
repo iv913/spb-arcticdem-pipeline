@@ -1,0 +1,21 @@
+{
+  "source": "archi.ru VLM marks geolocated (NO dH filter — heights on plans can be > 15m)",
+  "n_total": 350,
+  "n_filtered_15": 338,
+  "n_filtered_50": 350,
+  "full_stats": {
+    "dH_median": -0.4219996643066404,
+    "abs_dH_mad": 1.081667175292969,
+    "pearson_r": -0.047265634903443196,
+    "wilcoxon_p": 0.010661585196151993,
+    "bootstrap_ci_95": [
+      -0.5143334197998044,
+      -0.2919996643066405
+    ]
+  },
+  "filtered_50_stats": {
+    "dH_median": -0.4219996643066404,
+    "abs_dH_mad": 1.081667175292969,
+    "pearson_r": -0.047265634903443196
+  }
+}

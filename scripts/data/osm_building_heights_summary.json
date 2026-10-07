@@ -1,0 +1,13 @@
+{
+  "n_holdout": 40,
+  "n_matched": 25,
+  "default_floor_h_3_5m": {
+    "mad": 3.2075110235824584,
+    "rmse": 4.560221948083302,
+    "median_dH": -0.0837505722045897
+  },
+  "v8_baseline_holdout_mad": 1.07,
+  "calibrated_floor_h": 4.05,
+  "calibrated_mad": 2.5255150235824586,
+  "beats_v8": false
+}

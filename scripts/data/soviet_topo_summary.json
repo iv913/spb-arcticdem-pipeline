@@ -1,0 +1,26 @@
+{
+  "source": "Soviet topographic maps (1:10000, scanned)",
+  "n_total_marks": 181,
+  "n_valid_model": 131,
+  "lat_range": [
+    59.67747747747748,
+    60.08315
+  ],
+  "lon_range": [
+    29.7,
+    30.52905
+  ],
+  "survey_z_median": 40.0,
+  "model_z_median": 26.526132583618164,
+  "dH_median": 0.6516788005828857,
+  "abs_dH_mad": 37.543846130371094,
+  "pearson_r": 0.0947580323648669,
+  "pearson_p": 0.28166558534741837,
+  "wilcoxon_p": 0.8290343377430118,
+  "sign_test_p": 1.0,
+  "bootstrap_ci_95": [
+    -6.622312164306642,
+    8.879018783569336
+  ],
+  "note": "Soviet topo maps use Baltic 1977 datum. Marks extracted manually from screenshots with known grid centers. Coords are already WGS84."
+}

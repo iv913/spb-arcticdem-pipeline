@@ -1,0 +1,9 @@
+{
+  "source": "ICESat-2 ATL08 ground points",
+  "n_total": 43334,
+  "n_valid": 43334,
+  "dZ_median": 0.20325422286987305,
+  "abs_dZ_mad": 0.5754938125610352,
+  "note": "dZ = h_te_ell - h_dem_ell (ICESat-2 vs ArcticDEM). NOTE: h_dem_ell is RAW ArcticDEM, not pipeline model. Need to sample pipeline model separately for honest comparison.",
+  "coverage": "ALL gap areas covered! 43K points across entire SPb+LO"
+}

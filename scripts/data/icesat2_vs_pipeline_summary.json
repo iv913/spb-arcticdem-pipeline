@@ -1,0 +1,11 @@
+{
+  "source": "ICESat-2 ATL08 ground vs pipeline model",
+  "n_total": 43334,
+  "n_valid": 36676,
+  "n_after_filter": 36620.0,
+  "dH_median": 16.040080070495605,
+  "abs_dH_mad": 16.040080070495605,
+  "pearson_r": 0.9955652008056768,
+  "wilcoxon_p": null,
+  "note": "ICESat-2 covers ALL gap areas. dH = h_te_ell - h_pipeline_model"
+}

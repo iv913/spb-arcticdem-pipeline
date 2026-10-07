@@ -1,0 +1,151 @@
+{
+  "experiment": "Sign test + Wilcoxon recheck (powerful per-point tests)",
+  "methodology": "Per-point tests instead of MAD-difference (weak)",
+  "tests_used": [
+    "1. Sign test (binomial, H0: P(better)=0.5)",
+    "2. Wilcoxon signed-rank (uses magnitude, robust to outliers)",
+    "3. Per-point median |dH_A|-|dH_B| bootstrap (proper paired)"
+  ],
+  "n_holdout": 40,
+  "significance_threshold": "27/40 better \u2192 p=0.038 (significant at 5%)",
+  "results": [
+    {
+      "pair": "v7_vs_v8",
+      "description": "passport train in prior (main improvement, BEST)",
+      "original_decision": "kept as BEST (\u0394 +0.284)",
+      "n_points": 40,
+      "mad_a": 1.3416942587957383,
+      "mad_b": 1.0576361851315497,
+      "delta_mad": -0.28405807366418867,
+      "sign_test": {
+        "n_better": 15,
+        "n_worse": 2,
+        "n_tied": 23,
+        "p_value": 0.002349853515625,
+        "pct_better": 88.23529411764706,
+        "significant_5pct": false,
+        "threshold_for_5pct": 27
+      },
+      "wilcoxon": {
+        "statistic": 21.0,
+        "p_value": 0.00665283203125,
+        "median_diff_abs_dH": 0.008914947509765625,
+        "significant_5pct": true
+      },
+      "per_point_median_bootstrap": {
+        "point_estimate": 0.0,
+        "ci_95": [
+          0.0,
+          1.430511474609375e-06
+        ],
+        "ci_width": 1.430511474609375e-06,
+        "significant": false
+      },
+      "paired_mad_bootstrap_weak": {
+        "point_estimate": 0.28405807366418867,
+        "ci_95": [
+          -0.052393138675689066,
+          0.5285022708416105
+        ],
+        "ci_width": 0.5808954095172996,
+        "significant": false
+      },
+      "final_verdict": "MARGINAL \u2014 1 of 3 tests significant",
+      "tests_passing": 1
+    },
+    {
+      "pair": "v8_vs_v9b",
+      "description": "choose_block_px (was kept, detail 23 hurt)",
+      "original_decision": "kept \u2014 \u0394 -0.134 (point estimate)",
+      "n_points": 40,
+      "mad_a": 1.0576361851315497,
+      "mad_b": 1.1914762304363247,
+      "delta_mad": 0.133840045304775,
+      "sign_test": {
+        "n_better": 6,
+        "n_worse": 17,
+        "n_tied": 17,
+        "p_value": 0.03468966484069824,
+        "pct_better": 26.08695652173913,
+        "significant_5pct": false,
+        "threshold_for_5pct": 27
+      },
+      "wilcoxon": {
+        "statistic": 80.0,
+        "p_value": 0.08020281791687012,
+        "median_diff_abs_dH": -0.04414224624633789,
+        "significant_5pct": false
+      },
+      "per_point_median_bootstrap": {
+        "point_estimate": 0.0,
+        "ci_95": [
+          -0.030741691589355906,
+          0.0
+        ],
+        "ci_width": 0.030741691589355906,
+        "significant": false
+      },
+      "paired_mad_bootstrap_weak": {
+        "point_estimate": -0.133840045304775,
+        "ci_95": [
+          -0.5104936230489847,
+          0.18651671655576707
+        ],
+        "ci_width": 0.6970103396047518,
+        "significant": false
+      },
+      "final_verdict": "NOT SIGNIFICANT \u2014 0 of 3 tests",
+      "tests_passing": 0
+    },
+    {
+      "pair": "v8_vs_v11",
+      "description": "accept_dsm_with_relief (HURT, REVERTED)",
+      "original_decision": "REVERTED \u2014 \u0394 +0.392 (HURT)",
+      "n_points": 40,
+      "mad_a": 1.0576361851315497,
+      "mad_b": 1.4497048125000005,
+      "delta_mad": 0.39206862736845083,
+      "sign_test": {
+        "n_better": 7,
+        "n_worse": 21,
+        "n_tied": 12,
+        "p_value": 0.012540951371192932,
+        "pct_better": 25.0,
+        "significant_5pct": false,
+        "threshold_for_5pct": 27
+      },
+      "wilcoxon": {
+        "statistic": 107.0,
+        "p_value": 0.028050199151039124,
+        "median_diff_abs_dH": -0.2212253737449642,
+        "significant_5pct": true
+      },
+      "per_point_median_bootstrap": {
+        "point_estimate": -0.01448523998260498,
+        "ci_95": [
+          -0.2212253737449642,
+          0.0
+        ],
+        "ci_width": 0.2212253737449642,
+        "significant": false
+      },
+      "paired_mad_bootstrap_weak": {
+        "point_estimate": -0.39206862736845083,
+        "ci_95": [
+          -0.6768302705546732,
+          0.350669250419712
+        ],
+        "ci_width": 1.0274995209743851,
+        "significant": false
+      },
+      "final_verdict": "MARGINAL \u2014 1 of 3 tests significant",
+      "tests_passing": 1
+    },
+    {
+      "pair": "v8_vs_v9_cap_far_field",
+      "description": "cap_far_field (REJECTED, no per-point dH)",
+      "final_verdict": "CANNOT TEST \u2014 no per-point dH saved",
+      "note": "Pipeline re-run needed (~30 min) to save per-point dH"
+    }
+  ]
+}

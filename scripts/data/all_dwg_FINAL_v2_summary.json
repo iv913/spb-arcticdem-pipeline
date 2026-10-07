@@ -1,0 +1,36 @@
+{
+  "consolidated_v2": {
+    "n_total": 4275,
+    "n_surveys": 5,
+    "surveys_included": [
+      "ПЗУ_и_ППТ__0d670c19.dxf",
+      "План_реконструкции_СПб-Приозерск__96d9b75d.dxf",
+      "Топо__2f13a329.dxf",
+      "Топография-ППиМТ-Охта_Парк__78b0d61d.dxf",
+      "Топосъемка__a2da56d7.dxf"
+    ],
+    "survey_z_median": 31.25,
+    "model_z_median": 30.31797409057617,
+    "dH_median": -0.611076202392578,
+    "dH_mean": -0.6397594925982762,
+    "dH_std": 2.7477240983677715,
+    "abs_dH_mad": 1.2565551757812514,
+    "abs_dH_mean": 1.855398660847727,
+    "abs_dH_p95": 6.427699302673328,
+    "n_pos": 1572,
+    "n_neg": 2703,
+    "pct_survey_higher": 36.771929824561404,
+    "wilcoxon_p": 4.0881743041471846e-85,
+    "sign_test_p": 1.0616383103396305e-67,
+    "bootstrap_ci_95": [
+      -0.6792126464843733,
+      -0.5361920852661151
+    ]
+  },
+  "rejected": {
+    "3__Схема_ОКН": "REJECTED: Pearson r = -0.330 (negative), Z_offset = false match artifact. Survey Z values are quantized (0.2m steps) — likely attribute codes, not elevations."
+  },
+  "partial_filter": {
+    "Топо__2f13a329.dxf": "Filtered to survey Z >= 38m. Low-Z points (29-37m) had MAD=7.8m, likely underground/utility points."
+  }
+}

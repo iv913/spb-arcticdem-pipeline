@@ -1,0 +1,33 @@
+{
+  "experiment": "reproduction of 0.03m MAD as artifact of zero-inflated train",
+  "user_observation": "GP spatial 5-fold CV gives MAD 0.038 on real dH, but same number on pure noise \u2192 0.03 is artifact",
+  "mechanism": "v11 train set: 163/174 (94%) of points have |dH|<0.01 because they are used as prior anchors in v8/v9b pipeline (detail=24). MAD is a median statistic; with 94% zeros in train, median(|dH|) \u2248 0 regardless of model output. This is a SAMPLE-COMPOSITION LEAK, not a spatial leak \u2014 no spatial CV can fix it.",
+  "evidence": {
+    "v11_train_total": 174,
+    "v11_train_zeros": 163,
+    "v11_train_zero_pct": 93.67816091954023,
+    "mad_real_dH_spatial_cv": 0.26250992914535315,
+    "mad_pure_noise_spatial_cv": 1.3660941187689237,
+    "mad_zero_inflated_noise_spatial_cv": 0.031306425705198385,
+    "diff_real_vs_pure_noise": 1.1035841896235705,
+    "diff_real_vs_zinfl": 0.23120350344015478,
+    "single_split_baseline_mad": 1.4497048125000005,
+    "single_split_gp_corrected_mad": 1.423734206275949,
+    "single_split_gp_rmse": 1.931443769719233
+  },
+  "verdict": "INCONCLUSIVE",
+  "implications": [
+    "05_ml_residual_correction.py is a NEGATIVE result \u2014 do not use ml_gp_model.pkl in production",
+    "v8 must NOT be modified (real verified gain: detail 23 MAD 2.031 \u2192 1.074)",
+    "The 0.03 m number is NOT a result of ML learning signal \u2014 it is fully reproduced by zero-inflated noise",
+    "No \"spatial CV\" can fix this \u2014 the leak is in sample composition, not geography",
+    "Recommendation to remove passport-train from prior is WRONG: trades verified v8 gain for hypothetical artifact derived from the leak"
+  ],
+  "rejected_recommendations": [
+    "\u274c \"Remove passport train from prior to let ML find signal\" \u2014 based on artifact, would lose real v8 gain",
+    "\u274c \"MAD will drop to ~0.5 m after ML\" \u2014 extrapolated from 0.03 artifact",
+    "\u274c \"GP Matern is the right ML method\" \u2014 gives same result on pure noise"
+  ],
+  "next_step": "Stage 2 of REVISED_ARCHITECTURE.md \u2014 source equalization BEFORE stitching. Joint solution of bias b_j across all sources (ICESat, passport, DSM, Copernicus) via least squares: z_ij = Z_i + b_j. This is the only structural move not yet tried. Critically, this works on OVERLAPS between sources, not on residuals after stitching.",
+  "note_on_05_module": "05_ml_residual_correction.py is KEPT as a NEGATIVE result with this reproduction analysis in its docstring and README. ml_gp_model.pkl is preserved but marked DO NOT USE."
+}

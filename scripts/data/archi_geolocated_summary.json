@@ -1,0 +1,9 @@
+{
+  "source": "archi.ru VLM-extracted marks (geolocated via project pages)",
+  "n_marks_geolocated": 350,
+  "n_projects": 8,
+  "dH_median": -0.4219996643066404,
+  "abs_dH_mad": 1.081667175292969,
+  "pearson_r": -0.047265634903443196,
+  "wilcoxon_p": 0.010661585196151993
+}

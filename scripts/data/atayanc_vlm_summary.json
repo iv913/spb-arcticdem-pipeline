@@ -1,0 +1,28 @@
+{
+  "source": "atayanc-2013-01.jpg (V.O./Petrogradskaya situational plan)",
+  "methodology": "VLM extraction on 6 crops (2x3 grid) + image (x,y) → WGS84 interpolation",
+  "n_marks_total": 133,
+  "n_valid_model": 115,
+  "lat_range": [
+    59.928224,
+    59.95572
+  ],
+  "lon_range": [
+    30.268406666666667,
+    30.322633333333336
+  ],
+  "survey_z_median": 2.7,
+  "model_z_median": 1.6238247156143188,
+  "dH_median": 1.0402953433990478,
+  "abs_dH_mad": 1.3629371643066406,
+  "pearson_r": -0.04059928383566502,
+  "pearson_p": 0.6666135819365091,
+  "wilcoxon_p": 3.083882105010511e-07,
+  "sign_test_p": 9.758911934869404e-08,
+  "bootstrap_ci_95": [
+    0.8164367437362672,
+    1.267332673072815
+  ],
+  "georef_method": "Image bounds estimated from VLM description (V.O. between rivers)",
+  "georef_uncertainty": "±50-100m (image bounds approximate)"
+}

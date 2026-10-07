@@ -1,0 +1,13 @@
+{
+  "source": "archi.ru geolocated (NO dH filter, NO bad-geo project 320480)",
+  "n": 338,
+  "dH_median": -0.444333419799805,
+  "abs_dH_mad": 1.0316671752929687,
+  "pearson_r": 0.7893397177955398,
+  "wilcoxon_p": 0.12368042104636345,
+  "bootstrap_ci_95": [
+    -0.5419996643066405,
+    -0.3169996643066408
+  ],
+  "total_independent_points": 1189
+}

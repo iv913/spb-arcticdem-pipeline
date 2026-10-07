@@ -1,0 +1,19 @@
+{
+  "source": "archi.ru VLM via Yandex reverse search + Nominatim (clean)",
+  "n": 476,
+  "n_projects": 14,
+  "dH_median": -0.2419996643066406,
+  "abs_dH_mad": 0.9816671752929684,
+  "pearson_r": 0.6136159709570278,
+  "wilcoxon_p": 0.0006502525334165631,
+  "bootstrap_ci_95": [
+    -0.3669996643066406,
+    -0.09868817234039295
+  ],
+  "total_independent_points": 1327,
+  "methodology": "Yandex reverse image search → archi.ru project page → address → Nominatim",
+  "removed_bad_geo": [
+    "320480",
+    "328585"
+  ]
+}

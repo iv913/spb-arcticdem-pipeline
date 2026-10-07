@@ -1,0 +1,13 @@
+{
+  "total_images": 121,
+  "images_with_marks": 71,
+  "total_marks": 2777,
+  "z_distribution": {
+    "0-2m": 263,
+    "2-5m": 1157,
+    "5-10m": 765,
+    "10-20m": 268,
+    "20-50m": 324
+  },
+  "geolocation_status": "NOT DONE — need archi.ru project addresses or ICP per image"
+}

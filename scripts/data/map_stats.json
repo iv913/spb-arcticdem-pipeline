@@ -1,0 +1,26 @@
+{
+  "total_points": 36670,
+  "by_source": {
+    "ICESat-2": 36670
+  },
+  "icesat2": {
+    "n": 36670,
+    "mad": 0.3670005798339844,
+    "dH_median": 0.0007381439208984
+  },
+  "archi_ru": {
+    "n": 0,
+    "mad": null,
+    "dH_median": null
+  },
+  "passport": {
+    "n": 0,
+    "mad": null,
+    "dH_median": null
+  },
+  "dwg_icp": {
+    "n": 0,
+    "mad": null,
+    "dH_median": null
+  }
+}

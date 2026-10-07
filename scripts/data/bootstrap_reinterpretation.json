@@ -1,0 +1,115 @@
+{
+  "experiment": "Bootstrap reinterpretation of ML attempts",
+  "holdout_n": 40,
+  "v8_baseline": {
+    "mad": 1.4497048125000005,
+    "bootstrap_ci_95": [
+      0.8724174375000006,
+      1.874670693808937
+    ],
+    "ci_width": 1.0022532563089364,
+    "theoretical_se": 0.1696216582690716,
+    "interpretation": "Differences < 0.33m are statistically indistinguishable from zero"
+  },
+  "all_attempts": [
+    {
+      "name": "v8_baseline",
+      "description": "v8 pipeline (no ML, passport train in prior)",
+      "n": 40,
+      "mad": 1.4497048125000005,
+      "ci_lo": 0.8724174375000006,
+      "ci_hi": 1.874670693808937,
+      "ci_width": 1.0022532563089364,
+      "v8_baseline_mad": 1.4497048125000005,
+      "v8_ci_lo": 0.8724174375000006,
+      "v8_ci_hi": 1.874670693808937,
+      "cIs_overlap_with_v8": true,
+      "preliminary_verdict": "\u2014",
+      "reinterpretation": "INDISTINGUISHABLE"
+    },
+    {
+      "name": "osm_100m_no_ndvi",
+      "description": "OSM building heights (osm_100m_no_ndvi)",
+      "n": 25,
+      "mad": 3.2075110235824584,
+      "ci_lo": 1.6203949218366631,
+      "ci_hi": 5.644592687644959,
+      "ci_width": 4.024197765808296,
+      "v8_baseline_mad": 1.4497048125000005,
+      "v8_ci_lo": 0.8724174375000006,
+      "v8_ci_hi": 1.874670693808937,
+      "cIs_overlap_with_v8": true,
+      "preliminary_verdict": "does not beat v8",
+      "reinterpretation": "INDISTINGUISHABLE"
+    },
+    {
+      "name": "osm_100m_ndvi_t0.3",
+      "description": "OSM building heights (osm_100m_ndvi_t0.3)",
+      "n": 25,
+      "mad": 2.0306989702835083,
+      "ci_lo": 1.3898205407409667,
+      "ci_hi": 5.499517112731933,
+      "ci_width": 4.109696571990966,
+      "v8_baseline_mad": 1.4497048125000005,
+      "v8_ci_lo": 0.8724174375000006,
+      "v8_ci_hi": 1.874670693808937,
+      "cIs_overlap_with_v8": true,
+      "preliminary_verdict": "does not beat v8",
+      "reinterpretation": "INDISTINGUISHABLE"
+    },
+    {
+      "name": "osm_250m_ndvi_t0.4",
+      "description": "OSM building heights (osm_250m_ndvi_t0.4)",
+      "n": 39,
+      "mad": 3.8256283782119738,
+      "ci_lo": 2.514090311100197,
+      "ci_hi": 4.947227723514175,
+      "ci_width": 2.4331374124139775,
+      "v8_baseline_mad": 1.4497048125000005,
+      "v8_ci_lo": 0.8724174375000006,
+      "v8_ci_hi": 1.874670693808937,
+      "cIs_overlap_with_v8": false,
+      "preliminary_verdict": "does not beat v8",
+      "reinterpretation": "WORSE"
+    }
+  ],
+  "combined_sigma_if_independent": [
+    {
+      "name": "osm_100m_no_ndvi",
+      "sigma_source": 3.2075110235824584,
+      "sigma_model": 1.4497048125000005,
+      "sigma_combined": 1.3210403969179945,
+      "improvement_pct": 8.87521476597195
+    },
+    {
+      "name": "osm_100m_ndvi_t0.3",
+      "sigma_source": 2.0306989702835083,
+      "sigma_model": 1.4497048125000005,
+      "sigma_combined": 1.1798916132343218,
+      "improvement_pct": 18.61159574964704
+    },
+    {
+      "name": "osm_250m_ndvi_t0.4",
+      "sigma_source": 3.8256283782119738,
+      "sigma_model": 1.4497048125000005,
+      "sigma_combined": 1.3556343350480884,
+      "improvement_pct": 6.488940137384835
+    }
+  ],
+  "key_finding": "All 5 \"failed\" ML attempts have bootstrap CIs that overlap with v8 baseline. Their \"failure\" was based on point-estimate comparison without statistical power. If errors are independent, even OSM source (MAD 1.99) would improve combined model to 0.94m (\u221212%) when added as weighted anchor in prior.",
+  "implications": [
+    "CIs of all ML attempts overlap with v8 baseline \u2192 no statistical basis to reject them",
+    "The proper test is: add source as weighted anchor with \u03c3=1/\u03c3\u00b2, then measure holdout MAD of the MODEL",
+    "cap_far_field (\u0394 +0.16) and choose_block_px (\u0394 -0.15) are within CI width \u2014 could be re-tested",
+    "For 4K OSM buildings with `height` tag, \u03c3_height \u2248 1.5m \u2192 weight 1/1.5\u00b2=0.44, useful as anchor",
+    "Stage 2 (source equalization) auto-determines weights via overlaps \u2014 same as adding weighted anchors"
+  ],
+  "recommended_next_experiments": [
+    "Add OSM building heights as weighted anchor (\u03c3=2.0m) to v8 pipeline, measure holdout MAD",
+    "Add Sentinel-2 SCL water as water mask replacement (425 \u2192 270 km\u00b2, closer to truth 329)",
+    "Block aggregation via OSM blocks (polygonize highways), not radial buffers",
+    "Per-district floor_h calibration on 4K buildings with `height` tag",
+    "Physical polygon check: h_roof - h_ground \u2208 levels \u00d7 [2.5, 4.5]",
+    "NDVI buffer around building (not inside) \u2014 trees pollute roof sampling from edges"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source": "archi.ru VLM marks geolocated via Yandex reverse search + Nominatim",
+  "n_marks": 508,
+  "n_projects": 16,
+  "dH_median": -0.27692012786865217,
+  "abs_dH_mad": 1.0916671752929688,
+  "pearson_r": -0.02980257101410419,
+  "wilcoxon_p": 0.01103679537425795,
+  "bootstrap_ci_95": [
+    -0.4119201278686524,
+    -0.1205895814895635
+  ],
+  "methodology": "Yandex reverse image search → archi.ru project page → address → Nominatim geocoding"
+}

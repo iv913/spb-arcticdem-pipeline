@@ -1,0 +1,11 @@
+{
+  "comparison": "v7 \u2192 v8 (passport train in prior)",
+  "holdout_n": 40,
+  "v7_mad": 1.342,
+  "v8_mad": 1.058,
+  "delta_mad": -0.284,
+  "v7_rmse": 1.93,
+  "v8_rmse": 1.867,
+  "v7_frac_gt_2m": 0.175,
+  "v8_frac_gt_2m": 0.15
+}
