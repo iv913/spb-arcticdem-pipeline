@@ -1,0 +1,32 @@
+{
+ "zone": [
+  30.21,
+  59.96,
+  30.31,
+  60.01
+ ],
+ "tag": "AVTOV",
+ "train_n": 267,
+ "valid_n": 213,
+ "prior": {
+  "train": {
+   "resid_off": 0.009,
+   "mad": 0.422,
+   "p95": 1.975,
+   "n": 267
+  },
+  "holdout": {
+   "resid_off": -0.021,
+   "mad": 0.286,
+   "p95": 1.708,
+   "n": 213
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.422,
+  "use_hybrid": false,
+  "reason": "stack_rejected_or_empty"
+ },
+ "product": "prior_v2_30m",
+ "minutes": 1.8
+}

@@ -1,0 +1,45 @@
+{
+ "zone": [
+  30.24,
+  60.01,
+  30.34,
+  60.06
+ ],
+ "tag": "PILOT",
+ "train_n": 182,
+ "valid_n": 196,
+ "prior": {
+  "train": {
+   "resid_off": -0.235,
+   "mad": 0.519,
+   "p95": 2.234,
+   "n": 182
+  },
+  "holdout": {
+   "resid_off": -0.162,
+   "mad": 0.493,
+   "p95": 2.829,
+   "n": 196
+  }
+ },
+ "H2": {
+  "train": {
+   "resid_off": -0.041,
+   "mad": 0.365,
+   "p95": 1.695,
+   "n": 182
+  },
+  "holdout": {
+   "resid_off": 0.033,
+   "mad": 0.407,
+   "p95": 2.184,
+   "n": 196
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.519,
+  "use_hybrid": true
+ },
+ "product": "H2_hybrid",
+ "minutes": 3.7
+}

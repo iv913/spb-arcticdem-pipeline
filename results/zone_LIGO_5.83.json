@@ -1,0 +1,32 @@
+{
+ "zone": [
+  30.21,
+  59.9,
+  30.31,
+  59.95
+ ],
+ "tag": "LIGO",
+ "train_n": 244,
+ "valid_n": 217,
+ "prior": {
+  "train": {
+   "resid_off": 0.15,
+   "mad": 0.443,
+   "p95": 2.789,
+   "n": 244
+  },
+  "holdout": {
+   "resid_off": 0.085,
+   "mad": 0.467,
+   "p95": 2.601,
+   "n": 217
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.443,
+  "use_hybrid": false,
+  "reason": "stack_rejected_or_empty"
+ },
+ "product": "prior_v2_30m",
+ "minutes": 0.5
+}

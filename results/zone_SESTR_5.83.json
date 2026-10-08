@@ -1,0 +1,45 @@
+{
+ "zone": [
+  30.12,
+  60.01,
+  30.24,
+  60.06
+ ],
+ "tag": "SESTR",
+ "train_n": 215,
+ "valid_n": 178,
+ "prior": {
+  "train": {
+   "resid_off": 0.016,
+   "mad": 0.216,
+   "p95": 1.474,
+   "n": 215
+  },
+  "holdout": {
+   "resid_off": 0.025,
+   "mad": 0.433,
+   "p95": 2.121,
+   "n": 178
+  }
+ },
+ "H2": {
+  "train": {
+   "resid_off": -0.071,
+   "mad": 0.243,
+   "p95": 1.359,
+   "n": 215
+  },
+  "holdout": {
+   "resid_off": -0.073,
+   "mad": 0.363,
+   "p95": 1.807,
+   "n": 178
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.216,
+  "use_hybrid": false
+ },
+ "product": "prior_v2_30m",
+ "minutes": 4.9
+}

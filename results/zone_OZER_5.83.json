@@ -1,0 +1,45 @@
+{
+ "zone": [
+  30.07,
+  59.98,
+  30.17,
+  60.04
+ ],
+ "tag": "OZER",
+ "train_n": 260,
+ "valid_n": 238,
+ "prior": {
+  "train": {
+   "resid_off": 0.062,
+   "mad": 0.303,
+   "p95": 1.494,
+   "n": 260
+  },
+  "holdout": {
+   "resid_off": 0.171,
+   "mad": 0.478,
+   "p95": 1.616,
+   "n": 238
+  }
+ },
+ "H2": {
+  "train": {
+   "resid_off": 0.01,
+   "mad": 0.41,
+   "p95": 1.365,
+   "n": 260
+  },
+  "holdout": {
+   "resid_off": -0.14,
+   "mad": 0.375,
+   "p95": 1.754,
+   "n": 238
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.303,
+  "use_hybrid": false
+ },
+ "product": "prior_v2_30m",
+ "minutes": 4.6
+}

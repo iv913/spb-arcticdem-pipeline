@@ -579,3 +579,34 @@ Stage Summary:
 - Следующий блок (5.84): мозаика 21 продукта + мозаика quality-каналов
   (n_cov/sigma/canopy30) -> density grid как маска доверия; затем M-CLF-v3
   (пер-пиксельный гейт доверия стеку) и второй гейт тиража по канопи.
+
+---
+Task ID: 5.84
+Agent: main (Super Z, сессия восстановления)
+Task: Мозаика 21 зонного продукта + quality-каналы + density trust mask.
+
+Work Log:
+- Восстановлены носители, утраченные с sandbox чата A: consensus
+  bareearth_bs77_cm_5.71 (rebuild, валидация = канон 5.71: offset 0.011,
+  MAD 0.345, corr 0.9991) и 7 якорных зон 5.76-5.79 (regen замороженным
+  рецептом 5.80-81; PILOT prior 0.493 = канон до 3-го знака; выборы
+  правила гибрид/prior совпали с историческими).
+- Мозаика 21 продукта: scripts/mosaic_5.84.py (WarpedVRT + почанковое
+  слияние, priority n_cov desc -> sigma asc -> порядок). Сетка 12797x67415
+  2м, валидно 38.94%; шов SESTR∩OZER 9.3 км² разрешён правилом n_cov.
+- Products: download/mosaic_5.84/ — DEM 62 МБ (deflate+predictor2),
+  quality 3xuint16 250 МБ, trust_mask (dens>=6) 1.2 МБ, density grid.
+- Валидация мозаики: MAD 0.197 (med -0.008, n=10267); trusted 0.191 vs
+  untrusted 0.236 — маска информативна; 83.09% валидных px в dens>=6.
+- Исправлено в мозаике: OOM (trust-маска почанково), геореференс density
+  (from_origin N + flipud canon-индексации «от юга»).
+- Бэкапы: git push (этот коммит) + GitHub Release 5.84-mosaic
+  (gh_release_5.84.py) + PolarFS snapshot. Drive-аплоад недоступен
+  (OOB отозван, refresh-токены чата A мертвы).
+
+Stage Summary:
+- Первый сквозной продукт 2м на 21 зону: сплошное покрытие города
+  Int16 см БС-77 с per-pixel quality и trust-маской; MAD 0.197 против
+  ICESat при нулевом смещении.
+- Next (5.85): M-CLF-v3 пер-пиксельный гейт по quality-каналам;
+  второй гейт тиража по канопи; затем датум-фикс §6.

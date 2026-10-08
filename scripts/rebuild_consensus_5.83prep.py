@@ -15,12 +15,14 @@ import os
 import subprocess
 import sys
 import urllib.request
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import rasterio
 
-REPO = "/home/z/my-project/repo"
+# автодетект корня репо (портация 5.78); средонезависимо
+REPO = str(Path(__file__).resolve().parents[1])
 WORK = f"{REPO}/scripts/data/consensus_dtm_5.71"
 os.makedirs(WORK, exist_ok=True)
 
