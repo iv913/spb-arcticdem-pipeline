@@ -1,0 +1,64 @@
+{
+ "raw_segments": 691818,
+ "covered": 289828,
+ "clean_568C": 129750,
+ "new_beyond_canon": 123957,
+ "old_canon_n": 33908,
+ "metrics_dump_clean": {
+  "n": 129750,
+  "med": 0.008,
+  "mad": 0.276,
+  "p95": 1.284
+ },
+ "metrics_dump_new": {
+  "n": 123957,
+  "med": 0.006,
+  "mad": 0.28,
+  "p95": 1.286
+ },
+ "metrics_dump_clean_trust": {
+  "n": 106079,
+  "med": 0.01,
+  "mad": 0.268,
+  "p95": 1.185
+ },
+ "zero_districts": {
+  "Кировский": {
+   "new": 0,
+   "total": 0,
+   "mad": null
+  },
+  "Красносельский": {
+   "new": 0,
+   "total": 0,
+   "mad": null
+  },
+  "Пушкинский": {
+   "new": 0,
+   "total": 0,
+   "mad": null
+  },
+  "Колпинский": {
+   "new": 0,
+   "total": 0,
+   "mad": null
+  },
+  "Петродворцовый": {
+   "new": 0,
+   "total": 0,
+   "mad": null
+  },
+  "Кронштадтский": {
+   "new": 1385,
+   "total": 1519,
+   "mad": 0.245
+  },
+  "Курортный": {
+   "new": 1893,
+   "total": 1926,
+   "mad": 0.296
+  }
+ },
+ "delta_baltic": 16.04,
+ "protocol": "atl06p len=40 res=20 cnf=HIGH srt=LAND, clean: |dH2m|<=3 & canopy<=50 & sigma<=50"
+}

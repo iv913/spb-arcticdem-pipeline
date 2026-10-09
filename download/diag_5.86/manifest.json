@@ -1,0 +1,272 @@
+[
+ {
+  "slug": "canon_59.9094_30.3495",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9094_30.3495.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 553.0,
+   "hmax": 1021.0
+  },
+  "name": "canon_59.9094_30.3495",
+  "n": 114,
+  "med": -2.01
+ },
+ {
+  "slug": "canon_60.0181_30.3023",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_60.0181_30.3023.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "9/8/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 1209.0,
+   "hmax": 2216.0
+  },
+  "name": "canon_60.0181_30.3023",
+  "n": 14,
+  "med": -14.73
+ },
+ {
+  "slug": "canon_59.9506_30.4365",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9506_30.4365.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 529.0,
+   "hmax": 748.0
+  },
+  "name": "canon_59.9506_30.4365",
+  "n": 74,
+  "med": -1.55
+ },
+ {
+  "slug": "canon_59.9251_30.3724",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9251_30.3724.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 550.0,
+   "hmax": 1531.0
+  },
+  "name": "canon_59.9251_30.3724",
+  "n": 121,
+  "med": -1.27
+ },
+ {
+  "slug": "canon_59.9347_30.3883",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9347_30.3883.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 24.0,
+   "hmax": 1649.0
+  },
+  "name": "canon_59.9347_30.3883",
+  "n": 11,
+  "med": 5.74
+ },
+ {
+  "slug": "canon_59.9802_30.3954",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9802_30.3954.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "9/14/2025",
+   "res": "0.5",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 1256.0,
+   "hmax": 2020.0
+  },
+  "name": "canon_59.9802_30.3954",
+  "n": 31,
+  "med": -3.04
+ },
+ {
+  "slug": "canon_59.9498_30.2673",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9498_30.2673.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "9/8/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 91.0,
+   "hmax": 776.0
+  },
+  "name": "canon_59.9498_30.2673",
+  "n": 37,
+  "med": -0.46
+ },
+ {
+  "slug": "canon_59.9755_30.2518",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/canon_59.9755_30.2518.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "9/8/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": -64.0,
+   "hmax": 716.0
+  },
+  "name": "canon_59.9755_30.2518",
+  "n": 69,
+  "med": 0.88
+ },
+ {
+  "slug": "anom_деловой",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/anom_деловой.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/21/2026",
+   "res": "0.31",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": NaN,
+   "hmax": NaN
+  },
+  "name": "Деловой центр (Моск.)",
+  "n": 10,
+  "med": 7.48
+ },
+ {
+  "slug": "anom_кубинская",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/anom_кубинская.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/21/2026",
+   "res": "0.31",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": NaN,
+   "hmax": NaN
+  },
+  "name": "Кубинская",
+  "n": 11,
+  "med": 2.88
+ },
+ {
+  "slug": "ice_60.0085_30.4311",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/ice_60.0085_30.4311.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/21/2026",
+   "res": "0.31",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 1867.0,
+   "hmax": 2311.0
+  },
+  "name": "ICESat-2 кластер",
+  "n": 5,
+  "med": -2.16
+ },
+ {
+  "slug": "ice_59.8989_30.4087",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/ice_59.8989_30.4087.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 569.0,
+   "hmax": 1593.0
+  },
+  "name": "ICESat-2 кластер",
+  "n": 7,
+  "med": -0.98
+ },
+ {
+  "slug": "ice_59.9229_30.4132",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/ice_59.9229_30.4132.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": -9.0,
+   "hmax": 973.0
+  },
+  "name": "ICESat-2 кластер",
+  "n": 5,
+  "med": -1.24
+ },
+ {
+  "slug": "ice_59.9227_30.2974",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/ice_59.9227_30.2974.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "9/8/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": 37.0,
+   "hmax": 813.0
+  },
+  "name": "ICESat-2 кластер",
+  "n": 5,
+  "med": -0.76
+ },
+ {
+  "slug": "ice_59.9349_30.4176",
+  "png": "/home/z/my-project/repo/spb-arcticdem-pipeline/download/diag_5.86/ice_59.9349_30.4176.png",
+  "sat_miss": 0,
+  "meta": {
+   "date": "4/15/2025",
+   "res": "0.34",
+   "src": "Vivid Advanced",
+   "block": "DYNAMIC_ESRI_Saint_Petersburg_RU_26Q2"
+  },
+  "dem_crop_stats": {
+   "hmin": -55.0,
+   "hmax": 1116.0
+  },
+  "name": "ICESat-2 кластер",
+  "n": 5,
+  "med": -0.05
+ }
+]
