@@ -1,0 +1,26 @@
+{
+ "protocol": "atl06p len=40 res=20 cnf=HIGH srt=LAND 2019-2026, delta_baltic=16.04; южный bbox 30.10-30.62 / 59.70-59.90",
+ "tiles": 8,
+ "raw_segments": 255246,
+ "date_min": "20190214",
+ "date_max": "20260702",
+ "rgt": 6,
+ "per_district": {
+  "Кировский": {
+   "n": 29643,
+   "h_baltic_med": 5.02
+  },
+  "Красносельский": {
+   "n": 42256,
+   "h_baltic_med": 14.78
+  },
+  "Пушкинский": {
+   "n": 63169,
+   "h_baltic_med": 55.15
+  },
+  "Колпинский": {
+   "n": 50052,
+   "h_baltic_med": 14.53
+  }
+ }
+}
