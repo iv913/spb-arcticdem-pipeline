@@ -7,3 +7,5 @@ scripts/data/consensus_dtm_5.71/
 .oss_tmp/
 quality_5.84
 download/mosaic_5.84/*.tif
+download/products_5.83/*_S[0-9][0-9].tif
+download/products_5.83/quality_5.83_S[0-9][0-9].tif

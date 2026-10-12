@@ -1,0 +1,32 @@
+{
+ "zone": [
+  30.45,
+  59.775,
+  30.55,
+  59.825
+ ],
+ "tag": "S50",
+ "train_n": 108,
+ "valid_n": 99,
+ "prior": {
+  "train": {
+   "resid_off": 0.048,
+   "mad": 0.354,
+   "p95": 1.23,
+   "n": 108
+  },
+  "holdout": {
+   "resid_off": -0.05,
+   "mad": 0.222,
+   "p95": 1.014,
+   "n": 99
+  }
+ },
+ "rule": {
+  "prior_train_mad": 0.354,
+  "use_hybrid": false,
+  "reason": "stack_rejected_or_empty"
+ },
+ "product": "prior_v2_30m",
+ "minutes": 0.1
+}

@@ -1,0 +1,31 @@
+{
+ "zone": [
+  30.5,
+  59.7,
+  30.6,
+  59.75
+ ],
+ "tag": "S21",
+ "train_n": 0,
+ "valid_n": 4,
+ "prior": {
+  "train": {
+   "mad": null,
+   "p95": null,
+   "n": 0
+  },
+  "holdout": {
+   "resid_off": -0.059,
+   "mad": 0.126,
+   "p95": 0.854,
+   "n": 4
+  }
+ },
+ "rule": {
+  "prior_train_mad": null,
+  "use_hybrid": false,
+  "reason": "stack_rejected_or_empty"
+ },
+ "product": "prior_v2_30m",
+ "minutes": 0.1
+}
