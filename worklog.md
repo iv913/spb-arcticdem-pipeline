@@ -1064,3 +1064,31 @@ Stage Summary:
   П.5 §6.5 закрыт тремя протоколами (nakarte / РФ-протокол / прокси-негатив).
 - Политика: прокси только для GET НСПД, push напрямую, креды не передавались.
 - Next: финальный сводный отчёт проекта; релиз-упаковка.
+
+---
+Task ID: final-report
+Agent: Super Z (main)
+Task: Директива «финальный сводный отчёт» — сводный документ проекта 5.66-5.95.
+
+Work Log:
+- Дайджест worklog (24 стадии) построен scripts/worklog_digest.py; палитра
+  palette.cascade (seed 42, оливковый каскад V2); outline 10 глав.
+- Графики: chart_canon_final.png (рост канона 33.9k->375.8k base + DSM),
+  chart_mad_south_final.png (MAD gold юга + кэп 0.45) — scripts/charts_final_report.py.
+- Тело PDF: scripts/final_report_build.py (ReportLab, TocDocTemplate+multiBuild,
+  FreeSerif кириллица, install_font_fallback, 10 глав, 6 таблиц, 2 графика,
+  callout-статы, колонтитулы) -> results/body_final_report.pdf.
+- Обложка: Template 01 HUD (cover_final_report.html; Inter; якорная линия,
+  сетка 2%; правка вложенного span по cover_validate) -> html2poster 794px.
+- Merge pypdf + normalize A4 (0.1pt tol) -> download/spb_dem_final_report_5.66-5.95.pdf
+  (11 стр., 339 KB); meta.brand; pages.clean 0; font.check 0 issues.
+- QA: pdf_qa --skip-cover -> WARN only (11 шт: плейсхолдеры «—» в ячейках
+  таблиц — норма русской типографики; стр.1 skip). TOC заполнен/кликабелен
+  (toc.check TOC_NOT_FOUND — эвристика без dot-leaders, ложное срабатывание).
+- Канонический MD: results/final_report_5.66-5.95.md.
+
+Stage Summary:
+- Финальный сводный отчёт готов: PDF 11 стр. в download + MD в results;
+  полный контур 5.66-5.95 зафиксирован (датум, канон v4, гейт, юг,
+  НСПД x3 протокола, пакет 933.7 МБ, 24 стадии).
+- Next: релиз-упаковка; расширение отметок; DXF Дачное; --from-rf из РФ.
