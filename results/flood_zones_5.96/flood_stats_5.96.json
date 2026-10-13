@@ -1,0 +1,75 @@
+{
+  "stage": "5.96",
+  "model": "bathtub (потенциальные зоны, без гидродинамики)",
+  "datum": "BS-77",
+  "scenario": "нагон при отказе/прорыве КЗС",
+  "water_exclude": "h<=0.7 м + OSM hydrography",
+  "osm_ok": true,
+  "cell_m": [
+    7.95,
+    7.91
+  ],
+  "min_part_ha": 1.89,
+  "simplify_m": 13.9,
+  "levels": [
+    {
+      "level_m": 1.0,
+      "area_km2": 3.56,
+      "delta_km2": 3.56,
+      "parts": 130
+    },
+    {
+      "level_m": 1.5,
+      "area_km2": 15.5,
+      "delta_km2": 11.95,
+      "parts": 417
+    },
+    {
+      "level_m": 2.0,
+      "area_km2": 23.43,
+      "delta_km2": 7.93,
+      "parts": 107
+    },
+    {
+      "level_m": 2.5,
+      "area_km2": 31.8,
+      "delta_km2": 8.36,
+      "parts": 77
+    },
+    {
+      "level_m": 3.0,
+      "area_km2": 48.63,
+      "delta_km2": 16.84,
+      "parts": 104
+    },
+    {
+      "level_m": 3.5,
+      "area_km2": 72.46,
+      "delta_km2": 23.82,
+      "parts": 80
+    },
+    {
+      "level_m": 4.0,
+      "area_km2": 92.09,
+      "delta_km2": 19.64,
+      "parts": 70
+    },
+    {
+      "level_m": 4.5,
+      "area_km2": 107.64,
+      "delta_km2": 15.54,
+      "parts": 61
+    },
+    {
+      "level_m": 5.0,
+      "area_km2": 118.82,
+      "delta_km2": 11.18,
+      "parts": 69
+    }
+  ],
+  "valid_km2": 1275.6,
+  "land_km2": 987.3,
+  "water_km2": 288.3,
+  "mosaic": "spb_hybrid_2m_mosaic_5.90.tif",
+  "elapsed_s": 22.5
+}
