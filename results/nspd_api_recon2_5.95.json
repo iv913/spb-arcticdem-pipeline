@@ -1,0 +1,95 @@
+{
+ "generated": "2026-10-13T13:27:33.344213+00:00",
+ "report": {
+  "robots": {
+   "status": null,
+   "text": ""
+  },
+  "map_shell": {
+   "status": 200,
+   "bytes": 12928
+  },
+  "mf_runtime": {
+   "status": 200,
+   "bytes": 70872
+  },
+  "remotes": [],
+  "ext_hosts": [
+   "https://module-federation.io/guide/troubleshooting/"
+  ]
+ },
+ "endpoints": {},
+ "ranked": [],
+ "probes": [
+  {
+   "url": "https://nspd.gov.ru/api/adar/search?query=78:5:1234:12",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/adar/pkk/features/1?bbox=30.28,59.85,30.30,59.86",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/pkk/features/1?bbox=30.28,59.85,30.30,59.86",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/features/1?bbox=30.28,59.85,30.30,59.86",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/geoportal/layers",
+   "status": 404,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/layers",
+   "status": 404,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/config",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/v2/search?query=Автово",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/adar/layers",
+   "status": 403,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  },
+  {
+   "url": "https://nspd.gov.ru/api/egip/search?query=Автово",
+   "status": null,
+   "bytes": 0,
+   "json": false,
+   "sample": ""
+  }
+ ]
+}

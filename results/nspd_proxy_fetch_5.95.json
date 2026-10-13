@@ -1,0 +1,109 @@
+{
+ "generated": "2026-10-13T13:07:06.880107+00:00",
+ "proxies": [
+  "217.114.12.153:443",
+  "95.52.246.169:1082",
+  "62.113.114.246:8443",
+  "88.204.22.105:8080"
+ ],
+ "gate": {
+  "url": "https://nspd.gov.ru/",
+  "status": 200,
+  "bytes": 15202
+ },
+ "bundles": [
+  "/assets/hostInit-CwegepdN.js",
+  "/assets/favicons/yandex-browser-manifest.json",
+  "/assets/index-A14Q-hPX.js",
+  "/assets/preload-helper-CLcXU_4U.js",
+  "/assets/virtualExposes-DZDmHG7-.js",
+  "/assets/_mf_0_nspd_mf_2_modules_mf_1_main__mf_v__runtimeInit__mf_v__-D-sOsdXi.js"
+ ],
+ "endpoints": [],
+ "tile_patterns": [],
+ "probes": [],
+ "targets": [
+  {
+   "tag": "AVOVO",
+   "distr": "Кировский",
+   "bbox_lonlat": "30.265,59.845,30.315,59.868"
+  },
+  {
+   "tag": "DACHNOE",
+   "distr": "Кировский",
+   "bbox_lonlat": "30.165,59.83,30.225,59.856"
+  },
+  {
+   "tag": "ULYANKA",
+   "distr": "Кировский",
+   "bbox_lonlat": "30.125,59.818,30.185,59.845"
+  },
+  {
+   "tag": "SHUSHARY",
+   "distr": "Пушкинский",
+   "bbox_lonlat": "30.345,59.788,30.405,59.818"
+  },
+  {
+   "tag": "KOLPINO",
+   "distr": "Колпинский",
+   "bbox_lonlat": "30.545,59.733,30.615,59.762"
+  },
+  {
+   "tag": "PETERGOF",
+   "distr": "Петродворцовый",
+   "bbox_lonlat": "29.715,59.868,29.795,59.896"
+  },
+  {
+   "tag": "SESTRORETSK",
+   "distr": "Курортный",
+   "bbox_lonlat": "29.745,60.095,29.815,60.115"
+  }
+ ],
+ "fetches": [
+  {
+   "tag": "AVOVO",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=30.265,59.845,30.315,59.868",
+   "file": "data/nspd_proxy_5.95/pkk_AVOVO.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "DACHNOE",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=30.165,59.83,30.225,59.856",
+   "file": "data/nspd_proxy_5.95/pkk_DACHNOE.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "ULYANKA",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=30.125,59.818,30.185,59.845",
+   "file": "data/nspd_proxy_5.95/pkk_ULYANKA.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "SHUSHARY",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=30.345,59.788,30.405,59.818",
+   "file": "data/nspd_proxy_5.95/pkk_SHUSHARY.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "KOLPINO",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=30.545,59.733,30.615,59.762",
+   "file": "data/nspd_proxy_5.95/pkk_KOLPINO.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "PETERGOF",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=29.715,59.868,29.795,59.896",
+   "file": "data/nspd_proxy_5.95/pkk_PETERGOF.json",
+   "bytes": 12928
+  },
+  {
+   "tag": "SESTRORETSK",
+   "url": "https://pkk.rosreestr.ru/api/features/1?bbox=29.745,60.095,29.815,60.115",
+   "file": "data/nspd_proxy_5.95/pkk_SESTRORETSK.json",
+   "bytes": 12928
+  }
+ ],
+ "requests_total": 14,
+ "files_in_outdir": 8,
+ "note": "доступ через публичные RU-прокси; TLS unverified; без авторизации"
+}

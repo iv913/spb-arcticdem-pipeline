@@ -1,0 +1,76 @@
+{
+ "generated": "2026-10-13T13:30:29.045369+00:00",
+ "per_proxy": {
+  "217.114.12.153:443": {
+   "https://nspd.gov.ru/api/config": {
+    "status": 403,
+    "bytes": 87,
+    "body": "{\"code\": 403, \"requestId\": \"79da9308097d761fa57b7131b5052b08\", \"message\": \"Forbidden\"}\n"
+   },
+   "https://nspd.gov.ru/api/adar/search?query=78:5:1234:12": {
+    "status": 403,
+    "bytes": 87,
+    "body": "{\"code\": 403, \"requestId\": \"a46cf25c6adff5ba5f006a3bcd99c24b\", \"message\": \"Forbidden\"}\n"
+   },
+   "https://nspd.gov.ru/api/adar/pkk/features/1?bbox=30.28,59.85,30.30,59.86": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   }
+  },
+  "88.204.22.105:8080": {
+   "https://nspd.gov.ru/api/config": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   },
+   "https://nspd.gov.ru/api/adar/search?query=78:5:1234:12": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   },
+   "https://nspd.gov.ru/api/adar/pkk/features/1?bbox=30.28,59.85,30.30,59.86": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   }
+  },
+  "62.113.114.246:8443": {
+   "https://nspd.gov.ru/api/config": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   },
+   "https://nspd.gov.ru/api/adar/search?query=78:5:1234:12": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   },
+   "https://nspd.gov.ru/api/adar/pkk/features/1?bbox=30.28,59.85,30.30,59.86": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   }
+  },
+  "95.52.246.169:1082": {
+   "https://nspd.gov.ru/api/config": {
+    "status": null,
+    "err": "ProxyError: HTTPSConnectionPool(host='nspd.gov.ru', port=443): Max retries exceede"
+   },
+   "https://nspd.gov.ru/api/adar/search?query=78:5:1234:12": {
+    "status": 403,
+    "bytes": 87,
+    "body": "{\"code\": 403, \"requestId\": \"bd19033f6445c732f50ff6b99acc8045\", \"message\": \"Forbidden\"}\n"
+   },
+   "https://nspd.gov.ru/api/adar/pkk/features/1?bbox=30.28,59.85,30.30,59.86": {
+    "status": 403,
+    "bytes": 87,
+    "body": "{\"code\": 403, \"requestId\": \"cc08fcb6470a55f0cd17fdd0407f856a\", \"message\": \"Forbidden\"}\n"
+   }
+  }
+ },
+ "api_host_alt": {
+  "217.114.12.153:443": {
+   "status": null,
+   "err": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by"
+  },
+  "88.204.22.105:8080": {
+   "status": null,
+   "err": "ProxyError: HTTPSConnectionPool(host='api.nspd.gov.ru', port=443): Max retries exc"
+  }
+ },
+ "verdict": "API_403_ALL: шлюз НСПД закрывает /api/* даже с RU-выхода публичных прокси — репутационный/авторизационный гейт, не чисто гео"
+}

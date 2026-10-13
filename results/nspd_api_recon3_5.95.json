@@ -1,0 +1,49 @@
+{
+ "cookies": {},
+ "api_config": {
+  "status": 403,
+  "body": "{\"code\": 403, \"requestId\": \"98371d582070a2ab3f4bfd78749e971a\", \"message\": \"Forbidden\"}\n"
+ },
+ "auth_probes": {
+  "/api/auth/session": {
+   "status": 403,
+   "body": "{\"code\": 403, \"requestId\": \"4c72b968e8691dad53df3c9185bd88a0\", \"message\": \"Forbidden\"}\n"
+  },
+  "/api/auth/token": {
+   "status": 403,
+   "body": "{\"code\": 403, \"requestId\": \"ba0ae3bea80dbcd6c2ed95bd356c204f\", \"message\": \"Forbidden\"}\n"
+  },
+  "/api/user": {
+   "status": 403,
+   "body": "{\"code\": 403, \"requestId\": \"b360e6b1b470d642e961600d3cc1ab19\", \"message\": \"Forbidden\"}\n"
+  },
+  "/api/me": {
+   "status": 403,
+   "body": "{\"code\": 403, \"requestId\": \"baa26a9d13ae817e804446d8a6286ce0\", \"message\": \"Forbidden\"}\n"
+  },
+  "/api/v1/user/info": {
+   "status": 403,
+   "body": "{\"code\": 403, \"requestId\": \"cbcf0cf0d41bc66c812e4bca2991274f\", \"message\": \"Forbidden\"}\n"
+  }
+ },
+ "strings": {},
+ "remote_tries": {
+  "/map/remoteEntry.js": {
+   "status": 200,
+   "bytes": 12928
+  },
+  "/map/assets/remoteEntry.js": {
+   "status": 200,
+   "bytes": 12928
+  },
+  "/assets/map/remoteEntry.js": {
+   "status": 404,
+   "bytes": 548
+  },
+  "/remoteEntry.js": {
+   "status": 200,
+   "bytes": 15202
+  }
+ },
+ "generated": "2026-10-13T13:29:34.616530+00:00"
+}

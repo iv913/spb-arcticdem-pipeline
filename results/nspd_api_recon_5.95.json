@@ -1,0 +1,33 @@
+{
+ "generated": "2026-10-13T13:24:41.732841+00:00",
+ "bundles_total_bytes": 126483,
+ "remotes": [],
+ "endpoints": {
+  "/${e}": [
+   "/assets/index-CZM-22py.js"
+  ],
+  "/${o}": [
+   "/assets/index-CZM-22py.js"
+  ]
+ },
+ "ranked": [
+  "/${e}",
+  "/${o}"
+ ],
+ "probes": [
+  {
+   "ep": "/${e}",
+   "url": "https://nspd.gov.ru/$1",
+   "status": 200,
+   "bytes": 800,
+   "sample": "<!DOCTYPE html>\n<html lang=\"ru\">\n  <head>\n          <script type=\"module\" src=\"/assets/hostInit-CwegepdN.js\"></script>\n        \n    <meta charset=\"UTF-8\" />\n   "
+  },
+  {
+   "ep": "/${o}",
+   "url": "https://nspd.gov.ru/$1",
+   "status": 200,
+   "bytes": 800,
+   "sample": "<!DOCTYPE html>\n<html lang=\"ru\">\n  <head>\n          <script type=\"module\" src=\"/assets/hostInit-CwegepdN.js\"></script>\n        \n    <meta charset=\"UTF-8\" />\n   "
+  }
+ ]
+}
