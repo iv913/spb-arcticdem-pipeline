@@ -1,0 +1,115 @@
+{
+ "city": {
+  "v3_base": 7219,
+  "v3_cells": 2015,
+  "medium": {
+   "base": 1179,
+   "new_cells": 719,
+   "new_base_pts": 719,
+   "gold_strip": null,
+   "mad_strip": null,
+   "n_strip": 0,
+   "mad_prior": 0.437,
+   "n_prior": 859,
+   "med_strip": null,
+   "med_prior": 0.067
+  },
+  "low": {
+   "base": 2131,
+   "new_cells": 1304,
+   "new_base_pts": 1304,
+   "gold_strip": null,
+   "mad_strip": null,
+   "n_strip": 0,
+   "mad_prior": 0.565,
+   "n_prior": 1548,
+   "med_strip": null,
+   "med_prior": 0.141
+  }
+ },
+ "forest": {
+  "v3_base": 4467,
+  "v3_cells": 749,
+  "medium": {
+   "base": 356,
+   "new_cells": 163,
+   "new_base_pts": 164,
+   "gold_strip": null,
+   "mad_strip": 0.651,
+   "n_strip": 53,
+   "mad_prior": 0.172,
+   "n_prior": 37,
+   "med_strip": 0.755,
+   "med_prior": 0.48
+  },
+  "low": {
+   "base": 1091,
+   "new_cells": 708,
+   "new_base_pts": 709,
+   "gold_strip": null,
+   "mad_strip": 0.593,
+   "n_strip": 143,
+   "mad_prior": 0.671,
+   "n_prior": 187,
+   "med_strip": 1.07,
+   "med_prior": 0.913
+  }
+ },
+ "south": {
+  "v3_base": 23966,
+  "v3_cells": 4072,
+  "medium": {
+   "base": 3725,
+   "new_cells": 1383,
+   "new_base_pts": 1385,
+   "gold_strip": null,
+   "mad_strip": null,
+   "n_strip": 0,
+   "mad_prior": 0.251,
+   "n_prior": 3039,
+   "med_strip": null,
+   "med_prior": 0.107
+  },
+  "low": {
+   "base": 7587,
+   "new_cells": 3364,
+   "new_base_pts": 3366,
+   "gold_strip": null,
+   "mad_strip": null,
+   "n_strip": 0,
+   "mad_prior": 0.472,
+   "n_prior": 6246,
+   "med_strip": null,
+   "med_prior": 0.335
+  }
+ },
+ "_pooled_medium": {
+  "base_pts": 5260,
+  "base_new_cells": 2265,
+  "share_new_cells": 0.431,
+  "gold_strip": {
+   "n": 53,
+   "med": 0.755,
+   "mad": 0.651,
+   "p95": 1.485
+  },
+  "gold_prior": {
+   "n": 3935,
+   "med": 0.106,
+   "mad": 0.295,
+   "p95": 2.061
+  },
+  "leaf_off_new": {
+   "n": 227,
+   "med": -0.023,
+   "mad": 0.406,
+   "p95": 2.584
+  },
+  "leaf_on_new": {
+   "n": 5033,
+   "med": 0.124,
+   "mad": 0.352,
+   "p95": 2.042
+  }
+ }
+}
