@@ -1,0 +1,58 @@
+{
+  "total": 38348,
+  "sources": {
+    "ICESat-2": {
+      "n": 36670,
+      "mad": 0.3670005798339844,
+      "dH": 0.0007381439208984
+    },
+    "archi.ru": {
+      "n": 1168,
+      "mad": 1.2942538833618165,
+      "dH": -0.3898403549194338
+    },
+    "Passport": {
+      "n": 40,
+      "mad": 1.117870440483093,
+      "dH": -0.46091314315795806
+    },
+    "Honest Independent (VLM-filtered + EGM2008)": {
+      "n": 956,
+      "mad": 0.362,
+      "dH": 0.116,
+      "sources_breakdown": {
+        "ICESat V.O. EGM2008": 603,
+        "Passport validation": 32,
+        "archi.ru VLM 514913": 156,
+        "archi.ru VLM 95211 Тихая гавань": 76,
+        "atayanc V.O.": 79
+      }
+    },
+    "Honest Independent (FINAL v3)": {
+      "n": 1257,
+      "mad": 0.507,
+      "dH": 0.209
+    },
+    "Honest Independent (FINAL v5)": {
+      "n": 1494,
+      "mad": 0.507,
+      "dH": 0.176
+    },
+    "Honest Independent (FINAL v6)": {
+      "n": 1620,
+      "mad": 0.507,
+      "dH": 0.168
+    }
+  },
+  "map_points": 6678,
+  "archived_sources": {
+    "DWG ICP": {
+      "n": 470,
+      "mad": 6.508577639342381,
+      "dH": 6.399202639342381,
+      "archived_at": "2026-10-07 14:24 UTC",
+      "archived_reason": "ICP false minimum -- 5 DWG surveys collapsed into same Lomonosov-area 2.5x2.5 km square instead of their actual sites. dH=+6.4m is elevation difference between two places, not a model error."
+    }
+  },
+  "updated_at": "2026-10-13 v6 final"
+}

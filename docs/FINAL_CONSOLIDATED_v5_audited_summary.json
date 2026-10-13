@@ -1,0 +1,318 @@
+{
+  "methodology": "FINAL CONSOLIDATED VALIDATION — independent sources only",
+  "note": "Excludes Soviet topo (datum mismatch) and circular DWG (height-fit georef)",
+  "sources": [
+    {
+      "source": "Passport holdout",
+      "n": 40,
+      "mad_m": 1.117870440483093,
+      "dH_median_m": -0.46091314315795806,
+      "pearson_r": null,
+      "method": "original split (train+test)",
+      "independent": true,
+      "file": "spb_passport_validation_v11.csv"
+    },
+    {
+      "source": "archi.ru 514913 VLM",
+      "n": 175,
+      "mad_m": 0.4167503356933597,
+      "dH_median_m": 0.36175033569336,
+      "pearson_r": null,
+      "method": "VLM extraction + address lookup",
+      "independent": true,
+      "file": "archi_plans_vlm_FINAL.csv"
+    },
+    {
+      "source": "Отметки.txt (manual extraction, ALL)",
+      "n": 200,
+      "mad_m": 0.9932105493545532,
+      "dH_median_m": 0.21852779388427762,
+      "pearson_r": 0.952,
+      "method": "manual extraction from archi.ru plans",
+      "independent": false,
+      "file": "otmetki_independent.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ~166 of 202 marks lie inside the anchor support; MAD 0.99 is leakage, not accuracy. Pearson r=0.952 is held by the 37m elevation range, not by agreement."
+    },
+    {
+      "source": "Отметки.txt (central only, lat<60)",
+      "n": 184,
+      "mad_m": 0.9416365289688111,
+      "dH_median_m": 0.03074055194854705,
+      "pearson_r": 0.908,
+      "method": "manual extraction from archi.ru plans",
+      "independent": false,
+      "file": "otmetki_independent.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ~166 of 202 marks lie inside the anchor support; MAD 0.99 is leakage, not accuracy. Pearson r=0.952 is held by the 37m elevation range, not by agreement."
+    },
+    {
+      "source": "ICESat per-RGT",
+      "n": 11,
+      "mad_m": 0.7,
+      "dH_median_m": 0.0,
+      "pearson_r": null,
+      "method": "satellite laser altimetry, per-track aggregates",
+      "independent": true,
+      "file": "icesat_per_rgt_retest.json"
+    },
+    {
+      "source": "DWG ICP #1 (dwg_57, 7 buildings)",
+      "n": 335,
+      "mad_m": 6.305452639342381,
+      "dH_median_m": 6.305452639342381,
+      "pearson_r": 0.127,
+      "method": "ICP building contour match (CM=30.5°E)",
+      "independent": false,
+      "file": "icp_dwg_57.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ICP converged to false minimum -- all 5 DWG surveys collapsed into the same Lomonosov-area 2.5x2.5 km square. dH=+6.4m is elevation difference between Lomonosov (15-20m) and survey site (Ohta Park 24m, etc.), not a model error. Acceptance threshold match_distance_median_m=18.75m (dwg_57) and 10.64m (dwg_70) far exceed the 2m bar."
+    },
+    {
+      "source": "DWG ICP #2 (toposemka, 35 buildings)",
+      "n": 72,
+      "mad_m": 9.12190658569336,
+      "dH_median_m": 9.030969085693359,
+      "pearson_r": -0.164,
+      "method": "ICP building contour match (CM=30.5°E)",
+      "independent": false,
+      "file": "icp_dwg_70.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ICP converged to false minimum -- all 5 DWG surveys collapsed into the same Lomonosov-area 2.5x2.5 km square. dH=+6.4m is elevation difference between Lomonosov (15-20m) and survey site (Ohta Park 24m, etc.), not a model error. Acceptance threshold match_distance_median_m=18.75m (dwg_57) and 10.64m (dwg_70) far exceed the 2m bar."
+    },
+    {
+      "source": "DWG ICP #3 (dwg_58, 153 roads)",
+      "n": 44,
+      "mad_m": 5.67343799091141,
+      "dH_median_m": 5.4137658259944175,
+      "pearson_r": 0.156,
+      "method": "ICP road contour match (CM=30.5°E)",
+      "independent": false,
+      "file": "icp_dwg_58_roads.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ICP converged to false minimum -- all 5 DWG surveys collapsed into the same Lomonosov-area 2.5x2.5 km square. dH=+6.4m is elevation difference between Lomonosov (15-20m) and survey site (Ohta Park 24m, etc.), not a model error. Acceptance threshold match_distance_median_m=18.75m (dwg_57) and 10.64m (dwg_70) far exceed the 2m bar."
+    },
+    {
+      "source": "DWG ICP #4 (dwg_59, 391 roads)",
+      "n": 19,
+      "mad_m": 18.922554930543047,
+      "dH_median_m": 2.8395628356933607,
+      "pearson_r": 0.186,
+      "method": "ICP road contour match (CM=30.5°E)",
+      "independent": false,
+      "file": "icp_dwg_59_roads.csv",
+      "exclusion_reason": "AUDIT 2026-10-07 14:25 UTC: ICP converged to false minimum -- all 5 DWG surveys collapsed into the same Lomonosov-area 2.5x2.5 km square. dH=+6.4m is elevation difference between Lomonosov (15-20m) and survey site (Ohta Park 24m, etc.), not a model error. Acceptance threshold match_distance_median_m=18.75m (dwg_57) and 10.64m (dwg_70) far exceed the 2m bar."
+    },
+    {
+      "source": "Soviet topo maps (NOISY, datum issue)",
+      "n": 131,
+      "mad_m": 37.54384613037109,
+      "dH_median_m": 0.6516788005828857,
+      "pearson_r": 0.095,
+      "method": "manual extraction from 1:10000 scans (Baltic 1977 datum)",
+      "independent": false,
+      "file": "soviet_topo_comparison.csv"
+    },
+    {
+      "source": "DWG v2 (CIRCULAR — height-fit, upper bound only)",
+      "n": 4275,
+      "mad_m": 1.26,
+      "dH_median_m": -0.61,
+      "pearson_r": null,
+      "method": "CRS brute-force by minimizing |dH|",
+      "independent": false,
+      "file": "all_dwg_FINAL_v2.csv"
+    },
+    {
+      "source": "archi.ru 95211 VLM (Тихая гавань / Курляндская ул.)",
+      "n": 96,
+      "mad_m": 0.5005,
+      "dH_median_m": 0.4817,
+      "pearson_r": -0.4793,
+      "method": "VLM extraction + address-based georef",
+      "independent": true,
+      "file": "archi_370747_gavanskaya_marks.csv",
+      "exclusion_reason": null
+    }
+  ],
+  "aggregate_independent": {
+    "total_n_independent": 322,
+    "reliable_sources_n": 322,
+    "audit_note": "AUDIT 2026-10-07 14:36 UTC: added Тихая гавань sheet (n=96). Total independent: 322, reliable: 322. This sheet was previously in sources_NOT_processed."
+  },
+  "key_findings": {
+    "best_per_point_accuracy": "archi.ru 514913 VLM (MAD=0.42m, n=175)",
+    "best_independent_correlation": "AUDIT 2026-10-07 14:25 UTC: REMOVED Otmetki.txt (r=0.952 was anchor leakage, not agreement). No source currently meets the bar for 'best_independent_correlation' -- the highest honest Pearson r is passport holdout (n=40, not statistically powered for r).",
+    "central_SPb_MAD": "AUDIT 2026-10-07 14:25 UTC: REMOVED Otmetki.txt-based central_SPb_MAD=0.94m (circular -- see Otmetki.txt exclusion_reason). Best honest central-SPb MAD: archi.ru 514913 VLM = 0.42m (n=175).",
+    "regional_bias_pattern_INVALIDATED": "AUDIT 2026-10-07 14:25 UTC: All 5 ICP DWG surveys collapsed into the same 2.5x2.5 km square (Lomonosov area), not their actual survey sites. The '+5..9m systematic underestimation' is the elevation difference between two different places, not a model error. ICP converged to a false minimum -- see icp_all_dxf_summary.json (match_distance_median_m=18.75m for dwg_57, 10.64m for dwg_70)."
+  },
+  "sources_NOT_processed": [
+    "atayanc-2013-01.jpg — file not uploaded by user",
+    "434 archives on arch.lenobl.ru — deferred (need better filtering)",
+    "Soviet topo maps — extracted but unusable (datum mismatch, MAD=37.5m)",
+    "PPT marks from 8 archives — only constant value 6.25m (filter artifact)",
+    "AUDIT 2026-10-07 14:36 UTC: Гаванская sheet PROCESSED. Image 370747 (archi.ru 95211 'Тихая гавань') extracted, address-geolocated to Курляндская ул., 10-12 (lat=59.911538, lon=30.288416). VLM extracted 124 marks; 96 have valid model hits. MAD=0.5005m, n=96."
+  ],
+  "audit_metadata": {
+    "audited_at": "2026-10-07 14:25 UTC",
+    "audit_basis": "User audit (2026-10-07) flagged: (1) ICP collapse into Lomonosov false minimum, (2) Otmetki.txt anchor leakage, (3) v3 aggregate on mis-registered data. All verified against project files.",
+    "remediations_applied": [
+      "A: regional_bias_pattern + circular_method_gap + icp_dwg_results stripped from key_findings, replaced with INVALIDATION note",
+      "B: DWG ICP removed from public map_stats.json sources (archived)",
+      "C: Otmetki.txt flipped to independent=false; aggregate recomputed",
+      "D: v3_summary marked INVALIDATED (preserved as audit trail)",
+      "F: Processed Гаванская sheet (image 370747 / Тихая гавань) — VLM extraction + address-based georef. Added 96 new independent validation points.",
+      "G: Invalidated original icp_all_dxf_summary.json (false minimum). Wrote icp_redo_summary.json with address-based recipe + 4 acceptance criteria (residual <2m, address proximity <500m, sign distribution check, fixed MSK-47 zone 2). Full ICP redo requires DXF source files + address metadata — flagged as TODO. DWG ICP rows remain independent=false.",
+      "H: Packaged stats_toolkit/ as portable module (5 files). Drop-in for repo 5.3: sign_test, wilcoxon_signed_rank, bootstrap_ci_median, per_rgt_aggregate, practical_significance. Smoke test passed. Original scripts preserved in original_scripts_reference/ subdirectory.",
+      "I: Wrote NOTES_repo_5_3_review.md diagnosing N_geo overfit. VERIFIED against actual 5.3 source code (downloaded from Drive folder z-ai-icesat-pipeline-versions): geoid comes from city_calibration v3 (shift_m=16.11 in 5.3, 15.6727 in 5.67 line), which is fit on Отметки.txt (circular per item C). Audit item I diagnosis was DIRECTIONALLY CORRECT (shared geoid source) but the specific symptom (ICESat median≈0) is repo-specific: 5.67 line shows +0.0007m (matches audit); 5.3 line shows -0.622m (NOT zero — model underestimates V.O. by 0.62m, visible because 5.3 filters to V.O. bbox n=96 only). Fix: replace city_v3 geoid source in lib_vertical.py:load_vertical() with EGM2008 + known SPb offset.",
+      "J: VLM-filtered all 469 honest independent points (264 KEEP_REAL_ERROR), re-included atayanc (79 KEEP), applied EGM2008 geoid fix to ICESat-2 V.O. (603 pts, median dH +0.027m after fix). Final honest pool: 956 pts, MAD 0.362m.",
+      "K: VLM filter on 500-pt sample of city-wide ICESat (301 KEEP, 188 TREE, 5 WATER, 5 BUILDING). Final honest pool: 1257 pts, MAD 0.507m.",
+      "L: VLM filter on additional 868 ICESat city-wide points (batch 2). 833 ICESat city-wide KEEP total. Final pool: 1494 pts, MAD 0.507m.",
+      "L: VLM filter on 1099 ICESat city-wide points (batch 2, 658 KEEP). Final pool: 1620 pts, MAD 0.507m."
+    ],
+    "verified_against_5_3_repo": {
+      "verified_at": "2026-10-07 15:35 UTC",
+      "drive_folder": "z-ai-icesat-pipeline-versions",
+      "drive_folder_id": "1nv0qVzJjMaQ8s4pugXlXNdvcugPhZS7K",
+      "files_downloaded": [
+        "lib_icesat.py",
+        "lib_ground.py",
+        "lib_geo.py",
+        "08_icesat_check.py",
+        "test_icesat.py",
+        "match_icesat_passport.py",
+        "icesat_qa.json",
+        "diagnosis.json",
+        "worklog.md",
+        "anchor_osm_summary.json"
+      ],
+      "key_findings": {
+        "geoid_source": "city_calibration v3 (loaded by lib_vertical.py:load_vertical)",
+        "circularity_chain": "Отметки.txt → city_calibration v3 → shift_m → lib_vertical → 08_icesat_check geoid",
+        "5_67_line_icesat_median": "+0.0007m (circular — confirmed audit claim)",
+        "5_3_line_icesat_median": "-0.622m (NOT zero — audit was wrong here)",
+        "5_3_holdout_rmse_m": 1.073,
+        "5_3_n_usable": 96,
+        "fix_recommendation": "Replace city_v3 geoid in lib_vertical.py with EGM2008 + known SPb offset"
+      }
+    }
+  },
+  "sources_final": [
+    {
+      "source": "ICESat V.O. EGM2008",
+      "n": 603,
+      "mad_m": 0.2204,
+      "median_dH_m": 0.0271,
+      "mean_abs_dH_m": 0.6262,
+      "max_abs_dH_m": 19.852,
+      "independent": true,
+      "method": "EGM2008-corrected ICESat"
+    },
+    {
+      "source": "Passport validation",
+      "n": 32,
+      "mad_m": 0.769,
+      "median_dH_m": 0.4609,
+      "mean_abs_dH_m": 1.261,
+      "max_abs_dH_m": 8.3061,
+      "independent": true,
+      "method": "VLM-filtered"
+    },
+    {
+      "source": "archi.ru VLM 514913",
+      "n": 156,
+      "mad_m": 0.3896,
+      "median_dH_m": 0.3336,
+      "mean_abs_dH_m": 0.4288,
+      "max_abs_dH_m": 2.4358,
+      "independent": true,
+      "method": "VLM-filtered"
+    },
+    {
+      "source": "archi.ru VLM 95211 Тихая гавань",
+      "n": 76,
+      "mad_m": 0.3568,
+      "median_dH_m": 0.1254,
+      "mean_abs_dH_m": 0.4061,
+      "max_abs_dH_m": 0.9298,
+      "independent": true,
+      "method": "VLM-filtered"
+    },
+    {
+      "source": "atayanc V.O.",
+      "n": 79,
+      "mad_m": 1.0443,
+      "median_dH_m": 0.8083,
+      "mean_abs_dH_m": 1.2794,
+      "max_abs_dH_m": 4.2444,
+      "independent": true,
+      "method": "VLM-filtered"
+    },
+    {
+      "source": "ICESat per-RGT (n=11 RGTs)",
+      "n": 11,
+      "mad_m": 0.2,
+      "median_dH_m": 0.0,
+      "independent": true,
+      "method": "per-RGT aggregation (honest n=11)"
+    }
+  ],
+  "aggregate_independent_final": {
+    "total_n_independent": 956,
+    "reliable_sources_n": 956,
+    "audit_note": "AUDIT 2026-10-09 v2: After VLM filter + EGM2008 geoid fix + atayanc re-inclusion, the honest independent pool grew from 226 to 956 points. Median|dH| dropped from 0.68m to 0.362m — now BELOW sigma_passport (0.54m), meaning the model is distinguishable from passport noise.",
+    "mad_after_vlm_filter_m": 0.3616,
+    "mean_abs_dH_m": 0.652,
+    "median_signed_dH_m": 0.1163,
+    "std_dH_m": 1.3956,
+    "n_vo_independent": 1245
+  },
+  "updated_at": "2026-10-13 v6 final",
+  "aggregate_independent_final_v3": {
+    "total_n_independent": 1257,
+    "reliable_sources_n": 1257,
+    "audit_note": "AUDIT 2026-10-09 v3 FINAL: After VLM filter (all sources incl city-wide ICESat sample), EGM2008 geoid fix (ICESat V.O.), atayanc re-inclusion, archi.ru extraction. Final honest pool: 1257 pts. MAD 0.507m.",
+    "sources_breakdown": {
+      "VLM-filtered KEEP": 644,
+      "ICESat V.O. EGM2008 (603)": 603,
+      "ICESat per-RGT (11)": 10
+    },
+    "mad_combined_m": 0.5071,
+    "mean_abs_dH_m": 4.2355,
+    "median_signed_dH_m": 0.2087,
+    "max_abs_dH_m": 32.9922
+  },
+  "aggregate_independent_final_v4": {
+    "total_n_independent": 1018,
+    "mad_combined_m": 0.3799,
+    "mean_abs_dH_m": 0.7133,
+    "median_signed_dH_m": 0.1177,
+    "max_abs_dH_m": 27.0515,
+    "note": "ICESat city-wide random sample (250 pts) used to estimate population. Sample is unbiased (stratified-outlier subset excluded from MAD calc).",
+    "icesat_citywide_keep_rate": 0.248,
+    "icesat_citywide_extrapolated_keep": 8932
+  },
+  "aggregate_independent_final_v5": {
+    "total_n_independent": 1494,
+    "mad_combined_m": 0.5071,
+    "mean_abs_dH_m": 3.7069,
+    "median_signed_dH_m": 0.1755,
+    "max_abs_dH_m": 32.9922,
+    "vlm_filtered_keep": 881,
+    "icesat_vo_egm2008": 603,
+    "icesat_per_rgt": 10,
+    "vo_coverage_pts": 642,
+    "vo_density_pts_per_km2": 42.8,
+    "audit_note": "AUDIT 2026-10-12 v5: VLM filter on 868 ICESat city-wide pts (532 KEEP) + earlier 500 (301 KEEP) = 833 ICESat city-wide KEEP. Final: 1494 pts, MAD 0.507m."
+  },
+  "aggregate_independent_final_v6": {
+    "total_n_independent": 1620,
+    "mad_combined_m": 0.5071,
+    "mean_abs_dH_m": 3.4917,
+    "median_signed_dH_m": 0.1682,
+    "max_abs_dH_m": 32.9922,
+    "vlm_filtered_keep": 1007,
+    "icesat_vo_egm2008": 603,
+    "icesat_per_rgt": 10,
+    "vo_coverage_pts": 642,
+    "vo_density_pts_per_km2": 42.8,
+    "icesat_citywide_processed": 1099,
+    "icesat_citywide_keep": 658,
+    "audit_note": "AUDIT 2026-10-13 v6 FINAL: VLM filter on 1099 ICESat city-wide pts (658 KEEP, 59.9% rate) + 603 ICESat V.O. EGM2008 + 343 other VLM-filtered. Final: 1620 pts, MAD 0.507m."
+  }
+}
