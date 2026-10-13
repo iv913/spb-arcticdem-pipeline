@@ -1,0 +1,20 @@
+{
+  "stage": "5.95",
+  "source": "nakarte.me Soviet topo maps (AtloMaps, layer T), z=15, viewport 1600x900, crop x[340,1345] y[50,885]",
+  "transcribed_by": "main agent (визуальное распознавание кадров, px-точность ~±20px ~50м)",
+  "cells_scraped": 20,
+  "cells_with_marks": 7,
+  "marks": [
+    {"cell": [59.83, 29.8], "value": 89.9, "px_crop": [70, 142], "type": "spot", "note": "тригопункт, Дудергофские высоты"},
+    {"cell": [59.83, 29.8], "value": 15.0, "px_crop": [630, 325], "type": "contour", "note": "подпись горизонтали"},
+    {"cell": [59.85, 29.65], "value": 60.1, "px_crop": [240, 400], "type": "spot", "note": "тригопункт, Ломоносов юг"},
+    {"cell": [60.06, 30.05], "value": 13.8, "px_crop": [300, 285], "type": "urez", "note": "урез ручья, Белоостров"},
+    {"cell": [60.06, 30.05], "value": 41.0, "px_crop": [225, 570], "type": "contour", "note": "горизонталь, Парголовские высоты"},
+    {"cell": [60.06, 30.05], "value": 42.0, "px_crop": [580, 510], "type": "contour", "note": "горизонталь"},
+    {"cell": [60.06, 30.05], "value": 49.0, "px_crop": [630, 770], "type": "contour", "note": "горизонталь"},
+    {"cell": [59.78, 30.55], "value": 12.1, "px_crop": [460, 470], "type": "spot", "note": "тригопункт, Колпино запад"},
+    {"cell": [59.72, 30.2], "value": 84.3, "px_crop": [425, 95], "type": "spot", "note": "тригопункт, Дудергоф юг (Посёлок)"},
+    {"cell": [59.73, 30.35], "value": 65.8, "px_crop": [955, 345], "type": "spot", "note": "тригопункт у края кадра, Александровка"},
+    {"cell": [59.71, 30.1], "value": 79.9, "px_crop": [765, 458], "type": "urez", "note": "урез Дудергофского озера"}
+  ]
+}
