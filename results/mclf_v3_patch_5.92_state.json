@@ -1,0 +1,205 @@
+{
+ "date": "2026-10-13T09:27:10.717000",
+ "zones": [
+  {
+   "tag": "N1_5.83",
+   "bbox": [
+    30.36,
+    59.9489,
+    30.46,
+    59.9989
+   ],
+   "G": 6708,
+   "J": 56180,
+   "Wz": 5617,
+   "Hz": 2808,
+   "px_total": 15772536,
+   "prior_px": 15772536,
+   "patch_share": 1.0,
+   "old_b3_max": 0,
+   "can30_med_cm": 152.0,
+   "can30_ge100": 0.6647,
+   "can30_nodata": 0.0,
+   "cls_before": {
+    "excl": 0,
+    "rest": 15772536,
+    "ok": 0,
+    "gold": 0
+   },
+   "cls_after": {
+    "excl": 0,
+    "rest": 12754865,
+    "ok": 0,
+    "gold": 3017671
+   },
+   "minutes": 3.8
+  },
+  {
+   "tag": "N13_5.83",
+   "bbox": [
+    29.36,
+    60.0683,
+    29.46,
+    60.1183
+   ],
+   "G": 0,
+   "J": 0,
+   "Wz": 5617,
+   "Hz": 2808,
+   "px_total": 15772536,
+   "prior_px": 15772536,
+   "patch_share": 1.0,
+   "old_b3_max": 0,
+   "can30_med_cm": 0.0,
+   "can30_ge100": 0.0,
+   "can30_nodata": 0.0,
+   "cls_before": {
+    "excl": 0,
+    "rest": 15772536,
+    "ok": 0,
+    "gold": 0
+   },
+   "cls_after": {
+    "excl": 0,
+    "rest": 0,
+    "ok": 0,
+    "gold": 15772536
+   },
+   "minutes": 5.1
+  },
+  {
+   "tag": "STREL",
+   "bbox": [
+    30.05,
+    59.92,
+    30.15,
+    59.97
+   ],
+   "G": 8331,
+   "J": 38764,
+   "Wz": 5617,
+   "Hz": 2808,
+   "px_total": 15772536,
+   "prior_px": 15772536,
+   "patch_share": 1.0,
+   "old_b3_max": 0,
+   "can30_med_cm": 0.0,
+   "can30_ge100": 0.0,
+   "can30_nodata": 0.0,
+   "cls_before": {
+    "excl": 0,
+    "rest": 15772536,
+    "ok": 0,
+    "gold": 0
+   },
+   "cls_after": {
+    "excl": 0,
+    "rest": 0,
+    "ok": 0,
+    "gold": 15772536
+   },
+   "minutes": 3.9
+  },
+  {
+   "tag": "AVTOV",
+   "bbox": [
+    30.21,
+    59.96,
+    30.31,
+    60.01
+   ],
+   "G": 6084,
+   "J": 47753,
+   "Wz": 5617,
+   "Hz": 2808,
+   "px_total": 15772536,
+   "prior_px": 15772536,
+   "patch_share": 1.0,
+   "old_b3_max": 0,
+   "can30_med_cm": 173.0,
+   "can30_ge100": 0.6871,
+   "can30_nodata": 0.0,
+   "cls_before": {
+    "excl": 0,
+    "rest": 15772536,
+    "ok": 0,
+    "gold": 0
+   },
+   "cls_after": {
+    "excl": 0,
+    "rest": 12124957,
+    "ok": 0,
+    "gold": 3647579
+   },
+   "minutes": 4.0
+  },
+  {
+   "tag": "LIGO",
+   "bbox": [
+    30.21,
+    59.9,
+    30.31,
+    59.95
+   ],
+   "G": 9455,
+   "J": 47753,
+   "Wz": 5617,
+   "Hz": 2808,
+   "px_total": 15772536,
+   "prior_px": 15772536,
+   "patch_share": 1.0,
+   "old_b3_max": 0,
+   "can30_med_cm": 153.0,
+   "can30_ge100": 0.5942,
+   "can30_nodata": 0.0,
+   "cls_before": {
+    "excl": 0,
+    "rest": 15772536,
+    "ok": 0,
+    "gold": 0
+   },
+   "cls_after": {
+    "excl": 0,
+    "rest": 10491989,
+    "ok": 0,
+    "gold": 5280547
+   },
+   "minutes": 3.8
+  }
+ ],
+ "cls_before": {
+  "excl": 0,
+  "rest": 78862680,
+  "ok": 0,
+  "gold": 0
+ },
+ "cls_after": {
+  "excl": 0,
+  "rest": 35371811,
+  "ok": 0,
+  "gold": 43490869
+ },
+ "minutes": 0.0,
+ "deg_tags": [
+  "N1_5.83",
+  "N13_5.83",
+  "STREL",
+  "AVTOV",
+  "LIGO"
+ ],
+ "thresholds": {
+  "gold_n": [
+   2,
+   50.0,
+   200.0
+  ],
+  "ok_n": [
+   2,
+   null,
+   200.0
+  ],
+  "gold_s_can": 50.0,
+  "ok_s_can": 50.0
+ },
+ "state_fix": "cls_before восстановлен как 5.91 (deg-окна = rest); растры не переписывались"
+}

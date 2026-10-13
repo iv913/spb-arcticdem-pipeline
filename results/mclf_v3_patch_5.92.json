@@ -1,0 +1,449 @@
+{
+ "date": "2026-10-13T09:31:44.529855",
+ "method": "5.92: quality-патч can30 (баг 5.84: bareearth cm как метры) 5 северных prior-only зон + перегейт окон; пороги гейта 5.91 заморожены; валидация канон v2 (train кросс-чек + holdout)",
+ "patch": {
+  "date": "2026-10-13T09:27:10.717000",
+  "zones": [
+   {
+    "tag": "N1_5.83",
+    "bbox": [
+     30.36,
+     59.9489,
+     30.46,
+     59.9989
+    ],
+    "G": 6708,
+    "J": 56180,
+    "Wz": 5617,
+    "Hz": 2808,
+    "px_total": 15772536,
+    "prior_px": 15772536,
+    "patch_share": 1.0,
+    "old_b3_max": 0,
+    "can30_med_cm": 152.0,
+    "can30_ge100": 0.6647,
+    "can30_nodata": 0.0,
+    "cls_before": {
+     "excl": 0,
+     "rest": 15772536,
+     "ok": 0,
+     "gold": 0
+    },
+    "cls_after": {
+     "excl": 0,
+     "rest": 12754865,
+     "ok": 0,
+     "gold": 3017671
+    },
+    "minutes": 3.8
+   },
+   {
+    "tag": "N13_5.83",
+    "bbox": [
+     29.36,
+     60.0683,
+     29.46,
+     60.1183
+    ],
+    "G": 0,
+    "J": 0,
+    "Wz": 5617,
+    "Hz": 2808,
+    "px_total": 15772536,
+    "prior_px": 15772536,
+    "patch_share": 1.0,
+    "old_b3_max": 0,
+    "can30_med_cm": 0.0,
+    "can30_ge100": 0.0,
+    "can30_nodata": 0.0,
+    "cls_before": {
+     "excl": 0,
+     "rest": 15772536,
+     "ok": 0,
+     "gold": 0
+    },
+    "cls_after": {
+     "excl": 0,
+     "rest": 0,
+     "ok": 0,
+     "gold": 15772536
+    },
+    "minutes": 5.1
+   },
+   {
+    "tag": "STREL",
+    "bbox": [
+     30.05,
+     59.92,
+     30.15,
+     59.97
+    ],
+    "G": 8331,
+    "J": 38764,
+    "Wz": 5617,
+    "Hz": 2808,
+    "px_total": 15772536,
+    "prior_px": 15772536,
+    "patch_share": 1.0,
+    "old_b3_max": 0,
+    "can30_med_cm": 0.0,
+    "can30_ge100": 0.0,
+    "can30_nodata": 0.0,
+    "cls_before": {
+     "excl": 0,
+     "rest": 15772536,
+     "ok": 0,
+     "gold": 0
+    },
+    "cls_after": {
+     "excl": 0,
+     "rest": 0,
+     "ok": 0,
+     "gold": 15772536
+    },
+    "minutes": 3.9
+   },
+   {
+    "tag": "AVTOV",
+    "bbox": [
+     30.21,
+     59.96,
+     30.31,
+     60.01
+    ],
+    "G": 6084,
+    "J": 47753,
+    "Wz": 5617,
+    "Hz": 2808,
+    "px_total": 15772536,
+    "prior_px": 15772536,
+    "patch_share": 1.0,
+    "old_b3_max": 0,
+    "can30_med_cm": 173.0,
+    "can30_ge100": 0.6871,
+    "can30_nodata": 0.0,
+    "cls_before": {
+     "excl": 0,
+     "rest": 15772536,
+     "ok": 0,
+     "gold": 0
+    },
+    "cls_after": {
+     "excl": 0,
+     "rest": 12124957,
+     "ok": 0,
+     "gold": 3647579
+    },
+    "minutes": 4.0
+   },
+   {
+    "tag": "LIGO",
+    "bbox": [
+     30.21,
+     59.9,
+     30.31,
+     59.95
+    ],
+    "G": 9455,
+    "J": 47753,
+    "Wz": 5617,
+    "Hz": 2808,
+    "px_total": 15772536,
+    "prior_px": 15772536,
+    "patch_share": 1.0,
+    "old_b3_max": 0,
+    "can30_med_cm": 153.0,
+    "can30_ge100": 0.5942,
+    "can30_nodata": 0.0,
+    "cls_before": {
+     "excl": 0,
+     "rest": 15772536,
+     "ok": 0,
+     "gold": 0
+    },
+    "cls_after": {
+     "excl": 0,
+     "rest": 10491989,
+     "ok": 0,
+     "gold": 5280547
+    },
+    "minutes": 3.8
+   }
+  ],
+  "cls_before": {
+   "excl": 0,
+   "rest": 78862680,
+   "ok": 0,
+   "gold": 0
+  },
+  "cls_after": {
+   "excl": 0,
+   "rest": 35371811,
+   "ok": 0,
+   "gold": 43490869
+  },
+  "minutes": 0.0,
+  "deg_tags": [
+   "N1_5.83",
+   "N13_5.83",
+   "STREL",
+   "AVTOV",
+   "LIGO"
+  ],
+  "thresholds": {
+   "gold_n": [
+    2,
+    50.0,
+    200.0
+   ],
+   "ok_n": [
+    2,
+    null,
+    200.0
+   ],
+   "gold_s_can": 50.0,
+   "ok_s_can": 50.0
+  },
+  "state_fix": "cls_before восстановлен как 5.91 (deg-окна = rest); растры не переписывались"
+ },
+ "transfer_check": {
+  "south_train_gold_mad": 0.318,
+  "south_holdout_gold_mad": 0.309,
+  "north5_train_bands": {
+   "can<50": {
+    "band": "can<50",
+    "n": 20227,
+    "med": -0.035,
+    "mad": 0.244,
+    "p95": 1.029
+   },
+   "can 50-100": {
+    "band": "can 50-100",
+    "n": 1544,
+    "med": 0.361,
+    "mad": 0.657,
+    "p95": 2.146
+   },
+   "can 100-200": {
+    "band": "can 100-200",
+    "n": 2948,
+    "med": 0.345,
+    "mad": 0.691,
+    "p95": 2.378
+   },
+   "can>=200": {
+    "band": "can>=200",
+    "n": 3286,
+    "med": 0.292,
+    "mad": 0.924,
+    "p95": 2.575
+   }
+  },
+  "north5_holdout_gold": {
+   "n": 21980,
+   "med": -0.038,
+   "mad": 0.24,
+   "p95": 1.021
+  },
+  "north5_holdout_rest": {
+   "n": 1711,
+   "med": 0.375,
+   "mad": 0.59,
+   "p95": 2.286
+  }
+ },
+ "zones": [
+  {
+   "tag": "N1_5.83",
+   "n_old": 11284,
+   "mad_old": 0.679,
+   "med_old": 0.398,
+   "n_new": 5271,
+   "mad_new": 0.545,
+   "gold_all": {
+    "n": 3162,
+    "med": 0.097,
+    "mad": 0.453,
+    "p95": 1.773
+   },
+   "rest_all": {
+    "n": 2109,
+    "med": 0.52,
+    "mad": 0.603,
+    "p95": 2.069
+   },
+   "gold_ho": {
+    "n": 1505,
+    "med": 0.23,
+    "mad": 0.447,
+    "p95": 1.699
+   },
+   "rest_ho": {
+    "n": 1164,
+    "med": 0.479,
+    "mad": 0.589,
+    "p95": 2.222
+   },
+   "dsm_new": 6012,
+   "drop_nodata": 1,
+   "share_gold_px": 0.19132440084460736
+  },
+  {
+   "tag": "N13_5.83",
+   "n_old": 17220,
+   "mad_old": 0.235,
+   "med_old": -0.024,
+   "n_new": 17217,
+   "mad_new": 0.235,
+   "gold_all": {
+    "n": 17217,
+    "med": -0.024,
+    "mad": 0.235,
+    "p95": 0.817
+   },
+   "rest_all": {
+    "n": 0
+   },
+   "gold_ho": {
+    "n": 9186,
+    "med": -0.012,
+    "mad": 0.241,
+    "p95": 0.812
+   },
+   "rest_ho": {
+    "n": 0
+   },
+   "dsm_new": 0,
+   "drop_nodata": 3,
+   "share_gold_px": 1.0
+  },
+  {
+   "tag": "STREL",
+   "n_old": 16570,
+   "mad_old": 0.222,
+   "med_old": -0.064,
+   "n_new": 16569,
+   "mad_new": 0.222,
+   "gold_all": {
+    "n": 16569,
+    "med": -0.064,
+    "mad": 0.222,
+    "p95": 0.812
+   },
+   "rest_all": {
+    "n": 0
+   },
+   "gold_ho": {
+    "n": 8542,
+    "med": -0.076,
+    "mad": 0.203,
+    "p95": 0.725
+   },
+   "rest_ho": {
+    "n": 0
+   },
+   "dsm_new": 0,
+   "drop_nodata": 1,
+   "share_gold_px": 1.0
+  },
+  {
+   "tag": "AVTOV",
+   "n_old": 6861,
+   "mad_old": 0.489,
+   "med_old": 0.112,
+   "n_new": 2862,
+   "mad_new": 0.284,
+   "gold_all": {
+    "n": 2234,
+    "med": -0.054,
+    "mad": 0.249,
+    "p95": 2.228
+   },
+   "rest_all": {
+    "n": 628,
+    "med": 0.054,
+    "mad": 0.55,
+    "p95": 2.122
+   },
+   "gold_ho": {
+    "n": 1155,
+    "med": -0.07,
+    "mad": 0.228,
+    "p95": 2.446
+   },
+   "rest_ho": {
+    "n": 289,
+    "med": 0.131,
+    "mad": 0.502,
+    "p95": 2.125
+   },
+   "dsm_new": 3997,
+   "drop_nodata": 2,
+   "share_gold_px": 0.23126141541220765
+  },
+  {
+   "tag": "LIGO",
+   "n_old": 6515,
+   "mad_old": 0.56,
+   "med_old": 0.0,
+   "n_new": 3543,
+   "mad_new": 0.329,
+   "gold_all": {
+    "n": 3025,
+    "med": -0.036,
+    "mad": 0.293,
+    "p95": 2.191
+   },
+   "rest_all": {
+    "n": 518,
+    "med": 0.145,
+    "mad": 0.775,
+    "p95": 2.514
+   },
+   "gold_ho": {
+    "n": 1592,
+    "med": -0.071,
+    "mad": 0.285,
+    "p95": 2.251
+   },
+   "rest_ho": {
+    "n": 258,
+    "med": 0.126,
+    "mad": 0.749,
+    "p95": 2.476
+   },
+   "dsm_new": 2971,
+   "drop_nodata": 1,
+   "share_gold_px": 0.33479378332057697
+  }
+ ],
+ "canon": {
+  "v3_91_base": 346755,
+  "v3_92_base": 333788,
+  "drop_ge100": 12967,
+  "drop_nodata": 0,
+  "core_91": 65072,
+  "core_92": 65072,
+  "dsm_91": 63229,
+  "dsm_92": 76196
+ },
+ "zone_csv": "zone_gate_v3_5.92.csv",
+ "cls_delta": {
+  "excl": 0,
+  "rest": -43490869,
+  "ok": 0,
+  "gold": 43490869
+ },
+ "cls_global_91": {
+  "excl": 988506662,
+  "rest": 318352424,
+  "ok": 68260786,
+  "gold": 261937128
+ },
+ "cls_global_92": {
+  "excl": 988506662,
+  "rest": 274861555,
+  "ok": 68260786,
+  "gold": 305427997
+ }
+}
