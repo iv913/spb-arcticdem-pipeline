@@ -262,7 +262,7 @@
     "std_dH_m": 1.3956,
     "n_vo_independent": 1245
   },
-  "updated_at": "2026-10-13 v6 final",
+  "updated_at": "2026-10-13 v7 final (rate-limited)",
   "aggregate_independent_final_v3": {
     "total_n_independent": 1257,
     "reliable_sources_n": 1257,
@@ -314,5 +314,21 @@
     "icesat_citywide_processed": 1099,
     "icesat_citywide_keep": 658,
     "audit_note": "AUDIT 2026-10-13 v6 FINAL: VLM filter on 1099 ICESat city-wide pts (658 KEEP, 59.9% rate) + 603 ICESat V.O. EGM2008 + 343 other VLM-filtered. Final: 1620 pts, MAD 0.507m."
+  },
+  "aggregate_independent_final_v7": {
+    "total_n_independent": 1669,
+    "mad_combined_m": 0.5071,
+    "mean_abs_dH_m": 3.4119,
+    "median_signed_dH_m": 0.1629,
+    "max_abs_dH_m": 32.9922,
+    "vlm_filtered_keep": 1056,
+    "icesat_vo_egm2008": 603,
+    "icesat_per_rgt": 10,
+    "vo_coverage_pts": 642,
+    "vo_density_pts_per_km2": 42.8,
+    "icesat_citywide_processed": 1417,
+    "icesat_citywide_keep": 706,
+    "icesat_citywide_remaining": 583,
+    "note": "Rate-limited at 1417/2000 batch-2 ICESat city-wide. 583 remaining."
   }
 }
