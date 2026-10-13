@@ -1,0 +1,169 @@
+{
+ "package": "spb-2m-hybrid-delivery",
+ "stage": "5.94",
+ "date": "2026-10-13",
+ "crs": "EPSG:4326 (пиксельная сетка), высоты: Балтийская система 1977 (БС-77)",
+ "datum_fix": "§6: δ(Балтийская)=+16.04 м применён к ICESat-2 (h_baltic); растровые высоты уже в БС-77",
+ "gate_policy": "юг поставляется классами ok+gold (порог GOLD(S) can30<50, 5.91); лесная полоса [50;200) — rest (кэп MAD≤0.45 не пройден)",
+ "products": [
+  {
+   "path": "download/mosaic_5.90/spb_hybrid_2m_mosaic_5.90.tif",
+   "bytes": 130268274,
+   "desc": "Гибридная 2м ЦМР/ЦМС СПб (84 зоны; север = мозаика 5.84, юг = пересборка 5.90), Int16, БС-77",
+   "sha256": "f39d3c2d3015adb0d2a6cc7876b4780131ddbf8c92a551f34c20e8439ca0c9bc"
+  },
+  {
+   "path": "download/mosaic_5.90/spb_quality_5.90.tif",
+   "bytes": 450043903,
+   "desc": "Каналы качества (n_cov / sigma_cm / canopy30_cm) к мозаике 5.90 (can30 патч 5.92 применён)",
+   "sha256_note": "файл >300MB: sha256 вычисляется на стороне поставки ( delivery вычисляет при выгрузке)",
+   "sha256": "e7d7f8b7a2da69abf40b1b733a8a4f4ce98e3419c8edf70d1359a76c95f4e71d"
+  },
+  {
+   "path": "download/mclf_v3/mclf_v3_mask_5.90.tif",
+   "bytes": 13519755,
+   "desc": "Маска M-CLF-v3 (uint8: 0 excl / 1 rest / 2 ok / 3 gold), пороги 5.91 + патч 5.92",
+   "sha256": "26a3aabc3e51d1c9ed59c8295dd4f5ad1acdf3eb3386673bcf06b3dcf8a32156"
+  },
+  {
+   "path": "download/mclf_v3/mclf_v3_dem_5.90.tif",
+   "bytes": 323011585,
+   "desc": "Clean-DEM (высоты только в классах ok+gold), Int16, БС-77",
+   "sha256_note": "файл >300MB: sha256 вычисляется на стороне поставки ( delivery вычисляет при выгрузке)",
+   "sha256": "af7c3326514e8e1b0ebb3056f4854b1e2050ea21a383f7056a682c045104bec8"
+  },
+  {
+   "path": "download/mosaic_5.90/trust_mask_2m_5.90.tif",
+   "bytes": 2332502,
+   "desc": "Маска плотности (trust) 2м",
+   "sha256": "5efd760b9687758ad0bec7c16489b506fe613a5ca81bb9071f282fbb9b1c8e3c"
+  },
+  {
+   "path": "scripts/data/icesat2_canon_v4_5.93.csv.gz",
+   "bytes": 14543307,
+   "desc": "Валидационный канон v4 (ATL06 HIGH+MEDIUM, cnf_src-флаг)",
+   "sha256": "c02f92e4c5cc410286b9787dd5e7404784c2cec1de9f1f8b9e718b4ff7eb4ee0"
+  }
+ ],
+ "metrics": {
+  "canon_v4": {
+   "base": 375751,
+   "dsm": 141157,
+   "cells_0.001deg": 56225,
+   "high_base_mad": {
+    "n": 335791,
+    "med": 0.046,
+    "mad": 0.309,
+    "p95": 1.652
+   },
+   "med_base_mad": {
+    "n": 39960,
+    "med": 0.065,
+    "mad": 0.327,
+    "p95": 1.767
+   }
+  },
+  "mask_v3_classes_px": {
+   "excl": 988506662,
+   "rest": 274861555,
+   "ok": 68260786,
+   "gold": 305427997
+  },
+  "districts_south_gold": {
+   "Кировский": {
+    "n": 8833,
+    "med": -0.009,
+    "mad": 0.259,
+    "p95": 1.719
+   },
+   "Красносельский": {
+    "n": 19215,
+    "med": 0.074,
+    "mad": 0.287,
+    "p95": 1.653
+   },
+   "Пушкинский": {
+    "n": 46156,
+    "med": 0.032,
+    "mad": 0.226,
+    "p95": 1.582
+   },
+   "Колпинский": {
+    "n": 34452,
+    "med": 0.198,
+    "mad": 0.296,
+    "p95": 1.551
+   }
+  },
+  "holdout_tiers": {
+   "gold_N_strip": {
+    "high": {
+     "n": 35814,
+     "med": -0.001,
+     "mad": 0.243,
+     "p95": 0.929
+    },
+    "med": {
+     "n": 2387,
+     "med": 0.025,
+     "mad": 0.2,
+     "p95": 1.15
+    }
+   },
+   "gold_prior": {
+    "high": {
+     "n": 92217,
+     "med": 0.044,
+     "mad": 0.28,
+     "p95": 1.712
+    },
+    "med": {
+     "n": 12350,
+     "med": 0.082,
+     "mad": 0.298,
+     "p95": 1.808
+    }
+   },
+   "ok_N": {
+    "high": {
+     "n": 20859,
+     "med": 0.031,
+     "mad": 0.37,
+     "p95": 1.681
+    },
+    "med": {
+     "n": 1948,
+     "med": 0.101,
+     "mad": 0.444,
+     "p95": 2.132
+    }
+   },
+   "rest": {
+    "high": {
+     "n": 41110,
+     "med": 0.16,
+     "mad": 0.441,
+     "p95": 1.925
+    },
+    "med": {
+     "n": 5310,
+     "med": 0.132,
+     "mad": 0.478,
+     "p95": 2.01
+    }
+   }
+  }
+ },
+ "validation_summary": {
+  "north_all_mad": 0.305,
+  "south_all_mad": 0.33,
+  "note": "детально: results/densify_5.93.md, results/gate_v3_5.91.md, results/mclf_v3_patch_5.92.md"
+ },
+ "ingest_status": {
+  "ok": 2,
+  "geo_block": 5,
+  "dns_fail": 2,
+  "other": 1
+ },
+ "ingest_note": "приём данных НСПД/КГА (обратная связь, выкопировки) требует сети РФ — results/sources_audit_5.94.json"
+}

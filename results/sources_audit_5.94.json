@@ -1,0 +1,120 @@
+{
+ "stage": "5.94",
+ "date": "2026-10-13",
+ "egress": "внешняя сеть (не РФ; см. worklog 5.94)",
+ "summary": {
+  "ok": 2,
+  "geo_block": 5,
+  "dns_fail": 2,
+  "other": 1
+ },
+ "sources": [
+  {
+   "id": "nspd",
+   "host": "nspd.gov.ru",
+   "role": "НСПД: топопланы 1:2000, КПТ/выкопировки (кв. Автово/Дачное/Ульянка, Шушары, Колпино, Петергоф, Сестрорецк)",
+   "dns_ip": "2.63.246.75",
+   "tcp": {
+    "ok": false,
+    "err": "TimeoutError: timed out"
+   },
+   "verdict": "GEO_BLOCK"
+  },
+  {
+   "id": "pkk",
+   "host": "pkk.rosreestr.ru",
+   "role": "ПКК Росреестра (замена НСПД по отметкам ЗУ)",
+   "dns_ip": "2.63.246.75",
+   "tcp": {
+    "ok": false,
+    "err": "TimeoutError: timed out"
+   },
+   "verdict": "GEO_BLOCK"
+  },
+  {
+   "id": "rkga",
+   "host": "rkga.spb.ru",
+   "role": "КГА СПб (legacy-домен)",
+   "dns_ip": null,
+   "verdict": "DNS_FAIL"
+  },
+  {
+   "id": "kga",
+   "host": "kga.gov.ru",
+   "role": "КГА СПб / ИСОГД: ППТ/ПМТ, чертежи вертикальной планировки",
+   "dns_ip": null,
+   "verdict": "DNS_FAIL"
+  },
+  {
+   "id": "govspb",
+   "host": "gov.spb.ru",
+   "role": "Портал Правительства СПб (дубли ППТ/КГА)",
+   "dns_ip": "46.243.177.103",
+   "tcp": {
+    "ok": false,
+    "err": "TimeoutError: timed out"
+   },
+   "verdict": "GEO_BLOCK"
+  },
+  {
+   "id": "rgis",
+   "host": "rgis.spb.ru",
+   "role": "РГИС СПб (городские слои)",
+   "dns_ip": "37.230.144.40",
+   "tcp": {
+    "ok": false,
+    "err": "TimeoutError: timed out"
+   },
+   "verdict": "GEO_BLOCK"
+  },
+  {
+   "id": "lenobl",
+   "host": "arch.lenobl.ru",
+   "role": "ЛО-генпланы МО (2-я очередь для Колпино/Петергоф/Сестрорецк)",
+   "dns_ip": "185.65.148.54",
+   "tcp": {
+    "ok": true,
+    "err": null
+   },
+   "http_code": 200,
+   "verdict": "OK"
+  },
+  {
+   "id": "geokniga",
+   "host": "geokniga.org",
+   "role": "Генштаб 1:10k/1:25k сканы (горизонтали)",
+   "dns_ip": "95.165.30.62",
+   "tcp": {
+    "ok": true,
+    "err": null
+   },
+   "http_code": 301,
+   "verdict": "OK"
+  },
+  {
+   "id": "igi_south",
+   "host": "reports.geologyscience.ru",
+   "role": "ИГИ-отчёты по югу (Росгеолфонд-путь)",
+   "dns_ip": "83.149.241.28",
+   "tcp": {
+    "ok": true,
+    "err": null
+   },
+   "http_code": 0,
+   "verdict": "HTTP_0",
+   "http_err": "no response (000)"
+  },
+  {
+   "id": "webarchive",
+   "host": "web.archive.org",
+   "role": "Кэш-путь к заблокированным страницам",
+   "dns_ip": "207.241.237.3",
+   "tcp": {
+    "ok": false,
+    "err": "TimeoutError: timed out"
+   },
+   "verdict": "GEO_BLOCK"
+  }
+ ],
+ "conclusion": "Прямые источники выкопировок (НСПД, ПКК, КГА/ИСОГД, gov.spb, РГИС) недоступны из внешней сети: GEO_BLOCK/DNS_FAIL. Доступны только заменяющие архивы (lenobl — протокол 5.70 отрицательный, geokniga — сканы ГШ). Этап переведён в режим: (а) протокол выкопировок готов к запуску из сети РФ (scripts/nspd_fetch_5.94.py), (б) пакет поставки продукта в НСПД/КГА собран (download/delivery_nspd_5.94)."
+}
