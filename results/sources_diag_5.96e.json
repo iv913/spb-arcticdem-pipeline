@@ -1,0 +1,251 @@
+{
+ "date": "2026-10-14",
+ "carr_bbox": [
+  30.23926,
+  59.92635,
+  30.29082,
+  59.94151
+ ],
+ "n_zone_products": 163,
+ "boxes": [
+  {
+   "tag": "bolshoy_corridor",
+   "name": "Большой проспект В.О. (эталон, carriageway)",
+   "bbox": [
+    30.23926,
+    59.92635,
+    30.29082,
+    59.94151
+   ],
+   "area_km2": 4.84,
+   "nodata_pct": 0.0,
+   "dem_med_m": 4.57,
+   "dem_p05_m": 0.25,
+   "dem_p95_m": 7.46,
+   "trust_hist": {
+    "1": 100.0
+   },
+   "ncov_ge1_pct": 100.0,
+   "ncov_ge2_pct": 100.0,
+   "ncov_med": 0.0,
+   "zones_cover": [
+    [
+     "LIGO",
+     100.0
+    ]
+   ],
+   "n_strips_over": 7,
+   "n_atl06_canon": 1347,
+   "atl06_dates": [
+    "201909",
+    "201911",
+    "202001",
+    "202005",
+    "202105",
+    "202110"
+   ],
+   "n_atl06_south": 0,
+   "n_marks_nspd": 17,
+   "mark_srcs": {
+    "otmetki_field": 17
+   }
+  },
+  {
+   "tag": "decabristov",
+   "name": "Остров Декабристов (ядро)",
+   "bbox": [
+    30.205,
+    59.9,
+    30.28,
+    59.9415
+   ],
+   "area_km2": 19.3,
+   "nodata_pct": 6.9,
+   "dem_med_m": 3.44,
+   "dem_p05_m": 0.27,
+   "dem_p95_m": 6.56,
+   "trust_hist": {
+    "0": 51.9,
+    "1": 48.1
+   },
+   "ncov_ge1_pct": 100.0,
+   "ncov_ge2_pct": 100.0,
+   "ncov_med": 0.0,
+   "zones_cover": [
+    [
+     "LIGO",
+     93.3
+    ]
+   ],
+   "n_strips_over": 7,
+   "n_atl06_canon": 5532,
+   "atl06_dates": [
+    "201902",
+    "201904",
+    "201909",
+    "201911",
+    "202001",
+    "202005"
+   ],
+   "n_atl06_south": 0,
+   "n_marks_nspd": 22,
+   "mark_srcs": {
+    "otmetki_field": 22
+   }
+  },
+  {
+   "tag": "gavan",
+   "name": "Гавань В.О.",
+   "bbox": [
+    30.2,
+    59.931,
+    30.26,
+    59.956
+   ],
+   "area_km2": 9.29,
+   "nodata_pct": 36.9,
+   "dem_med_m": 3.34,
+   "dem_p05_m": 1.47,
+   "dem_p95_m": 5.19,
+   "trust_hist": {
+    "0": 0.9,
+    "1": 99.1
+   },
+   "ncov_ge1_pct": 100.0,
+   "ncov_ge2_pct": 100.0,
+   "ncov_med": 0.0,
+   "zones_cover": [
+    [
+     "LIGO",
+     63.3
+    ]
+   ],
+   "n_strips_over": 8,
+   "n_atl06_canon": 2590,
+   "atl06_dates": [
+    "201904",
+    "201909",
+    "202001",
+    "202007",
+    "202105",
+    "202107"
+   ],
+   "n_atl06_south": 0,
+   "n_marks_nspd": 6,
+   "mark_srcs": {
+    "otmetki_field": 6
+   }
+  },
+  {
+   "tag": "vo_north",
+   "name": "Север В.О. (Наличная — Морской фасад)",
+   "bbox": [
+    30.208,
+    59.955,
+    30.3,
+    59.966
+   ],
+   "area_km2": 6.27,
+   "nodata_pct": 46.9,
+   "dem_med_m": 1.86,
+   "dem_p05_m": 0.29,
+   "dem_p95_m": 6.53,
+   "trust_hist": {
+    "1": 100.0
+   },
+   "ncov_ge1_pct": 100.0,
+   "ncov_ge2_pct": 100.0,
+   "ncov_med": 0.0,
+   "zones_cover": [
+    [
+     "AVTOV",
+     53.2
+    ]
+   ],
+   "n_strips_over": 12,
+   "n_atl06_canon": 1883,
+   "atl06_dates": [
+    "201909",
+    "202001",
+    "202005",
+    "202007",
+    "202101",
+    "202105"
+   ],
+   "n_atl06_south": 0,
+   "n_marks_nspd": 1,
+   "mark_srcs": {
+    "otmetki_field": 1
+   }
+  },
+  {
+   "tag": "vo_all",
+   "name": "В.О. целиком (30.20–30.31, 59.90–59.97)",
+   "bbox": [
+    30.2,
+    59.9,
+    30.31,
+    59.97
+   ],
+   "area_km2": 47.72,
+   "nodata_pct": 22.1,
+   "dem_med_m": 3.54,
+   "dem_p05_m": 0.27,
+   "dem_p95_m": 7.37,
+   "trust_hist": {
+    "0": 30.3,
+    "1": 69.7
+   },
+   "ncov_ge1_pct": 100.0,
+   "ncov_ge2_pct": 100.0,
+   "ncov_med": 0.0,
+   "zones_cover": [
+    [
+     "LIGO",
+     64.9
+    ],
+    [
+     "AVTOV",
+     13.0
+    ]
+   ],
+   "n_strips_over": 17,
+   "n_atl06_canon": 18935,
+   "atl06_dates": [
+    "201902",
+    "201904",
+    "201909",
+    "201911",
+    "202001",
+    "202003"
+   ],
+   "n_atl06_south": 0,
+   "n_marks_nspd": 69,
+   "mark_srcs": {
+    "otmetki_field": 69
+   }
+  }
+ ],
+ "zone_verdicts_corridor": {
+  "LIGO": {
+   "bbox": [
+    30.21,
+    59.9,
+    30.31,
+    59.95
+   ],
+   "product": "prior_v2_30m",
+   "rule": {
+    "prior_train_mad": 0.443,
+    "use_hybrid": false,
+    "reason": "stack_rejected_or_empty"
+   },
+   "prior_holdout": {
+    "resid_off": 0.085,
+    "mad": 0.467,
+    "p95": 2.601,
+    "n": 217
+   }
+  }
+ }
+}
