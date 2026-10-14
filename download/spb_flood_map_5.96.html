@@ -88,7 +88,7 @@ details b{color:#dfe6ee}
     <p><b>Ограничения:</b> без гидродинамики, дренажа и ветрового нагона; КЗС предполагается неработающей (сценарий прорыва/отказа); footprint ЦМР фрагментарен — белые зоны карты означают «нет данных», а не «безопасно»; русла рек в ЦМР местами завышены (DSM) — полигоны над акваториями игнорировать; вертикальная точность ±0.3 м; площади округлены (~±5%).</p>
     <p><b>Не является</b> официальной картой зон затопления; для планирования использовать гидродинамические модели и нормативные документы.</p>
   </details>
-  <div class="foot">spb-arcticdem-pipeline · этап 5.96 · файл spb_flood_map_5.96.html · подложки © OpenStreetMap contributors, Esri</div>
+  <div class="foot">spb-arcticdem-pipeline · этап 5.96 · файл spb_flood_map_5.96.html · подложки свободные: © OpenStreetMap contributors · © OpenTopoMap (CC-BY-SA) · Sentinel-2 cloudless © EOX IT Services (Copernicus)</div>
 </div>
 <script>/**
  * Skipped minification because the original files appears to be already minified.
@@ -110,11 +110,12 @@ const COLORS = {1.0:'#2288d3',1.5:'#2fa3b5',2.0:'#2fb99a',2.5:'#58c47a',3.0:'#96
 function dk(c){const n=parseInt(c.slice(1),16);const r=(n>>16)*0.72|0,g=((n>>8)&255)*0.72|0,b=(n&255)*0.72|0;return '#'+((r<<16)|(g<<8)|b).toString(16).padStart(6,'0');}
 
 const map = L.map('map',{zoomControl:true}).fitBounds([[59.72,29.42],[60.12,30.60]]);
+map.attributionControl.setPrefix(false); // убрать бренд «Leaflet» из правого нижнего угла
 const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'});
 const topo = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'© OpenStreetMap, SRTM · © OpenTopoMap (CC-BY-SA)'});
-const esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:18,attribution:'© Esri, Maxar, Earthstar Geographics'});
+const s2 = L.tileLayer('https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg',{maxNativeZoom:14,maxZoom:18,attribution:'Sentinel-2 cloudless © EOX IT Services (Contains modified Copernicus Sentinel data)'});
 osm.addTo(map);
-L.control.layers({'OSM Standard':osm,'OpenTopoMap':topo,'Esri Спутник':esri},{},{position:'topright'}).addTo(map);
+L.control.layers({'OSM Standard':osm,'OpenTopoMap':topo,'Спутник (Sentinel-2)':s2},{},{position:'topright'}).addTo(map);
 L.control.scale({imperial:false,maxWidth:160}).addTo(map);
 
 const layers = {};
