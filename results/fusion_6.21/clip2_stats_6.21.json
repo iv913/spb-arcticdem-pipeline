@@ -1,0 +1,196 @@
+{
+ "water_total_km2": 1844.6,
+ "land_km2": 2329.2,
+ "levels": {
+  "база 5.96": {
+   "1.0": {
+    "before_km2": 3.64,
+    "after_km2": 1.92
+   },
+   "1.5": {
+    "before_km2": 15.72,
+    "after_km2": 9.05
+   },
+   "2.0": {
+    "before_km2": 23.65,
+    "after_km2": 15.41
+   },
+   "2.5": {
+    "before_km2": 31.94,
+    "after_km2": 23.18
+   },
+   "3.0": {
+    "before_km2": 48.8,
+    "after_km2": 39.64
+   },
+   "3.5": {
+    "before_km2": 72.73,
+    "after_km2": 63.16
+   },
+   "4.0": {
+    "before_km2": 92.44,
+    "after_km2": 82.64
+   },
+   "4.5": {
+    "before_km2": 107.98,
+    "after_km2": 98.03
+   },
+   "5.0": {
+    "before_km2": 119.24,
+    "after_km2": 109.17
+   }
+  },
+  "fill A1": {
+   "1.0": {
+    "before_km2": 0.52,
+    "after_km2": 0.26
+   },
+   "1.5": {
+    "before_km2": 1.66,
+    "after_km2": 0.81
+   },
+   "2.0": {
+    "before_km2": 2.81,
+    "after_km2": 1.57
+   },
+   "2.5": {
+    "before_km2": 3.58,
+    "after_km2": 2.16
+   },
+   "3.0": {
+    "before_km2": 4.97,
+    "after_km2": 3.42
+   },
+   "3.5": {
+    "before_km2": 6.65,
+    "after_km2": 5.03
+   },
+   "4.0": {
+    "before_km2": 7.87,
+    "after_km2": 6.2
+   },
+   "4.5": {
+    "before_km2": 8.81,
+    "after_km2": 7.13
+   },
+   "5.0": {
+    "before_km2": 10.06,
+    "after_km2": 8.34
+   }
+  },
+  "fill A2": {
+   "1.0": {
+    "before_km2": 5.72,
+    "after_km2": 0.98
+   },
+   "1.5": {
+    "before_km2": 10.62,
+    "after_km2": 2.89
+   },
+   "2.0": {
+    "before_km2": 14.34,
+    "after_km2": 5.28
+   },
+   "2.5": {
+    "before_km2": 19.17,
+    "after_km2": 8.79
+   },
+   "3.0": {
+    "before_km2": 24.07,
+    "after_km2": 12.99
+   },
+   "3.5": {
+    "before_km2": 29.18,
+    "after_km2": 17.77
+   },
+   "4.0": {
+    "before_km2": 33.78,
+    "after_km2": 22.16
+   },
+   "4.5": {
+    "before_km2": 37.75,
+    "after_km2": 26.02
+   },
+   "5.0": {
+    "before_km2": 41.11,
+    "after_km2": 29.26
+   }
+  },
+  "fill A3": {
+   "1.0": {
+    "before_km2": 19.81,
+    "after_km2": 1.67
+   },
+   "1.5": {
+    "before_km2": 32.23,
+    "after_km2": 5.38
+   },
+   "2.0": {
+    "before_km2": 40.79,
+    "after_km2": 10.82
+   },
+   "2.5": {
+    "before_km2": 50.24,
+    "after_km2": 17.53
+   },
+   "3.0": {
+    "before_km2": 58.21,
+    "after_km2": 23.86
+   },
+   "3.5": {
+    "before_km2": 65.51,
+    "after_km2": 30.08
+   },
+   "4.0": {
+    "before_km2": 71.75,
+    "after_km2": 35.78
+   },
+   "4.5": {
+    "before_km2": 77.12,
+    "after_km2": 40.77
+   },
+   "5.0": {
+    "before_km2": 81.63,
+    "after_km2": 44.86
+   }
+  },
+  "fill A4": {
+   "1.0": {
+    "before_km2": 54.34,
+    "after_km2": 20.69
+   },
+   "1.5": {
+    "before_km2": 103.39,
+    "after_km2": 51.71
+   },
+   "2.0": {
+    "before_km2": 142.53,
+    "after_km2": 83.83
+   },
+   "2.5": {
+    "before_km2": 187.5,
+    "after_km2": 123.82
+   },
+   "3.0": {
+    "before_km2": 225.48,
+    "after_km2": 158.53
+   },
+   "3.5": {
+    "before_km2": 256.74,
+    "after_km2": 187.42
+   },
+   "4.0": {
+    "before_km2": 283.28,
+    "after_km2": 212.96
+   },
+   "4.5": {
+    "before_km2": 310.09,
+    "after_km2": 239.14
+   },
+   "5.0": {
+    "before_km2": 337.34,
+    "after_km2": 265.91
+   }
+  }
+ }
+}
