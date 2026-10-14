@@ -7122,8 +7122,8 @@
       "vlm_diagnosis": "road",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:02:44.981992+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (road)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94670_30.26950": {
       "lat": 59.946704,
@@ -7152,8 +7152,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:02:54.479979+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94498_30.27685": {
       "lat": 59.944982,
@@ -7167,8 +7167,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:02:58.744479+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94294_30.28385": {
       "lat": 59.942938,
@@ -7197,8 +7197,8 @@
       "vlm_diagnosis": "road",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:07.515978+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (road)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94241_30.28796": {
       "lat": 59.942406,
@@ -7242,8 +7242,8 @@
       "vlm_diagnosis": "road",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:14.541888+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (road)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94761_30.29858": {
       "lat": 59.947614,
@@ -7257,8 +7257,8 @@
       "vlm_diagnosis": "road",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:19.119899+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (road)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94956_30.29890": {
       "lat": 59.949560000000005,
@@ -7302,8 +7302,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:29.792554+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95100_30.30350": {
       "lat": 59.951002,
@@ -7317,8 +7317,8 @@
       "vlm_diagnosis": "road",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:32.511966+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (road)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95128_30.30513": {
       "lat": 59.951282,
@@ -7332,8 +7332,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:35.348126+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95170_30.30817": {
       "lat": 59.951702,
@@ -7377,8 +7377,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:52.406968+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95390_30.31680": {
       "lat": 59.9539,
@@ -7392,8 +7392,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:55.507012+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95306_30.31447": {
       "lat": 59.95306,
@@ -7407,8 +7407,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:03:59.519438+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95278_30.31307": {
       "lat": 59.95278,
@@ -7422,8 +7422,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:03.024561+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95096_30.31260": {
       "lat": 59.95096,
@@ -7437,8 +7437,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:04.900107+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95264_30.31423": {
       "lat": 59.95264,
@@ -7482,8 +7482,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:13.305893+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95502_30.31890": {
       "lat": 59.955020000000005,
@@ -7497,8 +7497,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:17.522696+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95544_30.32030": {
       "lat": 59.95544,
@@ -7512,8 +7512,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:20.942154+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95572_30.32100": {
       "lat": 59.95572,
@@ -7527,8 +7527,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:23.402456+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95376_30.31843": {
       "lat": 59.95376,
@@ -7542,8 +7542,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:24.399605+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95278_30.31727": {
       "lat": 59.95278,
@@ -7557,8 +7557,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:25.598611+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95208_30.31610": {
       "lat": 59.95208,
@@ -7572,8 +7572,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:27.018005+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95152_30.31470": {
       "lat": 59.95152,
@@ -7587,8 +7587,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:28.259956+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95124_30.31353": {
       "lat": 59.95124,
@@ -7602,8 +7602,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:29.438059+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95054_30.31260": {
       "lat": 59.95054,
@@ -7617,8 +7617,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:30.524767+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94984_30.31283": {
       "lat": 59.94984,
@@ -7632,8 +7632,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:31.572012+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94914_30.31330": {
       "lat": 59.94914,
@@ -7647,8 +7647,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:32.974100+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94872_30.31353": {
       "lat": 59.94872,
@@ -7662,8 +7662,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:34.936363+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94928_30.31260": {
       "lat": 59.94928,
@@ -7677,8 +7677,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:35.999291+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94998_30.31190": {
       "lat": 59.94998,
@@ -7692,8 +7692,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:37.480673+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95026_30.31237": {
       "lat": 59.95026,
@@ -7707,8 +7707,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:38.533511+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95026_30.31377": {
       "lat": 59.95026,
@@ -7722,8 +7722,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:39.616966+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95054_30.31447": {
       "lat": 59.95054,
@@ -7737,8 +7737,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:40.805997+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95096_30.31517": {
       "lat": 59.95096,
@@ -7752,8 +7752,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:41.840362+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95138_30.31587": {
       "lat": 59.95138,
@@ -7767,8 +7767,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:43.474558+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95180_30.31680": {
       "lat": 59.951800000000006,
@@ -7782,8 +7782,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:44.512269+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95208_30.31773": {
       "lat": 59.95208,
@@ -7797,8 +7797,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:45.785657+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95306_30.31937": {
       "lat": 59.95306,
@@ -7812,8 +7812,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:47.665919+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95362_30.32007": {
       "lat": 59.95362,
@@ -7827,8 +7827,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:49.534200+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95418_30.32077": {
       "lat": 59.95418,
@@ -7842,8 +7842,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:50.572410+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95474_30.32147": {
       "lat": 59.95474,
@@ -7857,8 +7857,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:52.849034+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95530_30.32217": {
       "lat": 59.9553,
@@ -7872,8 +7872,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:54.183191+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95572_30.32263": {
       "lat": 59.95572,
@@ -7887,8 +7887,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:55.512044+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95390_30.31960": {
       "lat": 59.9539,
@@ -7902,8 +7902,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:56.556305+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95334_30.31890": {
       "lat": 59.95334,
@@ -7917,8 +7917,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:57.713376+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95292_30.31820": {
       "lat": 59.952920000000006,
@@ -7932,8 +7932,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:58.749589+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95236_30.31750": {
       "lat": 59.95236,
@@ -7947,8 +7947,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:04:59.917609+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95194_30.31657": {
       "lat": 59.95194,
@@ -7962,8 +7962,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:01.011794+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95166_30.31563": {
       "lat": 59.95166,
@@ -7977,8 +7977,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:02.155905+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95124_30.31493": {
       "lat": 59.95124,
@@ -7992,8 +7992,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:03.333603+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95096_30.31400": {
       "lat": 59.95096,
@@ -8007,8 +8007,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:04.413375+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95068_30.31330": {
       "lat": 59.950680000000006,
@@ -8022,8 +8022,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:05.601011+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95040_30.31260": {
       "lat": 59.9504,
@@ -8037,8 +8037,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:06.753736+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.95012_30.31190": {
       "lat": 59.95012,
@@ -8052,8 +8052,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:07.951980+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.92880_30.28469": {
       "lat": 59.928798,
@@ -8067,8 +8067,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:11.970578+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.92930_30.28362": {
       "lat": 59.929302,
@@ -8082,8 +8082,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:14.310112+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93118_30.28019": {
       "lat": 59.931178,
@@ -8097,8 +8097,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:19.201453+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93357_30.27604": {
       "lat": 59.933572,
@@ -8112,8 +8112,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:24.807005+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93426_30.27485": {
       "lat": 59.934258,
@@ -8127,8 +8127,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:27.805386+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93458_30.27429": {
       "lat": 59.93458,
@@ -8142,8 +8142,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:29.709302+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93489_30.27377": {
       "lat": 59.934888,
@@ -8157,8 +8157,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:30.750634+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93518_30.27326": {
       "lat": 59.935182,
@@ -8172,8 +8172,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:32.740283+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93546_30.27277": {
       "lat": 59.935462,
@@ -8187,8 +8187,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:33.712526+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93573_30.27230": {
       "lat": 59.935728,
@@ -8202,8 +8202,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:35.079975+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93598_30.27186": {
       "lat": 59.93598,
@@ -8217,8 +8217,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:36.172815+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93623_30.27144": {
       "lat": 59.936232,
@@ -8232,8 +8232,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:37.209974+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93647_30.27104": {
       "lat": 59.93647,
@@ -8247,8 +8247,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:38.334426+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93668_30.27065": {
       "lat": 59.93668,
@@ -8262,8 +8262,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:39.547548+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93710_30.26992": {
       "lat": 59.9371,
@@ -8277,8 +8277,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:40.599864+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93728_30.26960": {
       "lat": 59.937282,
@@ -8292,8 +8292,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:41.828075+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93746_30.26927": {
       "lat": 59.937464,
@@ -8307,8 +8307,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:43.057381+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93763_30.26897": {
       "lat": 59.937632,
@@ -8322,8 +8322,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:44.121681+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93795_30.26841": {
       "lat": 59.937954,
@@ -8337,8 +8337,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:45.212014+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.94109_30.30100": {
       "lat": 59.94109,
@@ -8352,8 +8352,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:49.820798+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93531_30.29965": {
       "lat": 59.935308,
@@ -8367,8 +8367,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:55.133271+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93791_30.28871": {
       "lat": 59.937912,
@@ -8382,8 +8382,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:05:59.124214+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93273_30.29190": {
       "lat": 59.932732,
@@ -8397,8 +8397,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:06:04.187089+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93360_30.29622": {
       "lat": 59.9336,
@@ -8412,8 +8412,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:06:07.980535+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.93088_30.30817": {
       "lat": 59.930884,
@@ -8427,8 +8427,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:06:14.732368+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "atayanc_59.92822_30.31090": {
       "lat": 59.928224,
@@ -8442,8 +8442,8 @@
       "vlm_diagnosis": "empty",
       "reason": "VLM: no obstacle visible — genuine model error",
       "processed_at": "2026-10-09T08:06:18.840064+00:00",
-      "vlm_flag_refined": "KEEP_REAL_ERROR",
-      "refined_reason": "no obstacle (empty)"
+      "vlm_flag_refined": "REJECT_GEOREF_UNCERTAINTY",
+      "refined_reason": "Georef validation: ±100m search found better Z match in 79/79 points. MAD drops from 1.044m to 0.233m with ideal georef. ±50-100m georef uncertainty makes these points unreliable. EXCLUDED from honest pool."
     },
     "icesat_cw_60.01348_29.86676": {
       "lat": 60.01347732543945,
@@ -36447,5 +36447,5 @@
     }
   },
   "started_at": "2026-10-09T07:35:32.573248+00:00",
-  "refined_at": "2026-10-14 v8 FINAL — all 2000 batch-2 processed"
+  "refined_at": "2026-10-14 v9 — atayanc EXCLUDED (georef validation)"
 }

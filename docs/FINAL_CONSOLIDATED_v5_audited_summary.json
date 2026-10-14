@@ -262,7 +262,7 @@
     "std_dH_m": 1.3956,
     "n_vo_independent": 1245
   },
-  "updated_at": "2026-10-14 v8 FINAL (batch-2 complete)",
+  "updated_at": "2026-10-14 v9 — atayanc excluded (georef validation)",
   "aggregate_independent_final_v3": {
     "total_n_independent": 1257,
     "reliable_sources_n": 1257,
@@ -346,5 +346,14 @@
     "icesat_citywide_keep": 888,
     "icesat_citywide_keep_rate": 0.444,
     "note": "ALL 2000 batch-2 ICESat city-wide points processed. 100% complete."
+  },
+  "aggregate_independent_final_v9": {
+    "total_n_independent": 1765,
+    "mad_combined_m": 0.5071,
+    "mean_abs_dH_m": 3.2753,
+    "median_signed_dH_m": 0.138,
+    "max_abs_dH_m": 32.9922,
+    "note": "atayanc V.O. EXCLUDED after georef validation (±100m search: 79/79 improved, MAD 1.044→0.233m with ideal georef)",
+    "atayanc_excluded_reason": "±50-100m georef uncertainty — points unreliable without original image re-georef"
   }
 }
