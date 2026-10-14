@@ -1,0 +1,236 @@
+{
+ "stage": "6.20",
+ "note": "якоря + полный DXF Дачное (2326); растры A2 не меняются",
+ "cell_m": [
+  7.95,
+  7.91
+ ],
+ "cell_area_m2": 62.9,
+ "grid": [
+  5875,
+  8707
+ ],
+ "valid_km2": 1275.6,
+ "holes_km2": 1941.3,
+ "anchor_points_total": 1063267,
+ "canon_points": 1060684,
+ "marks_points": 257,
+ "dxf_points": 2326,
+ "anchor_grid_cells": 156172,
+ "dxf_triage": {
+  "win_deg": 0.004,
+  "tol_m": 6.0,
+  "dropped": 131
+ },
+ "assumptions": {
+  "1": {
+   "dist_m": 250.0,
+   "sigma": 1.5
+  },
+  "2": {
+   "dist_m": 1000.0,
+   "sigma": 2.0
+  },
+  "3": {
+   "dist_m": 3000.0,
+   "sigma": 3.0
+  },
+  "4": {
+   "dist_m": 1000000000.0,
+   "sigma": 4.0
+  }
+ },
+ "validation": {
+  "A1": {
+   "n_holdout": 18613,
+   "n_holdout_dxf": 0,
+   "mad": 0.303,
+   "med": -0.074,
+   "p95": 3.983,
+   "rmse": 1.628
+  },
+  "A2": {
+   "n_holdout": 61566,
+   "n_holdout_dxf": 0,
+   "mad": 0.283,
+   "med": -0.092,
+   "p95": 3.347,
+   "rmse": 1.451
+  },
+  "A3": {
+   "n_holdout": 116282,
+   "n_holdout_dxf": 0,
+   "mad": 0.25,
+   "med": -0.105,
+   "p95": 2.786,
+   "rmse": 1.271
+  },
+  "A4": {
+   "n_holdout": 185266,
+   "n_holdout_dxf": 1038,
+   "mad": 0.256,
+   "med": -0.126,
+   "p95": 2.583,
+   "rmse": 1.199,
+   "dxf": {
+    "mad": 1.954,
+    "med": -4.107,
+    "p95": 8.656
+   }
+  }
+ },
+ "fill_flood": {
+  "A1": [
+   {
+    "level_m": 1.0,
+    "area_km2": 0.54
+   },
+   {
+    "level_m": 1.5,
+    "area_km2": 1.68
+   },
+   {
+    "level_m": 2.0,
+    "area_km2": 2.8
+   },
+   {
+    "level_m": 2.5,
+    "area_km2": 3.58
+   },
+   {
+    "level_m": 3.0,
+    "area_km2": 4.96
+   },
+   {
+    "level_m": 3.5,
+    "area_km2": 6.65
+   },
+   {
+    "level_m": 4.0,
+    "area_km2": 7.87
+   },
+   {
+    "level_m": 4.5,
+    "area_km2": 8.84
+   },
+   {
+    "level_m": 5.0,
+    "area_km2": 10.04
+   }
+  ],
+  "A2": [
+   {
+    "level_m": 1.0,
+    "area_km2": 5.72
+   },
+   {
+    "level_m": 1.5,
+    "area_km2": 10.6
+   },
+   {
+    "level_m": 2.0,
+    "area_km2": 14.29
+   },
+   {
+    "level_m": 2.5,
+    "area_km2": 19.07
+   },
+   {
+    "level_m": 3.0,
+    "area_km2": 23.96
+   },
+   {
+    "level_m": 3.5,
+    "area_km2": 29.05
+   },
+   {
+    "level_m": 4.0,
+    "area_km2": 33.62
+   },
+   {
+    "level_m": 4.5,
+    "area_km2": 37.58
+   },
+   {
+    "level_m": 5.0,
+    "area_km2": 40.9
+   }
+  ],
+  "A3": [
+   {
+    "level_m": 1.0,
+    "area_km2": 19.75
+   },
+   {
+    "level_m": 1.5,
+    "area_km2": 32.16
+   },
+   {
+    "level_m": 2.0,
+    "area_km2": 40.67
+   },
+   {
+    "level_m": 2.5,
+    "area_km2": 50.04
+   },
+   {
+    "level_m": 3.0,
+    "area_km2": 57.94
+   },
+   {
+    "level_m": 3.5,
+    "area_km2": 65.21
+   },
+   {
+    "level_m": 4.0,
+    "area_km2": 71.46
+   },
+   {
+    "level_m": 4.5,
+    "area_km2": 76.81
+   },
+   {
+    "level_m": 5.0,
+    "area_km2": 81.28
+   }
+  ],
+  "A4": [
+   {
+    "level_m": 1.0,
+    "area_km2": 54.18
+   },
+   {
+    "level_m": 1.5,
+    "area_km2": 103.11
+   },
+   {
+    "level_m": 2.0,
+    "area_km2": 142.32
+   },
+   {
+    "level_m": 2.5,
+    "area_km2": 187.12
+   },
+   {
+    "level_m": 3.0,
+    "area_km2": 224.78
+   },
+   {
+    "level_m": 3.5,
+    "area_km2": 256.17
+   },
+   {
+    "level_m": 4.0,
+    "area_km2": 282.63
+   },
+   {
+    "level_m": 4.5,
+    "area_km2": 309.47
+   },
+   {
+    "level_m": 5.0,
+    "area_km2": 336.62
+   }
+  ]
+ }
+}
