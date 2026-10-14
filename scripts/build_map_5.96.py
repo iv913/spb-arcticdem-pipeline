@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """5.96c: сборка самодостаточной интерактивной карты зон затопления СПб.
-Leaflet инлайнится; GeoJSON и статистика встраиваются; подложки — только
-свободнораспространяемые: OSM (ODbL), OpenTopoMap (CC-BY-SA), Sentinel-2
-cloudless 2020 (EOX, CC BY 4.0). Бренд «Leaflet» из атрибуции убран."""
+Leaflet инлайнится; GeoJSON и статистика встраиваются. Подложка — Esri World
+Dark Gray Base + Reference (как в spb_coverage_assessment.html; OSM-стрипы
+убраны — 403 osm.wiki/Blocked на клиенте); атрибуция полностью скрыта."""
 import json
 import os
 
@@ -93,6 +93,7 @@ details b{color:#dfe6ee}
 .leaflet-popup-content{font:12.5px/1.4 -apple-system,Arial}
 .leaflet-popup-content b{color:#0b63a3}
 .leaflet-container{background:#0f141a}
+.leaflet-control-attribution{display:none!important}
 .btns{display:flex;gap:6px;padding:8px 14px 2px;border-top:1px solid #223040}
 .btns button{flex:1;background:#1d2a38;color:#cfe4f7;border:1px solid #2b4257;border-radius:6px;padding:5px 4px;font-size:11.5px;cursor:pointer}
 .btns button:hover{background:#25384c}
@@ -136,7 +137,7 @@ details b{color:#dfe6ee}
     <p><b>Ограничения:</b> без гидродинамики, дренажа и ветрового нагона; КЗС предполагается неработающей (сценарий прорыва/отказа); footprint ЦМР фрагментарен — белые зоны карты означают «нет данных», а не «безопасно»; русла рек в ЦМР местами завышены (DSM) — полигоны над акваториями игнорировать; вертикальная точность ±0.3 м; площади округлены (~±5%).</p>
     <p><b>Не является</b> официальной картой зон затопления; для планирования использовать гидродинамические модели и нормативные документы.</p>
   </details>
-  <div class="foot">spb-arcticdem-pipeline · этап 5.96 · файл spb_flood_map_5.96.html · подложки свободные: © OpenStreetMap contributors · © OpenTopoMap (CC-BY-SA) · Sentinel-2 cloudless © EOX IT Services (Copernicus)</div>
+  <div class="foot">spb-arcticdem-pipeline · этап 5.96 · файл spb_flood_map_5.96.html · подложка: Esri World Dark Gray Base + Reference (© Esri)</div>
 </div>
 <script>__LEAFJS__</script>
 <script>
@@ -146,13 +147,9 @@ const LEVELS = __LEVELS__;
 const COLORS = {1.0:'#2288d3',1.5:'#2fa3b5',2.0:'#2fb99a',2.5:'#58c47a',3.0:'#96ca56',3.5:'#c9c344',4.0:'#e0a83a',4.5:'#e5803a',5.0:'#e05252'};
 function dk(c){const n=parseInt(c.slice(1),16);const r=(n>>16)*0.72|0,g=((n>>8)&255)*0.72|0,b=(n&255)*0.72|0;return '#'+((r<<16)|(g<<8)|b).toString(16).padStart(6,'0');}
 
-const map = L.map('map',{zoomControl:true}).fitBounds([[59.72,29.42],[60.12,30.60]]);
-map.attributionControl.setPrefix(false); // убрать бренд «Leaflet» из правого нижнего угла
-const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'});
-const topo = L.tileLayer('https://tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'© OpenStreetMap, SRTM · © OpenTopoMap (CC-BY-SA)'});
-const s2 = L.tileLayer('https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2020_3857/default/g/{z}/{y}/{x}.jpg',{maxNativeZoom:14,maxZoom:18,attribution:'Sentinel-2 cloudless © EOX IT Services (Contains modified Copernicus Sentinel data)'});
-osm.addTo(map);
-L.control.layers({'OSM Standard':osm,'OpenTopoMap':topo,'Спутник (Sentinel-2)':s2},{},{position:'topright'}).addTo(map);
+const map = L.map('map',{zoomControl:true,attributionControl:false}).fitBounds([[59.72,29.42],[60.12,30.60]]); // правый нижний угол чист — атрибуция отключена (как в spb_coverage_assessment.html)
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:16,maxZoom:18}).addTo(map);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',{maxNativeZoom:16,maxZoom:18,opacity:0.85}).addTo(map);
 L.control.scale({imperial:false,maxWidth:160}).addTo(map);
 
 const layers = {};
