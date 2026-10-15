@@ -1,0 +1,260 @@
+{
+ "band_m": 16.0,
+ "min_part_m2": 5000.0,
+ "levels": {
+  "база 5.96": {
+   "1.0": {
+    "before_km2": 1.91,
+    "after_km2": 1.7,
+    "parts": 22
+   },
+   "1.5": {
+    "before_km2": 9.02,
+    "after_km2": 6.69,
+    "parts": 60
+   },
+   "2.0": {
+    "before_km2": 15.36,
+    "after_km2": 11.51,
+    "parts": 106
+   },
+   "2.5": {
+    "before_km2": 23.11,
+    "after_km2": 18.15,
+    "parts": 164
+   },
+   "3.0": {
+    "before_km2": 39.52,
+    "after_km2": 33.44,
+    "parts": 181
+   },
+   "3.5": {
+    "before_km2": 62.97,
+    "after_km2": 55.82,
+    "parts": 153
+   },
+   "4.0": {
+    "before_km2": 82.39,
+    "after_km2": 74.51,
+    "parts": 140
+   },
+   "4.5": {
+    "before_km2": 97.76,
+    "after_km2": 89.44,
+    "parts": 126
+   },
+   "5.0": {
+    "before_km2": 108.83,
+    "after_km2": 100.18,
+    "parts": 127
+   }
+  },
+  "fill A1": {
+   "1.0": {
+    "before_km2": 0.26,
+    "after_km2": 0.23,
+    "parts": 5
+   },
+   "1.5": {
+    "before_km2": 0.81,
+    "after_km2": 0.68,
+    "parts": 13
+   },
+   "2.0": {
+    "before_km2": 1.56,
+    "after_km2": 1.31,
+    "parts": 22
+   },
+   "2.5": {
+    "before_km2": 2.15,
+    "after_km2": 1.8,
+    "parts": 37
+   },
+   "3.0": {
+    "before_km2": 3.41,
+    "after_km2": 2.94,
+    "parts": 47
+   },
+   "3.5": {
+    "before_km2": 5.02,
+    "after_km2": 4.46,
+    "parts": 53
+   },
+   "4.0": {
+    "before_km2": 6.18,
+    "after_km2": 5.51,
+    "parts": 54
+   },
+   "4.5": {
+    "before_km2": 7.11,
+    "after_km2": 6.39,
+    "parts": 65
+   },
+   "5.0": {
+    "before_km2": 8.31,
+    "after_km2": 7.54,
+    "parts": 69
+   }
+  },
+  "fill A2": {
+   "1.0": {
+    "before_km2": 0.98,
+    "after_km2": 0.75,
+    "parts": 16
+   },
+   "1.5": {
+    "before_km2": 2.88,
+    "after_km2": 2.2,
+    "parts": 38
+   },
+   "2.0": {
+    "before_km2": 5.26,
+    "after_km2": 4.28,
+    "parts": 49
+   },
+   "2.5": {
+    "before_km2": 8.77,
+    "after_km2": 7.45,
+    "parts": 57
+   },
+   "3.0": {
+    "before_km2": 12.95,
+    "after_km2": 11.28,
+    "parts": 69
+   },
+   "3.5": {
+    "before_km2": 17.71,
+    "after_km2": 15.82,
+    "parts": 73
+   },
+   "4.0": {
+    "before_km2": 22.1,
+    "after_km2": 19.95,
+    "parts": 66
+   },
+   "4.5": {
+    "before_km2": 25.95,
+    "after_km2": 23.66,
+    "parts": 71
+   },
+   "5.0": {
+    "before_km2": 29.17,
+    "after_km2": 26.71,
+    "parts": 75
+   }
+  },
+  "fill A3": {
+   "1.0": {
+    "before_km2": 1.66,
+    "after_km2": 1.22,
+    "parts": 27
+   },
+   "1.5": {
+    "before_km2": 5.37,
+    "after_km2": 4.25,
+    "parts": 59
+   },
+   "2.0": {
+    "before_km2": 10.79,
+    "after_km2": 9.22,
+    "parts": 57
+   },
+   "2.5": {
+    "before_km2": 17.04,
+    "after_km2": 15.09,
+    "parts": 54
+   },
+   "3.0": {
+    "before_km2": 23.35,
+    "after_km2": 21.01,
+    "parts": 65
+   },
+   "3.5": {
+    "before_km2": 29.54,
+    "after_km2": 26.91,
+    "parts": 67
+   },
+   "4.0": {
+    "before_km2": 35.23,
+    "after_km2": 32.27,
+    "parts": 65
+   },
+   "4.5": {
+    "before_km2": 40.2,
+    "after_km2": 37.07,
+    "parts": 69
+   },
+   "5.0": {
+    "before_km2": 44.28,
+    "after_km2": 40.99,
+    "parts": 73
+   }
+  },
+  "fill A4": {
+   "1.0": {
+    "before_km2": 20.63,
+    "after_km2": 19.82,
+    "parts": 50
+   },
+   "1.5": {
+    "before_km2": 51.55,
+    "after_km2": 49.67,
+    "parts": 95
+   },
+   "2.0": {
+    "before_km2": 83.58,
+    "after_km2": 80.96,
+    "parts": 94
+   },
+   "2.5": {
+    "before_km2": 123.45,
+    "after_km2": 120.27,
+    "parts": 87
+   },
+   "3.0": {
+    "before_km2": 158.04,
+    "after_km2": 154.4,
+    "parts": 83
+   },
+   "3.5": {
+    "before_km2": 186.85,
+    "after_km2": 182.89,
+    "parts": 83
+   },
+   "4.0": {
+    "before_km2": 212.32,
+    "after_km2": 208.01,
+    "parts": 72
+   },
+   "4.5": {
+    "before_km2": 238.41,
+    "after_km2": 233.91,
+    "parts": 75
+   },
+   "5.0": {
+    "before_km2": 265.1,
+    "after_km2": 260.43,
+    "parts": 77
+   }
+  }
+ },
+ "ribbon_share30_before_after_pct": {
+  "1.0": [
+   16.271474204863406,
+   6.388235338403794
+  ],
+  "2.0": [
+   32.94873692946748,
+   11.267916272070284
+  ],
+  "3.0": [
+   24.50061758409058,
+   10.997120917526722
+  ]
+ },
+ "ext_A4mA1_km2_after": {
+  "1.0": 19.61,
+  "3.0": 151.55,
+  "5.0": 253.01
+ }
+}
