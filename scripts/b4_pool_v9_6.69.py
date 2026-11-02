@@ -72,9 +72,14 @@ EPOCHS = {
         '2000..2020', 8.0,
         'подоснова листа; дата съёмки не установлена',
         'отметка существующего покрытия'),
+    # 6.72/B6: ответ пользователя (02.11) — «не считая намывов это 2000-е,
+    # и их надо смотреть визуально»: даты нивелирования марок — 2000-е годы,
+    # кроме марок на намывных территориях; по каждой марке — визуальная
+    # проверка даты по листам паспорта (действие pending).
     'Passport holdout': (
-        '1990..2024', 15.0,
-        'даты нивелирования марок НЕ найдены — запрос пользователю (B3/B6)',
+        '2000..2009', 3.0,
+        'сообщение пользователя (02.11): нивелирование марок — 2000-е годы, '
+        'кроме марок на намывах; визуальная проверка даты по листам — pending',
         'стенная марка (высотная сеть)'),
     'atayanc_v2': (
         '<=1990', 10.0,
@@ -209,10 +214,11 @@ def build(shuffle_seed=None):
     sys.path.insert(0, str(GH / 'scripts'))
     from geoid_egm2008 import Geoid
     g = Geoid('/tmp/my-project/data/us_nga_egm08_25.tif')
-    D = 0.0  # datum_D.json (B3); проверка ниже по файлу
-    dd = json.loads((GH / 'results' / 'datum_6.61' / 'datum_D.json')
-                    .read_text(encoding='utf-8'))
-    D = float(dd['D_m'])
+    # 6.71/B3: канон results/datum_D.json (D = +0.004, бюджет 0.08)
+    dpath = GH / 'results' / 'datum_D.json'
+    if not dpath.exists():
+        dpath = GH / 'results' / 'datum_6.61' / 'datum_D.json'  # история 6.65
+    D = float(json.loads(dpath.read_text(encoding='utf-8'))['D_m'])
     n_ice = 0
     track_min_dist = {}
     meta = {'passport_detail_matched': n_pass_detail,
@@ -250,7 +256,7 @@ def build(shuffle_seed=None):
                 'track_near_anchor': '',
                 't_obs': dstr, 'sigma_t': ICE_EPOCH[1],
                 'how_dated': ICE_EPOCH[2], 'kind_of_height': ICE_EPOCH[3],
-                'datum': 'BS77_EGM2008_D+0.00',
+                'datum': f'BS77_EGM2008_D{D:+.3f}',
                 'note': f'{dstr} ATL06 40-м сегмент; без фильтров (§1.1)'})
             n_ice += 1
 

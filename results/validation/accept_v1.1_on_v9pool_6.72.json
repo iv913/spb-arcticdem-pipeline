@@ -1,0 +1,2589 @@
+{
+ "meta": {
+  "surface": "/tmp/my-project/download/mosaic_6.00/spb_terra_fusion_6.00_A2.tif",
+  "conf": "/tmp/my-project/download/mosaic_6.00/spb_terra_conf_6.00_A2.tif",
+  "base": null,
+  "pool": "results/validation_pool_v9/validation_pool_v9.csv",
+  "anchors": "results/marks_val_5.95.csv",
+  "anchor_r_m": 15.0,
+  "band": [
+   0.0,
+   5.0
+  ],
+  "title": "v1.1 на пуле v9 после 6.71/6.72 (D=+0.004; паспортные марки 2000-е)",
+  "scale": 0.01,
+  "t_ref": 2026.0,
+  "date": "2026-11-02",
+  "rules": "handoff 2026-11 §1: земля/ICESat раздельно, ICESat по трекам, парные тесты, фильтры — с отчётом до/после"
+ },
+ "filters": [
+  {
+   "name": "pool_as_given",
+   "n_before": 256113,
+   "n_after": 256113,
+   "desc": "пул v9 как подан; фильтровать по |dH| запрещено §1.1"
+  },
+  {
+   "name": "sample_finite",
+   "n_before": 256113,
+   "n_after": 245713,
+   "desc": "точка внутри растра, значение не nodata"
+  },
+  {
+   "name": "near_anchor_marked",
+   "n_before": 245713,
+   "n_after": 245626,
+   "desc": "пометка «в 15 м от якорной отметки» (87 шт.); метрики даются ДО и ПОСЛЕ удаления"
+  }
+ ],
+ "by_kind": {
+  "ground": {
+   "all": {
+    "n": 799,
+    "median": -0.05,
+    "mad": 0.97,
+    "p95": 4.1,
+    "gt1": 47.56,
+    "rmse": 2.0653
+   },
+   "near_anchor": {
+    "n": 72,
+    "median": 0.74,
+    "mad": 0.585,
+    "p95": 3.92,
+    "gt1": 51.39,
+    "rmse": 1.6443
+   },
+   "not_near_anchor": {
+    "n": 727,
+    "median": -0.11,
+    "mad": 0.97,
+    "p95": 4.084,
+    "gt1": 47.18,
+    "rmse": 2.1024
+   },
+   "band_0_5": {
+    "n": 371,
+    "median": 0.46,
+    "mad": 0.78,
+    "p95": 3.555,
+    "gt1": 45.01,
+    "rmse": 1.8119
+   },
+   "band_other": {
+    "n": 428,
+    "median": -0.31,
+    "mad": 1.115,
+    "p95": 4.2295,
+    "gt1": 49.77,
+    "rmse": 2.2621
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 385,
+     "median": -0.25,
+     "mad": 0.76,
+     "p95": 4.198,
+     "gt1": 39.22,
+     "rmse": 2.2724
+    },
+    "near_anchor": {
+     "n": 50,
+     "median": 0.78,
+     "mad": 0.525,
+     "p95": 2.504,
+     "gt1": 50.0,
+     "rmse": 1.4711
+    },
+    "not_near_anchor": {
+     "n": 335,
+     "median": -0.28,
+     "mad": 0.64,
+     "p95": 4.203,
+     "gt1": 37.61,
+     "rmse": 2.3689
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 251,
+     "median": 0.92,
+     "mad": 0.82,
+     "p95": 4.48,
+     "gt1": 70.12,
+     "rmse": 2.0458
+    },
+    "near_anchor": {
+     "n": 13,
+     "median": 1.47,
+     "mad": 0.73,
+     "p95": 4.47,
+     "gt1": 84.62,
+     "rmse": 2.3567
+    },
+    "not_near_anchor": {
+     "n": 238,
+     "median": 0.895,
+     "mad": 0.845,
+     "p95": 4.397,
+     "gt1": 69.33,
+     "rmse": 2.0274
+    }
+   }
+  },
+  "icesat": {
+   "all": {
+    "n": 244914,
+    "median": -0.376,
+    "mad": 0.577,
+    "p95": 8.144,
+    "gt1": 35.9,
+    "rmse": 4.554
+   },
+   "near_anchor": {
+    "n": 15,
+    "median": -0.889,
+    "mad": 0.638,
+    "p95": 6.8764,
+    "gt1": 46.67,
+    "rmse": 3.2849
+   },
+   "not_near_anchor": {
+    "n": 244899,
+    "median": -0.376,
+    "mad": 0.577,
+    "p95": 8.144,
+    "gt1": 35.89,
+    "rmse": 4.5541
+   },
+   "band_0_5": {
+    "n": 19297,
+    "median": -0.095,
+    "mad": 0.317,
+    "p95": 2.2362,
+    "gt1": 18.88,
+    "rmse": 0.9886
+   },
+   "band_other": {
+    "n": 225617,
+    "median": -0.414,
+    "mad": 0.614,
+    "p95": 8.6192,
+    "gt1": 37.35,
+    "rmse": 4.736
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 121832,
+     "median": -0.89,
+     "mad": 1.044,
+     "p95": 11.181,
+     "gt1": 53.55,
+     "rmse": 5.5692
+    },
+    "near_anchor": {
+     "n": 9,
+     "median": -1.791,
+     "mad": 1.089,
+     "p95": 8.4598,
+     "gt1": 77.78,
+     "rmse": 4.216
+    },
+    "not_near_anchor": {
+     "n": 121823,
+     "median": -0.889,
+     "mad": 1.044,
+     "p95": 11.181,
+     "gt1": 53.55,
+     "rmse": 5.5693
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 123078,
+     "median": -0.156,
+     "mad": 0.326,
+     "p95": 3.1601,
+     "gt1": 18.42,
+     "rmse": 3.2506
+    },
+    "near_anchor": {
+     "n": 6,
+     "median": -0.419,
+     "mad": 0.2775,
+     "p95": 0.8652,
+     "gt1": 0.0,
+     "rmse": 0.561
+    },
+    "not_near_anchor": {
+     "n": 123072,
+     "median": -0.156,
+     "mad": 0.326,
+     "p95": 3.1604,
+     "gt1": 18.42,
+     "rmse": 3.2506
+    }
+   },
+   "n_eff": 6,
+   "by_track_median": {
+    "min": -0.999,
+    "p25": -0.43,
+    "p75": -0.338,
+    "max": -0.301
+   },
+   "note": "метрики all/not_near_anchor считаются по точкам для справки; вердикты — только по трекам (§1.2)"
+  }
+ },
+ "by_source": {
+  "456577 Римского-Корсакова": {
+   "all": {
+    "n": 61,
+    "median": 0.66,
+    "mad": 0.33,
+    "p95": 1.45,
+    "gt1": 24.59,
+    "rmse": 0.8716
+   },
+   "near_anchor": {
+    "n": 9,
+    "median": 1.05,
+    "mad": 0.12,
+    "p95": 2.072,
+    "gt1": 55.56,
+    "rmse": 1.2651
+   },
+   "not_near_anchor": {
+    "n": 52,
+    "median": 0.61,
+    "mad": 0.295,
+    "p95": 1.4445,
+    "gt1": 19.23,
+    "rmse": 0.7837
+   },
+   "band_0_5": {
+    "n": 61,
+    "median": 0.66,
+    "mad": 0.33,
+    "p95": 1.45,
+    "gt1": 24.59,
+    "rmse": 0.8716
+   },
+   "band_other": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 56,
+     "median": 0.63,
+     "mad": 0.295,
+     "p95": 1.3875,
+     "gt1": 19.64,
+     "rmse": 0.8202
+    },
+    "near_anchor": {
+     "n": 9,
+     "median": 1.05,
+     "mad": 0.12,
+     "p95": 2.072,
+     "gt1": 55.56,
+     "rmse": 1.2651
+    },
+    "not_near_anchor": {
+     "n": 47,
+     "median": 0.57,
+     "mad": 0.24,
+     "p95": 1.258,
+     "gt1": 12.77,
+     "rmse": 0.7036
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 5,
+     "median": 1.17,
+     "mad": 0.3,
+     "p95": 1.87,
+     "gt1": 80.0,
+     "rmse": 1.3169
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 5,
+     "median": 1.17,
+     "mad": 0.3,
+     "p95": 1.87,
+     "gt1": 80.0,
+     "rmse": 1.3169
+    }
+   }
+  },
+  "Passport holdout": {
+   "all": {
+    "n": 38,
+    "median": 0.37,
+    "mad": 1.065,
+    "p95": 3.68,
+    "gt1": 55.26,
+    "rmse": 1.7886
+   },
+   "near_anchor": {
+    "n": 37,
+    "median": 0.3,
+    "mad": 1.1,
+    "p95": 3.72,
+    "gt1": 54.05,
+    "rmse": 1.7888
+   },
+   "not_near_anchor": {
+    "n": 1,
+    "median": 1.78,
+    "mad": 0.0,
+    "p95": 1.78,
+    "gt1": 100.0,
+    "rmse": 1.78
+   },
+   "band_0_5": {
+    "n": 27,
+    "median": 0.66,
+    "mad": 0.84,
+    "p95": 3.23,
+    "gt1": 59.26,
+    "rmse": 1.6237
+   },
+   "band_other": {
+    "n": 11,
+    "median": -0.29,
+    "mad": 1.03,
+    "p95": 4.14,
+    "gt1": 45.45,
+    "rmse": 2.1401
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 20,
+     "median": -0.295,
+     "mad": 1.14,
+     "p95": 4.393,
+     "gt1": 55.0,
+     "rmse": 1.9419
+    },
+    "near_anchor": {
+     "n": 19,
+     "median": -0.3,
+     "mad": 1.05,
+     "p95": 4.426,
+     "gt1": 52.63,
+     "rmse": 1.9501
+    },
+    "not_near_anchor": {
+     "n": 1,
+     "median": 1.78,
+     "mad": 0.0,
+     "p95": 1.78,
+     "gt1": 100.0,
+     "rmse": 1.78
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 11,
+     "median": 1.24,
+     "mad": 0.34,
+     "p95": 2.855,
+     "gt1": 81.82,
+     "rmse": 1.7046
+    },
+    "near_anchor": {
+     "n": 11,
+     "median": 1.24,
+     "mad": 0.34,
+     "p95": 2.855,
+     "gt1": 81.82,
+     "rmse": 1.7046
+    },
+    "not_near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    }
+   }
+  },
+  "archi.ru 514913": {
+   "all": {
+    "n": 175,
+    "median": -0.35,
+    "mad": 0.23,
+    "p95": 1.143,
+    "gt1": 8.0,
+    "rmse": 0.6904
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 175,
+    "median": -0.35,
+    "mad": 0.23,
+    "p95": 1.143,
+    "gt1": 8.0,
+    "rmse": 0.6904
+   },
+   "band_0_5": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "band_other": {
+    "n": 175,
+    "median": -0.35,
+    "mad": 0.23,
+    "p95": 1.143,
+    "gt1": 8.0,
+    "rmse": 0.6904
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 135,
+     "median": -0.28,
+     "mad": 0.17,
+     "p95": 0.87,
+     "gt1": 2.22,
+     "rmse": 0.4812
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 135,
+     "median": -0.28,
+     "mad": 0.17,
+     "p95": 0.87,
+     "gt1": 2.22,
+     "rmse": 0.4812
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 40,
+     "median": -0.81,
+     "mad": 0.295,
+     "p95": 2.7545,
+     "gt1": 27.5,
+     "rmse": 1.1419
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 40,
+     "median": -0.81,
+     "mad": 0.295,
+     "p95": 2.7545,
+     "gt1": 27.5,
+     "rmse": 1.1419
+    }
+   }
+  },
+  "archi.ru Yandex-expanded": {
+   "all": {
+    "n": 341,
+    "median": 0.08,
+    "mad": 1.29,
+    "p95": 4.35,
+    "gt1": 69.21,
+    "rmse": 2.6048
+   },
+   "near_anchor": {
+    "n": 21,
+    "median": 0.91,
+    "mad": 0.32,
+    "p95": 1.5,
+    "gt1": 47.62,
+    "rmse": 1.0114
+   },
+   "not_near_anchor": {
+    "n": 320,
+    "median": -0.16,
+    "mad": 1.53,
+    "p95": 4.37,
+    "gt1": 70.62,
+    "rmse": 2.6764
+   },
+   "band_0_5": {
+    "n": 99,
+    "median": 0.08,
+    "mad": 0.8,
+    "p95": 3.06,
+    "gt1": 42.42,
+    "rmse": 1.6118
+   },
+   "band_other": {
+    "n": 242,
+    "median": 0.35,
+    "mad": 1.37,
+    "p95": 4.5785,
+    "gt1": 80.17,
+    "rmse": 2.9151
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 120,
+     "median": -2.96,
+     "mad": 1.34,
+     "p95": 5.1765,
+     "gt1": 74.17,
+     "rmse": 3.6091
+    },
+    "near_anchor": {
+     "n": 21,
+     "median": 0.91,
+     "mad": 0.32,
+     "p95": 1.5,
+     "gt1": 47.62,
+     "rmse": 1.0114
+    },
+    "not_near_anchor": {
+     "n": 99,
+     "median": -3.55,
+     "mad": 0.65,
+     "p95": 5.813,
+     "gt1": 79.8,
+     "rmse": 3.9461
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 169,
+     "median": 1.03,
+     "mad": 0.49,
+     "p95": 4.262,
+     "gt1": 75.15,
+     "rmse": 1.8766
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 169,
+     "median": 1.03,
+     "mad": 0.49,
+     "p95": 4.262,
+     "gt1": 75.15,
+     "rmse": 1.8766
+    }
+   }
+  },
+  "atayanc_v2": {
+   "all": {
+    "n": 184,
+    "median": 0.69,
+    "mad": 1.08,
+    "p95": 4.401,
+    "gt1": 51.09,
+    "rmse": 2.1407
+   },
+   "near_anchor": {
+    "n": 5,
+    "median": 0.18,
+    "mad": 0.44,
+    "p95": 4.53,
+    "gt1": 40.0,
+    "rmse": 2.842
+   },
+   "not_near_anchor": {
+    "n": 179,
+    "median": 0.71,
+    "mad": 1.12,
+    "p95": 4.233,
+    "gt1": 51.4,
+    "rmse": 2.1178
+   },
+   "band_0_5": {
+    "n": 184,
+    "median": 0.69,
+    "mad": 1.08,
+    "p95": 4.401,
+    "gt1": 51.09,
+    "rmse": 2.1407
+   },
+   "band_other": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 54,
+     "median": 1.51,
+     "mad": 1.28,
+     "p95": 4.2655,
+     "gt1": 68.52,
+     "rmse": 2.28
+    },
+    "near_anchor": {
+     "n": 1,
+     "median": -0.26,
+     "mad": 0.0,
+     "p95": 0.26,
+     "gt1": 0.0,
+     "rmse": 0.26
+    },
+    "not_near_anchor": {
+     "n": 53,
+     "median": 1.6,
+     "mad": 1.06,
+     "p95": 4.272,
+     "gt1": 69.81,
+     "rmse": 2.3011
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 26,
+     "median": 1.87,
+     "mad": 2.975,
+     "p95": 7.4775,
+     "gt1": 96.15,
+     "rmse": 3.7339
+    },
+    "near_anchor": {
+     "n": 2,
+     "median": 4.485,
+     "mad": 0.075,
+     "p95": 4.5525,
+     "gt1": 100.0,
+     "rmse": 4.4856
+    },
+    "not_near_anchor": {
+     "n": 24,
+     "median": 1.725,
+     "mad": 3.29,
+     "p95": 7.6745,
+     "gt1": 95.83,
+     "rmse": 3.6643
+    }
+   }
+  },
+  "atl06_south_cache": {
+   "all": {
+    "n": 244914,
+    "median": -0.376,
+    "mad": 0.577,
+    "p95": 8.144,
+    "gt1": 35.9,
+    "rmse": 4.554
+   },
+   "near_anchor": {
+    "n": 15,
+    "median": -0.889,
+    "mad": 0.638,
+    "p95": 6.8764,
+    "gt1": 46.67,
+    "rmse": 3.2849
+   },
+   "not_near_anchor": {
+    "n": 244899,
+    "median": -0.376,
+    "mad": 0.577,
+    "p95": 8.144,
+    "gt1": 35.89,
+    "rmse": 4.5541
+   },
+   "band_0_5": {
+    "n": 19297,
+    "median": -0.095,
+    "mad": 0.317,
+    "p95": 2.2362,
+    "gt1": 18.88,
+    "rmse": 0.9886
+   },
+   "band_other": {
+    "n": 225617,
+    "median": -0.414,
+    "mad": 0.614,
+    "p95": 8.6192,
+    "gt1": 37.35,
+    "rmse": 4.736
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 121832,
+     "median": -0.89,
+     "mad": 1.044,
+     "p95": 11.181,
+     "gt1": 53.55,
+     "rmse": 5.5692
+    },
+    "near_anchor": {
+     "n": 9,
+     "median": -1.791,
+     "mad": 1.089,
+     "p95": 8.4598,
+     "gt1": 77.78,
+     "rmse": 4.216
+    },
+    "not_near_anchor": {
+     "n": 121823,
+     "median": -0.889,
+     "mad": 1.044,
+     "p95": 11.181,
+     "gt1": 53.55,
+     "rmse": 5.5693
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 123078,
+     "median": -0.156,
+     "mad": 0.326,
+     "p95": 3.1601,
+     "gt1": 18.42,
+     "rmse": 3.2506
+    },
+    "near_anchor": {
+     "n": 6,
+     "median": -0.419,
+     "mad": 0.2775,
+     "p95": 0.8652,
+     "gt1": 0.0,
+     "rmse": 0.561
+    },
+    "not_near_anchor": {
+     "n": 123072,
+     "median": -0.156,
+     "mad": 0.326,
+     "p95": 3.1604,
+     "gt1": 18.42,
+     "rmse": 3.2506
+    }
+   }
+  }
+ },
+ "by_district": {
+  "Адмиралтейский район": {
+   "all": {
+    "n": 190,
+    "median": 0.1495,
+    "mad": 0.427,
+    "p95": 1.7871,
+    "gt1": 21.58,
+    "rmse": 0.9043
+   },
+   "near_anchor": {
+    "n": 11,
+    "median": 1.05,
+    "mad": 0.14,
+    "p95": 1.955,
+    "gt1": 54.55,
+    "rmse": 1.2289
+   },
+   "not_near_anchor": {
+    "n": 179,
+    "median": 0.1,
+    "mad": 0.4,
+    "p95": 1.7183,
+    "gt1": 19.55,
+    "rmse": 0.8804
+   },
+   "band_0_5": {
+    "n": 137,
+    "median": 0.36,
+    "mad": 0.44,
+    "p95": 1.442,
+    "gt1": 17.52,
+    "rmse": 0.7711
+   },
+   "band_other": {
+    "n": 53,
+    "median": -0.292,
+    "mad": 0.38,
+    "p95": 1.9352,
+    "gt1": 32.08,
+    "rmse": 1.1809
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 148,
+     "median": 0.0545,
+     "mad": 0.4555,
+     "p95": 1.617,
+     "gt1": 20.27,
+     "rmse": 0.8112
+    },
+    "near_anchor": {
+     "n": 11,
+     "median": 1.05,
+     "mad": 0.14,
+     "p95": 1.955,
+     "gt1": 54.55,
+     "rmse": 1.2289
+    },
+    "not_near_anchor": {
+     "n": 137,
+     "median": 0.02,
+     "mad": 0.42,
+     "p95": 1.5616,
+     "gt1": 17.52,
+     "rmse": 0.7679
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 11,
+     "median": 0.237,
+     "mad": 0.853,
+     "p95": 2.115,
+     "gt1": 45.45,
+     "rmse": 1.1594
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 11,
+     "median": 0.237,
+     "mad": 0.853,
+     "p95": 2.115,
+     "gt1": 45.45,
+     "rmse": 1.1594
+    }
+   }
+  },
+  "Василеостровский район": {
+   "all": {
+    "n": 64,
+    "median": 2.03,
+    "mad": 0.84,
+    "p95": 4.4025,
+    "gt1": 90.62,
+    "rmse": 2.5306
+   },
+   "near_anchor": {
+    "n": 11,
+    "median": 1.5,
+    "mad": 0.9,
+    "p95": 4.485,
+    "gt1": 90.91,
+    "rmse": 2.7183
+   },
+   "not_near_anchor": {
+    "n": 53,
+    "median": 2.08,
+    "mad": 0.86,
+    "p95": 4.272,
+    "gt1": 90.57,
+    "rmse": 2.4899
+   },
+   "band_0_5": {
+    "n": 64,
+    "median": 2.03,
+    "mad": 0.84,
+    "p95": 4.4025,
+    "gt1": 90.62,
+    "rmse": 2.5306
+   },
+   "band_other": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 41,
+     "median": 2.17,
+     "mad": 0.95,
+     "p95": 4.36,
+     "gt1": 87.8,
+     "rmse": 2.6045
+    },
+    "near_anchor": {
+     "n": 4,
+     "median": 1.53,
+     "mad": 1.88,
+     "p95": 4.075,
+     "gt1": 75.0,
+     "rmse": 2.8007
+    },
+    "not_near_anchor": {
+     "n": 37,
+     "median": 2.17,
+     "mad": 0.75,
+     "p95": 4.382,
+     "gt1": 89.19,
+     "rmse": 2.5824
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 23,
+     "median": 1.54,
+     "mad": 0.87,
+     "p95": 4.335,
+     "gt1": 95.65,
+     "rmse": 2.3932
+    },
+    "near_anchor": {
+     "n": 7,
+     "median": 1.5,
+     "mad": 0.26,
+     "p95": 4.515,
+     "gt1": 100.0,
+     "rmse": 2.6701
+    },
+    "not_near_anchor": {
+     "n": 16,
+     "median": 1.705,
+     "mad": 1.32,
+     "p95": 3.33,
+     "gt1": 93.75,
+     "rmse": 2.2614
+    }
+   }
+  },
+  "Калининский район": {
+   "all": {
+    "n": 5,
+    "median": 0.66,
+    "mad": 0.22,
+    "p95": 1.572,
+    "gt1": 20.0,
+    "rmse": 0.9418
+   },
+   "near_anchor": {
+    "n": 4,
+    "median": 0.55,
+    "mad": 0.15,
+    "p95": 0.728,
+    "gt1": 0.0,
+    "rmse": 0.5628
+   },
+   "not_near_anchor": {
+    "n": 1,
+    "median": 1.78,
+    "mad": 0.0,
+    "p95": 1.78,
+    "gt1": 100.0,
+    "rmse": 1.78
+   },
+   "band_0_5": {
+    "n": 4,
+    "median": 0.55,
+    "mad": 0.15,
+    "p95": 0.728,
+    "gt1": 0.0,
+    "rmse": 0.5628
+   },
+   "band_other": {
+    "n": 1,
+    "median": 1.78,
+    "mad": 0.0,
+    "p95": 1.78,
+    "gt1": 100.0,
+    "rmse": 1.78
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 1,
+     "median": 1.78,
+     "mad": 0.0,
+     "p95": 1.78,
+     "gt1": 100.0,
+     "rmse": 1.78
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 1,
+     "median": 1.78,
+     "mad": 0.0,
+     "p95": 1.78,
+     "gt1": 100.0,
+     "rmse": 1.78
+    }
+   }
+  },
+  "Кировский район": {
+   "all": {
+    "n": 14123,
+    "median": -0.584,
+    "mad": 0.991,
+    "p95": 11.11,
+    "gt1": 48.86,
+    "rmse": 4.9472
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 14123,
+    "median": -0.584,
+    "mad": 0.991,
+    "p95": 11.11,
+    "gt1": 48.86,
+    "rmse": 4.9472
+   },
+   "band_0_5": {
+    "n": 5135,
+    "median": -0.003,
+    "mad": 0.458,
+    "p95": 2.2806,
+    "gt1": 25.18,
+    "rmse": 1.0403
+   },
+   "band_other": {
+    "n": 8988,
+    "median": -1.5595,
+    "mad": 1.667,
+    "p95": 13.5537,
+    "gt1": 62.38,
+    "rmse": 6.1514
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 10422,
+     "median": -0.98,
+     "mad": 1.302,
+     "p95": 12.3887,
+     "gt1": 57.08,
+     "rmse": 5.3433
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 10422,
+     "median": -0.98,
+     "mad": 1.302,
+     "p95": 12.3887,
+     "gt1": 57.08,
+     "rmse": 5.3433
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 3701,
+     "median": -0.067,
+     "mad": 0.407,
+     "p95": 4.929,
+     "gt1": 25.7,
+     "rmse": 3.6051
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 3701,
+     "median": -0.067,
+     "mad": 0.407,
+     "p95": 4.929,
+     "gt1": 25.7,
+     "rmse": 3.6051
+    }
+   }
+  },
+  "Красногвардейский район": {
+   "all": {
+    "n": 9,
+    "median": -0.85,
+    "mad": 0.1,
+    "p95": 2.596,
+    "gt1": 22.22,
+    "rmse": 1.4039
+   },
+   "near_anchor": {
+    "n": 2,
+    "median": -2.43,
+    "mad": 0.83,
+    "p95": 3.177,
+    "gt1": 100.0,
+    "rmse": 2.5678
+   },
+   "not_near_anchor": {
+    "n": 7,
+    "median": -0.8,
+    "mad": 0.1,
+    "p95": 0.935,
+    "gt1": 0.0,
+    "rmse": 0.8062
+   },
+   "band_0_5": {
+    "n": 1,
+    "median": -1.6,
+    "mad": 0.0,
+    "p95": 1.6,
+    "gt1": 100.0,
+    "rmse": 1.6
+   },
+   "band_other": {
+    "n": 8,
+    "median": -0.825,
+    "mad": 0.1,
+    "p95": 2.4515,
+    "gt1": 12.5,
+    "rmse": 1.3774
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 9,
+     "median": -0.85,
+     "mad": 0.1,
+     "p95": 2.596,
+     "gt1": 22.22,
+     "rmse": 1.4039
+    },
+    "near_anchor": {
+     "n": 2,
+     "median": -2.43,
+     "mad": 0.83,
+     "p95": 3.177,
+     "gt1": 100.0,
+     "rmse": 2.5678
+    },
+    "not_near_anchor": {
+     "n": 7,
+     "median": -0.8,
+     "mad": 0.1,
+     "p95": 0.935,
+     "gt1": 0.0,
+     "rmse": 0.8062
+    }
+   }
+  },
+  "Невский район": {
+   "all": {
+    "n": 12544,
+    "median": -0.812,
+    "mad": 1.165,
+    "p95": 10.3939,
+    "gt1": 53.95,
+    "rmse": 7.1049
+   },
+   "near_anchor": {
+    "n": 9,
+    "median": -0.542,
+    "mad": 0.485,
+    "p95": 2.1864,
+    "gt1": 44.44,
+    "rmse": 1.2515
+   },
+   "not_near_anchor": {
+    "n": 12535,
+    "median": -0.812,
+    "mad": 1.166,
+    "p95": 10.3969,
+    "gt1": 53.95,
+    "rmse": 7.1074
+   },
+   "band_0_5": {
+    "n": 1286,
+    "median": 0.022,
+    "mad": 0.459,
+    "p95": 2.7528,
+    "gt1": 24.88,
+    "rmse": 1.1633
+   },
+   "band_other": {
+    "n": 11258,
+    "median": -0.9965,
+    "mad": 1.2915,
+    "p95": 10.8385,
+    "gt1": 57.27,
+    "rmse": 7.4894
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 8642,
+     "median": -1.2005,
+     "mad": 1.2815,
+     "p95": 10.6428,
+     "gt1": 60.4,
+     "rmse": 7.9775
+    },
+    "near_anchor": {
+     "n": 6,
+     "median": -0.7845,
+     "mad": 0.3675,
+     "p95": 1.7232,
+     "gt1": 50.0,
+     "rmse": 1.0986
+    },
+    "not_near_anchor": {
+     "n": 8636,
+     "median": -1.201,
+     "mad": 1.283,
+     "p95": 10.6485,
+     "gt1": 60.41,
+     "rmse": 7.9802
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 3900,
+     "median": -0.15,
+     "mad": 0.7425,
+     "p95": 8.7663,
+     "gt1": 39.64,
+     "rmse": 4.6164
+    },
+    "near_anchor": {
+     "n": 3,
+     "median": 0.25,
+     "mad": 1.139,
+     "p95": 2.2939,
+     "gt1": 33.33,
+     "rmse": 1.5117
+    },
+    "not_near_anchor": {
+     "n": 3897,
+     "median": -0.151,
+     "mad": 0.742,
+     "p95": 8.7674,
+     "gt1": 39.65,
+     "rmse": 4.618
+    }
+   }
+  },
+  "Петроградский район": {
+   "all": {
+    "n": 142,
+    "median": -0.025,
+    "mad": 0.635,
+    "p95": 2.5195,
+    "gt1": 29.58,
+    "rmse": 1.1222
+   },
+   "near_anchor": {
+    "n": 31,
+    "median": 0.84,
+    "mad": 0.45,
+    "p95": 1.57,
+    "gt1": 48.39,
+    "rmse": 1.181
+   },
+   "not_near_anchor": {
+    "n": 111,
+    "median": -0.18,
+    "mad": 0.48,
+    "p95": 2.65,
+    "gt1": 24.32,
+    "rmse": 1.1052
+   },
+   "band_0_5": {
+    "n": 142,
+    "median": -0.025,
+    "mad": 0.635,
+    "p95": 2.5195,
+    "gt1": 29.58,
+    "rmse": 1.1222
+   },
+   "band_other": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 68,
+     "median": -0.115,
+     "mad": 0.83,
+     "p95": 1.69,
+     "gt1": 36.76,
+     "rmse": 1.0749
+    },
+    "near_anchor": {
+     "n": 26,
+     "median": 0.875,
+     "mad": 0.39,
+     "p95": 1.5,
+     "gt1": 50.0,
+     "rmse": 1.0337
+    },
+    "not_near_anchor": {
+     "n": 42,
+     "median": -0.485,
+     "mad": 0.455,
+     "p95": 2.4915,
+     "gt1": 28.57,
+     "rmse": 1.0996
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 1,
+     "median": 1.58,
+     "mad": 0.0,
+     "p95": 1.58,
+     "gt1": 100.0,
+     "rmse": 1.58
+    },
+    "near_anchor": {
+     "n": 1,
+     "median": 1.58,
+     "mad": 0.0,
+     "p95": 1.58,
+     "gt1": 100.0,
+     "rmse": 1.58
+    },
+    "not_near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    }
+   }
+  },
+  "Фрунзенский район": {
+   "all": {
+    "n": 16719,
+    "median": -0.837,
+    "mad": 0.862,
+    "p95": 9.9376,
+    "gt1": 48.51,
+    "rmse": 4.9964
+   },
+   "near_anchor": {
+    "n": 1,
+    "median": -0.29,
+    "mad": 0.0,
+    "p95": 0.29,
+    "gt1": 0.0,
+    "rmse": 0.29
+   },
+   "not_near_anchor": {
+    "n": 16718,
+    "median": -0.837,
+    "mad": 0.862,
+    "p95": 9.9379,
+    "gt1": 48.51,
+    "rmse": 4.9966
+   },
+   "band_0_5": {
+    "n": 335,
+    "median": 1.738,
+    "mad": 0.879,
+    "p95": 4.1672,
+    "gt1": 72.24,
+    "rmse": 2.2706
+   },
+   "band_other": {
+    "n": 16384,
+    "median": -0.875,
+    "mad": 0.857,
+    "p95": 10.0194,
+    "gt1": 48.02,
+    "rmse": 5.0368
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 13322,
+     "median": -0.905,
+     "mad": 0.883,
+     "p95": 10.7589,
+     "gt1": 49.26,
+     "rmse": 5.2658
+    },
+    "near_anchor": {
+     "n": 1,
+     "median": -0.29,
+     "mad": 0.0,
+     "p95": 0.29,
+     "gt1": 0.0,
+     "rmse": 0.29
+    },
+    "not_near_anchor": {
+     "n": 13321,
+     "median": -0.905,
+     "mad": 0.883,
+     "p95": 10.759,
+     "gt1": 49.27,
+     "rmse": 5.266
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 3397,
+     "median": -0.587,
+     "mad": 0.794,
+     "p95": 6.1034,
+     "gt1": 45.54,
+     "rmse": 3.7577
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 3397,
+     "median": -0.587,
+     "mad": 0.794,
+     "p95": 6.1034,
+     "gt1": 45.54,
+     "rmse": 3.7577
+    }
+   }
+  },
+  "Центральный район": {
+   "all": {
+    "n": 161,
+    "median": 1.22,
+    "mad": 0.34,
+    "p95": 3.45,
+    "gt1": 70.81,
+    "rmse": 1.8926
+   },
+   "near_anchor": {
+    "n": 1,
+    "median": 0.18,
+    "mad": 0.0,
+    "p95": 0.18,
+    "gt1": 0.0,
+    "rmse": 0.18
+   },
+   "not_near_anchor": {
+    "n": 160,
+    "median": 1.225,
+    "mad": 0.34,
+    "p95": 3.455,
+    "gt1": 71.25,
+    "rmse": 1.8985
+   },
+   "band_0_5": {
+    "n": 41,
+    "median": 1.02,
+    "mad": 1.19,
+    "p95": 6.86,
+    "gt1": 60.98,
+    "rmse": 2.9592
+   },
+   "band_other": {
+    "n": 120,
+    "median": 1.275,
+    "mad": 0.3,
+    "p95": 1.8205,
+    "gt1": 74.17,
+    "rmse": 1.3468
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 126,
+     "median": 1.295,
+     "mad": 0.315,
+     "p95": 1.8675,
+     "gt1": 75.4,
+     "rmse": 1.8779
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 126,
+     "median": 1.295,
+     "mad": 0.315,
+     "p95": 1.8675,
+     "gt1": 75.4,
+     "rmse": 1.8779
+    }
+   }
+  },
+  "округ: Южно-Приморский округ": {
+   "all": {
+    "n": 3465,
+    "median": -0.85,
+    "mad": 0.858,
+    "p95": 8.7272,
+    "gt1": 49.03,
+    "rmse": 6.6373
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 3465,
+    "median": -0.85,
+    "mad": 0.858,
+    "p95": 8.7272,
+    "gt1": 49.03,
+    "rmse": 6.6373
+   },
+   "band_0_5": {
+    "n": 2694,
+    "median": -0.639,
+    "mad": 0.572,
+    "p95": 2.6604,
+    "gt1": 36.08,
+    "rmse": 1.2399
+   },
+   "band_other": {
+    "n": 771,
+    "median": -3.992,
+    "mad": 2.13,
+    "p95": 27.148,
+    "gt1": 94.29,
+    "rmse": 13.8786
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 2677,
+     "median": -0.984,
+     "mad": 0.862,
+     "p95": 10.9446,
+     "gt1": 53.75,
+     "rmse": 6.4164
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 2677,
+     "median": -0.984,
+     "mad": 0.862,
+     "p95": 10.9446,
+     "gt1": 53.75,
+     "rmse": 6.4164
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 788,
+     "median": -0.318,
+     "mad": 0.526,
+     "p95": 3.4117,
+     "gt1": 32.99,
+     "rmse": 7.3385
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 788,
+     "median": -0.318,
+     "mad": 0.526,
+     "p95": 3.4117,
+     "gt1": 32.99,
+     "rmse": 7.3385
+    }
+   }
+  },
+  "округ: округ Гагаринское": {
+   "all": {
+    "n": 5888,
+    "median": -0.6805,
+    "mad": 1.1605,
+    "p95": 11.8813,
+    "gt1": 51.55,
+    "rmse": 6.1661
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 5888,
+    "median": -0.6805,
+    "mad": 1.1605,
+    "p95": 11.8813,
+    "gt1": 51.55,
+    "rmse": 6.1661
+   },
+   "band_0_5": {
+    "n": 16,
+    "median": 2.6805,
+    "mad": 0.5575,
+    "p95": 7.5773,
+    "gt1": 100.0,
+    "rmse": 4.0464
+   },
+   "band_other": {
+    "n": 5872,
+    "median": -0.6875,
+    "mad": 1.1585,
+    "p95": 11.9069,
+    "gt1": 51.41,
+    "rmse": 6.1709
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 4966,
+     "median": -0.8535,
+     "mad": 1.301,
+     "p95": 11.9195,
+     "gt1": 55.34,
+     "rmse": 6.3262
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 4966,
+     "median": -0.8535,
+     "mad": 1.301,
+     "p95": 11.9195,
+     "gt1": 55.34,
+     "rmse": 6.3262
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 922,
+     "median": -0.1375,
+     "mad": 0.574,
+     "p95": 11.5319,
+     "gt1": 31.13,
+     "rmse": 5.2202
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 922,
+     "median": -0.1375,
+     "mad": 0.574,
+     "p95": 11.5319,
+     "gt1": 31.13,
+     "rmse": 5.2202
+    }
+   }
+  },
+  "округ: округ Звёздное": {
+   "all": {
+    "n": 3904,
+    "median": -0.636,
+    "mad": 0.8405,
+    "p95": 10.0002,
+    "gt1": 46.7,
+    "rmse": 7.3907
+   },
+   "near_anchor": {
+    "n": 1,
+    "median": 0.74,
+    "mad": 0.0,
+    "p95": 0.74,
+    "gt1": 0.0,
+    "rmse": 0.74
+   },
+   "not_near_anchor": {
+    "n": 3903,
+    "median": -0.636,
+    "mad": 0.84,
+    "p95": 10.0008,
+    "gt1": 46.71,
+    "rmse": 7.3916
+   },
+   "band_0_5": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "band_other": {
+    "n": 3904,
+    "median": -0.636,
+    "mad": 0.8405,
+    "p95": 10.0002,
+    "gt1": 46.7,
+    "rmse": 7.3907
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 3086,
+     "median": -0.812,
+     "mad": 0.9055,
+     "p95": 10.6325,
+     "gt1": 51.88,
+     "rmse": 8.1048
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 3086,
+     "median": -0.812,
+     "mad": 0.9055,
+     "p95": 10.6325,
+     "gt1": 51.88,
+     "rmse": 8.1048
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 818,
+     "median": -0.0805,
+     "mad": 0.48,
+     "p95": 3.0071,
+     "gt1": 27.14,
+     "rmse": 3.5886
+    },
+    "near_anchor": {
+     "n": 1,
+     "median": 0.74,
+     "mad": 0.0,
+     "p95": 0.74,
+     "gt1": 0.0,
+     "rmse": 0.74
+    },
+    "not_near_anchor": {
+     "n": 817,
+     "median": -0.081,
+     "mad": 0.479,
+     "p95": 3.0102,
+     "gt1": 27.17,
+     "rmse": 3.5907
+    }
+   }
+  },
+  "округ: округ Константиновское": {
+   "all": {
+    "n": 4219,
+    "median": -1.014,
+    "mad": 0.798,
+    "p95": 8.0055,
+    "gt1": 52.15,
+    "rmse": 3.5663
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 4219,
+    "median": -1.014,
+    "mad": 0.798,
+    "p95": 8.0055,
+    "gt1": 52.15,
+    "rmse": 3.5663
+   },
+   "band_0_5": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "band_other": {
+    "n": 4219,
+    "median": -1.014,
+    "mad": 0.798,
+    "p95": 8.0055,
+    "gt1": 52.15,
+    "rmse": 3.5663
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 3665,
+     "median": -1.178,
+     "mad": 0.797,
+     "p95": 8.6036,
+     "gt1": 57.05,
+     "rmse": 3.5923
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 3665,
+     "median": -1.178,
+     "mad": 0.797,
+     "p95": 8.6036,
+     "gt1": 57.05,
+     "rmse": 3.5923
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 554,
+     "median": -0.107,
+     "mad": 0.405,
+     "p95": 2.9104,
+     "gt1": 19.68,
+     "rmse": 3.3891
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 554,
+     "median": -0.107,
+     "mad": 0.405,
+     "p95": 2.9104,
+     "gt1": 19.68,
+     "rmse": 3.3891
+    }
+   }
+  },
+  "округ: округ Московская застава": {
+   "all": {
+    "n": 2029,
+    "median": -0.464,
+    "mad": 1.13,
+    "p95": 15.375,
+    "gt1": 53.52,
+    "rmse": 6.063
+   },
+   "near_anchor": {
+    "n": 2,
+    "median": -6.414,
+    "mad": 4.157,
+    "p95": 10.1553,
+    "gt1": 100.0,
+    "rmse": 7.6433
+   },
+   "not_near_anchor": {
+    "n": 2027,
+    "median": -0.461,
+    "mad": 1.127,
+    "p95": 15.3805,
+    "gt1": 53.48,
+    "rmse": 6.0612
+   },
+   "band_0_5": {
+    "n": 21,
+    "median": 0.154,
+    "mad": 0.207,
+    "p95": 1.453,
+    "gt1": 14.29,
+    "rmse": 0.8888
+   },
+   "band_other": {
+    "n": 2008,
+    "median": -0.4785,
+    "mad": 1.1465,
+    "p95": 15.4483,
+    "gt1": 53.93,
+    "rmse": 6.0939
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 1472,
+     "median": -0.504,
+     "mad": 1.135,
+     "p95": 15.2423,
+     "gt1": 54.62,
+     "rmse": 6.0226
+    },
+    "near_anchor": {
+     "n": 2,
+     "median": -6.414,
+     "mad": 4.157,
+     "p95": 10.1553,
+     "gt1": 100.0,
+     "rmse": 7.6433
+    },
+    "not_near_anchor": {
+     "n": 1470,
+     "median": -0.5025,
+     "mad": 1.135,
+     "p95": 15.2467,
+     "gt1": 54.56,
+     "rmse": 6.0201
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 557,
+     "median": -0.391,
+     "mad": 1.15,
+     "p95": 15.5774,
+     "gt1": 50.63,
+     "rmse": 6.1684
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 557,
+     "median": -0.391,
+     "mad": 1.15,
+     "p95": 15.5774,
+     "gt1": 50.63,
+     "rmse": 6.1684
+    }
+   }
+  },
+  "округ: округ Новоизмайловское": {
+   "all": {
+    "n": 1708,
+    "median": -0.647,
+    "mad": 0.985,
+    "p95": 11.7869,
+    "gt1": 46.31,
+    "rmse": 5.1787
+   },
+   "near_anchor": {
+    "n": 4,
+    "median": -0.625,
+    "mad": 0.46,
+    "p95": 1.3271,
+    "gt1": 25.0,
+    "rmse": 0.85
+   },
+   "not_near_anchor": {
+    "n": 1704,
+    "median": -0.647,
+    "mad": 0.988,
+    "p95": 11.8241,
+    "gt1": 46.36,
+    "rmse": 5.1847
+   },
+   "band_0_5": {
+    "n": 1,
+    "median": 8.01,
+    "mad": 0.0,
+    "p95": 8.01,
+    "gt1": 100.0,
+    "rmse": 8.01
+   },
+   "band_other": {
+    "n": 1707,
+    "median": -0.648,
+    "mad": 0.983,
+    "p95": 11.7962,
+    "gt1": 46.28,
+    "rmse": 5.1766
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 1468,
+     "median": -0.756,
+     "mad": 1.07,
+     "p95": 12.4983,
+     "gt1": 50.0,
+     "rmse": 5.407
+    },
+    "near_anchor": {
+     "n": 4,
+     "median": -0.625,
+     "mad": 0.46,
+     "p95": 1.3271,
+     "gt1": 25.0,
+     "rmse": 0.85
+    },
+    "not_near_anchor": {
+     "n": 1464,
+     "median": -0.756,
+     "mad": 1.072,
+     "p95": 12.5021,
+     "gt1": 50.07,
+     "rmse": 5.4142
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 240,
+     "median": -0.0825,
+     "mad": 0.6095,
+     "p95": 3.847,
+     "gt1": 23.75,
+     "rmse": 3.4694
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 240,
+     "median": -0.0825,
+     "mad": 0.6095,
+     "p95": 3.847,
+     "gt1": 23.75,
+     "rmse": 3.4694
+    }
+   }
+  },
+  "округ: округ Сосновая поляна": {
+   "all": {
+    "n": 3405,
+    "median": -0.775,
+    "mad": 0.955,
+    "p95": 10.893,
+    "gt1": 49.02,
+    "rmse": 4.8869
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 3405,
+    "median": -0.775,
+    "mad": 0.955,
+    "p95": 10.893,
+    "gt1": 49.02,
+    "rmse": 4.8869
+   },
+   "band_0_5": {
+    "n": 381,
+    "median": -0.072,
+    "mad": 0.547,
+    "p95": 2.044,
+    "gt1": 25.72,
+    "rmse": 0.9747
+   },
+   "band_other": {
+    "n": 3024,
+    "median": -0.952,
+    "mad": 1.037,
+    "p95": 11.5088,
+    "gt1": 51.95,
+    "rmse": 5.1741
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 2264,
+     "median": -1.288,
+     "mad": 1.277,
+     "p95": 10.7012,
+     "gt1": 59.23,
+     "rmse": 4.6736
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 2264,
+     "median": -1.288,
+     "mad": 1.277,
+     "p95": 10.7012,
+     "gt1": 59.23,
+     "rmse": 4.6736
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 1141,
+     "median": -0.332,
+     "mad": 0.474,
+     "p95": 11.144,
+     "gt1": 28.75,
+     "rmse": 5.2849
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 1141,
+     "median": -0.332,
+     "mad": 0.474,
+     "p95": 11.144,
+     "gt1": 28.75,
+     "rmse": 5.2849
+    }
+   }
+  },
+  "округ: округ Сосновское": {
+   "all": {
+    "n": 2,
+    "median": -3.48,
+    "mad": 1.54,
+    "p95": 4.866,
+    "gt1": 100.0,
+    "rmse": 3.8055
+   },
+   "near_anchor": {
+    "n": 2,
+    "median": -3.48,
+    "mad": 1.54,
+    "p95": 4.866,
+    "gt1": 100.0,
+    "rmse": 3.8055
+   },
+   "not_near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "band_0_5": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "band_other": {
+    "n": 2,
+    "median": -3.48,
+    "mad": 1.54,
+    "p95": 4.866,
+    "gt1": 100.0,
+    "rmse": 3.8055
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 2,
+     "median": -3.48,
+     "mad": 1.54,
+     "p95": 4.866,
+     "gt1": 100.0,
+     "rmse": 3.8055
+    },
+    "near_anchor": {
+     "n": 2,
+     "median": -3.48,
+     "mad": 1.54,
+     "p95": 4.866,
+     "gt1": 100.0,
+     "rmse": 3.8055
+    },
+    "not_near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    }
+   }
+  },
+  "округ: округ Урицк": {
+   "all": {
+    "n": 1000,
+    "median": -0.707,
+    "mad": 0.975,
+    "p95": 11.3831,
+    "gt1": 53.4,
+    "rmse": 6.5857
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 1000,
+    "median": -0.707,
+    "mad": 0.975,
+    "p95": 11.3831,
+    "gt1": 53.4,
+    "rmse": 6.5857
+   },
+   "band_0_5": {
+    "n": 69,
+    "median": 0.113,
+    "mad": 0.589,
+    "p95": 2.6422,
+    "gt1": 33.33,
+    "rmse": 1.1503
+   },
+   "band_other": {
+    "n": 931,
+    "median": -0.812,
+    "mad": 1.006,
+    "p95": 12.983,
+    "gt1": 54.89,
+    "rmse": 6.8182
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 744,
+     "median": -1.1665,
+     "mad": 1.0295,
+     "p95": 15.2027,
+     "gt1": 61.29,
+     "rmse": 7.5361
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 744,
+     "median": -1.1665,
+     "mad": 1.0295,
+     "p95": 15.2027,
+     "gt1": 61.29,
+     "rmse": 7.5361
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 256,
+     "median": 0.241,
+     "mad": 0.526,
+     "p95": 2.686,
+     "gt1": 30.47,
+     "rmse": 2.0898
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 256,
+     "median": 0.241,
+     "mad": 0.526,
+     "p95": 2.686,
+     "gt1": 30.47,
+     "rmse": 2.0898
+    }
+   }
+  },
+  "округ: округ Юго-Запад": {
+   "all": {
+    "n": 1466,
+    "median": -0.722,
+    "mad": 0.5835,
+    "p95": 8.0335,
+    "gt1": 40.11,
+    "rmse": 4.6738
+   },
+   "near_anchor": {
+    "n": 0,
+    "median": null,
+    "mad": null,
+    "p95": null,
+    "gt1": null,
+    "rmse": null
+   },
+   "not_near_anchor": {
+    "n": 1466,
+    "median": -0.722,
+    "mad": 0.5835,
+    "p95": 8.0335,
+    "gt1": 40.11,
+    "rmse": 4.6738
+   },
+   "band_0_5": {
+    "n": 965,
+    "median": -0.402,
+    "mad": 0.298,
+    "p95": 1.3296,
+    "gt1": 11.4,
+    "rmse": 0.6564
+   },
+   "band_other": {
+    "n": 501,
+    "median": -2.414,
+    "mad": 1.092,
+    "p95": 19.526,
+    "gt1": 95.41,
+    "rmse": 7.9429
+   },
+   "conf_11_rest": {
+    "all": {
+     "n": 1418,
+     "median": -0.7195,
+     "mad": 0.5785,
+     "p95": 8.0012,
+     "gt1": 39.77,
+     "rmse": 4.6276
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 1418,
+     "median": -0.7195,
+     "mad": 0.5785,
+     "p95": 8.0012,
+     "gt1": 39.77,
+     "rmse": 4.6276
+    }
+   },
+   "conf_13_gold": {
+    "all": {
+     "n": 48,
+     "median": -0.7655,
+     "mad": 0.745,
+     "p95": 10.9149,
+     "gt1": 50.0,
+     "rmse": 5.8768
+    },
+    "near_anchor": {
+     "n": 0,
+     "median": null,
+     "mad": null,
+     "p95": null,
+     "gt1": null,
+     "rmse": null
+    },
+    "not_near_anchor": {
+     "n": 48,
+     "median": -0.7655,
+     "mad": 0.745,
+     "p95": 10.9149,
+     "gt1": 50.0,
+     "rmse": 5.8768
+    }
+   }
+  }
+ },
+ "by_conf_tier": {
+  "11 rest": {
+   "all": {
+    "n": 122217,
+    "median": -0.886,
+    "mad": 1.043,
+    "p95": 11.1684,
+    "gt1": 53.51,
+    "rmse": 5.5619
+   },
+   "not_near_anchor": {
+    "n": 122158,
+    "median": -0.887,
+    "mad": 1.043,
+    "p95": 11.172,
+    "gt1": 53.51,
+    "rmse": 5.563
+   }
+  },
+  "13 gold": {
+   "all": {
+    "n": 123329,
+    "median": -0.156,
+    "mad": 0.327,
+    "p95": 3.167,
+    "gt1": 18.52,
+    "rmse": 3.2486
+   },
+   "not_near_anchor": {
+    "n": 123310,
+    "median": -0.156,
+    "mad": 0.327,
+    "p95": 3.166,
+    "gt1": 18.52,
+    "rmse": 3.2487
+   }
+  }
+ },
+ "by_age_vs_tref": {
+  "t_ref": 2026.0,
+  "note": "возраст = T_ref − t_obs; середина интервала для неточных дат; σ_t — в пуле, в разрез не входит",
+  "groups": {
+   "ATL06 40-м сегмент (поверхность; может включать крыши)": {
+    "0-5л": {
+     "n": 170804,
+     "median": -0.411,
+     "mad": 0.587,
+     "p95": 8.4858,
+     "gt1": 36.6,
+     "rmse": 4.8106
+    },
+    "5-15л": {
+     "n": 56137,
+     "median": -0.255,
+     "mad": 0.54,
+     "p95": 6.984,
+     "gt1": 32.79,
+     "rmse": 3.669
+    }
+   },
+   "отметка земли (тротуар, проезд, набережная)": {
+    ">30л": {
+     "n": 184,
+     "median": 0.69,
+     "mad": 1.08,
+     "p95": 4.401,
+     "gt1": 51.09,
+     "rmse": 2.1407
+    }
+   },
+   "отметка существующего покрытия": {
+    "15-30л": {
+     "n": 236,
+     "median": -0.235,
+     "mad": 0.335,
+     "p95": 1.2225,
+     "gt1": 12.29,
+     "rmse": 0.7415
+    }
+   },
+   "отметка существующего покрытия (предположительно)": {
+    "15-30л": {
+     "n": 341,
+     "median": 0.08,
+     "mad": 1.29,
+     "p95": 4.35,
+     "gt1": 69.21,
+     "rmse": 2.6048
+    }
+   },
+   "стенная марка (высотная сеть)": {
+    "15-30л": {
+     "n": 38,
+     "median": 0.37,
+     "mad": 1.065,
+     "p95": 3.68,
+     "gt1": 55.26,
+     "rmse": 1.7886
+    }
+   }
+  }
+ }
+}
