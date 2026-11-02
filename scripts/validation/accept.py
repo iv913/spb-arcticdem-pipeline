@@ -44,6 +44,31 @@ from stats_toolkit.paired_tests import paired_verdict  # noqa: E402
 
 CONF_TIERS = {10: 'excl', 11: 'rest', 12: 'ok', 13: 'gold'}
 
+AGE_BINS = (('0-5л', 0.0, 5.0), ('5-15л', 5.0, 15.0),
+            ('15-30л', 15.0, 30.0), ('>30л', 30.0, 1e9))
+
+
+def parse_t_obs(s):
+    """t_obs -> год (float). Форматы: 'YYYY..YYYY' (середина), '<=YYYY',
+    'YYYY-MM-DD' (с дробной частью), 'YYYY'. Пусто/неразборливо -> None."""
+    s = (s or '').strip()
+    if not s:
+        return None
+    try:
+        if '..' in s:
+            a, b = s.split('..', 1)
+            return (float(a) + float(b)) / 2.0
+        if s.startswith('<='):
+            return float(s[2:])
+        if len(s) >= 10 and s[4] == '-':
+            import datetime as _dt
+            d = _dt.date.fromisoformat(s[:10])
+            j = d.timetuple().tm_yday
+            return d.year + (j - 1) / 365.25
+        return float(s)
+    except Exception:
+        return None
+
 
 # ------------------------------------------------------------------ утилиты
 
@@ -111,7 +136,7 @@ def _near(lon, lat, alon, alat, r_m):
 
 def run_accept(surface, pool_csv, out_json, conf=None, base=None,
                anchors=None, anchor_r=15.0, band_lo=0.0, band_hi=5.0,
-               title='', scale=1.0, base_scale=1.0):
+               title='', scale=1.0, base_scale=1.0, t_ref=2026.0):
     P = list(csv.DictReader(open(pool_csv)))
     need = {'source', 'kind', 'lat', 'lon', 'z'}
     if not need <= set(P[0].keys()):
@@ -133,6 +158,8 @@ def run_accept(surface, pool_csv, out_json, conf=None, base=None,
     src = np.array([p['source'] for p in P])
     dist = np.array([(p.get('district') or '').strip() for p in P])
     rgt = np.array([(p.get('rgt') or '').strip() for p in P])
+    t_obs_arr = [parse_t_obs(p.get('t_obs')) for p in P]
+    kind_h = np.array([(p.get('kind_of_height') or '').strip() for p in P])
 
     zs = _sample(surface, lon, lat, scale=scale)
     d = zs - z
@@ -167,6 +194,7 @@ def run_accept(surface, pool_csv, out_json, conf=None, base=None,
         'anchors': str(anchors) if anchors else None,
         'anchor_r_m': anchor_r if anchors else None,
         'band': [band_lo, band_hi], 'title': title, 'scale': scale,
+        't_ref': t_ref,
         'date': _dt.date.today().isoformat(),
         'rules': 'handoff 2026-11 §1: земля/ICESat раздельно, ICESat по '
                  'трекам, парные тесты, фильтры — с отчётом до/после',
@@ -240,6 +268,29 @@ def run_accept(surface, pool_csv, out_json, conf=None, base=None,
                 }
         report['by_conf_tier'] = by_tier
 
+    # ---- dH против возраста отметки (B6, METHOD §3): по типам высоты
+    ages = np.array([ (t_ref - t) if t is not None else np.nan
+                      for t in t_obs_arr ])
+    if np.isfinite(ages).any():
+        by_age = {}
+        for kh in sorted({k for k in kind_h if k}):
+            mk = (kind_h == kh) & use & np.isfinite(ages)
+            if not mk.any():
+                continue
+            grp = {}
+            for lbl, lo_, hi_ in AGE_BINS:
+                mb = mk & (ages >= lo_) & (ages < hi_)
+                if mb.any():
+                    grp[lbl] = _stats(d[mb])
+            if grp:
+                by_age[kh] = grp
+        if by_age:
+            report['by_age_vs_tref'] = {
+                't_ref': t_ref,
+                'note': 'возраст = T_ref − t_obs; середина интервала для '
+                        'неточных дат; σ_t — в пуле, в разрез не входит',
+                'groups': by_age}
+
     # ---- парный тест «новое против базы» (если задана база)
     if base:
         zb = _sample(base, lon, lat, scale=base_scale)
@@ -278,6 +329,8 @@ def main():
     ap.add_argument('--scale', type=float, default=1.0,
                     help='множитель единиц растра к метрам (Int16 см → 0.01)')
     ap.add_argument('--base-scale', type=float, default=1.0)
+    ap.add_argument('--t-ref', type=float, default=2026.0,
+                    help='опорная дата для разреза dH против возраста (B6)')
     a = ap.parse_args()
     rep = run_accept(a.surface, a.pool, a.out, conf=a.conf, base=a.base,
                      anchors=a.anchors, anchor_r=a.anchor_r,

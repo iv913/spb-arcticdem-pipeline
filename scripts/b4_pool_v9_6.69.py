@@ -31,6 +31,7 @@ import csv
 import glob
 import json
 import random
+import time
 from collections import Counter
 from pathlib import Path
 
@@ -53,7 +54,36 @@ TILES = sorted(glob.glob(str(GH / 'scripts' / 'dem_cache' /
 COLS = ['id', 'kind', 'source', 'district', 'lat', 'lon', 'z', 'weight',
         'tier', 'use', 'flag_vs_neighbours', 'h_ell', 'rgt', 'cycle', 'gt',
         'h_sigma', 'n_fit', 'dist_to_anchor_m', 'track_near_anchor',
+        't_obs', 'sigma_t', 'how_dated', 'kind_of_height',
         'datum', 'note']
+
+# Реестр эпох (B6, METHOD_temporal_epochs §3): дата съёмки, не публикации.
+# Формат t_obs: 'YYYY..YYYY' интервал / '<=YYYY' / 'YYYY-MM-DD' / 'time_ns'.
+EPOCHS = {
+    'archi.ru Yandex-expanded': (
+        '2000..2020', 10.0,
+        'подоснова проектного листа archi.ru; дата съёмки не установлена',
+        'отметка существующего покрытия (предположительно)'),
+    'archi.ru 514913': (
+        '2000..2020', 8.0,
+        'подоснова листа; штамп не читался (конвенция 6.63)',
+        'отметка существующего покрытия'),
+    '456577 Римского-Корсакова': (
+        '2000..2020', 8.0,
+        'подоснова листа; дата съёмки не установлена',
+        'отметка существующего покрытия'),
+    'Passport holdout': (
+        '1990..2024', 15.0,
+        'даты нивелирования марок НЕ найдены — запрос пользователю (B3/B6)',
+        'стенная марка (высотная сеть)'),
+    'atayanc_v2': (
+        '<=1990', 10.0,
+        'штамп листа (ГДР/ЛГУ): топооснова до 1990; здания 2013 — '
+        'проектные, в землю не идут (METHOD §3)',
+        'отметка земли (тротуар, проезд, набережная)'),
+}
+ICE_EPOCH = ('time_ns', 0.0, 'time_ns точки ATL06 — точная дата',
+             'ATL06 40-м сегмент (поверхность; может включать крыши)')
 
 W_DETAIL = {'21': 1.0, '24': 0.7, '23': 0.5}
 
@@ -106,6 +136,7 @@ def build(shuffle_seed=None):
 
     def add_ground(src, district, lat, lon, z, weight, tier, use='', flag='',
                    note=''):
+        to, st, hd, kh = EPOCHS[src]
         rows.append({
             'id': '', 'kind': 'ground', 'source': src, 'district': district,
             'lat': round(float(lat), 7), 'lon': round(float(lon), 7),
@@ -113,6 +144,7 @@ def build(shuffle_seed=None):
             'tier': tier, 'use': use, 'flag_vs_neighbours': flag,
             'h_ell': '', 'rgt': '', 'cycle': '', 'gt': '', 'h_sigma': '',
             'n_fit': '', 'dist_to_anchor_m': '', 'track_near_anchor': '',
+            't_obs': to, 'sigma_t': st, 'how_dated': hd, 'kind_of_height': kh,
             'datum': 'BS77', 'note': note})
 
     # ---- 1. честный пул 6.66 (минус устаревший 'atayanc V.O.')
@@ -202,6 +234,8 @@ def build(shuffle_seed=None):
         for r, z_i, he, dmin_i in zip(R, z_bs, h_ell, dmin):
             dist = district_of(float(r['lon']), float(r['lat']),
                                l5, l8, prep, STRtree)
+            dstr = time.strftime('%Y-%m-%d',
+                                 time.gmtime(int(r['time_ns']) / 1e9))
             rows.append({
                 'id': '', 'kind': 'icesat',
                 'source': 'atl06_south_cache', 'district': dist,
@@ -213,8 +247,11 @@ def build(shuffle_seed=None):
                 'cycle': r['cycle'], 'gt': r['gt'],
                 'h_sigma': r['h_sigma'], 'n_fit': r['n_fit'],
                 'dist_to_anchor_m': round(float(dmin_i), 1),
-                'track_near_anchor': '', 'datum': 'BS77_EGM2008_D+0.00',
-                'note': 'ATL06 40-м сегмент; без фильтров (§1.1)'})
+                'track_near_anchor': '',
+                't_obs': dstr, 'sigma_t': ICE_EPOCH[1],
+                'how_dated': ICE_EPOCH[2], 'kind_of_height': ICE_EPOCH[3],
+                'datum': 'BS77_EGM2008_D+0.00',
+                'note': f'{dstr} ATL06 40-м сегмент; без фильтров (§1.1)'})
             n_ice += 1
 
     for row in rows:
