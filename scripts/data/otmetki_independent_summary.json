@@ -1,34 +1,39 @@
 {
-  "source": "Отметки.txt (user-provided, INDEPENDENT field measurements)",
-  "methodology": "WGS84 coords explicit per-point — NO fitting at all",
-  "n_total_marks": 202,
-  "n_valid_model_hits": 200,
-  "lat_range": [
-    59.7449982744792,
-    60.03830375182783
-  ],
-  "lon_range": [
-    29.717253,
-    30.503717
-  ],
-  "survey_z_median": 3.57,
-  "model_z_median": 3.97579288482666,
-  "dH_median": 0.21852779388427768,
-  "dH_mean": 0.5538445006191731,
-  "dH_std": 2.046866314048297,
-  "abs_dH_mad": 0.9932105493545531,
-  "abs_dH_mean": 1.3914687966167925,
-  "abs_dH_p95": 4.272950015068053,
-  "n_pos": 109,
-  "n_neg": 91,
-  "pearson_r": 0.9523219373824078,
-  "pearson_p": 4.922504248846682e-104,
-  "spearman_rho": 0.7425176405643221,
-  "spearman_p": 2.637207713795176e-36,
-  "wilcoxon_p": 0.0011920648372769796,
-  "sign_test_p": 0.22924659725971616,
-  "bootstrap_ci_95": [
-    -0.12810369491577145,
-    0.4681565856933594
-  ]
+ "source": "Отметки.txt (user-provided, INDEPENDENT field measurements)",
+ "methodology": "WGS84 coords explicit per-point — NO fitting at all",
+ "n_total_marks": 202,
+ "n_valid_model_hits": 200,
+ "lat_range": [
+  59.7449982744792,
+  60.03830375182783
+ ],
+ "lon_range": [
+  29.717253,
+  30.503717
+ ],
+ "survey_z_median": 3.57,
+ "model_z_median": 3.97579288482666,
+ "dH_median": 0.21852779388427768,
+ "dH_mean": 0.5538445006191731,
+ "dH_std": 2.046866314048297,
+ "abs_dH_mad": 0.9932105493545531,
+ "abs_dH_mean": 1.3914687966167925,
+ "abs_dH_p95": 4.272950015068053,
+ "n_pos": 109,
+ "n_neg": 91,
+ "pearson_r": 0.9523219373824078,
+ "pearson_p": 4.922504248846682e-104,
+ "spearman_rho": 0.7425176405643221,
+ "spearman_p": 2.637207713795176e-36,
+ "wilcoxon_p": 0.0011920648372769796,
+ "sign_test_p": 0.22924659725971616,
+ "bootstrap_ci_95": [
+  -0.12810369491577145,
+  0.4681565856933594
+ ],
+ "_INVALIDATED": {
+  "date": "2026-11-02",
+  "by": "B1 handoff 2026-11 (NOTES_branch_audit_remediations §1-G/C; NOTES_repo_base_5_67_review §3-4)",
+  "reason": "Отметки.txt циркулярен: тот же файл паспорта, ~166/202 марок внутри опоры; MAD 0.99 — утечка, не точность; r=0.952 держится диапазоном высот. Из независимого пула исключён (B1-C); independent=false."
+ }
 }

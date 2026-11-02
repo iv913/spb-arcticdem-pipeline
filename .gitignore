@@ -15,3 +15,6 @@ download/mclf_v3/mclf_v3_dem_5.90.tif
 download/mosaic_5.90/*.tif
 scripts/__pycache__/
 results/fusion_6.20/tmp_g0.npy
+
+# секреты/локальная среда (handoff 2026-11, §1)
+.env
