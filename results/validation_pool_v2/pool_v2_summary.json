@@ -1,0 +1,42 @@
+{
+ "passport|detail24_train": {
+  "n": 166,
+  "sum_w": 116.2,
+  "w_median_dH": 0.55
+ },
+ "passport|detail23_holdout": {
+  "n": 18,
+  "sum_w": 9.0,
+  "w_median_dH": 0.66
+ },
+ "passport|detail21_holdout": {
+  "n": 20,
+  "sum_w": 20.0,
+  "w_median_dH": 0.04
+ },
+ "passport|detail0_train": {
+  "n": 2,
+  "sum_w": 0.6,
+  "w_median_dH": -0.3
+ },
+ "archi_514913|vlm_read": {
+  "n": 175,
+  "sum_w": 175.0,
+  "w_median_dH": -0.35
+ },
+ "atayans_v2|ground_truth": {
+  "n": 160,
+  "sum_w": 158.5,
+  "w_median_dH": 0.54
+ },
+ "atayans_v2|candidate_second_read": {
+  "n": 423,
+  "sum_w": 125.2,
+  "w_median_dH": 1.12
+ },
+ "atayans_v2|ground_truth_0.1": {
+  "n": 28,
+  "sum_w": 24.8,
+  "w_median_dH": 1.4
+ }
+}
