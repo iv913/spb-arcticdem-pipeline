@@ -39,7 +39,8 @@ import numpy as np
 #   H_bs77 = h_ell − N_EGM2008(lon, lat) − D
 #
 # Вариант ПО УМОЛЧАНИЮ — поточечный геоид с сетки EGM2008 (2.5′) плюс
-# один сдвиг D из datum_D.json (B3: D = 0.00 ± 0.06, бюджет 0.10).
+# один сдвиг D из datum_D.json (B3 закрыт 6.71: D = +0.004 ± 0.046,
+# бюджет 0.08 — handoff §3-B3: литература + ICESat-2 у Кронштадта).
 # Вариант geoid_source='city_v3' оставлен ТОЛЬКО для воспроизведения
 # старых результатов (детерминированный пересчёт прежних продуктов).
 #
@@ -62,7 +63,8 @@ _EGM2008_GRID_CANDIDATES = [
 ]
 _DATUM_D_CANDIDATES = [
     os.environ.get('SPB_DATUM_D_JSON', ''),
-    str(_REPO / 'results' / 'datum_6.61' / 'datum_D.json'),
+    str(_REPO / 'results' / 'datum_D.json'),            # канон (6.71, B3)
+    str(_REPO / 'results' / 'datum_6.61' / 'datum_D.json'),  # история 6.65
 ]
 _GEOID_CACHE = {}
 
@@ -86,9 +88,9 @@ def _get_geoid():
 
 
 def _load_datum_D(logger):
-    """D из приёмки B3 (results/datum_6.61/datum_D.json); при отсутствии
-    файла — D=0 с бюджетом 0.10 и предупреждением (временное значение
-    литературы, Ellmann et al. 2009)."""
+    """D из приёмки B3 (канон results/datum_D.json, 6.71: D = +0.004 ±
+    0.046, бюджет 0.08 — литература + ICESat-2 Кронштадта); при отсутствии
+    файла — D=0 с бюджетом 0.10 и предупреждением."""
     for c in _DATUM_D_CANDIDATES:
         if c and Path(c).exists():
             d = json.loads(Path(c).read_text(encoding='utf-8'))

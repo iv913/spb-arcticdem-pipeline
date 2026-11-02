@@ -1,0 +1,55 @@
+{
+ "stage": "6.71 / B3 закрыт (handoff 2026-11 (4), AGENT_HANDOFF §3-B3)",
+ "recipe": "H_bs77 = h_ell - N_EGM2008(lon,lat) - D",
+ "grid": "us_nga_egm08_25.tif (NGA EGM2008 2.5', cdn.proj.org, data/)",
+ "D_m": 0.004,
+ "SE_m": 0.046,
+ "sigma_budget_m": 0.08,
+ "method": "literature+tide_gauge_icesat",
+ "n": "189 пунктов GNSS-нивелирования (Балтия) + 53 пролёта ICESat-2 / 4 RGT у Кронштадта",
+ "period": ["2018-10-21", "2026-07-06"],
+ "display": "D = 0.00 +/- 0.05 м; в бюджет ошибок каждой высоты входит sigma_D = 0.08 м (непроверенные систематики обоих способов)",
+ "components": {
+  "literature_baltic_gnss": {
+   "D_m": 0.0, "sigma_m": 0.06, "n_points": 189,
+   "cite": "Ellmann A., Kaminskis J., Parseliunas E., Jurgensohn H., Oja T. (2009). Evaluation results of the Earth Gravitational Model EGM08 over the Baltic countries. Newton's Bulletin No 4, pp. 110-121",
+   "url": "https://www.isgeoid.polimi.it/Newton/Newton_4/Report_EA2_Baltic.pdf",
+   "note": "пункты в Эстонии/Латвии/Литве (ближайшие 150-400 км); методика перевода соглашений проверена 6.65 - см. results/datum_6.61/datum_D.json (история)"
+  },
+  "tide_gauge_icesat2": {
+   "D_m": 0.01, "sigma_m": 0.07,
+   "script": "scripts/handoff_2026-11/b3_kronstadt_icesat2/b3_kronstadt_icesat2.py",
+   "passes": "scripts/handoff_2026-11/b3_kronstadt_icesat2/gulf_west_of_kotlin_passes.csv",
+   "mean_h_minus_N_m": 0.14, "se_m": 0.043,
+   "msl_bs77_2018_2026_m": [0.13, 0.04],
+   "n_passes": 53, "n_rgt": 4,
+   "region": "открытая губа западнее Котлина (29.40-29.62 в.д., 59.93-60.06 с.ш., вне дамбы)",
+   "note": "ATL06-SR SlideRule, 40-м сегменты; один пролёт = одна выборка уровня; отбор по качеству сегмента, НЕ по высоте"
+  }
+ },
+ "combined": "взвешенное по 1/sigma^2: (0.00*w1 + 0.01*w2)/(w1+w2) = +0.004, SE = 0.046; два независимых способа сошлись",
+ "systematics_unverified": [
+  "восточная половина участка выше западной на 0.08 м, RGT 792 выше остальных на 0.17 м - ошибка EGM2008 на масштабе ~10 км; у футштока (29.77 в.д.) значение может быть до +0.05 выше",
+  "уровень 2018-2026 экстраполирован (среднее 1946-2007 +4.06 см, рост 1.9-2.3 мм/год -> 2022); ряд футштока за даты пролётов уменьшил бы sigma вдвое",
+  "возможное смещение ATL06 над водой - несколько сантиметров",
+  "точки литературы в Прибалтике: поднятие суши со времени нивелирования не учтено"
+ ],
+ "neva_bay_inside_dam": {
+  "h_minus_N_m": 0.316, "n_passes": 43,
+  "note": "средний уровень в Невской губе на ~0.18 м выше, чем западнее Котлина (сток Невы, сгоны-нагоны); граничное условие затопления в губе - НЕ уровень Кронштадта",
+  "passes": "scripts/handoff_2026-11/b3_kronstadt_icesat2/neva_bay_inside_dam_passes.csv"
+ },
+ "supersedes": "results/datum_6.61/datum_D.json (6.65: только литература, D=0.00, бюджет 0.10) - сохранён как история; lib_vertical читает КАНОН results/datum_D.json",
+ "cross_checks_6.61_6.64": {
+  "granite_marks_on_walls": "median dH -0.01 м -> D ~ -0.01..0 (гранит не топится)",
+  "passport_detail21_measured": "+0.20 (MAD 1.04, n=20)",
+  "kupchino_open_area": "-0.28 (MAD 0.23, n=175)",
+  "note": "разброс implied-D по источникам - смещения ПОВЕРХНОСТИ (prior 30 м, покрытие), не датума; см. 6.61/6.64"
+ },
+ "constants_banned": {"15.673": "SHIFT_M (5.3)", "15.9": "ветка 'EGM2008'", "16.04": "базовая дельта", "16.472": "циркулярная N_geo (5.3)"},
+ "todo": [
+  "ряд футштока Кронштадта за даты пролётов (или Хамина/Котка) -> sigma_D ~ вдвое меньше",
+  ">= 20 пар GNSS + БС-77 по самому СПб -> тренд D по городу (приёмка: остатки без тренда > 0.05 м)",
+  "миграция якорей/продуктов с константы 16.04 на N(lon,lat)+D - при следующем пересчёте (A5, этап 2 REVIEW)"
+ ]
+}

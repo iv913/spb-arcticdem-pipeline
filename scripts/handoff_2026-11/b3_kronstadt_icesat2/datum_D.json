@@ -1,0 +1,27 @@
+{
+ "method": "tide_gauge_icesat",
+ "D_m": 0.01,
+ "sigma_D_m": 0.071,
+ "mean_h_minus_N_m": 0.14,
+ "se_m": 0.043,
+ "n_passes": 53,
+ "n_rgt": 4,
+ "period": [
+  "2018-10-21",
+  "2026-07-06"
+ ],
+ "msl_bs77_assumed_m": [
+  0.13,
+  0.04
+ ],
+ "neva_bay_inside_dam_mean_h_minus_N_m": 0.316,
+ "neva_bay_n_passes": 43,
+ "literature_D_m": [
+  0.0,
+  0.06
+ ],
+ "combined_D_m": [
+  0.004,
+  0.046
+ ]
+}
