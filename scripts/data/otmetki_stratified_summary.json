@@ -1,38 +1,43 @@
 {
-  "source": "Отметки.txt (INDEPENDENT field measurements)",
-  "methodology_critique": {
-    "sample_bias": "59% of points in Z 0-5m (lowland areas overrepresented)",
-    "decimal_pattern": "138/200 points have 2 decimal places (0.01m precision) — NOT GPS, suggests field leveling or topo map",
-    "spatial_clustering": "Moran's I=1.49 indicates dH is spatially autocorrelated (not random)",
-    "dH_std_vs_threshold": "std=2.05m >> 0.5m → data is NOT extracted from model (independent)"
+ "source": "Отметки.txt (INDEPENDENT field measurements)",
+ "methodology_critique": {
+  "sample_bias": "59% of points in Z 0-5m (lowland areas overrepresented)",
+  "decimal_pattern": "138/200 points have 2 decimal places (0.01m precision) — NOT GPS, suggests field leveling or topo map",
+  "spatial_clustering": "Moran's I=1.49 indicates dH is spatially autocorrelated (not random)",
+  "dH_std_vs_threshold": "std=2.05m >> 0.5m → data is NOT extracted from model (independent)"
+ },
+ "full_dataset": {
+  "n": 200,
+  "dH_median": 0.22,
+  "abs_dH_mad": 0.99,
+  "pearson_r": 0.952
+ },
+ "stratified": {
+  "central_lat_lt_60": {
+   "n": 184,
+   "lat_range": [
+    59.7449982744792,
+    59.981957
+   ],
+   "dH_median": 0.03074055194854705,
+   "abs_dH_mad": 0.9416365289688111,
+   "pearson_r": 0.9079937924146886,
+   "pearson_p": 1.128718728702671e-70,
+   "spearman_rho": 0.6794237615329425,
+   "sign_test_p": 0.9412590347294768,
+   "note": "Best-fit region, ~91% of points fall here"
   },
-  "full_dataset": {
-    "n": 200,
-    "dH_median": 0.22,
-    "abs_dH_mad": 0.99,
-    "pearson_r": 0.952
-  },
-  "stratified": {
-    "central_lat_lt_60": {
-      "n": 184,
-      "lat_range": [
-        59.7449982744792,
-        59.981957
-      ],
-      "dH_median": 0.03074055194854705,
-      "abs_dH_mad": 0.9416365289688111,
-      "pearson_r": 0.9079937924146886,
-      "pearson_p": 1.128718728702671e-70,
-      "spearman_rho": 0.6794237615329425,
-      "sign_test_p": 0.9412590347294768,
-      "note": "Best-fit region, ~91% of points fall here"
-    },
-    "north_lat_ge_60": {
-      "n": 16,
-      "dH_median": 2.49,
-      "abs_dH_mad": 2.49,
-      "note": "REGIONAL BIAS: model underestimates heights on northern elevations (Shuvalovo/Pargolovo)"
-    }
-  },
-  "conclusion": "Independent validation confirms model captures terrain structure (Pearson r=0.952). MAD=0.99m is robust for central SPb (lat<60.00, n=182, MAD=0.95m). Northern elevations show systematic underestimation (+2.5m bias, small n=16). Sample is biased toward lowlands (59% in Z 0-5m) — model accuracy on hills is less tested."
+  "north_lat_ge_60": {
+   "n": 16,
+   "dH_median": 2.49,
+   "abs_dH_mad": 2.49,
+   "note": "REGIONAL BIAS: model underestimates heights on northern elevations (Shuvalovo/Pargolovo)"
+  }
+ },
+ "conclusion": "Independent validation confirms model captures terrain structure (Pearson r=0.952). MAD=0.99m is robust for central SPb (lat<60.00, n=182, MAD=0.95m). Northern elevations show systematic underestimation (+2.5m bias, small n=16). Sample is biased toward lowlands (59% in Z 0-5m) — model accuracy on hills is less tested.",
+ "_INVALIDATED": {
+  "date": "2026-11-02",
+  "by": "B1 handoff 2026-11 (NOTES_branch_audit_remediations §1-G/C; NOTES_repo_base_5_67_review §3-4)",
+  "reason": "Отметки.txt циркулярен: тот же файл паспорта, ~166/202 марок внутри опоры; MAD 0.99 — утечка, не точность; r=0.952 держится диапазоном высот. Из независимого пула исключён (B1-C); independent=false."
+ }
 }
