@@ -112,6 +112,20 @@ def run(pool_csv, base_csv=None):
     by_t = defaultdict(list)
     for p in ground: by_t[p['tier']].append(p['dH'])
     report['metrics']['ground_by_tier'] = {t: stats(v) for t, v in sorted(by_t.items())}
+    # By age (B6: dH vs source age)
+    source_ages = {
+        'atayanc_v2_confirmed': {'t_obs': '≤1990', 'sigma_t': 5, 'kind': 'ground_marks_pre_1991'},
+        'archi_514913': {'t_obs': 'unknown', 'sigma_t': 5, 'kind': 'engineering_plan'},
+        'archi_95211_tihaya_gavan': {'t_obs': 'unknown', 'sigma_t': 5, 'kind': 'engineering_plan'},
+        'passport_holdout': {'t_obs': 'unknown', 'sigma_t': 10, 'kind': 'wall_mark'},
+    }
+    by_age = defaultdict(list)
+    for p in ground:
+        info = source_ages.get(p['source'], {})
+        by_age[info.get('t_obs', 'unknown')].append(p['dH'])
+    report['metrics']['ground_by_age'] = {age: stats(v) for age, v in sorted(by_age.items()) if len(v) >= 3}
+    report['metrics']['ground_by_age']['note'] = 'B6: dH vs source age. Older sources may have real surface changes.'
+
     # 0-5m band
     report['metrics']['ground_0_5m'] = stats([p['dH'] for p in ground if p['in_0_5m']])
     # ICESat by RGT

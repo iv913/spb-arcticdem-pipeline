@@ -6,3 +6,4 @@ scripts/dem_cache/
 scripts/data/consensus_dtm_5.71/
 .oss_tmp/
 quality_5.84
+.env
