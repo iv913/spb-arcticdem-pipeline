@@ -1,0 +1,17 @@
+source,t_obs,sigma_t_years,how_dated,kind_of_height,notes
+ArcticDEM_mosaic_v4.1,2007-2023,5,mindate/maxdate bands per pixel,DSM 2m (surface incl. buildings/trees),Last release v4.1 Aug 2023; production stopped 28.04.2025
+ArcticDEM_strips,2007-05.2024,0.5,datetime in strip inventory 5.74,DSM 2m (surface),812 strips available; 543 post-2021; last 19.05.2024
+ICESat2_ATL06,2019-2026,0.5,date + time_ns per point,40m segment (ground track),ATL06 in urban hits roofs; use for open areas only
+ICESat2_ATL03,2019-2026,0.5,date + time_ns per photon,individual photons 0.7m,Freshest height source; continues operating
+Copernicus_GLO30,2011-2015,2,TanDEM-X documentation,DSM 30m,Updated 07.2024 (gap fill + fixes; no new acquisitions)
+FABDEM,2011-2015,2,as GLO-30,bare earth 30m (ML-removed buildings/trees),CC BY-NC-SA license
+GEDTM30,2006-2015,5,file name + documentation,bare earth 30m (RF on ICESat-2 + GEDI),Tested 02.11: WORSE than current fusion on all ground marks
+DeltaDTM,2011-2015,2,as GLO-30 + ATL08 + GEDI,bare earth 30m (coastal <10m),CC BY 4.0; check if SPb tile exists
+passport_marks,unknown,10,date of levelling (NOT FOUND — need passport catalogue),wall mark on building,Need to find levelling dates from passport catalogue
+atayanc_plan,≤1990,5,inscriptions on sheet (GDR consulate; LGU; botanical garden),ground marks (pavement/road/embankment),Topo base pre-1991; project buildings 2013; 188 confirmed by 2 readings
+archi_514913,unknown,5,date of survey (NOT project date — need stamp),existing ground marks (engineering plan),Дунайский 27; need to separate existing vs project marks
+archi_95211_tihaya_gavan,unknown,5,date of survey (need stamp),existing ground marks,Курляндская ул. 10-12; need survey date
+OSM_buildings,2026-10-10,0.1,BBBlke export filename,geometry only (no height),Building footprints; construction detection
+Esri_World_Imagery,2025-2026,0.5,identify API / scene metadata,not height (visual evidence),Latest high-res optical for change detection
+Sentinel2,2024-2026,0.5,scene metadata,not height (NDVI/SCL),10m resolution; cloud-free composites
+EGM2008_grid,2008,5,NGA model publication date,geoid undulation (not ground height),us_nga_egm08_25.tif; spread 15.764-16.004m over SPb
