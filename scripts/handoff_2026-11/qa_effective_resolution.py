@@ -32,7 +32,7 @@ with rasterio.open(F) as fs, rasterio.open(C) as cs:
         rows.append(np.stack([rms[ii, jj], med[ii, jj], cmax[ii, jj], cmin[ii, jj], lat[ii], lon[jj]], 1))
 R = np.concatenate(rows)
 rms, med, cmax, cmin, lat, lon = R.T
-np.save('/tmp/claude-0/-home-claude/ec58354c-610f-5d5d-a999-7bf1ca225fda/scratchpad/seam/effres_blocks.npy', R)
+np.save('/tmp/my-project/gh-clone/results/qa_baseline/effres_blocks.npy', R)
 land = med > 0.7
 band = land & (med <= 5.0)
 DET = 0.03   # m: below this the block carries no 2-10 m relief (int16 cm quantization ~0.003 m)

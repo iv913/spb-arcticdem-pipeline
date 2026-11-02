@@ -42,4 +42,4 @@ for k in ('DD', 'FF', 'DF', 'DF_A1', 'DF_A2', 'DF_A3', 'DF_A4'):
 hh = hist['DF']; n = hh.sum()
 print(f"\nsigned (fill − data) across boundary: median {q(hh,.5,False):+.2f}   "
       f"fill lower by >1 m: {100*hh[mid<-1].sum()/n:.1f}%   fill higher by >1 m: {100*hh[mid>1].sum()/n:.1f}%")
-np.savez('/tmp/claude-0/-home-claude/ec58354c-610f-5d5d-a999-7bf1ca225fda/scratchpad/seam/fusion_hist.npz', edges=EDGES, **{k: v for k, v in hist.items()})
+np.savez('/tmp/my-project/gh-clone/results/qa_baseline/fusion_hist.npz', edges=EDGES, **{k: v for k, v in hist.items()})
