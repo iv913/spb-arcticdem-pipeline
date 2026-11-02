@@ -1,0 +1,50 @@
+{
+ "stage": "6.65 / B3",
+ "recipe": "H_bs77 = h_ell - N_EGM2008(lon,lat) - D",
+ "grid": "us_nga_egm08_25.tif (NGA EGM2008 2.5', cdn.proj.org, data/)",
+ "D_m": 0.0,
+ "SE_m": 0.06,
+ "sigma_budget_m": 0.1,
+ "n": 189,
+ "method": "literature",
+ "primary_source": {
+   "cite": "Ellmann A., Kaminskis J., Parseliunas E., Jurgensohn H., Oja T. (2009). Evaluation results of the Earth Gravitational Model EGM08 over the Baltic countries. Newton's Bulletin No 4, pp. 110-121",
+   "url": "https://www.isgeoid.polimi.it/Newton/Newton_4/Report_EA2_Baltic.pdf",
+   "points": "189 GNSS-levelling points (EE 26 / LV 53 / LT 110), h in ETRS89 (GRS-80), H in Baltic Height System 1977 (Kronstadt tide-gauge)",
+   "discrepancy": "N_geom - zeta_EGM: range +0.346..+0.697, mean +0.493, STD 0.060 (verified from the PDF, section 5 and Fig. 7 caption)",
+   "methodology_verified": [
+     "EGM08 tide-free version, harmonic_synth_v02 (no zero-degree term)",
+     "zero-degree term -0.936 m (GRS80 GM difference) ADDED to zeta (section 3.3)",
+     "W0-U0 term EXCLUDED from comparisons; with W0 Ardalan et al. 2002 the term (W0-U0)/gamma = +0.52 m and the Kronstadt datum practically coincides with mean ocean level (section 5)",
+     "discrepancy defined as [N_geom - zeta_EGM] (Fig. 7)",
+     "levelling heights = Baltic Height System 1977 (Kronstadt tide-gauge) (section 5)"
+   ],
+   "convention_translation": "D_NGA = mean_discrepancy - 0.53, where 0.53 m = difference between the NGA-grid zero-degree convention (-0.41 rel. WGS84) and the article's (-0.936 rel. GRS80); per-country: EE +0.04 / LV -0.05 / LT -0.05 / Baltics -0.03",
+   "caveats": "points 150-400 km from SPb; Estonian subset may carry post-glacial rebound contamination (article section 5); -0.41 m NGA zero-degree value derived, not stated in the article; sigma_D=0.06 is a lower bound - budget 0.10 until SPb points arrive"
+ },
+ "cross_checks": {
+   "granite_marks_6.64": "confirmed marks on granite quay walls: median dH -0.01 m -> D + eps(granite) ~ -0.01",
+   "passport_detail21_6.61": "measured-DSM subset: D_implied +0.20 (MAD 1.04, n=20)",
+   "kupchino_6.61": "open area: D_implied -0.28 (MAD 0.23, n=175)",
+   "atayans_all_6.61": "+1.08 = surface bias of prior-30m, NOT datum"
+ },
+ "supplemental_icesat_check": {
+   "file": "results/datum_6.61/icesat_sea_check_6.65.json",
+   "result": "median(h_ell_ATL06 - N_EGM2008) over open-gulf water, ice-free months, high-cnf: +0.17 m (MAD 0.25, n=236942); per-year +0.03..+0.30; west +0.12 / east +0.24",
+   "interpretation": "estimate = D + L + b(ATL06 over water); L = modern mean sea level minus BS-77 zero (order -0.1..+0.1), b = ATL06 water-fit bias (order +0.05..+0.2); does not contradict D = 0.00 +/- 0.06",
+   "status": "supplemental; final D needs >= 20 GNSS/levelling points in SPb (B3 request) or ATL13 + tide-gauge series"
+ },
+ "constants_banned": {"15.673": "SHIFT_M (5.3)", "15.9": "branch 'EGM2008'", "16.04": "baseline delta", "16.472": "circular N_geo (5.3)"},
+ "constant_errors_m": {
+   "15.673": {"vo": -0.28, "kronstadt": -0.09, "pulkovo": -0.33},
+   "16.04": {"vo": 0.08, "kronstadt": 0.28, "pulkovo": 0.04},
+   "15.9": {"vo": -0.06, "kronstadt": 0.14, "pulkovo": -0.1},
+   "16.472": {"vo": 0.52, "kronstadt": 0.71, "pulkovo": 0.47},
+   "sign_convention": "'+' = constant larger than truth -> BS-77 heights come out LOWER than true (flooding slightly overestimated)"
+ },
+ "todo": [
+   "user request to surveyors: 20-30 points with h_ell (GNSS) + H_bs77 (format in B3_datum_request.md)",
+   "refit D when points arrive; check city trend of residuals <= 0.05 m (acceptance)",
+   "then re-anchor products: replace delta 16.04 by N(lon,lat)+D in canon/densify/fuse/map stages"
+ ]
+}

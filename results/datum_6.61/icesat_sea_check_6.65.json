@@ -1,0 +1,11 @@
+{
+ "method": "tide_gauge_icesat",
+ "statistic": "median(h_ell_ATL06 - N_EGM2008) over open gulf water, ice-free months",
+ "median_m": 0.17,
+ "MAD_m": 0.25,
+ "SE_m": 0.001,
+ "n": 236942,
+ "interpretation": "median = D + L, L = modern mean sea level minus BS-77 zero (uplift/eustasy since 1977, order -0.1..+0.1 m); ATL06 over water carries wave/segment bias",
+ "literature_D_m": 0.0,
+ "literature_source": "Ellmann et al. 2009, Newtons Bulletin 4, Baltic GNSS-levelling (BS-77)"
+}

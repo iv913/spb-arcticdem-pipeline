@@ -1,0 +1,11 @@
+/tmp/my-project/gh-clone/scripts/handoff_2026-11/qa_effective_resolution.py:25: RuntimeWarning: Mean of empty slice
+  rms = np.sqrt(np.nanmean(hp4 ** 2, axis=(1, 3)))
+/tmp/my-project/gh-clone/scripts/handoff_2026-11/qa_effective_resolution.py:26: RuntimeWarning: All-NaN slice encountered
+  med = np.nanmedian(z4.reshape(nrow, BY, -1, BX).transpose(0, 2, 1, 3).reshape(nrow, W // BX, -1), axis=2)
+Traceback (most recent call last):
+  File "/tmp/my-project/gh-clone/scripts/handoff_2026-11/qa_effective_resolution.py", line 35, in <module>
+    np.save('/tmp/claude-0/-home-claude/ec58354c-610f-5d5d-a999-7bf1ca225fda/scratchpad/seam/effres_blocks.npy', R)
+  File "/home/z/.venv/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 583, in save
+    file_ctx = open(file, "wb")
+               ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/claude-0/-home-claude/ec58354c-610f-5d5d-a999-7bf1ca225fda/scratchpad/seam/effres_blocks.npy'
