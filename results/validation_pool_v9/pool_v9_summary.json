@@ -1,0 +1,58 @@
+{
+ "n_total": 256113,
+ "n_ground": 867,
+ "n_icesat": 255246,
+ "icesat_n_rgt": 6,
+ "icesat_rgt": [
+  "1173",
+  "1196",
+  "251",
+  "289",
+  "731",
+  "754"
+ ],
+ "icesat_tracks_near_anchor": [
+  "1173",
+  "1196",
+  "251",
+  "289",
+  "731"
+ ],
+ "determinism_check": true,
+ "meta": {
+  "passport_detail_matched": 40,
+  "atayanc_v2_in": 184,
+  "atayanc_v2_flag_excluded": 4,
+  "icesat_n": 0,
+  "cache_duplicates_removed": 69
+ },
+ "ground_by_source_tier": {
+  "456577 Римского-Корсакова | single_read": 61,
+  "Passport holdout | detail21_holdout": 8,
+  "Passport holdout | detail23_holdout": 32,
+  "archi.ru 514913 | vlm_read": 175,
+  "archi.ru Yandex-expanded | address_georef": 407,
+  "atayanc_v2 | ground_truth": 157,
+  "atayanc_v2 | ground_truth_0.1": 27
+ },
+ "ground_by_district": {
+  "округ": 190,
+  "Невский район": 169,
+  "Центральный район": 161,
+  "Петроградский район": 142,
+  "Адмиралтейский район": 95,
+  "Василеостровский район": 64,
+  "(вне границ)": 23,
+  "Красногвардейский район": 9,
+  "Кировский район": 8,
+  "Калининский район": 5,
+  "Фрунзенский район": 1
+ },
+ "excluded": {
+  "atayanc_v2 flag_vs_neighbours=1 (ручная проверка pending, A2)": 4,
+  "atayanc V.O. одиночное чтение (заменено v2)": 94,
+  "Тихая гавань 95211 (блокер, archi.ru недоступен)": 96,
+  "atayanc use=candidate_second_read (до второго чтения, A2)": 427,
+  "atayanc use=third_read (до третьего чтения, A2)": 94
+ }
+}
