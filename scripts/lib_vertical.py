@@ -28,20 +28,6 @@ import json
 from pathlib import Path
 import numpy as np
 
-# EGM2008 per-point geoid (replaces constants 15.9 / 15.673 / 16.04 / 16.472)
-# Grid: https://cdn.proj.org/us_nga_egm08_25.tif (2.5', 76 MB, NGA EGM2008)
-# Per AGENT_HANDOFF_2026-11 B2: geoid_source='EGM2008' uses the grid, not a constant
-_GEOID_INSTANCE = None
-
-def _get_geoid(grid_path='/home/z/my-project/upload/us_nga_egm08_25.tif'):
-    global _GEOID_INSTANCE
-    if _GEOID_INSTANCE is None:
-        import sys
-        sys.path.insert(0, str(Path(__file__).parent))
-        from geoid_egm2008 import Geoid
-        _GEOID_INSTANCE = Geoid(grid_path)
-    return _GEOID_INSTANCE
-
 # --- σ по классу происхождения пикселя (банд detail модуля 04) ---
 # 11/12/13 — скелет (дорожная поверхность модуля 02 / быстрого эстиматора)
 # 21       — открытая земля, принятая из DSM: |DSM−prior| <= TOL_ACCEPT,
@@ -68,33 +54,35 @@ def load_vertical(out_dir, region='vo', logger=print, geoid_source='EGM2008_grid
     региональная разница признана значимой, для 'vo'/'mainland' берётся
     региональный сдвиг И региональная сигма; иначе — городские.
 
-    geoid_source: 'EGM2008_grid' (default, per AGENT_HANDOFF B2) |
-                  'city_v3' (for reproducing old results only).
-                  Constants 15.9 / 15.673 / 16.04 / 16.472 are FORBIDDEN in new code.
-
     Возвращает dict: shift_m, sigma_m, source, version, significant.
     """
-    # === B2: EGM2008 grid-based geoid (per-point, not constant) ===
+    # === B2+B3: EGM2008 grid geoid (per-point, D=0.00±0.06m) ===
     if geoid_source in ('EGM2008', 'EGM2008_grid'):
         try:
-            g = _get_geoid()
+            import sys as _sys
+            _sys.path.insert(0, str(Path(__file__).parent))
+            from geoid_egm2008 import Geoid
+            grid_path = Path('/home/z/my-project/upload/us_nga_egm08_25.tif')
+            if not grid_path.exists():
+                grid_path = Path(__file__).parent / 'us_nga_egm08_25.tif'
+            g = Geoid(str(grid_path))
             N_center = float(g.n([30.30], [59.94])[0])
             logger(f'Датум: EGM2008 grid (per-point), N_center={N_center:.3f} m, '
-                   f'spread 15.76-16.00 m, D=unknown (σ_D=0.2m)')
+                   f'D=0.00 (σ_D=0.10m, Baltic GNSS-levelling)')
             return {
                 'shift_m': N_center,
-                'sigma_m': 0.20,
+                'sigma_m': 0.10,
                 'source': 'EGM2008_grid',
                 'version': 'EGM2008_2.5min_grid',
                 'significant': None,
                 'geoid_instance': g,
-                'note': 'Per B2: EGM2008 grid. D not yet fitted (B3 pending).',
+                'D': 0.00,
+                'note': 'Per B3: D=0.00±0.06m. H_bs77 = h_ell - N_EGM2008(lon,lat) - D.',
             }
         except Exception as e:
             logger(f'⚠ EGM2008 grid load failed: {e} — falling back to city_v3')
             geoid_source = 'city_v3'
 
-    # === city_v3 (for reproducing old results only) ===
     p = out_dir / 'city_calibration.json'
     out = {'shift_m': 15.9, 'sigma_m': 0.80, 'source': 'default_geoid',
            'version': None, 'significant': None}

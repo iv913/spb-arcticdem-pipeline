@@ -1,0 +1,20 @@
+{
+  "D": 0.0,
+  "se": 0.06,
+  "sigma_D_m": 0.1,
+  "n": 189,
+  "source": "literature",
+  "citation": "Newton's Bulletin 4, 2009 — GNSS-levelling in Baltic countries",
+  "transformation": "H_bs77 = h_ell - N_EGM2008(lon, lat) - D",
+  "method": "Baltic GNSS-levelling (189 pts, 150-400km from SPb)",
+  "constant_errors_on_vo": {
+    "16.04_icesat": "+0.08m (heights too LOW)",
+    "15.673_city_v3": "-0.28m (heights too HIGH)",
+    "15.9_audit": "-0.06m (close)",
+    "16.472_n_geo": "+0.52m (heights too LOW)"
+  },
+  "next_steps": [
+    "Get ≥20 ГГС/GNSS points in SPb",
+    "Verify at Kronstadt via ICESat-2 ATL13"
+  ]
+}

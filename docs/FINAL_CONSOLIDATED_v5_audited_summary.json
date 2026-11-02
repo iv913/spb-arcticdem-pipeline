@@ -262,7 +262,7 @@
     "std_dH_m": 1.3956,
     "n_vo_independent": 1245
   },
-  "updated_at": "2026-10-15 v10 — atayanc re-georef'd",
+  "updated_at": "2026-11-02 B3+B4 (per AGENT_HANDOFF_2026-11)",
   "aggregate_independent_final_v3": {
     "total_n_independent": 1257,
     "reliable_sources_n": 1257,
@@ -366,6 +366,24 @@
       "best_shift_lon_m": 190,
       "mad_before": 1.124,
       "mad_after": 0.537
+    }
+  },
+  "b3_datum_D": {
+    "status": "unknown",
+    "D": null,
+    "sigma_D_m": 0.2,
+    "note": "Need ≥20 ГГС/GNSS points. Asked user."
+  },
+  "b4_validation_pool_v9": {
+    "ground_marks_n": 498,
+    "ground_marks_mad": 0.606,
+    "icesat_rgt_n": 10,
+    "vlm_filter": "NOT applied (per B4 rules — VLM filter violated §1.1)",
+    "sources": {
+      "atayanc_v2_confirmed": 188,
+      "archi_514913": 175,
+      "archi_95211_tihaya_gavan": 96,
+      "passport_holdout": 39
     }
   }
 }
