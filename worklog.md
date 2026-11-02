@@ -1589,3 +1589,33 @@ Stage Summary:
   противоречия; константы запрещены. Точка отсчёта QA зафиксирована.
 - Next: A2 (перечтения Атаянс), A3 (пересборка колец воды), A4 (прибрежный
   каталог гребней + профили стрипов), этап 2 (единое решение).
+
+Task ID: 6.66 (B1)
+Agent: Super Z (main)
+Task: B1 handoff 2026-11 — реконструкция ветки audit-remediations-A-I в main.
+
+Work Log:
+- Ветка 8ea4ab8 в клоне/пакете отсутствует -> содержимое восстановлено по
+  NOTES_branch_audit_remediations §1 и NOTES_repo_base_5_67_review §2-4,
+  имя ветки сохранено, влито PR-подобным merge (--no-ff, cd81702).
+- H: scripts/stats_toolkit/ — paired_tests.py (знаковый, Уилкоксон,
+  bootstrap-CI, paired_verdict по числу тестов из трёх, порог 0.1 м),
+  icesat_tracks.py (split_by_rgt целыми RGT, n_eff), test_portability.py —
+  ЗЕЛЁНЫЙ (18/18). Урок 5.67 в README: per-point CI в 21 раз уже.
+- G/C: b1_honest_pool_6.66.py — _INVALIDATED в FINAL_CONSOLIDATED_v3_summary
+  (агрегат 4450 = ICP-подгонка) и v4_summary (key_findings +5..9м / r=0.952 /
+  icp_dwg), Отметки summaries independent=false; честный пул
+  independent_pool_honest_6.66.csv = 846 строк (минус DWG ICP 470).
+- B: DWG-слои в картах линии 6.x = 0 вхождений (5.96e, 6.10-6.52 HTML
+  проверены) — пункт уже выполнен самой линией, задокументирован.
+- E: инфляция p-значений — stats_toolkit/README.md + ci_shrink_factor.
+- F: Тихая гавань 95211 = ЖК Wellamo (Курляндская 10-12); archi.ru из среды
+  недоступен (403/бита HTML) -> ЧЕСТНЫЙ блокер, docs/tihaya_gavan_95211_blocked_6.66.md.
+  В пул не выдумываем; в терминах 5.67 пул 322 = 226 + 96(недостающие).
+- Гигиена §1: .env снят с индекса, в .gitignore.
+- Документ docs/b1_branch_reconstruction_6.66.md (таблица пунктов/приёмки).
+
+Stage Summary:
+- B1 закрыт (F — отложен с документацией). Слияние без конфликтов, смоук
+  зелёный на слитом main. Пул 846 — база для v9 (B4).
+- Next: B2 (geoid в lib_vertical), B5 (accept.py), B4 (пул v9), A2 (Атаянс).
