@@ -18,3 +18,7 @@ results/fusion_6.20/tmp_g0.npy
 
 # секреты/локальная среда (handoff 2026-11, §1)
 .env
+
+# 6.73/A2: контакт-листы перечтений тяжёлые — вне git (скрипт пересоздаёт)
+scripts/atayanc_a2_6.73/sheets/
+scripts/atayanc_a2_6.73/tmp_*/
