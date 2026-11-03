@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,92|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearby: 2,92 at ~(400,290)? \"2,92\" near ring at (~395,295), distance ~55; 2,97 at ~(527,325), distance ~90. Closest: 2,92. Check first digit: 2,92 likely.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701852,
+  "id": "20261103183048dcf778f1537f4e2b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183048dcf778f1537f4e2b",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1002
+  }
+}

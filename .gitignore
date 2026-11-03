@@ -22,3 +22,8 @@ results/fusion_6.20/tmp_g0.npy
 # 6.73/A2: контакт-листы перечтений тяжёлые — вне git (скрипт пересоздаёт)
 scripts/atayanc_a2_6.73/sheets/
 scripts/atayanc_a2_6.73/tmp_*/
+
+# 6.75/A2: сырые VLM-чтения и кропы — вне git (лог/пул коммитятся)
+results/atayanc_a2_6.75/crops*/
+results/atayanc_a2_6.75/pilot_*/
+results/atayanc_a2_6.75/reads/

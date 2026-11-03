@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,46|pale",
+        "reasoning_content": "Ring at (441,451). Nearest label \"1,46\" at ~ (455,425)? Text above reads \"46\" small with something before. Likely \"1,46\". Pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702486,
+  "id": "2026110318412231a0f6a7855141d7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318412231a0f6a7855141d7",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

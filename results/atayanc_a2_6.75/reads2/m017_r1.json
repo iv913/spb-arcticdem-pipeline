@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,20|clear",
+        "reasoning_content": "Red ring at ~(695,320). Nearby: \"1,20\" to right at ~760,322? There's \"1,20\" and \"1,66\"? Ring closest number likely 1,20 at (760,322) or 2,89 at (590,313). Ring at 693,320; \"1,20\" appears at ~755-780, y~318 — closer. Transcribe \"1,20\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701254,
+  "id": "20261103182051378e19b924a04b55",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182051378e19b924a04b55",
+  "usage": {
+    "completion_tokens": 111,
+    "completion_tokens_details": {
+      "reasoning_tokens": 104
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1031
+  }
+}

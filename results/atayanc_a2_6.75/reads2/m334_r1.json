@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,59|pale",
+        "reasoning_content": "Ring at ~ (732, 322). Nearest number appears \"...59\" near (745, 307) — likely \"3,59\"? It shows \"9\" and \"59\" partially. Also 3,07 at (795,325). The ring overlaps digits; likely \"3,59\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701899,
+  "id": "20261103183135a3ad77b32b1b40a1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183135a3ad77b32b1b40a1",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 997
+  }
+}

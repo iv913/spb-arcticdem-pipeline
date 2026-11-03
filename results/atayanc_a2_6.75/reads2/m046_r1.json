@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,58|pale",
+        "reasoning_content": "Near ring: \"2,58\"? Right of ring at ~(520,315) reads \"2,58\". Ring center ~440,323; closest number \"2,58\" at ~505,315. It appears \"2,58\" with maybe \"17\" left of ring. The \"17\" isn't elevation. So 2,58, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702456,
+  "id": "2026110318405192f119f4d0c143af",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318405192f119f4d0c143af",
+  "usage": {
+    "completion_tokens": 86,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1006
+  }
+}

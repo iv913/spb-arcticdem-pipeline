@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearest numbers: 2,56 at (330,300)? distance ~115. 2,59 at (555,325) ~110. 2,98 at (545,403) far. Hmm 2,56 at ~(330,302): dx 112. 2,59 at (545,325): dx ~103. Close: 2,59.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700640,
+  "id": "202611031810361c030b075b5a4837",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031810361c030b075b5a4837",
+  "usage": {
+    "completion_tokens": 103,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1023
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,98|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby \"2,98\" at ~(530,285)? Distance ~90. \"3,72\" at ~(360,152) far. The \"CK. 3,98\" text — there's \"CK.A.98\" near ring: text \"CK.a.98\" at ~(420,310)? Actually \"CK.A.98\" partially overlapping ring. Likely elevation 3,98. Hmm \"2,98\" at (530,287). Ring center ~ (443,321). The \"CK.A.98\" text ends ~ (455,310). Closest is that number: digits maybe \"3,98\" hidden. Text \"СК.алт.98\"? Likely \"CK. 3,98\". I'll answer 3,98 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702467,
+  "id": "202611031841025a690e96d29c4d0d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031841025a690e96d29c4d0d",
+  "usage": {
+    "completion_tokens": 183,
+    "completion_tokens_details": {
+      "reasoning_tokens": 175
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1103
+  }
+}

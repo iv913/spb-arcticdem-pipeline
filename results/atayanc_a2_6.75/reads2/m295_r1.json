@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2.75|clear",
+        "reasoning_content": "Near ring: \"275\" at ~(550,318)? Looks like \"2.75\"? Numbers: \"275\" with dot likely 2.75. Also 2.50, 6.19. Closest is 2.75 to the right. But elevation numbers are decimal like 2,36. \"275\" appears as \"2.75\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701892,
+  "id": "20261103183129d695f1e5bd3c4402",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183129d695f1e5bd3c4402",
+  "usage": {
+    "completion_tokens": 86,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1006
+  }
+}

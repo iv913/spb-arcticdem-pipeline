@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,52|cut",
+        "reasoning_content": "Ring at ~(227,238). Nearest number looks like \"3,5...\" left of ring, partially cut: \"3,52\"? Text \"3,2\"? It shows \"3,5\" faint. Likely \"3,52\". Clarity: cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700627,
+  "id": "20261103181025761071b54edf4d97",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181025761071b54edf4d97",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 984
+  }
+}

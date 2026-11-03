@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,06|pale",
+        "reasoning_content": "Red ring near top (~625,55). Nearest number is \".06\" at ~640,28 — likely \"1,06\" with faint first digit. Distance ring center (625,55) to (640,28) ~30; also 2,41 at (490,90) far. So answer 1,06.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701248,
+  "id": "2026110318204653da9dabaadc4fd2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318204653da9dabaadc4fd2",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1003
+  }
+}

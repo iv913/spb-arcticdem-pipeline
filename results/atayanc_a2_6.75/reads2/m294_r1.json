@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "9,49|pale",
+        "reasoning_content": "Near the ring, right side shows \"9,49\" — actually \"①9.49\"? There's \"9,49\" near circle. Closest number to ring center... ring at ~(443,320). Numbers nearby: \"9,49\" at ~(575,318)? That's far. Hmm.\n\nThe image shows \"9,49\" near the ring's right. Likely answer 9,49.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701895,
+  "id": "20261103183132f1daf90af5f94d36",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183132f1daf90af5f94d36",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1016
+  }
+}

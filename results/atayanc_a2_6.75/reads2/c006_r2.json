@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,16|pale",
+        "reasoning_content": "Ring at ~(470,322). Nearby label appears \"2,16\" right of ring? Text \"3,16\"? Faint first digit. Likely 2,16.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700639,
+  "id": "20261103181033ed6738b1fb5742da",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181033ed6738b1fb5742da",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 922
+  }
+}

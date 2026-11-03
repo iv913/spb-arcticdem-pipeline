@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,24|pale",
+        "reasoning_content": "Nearest number to ring: \"3,24\" above right of ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702479,
+  "id": "202611031841173de62bdf2adb4061",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031841173de62bdf2adb4061",
+  "usage": {
+    "completion_tokens": 24,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 944
+  }
+}

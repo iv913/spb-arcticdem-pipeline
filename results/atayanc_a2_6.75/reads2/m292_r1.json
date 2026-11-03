@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,25|pale",
+        "reasoning_content": "Nearest number to ring: \"5,25\" right of ring. First digit looks like 5? Possibly \"5.25\". Transcript: 5,25.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701865,
+  "id": "202611031831030cffe9126d7a46f4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031831030cffe9126d7a46f4",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

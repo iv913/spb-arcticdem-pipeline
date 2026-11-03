@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,23|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearest numbers: \"1,23\"? there's \"8,23\" at (540,323)? To the right at ~(530,322) text \"8,23\". Distance ~90. Also numbers near ring... \"3,23\"? Hmm. Left near (290,295) \"3,23\"? The closest appears \"8,23\" — but could be 3,23. First digit faint: 8 vs 3... \"проверить 6 vs 8\". Likely 3,23? The text \"8,23\" right of ring. Distance ~85. I'll answer 3,23|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701239,
+  "id": "20261103182034f2c8fac037ed4de9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182034f2c8fac037ed4de9",
+  "usage": {
+    "completion_tokens": 156,
+    "completion_tokens_details": {
+      "reasoning_tokens": 148
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1076
+  }
+}

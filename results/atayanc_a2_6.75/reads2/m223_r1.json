@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,43|clear",
+        "reasoning_content": "Ring at ~(442,322). Nearest: \"5,45\" at ~(520,345)? distance ~90. There might be a small number right at ring overlapping—maybe partially hidden. Likely a number near ring not listed clearly. I see \"3,43\"? Actually at (520,345) reads \"3,43\". Nearest could be a hidden number under ring. Output 3,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701258,
+  "id": "20261103182054bf341c69cd974a46",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182054bf341c69cd974a46",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1016
+  }
+}

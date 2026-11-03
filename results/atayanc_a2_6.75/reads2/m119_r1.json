@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,60|pale",
+        "reasoning_content": "Nearest numbers: \"1,60\" at ~(508,232) center (440,218). Distance to \"1,60\" ~70; to \"2,3\" at (520,55) ~170. So 1,60 — but first digit faint, could be 1 vs 3... likely \"1,60\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701229,
+  "id": "2026110318202625b1daf7c0244719",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318202625b1daf7c0244719",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1001
+  }
+}

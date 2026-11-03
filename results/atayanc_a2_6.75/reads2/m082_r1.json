@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,96|clear",
+        "reasoning_content": "Ring at ~(442,322). Nearest number: 3,96 at ~(530,372)? Distance ~95. Also 3,49 at ~(378,610)? Far. So 3,96 — first digit could be 3? \"7,96\"? Looks like \"3,96\". Output 3,96|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701255,
+  "id": "20261103182052017aac81115d48e5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182052017aac81115d48e5",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1004
+  }
+}

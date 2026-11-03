@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,50|pale",
+        "reasoning_content": "Near ring there's a mark right of it, unclear. Numbers: 2,50 nearby at right (~80px away). Also near ring there might be a small number overlapped. Likely 2,50? Distance from ring (443,322) to \"2,50\" (~565,318) is ~120px. Any closer number? There's a symbol right at ~470,325. Hard. I'll answer 2,50 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701845,
+  "id": "202611031830408dd53211157846b7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031830408dd53211157846b7",
+  "usage": {
+    "completion_tokens": 108,
+    "completion_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1028
+  }
+}

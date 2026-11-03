@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,04|pale",
+        "reasoning_content": "Ring at ~(441,322). Nearest number: \"3,04\" at (531,325)? Distance ~90. Also \"3,21\" at (307,245) far. Left side \"3,07\" at (225,243). So closest is 3,04.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702473,
+  "id": "202611031841101a9b2cdc3bff45d7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031841101a9b2cdc3bff45d7",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

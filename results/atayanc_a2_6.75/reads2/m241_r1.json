@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,29|pale",
+        "reasoning_content": "Ring at ~(443,298). Nearest numbers: \"2,99\" at ~(215,290) far left; \"1,29\" at ~(510,315). Closest is 1,29.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701217,
+  "id": "2026110318201548aee76034ec44e0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318201548aee76034ec44e0",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

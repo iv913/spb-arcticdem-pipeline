@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,54|clear",
+        "reasoning_content": "Nearest number is \"2,54\" right of ring. Check digit: appears \"2,54\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702443,
+  "id": "20261103184041d3fc030ccd274aeb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103184041d3fc030ccd274aeb",
+  "usage": {
+    "completion_tokens": 29,
+    "completion_tokens_details": {
+      "reasoning_tokens": 22
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

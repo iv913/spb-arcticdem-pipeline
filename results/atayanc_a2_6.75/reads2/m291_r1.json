@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,66|pale",
+        "reasoning_content": "Red ring at ~(441,321). Nearest number to the right: \"5,66\"? Actually there's \"3,66\"-ish at ~(510,318) — \"J.66\" visible. It appears \"5,66\" or \"3,66\". Hmm faint first digit; likely 5,66. Distance ~70px. Any closer number? None nearer. Read as 5,66.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701889,
+  "id": "20261103183123fe8c1ec7841944db",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183123fe8c1ec7841944db",
+  "usage": {
+    "completion_tokens": 98,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1018
+  }
+}

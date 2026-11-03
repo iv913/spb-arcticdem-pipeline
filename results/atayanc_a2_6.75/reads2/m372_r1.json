@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,10|clear",
+        "reasoning_content": "Ring at ~(440,322). Nearest number \"3,10\" at ~(510,325); to the left \"3,04\" at ~(325,325). Distance: ring to \"3,10\" label ~60px; to \"3,04\" ~115px. So 3,10.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702477,
+  "id": "2026110318411464e12ad5b8af4e73",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318411464e12ad5b8af4e73",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 998
+  }
+}

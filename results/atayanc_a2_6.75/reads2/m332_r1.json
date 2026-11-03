@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,31|clear",
+        "reasoning_content": "Ring at ~(441,322). Nearest numbers: 3,31 at ~(510,348)? and 4,02 at (622,368), 3,43 (690,325). Closest is 3,31.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702474,
+  "id": "2026110318411150f412344c0d48e4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318411150f412344c0d48e4",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 984
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,20|pale",
+        "reasoning_content": "Ring at ~ (443,322). Nearest number \"1,20\" left of ring at ~ (400,322). Reads likely 3,20? It looks like \"3,20\" partially covered. First digit could be 3 or 1. Given faintness guidance, \"3,20\" plausible. The number touches the ring. I'll answer 3,20.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700644,
+  "id": "20261103181040c27d80160f96410b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181040c27d80160f96410b",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

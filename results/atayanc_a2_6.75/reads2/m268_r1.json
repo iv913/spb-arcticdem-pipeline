@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,86|pale",
+        "reasoning_content": "Ring at ~(443,323). Nearest number \"1,86\" at ~(395,340). Check digits: 1,86.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701856,
+  "id": "2026110318305482c60a15dde448d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318305482c60a15dde448d8",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 960
+  }
+}

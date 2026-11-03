@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,40|clear",
+        "reasoning_content": "Ring at ~(338,321). Nearest number \"6,40\" at ~(425,323)? Also possibly one closer. Text near ring: \"6.40\" to the right. Answer 6,40.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701848,
+  "id": "20261103183045b8a224d800e343f6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183045b8a224d800e343f6",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

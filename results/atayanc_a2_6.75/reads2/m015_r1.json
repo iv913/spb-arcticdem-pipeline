@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,20|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearest numbers: \"3,20\" at ~(470,345) — distance ~40; also 2,51 further. So 3,20? It appears \"3,20\" to right of ring. First digit faint: 3.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701223,
+  "id": "20261103182019152c0345c20540d7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182019152c0345c20540d7",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

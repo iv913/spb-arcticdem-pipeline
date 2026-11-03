@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,86|pale",
+        "reasoning_content": "Near the ring, below-right there's \"2,86\" at ~ (545,355). Ring at (442,322). Distance small. Check first digit: 2,86.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701877,
+  "id": "20261103183114a440e27d68d8400e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183114a440e27d68d8400e",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

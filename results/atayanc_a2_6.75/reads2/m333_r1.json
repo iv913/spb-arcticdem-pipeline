@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,33|pale",
+        "reasoning_content": "The ring overlaps a number near it, appears \"2,33\"-like. Likely \"2,33\". First digit faint—2 vs 3? Looks like 2,33.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702476,
+  "id": "2026110318411323bf95d6e0154807",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318411323bf95d6e0154807",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

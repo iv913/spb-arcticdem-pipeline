@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,04|pale",
+        "reasoning_content": "Ring at ~ (443,320). Nearest number: 2.04 at (517,285)? distance ~ sqrt(74²+35²)≈82. Others: 2.72 at (585,370) ~150. 2.57 at (140,155) far. So 2.04.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702447,
+  "id": "202611031840432fdac2b46acb452d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031840432fdac2b46acb452d",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

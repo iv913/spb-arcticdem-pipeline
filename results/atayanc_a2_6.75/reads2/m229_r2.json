@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|pale",
+        "reasoning_content": "Nearest to ring (~443,322): 2,56 at ~(330,296)? distance ~115. 2,59 at (545,325) distance ~102. 2,99 at (530,405) ~100. Hmm. 2,59 likely nearest.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700638,
+  "id": "2026110318103584889d6023d94e0e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318103584889d6023d94e0e",
+  "usage": {
+    "completion_tokens": 74,
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 950
+  }
+}

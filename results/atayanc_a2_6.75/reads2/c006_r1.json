@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,46|cut",
+        "reasoning_content": "Red ring at ~(445,320), number appears \"2,46\" partially cut by ring. Likely 2,46.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700635,
+  "id": "202611031810337d6c0dc918d548ef",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031810337d6c0dc918d548ef",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 954
+  }
+}

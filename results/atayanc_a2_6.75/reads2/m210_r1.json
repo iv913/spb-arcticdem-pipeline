@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,86|clear",
+        "reasoning_content": "Ring at ~(440,323). Nearest number \"2,86\" at ~(515,320). First digit 2, second 8 vs 6 — looks 2,86.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702485,
+  "id": "20261103184123da706097e53f4ee8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103184123da706097e53f4ee8",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 969
+  }
+}

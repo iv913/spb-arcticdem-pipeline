@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,23|pale",
+        "reasoning_content": "Near ring: number \"3,23\"? Label right of ring reads something like \"2,23\" or \"3,23\". It's italic \"3,23\"? I'll answer 3,23|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701883,
+  "id": "20261103183120ca5404de094a47ac",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183120ca5404de094a47ac",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 974
+  }
+}

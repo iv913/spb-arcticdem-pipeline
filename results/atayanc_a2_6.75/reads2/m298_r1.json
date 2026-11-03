@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,85|pale",
+        "reasoning_content": "Near ring: \"2,85\"-like text at right of ring. It reads \"285\" with comma? Likely \"2,85\". First digit faint—could be 2.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701900,
+  "id": "2026110318313710727105a1e84f0b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318313710727105a1e84f0b",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

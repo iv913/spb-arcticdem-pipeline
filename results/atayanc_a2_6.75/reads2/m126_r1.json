@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,08|pale",
+        "reasoning_content": "Near ring: \"3,08\" to right at ~(530,325)? Ring center ~(443,323). Number \"3,08\" at ~(525,322). Also \"3,09\" at (335,405) further. Closest: 3,08.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701243,
+  "id": "2026110318203926eee886a3064abc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318203926eee886a3064abc",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 993
+  }
+}

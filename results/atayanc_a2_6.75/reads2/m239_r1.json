@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|clear",
+        "reasoning_content": "Nearest to ring (440,320): \"2,39\" at ~560,330? That's fairly far (~120px). Maybe a number closer near ring. There's \"2,39\" to the right. Probably 2,39.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701262,
+  "id": "202611031820597bb7370193314086",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031820597bb7370193314086",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 981
+  }
+}

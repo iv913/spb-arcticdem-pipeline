@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,09|cut",
+        "reasoning_content": "Ring at ~(440,322). Nearby: \"3,65\" at (530,320), \"0,39\" partial at (430,355) cut. Closest... 3,65 distance ~90; cut one ~35. That seems \"3,09\"? partially obscured by building edge, cut by black line. Hmm. The near number at (425,352) is partially covered—appears cut. Likely answer \"3,09|cut\"? Risky; the 3,65 is clear. Distances: ring center (440,322) to 0,39 at (430,353) ~32 → closer but cut. Output 3,09|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701874,
+  "id": "202611031831073d129c02e0e14acf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031831073d129c02e0e14acf",
+  "usage": {
+    "completion_tokens": 159,
+    "completion_tokens_details": {
+      "reasoning_tokens": 152
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1079
+  }
+}

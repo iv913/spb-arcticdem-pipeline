@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,12|pale",
+        "reasoning_content": "Ring at ~ (443,323). Nearest number \"2,12\" at (530,327)? distance ~90. Others: 2,51 at (55,375) far. So 2,12.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701264,
+  "id": "20261103182102ad86fde66cc84a29",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182102ad86fde66cc84a29",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

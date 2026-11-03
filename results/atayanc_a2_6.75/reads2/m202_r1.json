@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,90|pale",
+        "reasoning_content": "Ring at ~ (443,323). Nearest number: \"4,90\"-like near (527,290)? That's \"2,90\"? There's a number \"4,9\" at (527,289). Distance from ring to it ~90px. Also \".97\"? Hard. The closest might be the small digits at (445,300)? There's text \"5\" maybe. Actually numbers: \"3,90\" (85,165), \"2,77\" (860,240), \"5,76\" (495,460), \"3,74\" (735,470), \"2,90\" at (527,289), \".97\" bottom-left. Closest is likely \"2,90\". Check first digit could be 2 or 3. I'll answer 2,90.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702482,
+  "id": "20261103184116e398fbfc553f4a1c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103184116e398fbfc553f4a1c",
+  "usage": {
+    "completion_tokens": 191,
+    "completion_tokens_details": {
+      "reasoning_tokens": 183
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1111
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,13|pale",
+        "reasoning_content": "Nearest number to ring: \"2,13\" at ~(520,325)? It reads \"2,13\" with dot after. Likely 2,13.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702490,
+  "id": "202611031841271fae48863f3442a5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031841271fae48863f3442a5",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

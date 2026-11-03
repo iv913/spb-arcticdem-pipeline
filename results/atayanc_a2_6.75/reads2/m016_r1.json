@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,31|clear",
+        "reasoning_content": "Number near ring: \"3,21\" to the right of ring. Looks like 3,31? Text shows \"3.31\"? It reads \"3,31\" possibly. Given examples \"3,35\"? The label right of ring appears \"3,31\". I'll answer 3,31.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701226,
+  "id": "20261103182023969b8685bd2640b3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182023969b8685bd2640b3",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

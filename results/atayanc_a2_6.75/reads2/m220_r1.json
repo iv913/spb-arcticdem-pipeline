@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,55|clear",
+        "reasoning_content": "Nearest number to ring: \"3,55\" to the right. Ring at ~(442,320), number at ~(515,330). Looks like \"3,55\". First digit 3.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701217,
+  "id": "20261103182010077a0d7b3bff40f2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182010077a0d7b3bff40f2",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 970
+  }
+}

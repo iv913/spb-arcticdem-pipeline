@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,51|pale",
+        "reasoning_content": "Closest number to ring at ~(442,320): the \"2,51\" at (510,267)? Distance ~80. Others: 2,58 (480,65) far; 3,09 (565,437) ~140; 3,13 (285,452). So 2,51.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702462,
+  "id": "20261103184058729cddb4042f43fb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103184058729cddb4042f43fb",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1002
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,35|pale",
+        "reasoning_content": "Nearest number to ring: \"5,35\"? There's \"3,35\" at ~(545,330). Ring at (441,320). Distance ~100. Also \"1,895\"? The \"1895\" at (690,380) far. Likely \"3,35\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701221,
+  "id": "202611031820187583525f1c604336",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031820187583525f1c604336",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

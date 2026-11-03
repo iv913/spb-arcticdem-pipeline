@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,82|pale",
+        "reasoning_content": "Ring at ~(445,42), number appears \"2,82\" partially — likely \"2,82\" with ring overlapping. First digit faint; could be 2. Answer 2,82|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700633,
+  "id": "20261103181030561bdf1a451b4514",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103181030561bdf1a451b4514",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

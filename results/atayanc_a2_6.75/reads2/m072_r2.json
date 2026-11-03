@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,14|pale",
+        "reasoning_content": "Nearest to ring (~443,239): \"2,14\" at ~555,237 — likely 2,14. But \"2.36\" at ~320,196. Distance: 2,14 closer.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700623,
+  "id": "2026110318101987e588e9770e4705",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318101987e588e9770e4705",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

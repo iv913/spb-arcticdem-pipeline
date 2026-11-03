@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,29|clear",
+        "reasoning_content": "Ring at ~ (441,320). Nearest number: 3,29 at ~(520,328). Check first digit 3. Output 3,29|pale? It seems reasonably clear: 3,29|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701261,
+  "id": "20261103182058fbf386fb1f47400e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182058fbf386fb1f47400e",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 978
+  }
+}

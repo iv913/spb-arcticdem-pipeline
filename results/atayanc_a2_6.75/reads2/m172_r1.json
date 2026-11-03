@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Ring near \"1,98\"? The number next to ring: \"1,98\" at ~ (520,320). Likely \"1,98\" pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701891,
+  "id": "202611031831246f922a3dea014673",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031831246f922a3dea014673",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,09|pale",
+        "reasoning_content": "Near the ring there's a faint label just right: \"2,09\"? Faint text near ring at (470,315). Likely 2,09. Also 1,98 above. The faint one touches the ring. Answer: 2,09|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700630,
+  "id": "202611031810268b33b49d5f86443a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031810268b33b49d5f86443a",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 942
+  }
+}

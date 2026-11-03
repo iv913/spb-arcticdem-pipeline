@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,07|pale",
+        "reasoning_content": "Red ring at ~(441,320). Nearby number \"5,07\" at ~(520,325)? Actually there's small text right of ring: \"5,07\" faint. There's also a small mark just below-left of ring at (437,340) — possibly a tiny number. The closest visible number seems \"5,07\" to the right. Given first digit faint 5 vs 3? It reads \"5,07\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701880,
+  "id": "20261103183117dd896e71543c4056",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183117dd896e71543c4056",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1022
+  }
+}

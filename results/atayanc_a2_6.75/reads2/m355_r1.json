@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|pale",
+        "reasoning_content": "Nearest number to ring at (440,322): \"2,98\" at ~(525,325)? Looks like \"2,98\" at (530,325). Distance ~85. Another \"2,98\" at (710,325) farther. So 2,98.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702470,
+  "id": "2026110318410796523dd81ed7488a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318410796523dd81ed7488a",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

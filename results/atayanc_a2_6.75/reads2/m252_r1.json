@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,78|pale",
+        "reasoning_content": "Ring at ~(440,90); nearest number 2,78 below-right at ~(455,100).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701245,
+  "id": "2026110318204337bd8fc302434aa0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318204337bd8fc302434aa0",
+  "usage": {
+    "completion_tokens": 31,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

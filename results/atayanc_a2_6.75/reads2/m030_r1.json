@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,55|pale",
+        "reasoning_content": "Ring at ~ (441,321). Nearest number \"2,55\" at (505,307)? Also \"2,52\" at (493,177). Closest is \"2,55\" but ring overlaps? The number near ring appears \"•2,55\" at right of ring. Likely 2,55, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701860,
+  "id": "20261103183056981f5d90614d4966",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183056981f5d90614d4966",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1003
+  }
+}

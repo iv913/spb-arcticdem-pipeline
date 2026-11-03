@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,83|pale",
+        "reasoning_content": "Near ring: \"2.83\" just right of ring at ~ (510,322). First digit faint—2.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702463,
+  "id": "2026110318410142387401fa81434f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318410142387401fa81434f",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 955
+  }
+}

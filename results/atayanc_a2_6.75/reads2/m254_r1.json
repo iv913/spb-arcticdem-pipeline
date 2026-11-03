@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,21|clear",
+        "reasoning_content": "Ring at ~(443,321). Nearest number: \"1,21\" at ~(500,325)? That's ~57px away. Others: 3,80 at (525,95) far. The 1,21 seems nearest. Digits: 1,21.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701246,
+  "id": "20261103182043d3a830a3ab654816",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182043d3a830a3ab654816",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 990
+  }
+}

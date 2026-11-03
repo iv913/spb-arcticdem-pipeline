@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,75|pale",
+        "reasoning_content": "Ring at ~(440,320). Nearby numbers: 3,75 at (405,275); 2,92 at (530,335); 2,04 at (465,385). Closest center likely 3,75? Distance to 3,75 ~ sqrt(35²+45²)=57; to 2,92 ~90; to 2,04 ~66. So 3,75. Check first digit: could be 2,75? Faint; likely 3,75.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701850,
+  "id": "20261103183045da2aa7c6f2144b49",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183045da2aa7c6f2144b49",
+  "usage": {
+    "completion_tokens": 123,
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1043
+  }
+}

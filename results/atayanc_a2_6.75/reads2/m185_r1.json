@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,53|pale",
+        "reasoning_content": "Ring at ~(441,318); nearest number appears \"2,53\" at ~(465,310), faint. Likely 2,53.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702446,
+  "id": "2026110318404307c1dd668be74df0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318404307c1dd668be74df0",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 960
+  }
+}

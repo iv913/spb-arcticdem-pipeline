@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,65|clear",
+        "reasoning_content": "Ring at ~(442,321). Nearest numbers: \"2,07\" at ~(510,320)? distance ~68; \"4,65\" at ~(470,383) distance ~63. Also \"4,12\" at (240,307) far. Hmm ambiguous. \"2,07\" left of ring? Actually text \"2,07\" near (515,322). 4,65 at (468,383). Distances: 2,07 ~73; 4,65 ~64. Closest 4,65. Verify: 4,65.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701868,
+  "id": "2026110318310569bcc86e4232452c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318310569bcc86e4232452c",
+  "usage": {
+    "completion_tokens": 138,
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1058
+  }
+}

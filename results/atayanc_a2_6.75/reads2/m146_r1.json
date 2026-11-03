@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,11|pale",
+        "reasoning_content": "Ring at ~(440,323). Nearest numbers: 2,11 at (550,337)? That's ~115 away. Also \"2,85\" far. There may be a small number near ring — faint. Possibly \"2,11\" closest. But also check near ring maybe \"6, мр\" is text. I'll answer 2,11.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701856,
+  "id": "20261103183052153bfce7a91149f0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183052153bfce7a91149f0",
+  "usage": {
+    "completion_tokens": 88,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1008
+  }
+}

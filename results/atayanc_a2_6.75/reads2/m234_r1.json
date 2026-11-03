@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,84|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearest numbers: \"3,84\" at ~(480,278) above, \"3,33\" at ~(595,280)? Actually \"3,84\" label at (465,278) with dot at (443,270). Distance to ring ~50. Below \"3,31\" at (655,360) farther. So 3,84.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701259,
+  "id": "2026110318205609b5549769744ca9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318205609b5549769744ca9",
+  "usage": {
+    "completion_tokens": 98,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1018
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|pale",
+        "reasoning_content": "Ring at ~(538,322). Nearest number \"2,89\" at ~(585,320). First digit: 2,89? Likely \"2,89\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701250,
+  "id": "202611031820493a3f8709dd26458c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031820493a3f8709dd26458c",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

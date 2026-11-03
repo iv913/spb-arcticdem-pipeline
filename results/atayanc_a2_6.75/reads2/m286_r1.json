@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,71|pale",
+        "reasoning_content": "The number next to ring is \"5,71\"? Likely 3,71 or 5,71. First digit faint—could be 3. It appears as \"5,71\"? Given faint first digit possibilities... The dot before suggests a small mark. I'll answer 5,71.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701884,
+  "id": "20261103183121e2a4c645e2474865",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103183121e2a4c645e2474865",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 989
+  }
+}

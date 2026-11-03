@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,30|pale",
+        "reasoning_content": "Nearest numbers: \"1,30\" above at ~(480,270)? ring at (441,322). Candidates: 1,30 (top), 3,08 (right at 600,355), 3,33 left. Distances: 1,30: ~(468,272) → ~54; 3,08 at (605,352) → ~165. So 1,30. First digit faint: could be 1,30. Clarity: pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701233,
+  "id": "20261103182029197e2f0fecac436d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182029197e2f0fecac436d",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1038
+  }
+}

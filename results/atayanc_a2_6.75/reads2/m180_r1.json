@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,30|pale",
+        "reasoning_content": "Red ring at ~(442,322). Nearest number: \"2,30\" at (465,370)? Also \"2,07\" at (270,295). Ring overlaps \"6, рмд\" text? Closest elevation appears \"2,30\" below-right. Distance: (442,322) to (465,370) ~53. To (270,295): ~173. So 2,30.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793702442,
+  "id": "202611031840379c0da9cd2f494460",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031840379c0da9cd2f494460",
+  "usage": {
+    "completion_tokens": 105,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1025
+  }
+}

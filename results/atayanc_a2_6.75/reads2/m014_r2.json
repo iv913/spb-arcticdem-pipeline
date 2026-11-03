@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,7|pale",
+        "reasoning_content": "Nearest to ring: 2,7? It shows \"2,7\" to the right. Answer 2,7|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793700625,
+  "id": "2026110318102354a6fc5663a44585",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318102354a6fc5663a44585",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 914
+  }
+}

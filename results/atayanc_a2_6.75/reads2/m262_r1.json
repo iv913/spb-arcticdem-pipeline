@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,7|pale",
+        "reasoning_content": "Near ring: \"7,7\" below at ~ (427,365)? Numbers: 2,36 top, 1,98?, \"1,49\" right of ring, \"7,7\" below ring, \"2,2\" further. Closest to ring centre (~440,320): \"1,49\" at ~ (530,318)? distance ~90; \"7,7\" at ~(427,368) distance ~50. Likely \"7,7\" — could be \"7,73\"? Reads \"7,7\". First digit faint — could be 2,7? I'll answer 7,7, clarity pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701845,
+  "id": "202611031830405d6ee2a459794d0b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611031830405d6ee2a459794d0b",
+  "usage": {
+    "completion_tokens": 150,
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1070
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,53|pale",
+        "reasoning_content": "Red ring at ~(443,320). Nearest number: 2,53 at (540,270)? Distance ~105. Others: 3,06 (700,105) far; 2,71 top; 2,53 right at (540,272) seems closest. Also 2,68 at (680,380)? distance ~250. So 2,53.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701270,
+  "id": "2026110318210392e03c6f6d7b414c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110318210392e03c6f6d7b414c",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1013
+  }
+}

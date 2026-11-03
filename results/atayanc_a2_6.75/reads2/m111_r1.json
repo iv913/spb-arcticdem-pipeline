@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,22|pale",
+        "reasoning_content": "Near the red ring (≈440,322): numbers \"3,22\" at (475,270) and \"3,10\" at (520,332)? \"3,10\" near (510,333). Distance to 3,22 ~ 60px; to 3,10 ~ 75px. Hmm. Ring at (441,322). 3,22 text at x≈470-520, y≈270. 3,10 at x≈505-540, y≈333. Distance to 3,22: (30,52)→60; to 3,10: (65,11)→66. Close. Output 3,22|clear maybe pale. I'll say 3,22|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793701231,
+  "id": "20261103182026c3027dede34b4569",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103182026c3027dede34b4569",
+  "usage": {
+    "completion_tokens": 176,
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1096
+  }
+}
