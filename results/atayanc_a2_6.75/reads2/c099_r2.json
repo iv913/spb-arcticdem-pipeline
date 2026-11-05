@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,36|pale",
+        "reasoning_content": "Ring at ~(710, 293). Nearby label to its right partially cut \"1,55\"? Text shows \"1.36\"? It appears \"...36\" near ring. Likely \"1,36\". First digit faint. Answer: 1,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874623,
+  "id": "202611051830180f5f5ff274cf42eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830180f5f5ff274cf42eb",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 941
+  }
+}

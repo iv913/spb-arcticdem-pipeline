@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,97|pale",
+        "reasoning_content": "Ring at (440,320), label to right \"...97\"? Looks like \"2,97\" or \"1,97\". Likely \"2,97\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873472,
+  "id": "202611051811101198372ca0484fca",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051811101198372ca0484fca",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 917
+  }
+}

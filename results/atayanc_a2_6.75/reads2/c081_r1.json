@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,35|pale",
+        "reasoning_content": "Ring at ~(440,320); number partially overlapped — appears \"3,35\" or \"2,35\"? It's \"...,35\" likely \"2,35\". Faint first digit — could be 3,35. I'll answer 2,35 pale? Choose 3,35? Given digits visible \",35\" and faint first digit. I'll say 2,35|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874025,
+  "id": "20261105182018404a9c75cdb04812",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182018404a9c75cdb04812",
+  "usage": {
+    "completion_tokens": 94,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1014
+  }
+}

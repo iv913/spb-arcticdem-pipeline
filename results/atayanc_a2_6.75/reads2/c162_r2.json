@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,49|pale",
+        "reasoning_content": "Ring near label \"1,49\" just left of ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877046,
+  "id": "20261105191044c551731d1a47410e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191044c551731d1a47410e",
+  "usage": {
+    "completion_tokens": 21,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 897
+  }
+}

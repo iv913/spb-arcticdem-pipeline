@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,54|cut",
+        "reasoning_content": "Ring at ~(443,322), overlapping a number like 2,54? Text near ring: \"2,54\" partially cut. Likely \"2,54\" with first digit faint. Answer 2,54|cut? Ring overlaps digits — clarity cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877037,
+  "id": "202611051910340c0ff59395c84f50",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910340c0ff59395c84f50",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

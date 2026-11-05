@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,64|pale",
+        "reasoning_content": "Red ring at ~(443,323). Nearest numbers? \"3,06\"? There's \".84\" nearby, \"2,64\" at (200,272). Near ring maybe faint number around (440,300)? Hard. Possibly \"2,64\" at left. There seems to be a number near the ring? Closest visible: \"2,64\" at ~205,272 — distance ~240. Maybe there's a small number above ring? \"6047\" text is label. Possibly number at (395,310)? Unclear. I'll answer 2,64 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874076,
+  "id": "2026110518211001ec903db0784bc3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518211001ec903db0784bc3",
+  "usage": {
+    "completion_tokens": 138,
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1058
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "0,8|pale",
+        "reasoning_content": "Near ring: \"+0,8\"? That's at ~(390,375) — near but decimal? \"2,59\" at (525,490). Closest to ring (440,320): \"+0,8\" appears right below-left. Number nearest: 0,8.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876429,
+  "id": "20261105190026089c882517e8471d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190026089c882517e8471d",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 948
+  }
+}

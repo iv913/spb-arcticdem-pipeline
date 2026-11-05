@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No elevation number visible near the ring (444,320). Likely NA|cut? The ring sits at a courtyard with no number. Answer NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875814,
+  "id": "20261105185012db1f2ac7953c46fd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185012db1f2ac7953c46fd",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

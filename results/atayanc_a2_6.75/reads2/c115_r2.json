@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|cut",
+        "reasoning_content": "Near the ring there's a number partially covered, looks like \"2,39\" or \"3,49\"? The ring covers first digit. Text to right of ring reads \"9\"? Likely \"2,39\"? Faint first digit. I'll answer 2,39|cut... but clarity: ring cuts the number → \"cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875254,
+  "id": "202611051840511a3c28432f9f423f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051840511a3c28432f9f423f",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 953
+  }
+}

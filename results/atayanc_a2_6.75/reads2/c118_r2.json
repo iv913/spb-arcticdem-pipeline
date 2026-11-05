@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,32|pale",
+        "reasoning_content": "Near ring there's faint text; appears \"2,32\"? I can't see clearly. Likely answer \"2,32|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875264,
+  "id": "202611051841021e1b5164ddab4f85",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051841021e1b5164ddab4f85",
+  "usage": {
+    "completion_tokens": 37,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 913
+  }
+}

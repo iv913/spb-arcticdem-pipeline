@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|pale",
+        "reasoning_content": "Near the red ring at (~35,320), there's a \".39\" faint nearby. Answer 2,39? First digit faint. Likely \"2,39\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877629,
+  "id": "202611051920268f5dc34f1c1545d9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920268f5dc34f1c1545d9",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 919
+  }
+}

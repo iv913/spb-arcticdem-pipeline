@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,46|pale",
+        "reasoning_content": "Near ring: \"2,4\" faint label right below ring. Likely \"2,46\"? It shows \"2,4...\" faint. Answer: 2,46? Hard. I'll say 2,46|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709698,
+  "id": "20261103204136b9e7716aa9aa48c1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204136b9e7716aa9aa48c1",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 933
+  }
+}

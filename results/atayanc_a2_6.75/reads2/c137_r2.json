@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,26|pale",
+        "reasoning_content": "Near ring: \".6\" visible right of ring; likely 2,26? Text shows \"6\" after ring... Label appears \",6\"? Given nearby \"2,65\" above and \".6\" at ring — probably \"2,26\"? Faint first digit. I'll answer 2,26|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875852,
+  "id": "20261105185049fbbead2bc0274012",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185049fbbead2bc0274012",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

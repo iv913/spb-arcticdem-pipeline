@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,26|pale",
+        "reasoning_content": "Near ring: small text left of ring, faint \"2,26\"? It shows something like \"•2,26\" barely. I'll answer 2,26|pale? Clarity pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875236,
+  "id": "2026110518403392bb6f79bf034346",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518403392bb6f79bf034346",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 970
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,30|pale",
+        "reasoning_content": "Near ring: \"1,30\"? Label reads \"1,30\" partially cut by ring. Likely \"1,30\". Faint first digit — could be 1,30.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874634,
+  "id": "20261105183033ff59f4bd5d29446c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105183033ff59f4bd5d29446c",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 922
+  }
+}

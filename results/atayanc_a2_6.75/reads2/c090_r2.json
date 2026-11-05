@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,16|pale",
+        "reasoning_content": "Nearest to ring: \"3,16\" (printed left of ring). First digit faint — could be 3,16.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874059,
+  "id": "20261105182053e48927049fa344ad",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182053e48927049fa344ad",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 911
+  }
+}

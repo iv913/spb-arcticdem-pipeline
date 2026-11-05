@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,99|pale",
+        "reasoning_content": "Ring at ~(440,321); nearby number right of ring \"~,99\" — likely 3,99 or 2,99. Text appears \"2,99\"? The digits show \",99\" clearly; first digit faint. Nearby 2,94 below-left. The ringed value likely \"2,99\". First digit ambiguous 2 vs 3. Given elevations ~2-3, answer 2,99.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873469,
+  "id": "2026110518104846c6d565921e4f9d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518104846c6d565921e4f9d",
+  "usage": {
+    "completion_tokens": 98,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1018
+  }
+}

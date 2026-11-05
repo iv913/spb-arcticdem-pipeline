@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,72|clear",
+        "reasoning_content": "Ring at ~(440,318), nearest number seems \"2,72\"? Shows \".72\" next to ring; likely 2,72.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872503,
+  "id": "2026110517550028e4ba382f5c4436",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110517550028e4ba382f5c4436",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

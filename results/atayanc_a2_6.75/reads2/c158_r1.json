@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,43|pale",
+        "reasoning_content": "Closest number to ring (≈443,320): \"7,43\" above at ~(455,236)? distance ~86. Others far. Answer 7,43 pale? It looks faint gray. Clarity: pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877031,
+  "id": "2026110519102996cd5d81e1de4472",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519102996cd5d81e1de4472",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 978
+  }
+}

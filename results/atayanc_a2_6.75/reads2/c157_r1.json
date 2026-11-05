@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,52|pale",
+        "reasoning_content": "Near ring there's a faint number right of it, like \"2,52\"? It shows \"У.52\"? Hard. The ring at ~(443,320); to its right faint \"2,52\"? Likely \"2,52\" but pale. I'll answer 2,52|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877029,
+  "id": "20261105191024ac2ea461dcf94035",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191024ac2ea461dcf94035",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

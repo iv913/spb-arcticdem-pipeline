@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,57|pale",
+        "reasoning_content": "Ring at ~(442,320); nearby number \"3,57\" to the right at ~470,322? There's \"5,7\"-like text partially covered. Likely \"3,57\". Answer 3,57|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875231,
+  "id": "20261105184025f9dd48b36a95425f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184025f9dd48b36a95425f",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 981
+  }
+}

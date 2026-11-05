@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,06|pale",
+        "reasoning_content": "Red ring at ~(443,146). Nearby numbers: \"3,06\" right after ring at ~460,148; \"3,80\" before at ~360,128? The \"3,06\" touches ring. First digit faint — could be 3,06. Answer: 3,06|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709707,
+  "id": "2026110320414329db8a6f3c494257",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110320414329db8a6f3c494257",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 953
+  }
+}

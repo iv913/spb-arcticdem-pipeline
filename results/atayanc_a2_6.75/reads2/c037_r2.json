@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,42|pale",
+        "reasoning_content": "Near ring: \"2,42\"? There's a faint number near ring at ~(418,180). Likely \"2,42\". Nearest printed number appears left of ring. I'll answer 2,42.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872524,
+  "id": "2026110517552183a6d38952ae4a8c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110517552183a6d38952ae4a8c",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 929
+  }
+}

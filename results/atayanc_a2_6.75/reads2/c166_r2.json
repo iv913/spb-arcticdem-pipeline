@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,72|pale",
+        "reasoning_content": "The ring at ~(440,322) overlaps a number \"1,72\"? Text \"3,72\"? Faint first digit. Likely \"1,72\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877063,
+  "id": "20261105191055263505fb2d7d4c2f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191055263505fb2d7d4c2f",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 919
+  }
+}

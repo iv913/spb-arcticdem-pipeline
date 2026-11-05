@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,54|pale",
+        "reasoning_content": "Ring at ~(442,321). Nearby text right of ring: \"3.4\"? Looks like \"3,4\" partially. Likely \"3,54\"? There's a faint number overlapping ring: seems \"3.4\" at ~470,320. Read: \"3,4\"? Could be \"3,54\". I'll say 3,54|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875240,
+  "id": "202611051840361d1fc5c3fecc4513",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051840361d1fc5c3fecc4513",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1009
+  }
+}

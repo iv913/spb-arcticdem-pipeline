@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,11|pale",
+        "reasoning_content": "Ring at ~ (443,320). Nearby numbers: \"2,11\"? There's \"3,17\" at right, \"2,20\" left, \"2,32\". Closest small number near ring appears \"2,11\"? At (445,320) there seems \"2,11\" partially. I'll answer 2,11|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873423,
+  "id": "2026110518102065bca3bc92c64c30",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518102065bca3bc92c64c30",
+  "usage": {
+    "completion_tokens": 86,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

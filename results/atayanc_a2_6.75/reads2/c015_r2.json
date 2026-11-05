@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,91|cut",
+        "reasoning_content": "Near ring: \"3,91\"-like label at ring. Text shows \"3 91\" partially covered. Likely 3,91.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709693,
+  "id": "20261103204131e3560e7b8b9e4d75",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204131e3560e7b8b9e4d75",
+  "usage": {
+    "completion_tokens": 36,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 912
+  }
+}

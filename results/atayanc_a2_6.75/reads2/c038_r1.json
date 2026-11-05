@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,99|clear",
+        "reasoning_content": "Ring at ~(443,292); number \"1,99\" at ~(490,290). Likely \"1,99\". First digit faint? 1,99.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711008,
+  "id": "20261103210325a735990cfb7c4609",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103210325a735990cfb7c4609",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 964
+  }
+}

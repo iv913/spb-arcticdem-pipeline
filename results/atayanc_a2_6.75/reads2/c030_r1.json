@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,68|pale",
+        "reasoning_content": "Ring at ~(443,320); number \"2,68\" nearby — visible \",68\" after ring. Likely 2,68.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711011,
+  "id": "202611032103299a778c9207bf433c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032103299a778c9207bf433c",
+  "usage": {
+    "completion_tokens": 37,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 957
+  }
+}

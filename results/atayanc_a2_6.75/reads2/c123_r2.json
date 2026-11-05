@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "45,09|pale",
+        "reasoning_content": "Near ring: \"45,?\"? Labels like 45,89? Nearest number appears \"45,09\"? Left of ring \"45,\" and right \",09\"? Actually reads \"45,09\" split by ring? Likely \"45,09\".\n\nBetter: \"45,19\"? I'll answer 45,09|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875286,
+  "id": "2026110518412398635a0b6fea451d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518412398635a0b6fea451d",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 954
+  }
+}

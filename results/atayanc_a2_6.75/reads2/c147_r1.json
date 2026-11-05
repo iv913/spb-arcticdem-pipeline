@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,19|pale",
+        "reasoning_content": "The ring at ~(440,320), number appears \"2,19\" — but first digit faint, could be 2. It reads \"2,19\"? Image shows \"2,19\" with ring overlapping. Likely 2,19.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876451,
+  "id": "20261105190049cc05900df9b94606",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190049cc05900df9b94606",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

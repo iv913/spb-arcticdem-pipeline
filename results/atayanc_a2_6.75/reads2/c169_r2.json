@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearest numbers: \"2,82\" at ~215,352; \"2,45\" at ~345,455? Actually near \"бастион\" text there's 2,45 at (345,457). Distance: 2,45 ~ sqrt(97²+135²)≈166; 2,82 ~ sqrt(227²+30²)≈229. Also 2,45 appears. Answer 2,45|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877609,
+  "id": "202611051920050cd856f23485456d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920050cd856f23485456d",
+  "usage": {
+    "completion_tokens": 120,
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 996
+  }
+}

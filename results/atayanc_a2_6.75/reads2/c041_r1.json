@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,50|pale",
+        "reasoning_content": "The red ring at ~(440,322), next to it \".50\" at right. Likely \"2,50\" with first digit faint/overlapped by ring. Answer 2,50.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872534,
+  "id": "2026110517552971a64bcb7ff34b9b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110517552971a64bcb7ff34b9b",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

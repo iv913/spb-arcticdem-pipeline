@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,35|pale",
+        "reasoning_content": "Ring at ~(443,320). Nearby numbers: \"2,73\" left at (175,270) far. \"2,75\" at (640,190). \"2,35\" at (565,478). There's a faint number right of ring? Near (490,300)? Hard. Possibly \"6\" near? I'll guess 2,75? Distance from (443,320) to (640,190) ~ 235. To (565,478) ~ 185. To (175,270) ~ 272. Maybe a faint one near ring at (500,340)? Unclear—answer 2,35|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872954,
+  "id": "20261105180208311d051c18e9454c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180208311d051c18e9454c",
+  "usage": {
+    "completion_tokens": 156,
+    "completion_tokens_details": {
+      "reasoning_tokens": 148
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1032
+  }
+}

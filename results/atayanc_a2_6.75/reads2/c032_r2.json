@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|clear",
+        "reasoning_content": "Ring at (445,322). Near numbers: \"2,92\" at (525,370)? \"2,89\" at (430,375)? Distance ring to 2,89 ~53; 2,92 ~90. There's a tiny label right at ring maybe. Nearest is 2,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711005,
+  "id": "2026110321031944e3e0bb6af247d7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110321031944e3e0bb6af247d7",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 954
+  }
+}

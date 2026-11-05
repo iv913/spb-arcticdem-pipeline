@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,20|cut",
+        "reasoning_content": "Red ring at ~ (822, 322). Nearby numbers: 1,20 at (785,272)? and \"1,2...\" partially cut near (860,315)? Closest printed number to ring... there's text right of ring partially cut \"1,2?\" at x~860,y~315. Could be \"1,20\". Likely answer: 1,20|cut? The number near ring seems cut by edge. I'll answer 1,20|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874622,
+  "id": "20261105183018b37861256670471b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105183018b37861256670471b",
+  "usage": {
+    "completion_tokens": 114,
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1034
+  }
+}

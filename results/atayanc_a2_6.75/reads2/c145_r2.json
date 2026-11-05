@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,64|cut",
+        "reasoning_content": "The ring at ~(440,320), number \"2,64\" partially cut by ring. Likely \"2,64\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876446,
+  "id": "20261105190044e9ed9bf5abba464d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190044e9ed9bf5abba464d",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 909
+  }
+}

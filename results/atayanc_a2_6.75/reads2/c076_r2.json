@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,30|pale",
+        "reasoning_content": "Number near ring: \"3,30\"? shows \",30\" — likely 3,30 but first digit faint. Could be \"2,30\"? Given area values 2.x... 3,42 nearby though. I'll answer 3,30|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873483,
+  "id": "2026110518111507bab4ca0bcb4841",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518111507bab4ca0bcb4841",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

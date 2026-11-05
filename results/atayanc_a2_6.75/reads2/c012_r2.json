@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|pale",
+        "reasoning_content": "Near ring: \"2,39\"? Text right of ring reads \".39\" possibly 2,39. Answer 2,39|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709680,
+  "id": "20261103204118792db91e69c54558",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204118792db91e69c54558",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

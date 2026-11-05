@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near the ring at ~(442,180) there's \"2,36\" partially cut by ring? It appears \"2\" then ring overlaps. Likely 2,36 — pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711005,
+  "id": "202611032103228cda567cbe89409d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032103228cda567cbe89409d",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

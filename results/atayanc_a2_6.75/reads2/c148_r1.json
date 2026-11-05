@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Near the red ring there's a number just left of it, looks like \"1,98\" faint. At ~(425,325) there's a faint small number. Hard. The ring at (443,322); closest number appears to left, something like \"1,98\". I'll answer 1,98|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876455,
+  "id": "202611051900510007d4d5672542b2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051900510007d4d5672542b2",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1001
+  }
+}

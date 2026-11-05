@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "45,34|pale",
+        "reasoning_content": "Ring at ~(443,321). Numbers nearby: \"45,3...\" left \"45,3\" and right \"49\"? Actually text \"45,3 49\" — the ring sits between. Likely number \"45,34\" or two numbers \"45,3\" and \"49\"? Elevation like 45,34? Left digits \"45,3\" then ring overlaps. Right side \"49\"? So closest number: 45,3? But maybe full \"45,34\". Ring overlaps between 3 and 4 → \"45,34\"? I'll answer 45,34, clarity pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875287,
+  "id": "20261105184123112b72b914a74e3b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184123112b72b914a74e3b",
+  "usage": {
+    "completion_tokens": 136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1056
+  }
+}

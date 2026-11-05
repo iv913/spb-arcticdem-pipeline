@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,42|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearest number appears \"2,42\" to the right at ~(475,320)? Text \"2,47\"? Visible \"2,41\"? Likely \"2,42\". I'll say 2,42|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877619,
+  "id": "2026110519201710562db0e4954bba",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519201710562db0e4954bba",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 985
+  }
+}

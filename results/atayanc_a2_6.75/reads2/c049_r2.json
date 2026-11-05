@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,48|pale",
+        "reasoning_content": "Near the ring: \"x,48\" — looks like \"2,48\"? The label right of ring appears \",48\" possibly \"3,48\"? Likely \"2,48\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872858,
+  "id": "202611051800556c604017b90c4383",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051800556c604017b90c4383",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 922
+  }
+}

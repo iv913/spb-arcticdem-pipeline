@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,58|cut",
+        "reasoning_content": "Ring at ~ (443,322). Number to its right \"2,58\" partially cut. Likely 2,58.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875832,
+  "id": "202611051850307518128b4a39441d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850307518128b4a39441d",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 28
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 955
+  }
+}

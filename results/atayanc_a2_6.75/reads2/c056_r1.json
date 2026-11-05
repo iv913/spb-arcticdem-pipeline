@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,49|pale",
+        "reasoning_content": "Ring near \"2,49\"-like number at ~ (470,318) \"3,40\"? Text next to ring appears \"4,40\" partially. Likely 3,49? The visible fragment shows \"?,49\" left and \"?,40\" right. Ring center closest: number to right of ring looks like \"2,49\"? I'll answer 3,49? Hmm.\n\nThe ring at (443,320). Text \"3,49\" at left (~370-410) \"3,49\"? and right text \"...49\" overlapping. The nearest number likely \"2,49\". I'll pick 3,49|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872906,
+  "id": "20261105180140135fb0175a8b4351",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180140135fb0175a8b4351",
+  "usage": {
+    "completion_tokens": 147,
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1067
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,54|pale",
+        "reasoning_content": "Ring at ~(444,320). Nearest label: \"3,54\" at (275,265)? That's far. There's a tiny faint number near ring? Possibly \"1,80\" at (600,130) far. Likely nothing readable — but hint about faint first digit suggests something. Number just left of ring at ~(270,262) \"3,54\". Closer maybe tiny text near ring unreadable. I'll answer 3,54? Distance ~180px vs 1,80 ~130px. Hmm. Safer: NA? The prompt implies something readable. I'll go 3,54|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875251,
+  "id": "20261105184046df7d583d0a1c46ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184046df7d583d0a1c46ee",
+  "usage": {
+    "completion_tokens": 145,
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1021
+  }
+}

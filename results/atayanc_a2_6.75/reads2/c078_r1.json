@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,42|cut",
+        "reasoning_content": "Number near ring: \"1,42\"? Ring at ~(443,321), text \"1,42\" partially covered. Likely 1,42.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873486,
+  "id": "202611051811231c3906b203134937",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051811231c3906b203134937",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 960
+  }
+}

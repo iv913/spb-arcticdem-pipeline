@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,78|pale",
+        "reasoning_content": "Near ring at (441,322): number \"2,78\" partially overlapped at right (~470,320). Likely \"2,78\" or \"2,73\". Look: after ring there's \"78\"? Value shown \"2.78\"? I'll say 2,78 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875840,
+  "id": "2026110518503604bb0ee42d4a4931",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518503604bb0ee42d4a4931",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

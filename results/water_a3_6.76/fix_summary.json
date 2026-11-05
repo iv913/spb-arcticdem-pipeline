@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-05",
+ "stage": "6.76/A3 fix",
+ "in": "inland_water_6.22",
+ "out": "inland_water_6.76",
+ "rule": "water -= components of (fusion>=1.5m & conf>=10) with area >= 25 m2; features with residual < 100 m2 dropped",
+ "area_before_km2": 74.39,
+ "area_after_km2": 57.94,
+ "carved_km2": 16.45,
+ "features": {
+  "in": 1416,
+  "out": 419
+ },
+ "actions": {
+  "carve": 45,
+  "drop_small": 997,
+  "keep": 374
+ },
+ "classes_in": {
+  "ribbon": 24,
+  "clean": 369,
+  "phantom": 1022,
+  "empty": 1
+ },
+ "totals_px_m2": {
+  "water_before": 72.394,
+  "dry": 16.415,
+  "dryfill": 7.24,
+  "carved": 7.454,
+  "dropped_water": 8.984
+ }
+}

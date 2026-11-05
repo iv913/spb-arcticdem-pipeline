@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,64|cut",
+        "reasoning_content": "Number near ring appears \"1,64\" partially cut by red circle.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873426,
+  "id": "202611051810245f6b83071a6b447a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051810245f6b83071a6b447a",
+  "usage": {
+    "completion_tokens": 22,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 898
+  }
+}

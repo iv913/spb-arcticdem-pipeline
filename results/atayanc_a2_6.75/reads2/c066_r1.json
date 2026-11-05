@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,3|pale",
+        "reasoning_content": "Ring at ~(440,172). Nearest number appears left of ring: \"2,?\" faint, partially overlapping ring. Likely 2,xx. The text left of ring: \"2?\" hard. Probably \"2,15\"? Given digits faint. I'll answer 2,15? Risky. Common answer likely 2,3. Output \"2,3|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873428,
+  "id": "202611051810248479fa7717e14129",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051810248479fa7717e14129",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1009
+  }
+}

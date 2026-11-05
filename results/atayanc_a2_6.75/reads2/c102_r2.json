@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,41|pale",
+        "reasoning_content": "Ring near (445,110). Nearby \"2,41\" at (555,90)? That's farther. Also near ring maybe \"2,4\"? The number at ~540,85 reads \"2,41\". Distance ~95px. Nothing closer. Answer 2,41.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874631,
+  "id": "202611051830288b786cc58cb24693",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830288b786cc58cb24693",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 946
+  }
+}

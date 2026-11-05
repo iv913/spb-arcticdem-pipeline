@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,76|pale",
+        "reasoning_content": "Nearest to ring (~440,313): \"2,76\" at (388,360)? Also \"0,81\" left at ~330,300? Ring at 440,313. Candidates: 2,76 at (395,355) dist ~65; 2,89 at (545,388) dist ~100; 2,78 at (425,360)? There's \"2,76\" faint. Closest seems 2,76.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873437,
+  "id": "2026110518103399eef697a2104784",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518103399eef697a2104784",
+  "usage": {
+    "completion_tokens": 115,
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1035
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,07|pale",
+        "reasoning_content": "Near ring: \"1,94\"-like number at ~(320,305)? Actually near ring there's \"3,07\" and \"3,97\"? The label right of \"1,94\"? The nearest to ring seems \"3,07\" at (365,380) or the faint \"3,07\"... Ring at (443,320). Candidates: \"3,07\" (365,382), \"1,94\"(345,307). Distance: 3,07 ~ 78; 1,94 ~ 100. Also small marks near ring. Answer 3,07.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876442,
+  "id": "20261105190037f27b481c96a047b1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190037f27b481c96a047b1",
+  "usage": {
+    "completion_tokens": 135,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

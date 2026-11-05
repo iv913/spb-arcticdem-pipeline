@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,077|pale",
+        "reasoning_content": "Ring at ~(445,322). Nearby numbers: 3,077 at ~(370,385)? \"3,077\" near ring... Also \"1,51\" at (330,310). Closest is likely 3,077? Distance ~85. Hmm, there may be a small number right at ring, e.g., near (455,335) \"3,077\"? The 3,077 text near ring at (365,385). Actually ring overlaps \"3,077\"? The label near ring \"3,077\" at ~ (375,385), distance ~70. There might be number right at ring center—unclear. I'll answer 3,077.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876441,
+  "id": "20261105190037f1dff1b341c7464a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190037f1dff1b341c7464a",
+  "usage": {
+    "completion_tokens": 166,
+    "completion_tokens_details": {
+      "reasoning_tokens": 157
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1086
+  }
+}

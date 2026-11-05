@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,02|cut",
+        "reasoning_content": "Red ring at ~(443,318). Nearby faint number left of ring, partially cut. Likely \"3,...\" small number. Text near ring at ~415,320 shows something like \"3,02\"? Hard. The number appears partially cut by lines. I'll answer with likely \"3,12\"? Uncertain. It's partly cut; clarity \"cut\". Digits unclear—could be NA? The number left of ring seems partially overlapped. I'll guess \"3,02\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709687,
+  "id": "202611032041237a04d472362b4834",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032041237a04d472362b4834",
+  "usage": {
+    "completion_tokens": 110,
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1030
+  }
+}

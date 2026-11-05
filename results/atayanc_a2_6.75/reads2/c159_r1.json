@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4.29|pale",
+        "reasoning_content": "The ring at (~222,320). Nearby numbers: 4.29 at (~120,290), and something right of ring... likely 4,29 closest? There's a faint mark right of ring maybe digit. 4.29 seems closest.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877034,
+  "id": "202611051910326d1a7660cb5f41dc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910326d1a7660cb5f41dc",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 980
+  }
+}

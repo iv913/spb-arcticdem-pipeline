@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,57|cut",
+        "reasoning_content": "Red ring near (440,320); nearby number to right looks like \"6,57\" partially cut by ring — appears \"6,57\". Digit faint first — could be 6 vs 8. I'll answer 6,57.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872863,
+  "id": "20261105180100713dc7ce211343c8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180100713dc7ce211343c8",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 978
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Number near ring appears \"2,36\"-like; ring at ~(443,320) touches text. Likely \"2,36\". Clarity: pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877048,
+  "id": "20261105191046ecd7757449b24615",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191046ecd7757449b24615",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 917
+  }
+}

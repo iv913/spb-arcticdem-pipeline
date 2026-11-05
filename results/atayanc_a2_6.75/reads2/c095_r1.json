@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,80|pale",
+        "reasoning_content": "The ring is near number \"1,80\" (right of ring). Likely 1,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874606,
+  "id": "2026110518300389b12b8d5d834427",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518300389b12b8d5d834427",
+  "usage": {
+    "completion_tokens": 29,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

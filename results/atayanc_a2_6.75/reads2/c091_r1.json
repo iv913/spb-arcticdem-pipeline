@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,30|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby \"30\" at right of ring — that's probably \"2,30\" partially? Text next to ring: \"30\" faint. Likely elevation 2,30. Answer: 2,30|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874074,
+  "id": "202611051820558d3703b1aecf407a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051820558d3703b1aecf407a",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

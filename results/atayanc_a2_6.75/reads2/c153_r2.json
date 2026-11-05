@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,35|cut",
+        "reasoning_content": "Number near ring appears to be ~2,35? There's text just right of ring partially cut. Likely \"2,45\"? It looks like digits \"2,5\" — I'll answer 2,45|cut? The label seems overlapped by ring; likely 2,35.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876479,
+  "id": "2026110519011787a09ab328b14508",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519011787a09ab328b14508",
+  "usage": {
+    "completion_tokens": 68,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 944
+  }
+}

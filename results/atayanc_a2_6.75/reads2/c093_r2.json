@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,47|pale",
+        "reasoning_content": "Near ring: at (442,322) there's a small mark like \"2,...\" faint. Likely \"2,47\" or similar. Faint digit—answer \"2,47|pale\"? Best guess: \"2,47\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874077,
+  "id": "202611051821151dd6adb271934234",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051821151dd6adb271934234",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 937
+  }
+}

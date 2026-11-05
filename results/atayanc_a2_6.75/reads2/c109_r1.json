@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,35|pale",
+        "reasoning_content": "Ring at ~(443,318), number \"3,35\" nearby — \"3,35\" with digits. It reads \"3,35\" (the ring overlaps first digit?). Likely 3,35.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874650,
+  "id": "2026110518304816fb5220ecb648b7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518304816fb5220ecb648b7",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,12|pale",
+        "reasoning_content": "Near ring: \"3,12\"? Text next to ring reads \"3,12\"? Looks like \"3,12\" partially. I'll answer 3,12|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876444,
+  "id": "2026110519004245cb6f2cbdb94ce0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519004245cb6f2cbdb94ce0",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 922
+  }
+}

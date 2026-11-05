@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,57|pale",
+        "reasoning_content": "Near ring: there's a tiny number touching the ring, appears \"3,57\"? Actually near ring left edge there's small text. Ring at (442,322). Closest label seems the small one right at ring \"3,57\"? There's \"-3,57\" at (290,200) far. There's a faint small number at ~(425,310) near ring — likely \"2,98\"? Hard. I'll answer 3,57.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875239,
+  "id": "20261105184035dcb803998b5043b1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184035dcb803998b5043b1",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

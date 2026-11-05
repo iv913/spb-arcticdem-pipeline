@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,11|pale",
+        "reasoning_content": "Ring at ~ (440,322). Nearby numbers: \"1,11\"? there's \"11,11\"? There's text near ring: \"11\" numbers around. Closest number appears \"4,11\"? Hard. There's \"3,11\"? I see \"1,11\" maybe. There's \"А 3,11\"? Right of ring: \"11,11\"? I'll answer 1,11.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877647,
+  "id": "20261105192043af35a36c02654477",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105192043af35a36c02654477",
+  "usage": {
+    "completion_tokens": 98,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1018
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,32|pale",
+        "reasoning_content": "The ring at ~(442,320). Nearby text \"2,32\"? The number near ring: \"2,32\"? The visible text right of ring appears \"2,32\" partially overlapped. Likely \"3,32\"? I'll answer 2,32 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877663,
+  "id": "202611051921000301b7cf738c4a88",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051921000301b7cf738c4a88",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 985
+  }
+}

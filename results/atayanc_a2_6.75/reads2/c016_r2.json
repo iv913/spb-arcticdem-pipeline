@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,87|pale",
+        "reasoning_content": "The ring overlaps a number like \"2,87\"? It shows \"7,87\"? Text inside ring near \"4,87\"? Looks like \"2,87\" partially. Answer 2,87? The visible digits \",87\". First digit faint — likely 2. I'll say 2,87|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709696,
+  "id": "20261103204133568d2e78f9864c21",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204133568d2e78f9864c21",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,41|pale",
+        "reasoning_content": "Ring at ~(443,322), label \"2,41\" to right at ~460,318.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877621,
+  "id": "202611051920173ed0c29273a14b9f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920173ed0c29273a14b9f",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 25
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 909
+  }
+}

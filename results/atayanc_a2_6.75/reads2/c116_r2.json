@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,49|pale",
+        "reasoning_content": "Number near ring appears \"3,49\" right of ring? It shows \"8,49\"? Likely \"3,49\". Faint first digit — say 3,49, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875256,
+  "id": "202611051840553cc825768735412a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051840553cc825768735412a",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 923
+  }
+}

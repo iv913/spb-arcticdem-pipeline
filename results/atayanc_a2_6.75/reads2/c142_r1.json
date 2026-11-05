@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,47|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearest number appears right of ring \"3,47\"? Text \"зл\"? Probably 3,47 or 3,41. First digit 3, comma, then 4? Faint. Common answers: 3,47. I'll answer 3,47|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876437,
+  "id": "20261105190033aad815e86d3f4414",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190033aad815e86d3f4414",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 998
+  }
+}

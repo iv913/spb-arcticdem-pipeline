@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,54|cut",
+        "reasoning_content": "Ring at ~(443,128), nearest number partially hidden by ring: \"…54\"? Looks like \"1,54\" perhaps. Ring overlaps digits; visible \",54\". Likely 1,54.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874081,
+  "id": "20261105182116e558a161d60c48d2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182116e558a161d60c48d2",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 969
+  }
+}

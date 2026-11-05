@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,1|cut",
+        "reasoning_content": "Near ring: \"2,1...\" partially — label \"2,1\" touching ring, likely 2,14? Only \"2,1\" visible. It's cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876468,
+  "id": "202611051901040766b8f4488d453e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051901040766b8f4488d453e",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

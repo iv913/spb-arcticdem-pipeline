@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "0,3|pale",
+        "reasoning_content": "Near ring: \"0,3\"? Top says \"0.3\" maybe \"0,37\". Likely \"0,3\" — probably \"0,37\"? It reads \".3\" — likely \"0,3\". Answer 0,3|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711002,
+  "id": "20261103210319823b603d49ca448a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103210319823b603d49ca448a",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

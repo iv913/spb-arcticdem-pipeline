@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,75|pale",
+        "reasoning_content": "Near ring: \"3,75\" touching ring — could be 3,75.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875233,
+  "id": "2026110518403172685191036743ff",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518403172685191036743ff",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 902
+  }
+}

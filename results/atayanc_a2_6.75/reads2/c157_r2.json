@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "0,72|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby number to the right \"1,40\"? Faint text near ring: \"3,72\"? There's faint \"0,72\"? Hard. There appears \"1,40\" lower left at (200,440). Near ring faint gray text right of ring — likely \"3,72\" or \"0,72\". I'll answer 3,72|pale? Risky. Text right of ring looks like \"0,72\". Answer: 0,72|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877029,
+  "id": "20261105191025d4b9818ecff44748",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191025d4b9818ecff44748",
+  "usage": {
+    "completion_tokens": 120,
+    "completion_tokens_details": {
+      "reasoning_tokens": 112
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 996
+  }
+}

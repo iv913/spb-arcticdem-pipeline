@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,34|cut",
+        "reasoning_content": "Near ring: label partially cut \"?.34\" — looks like \"2,34\" partially intersecting ring. Also 2,92 above. The ring overlaps a number reading \"3,04\"? It appears \"?3,04\" cut. Likely \"2,34\". I'll answer 2,34|cut? It seems cut by ring. Give \"2,34|cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877039,
+  "id": "20261105191035551e59017d6243d9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191035551e59017d6243d9",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

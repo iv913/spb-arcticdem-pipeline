@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,85|pale",
+        "reasoning_content": "Ring around \"2,85\"? Text shows \"?3\" — likely 2,85. Number near ring appears \"2,85\". First digit could be 2 or 3. Output 2,85|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874027,
+  "id": "20261105182024bed8973fbe2844eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182024bed8973fbe2844eb",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

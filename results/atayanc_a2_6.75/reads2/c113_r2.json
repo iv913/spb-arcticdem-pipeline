@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,4|pale",
+        "reasoning_content": "Near ring: \"...4\" partially covered; to right \"3,2?\"? There's a \"3.4\" at ring and nearby \"3,?\" Hmm. Number touching ring appears \"3,4\" — likely \"3,44\"? Visible text near ring: \"3.4\" then dot? I'll answer 3,44? Safer: \"3,4\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875246,
+  "id": "20261105184039b6c882b1589c42da",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184039b6c882b1589c42da",
+  "usage": {
+    "completion_tokens": 88,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 964
+  }
+}

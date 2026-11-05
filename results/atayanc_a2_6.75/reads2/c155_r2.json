@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,22|pale",
+        "reasoning_content": "Nearest label to ring (~440,322): \"1,22\"? At (660,342) \".1,22\" — distance ~220. Ring at ~(443,322). No label right at ring. Hmm \"3,14\" at (530,490). \"1,22\" seems closest.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877022,
+  "id": "20261105191018dce2732c6d67458f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191018dce2732c6d67458f",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 956
+  }
+}

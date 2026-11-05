@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,22|pale",
+        "reasoning_content": "Near ring: \"3,22\" at top left of the triangle, and \"3,03\" top right. Ring at ~(443,95). 3,22 label near (330,88)? Actually \"0 3,22\" at ~(310,90). Distance larger. 3,03 at (600,15). Hmm. Inside triangle there's a dot near ring... \"3,22\" seems nearest readable decimal.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872523,
+  "id": "202611051755183250e52d85444639",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051755183250e52d85444639",
+  "usage": {
+    "completion_tokens": 99,
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

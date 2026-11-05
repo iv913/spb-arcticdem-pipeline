@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,27|cut",
+        "reasoning_content": "Ring at ~ (440,320); label near \"3,97\" partially covered by ring? Looks like \"3,27\" or \"3,97\". Text beside ring: \"3,27\" with ring overlapping first digit. Likely 3,27.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872528,
+  "id": "202611051755246be712c22fdd4ecc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051755246be712c22fdd4ecc",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 938
+  }
+}

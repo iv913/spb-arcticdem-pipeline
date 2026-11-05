@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|cut",
+        "reasoning_content": "Near the red ring there's a number partially covered by the ring, to its left. It looks like \"1,98\"? Text near ring appears faint, digits partially cut. Likely \"1,97\" or similar. I'll guess \"1,97\"? The ring overlaps. Given typical, answer \"1,98|cut\"? The digits appear cut by ring. I'll answer 1,98|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872912,
+  "id": "20261105180146ee26659153b04c51",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180146ee26659153b04c51",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1012
+  }
+}

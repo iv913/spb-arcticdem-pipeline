@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Near the ring there's faint text around (150,325)? Hard. Likely \"3,22\"? I see something near ring like small marks. Honest answer: NA|cut? The prompt expects a number. Near ring at ~140,322 there appear faint dots. I'll answer NA|cut... but risky. Choose \"NA|pale\"? Given faintness, answer NA|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877643,
+  "id": "202611051920416065fb59fa054b91",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920416065fb59fa054b91",
+  "usage": {
+    "completion_tokens": 90,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

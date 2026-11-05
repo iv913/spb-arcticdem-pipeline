@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,02|pale",
+        "reasoning_content": "Number right of ring: \"1,02\" — faint first digit could be 1. Looks like \"1.02\" or \"1,02\". Answer: 1,02|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872509,
+  "id": "20261105175503b1f62b341fa847a7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175503b1f62b341fa847a7",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 969
+  }
+}

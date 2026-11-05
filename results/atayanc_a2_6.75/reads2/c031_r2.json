@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,82|pale",
+        "reasoning_content": "Number near ring appears \"2,82\" at ~490,322 partially under ring; also \"2,82\" right. The ring at (443,320) touches \"2,82\" text starting right of it. Likely 2,82.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711012,
+  "id": "20261103210329cdeebf15175745c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103210329cdeebf15175745c0",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 939
+  }
+}

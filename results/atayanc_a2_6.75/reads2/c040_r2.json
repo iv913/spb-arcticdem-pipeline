@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,34|cut",
+        "reasoning_content": "Near ring: \"2,34\" partially cut by ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872531,
+  "id": "202611051755297f3643c3faf046dc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051755297f3643c3faf046dc",
+  "usage": {
+    "completion_tokens": 20,
+    "completion_tokens_details": {
+      "reasoning_tokens": 13
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 896
+  }
+}

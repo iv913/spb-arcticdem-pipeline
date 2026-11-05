@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,23|pale",
+        "reasoning_content": "Nearest number to ring (~443,322) is \"3,23\" at ~500,322? The dot at 494,326 with 3,23. Ring center ~443,321. Number \"3,23\" seems closest. First digit could be 3. Output 3,23|clear? Text seems pale. I'll say 3,23|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876463,
+  "id": "202611051900561cf16735e5f443dd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051900561cf16735e5f443dd",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1016
+  }
+}

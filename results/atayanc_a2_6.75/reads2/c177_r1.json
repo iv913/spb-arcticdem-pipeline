@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Near the ring there seems to be tiny text right beside; hard to read. The closest number appears partially covered; I'll estimate \"4,32\"? Cannot verify. Likely NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877636,
+  "id": "2026110519203398cb86867af14351",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519203398cb86867af14351",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

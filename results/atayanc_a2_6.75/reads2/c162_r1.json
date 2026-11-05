@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Red ring at ~(444,321). Nearby there's a tiny number inside the ring area? There seems to be text \"4,...\" partially under ring? The ring overlaps something like \"4,36\"? Hard. Inside ring appears a small marking like \"≠\" — likely digits obscured. Possibly \"4,35\"? Unreadable → NA? The ring shows faint \"4.\" maybe. Given overlap, output NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877045,
+  "id": "202611051910419d5bef73cf514462",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910419d5bef73cf514462",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1015
+  }
+}

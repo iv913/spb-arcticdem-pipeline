@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,18|pale",
+        "reasoning_content": "Ring at ~ (443,322); nearest label \"1,18\" just right of ring. Likely \"3,18\"? Faint first digit... text shows \"¹,18\" – likely \"2,18\"? Given example, answer 2,18|pale? The label right of ring reads \",18\" with faint first digit. Choose \"2,18|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709678,
+  "id": "20261103204115942c3bc3db58471d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204115942c3bc3db58471d",
+  "usage": {
+    "completion_tokens": 90,
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

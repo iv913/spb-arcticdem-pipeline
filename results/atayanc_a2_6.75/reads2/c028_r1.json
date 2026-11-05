@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|cut",
+        "reasoning_content": "Ring at ~(440,320), nearest number looks like \"2,45\" partially covered. The ring overlaps first digits. Likely 2,45.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793710247,
+  "id": "202611032050441fe53448144c4d00",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032050441fe53448144c4d00",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|pale",
+        "reasoning_content": "Near ring there's faint text to right: \"2,59?\" — \"2.5...\" appears as \"...2,59...\" near ring at right. Ring at (443,320). Text \"2,59\" around (740,295)? That's far. Nearest printed number to ring... ring touches a small mark; nearby faint text right of ring at ~ (560-640,290): \"...2,59...\" Seems nearest is 2,59.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875833,
+  "id": "202611051850290e7c0e8a9dfb48e7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850290e7c0e8a9dfb48e7",
+  "usage": {
+    "completion_tokens": 109,
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 985
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "The red ring is at ~(120,322). Nearby numbers? \"9 МКН\" texts. Hard to see elevation numbers near. Possibly none readable → NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877657,
+  "id": "2026110519205422b8929cc4e344c3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519205422b8929cc4e344c3",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 960
+  }
+}

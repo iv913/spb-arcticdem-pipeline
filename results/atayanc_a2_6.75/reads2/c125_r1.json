@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,26|pale",
+        "reasoning_content": "Near the ring there's a faint number just left of it, looks like ~2,26? The tiny text left of ring at ~(425,315) \"2,26\"? It's small pale. Likely 2,26|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875805,
+  "id": "20261105185001d61327aeeff244a5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185001d61327aeeff244a5",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 980
+  }
+}

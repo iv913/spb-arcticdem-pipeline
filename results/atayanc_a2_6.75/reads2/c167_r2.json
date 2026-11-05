@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring: faint number just left \"2,36\"? It shows \"2...\" partially hidden by ring. Likely \"2,36\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877061,
+  "id": "202611051911008df7b3f54ff74e4a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051911008df7b3f54ff74e4a",
+  "usage": {
+    "completion_tokens": 36,
+    "completion_tokens_details": {
+      "reasoning_tokens": 28
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 912
+  }
+}

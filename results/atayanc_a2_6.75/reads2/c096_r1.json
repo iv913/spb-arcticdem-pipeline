@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,80|clear",
+        "reasoning_content": "Ring at ~(440,176). Nearest numbers: \"1,80\" to the right (~470,175) and another \"1,80\" at (550,210). Closest is 1,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874609,
+  "id": "2026110518300675d1fd69b55f4870",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518300675d1fd69b55f4870",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 974
+  }
+}

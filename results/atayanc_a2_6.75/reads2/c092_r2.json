@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,44|pale",
+        "reasoning_content": "Near ring at ~(443,322): \"4,4\"? likely \"2,44\"? There's \".44\" partially — likely \"2,44\" but faint first digit. Nearest readable: 2,44.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874069,
+  "id": "2026110518210726a470e9c7f84ef1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518210726a470e9c7f84ef1",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 932
+  }
+}

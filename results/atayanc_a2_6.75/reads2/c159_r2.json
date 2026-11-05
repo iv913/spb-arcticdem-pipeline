@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,86|pale",
+        "reasoning_content": "There's a faint digit right next to the ring, maybe \"3,86\"? Hard. Nearest labels: something right at ring, faint. I'll guess \"3,86|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877035,
+  "id": "2026110519103395699d8558254531",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519103395699d8558254531",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 925
+  }
+}

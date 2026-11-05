@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,71|pale",
+        "reasoning_content": "Ring at ~(444,322). Nearby labels: 2,71 right of ring; also 2,6 at (375,270). Nearest is 2,71 likely \"2,71\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877017,
+  "id": "202611051910147edaece2160542f2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910147edaece2160542f2",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 929
+  }
+}

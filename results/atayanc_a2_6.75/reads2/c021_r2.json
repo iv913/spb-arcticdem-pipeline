@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|pale",
+        "reasoning_content": "Ring at ~(443,262). Nearby: \"1,90\" at (315,199)? Numbers: 1,90; 2,89 at (490,335)? \"2,83\" at (450,373)? Actually near ring: label just below-right around (475,300)? \"2,89\" at (490,335), \"2,83\" at (450,373), \"1,90\" at (317,199). Nearest seems 2,89? There's a number right below ring ~(467,308)? Hard. I'll answer 2,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709713,
+  "id": "2026110320414986d60e9a98cc4cc8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110320414986d60e9a98cc4cc8",
+  "usage": {
+    "completion_tokens": 144,
+    "completion_tokens_details": {
+      "reasoning_tokens": 136
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1020
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,42|pale",
+        "reasoning_content": "Ring at ~(443,322), touching text \"2,42\"? The label next to ring appears \"2,42\" (partially \".42\"). Likely 2,42.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873486,
+  "id": "20261105181124610268c3804e4e57",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105181124610268c3804e4e57",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 923
+  }
+}

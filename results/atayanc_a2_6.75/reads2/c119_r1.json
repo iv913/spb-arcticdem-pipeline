@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|cut",
+        "reasoning_content": "The ring is at ~(443,320) over a number \"1,98\" partially hidden. Ring overlaps digits; visible \",98\"? Likely \"1,98\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875270,
+  "id": "2026110518410429af22963501403a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518410429af22963501403a",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

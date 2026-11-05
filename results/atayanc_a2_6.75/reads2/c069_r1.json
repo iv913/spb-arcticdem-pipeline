@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,78|clear",
+        "reasoning_content": "Closest: 2,78 (below ring, ~445,348). Ring at ~440,312. 2,78 at ~440,348 — distance ~36. Answer 2,78|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873440,
+  "id": "20261105181037b3c33641de1b4cbf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105181037b3c33641de1b4cbf",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 978
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near the ring, above it there's a faint tiny label? I see \"2,...\"? There's a faint mark near ring. The visible labels: 5,87; +1,1; 5,55; 3,32 top. Nearest to ring appears to be \"2,0...\" at right (~570,310)? Likely \"2,0\" unclear. Perhaps the faint one near ring: \"2,36\"? Guess \"2,36|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875282,
+  "id": "20261105184119563ad36bb9c142c6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184119563ad36bb9c142c6",
+  "usage": {
+    "completion_tokens": 110,
+    "completion_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 986
+  }
+}

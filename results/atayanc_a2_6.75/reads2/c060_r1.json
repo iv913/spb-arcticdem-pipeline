@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|cut",
+        "reasoning_content": "Near ring at ~(440,320): there's a number partially cut by ring, looks like \"?,?8\" — text right of ring unreadable, pale/cut. Likely elevation like \"1,98\"? Ring overlaps digits. Given faintness, output guess \"1,98|pale\"? Hard. The digits visible faintly to the right of ring. I'll answer \"2,36|cut\"? Best: mark cut with best read. The visible partial seems like small dark smudge. I'll output \"2,98|cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872928,
+  "id": "20261105180202d2fa1636574e4dbd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180202d2fa1636574e4dbd",
+  "usage": {
+    "completion_tokens": 121,
+    "completion_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1041
+  }
+}

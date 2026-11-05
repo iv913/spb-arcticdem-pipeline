@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,51|pale",
+        "reasoning_content": "Nearest to ring (~440,322): \"2,5?\" at ~(480,378) labeled 2,51? Text \"0,42,51\" — likely 2,51. Also 2,51 at right (800,325). Nearest seems the 2,51 just right of ring at (495,378).",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875818,
+  "id": "20261105185016c8b601dd125d4638",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185016c8b601dd125d4638",
+  "usage": {
+    "completion_tokens": 85,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}

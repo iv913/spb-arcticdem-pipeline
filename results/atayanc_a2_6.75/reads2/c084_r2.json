@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,04|pale",
+        "reasoning_content": "Near ring: \"2,14\" printed right beside it at ~430,320? There's a small faint number near ring, \"2,04\"? Label at 425,325 appears \"2,04\" or \"2,14\". I'll answer 2,14? Faint first digit... answer \"2,04|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874038,
+  "id": "20261105182034c691a37fbf5447cf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182034c691a37fbf5447cf",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,29|pale",
+        "reasoning_content": "Near ring there's faint text \"3,2...\"? Looks like \"3,29\" or \"3,21\". The label just right of ring seems \"3,29\" faint. I'll answer 3,29|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875279,
+  "id": "20261105184117d636ac7ac8bb45f5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105184117d636ac7ac8bb45f5",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "The ring at ~ (442,321). Nearest label? \"279\" is far. Nothing decimal readable near ring — small box left of ring. Numbers: 2,82 top right; 2,43? bottom right. Nearest maybe none readable → NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875813,
+  "id": "2026110518501166e19a7147a44c4b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518501166e19a7147a44c4b",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

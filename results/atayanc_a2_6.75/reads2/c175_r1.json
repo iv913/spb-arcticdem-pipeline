@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|cut",
+        "reasoning_content": "Red ring at ~(35,322). Nearby numbers: \"9\" digit near (70,315)? There's a faint number partially overlapped. Text near ring: something like \"1,9?\" — appears \"2,9...\"? Hard. Visible digits near ring: a \"9\" at right of ring and possibly comma. Likely \"1,9\" pattern... I'll guess \"1,98\"? The visible digit after comma appears 9. First digit faint—could be 1 or 2. Output 1,98? Risky. Given \"cut\" clarity due overlap.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877632,
+  "id": "20261105192026dbb50f2000a443b0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105192026dbb50f2000a443b0",
+  "usage": {
+    "completion_tokens": 130,
+    "completion_tokens_details": {
+      "reasoning_tokens": 123
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1050
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|cut",
+        "reasoning_content": "Red ring at ~(443,322), number partially hidden, appears \"1,98\"? Likely \"1,98\" with ring overlapping. I'll answer 1,98|pale? The digits faint. Say \"1,98|cut\" since ring overlaps.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874014,
+  "id": "20261105182010d5c47d3c020f47cf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182010d5c47d3c020f47cf",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 984
+  }
+}

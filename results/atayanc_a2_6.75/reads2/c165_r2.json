@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,85|cut",
+        "reasoning_content": "Number near ring: \"1,85\" appears right at ring; also \"1,72\" below. Nearest seems 1,85 partially cut by ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877054,
+  "id": "20261105191053d46e8c7df36b4318",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191053d46e8c7df36b4318",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 917
+  }
+}

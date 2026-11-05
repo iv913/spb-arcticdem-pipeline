@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,93|pale",
+        "reasoning_content": "Near ring there's \"3,93\"-like text right of ring: looks like \"3,93\" possibly. The visible text after ring: faint \"3??\" hard. Common answer: 2,97? The number inside ring appears \"3,?3\". I'll answer 3,93|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877049,
+  "id": "20261105191045f0c17b8c6af7454f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191045f0c17b8c6af7454f",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,37|pale",
+        "reasoning_content": "Ring at ~(444,322), number near \"3,37\"? It overlaps; looks like \"3,37\". First digit 3.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709695,
+  "id": "20261103204133d106d0e67eb2464c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204133d106d0e67eb2464c",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,07|cut",
+        "reasoning_content": "The ring at ~(445,320), number to its right looks like \".07\" — likely 2,07 with faint first digit cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872562,
+  "id": "20261105175600526d5904bfae4641",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175600526d5904bfae4641",
+  "usage": {
+    "completion_tokens": 37,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 957
+  }
+}

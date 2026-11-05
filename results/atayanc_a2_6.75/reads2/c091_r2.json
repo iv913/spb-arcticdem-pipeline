@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,0|pale",
+        "reasoning_content": "Ring at ~(443,320). Nearby \"4,0\"-like label to the right at ~470,320 \"4,0\"? Faint. Likely \"4,03\"? Text shows \",0\" maybe. Other candidates: 2,56 far. The label near ring reads \"4,0\" possibly \"4,08\". Transcribe \"4,03\"? Uncertain; give \"4,0\"? Must include decimals like 2,36. I'll answer 4,03? Better: \"4,08\"? Hmm. Choose \"4,03\"|pale? Safer: 4,0|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874063,
+  "id": "20261105182059b152781cd85f4845",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182059b152781cd85f4845",
+  "usage": {
+    "completion_tokens": 141,
+    "completion_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1017
+  }
+}

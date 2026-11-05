@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,64|cut",
+        "reasoning_content": "Ring at ~ (442,320). Nearest number seems \"5,64\" partially cut by ring: \".64\" visible. Likely 5,64. First digit faint—could be 5? Text shows \",64\" with possibly 5 hidden. Answer 5,64|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876447,
+  "id": "20261105190044d177038efb42430d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190044d177038efb42430d",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 989
+  }
+}

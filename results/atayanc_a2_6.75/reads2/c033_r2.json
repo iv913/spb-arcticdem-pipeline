@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,02|pale",
+        "reasoning_content": "Number near ring: \"0,02\"? Likely \"2,02\" with faint first digit — inspect twice: it's \"2,02\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872509,
+  "id": "20261105175505e54aa66e5c7e432f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175505e54aa66e5c7e432f",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 914
+  }
+}

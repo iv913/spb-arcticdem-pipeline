@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Near ring at (443,322)... no visible number near it. Nearby candidates: 2,52 at (655,344)? distance far. Nothing printed at ring. Likely unreadable → NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877020,
+  "id": "20261105191014aa899322642540a5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191014aa899322642540a5",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

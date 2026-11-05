@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,58|pale",
+        "reasoning_content": "The ring at ~(443,322), number next to it looks like \"3,58\" or \"2,58\". It reads \"3,58\" — first digit faint. Likely 3,58.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872556,
+  "id": "20261105175554e918e0a1b75c42cc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175554e918e0a1b75c42cc",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

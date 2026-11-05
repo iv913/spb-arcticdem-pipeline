@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,37|pale",
+        "reasoning_content": "Near ring: \"2,5?\" text below ring reads \"2,37\"? Looks like \"2,37\" at ring. Answer likely 2,37|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873431,
+  "id": "202611051810267cfaea4d9f5e4c86",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051810267cfaea4d9f5e4c86",
+  "usage": {
+    "completion_tokens": 45,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 921
+  }
+}

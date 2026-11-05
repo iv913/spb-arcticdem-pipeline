@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,20|pale",
+        "reasoning_content": "Near the red ring (~795,322) there's a label at ~890,295 \"1,?\" — reading \"4,7\"? There's \"1,20\" at 755,275. The label right of ring appears \"1,2\" partially. Nearest is likely \"1,20\" or the faint one. Hard. Choose \"1,20\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874626,
+  "id": "20261105183022da1d2099ce1d4f76",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105183022da1d2099ce1d4f76",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

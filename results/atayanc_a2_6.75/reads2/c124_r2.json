@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,39|pale",
+        "reasoning_content": "Near ring: \",39\" — first digit faint. Likely \"6,39\"? Answer: ,39? Best guess: 6,39|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875811,
+  "id": "202611051850092cd593e86419463b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850092cd593e86419463b",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 916
+  }
+}

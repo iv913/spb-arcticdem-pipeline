@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,02|pale",
+        "reasoning_content": "Ring at ~ (443,320). Nearby numbers: \"6.020\"? \"6.0\" near (405,300)? \"2,50\" at (310,218) too far. \"2,14\" at (490,462) far. Near ring there's \"6,020\" partially. Hmm \"6,02\" — but elevations 2,xx. Could be \"6,02\"? The label near ring looks like \"б. бе...\" Cyrillic? There's \"б.620\"? Hard. Likely answer 6,02? Actually text near ring \"6.020\" maybe \"0,20\"? Pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872546,
+  "id": "20261105175537603ac529c50c49e5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175537603ac529c50c49e5",
+  "usage": {
+    "completion_tokens": 151,
+    "completion_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1027
+  }
+}

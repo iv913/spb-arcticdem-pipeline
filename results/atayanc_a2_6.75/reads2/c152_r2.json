@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,09|pale",
+        "reasoning_content": "Near ring, at ~(440,300) there's a faint small number just above ring. Looks like \"2,09\"? Hard. Other candidates: 2,27 at (650,425). Nearest to ring at (443,322): the faint one near (437,300) seems \"2,09\" — first digit faint. I'll answer 2,09|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876477,
+  "id": "2026110519011312f47b0c39f44c07",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110519011312f47b0c39f44c07",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

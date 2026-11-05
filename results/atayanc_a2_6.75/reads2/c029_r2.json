@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,32|cut",
+        "reasoning_content": "Ring at ~(443,322), label right of it appears \"2,32\" partially cut? Number next to ring reads \"2,32\" but partially obscured. Answer 2,32|cut?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793710999,
+  "id": "20261103210317bfbbf04b2c1144d3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103210317bfbbf04b2c1144d3",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 927
+  }
+}

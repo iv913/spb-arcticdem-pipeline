@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,02|clear",
+        "reasoning_content": "Ring at ~(443,322), number \"3,02\" right next to it.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877024,
+  "id": "202611051910225fe96b8dcae14171",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910225fe96b8dcae14171",
+  "usage": {
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 20
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 903
+  }
+}

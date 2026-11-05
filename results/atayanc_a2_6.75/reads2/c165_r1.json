@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,85|pale",
+        "reasoning_content": "Ring at ~(441,321). Nearby number appears \"1,85\" right of ring — first digit faint. Could be 1,85 or 7,85. Likely \"1,85\". Also 1,72 below. Closest is the one at ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877054,
+  "id": "202611051910523668c9afb3df4cf2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910523668c9afb3df4cf2",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 986
+  }
+}

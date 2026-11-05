@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "The ring at ~(443,320). Nearest numbers: \"3,54\" at (280,270)? distance large. There's a small mark near ring — maybe digits obscured. Possibly number hidden by ring. The closest visible: 3,54? distance ~170px. Others: -2,75 at (360,148) far. Likely unreadable → NA? But ring should overlap its nearest number. Near ring there's a tiny dot but no digits visible. Answer NA|cut? Clarity: digits not visible → \"cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875246,
+  "id": "202611051840407f60ea8cc3e9453d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051840407f60ea8cc3e9453d",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1039
+  }
+}

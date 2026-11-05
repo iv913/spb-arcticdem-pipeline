@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,31|pale",
+        "reasoning_content": "Ring at ~(444,321). Nearby label appears to be \"?,?1\" next to ring — likely \"2,31\"? Faint first digit. Text right of ring reads \"...1\". I'll answer 2,31|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872514,
+  "id": "202611051755098ce3fb2020294f38",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051755098ce3fb2020294f38",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 937
+  }
+}

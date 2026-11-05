@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Red ring at ~(440,320). Nearest number left: \"2,36\"? There's a faint number just left of ring. Likely 2,36. First digit check: could be 2. Answer: 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872968,
+  "id": "20261105180242fb8855858cff463f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180242fb8855858cff463f",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 982
+  }
+}

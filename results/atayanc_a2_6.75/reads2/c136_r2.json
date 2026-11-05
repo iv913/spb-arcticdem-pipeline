@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|cut",
+        "reasoning_content": "Near ring: \"…5\" partially cut? There's \"65\" near ring right? Numbers near: \"2,47\" left, \"2,6\" below, \"2,35\" further. Ring touches a number like \",5\" — likely \"2,65\"? The visible \"6,5\" at ~470,320. Best guess: 2,65|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875848,
+  "id": "202611051850443d9d9e2918714db5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850443d9d9e2918714db5",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

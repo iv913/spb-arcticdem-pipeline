@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,35|pale",
+        "reasoning_content": "Near ring, below: \"2,35\" possibly. Number at ~x435,y355 \"2,35\"? It appears \"2,35\" faint. Answer 2,35|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874039,
+  "id": "2026110518203723ac8088b1af431e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518203723ac8088b1af431e",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

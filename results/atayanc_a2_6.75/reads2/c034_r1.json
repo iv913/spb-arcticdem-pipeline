@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,11|pale",
+        "reasoning_content": "Red ring at ~(442,320). Nearby number partially covered: looks like \"2,1\" visible... likely \"2,11\" or \"5,11\"? Text near ring: \"5,11\"? Image shows \"2.11\"-like. Digits visible: \",11\"? I'll guess 2,11 — but first digit faint. Could be \"5,11\". Hard. Nearest number appears at ~(455,317) \"?,1 1\". I'll answer 2,11|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872514,
+  "id": "2026110517550911dc9ae072224faf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110517550911dc9ae072224faf",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 111
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1039
+  }
+}

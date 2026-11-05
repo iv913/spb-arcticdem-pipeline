@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,19|pale",
+        "reasoning_content": "Near ring: \"2,19\"? It shows \"?9\" — label appears as \"2,19\"? Ring overlaps first digit. Likely 2,19.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876453,
+  "id": "20261105190051c0c9ae51d90b4257",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190051c0c9ae51d90b4257",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 917
+  }
+}

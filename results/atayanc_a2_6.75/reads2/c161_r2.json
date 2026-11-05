@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,13|pale",
+        "reasoning_content": "Near ring: \"3,3?\" — text next to ring at right reads \"3,13\"? Ring contains \"3,\" — likely number is 3,13. Answer: 3,13|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877041,
+  "id": "202611051910393723da4e992846cd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051910393723da4e992846cd",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 928
+  }
+}

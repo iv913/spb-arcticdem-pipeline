@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,43|pale",
+        "reasoning_content": "Near the ring there's a label just right of it: \"1,48\"? Appears \"1,43\" at ~(470,180). Likely 1,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709702,
+  "id": "20261103204139a8da0a0fdb954b9a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204139a8da0a0fdb954b9a",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

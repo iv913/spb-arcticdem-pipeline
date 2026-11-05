@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,97|pale",
+        "reasoning_content": "Red ring at ~(443,321). Nearest number seems inside the ring, partially overlapped—maybe \"2,97\"? Small mark left of ring. Hard; likely \"2,97\". I'll answer 2,97 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872944,
+  "id": "20261105180215f56ea846c2594cd0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180215f56ea846c2594cd0",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

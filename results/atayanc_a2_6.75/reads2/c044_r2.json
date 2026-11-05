@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,92|pale",
+        "reasoning_content": "Ring at ~(441,321). Nearby labels: \"2,92\" at ~(455,350), \"2,60\" at ~(560,340), \"-2,82\" left. Nearest: 2,92.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872555,
+  "id": "20261105175548ece02682299249c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105175548ece02682299249c0",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 935
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,80|pale",
+        "reasoning_content": "Near the ring at (~440,320) there's a faint label just left: looks like \"3,80\" partially. Text at ~420,315 appears faint \"3,80\"? I'll answer 3,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875261,
+  "id": "2026110518405924ed935609e44a7e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518405924ed935609e44a7e",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 932
+  }
+}

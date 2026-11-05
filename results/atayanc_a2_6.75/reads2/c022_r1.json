@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|pale",
+        "reasoning_content": "The ring is at ~ (442,322). Nearest number \"2,39\" at (455,318)? Text shows \"2,39\" right of ring. First digit could be 2. Answer 2,39|clear? The number seems overlapped slightly—pale. Use pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709713,
+  "id": "20261103204151de5456694d854c97",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261103204151de5456694d854c97",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

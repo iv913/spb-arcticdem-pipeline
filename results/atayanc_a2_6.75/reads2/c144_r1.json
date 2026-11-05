@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,73|pale",
+        "reasoning_content": "The ring at ~ (443,320). Nearby number appears \"3,73\" overlapping ring. Likely 3,73.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876444,
+  "id": "202611051900426807c3593f5e4cc4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051900426807c3593f5e4cc4",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 955
+  }
+}

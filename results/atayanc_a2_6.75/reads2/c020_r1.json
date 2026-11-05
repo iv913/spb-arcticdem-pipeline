@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,10|clear",
+        "reasoning_content": "Red ring at ~(443,218), number \"2,10\" above at ~445,190? Ring overlaps its digits. Likely \"2,10\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709707,
+  "id": "202611032041447056fc65061341dc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032041447056fc65061341dc",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}

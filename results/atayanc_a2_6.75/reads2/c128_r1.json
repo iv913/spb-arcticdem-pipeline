@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,51|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearby: \"2,51\" right (~830,327), \"2,51\" (~475,376), \"2,39\" top (~615,198). Closest is 2,51 at (475,376) distance ~55 vs others farther. Actually the text right at ring: \"Ж\" small marks. Closest number: 2,51 at (475,376) — distance ~57; 2,39 top distance ~130. Output 2,51|pale? Clarity: it's small pale — \"pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875819,
+  "id": "20261105185015550c8439571c4fa1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185015550c8439571c4fa1",
+  "usage": {
+    "completion_tokens": 142,
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1062
+  }
+}

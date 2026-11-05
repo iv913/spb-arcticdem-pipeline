@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,3|pale",
+        "reasoning_content": "Ring at ~(444,322). Nearby: \"7,3\" at (410,310)? There's a faint number left of ring around (405,310) reading \"7,3\". Also \"5\" right of ring. Closest number likely \"7,3\" partially cut. Hmm, elevation format like 2,36 — two decimals. The mark near (410,312) looks like \"7,3\". I'll answer 7,3|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875811,
+  "id": "20261105185006de431204eb4346b7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105185006de431204eb4346b7",
+  "usage": {
+    "completion_tokens": 113,
+    "completion_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1033
+  }
+}

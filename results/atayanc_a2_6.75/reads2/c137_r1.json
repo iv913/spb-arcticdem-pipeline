@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,96|cut",
+        "reasoning_content": "Near ring: number around x=470,y=320 partially cut — likely \"1,96\" or \"2,96\"? Ring overlaps digits. Text shows \"…,6\" — likely \"1,96\"? Faint. It appears \"cut\" because ring overlaps. Output \"2,96|cut\"? The visible \"…6\" — preceding digits unclear. I'll say 1,96 with cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875853,
+  "id": "202611051850486e2c7bd7cf144d79",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850486e2c7bd7cf144d79",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1013
+  }
+}

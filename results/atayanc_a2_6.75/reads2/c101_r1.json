@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,89|cut",
+        "reasoning_content": "The red ring at ~(588,322). Nearest number appears \"4,89\" or \"1,89\"? It shows \"…89\" at ~(620,318). Likely \"4,89\"? First digit faint. Given nearby \"4,07\" at (610,425). The number near ring: \"4,89\" seems plausible. Check digits: 4,89. Clarity: pale/cut? Ring overlaps digits → cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874628,
+  "id": "202611051830238f80f429691a4889",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830238f80f429691a4889",
+  "usage": {
+    "completion_tokens": 106,
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1026
+  }
+}

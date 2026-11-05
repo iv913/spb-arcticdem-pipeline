@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,47|pale",
+        "reasoning_content": "Nearest labels: \"7,47\" above ring (~40px), \"6,40\" below (~90px). Faint first digit — likely 7,47.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877033,
+  "id": "20261105191030cf0fc9da2fcb4510",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191030cf0fc9da2fcb4510",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

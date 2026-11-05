@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,57|pale",
+        "reasoning_content": "Near the ring: \"3,57\" just right of ring. But first digit faint — could be 2,57? It shows \",57\" near ring; likely 3,57. Answer 3,57|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875838,
+  "id": "202611051850350f9e67dfa8364f02",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850350f9e67dfa8364f02",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 933
+  }
+}

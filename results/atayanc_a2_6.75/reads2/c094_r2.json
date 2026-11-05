@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "0,54|pale",
+        "reasoning_content": "Ring at ~(443,126). Nearest label: \"0,54\"? There's \"0,54\" partially — text near \"54\" right of ring. Likely \"0,54\". Also -0,7 above. The label touching ring appears \"0,54\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874606,
+  "id": "202611051830031cdf8c8bc2b24966",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830031cdf8c8bc2b24966",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 942
+  }
+}

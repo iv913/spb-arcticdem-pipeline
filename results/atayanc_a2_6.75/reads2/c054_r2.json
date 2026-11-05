@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,35|cut",
+        "reasoning_content": "Near ring: \"2,3?\" — likely \"2,35\" partially covered. It appears as \"2,3\" then faint digit maybe 5. I'll answer 2,35|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872898,
+  "id": "2026110518013325bd7ae6b68f4bcf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518013325bd7ae6b68f4bcf",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

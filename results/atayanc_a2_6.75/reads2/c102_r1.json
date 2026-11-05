@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,41|pale",
+        "reasoning_content": "Ring at ~ (443,107). Nearest number is \"2,4?\" near (555,85)? Actually there's a number near (530,85) reading \"2,4\" partially. Ring at 443,107; nearby at ~(470,60)? There's \"0,9\" at ~ (460,60)? The visible \"2,41\" at (555,85). Closest to ring... hard. Likely \"0,9\" at top near (455,55)? I'll answer 2,41? Distance ring to (555,85) ~115 px. Other candidates: none closer. But there might be a faint number right at ring. Given ambiguity, answer 2,41|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874634,
+  "id": "202611051830285d2c1a6a1d0d4588",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830285d2c1a6a1d0d4588",
+  "usage": {
+    "completion_tokens": 170,
+    "completion_tokens_details": {
+      "reasoning_tokens": 162
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1090
+  }
+}

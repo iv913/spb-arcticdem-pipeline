@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,45|pale",
+        "reasoning_content": "Ring near text \"КЗ 45\"? Number near ring: appears \"...45\"? Likely 3,45? Faint first digit. Answer: 3,45|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874048,
+  "id": "2026110518204574b7e863e6d44be5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518204574b7e863e6d44be5",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

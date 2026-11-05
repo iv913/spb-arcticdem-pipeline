@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,8|pale",
+        "reasoning_content": "Ring at ~(442,320). Nearest numbers: \"2,76\" at (505,267)? and \"1,8\" at (400,340)? and \"2,78\"? The one just left of ring: \"1,8\" partial. Also \"2,98\" below. Closest likely \"1,8\" — but could be \"1,8\" truncated. There's number at ~ (400,338) reading \"1,8\". Distance from ring (~442,320) is ~45px. \"2,98\" at (450,405) ~85px. So \"1,8\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873447,
+  "id": "20261105181042c343c79875294515",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105181042c343c79875294515",
+  "usage": {
+    "completion_tokens": 145,
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1065
+  }
+}

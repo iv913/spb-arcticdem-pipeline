@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,04|cut",
+        "reasoning_content": "The ring at ~(443,320) overlaps \"...3,04\"? Text near ring: \"3,04\"? It reads \"1 3 04\" — likely \"3,04\". Verify: ring centered on number; probably \"3,04\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877052,
+  "id": "20261105191049086ec2851c1945de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105191049086ec2851c1945de",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 980
+  }
+}

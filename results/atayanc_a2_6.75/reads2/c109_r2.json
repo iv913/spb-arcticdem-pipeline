@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,35|pale",
+        "reasoning_content": "Number near ring: \"2,35\"? Text near ring appears \"3,35\" partially cut? It shows \"3,35\" at ring. Likely 3,35.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875227,
+  "id": "202611051840259619f9e0a39c414a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051840259619f9e0a39c414a",
+  "usage": {
+    "completion_tokens": 45,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 921
+  }
+}

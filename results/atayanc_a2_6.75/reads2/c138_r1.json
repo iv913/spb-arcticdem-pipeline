@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,47|pale",
+        "reasoning_content": "Near the ring: numbers nearby: 2,47 to the left (~80px), 2,66 above right (~90px), 2,68 below (~120px). Closest is likely 2,47... Actually ring at (441,320); 2,47 at (360,270) dist ~95; 2,66 at (565,290) dist ~128. Closest: 2,47.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793875855,
+  "id": "202611051850525ed0cb290b244ef0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051850525ed0cb290b244ef0",
+  "usage": {
+    "completion_tokens": 100,
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1020
+  }
+}

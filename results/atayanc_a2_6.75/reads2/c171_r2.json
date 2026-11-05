@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,12|pale",
+        "reasoning_content": "Near ring: \"3,...\"? The label at ring shows something like \"2,...\" faint. Left label 2,62, above 2,64. At ring there's a small number touching ring — likely \"2,7...\"? Hard. It appears \"3,\" possibly. Given first digit faint, likely \"2,73\"? I'll answer 3,24? Risky. The number near ring seems \"3,22\"? Choose \"2,73\"? I'll go with 3,12|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877616,
+  "id": "202611051920112f3d0c44e6464067",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920112f3d0c44e6464067",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 994
+  }
+}

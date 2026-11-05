@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,49|pale",
+        "reasoning_content": "Near the ring at (~440,322), tiny text right of ring: \"1,49\"? There's a faint number just right of ring at ~(455,318) \"1,49\"? Numbers nearby: 2,25 at (525,378). The label next to ring appears \"1,49\". Answer 1,49|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872912,
+  "id": "202611051801474fa756db936d4887",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051801474fa756db936d4887",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

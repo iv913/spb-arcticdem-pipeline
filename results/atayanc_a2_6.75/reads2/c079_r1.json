@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,97|pale",
+        "reasoning_content": "Ring at ~(441,320), number nearby \"1,97\"? Text shows \".97\" partially hidden by ring. Could be \"2,97\"? First digit faint. Likely 1,97.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873492,
+  "id": "202611051811262dc6f29064904abc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051811262dc6f29064904abc",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 970
+  }
+}

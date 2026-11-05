@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,78|pale",
+        "reasoning_content": "Nearest label to ring (~440,312): \"2,78\" at ~(385,355)? Also faint \"2,78\" near. Candidate: 2,78.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873444,
+  "id": "202611051810358e45dc0dc1424425",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051810358e45dc0dc1424425",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 925
+  }
+}

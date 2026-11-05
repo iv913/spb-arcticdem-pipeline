@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,52|pale",
+        "reasoning_content": "Ring at ~ (441,322). Nearest number \"1,52\" to the right at ~460,322? The ring overlaps digits. Likely \"1,52\" — first digit faint, maybe 1. Also could be \"2,52\". The ring overlaps first digit area. Answer: 1,52|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877626,
+  "id": "202611051920220fdf05ede5c54da2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051920220fdf05ede5c54da2",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1002
+  }
+}

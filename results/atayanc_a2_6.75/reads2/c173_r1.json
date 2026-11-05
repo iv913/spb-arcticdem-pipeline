@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,80|pale",
+        "reasoning_content": "Ring at ~(442,322), number to its right: \".80\" — likely 2.80 with faint first digit hidden by ring. Given context, output 2,80? Digits shown \"2,80\" possibly. I'll answer 2,80|pale? Ring slightly overlaps; first digit faint. Probably \"2,80\". Clarity: pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877622,
+  "id": "20261105192020455a1e94ed584bf6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105192020455a1e94ed584bf6",
+  "usage": {
+    "completion_tokens": 88,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1008
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "15,1|pale",
+        "reasoning_content": "Near ring, text \"15,1\"? Number right of ring appears \"15,1\" partially covered. Likely \"1,51\"? Hard. The nearest printed number seems \"15,1\" with ring overlapping. Actually spot heights like 15,1. I'll answer 15,1|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793877655,
+  "id": "20261105192047585b97b7cf4b4923",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105192047585b97b7cf4b4923",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

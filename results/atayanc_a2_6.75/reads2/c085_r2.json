@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,31|pale",
+        "reasoning_content": "Near ring: \"3,31\" below. Actually text reads \"3.31\" faint first digit. Answer 3,31|pale? It's faint/cut. Say pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874040,
+  "id": "20261105182038b9c3f1516eee47ee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105182038b9c3f1516eee47ee",
+  "usage": {
+    "completion_tokens": 48,
+    "completion_tokens_details": {
+      "reasoning_tokens": 40
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 924
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,10|pale",
+        "reasoning_content": "Ring at ~(440,222); label \"2,10\" near (455,200)? Text shows \"2,10\" above right of ring. Looks like \"2,10\" faint.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793709709,
+  "id": "202611032041478133d913dcfa4e84",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032041478133d913dcfa4e84",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

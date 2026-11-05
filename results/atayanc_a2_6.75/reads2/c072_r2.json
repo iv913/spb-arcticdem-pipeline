@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|cut",
+        "reasoning_content": "Number near ring: \".98\" — likely 2,98? It appears \"2,98\" partially cut. Answer 2,98|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793873454,
+  "id": "2026110518105211e56c948efa44af",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110518105211e56c948efa44af",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

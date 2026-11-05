@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,66|pale",
+        "reasoning_content": "Near ring: \"2,68\" below ring at ~ (455,425)? Ring at (445,320). Nearby labels: \"2,35\" left, \"2,66\" below. Nearest is 2,66.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793872922,
+  "id": "20261105180159881ba99e0b944403",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105180159881ba99e0b944403",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 936
+  }
+}

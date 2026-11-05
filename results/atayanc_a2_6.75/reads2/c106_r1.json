@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,71|clear",
+        "reasoning_content": "Ring near \"3,71\". First digit check: appears 3.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874640,
+  "id": "20261105183038142c1788e90c41ac",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105183038142c1788e90c41ac",
+  "usage": {
+    "completion_tokens": 22,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 942
+  }
+}

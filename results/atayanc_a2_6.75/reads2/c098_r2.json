@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,36|cut",
+        "reasoning_content": "Ring near top, label partially cut at top: \"1,36\"? It shows \"?3?\" cut. It appears \"1,36\" partially cut by edge. Answer: 1,36|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874618,
+  "id": "202611051830152110d146ba3a4fa0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051830152110d146ba3a4fa0",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,82|pale",
+        "reasoning_content": "Ring at ~(443,322), number to right like \"?.82\" — likely 4,82 or 1,82. Faint first digit... visible as \"82\" clearly; first digit faint. Likely 2,82? Hmm. Given pale first digit, guess 2,82 with clarity pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793711011,
+  "id": "202611032103282d1c254b7c044ee3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611032103282d1c254b7c044ee3",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

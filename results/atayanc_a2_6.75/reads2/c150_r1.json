@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,4|cut",
+        "reasoning_content": "The ring at ~(445,322); nearest number \"2,4...\" partially cut at ~415,322. Likely \"2,4?\" — appears \"2.4\" cut. Digits: 2,4 and rest cut. Hmm need full number? It's cut — output 2,4? Clarity \"cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876467,
+  "id": "20261105190103b86fa56d6b50489e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261105190103b86fa56d6b50489e",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

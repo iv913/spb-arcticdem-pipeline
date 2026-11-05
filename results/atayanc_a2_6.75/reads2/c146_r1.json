@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,20|clear",
+        "reasoning_content": "Near the ring there's \"3,20\"-like number to the right: \"3,20\" at ~ (490,320). The ring at (440,322). The number right of ring appears \"3,20\" or \"1,20\"? Likely \"3,20\". Verify: first digit could be 3. Answer 3,20|pale? It's cut maybe. I'll say 3,20|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793876450,
+  "id": "202611051900462d27ca8e61484f32",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051900462d27ca8e61484f32",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1022
+  }
+}

@@ -1,0 +1,12 @@
+{
+ "mask": "inland_water_6.76",
+ "water_km2": 55.98,
+ "dry_data_km2": 0.0057,
+ "dry_data_px": 1446,
+ "components_ge_50m2": 0,
+ "components_area_km2": 0.0,
+ "dry_in_fill_km2": 7.24,
+ "marks_catalog_in_water": 2,
+ "marks_confirmed_in_water": 1,
+ "big_components": []
+}

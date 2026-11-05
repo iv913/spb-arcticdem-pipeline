@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,44|pale",
+        "reasoning_content": "Ring at ~(443,320). Nearest number appears \".44\" right of ring — likely part of a decimal like \"12,44\"? There's \"12\" earlier and \",44\"? Actually \"…44\" visible at (470,318). Could be \"1,44\"? Common elevation: 1,44. Output 1,44|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793874067,
+  "id": "202611051821038ecfffad7da74b6b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611051821038ecfffad7da74b6b",
+  "usage": {
+    "completion_tokens": 86,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1006
+  }
+}
