@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Near ring: \"2,43\"? label right of ring reads \"2,3\"? It shows \"43\" faint. Likely 2,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976645,
+  "id": "202611062250419b407aa7734e480e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250419b407aa7734e480e",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

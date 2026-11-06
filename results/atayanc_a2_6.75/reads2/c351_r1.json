@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,56|pale",
+        "reasoning_content": "The ring at ~(443,321). Nearby text \"2,36\"-like at right of ring: \"5,56\"? Looks like \"2,56\"? Text appears as \"6,66\"? It reads \"...66\". Likely \"2,56\". I'll answer 2,56 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981460,
+  "id": "20261107001056b0bc778cbef64766",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001056b0bc778cbef64766",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

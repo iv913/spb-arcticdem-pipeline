@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,89|clear",
+        "reasoning_content": "Ring near \"3,89\"? Label appears right of ring: \"3.89\" or \"1,89\"? It says \"3,89\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975509,
+  "id": "2026110622314782e421a255a6438f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622314782e421a255a6438f",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 914
+  }
+}

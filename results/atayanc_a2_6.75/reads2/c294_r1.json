@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,08|pale",
+        "reasoning_content": "Red ring at ~(443,320). Nearby elevation number to right ~ (465,318) \"2,08\"? Text near ring: faint \"2,02\"? Looks like \"2,02\" partially under ring. Likely \"2,08\". I'll answer 2,08 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979068,
+  "id": "2026110623305820d92bc07ec2451f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623305820d92bc07ec2451f",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

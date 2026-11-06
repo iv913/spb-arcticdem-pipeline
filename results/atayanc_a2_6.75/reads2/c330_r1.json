@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,86|pale",
+        "reasoning_content": "Ring near number at ~3,86? Right of ring \"86\" visible with a faint first digit likely 3. So \"3,86\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980838,
+  "id": "20261107000034e68a49b3e7a34cc7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000034e68a49b3e7a34cc7",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

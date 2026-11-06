@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Red ring at ~(440,318). Nearest number: \"5.91?\" at (510,175)? Distance large. \"1,22\" at (295,235)? Distance ~170. \"3,04\" (335,535) far. Something near ring? Small text near ring? There's tiny text at ~(415,300)? Hard. Likely nearest is none visible clearly — maybe \"5,91\" is actually far. I'll guess there's a faint number near ring, e.g., \"2,36\"? Cannot see. Choose \"5,91\"? distance ~150. Actually \"1,22\" ~ (295,235) to (440,318) ~165. Ring overlapping digits suggests number close. Unclear → NA? Better guess: pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980297,
+  "id": "20261106235129599b928b5d1b4825",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235129599b928b5d1b4825",
+  "usage": {
+    "completion_tokens": 177,
+    "completion_tokens_details": {
+      "reasoning_tokens": 171
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1097
+  }
+}

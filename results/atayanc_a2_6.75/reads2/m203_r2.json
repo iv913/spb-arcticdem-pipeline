@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Nearest label: 2,36 at ~ (490,440) near ring at (442,320)? Distances: 2,36 at (~490,440) ~ dist 130. 2,86 at (~570,285) dist ~130. Hmm. 2,84 at (~415,185) far. Likely 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983832,
+  "id": "20261107005030b91eacb88e434d9b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005030b91eacb88e434d9b",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "The red ring is at ~(443,320). Nearby number to right: \"1,98\"? There's \"2,5\" visible at ~470,325 \"1,9 8\"? Hard. Number next to ring appears \"1,98\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974873,
+  "id": "20261106222110d43c082390e7400a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222110d43c082390e7400a",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

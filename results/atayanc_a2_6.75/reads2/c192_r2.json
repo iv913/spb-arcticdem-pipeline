@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring at ~(95,320) there's a small number right next to it, like \"3,24\"? Hard. There seems a tiny label beside ring. Answer 2,36? Unclear. Best guess: 1,98? I'll answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974885,
+  "id": "20261106222122fd8acb0c8d874bed",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222122fd8acb0c8d874bed",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 946
+  }
+}

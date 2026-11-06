@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,75|pale",
+        "reasoning_content": "The ring overlaps a number like \"3,75\" or \"3,98\"? Text near ring: \"3?75\" — likely 3,75. First digit faint; could be 3. Answer 3,75.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976666,
+  "id": "2026110622510327ed07bde0e14455",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622510327ed07bde0e14455",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

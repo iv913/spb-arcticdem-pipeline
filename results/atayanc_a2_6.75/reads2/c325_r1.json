@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,21|pale",
+        "reasoning_content": "Near the ring, faint small number around (425,315) \"2,2\" — partially visible \"2,2\"? It appears \"2,2?\" likely \"2,21\". Only partially visible. I'll answer 2,21 pale? Hard to tell. Digits visible \"2,2\" and unclear last. Maybe \"2,2\" only. Given instruction, output something like 2,21|pale. Safer: NA? The number is partially cut by line. I'll guess \"2,2\" isn't 3 digits. Output 2,21|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980286,
+  "id": "20261106235120f3f78ab570cc41c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235120f3f78ab570cc41c0",
+  "usage": {
+    "completion_tokens": 135,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1055
+  }
+}

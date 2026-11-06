@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,08|pale",
+        "reasoning_content": "Near ring: \"3,08\"? Text near ring shows \"3,0?\" ... labels around: 2,41; 5,89; 5,04. Near ring appears \"3,08\" rotated. I'll answer 3,08|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978589,
+  "id": "20261106232305861873de6eaf4b05",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232305861873de6eaf4b05",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 941
+  }
+}

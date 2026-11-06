@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,21|pale",
+        "reasoning_content": "Near ring: \"2,2?\" — label at ring, likely 2,21? Text shows \"2 21\"? It appears \"2,21\". Faint first digit. Answer 2,21|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977268,
+  "id": "20261106230103cd7f4fc0f47841eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230103cd7f4fc0f47841eb",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 931
+  }
+}

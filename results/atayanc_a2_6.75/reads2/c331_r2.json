@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,94|pale",
+        "reasoning_content": "Near ring: \"2,72\" at ~(255,353)? Ring at (440,320). Nearby faint number near ring... \"2,72\" is left; also \"2,94\" below at (487,458). Closest seems 2,72? Distance from (440,320) to (265,355) ~178; to (487,458) ~154. There's a faint mark near ring itself. Answer 2,94? Hmm. I'll pick 2,72|pale? Choose 2,94|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980850,
+  "id": "202611070000459edda0ca11b94414",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070000459edda0ca11b94414",
+  "usage": {
+    "completion_tokens": 135,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

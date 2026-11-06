@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,72|clear",
+        "reasoning_content": "Near ring: \"3,72\" printed right of ring. Others: 2,41 left, 3,56, 2,95, 3,94. Nearest is 3,72.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980277,
+  "id": "20261106235114e99caa097a224ea4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235114e99caa097a224ea4",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 927
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,84|clear",
+        "reasoning_content": "Ring at ~(442,322). Nearest number: 1,84 at ~(495,322)? Text \"1,84\" to right. Distance ~50px. Also 2,63 at ~(170,245) far. So 1,84? Could be 1,84. Check digits: likely 1,84.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976078,
+  "id": "202611062241123c762d6732a9439a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062241123c762d6732a9439a",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1001
+  }
+}

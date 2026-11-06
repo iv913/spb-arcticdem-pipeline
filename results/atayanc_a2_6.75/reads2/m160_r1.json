@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|pale",
+        "reasoning_content": "Ring at ~(442,323). Nearest number: \"2,59\" at (533,327)? That's ~90px away. Also \"4,04\" at (663,363). The 2,59 is closest.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983290,
+  "id": "20261107004127ee5c849997a2427b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004127ee5c849997a2427b",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

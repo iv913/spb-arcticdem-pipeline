@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,08|pale",
+        "reasoning_content": "Near ring: \"1,08\"? Text shows \"1,08\" near ring. First digit could be 1. Likely \"1,08\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985011,
+  "id": "202611070110090230bdcf11d64d32",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070110090230bdcf11d64d32",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

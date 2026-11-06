@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Ring at ~(444,323). Nearby \"2,43\"? Number at ~497,305 reads \"2,43\" — first digit 2? Could be \"2,43\". Also \"1,72\" far left. Closest is the 2,43 (maybe 2,45?). It appears \"2,43\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978555,
+  "id": "20261106232233327853c119ed45e8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232233327853c119ed45e8",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring there's a faint label at ~(410,318) left of ring: appears \"2,36\"? It reads \"2,36\" faint. I'll answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981437,
+  "id": "20261107001033573aeb91ef0043c0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001033573aeb91ef0043c0",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 929
+  }
+}

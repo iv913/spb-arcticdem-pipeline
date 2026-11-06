@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,50|pale",
+        "reasoning_content": "The red ring is at left edge, small mark near \"2,50\"-ish text next to it. Near ring there's text \"2,50\"? I see \"2,50\" to the right of ring. Best guess: 2,50|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974869,
+  "id": "20261106222106da2e7ce219834ccf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222106da2e7ce219834ccf",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

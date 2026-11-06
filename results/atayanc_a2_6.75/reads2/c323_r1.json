@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,72|pale",
+        "reasoning_content": "Red ring at ~(441,322). Nearest number \"2,72\" just right of it. First digit could be 2. Output 2,72|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980275,
+  "id": "20261106235113b9c8a1f407404af3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235113b9c8a1f407404af3",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

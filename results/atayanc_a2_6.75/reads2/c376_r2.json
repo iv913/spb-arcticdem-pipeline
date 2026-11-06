@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,99|pale",
+        "reasoning_content": "Near ring: \"2,99\" at (680,190)? Ring at ~(445,320). Nearby text \"2,9...\" to the right of ring: \"2,99\"? There's text right of ring at ~465,320 \"2,9\" partially. Actually visible \"2,99\" at right. The ring contains a digit? Inside red ring maybe \"3\"? The label near ring seems \"2,9...\" faint. I'll answer 2,99|pale? Hmm. Text right of ring looks like \"2,9\" cut. Safer: 2,99|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982624,
+  "id": "202611070030191bf9a21bede24e3b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030191bf9a21bede24e3b",
+  "usage": {
+    "completion_tokens": 140,
+    "completion_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1016
+  }
+}

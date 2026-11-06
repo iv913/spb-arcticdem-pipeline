@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,47|pale",
+        "reasoning_content": "Near ring there's \"5 км\" text... Numbers nearby? There's \"3,47\"? At ~(265,325) there's \"3,47\"? Looks like red ring at (225,322), text right of it \"3,47\"? The fragment \"5 км\" nearby. I'll guess 3,47 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977273,
+  "id": "2026110623010917ac8f1ec1fa4d76",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623010917ac8f1ec1fa4d76",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

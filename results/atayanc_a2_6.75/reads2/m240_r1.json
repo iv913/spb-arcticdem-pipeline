@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,91|pale",
+        "reasoning_content": "Red ring near \"2,91\" at left and something at ~2,98? Closest is 2,91? The ring at ~(440,320); \"2,91\" at ~380,315; also \"2,93\" partially hidden near 520,295. Distance to 2,91 ~60px vs 2,93 ~80. Answer 2,91.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983853,
+  "id": "202611070050493b1588ce9f6d4651",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070050493b1588ce9f6d4651",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1012
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,85|pale",
+        "reasoning_content": "No red ring visible clearly; candidate numbers: \"2,85\" near left (~130,365), \"6,92 12,96\"? The red ring — maybe none visible. The number near left \"2,85\". But ring? There's a black dot at ~120,358 next to 2,85. Without ring, closest? I'll answer 2,85|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984427,
+  "id": "202611070100215bde03ebfc904e7a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100215bde03ebfc904e7a",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1012
+  }
+}

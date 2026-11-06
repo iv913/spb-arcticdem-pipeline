@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|cut",
+        "reasoning_content": "Near ring: number overlapping ring right side, appears \"2,98\"? Ring overlaps digits. Nearby numbers: 1,25 above-left, 2,89 below-right. The ring overlaps a small number to its right, partially cut. Likely \"2,98\" — but verify first digit: could be 2. Given 2,89 nearby, likely 2,98. Clarity: cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980875,
+  "id": "20261107000112b4e77e1d08fd4d04",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000112b4e77e1d08fd4d04",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

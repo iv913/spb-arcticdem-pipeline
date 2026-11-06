@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,15|cut",
+        "reasoning_content": "Ring at ~ (443,320). Nearest number appears to be \"2,15\" partially covered? The ring overlaps a number to the right \"…15\" — likely \"2,15\"? Also \"2,63\" nearby left. The number under ring seems \"2,15\" with first digit hidden? Text shows ring over \"15\"? Likely \"2,15\". Clarity: cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979072,
+  "id": "20261106233109d5b5782406624ef2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233109d5b5782406624ef2",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

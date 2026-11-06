@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,3|cut",
+        "reasoning_content": "The ring at ~(440,318) overlaps a number that looks like \"4,3\" or similar. Nearby numbers: 3,83 at (380,360), 3,22 at (635,350). The ring seems to mark a number at ~ (445,315) partially cut. Likely \"4,3\"? It shows \"?3\". Could be \"4,3\". Clarity: cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976674,
+  "id": "20261106225110237dfa609b934a31",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225110237dfa609b934a31",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1016
+  }
+}

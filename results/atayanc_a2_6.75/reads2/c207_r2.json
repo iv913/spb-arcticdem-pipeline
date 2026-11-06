@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,28|pale",
+        "reasoning_content": "Near the red ring there's a faint label like \"1,28\"? Text near ring at (455,300) reads \"1,28\" pale. Answer 1,28|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975496,
+  "id": "202611062231340daa8d2d86c64408",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231340daa8d2d86c64408",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

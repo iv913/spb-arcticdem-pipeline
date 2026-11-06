@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,65|clear",
+        "reasoning_content": "Ring at ~(443,320). Nearby labels: 3.65 at ~(310,325), 5.60 at ~(490,155)? Actually \"3,60\" at top ~(485,155). Nearest is 3,65.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975483,
+  "id": "2026110622312156b0b585080f4871",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622312156b0b585080f4871",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 938
+  }
+}

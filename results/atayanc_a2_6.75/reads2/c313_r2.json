@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,14|pale",
+        "reasoning_content": "Near ring: label \"1,14\" above? There's \"1?14\" near ring at (455,250)-ish. Also 2,32 left. The nearest is likely \"1,14\"? The label at ~(460,250) reads \"17,10\"? Hmm \"1,14\". I'll answer 1,14|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979712,
+  "id": "202611062341492184ac79d49c4fa8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062341492184ac79d49c4fa8",
+  "usage": {
+    "completion_tokens": 85,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}

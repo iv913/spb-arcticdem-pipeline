@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,04|pale",
+        "reasoning_content": "Near the ring there's a faint number just left of ring — appears like \"1,28\" or similar. Hard. There's \"Ж\" right of ring. Left of ring a tiny faint label maybe \"2,03\". I'll answer 1,28? Better guess: NA|cut? There is a faint number touching ring. I'll say \"2,04|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976084,
+  "id": "20261106224121ef6f39d1fb9041ae",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224121ef6f39d1fb9041ae",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

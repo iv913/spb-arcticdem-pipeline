@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring, faint \"2,36\"-like number to the left: appears \"2,36\"? There's a tiny label just left of ring, faint first digit — likely \"2,36\". Answer: 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976663,
+  "id": "202611062251028c8022424d3549eb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062251028c8022424d3549eb",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 935
+  }
+}

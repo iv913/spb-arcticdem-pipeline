@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,60|pale",
+        "reasoning_content": "Red ring at ~(443,320). Nearest number \"2,60\" at ~(600,320)? That's far. Also \"2,72+\" at ~(600,385). Actually ring near \"2,60\"? distance ~160px. Hmm, there may be a number near the ring itself; ring slightly overlapping digits—likely \"2,60\" is closest. Wait there's something at ring... probably \"2,60\". Pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978441,
+  "id": "20261106232036115a87bfc8c74354",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232036115a87bfc8c74354",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1022
+  }
+}

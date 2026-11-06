@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near the ring there seems a faint number right of it... \"3,02\"? Hard. There's a tiny label near ring at (490,325)? Possibly \"1,98\"? I'll guess a faint number. Given prompt hint \"first digit very faint\", likely something like \"2,36\". I'll answer 2,36|pale? Better: near ring there's text \"1,98\"? Uncertain. Choose \"2,36|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975490,
+  "id": "202611062231266e7785ebc4074a2b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231266e7785ebc4074a2b",
+  "usage": {
+    "completion_tokens": 107,
+    "completion_tokens_details": {
+      "reasoning_tokens": 99
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

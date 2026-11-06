@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,73|pale",
+        "reasoning_content": "Ring near top ~ (440,27). Nearest number \"2,73\" at (300,8)? Distance large. Others: 2,75 at (810,40), 2,85 (590,88). Closest to (440,27): 2,73 at ~ (295,8) distance ~145; 2,85 at (585,88) ~155. Hmm ambiguous. There seems a dot mark near ring at (450,5)? \"x\" symbol. Likely 2,73 closer. But the number near top \"2,73\" partly cut. Answer 2,73|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983282,
+  "id": "20261107004117659ba61318f64418",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004117659ba61318f64418",
+  "usage": {
+    "completion_tokens": 147,
+    "completion_tokens_details": {
+      "reasoning_tokens": 139
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1067
+  }
+}

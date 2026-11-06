@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Near ring: \"1,98\"? There's a label right of ring \"1,98\"? It reads \"1 98\" near ring. Likely \"1,98\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977277,
+  "id": "20261106230115c17c0994da37499f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230115c17c0994da37499f",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

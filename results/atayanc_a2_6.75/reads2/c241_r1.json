@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,24|pale",
+        "reasoning_content": "The number near ring: looks like \"3,24\" with ring over first digit. First digit faint—could be 3 or 2. It appears \"3,24\"? Ring overlaps digit. Likely 3,24.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976687,
+  "id": "202611062251238d8b3382e75a47e8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062251238d8b3382e75a47e8",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

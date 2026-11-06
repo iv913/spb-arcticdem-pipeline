@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,96|pale",
+        "reasoning_content": "Nearest label to ring (443,322): \"2,96\" at (~390,285). Also faint number below ring? There seems small mark at (450,345) — \"3,..\". Likely 2,96.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982085,
+  "id": "20261107002120d3920a780ef0437d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002120d3920a780ef0437d",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 938
+  }
+}

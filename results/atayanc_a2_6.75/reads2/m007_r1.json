@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,62|pale",
+        "reasoning_content": "Number near ring: appears \"2,62\" faintly. Output 2,62|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982633,
+  "id": "202611070030286dadde898319416e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030286dadde898319416e",
+  "usage": {
+    "completion_tokens": 29,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

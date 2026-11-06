@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,85|pale",
+        "reasoning_content": "Ring at ~(443,319). Nearby numbers: 5,85 at (325,322) — far. 5,86 at (466,157)? No, that's up. Distance to 5,85 ~120px; there may be a number right at the ring but unreadable—digit near ring appears cut. Perhaps elevation hidden. Closest visible: 5,85.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975486,
+  "id": "2026110622312063eb49eb64a64624",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622312063eb49eb64a64624",
+  "usage": {
+    "completion_tokens": 94,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1014
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Near the ring, inside the building at ~(447,322), there's a small faint number right near the ring, appears like \"1,98\" or similar. The ring overlaps digits. Likely \"1,98\". Pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982662,
+  "id": "202611070030580fd324dda25044a0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030580fd324dda25044a0",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

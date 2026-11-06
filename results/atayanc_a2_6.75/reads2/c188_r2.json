@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,50|pale",
+        "reasoning_content": "The red ring at left edge near a mark that looks like \"?0,50\" or \"50\". Number near ring: \"0,50\"? Faint first digit... Could be \"20,50\"? Text reads \"₤0,50\"? Likely \"0,50\" but elevations like 2,36... So maybe \"2,50\" with faint first digit. Answer: 2,50|pale",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974871,
+  "id": "2026110622210767176f83a8cf4d93",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622210767176f83a8cf4d93",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

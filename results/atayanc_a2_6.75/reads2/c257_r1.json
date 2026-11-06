@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|pale",
+        "reasoning_content": "Ring near center; number appears \"2,65\" with ring overlapping first digit. Likely 2,65.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977879,
+  "id": "2026110623111756093197775343d1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623111756093197775343d1",
+  "usage": {
+    "completion_tokens": 31,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

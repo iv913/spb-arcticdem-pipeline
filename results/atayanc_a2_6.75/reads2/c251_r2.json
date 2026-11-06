@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "0,2|pale",
+        "reasoning_content": "Near ring: \"0,2\" faint? Text near ring \"0,2\" appears at ~(430,305). Likely \"0,2\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977297,
+  "id": "20261106230135412708a01ecc43ef",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230135412708a01ecc43ef",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

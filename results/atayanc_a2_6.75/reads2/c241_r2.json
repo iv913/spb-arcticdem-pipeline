@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,24|pale",
+        "reasoning_content": "Ring at ~(445,321); label \"2,24\" nearby reading \"1,24\"? It shows \"?4,24\". Likely \"1,24\" or \"2,24\". Text appears \"2,24\" partially covered. I'll answer 1,24? Prompt hints faint first digit. Image shows \"A 1,24\" — could be \"1,24\". I'll go 1,24|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977263,
+  "id": "2026110623010060bf0d0152234c03",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623010060bf0d0152234c03",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

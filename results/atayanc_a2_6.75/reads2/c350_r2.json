@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Number near ring: \"2,36\"? There's \"2,...\" at ring? Looks like \"2,36\" right of ring... Actually text \"2,36.\" near ring. I'll answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981456,
+  "id": "2026110700105358a476b71cc74eb6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700105358a476b71cc74eb6",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

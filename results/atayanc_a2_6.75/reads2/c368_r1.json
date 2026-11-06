@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|clear",
+        "reasoning_content": "Ring at ~(442,322). Nearest numbers: 2,89 at (521,298) — distance ~85; 2,69 at (575,343) ~135. Also faint dots near ring? \"2,87\" top far. So 2,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982656,
+  "id": "20261107003053bb37cc7b732d4c9d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003053bb37cc7b732d4c9d",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

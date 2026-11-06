@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,08|pale",
+        "reasoning_content": "Ring at ~ (442,322), label \"1,08\" next to it. Likely \"1,08\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976615,
+  "id": "20261106225013af6223e05c4a4473",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225013af6223e05c4a4473",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

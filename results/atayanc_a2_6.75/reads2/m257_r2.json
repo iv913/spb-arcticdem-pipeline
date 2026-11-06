@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Ring at ~(140,323). Nearby label \"1,98\"? There's \"1,98\" partially \"5,01\"? Actually right of ring \"6,01\"? Looks like \"1,98\" or \"6,01\". The text near \"•\" reads \"1,98\"? Zoom: \"1,98\" seems faint first digit. Likely answer 1,98|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983863,
+  "id": "20261107005100d313224fc7cc4bca",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005100d313224fc7cc4bca",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 968
+  }
+}

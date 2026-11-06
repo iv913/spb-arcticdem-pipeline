@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,94|pale",
+        "reasoning_content": "Near ring at (440,322) — number \",94\" at ~(470,325)? Likely \"2,94\" with faint first digit.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980908,
+  "id": "20261107000146d67210c9c0b44c28",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000146d67210c9c0b44c28",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 918
+  }
+}

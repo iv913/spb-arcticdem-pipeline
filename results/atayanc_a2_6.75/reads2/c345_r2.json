@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,30|pale",
+        "reasoning_content": "Near the ring there's a faint number to the left of the dot, \"2,36\"? There's a tiny mark near the ring at left \"…\" hard. The nearest readable decimal: \"3,74\" below? Also \"1,76\"? The one near ring appears to be \"2,30\"? There's text left of the dot: \"2,30\"? Likely answer \"2,30|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981443,
+  "id": "20261107001038cb7ec6ae4f42420a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001038cb7ec6ae4f42420a",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

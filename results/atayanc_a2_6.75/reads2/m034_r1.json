@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,38|pale",
+        "reasoning_content": "Near the ring, there's a small \"4,38\"? At (420,300) there's \"4,38\"? Nearby left of ring appears \"4,38\" partially. Hard. I'll answer 4,38|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982664,
+  "id": "20261107003102c93df18dc81040cb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003102c93df18dc81040cb",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

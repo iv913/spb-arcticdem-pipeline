@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|clear",
+        "reasoning_content": "Ring at ~(440,560). Nearest numbers: 2,59 at (560,395)? distances: 2.59 (525,395) ~130. 2,85 at (680,600) ~240. 2,19 at (250,415) ~260. So closest is 2,59.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982610,
+  "id": "2026110700300525bdf2449cb9476a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700300525bdf2449cb9476a",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1004
+  }
+}

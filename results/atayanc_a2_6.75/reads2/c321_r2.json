@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,94|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby number \"2,94\" at ~(510,435)? That's ~110px. Also faint number right at ring top? At (440,305) there seems a tiny digit. Likely \"2,94\". But maybe the number at ring is faint \"2,3...\" Hard. Answer 2,94|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980269,
+  "id": "202611062351060fa04153b55a451b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062351060fa04153b55a451b",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

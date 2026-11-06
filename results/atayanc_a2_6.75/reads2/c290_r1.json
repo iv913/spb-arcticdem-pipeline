@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,08|pale",
+        "reasoning_content": "Ring at ~(647,322). Nearby numbers: 3,27 at (612,293)? and 3,08 at (673,330), 3,18 at (668,353). Closest likely 3,08. Ring overlaps \"3,08\" left digits. Answer 3,08.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979038,
+  "id": "20261106233035faf4bd73c5dd49d7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233035faf4bd73c5dd49d7",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

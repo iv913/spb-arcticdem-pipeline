@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,08|pale",
+        "reasoning_content": "The ring at ~(445,318); nearby number to the right reads \"2,08\" (faint first digit could be 2). Likely 2,08.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976615,
+  "id": "20261106225012be1fff7aff204ad8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225012be1fff7aff204ad8",
+  "usage": {
+    "completion_tokens": 45,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

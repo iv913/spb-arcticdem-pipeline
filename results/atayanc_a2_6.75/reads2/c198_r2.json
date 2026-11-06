@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,04|pale",
+        "reasoning_content": "Near the ring there's \"04\" to the right... likely a faint first digit \"2,04\"? Number near ring: \"04\" partial. Likely 2,04.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975455,
+  "id": "202611062230538b896c3916b94e11",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062230538b896c3916b94e11",
+  "usage": {
+    "completion_tokens": 45,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 921
+  }
+}

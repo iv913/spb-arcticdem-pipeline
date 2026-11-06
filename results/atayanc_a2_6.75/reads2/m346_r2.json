@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,72|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearest label: 2,72 at ~(390,410)? distance ~85. Others: 2,54/2,52 at ~(595,280) distance ~170. So 2,72.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984448,
+  "id": "20261107010046bdad8ccc9b2246b5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010046bdad8ccc9b2246b5",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

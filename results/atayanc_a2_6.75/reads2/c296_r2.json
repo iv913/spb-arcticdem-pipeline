@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Near ring (~440,320): no visible number nearby. Numbers: 2,40 at (190,210); 2,78 top right; 2,84? left. Nearest readable to ring... none very close; \"2,40\" distance ~250px; \"2,78\" ~250px. Hmm likely a faint number at the ring? Can't see. Maybe answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979072,
+  "id": "2026110623310803df0f639d524b6e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623310803df0f639d524b6e",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

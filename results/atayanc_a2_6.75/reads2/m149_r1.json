@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2.83|pale",
+        "reasoning_content": "Nearest number: 2.83 below at (~460,405) vs ring (~445,322). Distance ~85. Also 2.82 at (~545,267), distance ~110. So 2.83.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983287,
+  "id": "20261107004123b06b21c25ebb47d9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004123b06b21c25ebb47d9",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 981
+  }
+}

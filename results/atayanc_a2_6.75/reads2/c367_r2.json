@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,8|pale",
+        "reasoning_content": "Near ring: \"4,8\" below, and \".52\" (likely 3,52 or 2,52?) to the right. The number touching ring seems \"4,8\" at (420,347) and \"52\" at (470,320). The \"52\" likely preceded by faint digit. \"4,8\" has one decimal—elevation labels have two decimals? \"4,48\"? Text shows \"4,8\". Nearest: \"4,8\" touches ring. But maybe it's \"4,48\". Transcribe exactly: \"4,8\"? The image shows \"4,8\" faint. I'll answer 4,8|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982091,
+  "id": "20261107002124af92f7d7d41b4cb8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002124af92f7d7d41b4cb8",
+  "usage": {
+    "completion_tokens": 154,
+    "completion_tokens_details": {
+      "reasoning_tokens": 146
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1030
+  }
+}

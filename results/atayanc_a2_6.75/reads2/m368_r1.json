@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,09|pale",
+        "reasoning_content": "Ring at (440,320). Nearby numbers: 2,86 at (~215,315)? Actually \"2.86\" at x~235. Distance ~205. 3,09 at (~510,467): distance ~155. So closest is 3,09.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984457,
+  "id": "2026110701005219215a02a4d54ae0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110701005219215a02a4d54ae0",
+  "usage": {
+    "completion_tokens": 68,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 988
+  }
+}

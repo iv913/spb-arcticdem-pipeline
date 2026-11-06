@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,05|pale",
+        "reasoning_content": "Near ring: text next to it \"…5\" — looks like \"…,5\"? Labels nearby: 2,03 below right. The ring at (442,320); \"…5\" to right maybe part of number cut by ring. Likely \"2,05\". Faint first digit. Answer 2,05|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979075,
+  "id": "20261106233112209e9574af204cda",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233112209e9574af204cda",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 956
+  }
+}

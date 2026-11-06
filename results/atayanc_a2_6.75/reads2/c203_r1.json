@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|cut",
+        "reasoning_content": "Ring at ~ (443,322). Nearby number \"?,65\" — the ring overlaps the first digit. Looks like \"2,65\"? First digit partially covered; could be 2 or 3. Likely \"2,65\"? Hmm image shows \"⭕65\" with faint first digit. Given typical elevations ~2-5, and it could be 2,65. Answer 2,65|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975473,
+  "id": "202611062231114bef4e81e5de4e60",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231114bef4e81e5de4e60",
+  "usage": {
+    "completion_tokens": 97,
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1017
+  }
+}

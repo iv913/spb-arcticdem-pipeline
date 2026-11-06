@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,44|pale",
+        "reasoning_content": "Near ring: \"2,44\"? Text left of ring reads \"2,44\" faint. Likely 2,44.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977894,
+  "id": "20261106231132acbe706245d54777",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231132acbe706245d54777",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

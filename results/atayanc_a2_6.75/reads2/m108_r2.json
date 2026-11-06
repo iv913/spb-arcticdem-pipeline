@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,85|clear",
+        "reasoning_content": "Ring at top ~(443,25). Nearest labels: \"2,75\" at (775,30)? distance ~330. There's a dot near (455,8) \"x\" faint — actually ring marks survey point. Nearest readable number: 2,75 right. Also 2,85 at (575,85) ~165 px. Ring (443,25) to 2,85 (575,85): ~143. To 2,75: ~335. So 2,85.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983284,
+  "id": "202611070041173e332d81a6ac44de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070041173e332d81a6ac44de",
+  "usage": {
+    "completion_tokens": 122,
+    "completion_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 998
+  }
+}

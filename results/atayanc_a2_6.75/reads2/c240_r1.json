@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,77|clear",
+        "reasoning_content": "Number near ring: \"3,77\" — ring overlaps first digit; could be 3. Read \"3,77\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976686,
+  "id": "2026110622511822c0d4a7148b45b7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622511822c0d4a7148b45b7",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 953
+  }
+}

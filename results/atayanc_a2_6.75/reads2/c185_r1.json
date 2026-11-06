@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,20|cut",
+        "reasoning_content": "Near ring there's a faint number around (460,300)? Ring at ~(443,322). Number above near \"1,2?\" — text near ring looks like \"3,2...\" unclear. There's faint \"4,20\"? Honestly it's pale/cut. I'll answer with best guess: number appears \"3,20\"? The ring overlaps digits — likely cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974856,
+  "id": "20261106222053451e2be540304301",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222053451e2be540304301",
+  "usage": {
+    "completion_tokens": 88,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1008
+  }
+}

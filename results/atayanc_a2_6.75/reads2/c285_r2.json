@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,80|pale",
+        "reasoning_content": "Near ring: \"3,80\" to left? There's \"3,80\" at ~(345,358) and \"1,52\" below? Closest: 3,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979048,
+  "id": "202611062330453a4a62cb94b04e13",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062330453a4a62cb94b04e13",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

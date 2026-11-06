@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,02|pale",
+        "reasoning_content": "Ring at ~(442,320). Nearest number \"2,02\" printed right of ring at ~(460,315). Read: 2,02.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977894,
+  "id": "202611062311326f73a1450dbd413a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062311326f73a1450dbd413a",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

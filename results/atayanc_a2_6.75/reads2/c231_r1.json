@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,60|pale",
+        "reasoning_content": "Ring at ~ (441,322). Nearest number to right: looks like \"2,60\" partially — visible \",60\" after ring. Likely 2,60.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976647,
+  "id": "20261106225045568279c8d4fd4f4d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225045568279c8d4fd4f4d",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

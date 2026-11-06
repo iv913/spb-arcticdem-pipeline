@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,09|pale",
+        "reasoning_content": "Nearest to ring: \"1,09\" just below-left. Could be 1,09. First digit faint — likely 1,09.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985009,
+  "id": "20261107011008df741324d1b34c8d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107011008df741324d1b34c8d",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

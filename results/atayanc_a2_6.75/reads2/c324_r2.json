@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|cut",
+        "reasoning_content": "Near ring there's a number partially cut, like \"3,45\"? The text right of ring shows \",45\" faint. Likely 2,45? The visible part \"5\" — appears as \",45\" with first digit cut by ring. Answer: 3,45? Ambiguous. I'll say 2,45|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980280,
+  "id": "202611062351176c34265245064b1b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062351176c34265245064b1b",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 954
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Near the ring: number at ~(545,270) \".1,98\"? It reads \"1,98\" possibly with dot. Likely \"1,98\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983839,
+  "id": "202611070050367835b0807a10430e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070050367835b0807a10430e",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

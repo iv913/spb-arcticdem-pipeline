@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,86|pale",
+        "reasoning_content": "Nearest: \"2,86\" right of ring; first digit faint — could be 2,86. Answer 2,86|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984453,
+  "id": "20261107010050076867165b7e4c7a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010050076867165b7e4c7a",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 916
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,52|pale",
+        "reasoning_content": "Red ring at ~(557,322). Nearest number appears \"1,52\" or similar to its right — text \"?52\" at ~(600,322). Likely \"1,52\". First digit could be 1 or 4. It shows faint digits; I'll answer 1,52|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976043,
+  "id": "202611062240415241bfa927b54408",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062240415241bfa927b54408",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 996
+  }
+}

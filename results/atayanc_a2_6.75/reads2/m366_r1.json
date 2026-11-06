@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,51|clear",
+        "reasoning_content": "Ring at ~(441,323). Nearby: \"3,51\" at ~(420,295) above; \"4,02\" at ~(540,318). Closest is 3,51.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984452,
+  "id": "20261107010050d9e48cdf12e44990",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010050d9e48cdf12e44990",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

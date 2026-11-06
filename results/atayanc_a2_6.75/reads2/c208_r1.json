@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Near the red ring there's no clear number visible; faint digits possibly \"3,20\" far right. Closest number to ring centre seems absent—maybe a faint \"3,20\"? That's far. Likely NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975499,
+  "id": "20261106223134511c8d36d5974bc9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223134511c8d36d5974bc9",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

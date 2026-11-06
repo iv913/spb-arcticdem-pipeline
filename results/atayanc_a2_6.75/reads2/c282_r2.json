@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,61|pale",
+        "reasoning_content": "Near the ring: \"3.61\" just below-left, and \"3.02\" to left? Labels: \"2,42\" left, \"5,04\", \"5,89\" top, \"1,59\", \"3,86\". Nearest to ring appears \"3.61\" right below-left of ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978592,
+  "id": "202611062323096388948527a142b6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062323096388948527a142b6",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 953
+  }
+}

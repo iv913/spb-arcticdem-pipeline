@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,503|clear",
+        "reasoning_content": "Ring at ~(443,322). Nearest number \"2,503\" at ~ (385,322)? Label \"2,503\" appears left of ring. Distance ~60px. Others far. Digit check: \"2,503\"? Looks like 2,503 — three decimals unusual but visible. First digit 2.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982018,
+  "id": "202611070020144f6fa886886f49e8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070020144f6fa886886f49e8",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1003
+  }
+}

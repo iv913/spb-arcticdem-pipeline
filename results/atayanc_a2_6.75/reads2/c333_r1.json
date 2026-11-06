@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,04|pale",
+        "reasoning_content": "The ring at ~(443,321). Nearby: \"7,04\" right next to ring (\"7 04\" at ~470,320?). The text \"7,04\" appears right at ring. Likely 7,04. Also left side \"23,27\" etc. Closest is 7,04.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980859,
+  "id": "2026110700005106f8d37917eb4abc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700005106f8d37917eb4abc",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 997
+  }
+}

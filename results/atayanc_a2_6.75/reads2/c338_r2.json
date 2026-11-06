@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,00|clear",
+        "reasoning_content": "Near the ring: \"2,59\" nearby to the right (at ~760,370 — actually \"2.59\"?). Ring at ~(443,320). Nearby numbers: \"2,59\" at right building (755,370) — distance ~300px. \"3,00\" at (545,520) — distance ~220px. Others: \"20,85\" (545,172) — far. \"3,575\"? So nearest is 3,00. But 3,00 is integer-ish printed; still. First digit faint? \"3,00\" seems clear. Answer 3,00|clear? Hmm \"2,59\" distance larger. Go with 3,00.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980886,
+  "id": "202611070001208676c5fab2494ef6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070001208676c5fab2494ef6",
+  "usage": {
+    "completion_tokens": 162,
+    "completion_tokens_details": {
+      "reasoning_tokens": 155
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1038
+  }
+}

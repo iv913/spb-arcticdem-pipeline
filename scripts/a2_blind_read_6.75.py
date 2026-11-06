@@ -27,7 +27,7 @@ CROPS.mkdir(parents=True, exist_ok=True)
 HALF_W, HALF_H = 110, 80
 SCALE = 4
 RING_R = 3
-MAX_WORKERS = 2
+MAX_WORKERS = 3
 
 PROMPT_R1 = ("Fragment of an old scanned topographic plan; small pale "
              "decimal numbers (like 2,36 or 1,98) are ground elevations. "

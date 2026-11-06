@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "12,45|pale",
+        "reasoning_content": "Nearest label: 12,45 at bottom left near ring? Ring is center (~440,320). Nearby labels: none close. 2,36 bottom right far. So nearest... perhaps faint number near ring? 12,45 at (240,530) distance ~250. 2,36 bottom right far. Answer 12,45.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980253,
+  "id": "2026110623504933ab440656724b10",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623504933ab440656724b10",
+  "usage": {
+    "completion_tokens": 83,
+    "completion_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

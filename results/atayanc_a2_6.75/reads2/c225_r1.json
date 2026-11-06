@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,9|pale",
+        "reasoning_content": "Ring at ~ (443,320), number to right reads \"6,9\"? Looks like \"6,9\" — likely 6,9? Could be \"1,9\" first digit faint. Given hint 6 vs 8. Text shows \"6,9\" — but elevations have two decimals like 2,36. Appears \"6,9\". Hmm could be \"8,9\"? I'll answer 6,9.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976090,
+  "id": "20261106224127b179e5fed7654357",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224127b179e5fed7654357",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1021
+  }
+}

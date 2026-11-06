@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,81|pale",
+        "reasoning_content": "Number right of ring reads \"2,8...\" faint—likely \"2,81\"? Text shows \"2,8?\" I'll guess 2,81? The label appears \"2,8\" + faint digit. Answer 2,81|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978570,
+  "id": "20261106232247282247a0c86c4598",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232247282247a0c86c4598",
+  "usage": {
+    "completion_tokens": 62,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 938
+  }
+}

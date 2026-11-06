@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|pale",
+        "reasoning_content": "Near ring: faint number next to ring, looks like \"2,65\"? Text near ring shows something like \"•2.85\"? There's a small label touching ring. Likely \"2,65\"|pale. I'll answer \"2,65|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976655,
+  "id": "2026110622505351b9400b053a4fa0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622505351b9400b053a4fa0",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

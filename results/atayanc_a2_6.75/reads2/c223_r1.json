@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,46|pale",
+        "reasoning_content": "Near red ring (~440,322) I see \"4,46\" nearby at ~(437,320)? There's a small number near ring. Likely \"4,46\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976084,
+  "id": "20261106224119ceb8c295e2164512",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224119ceb8c295e2164512",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

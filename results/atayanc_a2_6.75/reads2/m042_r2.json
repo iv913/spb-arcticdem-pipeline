@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Nearest to ring: label \"3,08\" just below-left; also \"243\"? \"2,43\" to right of ring. Distance: 3,08 at (~420,405), ring (440,322); 2,43 at (~475,380). Likely \"3,08\" nearest? Compute: 3.08 dist ~ sqrt(20²+83²)=85; 2,43 dist sqrt(35²+58²)=68 → 2,43 nearer. It says \".243\" maybe \"2,43\". Answer: 2,43|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983266,
+  "id": "202611070041009f28134b2106412c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070041009f28134b2106412c",
+  "usage": {
+    "completion_tokens": 139,
+    "completion_tokens_details": {
+      "reasoning_tokens": 131
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1015
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,93|pale",
+        "reasoning_content": "Ring at (~57,320). Nearby labels: 2,33 at (~255,110)? Distance ~200. 2,93 at (~240,435) ~190. No label near ring itself... labels visible: 3,90, 2,33, 2,93, 3,07, 3,3. Ring at left; nearest likely 2,93.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981447,
+  "id": "2026110700104320520e9989d0444c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700104320520e9989d0444c",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

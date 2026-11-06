@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,73|pale",
+        "reasoning_content": "Near ring there's a label like \"1,73\" or \"2,73\"? Below the ring: \"2,73\"? Text near red circle appears \"2,73\" maybe. I'll answer 2,73|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974862,
+  "id": "202611062221001320f7273d864757",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062221001320f7273d864757",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

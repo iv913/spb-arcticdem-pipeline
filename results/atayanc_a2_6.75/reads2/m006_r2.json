@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,93|cut",
+        "reasoning_content": "Near ring: text left of ring partially cut \"2,93\"? At ~(390,300) there's \"...\" partly cut by contour. Ring at (443,322). Nearest label seems \"2,93\" cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982631,
+  "id": "20261107003027a82974a796804294",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003027a82974a796804294",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 933
+  }
+}

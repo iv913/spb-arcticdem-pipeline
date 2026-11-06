@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,37|pale",
+        "reasoning_content": "Numbers near ring: 2,54 above and 2,37 below. Ring slightly below 2,37? Ring center ~ (440,322); 2,37 at ~ (455,296), 2,54 at ~ (455,272). Closest is 2,37? Distances: 2,37 ~30px, 2,54 ~55px. So 2,37, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984449,
+  "id": "202611070100465634aa92c82e4c7a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100465634aa92c82e4c7a",
+  "usage": {
+    "completion_tokens": 103,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1023
+  }
+}

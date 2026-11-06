@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,71|pale",
+        "reasoning_content": "Red ring at ~(132,322). Nearby text \"2,71\"? There's faint number right of ring. Likely 2,71.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981432,
+  "id": "20261107001030c61ffccba2c645e0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001030c61ffccba2c645e0",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 914
+  }
+}

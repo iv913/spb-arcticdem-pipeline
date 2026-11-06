@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,2|pale",
+        "reasoning_content": "Ring at ~(440,320), number seems \"1,2\"? Possibly \"1,2...\" partially hidden. Likely \"1,2\" — unclear. Best guess \"1,2\" with pale clarity?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976650,
+  "id": "20261106225047ec2befd60b244d09",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225047ec2befd60b244d09",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

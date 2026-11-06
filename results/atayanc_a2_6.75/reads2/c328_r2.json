@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,22|pale",
+        "reasoning_content": "Ring at ~ (443,320). Nearby numbers: \"3,22\" at (300,235)? distance ~150. Others: faint near ring? There may be tiny label near ring \"2,...\"? Hard. Likely a faint number at ring edge, e.g. \"2,86\"? Unclear — nothing clearly readable near ring. Closest readable is 3,22? Also \"1,04\" at (350,535), far. Answer 3,22|pale? The label nearest appears faint. I'll say 3,22|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980300,
+  "id": "20261106235136f5a71ba7c57e42c3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235136f5a71ba7c57e42c3",
+  "usage": {
+    "completion_tokens": 130,
+    "completion_tokens_details": {
+      "reasoning_tokens": 122
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1006
+  }
+}

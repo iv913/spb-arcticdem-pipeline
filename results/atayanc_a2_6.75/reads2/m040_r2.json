@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,67|pale",
+        "reasoning_content": "Near ring: \"5,67\"? Text \"6,67\"? There's \"0,557\" — near ring right side reads \"6,67\" faint. Likely \"2,67\"? It says \"↘6,67\" maybe. I'll answer 6,67|pale? First digit faint — likely \"0,67\"? Hmm. It resembles \"6,67\" with faint 6. Answer 6,67|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983262,
+  "id": "2026110700405811601ba061534769",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700405811601ba061534769",
+  "usage": {
+    "completion_tokens": 104,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 980
+  }
+}

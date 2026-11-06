@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,32|pale",
+        "reasoning_content": "Near ring: \"2,32\" nearby at ~(440,310)? There's \"2,92\" at (465,455) and \"2,32\" near ring at (440,310)? The label right next to ring reads \"2,32\"? At (437,308) there is text \"2,32\" small. I'll answer 2,32.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979013,
+  "id": "20261106233009b2bff928ed0b45a4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233009b2bff928ed0b45a4",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

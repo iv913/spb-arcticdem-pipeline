@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,77|cut",
+        "reasoning_content": "Number near ring: \"3,77\" partially overlapped by ring. Likely 3,77. Clarity: cut?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976683,
+  "id": "20261106225119a114ea5bc789407d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225119a114ea5bc789407d",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 909
+  }
+}

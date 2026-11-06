@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,54|clear",
+        "reasoning_content": "Ring at ~(442,322). Nearest number: \"2,54\" at ~(405,275) — distance ~50. Others? Likely 2,54.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983850,
+  "id": "20261107005047afd8154cc5054c2b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005047afd8154cc5054c2b",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

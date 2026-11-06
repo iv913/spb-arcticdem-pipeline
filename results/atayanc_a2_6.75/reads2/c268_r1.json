@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,14|pale",
+        "reasoning_content": "The ring near (443,322) overlaps \"3,14\"-like number partially hidden. Likely \"3,14\". Digits faint — answer 3,14|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977915,
+  "id": "20261106231153d9b0709e85654878",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231153d9b0709e85654878",
+  "usage": {
+    "completion_tokens": 48,
+    "completion_tokens_details": {
+      "reasoning_tokens": 40
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 968
+  }
+}

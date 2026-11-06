@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,44|pale",
+        "reasoning_content": "Ring at ~(444,165). Nearby \"1,44\"? text right of ring reads \",44\" partially. Likely \"1,44\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974852,
+  "id": "202611062220507dad9390261a4fd0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062220507dad9390261a4fd0",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 30
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

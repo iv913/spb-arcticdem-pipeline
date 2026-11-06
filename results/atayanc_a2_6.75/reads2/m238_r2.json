@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,14|clear",
+        "reasoning_content": "Nearest label: 2,14 near the ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983849,
+  "id": "20261107005048301e563b346640d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005048301e563b346640d8",
+  "usage": {
+    "completion_tokens": 19,
+    "completion_tokens_details": {
+      "reasoning_tokens": 12
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 895
+  }
+}

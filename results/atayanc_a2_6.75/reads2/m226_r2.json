@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,55|pale",
+        "reasoning_content": "Nearby numbers: \"3,51\" to right of ring (~600,315), \"3,55\"? above-left (~410,240), \"3,89\" below. Ring at ~442,322. Nearest: 3,51? distance ~160; 3,55 at ~410,240 ~90. Hmm \"3,5\" faint at ~410,240 could be 3,55. I'll answer 3,55|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983843,
+  "id": "20261107005039bffe387fde914b48",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005039bffe387fde914b48",
+  "usage": {
+    "completion_tokens": 111,
+    "completion_tokens_details": {
+      "reasoning_tokens": 103
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 987
+  }
+}

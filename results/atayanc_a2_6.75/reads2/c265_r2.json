@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring ~ (445,320), tiny text right of ring maybe \"2,36\"? Hard. There's faint text at ~ (455,318) \"1,56\"? I'll guess 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977908,
+  "id": "2026110623114602168dea69b94d06",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623114602168dea69b94d06",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 932
+  }
+}

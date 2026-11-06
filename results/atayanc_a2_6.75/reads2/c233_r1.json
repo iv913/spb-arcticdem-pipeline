@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,98|pale",
+        "reasoning_content": "The ring is at ~(443,320). Near it there's a small number under \"въезд\" — appears like \"6,98\" or \"2,98\"? Hard. The digits near the ring look like \"6,98\" perhaps. I'll answer 6,98|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976653,
+  "id": "20261106225050e2d2120826d7418a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225050e2d2120826d7418a",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 992
+  }
+}

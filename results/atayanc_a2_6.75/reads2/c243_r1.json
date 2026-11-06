@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,15|pale",
+        "reasoning_content": "Ring at ~(441,320). Nearest number \"1,15\" at ~(468,318)? Label \"1,15\" partially overlapped. First digit could be 1. Answer 1,15.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977268,
+  "id": "20261106230106f9e58a0516874ca9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230106f9e58a0516874ca9",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

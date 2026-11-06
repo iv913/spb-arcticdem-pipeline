@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "Near red ring at ~(443,322), faint number \"1,98\"? Text \"172B\" above. The elevation near ring appears faint like \"1,98\" partially hidden. Likely \"1,98\". Output pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975494,
+  "id": "20261106223130e0fcb7c2b2e94472",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223130e0fcb7c2b2e94472",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

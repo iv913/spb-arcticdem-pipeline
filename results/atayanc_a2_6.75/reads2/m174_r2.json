@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,43|pale",
+        "reasoning_content": "Ring at (440,320). Nearby: 3,43 at (615,375); 3,42 top (300,95). Nothing really near. Maybe there's a faint number near ring... I see none clearly. But prompt says first digit faint—likely 3,43? Distance ring to 3,43 ~180px. Hmm. Perhaps a tiny number right at ring hard to see. Likely answer 3,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983830,
+  "id": "2026110700502478e0d99e6375486c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700502478e0d99e6375486c",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 978
+  }
+}

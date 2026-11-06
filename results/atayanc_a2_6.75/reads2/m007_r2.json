@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|pale",
+        "reasoning_content": "Number near ring: \"2,89\"? Label below ring appears \"2,89\" — faint first digit, could be 2,89 or 3,89... likely 2,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982658,
+  "id": "202611070030567dac0034801647f1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030567dac0034801647f1",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 925
+  }
+}

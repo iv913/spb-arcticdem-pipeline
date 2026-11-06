@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|pale",
+        "reasoning_content": "Ring at ~(438,321). Nearest numbers? None close visible... \"2,45\" at (235,535)? \"2,44\" bottom (650,628)? Hmm, \"2,45\" near (222,533). Distance large. Maybe there's a number near the ring hidden. Possibly \"2,45\" at (222,534) — far. The 2,43/2,56 at bottom right (~690,590). Closest to ring: 2,45? Hard to tell. I'll answer 2,45|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980849,
+  "id": "20261107000030f55a0626e45d4f0d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000030f55a0626e45d4f0d",
+  "usage": {
+    "completion_tokens": 136,
+    "completion_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1056
+  }
+}

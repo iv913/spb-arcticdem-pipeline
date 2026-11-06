@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,56|pale",
+        "reasoning_content": "Near ring: label like \"3,56\"? Ring at ~ (443,320). Text \"3,56\" appears right at ring. Answer 3,56|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981458,
+  "id": "202611070010561e96d6e899da41fc",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070010561e96d6e899da41fc",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 923
+  }
+}

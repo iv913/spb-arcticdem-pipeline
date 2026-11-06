@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3.17|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearest number: \"3.17\" at ~(470,318)? Also \"2.99\" further. 3.17 to the right, closer. First digit check: could be 3.17.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977314,
+  "id": "20261106230151b34be527e47c4ae4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230151b34be527e47c4ae4",
+  "usage": {
+    "completion_tokens": 63,
+    "completion_tokens_details": {
+      "reasoning_tokens": 55
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 983
+  }
+}

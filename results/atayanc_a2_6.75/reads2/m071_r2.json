@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|clear",
+        "reasoning_content": "No decimal label near the ring; the visible \"3,38\" is far away. Answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983277,
+  "id": "20261107004115f0d63ab0a38c48fd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004115f0d63ab0a38c48fd",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 902
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,23|pale",
+        "reasoning_content": "Near ring there's \"2,23\" text to the right (\"...2,23\" visible at ~560,330). It's printed as \",23\" faint... Likely \"2,23\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984416,
+  "id": "202611070100120c0b62c262e044f1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100120c0b62c262e044f1",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 926
+  }
+}

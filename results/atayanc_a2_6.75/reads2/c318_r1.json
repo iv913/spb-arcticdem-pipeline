@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,68|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearest number to right appears \"3,68\" (digits after ring). Looks like 3,68.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980259,
+  "id": "2026110623505651179150ea534c8d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623505651179150ea534c8d",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 960
+  }
+}

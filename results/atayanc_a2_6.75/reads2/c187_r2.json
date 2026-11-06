@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No visible decimal numbers near ring; there's \"1,08\"? At ~(575,470) \"1,08\"? Ring at ~(190,318). Nearest readable decimal seems \"1,08\" far away. Nothing near readable → NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974866,
+  "id": "20261106222102b54b5842bf174b81",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222102b54b5842bf174b81",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 54
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 935
+  }
+}

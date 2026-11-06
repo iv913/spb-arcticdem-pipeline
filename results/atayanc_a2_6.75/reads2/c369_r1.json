@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,63|pale",
+        "reasoning_content": "Ring at ~(443,322), nearest number \"2,63\" to right at ~(465,318). First digit faint—2? Likely 2,63.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982655,
+  "id": "20261107003053ca7f5d943c6c411b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003053ca7f5d943c6c411b",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

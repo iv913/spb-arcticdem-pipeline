@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,3|pale",
+        "reasoning_content": "Ring at ~(443,320). Nearby number \"?3\" partially under ring — looks like \"3\" visible next to ring; maybe \"2,3\"? Hard. Likely \"2,3\" faint. Answer: 2,3|pale? Text shows \"?5\" unclear... I'll guess \"2,3|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977289,
+  "id": "202611062301265281906d37864499",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062301265281906d37864499",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 955
+  }
+}

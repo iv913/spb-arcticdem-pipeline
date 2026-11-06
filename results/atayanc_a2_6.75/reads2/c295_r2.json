@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,32|pale",
+        "reasoning_content": "Red ring at ~(440,322). Nearest label appears \"2,32\"? Text right of ring \"2,3?\" — likely \"2,32\". Answer 2,32|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979068,
+  "id": "202611062331057349053131cb4491",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062331057349053131cb4491",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 928
+  }
+}

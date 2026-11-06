@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,71|pale",
+        "reasoning_content": "Ring at ~(441,322). Nearby numbers: 2,71 at (365,287) and a tiny mark near ring. Closest visible number: 2,71.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978578,
+  "id": "20261106232251c5d7b12726574413",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232251c5d7b12726574413",
+  "usage": {
+    "completion_tokens": 48,
+    "completion_tokens_details": {
+      "reasoning_tokens": 40
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 968
+  }
+}

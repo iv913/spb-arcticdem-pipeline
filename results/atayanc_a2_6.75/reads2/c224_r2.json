@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,25|cut",
+        "reasoning_content": "Near ring there's \"1,25\" to the right? Faint number next to ring: appears \"1,25\" partially cut. Answer 1,25|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976087,
+  "id": "202611062241258e8995eeb7064f37",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062241258e8995eeb7064f37",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

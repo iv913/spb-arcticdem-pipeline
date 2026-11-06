@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,84|pale",
+        "reasoning_content": "Nearest numbers: 2,36 (left of ring) and 2,8? at (490,292) \"2,84\"? Ring at ~(443,322). Distance to 2,36 (~310,292): large. To 2,84 (~490,292): ~50. So 2,84. Digit check: could be 2,86? Looks \"2,84\". Pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980266,
+  "id": "2026110623510293409290b193469b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623510293409290b193469b",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1022
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,63|pale",
+        "reasoning_content": "Number near ring at ~(443,320): looks like \"2,63\" — could be \"2,69\"? First digit faint. Likely 2,63.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977285,
+  "id": "202611062301239b84f29d8cbc4a57",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062301239b84f29d8cbc4a57",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

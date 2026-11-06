@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Red ring at ~(57,321). Nearest number? \"2,95\" at ~(240,435) far. There's a faint number near ring? Not clearly visible. Numbers: 3,90; 2,9?; 1,07; 2,95... None close to ring. Likely unreadable → NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981443,
+  "id": "2026110700103998f521b438324ade",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700103998f521b438324ade",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 998
+  }
+}

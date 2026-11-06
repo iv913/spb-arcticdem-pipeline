@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,63|pale",
+        "reasoning_content": "Near ring there's a tiny number left of it around (425,320): looks like \"3,63\" or similar. The number just left of red ring appears faint. I'll answer 3,63.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977316,
+  "id": "20261106230150b987516e75ef4796",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230150b987516e75ef4796",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 929
+  }
+}

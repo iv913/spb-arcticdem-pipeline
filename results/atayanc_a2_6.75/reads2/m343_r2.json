@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring: \"2,36\"? label right of ring reads like \"2,36\". It looks \"2,36\" — but could be \"1,36\". Given faint first digit... likely 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984445,
+  "id": "20261107010041abe0300bd25c4bde",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010041abe0300bd25c4bde",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 930
+  }
+}

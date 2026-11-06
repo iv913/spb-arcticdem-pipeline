@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,49|pale",
+        "reasoning_content": "Ring at ~(444,320). Nearest number \"2,49\" at ~380,318. First digit 2, verify: \"2,49\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978566,
+  "id": "20261106232243b36720e5feb544fa",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232243b36720e5feb544fa",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

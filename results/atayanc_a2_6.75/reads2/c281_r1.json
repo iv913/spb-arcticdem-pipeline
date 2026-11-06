@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,72|pale",
+        "reasoning_content": "Near ring there's \"4,7\" partially covered? Ring at ~(440,322). Nearby text \"4,?2\" — looks like \"4,72\" with ring overlapping. Nearest number appears \"4,72\" (faint). First digit 4. Output 4,72|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978589,
+  "id": "202611062323046ac7867f66c249f7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062323046ac7867f66c249f7",
+  "usage": {
+    "completion_tokens": 76,
+    "completion_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 996
+  }
+}

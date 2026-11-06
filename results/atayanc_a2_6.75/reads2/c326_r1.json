@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,05|clear",
+        "reasoning_content": "Ring near \"2,05\" — digits: 2,05.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980286,
+  "id": "20261106235124ae82b23b37b54bdd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235124ae82b23b37b54bdd",
+  "usage": {
+    "completion_tokens": 22,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 942
+  }
+}

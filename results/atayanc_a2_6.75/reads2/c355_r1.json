@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,96|clear",
+        "reasoning_content": "Ring at ~(442,323). Nearest number: 2,96 at (390,283)? Distance ~60. There's a faint number partially under ring — \"1,5\"? Under ring appears something cut. Likely \"2,96\". Check digits: 2,96 clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982072,
+  "id": "20261107002108d233b58328d84d6b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002108d233b58328d84d6b",
+  "usage": {
+    "completion_tokens": 71,
+    "completion_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

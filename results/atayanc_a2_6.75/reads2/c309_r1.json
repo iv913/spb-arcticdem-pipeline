@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No elevation number near the ring—nearest numbers are far. Answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979696,
+  "id": "202611062341337a009e8f783f4a8e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062341337a009e8f783f4a8e",
+  "usage": {
+    "completion_tokens": 20,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "No elevation number visibly near the ring; the ring sits among dots. Answer NA|cut? Clarity: unclear. I'll say NA|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980865,
+  "id": "2026110700010293f0b2f3e0034fe8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700010293f0b2f3e0034fe8",
+  "usage": {
+    "completion_tokens": 38,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

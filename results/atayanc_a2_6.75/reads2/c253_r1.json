@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,01|pale",
+        "reasoning_content": "Red ring at ~(444,322). Nearest number appears at (455,330)-ish \"0,01\"? There's faint text next to ring. Possibly \"2,01\"? Numbers: 3,07 far; 3,30 far. Near ring there seems to be small text overlapping. Likely \"0,01\"? Hard. The digits right of ring faint — perhaps \"2,01\". I'll answer 2,01 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977306,
+  "id": "202611062301404a1633cf85ac444b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062301404a1633cf85ac444b",
+  "usage": {
+    "completion_tokens": 103,
+    "completion_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1023
+  }
+}

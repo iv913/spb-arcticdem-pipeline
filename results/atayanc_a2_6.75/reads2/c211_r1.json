@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Ring at ~(627,323). Nearby number to its right partially cut, looks like \"2,36\"? Text next to ring appears \"2,36\" faint. I'll answer 2,36|pale? There's \"2,36\" barely visible right of ring, likely cut. Answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975512,
+  "id": "202611062231481630435a53f74344",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231481630435a53f74344",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

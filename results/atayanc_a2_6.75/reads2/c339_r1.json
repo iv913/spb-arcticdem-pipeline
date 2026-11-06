@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No elevation number near the ring. Nearest numbers: 2,99 up-left, 2,87 right, 3,00 left. Ring center near \"дом приро...\" text. No number adjacent—likely unreadable? Closest number... The ring may overlap nearest number, but here none. So NA|cut? Clarity word: clear/pale/cut describes legibility. Answer NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980912,
+  "id": "202611070001484d5b4b8f12234e03",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070001484d5b4b8f12234e03",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

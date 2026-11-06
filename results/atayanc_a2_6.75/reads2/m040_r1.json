@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,657|pale",
+        "reasoning_content": "Near ring there's \"5,557\"? Actually text \"5,657\" near ring at right. The ring at ~(443,322); nearest number appears \"5,657\" at ~(530,322)? That's far. Closer might be nothing. Possibly number partially cut. I'll answer 5,657|pale? Clarity: clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983260,
+  "id": "2026110700405725aa9c164fb24e66",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700405725aa9c164fb24e66",
+  "usage": {
+    "completion_tokens": 91,
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1011
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,40|clear",
+        "reasoning_content": "Near ring: \"1,40\" just right below ring. Answer 1,40|clear? The first digit faint—could be 1,40. Output.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984436,
+  "id": "202611070100292ced4824608a46b0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100292ced4824608a46b0",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 918
+  }
+}

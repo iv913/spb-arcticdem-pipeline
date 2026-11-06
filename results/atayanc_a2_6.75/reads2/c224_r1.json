@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,35|pale",
+        "reasoning_content": "Red ring at ~(443,318). Number near \"1,35\"? There's \"1,35\" at (437,310)-ish — looks like \"1,35\" or \"1,36\". The ring overlaps digits. Likely \"1,35\" faint. First digit: 1. Value maybe 1,35.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976088,
+  "id": "20261106224124c4169e02d6d54020",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224124c4169e02d6d54020",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

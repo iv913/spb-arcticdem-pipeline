@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,90|pale",
+        "reasoning_content": "The red ring at ~ (442,320). Nearest numbers: 2.30 at (455,222)? and 2.85 at (585,355). Distance to \"2,90\"? Actually \"2,90\" near (460,225). Distance ~100 px. \"2,85\" at (585,358): ~150. Hmm also nothing closer. So 2,90.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985014,
+  "id": "20261107011008eb85996f9b324653",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107011008eb85996f9b324653",
+  "usage": {
+    "completion_tokens": 99,
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1019
+  }
+}

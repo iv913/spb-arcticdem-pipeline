@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,80|pale",
+        "reasoning_content": "Near the ring: there's a small number right at ring, likely \"1,98\"? The ring is at ~ (440,320). Nearby numbers: \"2,80\" at (445,235), \"1,98\"? There's tiny text right of ring. Closest visible elevation: 2,80 above. Also \"3,33\" at (545,185). Likely answer 2,80, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979008,
+  "id": "2026110623300588e68cbbd2e54997",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623300588e68cbbd2e54997",
+  "usage": {
+    "completion_tokens": 99,
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1019
+  }
+}

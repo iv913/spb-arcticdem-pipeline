@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,52|pale",
+        "reasoning_content": "Nearest number to ring centre (~440,320): \"2,52\" partially under ring at (470,318)? Ring overlaps digits; likely \"2,52\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982087,
+  "id": "2026110700212450e0d92ab4824639",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700212450e0d92ab4824639",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

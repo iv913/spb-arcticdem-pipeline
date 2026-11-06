@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,81|pale",
+        "reasoning_content": "Number near ring: \"2,81\" right of ring at ~(470,322). Looks like 2,81.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978568,
+  "id": "20261106232246f876ed1f250e4558",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232246f876ed1f250e4558",
+  "usage": {
+    "completion_tokens": 35,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 955
+  }
+}

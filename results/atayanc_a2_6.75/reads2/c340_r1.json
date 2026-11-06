@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|pale",
+        "reasoning_content": "Red ring around x~95,y~318. Nearest number: \"2,65\"? There's \".65\" right at ring, and 2,65 below. Likely number 2,65.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981483,
+  "id": "20261107001122e12e86c9ee2f42d2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001122e12e86c9ee2f42d2",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 971
+  }
+}

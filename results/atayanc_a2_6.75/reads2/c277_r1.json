@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|cut",
+        "reasoning_content": "Near ring there's a number partially cut, like \"2,36\" at ~430,320. The ring overlaps digits. Hard to read; looks like \"2,36\" partially. Answer 2,36 with clarity cut? The number seems mostly hidden by ring/pale. Likely \"2,36\"? I'll say 2,36|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978572,
+  "id": "202611062322489d3bfc1c2b7d4ab5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062322489d3bfc1c2b7d4ab5",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1001
+  }
+}

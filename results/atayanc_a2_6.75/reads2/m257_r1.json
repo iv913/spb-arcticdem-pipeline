@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,01|pale",
+        "reasoning_content": "Nearest numbers: \"5,01\" at ~ (240,322) vs ring at (140,323); also something near left \"3,6\"? The \"5,01\" distance ~95; left text at (85,265) ~75? It shows \"C.6 4\" — unclear. The ring likely marks 5,01.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983861,
+  "id": "202611070050585d69a14821ab4108",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070050585d69a14821ab4108",
+  "usage": {
+    "completion_tokens": 86,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1006
+  }
+}

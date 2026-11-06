@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2.86|clear",
+        "reasoning_content": "Nearest labels: 2.86 at (~245,318), 3.09 at (~545,467), 3.03 at (~630,268). Ring at (~440,322). Distance to 2.86 ~195; 3.03 ~195... 3.03 text at ~610-635, distance ~180. 2.86 number at ~235-270 x. Ring x=440. 2.86 ~ 170-190; 3.03 ~ 185. Close. Likely answer \"2.86|clear\"? Hmm faint first digit hint. The nearest seems 2.86.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984459,
+  "id": "202611070100535e049ad7260d4109",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100535e049ad7260d4109",
+  "usage": {
+    "completion_tokens": 149,
+    "completion_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1025
+  }
+}

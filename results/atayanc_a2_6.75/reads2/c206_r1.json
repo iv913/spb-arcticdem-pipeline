@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|pale",
+        "reasoning_content": "Number near ring appears to be ~\"2,98\"? There's a digit right at ring. Ring at (443,320). Nearby \"...\" to the right \"2,98\"? The text right of ring looks like \"3,98\"? Hard. Faint marks near ring: appears \"2,98\" or \"3,98\". I'll answer 2,98? Risky. There's a character overlapped by ring; right side shows \"8\". Could be \"1,98\". Answer \"2,98|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975494,
+  "id": "20261106223124a87c354685ec4da9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223124a87c354685ec4da9",
+  "usage": {
+    "completion_tokens": 121,
+    "completion_tokens_details": {
+      "reasoning_tokens": 113
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1041
+  }
+}

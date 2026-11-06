@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,98|pale",
+        "reasoning_content": "There's a small number near ring, looks like \"1,98\" faint. The ring overlaps digits; nearest number maybe \"1,98\" at ring. Hard to see. I'll guess 1,98? Actually near ring at (440,322) there seems \"1,98\" printed just left. Choose \"1,98|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978563,
+  "id": "20261106232238b2b5eb81d2d643d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232238b2b5eb81d2d643d8",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1004
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,75|pale",
+        "reasoning_content": "Nearest to ring (~440,322): \"3,23\" at (255,297)? and \"3,35\" at (295,327). Ring at (440,322). Distances: 3,35 ~145; 3,57 ~150; 3,75 ~120. \"3,75\" at (525,378): dist ~100. Likely 3,75.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983840,
+  "id": "2026110700503608588e716a824f28",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700503608588e716a824f28",
+  "usage": {
+    "completion_tokens": 101,
+    "completion_tokens_details": {
+      "reasoning_tokens": 93
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

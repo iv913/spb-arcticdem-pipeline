@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,71|pale",
+        "reasoning_content": "Near ring there's a tiny mark \"2,71\"? There's \"2,71\" left at (355,285). Ring at (442,322) has a tiny label touching it—faint first digit, likely \"2,71\" or \"3,...\". The mark left of ring appears like small \"2,71\"? I'll answer 2,71.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978576,
+  "id": "20261106232252b699826a810940e6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232252b699826a810940e6",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

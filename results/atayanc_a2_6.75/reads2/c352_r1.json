@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,77|pale",
+        "reasoning_content": "Ring at ~(468,320). Nearest number: \"2,77\" at ~(355,325)? That's ~110px away. Also there's something right at ring maybe hidden. Likely 2,77.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981470,
+  "id": "202611070010575ca388013ddd49c8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070010575ca388013ddd49c8",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

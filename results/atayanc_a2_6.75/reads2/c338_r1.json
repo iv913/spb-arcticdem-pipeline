@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,98|pale",
+        "reasoning_content": "Near red ring at ~(443,321). Closest elevation number? There's \"2,98\" nearby at (470,300)? Actually \"20.85\" is a street label. The number near the ring... I see \"2,98\" possibly at right of ring. Hard. There appears a small number near ring—\"2,98\"? I'll answer 2,98 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980880,
+  "id": "202611070001160603a6fece9c45ba",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070001160603a6fece9c45ba",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1012
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Ring at ~(443,322). Nearby text \"...2\" right of ring, unclear. Likely a number partially hidden. Hard to read—possibly \"2,...\" Faint. I'll say NA? The prompt hints first digit faint. Text right of ring looks like \"2\" partially cut. Could be \"1,98\"? Guess \"2,12\"? Best: NA? There's something at ring edge. I'll answer NA|cut? Actually visible tiny marks near ring suggest a number overlapping ring, cut. Answer: NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978577,
+  "id": "20261106232250a8746ef35c9a44de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232250a8746ef35c9a44de",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 113
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 994
+  }
+}

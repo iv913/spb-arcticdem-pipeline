@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,2|cut",
+        "reasoning_content": "Near ring: number partially cut by ring, reads \"3,2...\" maybe \"1,2\"? Faint first digit. Likely \"1,22\"? Ring at ~443,323; text \"2\" to right. Likely \"1,2\". Answer \"1,2\"? Could be \"3,22\". I'll say 1,2|cut? Number appears touching ring, first digit faint. Output \"1,2|pale\"? Hmm. Given cut by ring, answer \"1,2|cut\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976656,
+  "id": "202611062250480c63aaffa8ee404a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250480c63aaffa8ee404a",
+  "usage": {
+    "completion_tokens": 117,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 993
+  }
+}

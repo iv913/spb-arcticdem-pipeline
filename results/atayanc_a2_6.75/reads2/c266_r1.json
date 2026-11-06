@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring at (444,322), there's a number overlapping the ring — appears like \"2,36\"? Below at (420,352) \"2,28\"? The ring overlaps a small number right at it. Hard. Likely \"3,49\"? at (510,293) \"3,49\"? The closest printed number overlapping ring... I'll answer 2,36 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977911,
+  "id": "202611062311460424524c036946b6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062311460424524c036946b6",
+  "usage": {
+    "completion_tokens": 93,
+    "completion_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1013
+  }
+}

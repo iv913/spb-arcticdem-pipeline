@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,85|pale",
+        "reasoning_content": "Nearest labels: 1,85 (near ring) and 1,72. Ring at ~(443,322); 1,85 at ~(640,330) far; 1,72 at ~(595,378). Hmm both far. Nothing touches. But likely answer 1,85.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984412,
+  "id": "20261107010009fe9eeb577efd4d85",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010009fe9eeb577efd4d85",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

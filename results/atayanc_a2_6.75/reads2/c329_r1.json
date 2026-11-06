@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Ring near a faint number that looks like \"2,36\"? The text near ring reads \"...36\" — likely 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980834,
+  "id": "2026110700003057953cd9a7674534",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700003057953cd9a7674534",
+  "usage": {
+    "completion_tokens": 36,
+    "completion_tokens_details": {
+      "reasoning_tokens": 28
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 956
+  }
+}

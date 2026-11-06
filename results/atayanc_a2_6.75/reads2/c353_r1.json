@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "7,25|clear",
+        "reasoning_content": "Ring at ~(443,318), number to right appears \"7,25\"? Common values like 3,25? Digits: \"6,25\"? Likely \"7,25\". First digit faint... I'll answer 7,25.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981464,
+  "id": "20261107001100daeec87f9f49498c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001100daeec87f9f49498c",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

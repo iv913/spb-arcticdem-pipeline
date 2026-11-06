@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No decimal numbers visible near ring; answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976053,
+  "id": "2026110622405031877869b6974b9a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622405031877869b6974b9a",
+  "usage": {
+    "completion_tokens": 15,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 891
+  }
+}

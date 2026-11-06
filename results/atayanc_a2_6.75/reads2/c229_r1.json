@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,38|pale",
+        "reasoning_content": "Near ring at ~(440,322), number to right \"2,38\"? Looks like \"1,38\" or \"2,38\". It appears \".38\" with faint first digit — likely 2,38.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976642,
+  "id": "2026110622503952780e48804d4589",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622503952780e48804d4589",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 975
+  }
+}

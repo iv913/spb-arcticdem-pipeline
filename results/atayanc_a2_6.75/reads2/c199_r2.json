@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Near ring: \"2,43\" faint? Text right of ring appears \"3,43\"? Likely 2,43. First digit faint. Answer 2,43|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975424,
+  "id": "20261106223020fecd1334a96b42e7",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223020fecd1334a96b42e7",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 923
+  }
+}

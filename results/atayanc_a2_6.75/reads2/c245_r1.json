@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,73|pale",
+        "reasoning_content": "Near the ring there's a number right of it, around x=490: \"1,73\"? Looks like \"1,73\" faint. I'll answer 1,73|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977277,
+  "id": "20261106230113a2b481741f3d421c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230113a2b481741f3d421c",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 970
+  }
+}

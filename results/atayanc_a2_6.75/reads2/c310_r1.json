@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearby numbers: \"2,36\" just right of ring (~455,315?) appears \"2,36\" faint. Answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979699,
+  "id": "2026110623413626f073f2ffc34aea",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623413626f073f2ffc34aea",
+  "usage": {
+    "completion_tokens": 52,
+    "completion_tokens_details": {
+      "reasoning_tokens": 44
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

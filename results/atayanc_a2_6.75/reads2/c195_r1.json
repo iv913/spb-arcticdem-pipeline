@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No elevation number visibly near the ring; there's nothing readable. Answer NA|cut? Clarity pale? The ring sits on street with no number nearby. Output NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974893,
+  "id": "20261106222130da5389fe88694db6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222130da5389fe88694db6",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 962
+  }
+}

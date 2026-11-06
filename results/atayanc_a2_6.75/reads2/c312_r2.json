@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,22|pale",
+        "reasoning_content": "Near ring: faint text right of ring at (460,320) \"5,?\" maybe \"3,22\"? It's faint \"2,22\"? Hard. There's text \"5.42\" lower left at (170,535). Nearest to ring seems faint label just right of ring, appears \"2,22\"? I'll guess \"3,22\" but first digit faint... Common answer style: \"2,22|pale\"? Ambiguous. Choose \"2,22|pale\"? Actually the faint marks \"5.y\" right of ring — could be elevation with small triangle. I'll answer 2,22|pale? Better: 3,22|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979708,
+  "id": "20261106234144b0eadbb6b87f4f38",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106234144b0eadbb6b87f4f38",
+  "usage": {
+    "completion_tokens": 155,
+    "completion_tokens_details": {
+      "reasoning_tokens": 147
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1031
+  }
+}

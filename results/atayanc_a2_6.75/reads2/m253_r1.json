@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2.41|pale",
+        "reasoning_content": "Ring at ~(537,33); nearest number below: \"2.41\" at (521,90)? There's \"1.06\" at (672,25). Closer is 2.41. Distance ~60px vs ~135. Answer 2.41, pale? digits look cut/pale—say pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983859,
+  "id": "20261107005055b504d3210e84463f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005055b504d3210e84463f",
+  "usage": {
+    "completion_tokens": 79,
+    "completion_tokens_details": {
+      "reasoning_tokens": 71
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 999
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,59|clear",
+        "reasoning_content": "Numbers visible: 2,59 near ring at ~ (365,208), ring at (440,322). Others: 5,53 top, 2,58 bottom right (~675,487), 3,03/2,83 bottom left. Nearest is 2,59.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977913,
+  "id": "202611062311512df954ea6c644ac1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062311512df954ea6c644ac1",
+  "usage": {
+    "completion_tokens": 72,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 948
+  }
+}

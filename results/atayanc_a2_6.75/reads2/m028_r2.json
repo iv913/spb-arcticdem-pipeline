@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,41|clear",
+        "reasoning_content": "Nearest label to ring: \"1,80\" at right of ring (~150px). Or \"2,41\" below (~140px). 1,80 distance ~150px horizontally, 2,41 ~140px. Ambiguous; likely \"1,80\" closer? Distance from (443,320): 1,80 at (608,365): dx165,dy45 →171. 2,41 at (325,400): dx118,dy80 →143. So 2,41 nearest. But first digit faint... \"2,41\" seems clear. Actually could be \"2,47\". It reads \"2,41\". I'll answer 2,41.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982663,
+  "id": "20261107003059de72ab81480c4605",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003059de72ab81480c4605",
+  "usage": {
+    "completion_tokens": 155,
+    "completion_tokens_details": {
+      "reasoning_tokens": 148
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1031
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,32|pale",
+        "reasoning_content": "Number next to ring: \"1,32\"? appears \"?,32\" — likely \"1,32\" partially faint.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976646,
+  "id": "202611062250443de7b8d83dfd48c4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062250443de7b8d83dfd48c4",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 25
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 909
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,02|pale",
+        "reasoning_content": "Near ring: \"+3,02\"? Ring at ~(441,320); nearest number appears \"+3,02\" at (508,496)? Actually there's a faint mark right at ring — small number near ring at (413,313) maybe. Ring at (441,320). Closest printed elevation... \"+3.02\" at ~(508,496) distance ~190. There's a faint symbol at ring. Likely answer 3,02.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977895,
+  "id": "202611062311317d6a57afb6ee48ed",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062311317d6a57afb6ee48ed",
+  "usage": {
+    "completion_tokens": 109,
+    "completion_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1029
+  }
+}

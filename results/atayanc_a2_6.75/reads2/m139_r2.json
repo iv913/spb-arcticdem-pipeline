@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,84|clear",
+        "reasoning_content": "Nearest number: \"1,84\" next to ring (right side, bold-ish). Looks like \"1,84\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983285,
+  "id": "2026110700412330402d4e64ba4894",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700412330402d4e64ba4894",
+  "usage": {
+    "completion_tokens": 33,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 909
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,87|pale",
+        "reasoning_content": "Number near ring appears \"2,87\"? Text right of ring: \"2,87\" possibly. Faint first digit... answer 2,87.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977880,
+  "id": "20261106231117d256d5ea6a444b66",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231117d256d5ea6a444b66",
+  "usage": {
+    "completion_tokens": 40,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 916
+  }
+}

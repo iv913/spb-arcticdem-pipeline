@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,08|pale",
+        "reasoning_content": "Near ring: label just left of ring reads \"3,08\"? Also \"4,41\" right? The ring overlaps a number at ~\"3,03\"? Text near ring: \"3.08\" to left, and something under ring. Likely answer 3,08|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978567,
+  "id": "2026110623224595b59eabf380459d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623224595b59eabf380459d",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 945
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near the ring there's a faint number touching it, around (430,320): appears \"2,36\"? Hard. The ring at ~443,322; number to its left. Likely \"2,36\". Faint first digit... I'll answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977916,
+  "id": "20261106231153a4c43f20cc91444f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231153a4c43f20cc91444f",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 946
+  }
+}

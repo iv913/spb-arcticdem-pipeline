@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,81|pale",
+        "reasoning_content": "Red ring at ~(442,320). Nearest label \"2,81\" (or 2,81?) right of ring \"0,81\"? Likely \"2,81\". First digit faint → 2,81.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980274,
+  "id": "20261106235111f8ca228e8b5a4124",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235111f8ca228e8b5a4124",
+  "usage": {
+    "completion_tokens": 55,
+    "completion_tokens_details": {
+      "reasoning_tokens": 47
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 931
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "Ring at (597,321). Nearby numbers? There's \"2,42\" at bottom (~575,588) — far. Near ring there seems a faint number just right of ring? Possibly \"2,36\"? There appears tiny text near ring at (620,315)? Hard. I see a small mark right of ring. Answer: NA|pale? Actually there seems \"1,36\"? Not readable.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975513,
+  "id": "202611062231490376d74e21b34396",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231490376d74e21b34396",
+  "usage": {
+    "completion_tokens": 97,
+    "completion_tokens_details": {
+      "reasoning_tokens": 91
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 973
+  }
+}

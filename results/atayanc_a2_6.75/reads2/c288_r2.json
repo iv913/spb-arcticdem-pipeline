@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,15|cut",
+        "reasoning_content": "Near ring at (~440,320): number \"4,15\" partially cut by ring — reads \",15\" near it. First digit faint. Likely \"4,15\". But could be \"3,15\"? The ring covers digit. Given \"2,39\" below. Answer 4,15|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979020,
+  "id": "202611062330171821fa48b3374f35",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062330171821fa48b3374f35",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

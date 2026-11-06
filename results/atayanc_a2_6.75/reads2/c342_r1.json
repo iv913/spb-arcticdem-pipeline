@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,36|pale",
+        "reasoning_content": "Near ring: \"4,36\"? The number at ~415,315 reads \".3,36\"? Looks like \"4,36\" with ring after. Likely 4,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981433,
+  "id": "20261107001031ec61c6bf3d094500",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001031ec61c6bf3d094500",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

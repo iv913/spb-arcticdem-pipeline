@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No decimal elevation near ring visible; small \"3.45\" at bottom left (340,560) far from ring. Answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974890,
+  "id": "20261106222127218985350c7d4183",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222127218985350c7d4183",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

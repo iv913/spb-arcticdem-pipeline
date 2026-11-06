@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "The ring at ~(440,320). Labels nearby: \"3,22\" at top right; faint \"2,36\"-like near ring — text right of ring looks like \"36\" possibly \"2,36\". Answer 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976062,
+  "id": "20261106224100d4b5f86de3764c17",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224100d4b5f86de3764c17",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 936
+  }
+}

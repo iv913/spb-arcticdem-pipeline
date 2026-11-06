@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Ring near \"2,43\" just below/left, and \"2,41\" nearby. Ring at ~(441,322); numbers \"2,43\" at ~ (420,330) and \"2,41\" at (300,285). Closest is 2,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982081,
+  "id": "20261107002112ac37fcc12e2c49d3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002112ac37fcc12e2c49d3",
+  "usage": {
+    "completion_tokens": 70,
+    "completion_tokens_details": {
+      "reasoning_tokens": 62
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 990
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Near ring (~440,320): nearest label? There's a \"2,75\" at (510,185)? Distance far. Small numbers near ring: none visible close. Maybe faint number at (440,320) inside ring? Possibly \"5,60\" lower. Answer likely NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974897,
+  "id": "2026110622213323b7178614dc4a58",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622213323b7178614dc4a58",
+  "usage": {
+    "completion_tokens": 68,
+    "completion_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 944
+  }
+}

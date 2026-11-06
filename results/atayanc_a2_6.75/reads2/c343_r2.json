@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,50|pale",
+        "reasoning_content": "Nearest is 3,50 above ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981435,
+  "id": "20261107001034b1b8e02ab46b4ad9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001034b1b8e02ab46b4ad9",
+  "usage": {
+    "completion_tokens": 18,
+    "completion_tokens_details": {
+      "reasoning_tokens": 10
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 894
+  }
+}

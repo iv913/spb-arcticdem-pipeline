@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,27|clear",
+        "reasoning_content": "Numbers near ring: 3,27 above, 3,08 right, 3,18 below. Nearest likely 3,27 touching ring.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979041,
+  "id": "20261106233039228038f7486f4e18",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233039228038f7486f4e18",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 32
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

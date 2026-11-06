@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,805|pale",
+        "reasoning_content": "Near the ring there's \"6805\" — likely \"6,805\"? But decimal labels like 2,36. The text near ring reads \"6805\" faint. Probably \"6,805\"? Transcribe exactly: 6,805.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980916,
+  "id": "20261107000152637dc3a61c5d4f95",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000152637dc3a61c5d4f95",
+  "usage": {
+    "completion_tokens": 65,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 941
+  }
+}

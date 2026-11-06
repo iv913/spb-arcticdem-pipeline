@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,71|cut",
+        "reasoning_content": "Near ring: \"?,71\" — likely 2,71 partially cut by ring. Ring overlaps digits. First digit unclear; could be 2,71. Answer: 2,71|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982071,
+  "id": "20261107002108d81aa31ce9fb4ecb",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002108d81aa31ce9fb4ecb",
+  "usage": {
+    "completion_tokens": 49,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 969
+  }
+}

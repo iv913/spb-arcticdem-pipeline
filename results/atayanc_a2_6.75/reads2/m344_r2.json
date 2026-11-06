@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,20|clear",
+        "reasoning_content": "Nearest label to red ring: \"2,20\" nearby? There's \"2,20\" below-right of ring inside white patch. Answer 2,20.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984446,
+  "id": "202611070100435a6572268a664f5a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100435a6572268a664f5a",
+  "usage": {
+    "completion_tokens": 42,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 918
+  }
+}

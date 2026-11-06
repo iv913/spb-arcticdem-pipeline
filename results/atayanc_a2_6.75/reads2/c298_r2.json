@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring there's a tiny label right at the ring, appears like \"2,36\"? Hard. There's a number to the right of ring, faint. Likely \"3,06\"? I'll answer \"2,36|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979077,
+  "id": "202611062331133ee312304b494acd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062331133ee312304b494acd",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

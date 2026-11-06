@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Ring at ~(443,321). Nearest numbers: none clearly adjacent; maybe \"2,89\" at (170,570) far. There's \"жн\" text near ring. Possibly elevation near ring faint... Others: 2,72 top-left, 2,08 top, 2,58 bottom right. Closest to ring could be a faint number just at ring — appears cut/unreadable. The ring overlaps something at (445,325)? Looks like small mark. I'll answer NA|cut? The ring sits on a tiny dot perhaps a number cut by building edge. Answer: NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979717,
+  "id": "20261106234153b03e53b61cce45a3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106234153b03e53b61cce45a3",
+  "usage": {
+    "completion_tokens": 139,
+    "completion_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1059
+  }
+}

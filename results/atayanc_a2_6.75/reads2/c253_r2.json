@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,01|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby: \"3,01\"? To the right there's \".01\"-ish at ~470,325. Also \"+3,30\" at (660,393), \"2,99\" bottom, \"2,42\" top. Nearest appears \"3,01\"? There's text near ring right side, faint \"3,01\". Answer 3,01|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977310,
+  "id": "20261106230145e4333f71cde84133",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230145e4333f71cde84133",
+  "usage": {
+    "completion_tokens": 100,
+    "completion_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

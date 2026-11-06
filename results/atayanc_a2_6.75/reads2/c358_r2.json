@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,50|pale",
+        "reasoning_content": "Nearest label \"2,50\" left of ring — appears \"2,50\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982026,
+  "id": "202611070020158681e22bce4a4bc5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070020158681e22bce4a4bc5",
+  "usage": {
+    "completion_tokens": 26,
+    "completion_tokens_details": {
+      "reasoning_tokens": 18
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 902
+  }
+}

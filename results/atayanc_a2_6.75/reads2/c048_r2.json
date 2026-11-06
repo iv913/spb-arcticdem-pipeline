@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,07|pale",
+        "reasoning_content": "Number near ring reads \".07\" — likely 2,07 with faint first digit. Answer 2,07|pale? First digit faint — \"pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974853,
+  "id": "20261106222050dce7fe3622884674",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222050dce7fe3622884674",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 919
+  }
+}

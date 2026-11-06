@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,72|pale",
+        "reasoning_content": "Ring at ~(438,320). Nearest numbers: \"1,72\" at (~600,375), \"1,85\" at (~640,330). Ring is far from both... closest is 1,72.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983869,
+  "id": "20261107005107cdecc99dab5e40f3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005107cdecc99dab5e40f3",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

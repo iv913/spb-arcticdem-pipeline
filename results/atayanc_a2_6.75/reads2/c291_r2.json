@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,73|pale",
+        "reasoning_content": "Ring at right; nearby number \"3,7...\"? Beside ring left there is a faint number touching it. Looks like \"3,73\" above and one intersecting the ring. Likely \"3,72\"? The faint one near ring: \"3,7?\" — answer 3,73? The number overlapping ring appears to start with 3. I'll answer 3,73.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979057,
+  "id": "20261106233048e063485dd6594845",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233048e063485dd6594845",
+  "usage": {
+    "completion_tokens": 90,
+    "completion_tokens_details": {
+      "reasoning_tokens": 82
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

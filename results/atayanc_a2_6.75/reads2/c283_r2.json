@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,10|pale",
+        "reasoning_content": "Near ring: \"4,10\" nearby? Ring at (443,320). Text right of ring partly cut. Nearby labels: \"4,10\" at ~(360,390), \"3,81\". Nearest seems number partially cut at ring — maybe \"6,93\"? Unclear. \"4,10\" appears closest readable.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980907,
+  "id": "202611070001405d216546fa1e457b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070001405d216546fa1e457b",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 956
+  }
+}

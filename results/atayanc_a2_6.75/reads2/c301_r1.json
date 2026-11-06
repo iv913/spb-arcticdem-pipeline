@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|pale",
+        "reasoning_content": "The red ring at left edge (~25,320). Nearest number? There's \"2,45\" and \"2,65\" near (100,460), \"2,71\" at (150,540). Ring at (25,320). Closest elevation... \"2,45\" distance ~ sqrt(75²+140²)=159. Hard to say; likely answer 2,45 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979662,
+  "id": "202611062340594c9c9ff8c1fa4bf9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062340594c9c9ff8c1fa4bf9",
+  "usage": {
+    "completion_tokens": 95,
+    "completion_tokens_details": {
+      "reasoning_tokens": 87
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1015
+  }
+}

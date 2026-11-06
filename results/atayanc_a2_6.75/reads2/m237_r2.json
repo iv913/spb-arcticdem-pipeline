@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,14|pale",
+        "reasoning_content": "Ring at ~(443,321). Nearest numbers: 2,14 at (630,455)? 2,49 at (225,455)? Hmm closer: 2,14. There's also faint near ring? No obvious decimal near. 2,14 distance ~190; others ~220. Answer 2,14.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983847,
+  "id": "20261107005044d8fb2887c50c4986",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005044d8fb2887c50c4986",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

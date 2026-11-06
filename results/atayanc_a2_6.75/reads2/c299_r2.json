@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,95|pale",
+        "reasoning_content": "Ring at (~46,322). Nearby label \"?95\" just right of ring, first digit faint — likely 2,95. Answer 2,95|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979084,
+  "id": "202611062331164c84aab0ce674179",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062331164c84aab0ce674179",
+  "usage": {
+    "completion_tokens": 45,
+    "completion_tokens_details": {
+      "reasoning_tokens": 37
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 921
+  }
+}

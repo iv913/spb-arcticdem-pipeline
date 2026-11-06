@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,22|pale",
+        "reasoning_content": "The red ring sits near road; nearest number appears around it—there's a faint \"1,22\" or similar near ring? I see \"1,22\" maybe left of ring? Hard. The ring at ~(440,320). Nearby text: there's small \"1,22\" at ~470,320? Actually to the right there's \"1.22\" faint at (575,320)? I'll guess 1,22... Uncertain; output NA? Better guess \"1,22\" pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984429,
+  "id": "202611070100211feafef83e2343b4",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100211feafef83e2343b4",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 110
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1038
+  }
+}

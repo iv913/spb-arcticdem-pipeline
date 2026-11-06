@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,82|pale",
+        "reasoning_content": "Near ring there's a number touching: \"9,82\"? The label appears at ring: \"?,82\". Faint first digit — likely \"2,82\"? It looks like \"9,82\" or \"3,82\". Given context elevations ~2-3, answer 2,82? The visible text seems \"9,82\". Faint first digit inspection: likely 2. I'll answer 2,82|pale? Hmm risky. The image shows \"9,82\" partially in red ring. First digit faint — choose 2,82? Elevations elsewhere: 2,80; 2,59; 3,39. So 2,82 plausible.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980856,
+  "id": "2026110700005050570b7ca4e946de",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700005050570b7ca4e946de",
+  "usage": {
+    "completion_tokens": 153,
+    "completion_tokens_details": {
+      "reasoning_tokens": 145
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1029
+  }
+}

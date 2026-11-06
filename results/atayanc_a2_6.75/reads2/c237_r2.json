@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "There's a faint number right at the ring, something like \"3,7\"? Possibly \"1,57\"? Hard. There appears a faint mark next to ring at ~ (470,320): \"…7\" faint. Could be \"1,67\"? Given pattern like 1,96 etc. I'll answer NA? The prompt expects something. Nearest visible: right of ring there's a faint digit \"7\" maybe \"1,7\". I'll answer 1,67? Risky. Perhaps NA|cut. Actually the number touching ring seems cut off at map edge. Answer: NA|cut? But \"nothing readable -> NA\". The faint digit could be \"1,77\". I'll go NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976674,
+  "id": "2026110622510605dd31a0b0fb45d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622510605dd31a0b0fb45d8",
+  "usage": {
+    "completion_tokens": 157,
+    "completion_tokens_details": {
+      "reasoning_tokens": 152
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1033
+  }
+}

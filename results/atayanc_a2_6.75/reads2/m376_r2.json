@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,09|pale",
+        "reasoning_content": "Number near ring: \"1,09\" appears to right of ring. Could be \"1,09\" — faint first digit. Likely 1,09|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793985012,
+  "id": "20261107011010673440443c7f438f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107011010673440443c7f438f",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,19|cut",
+        "reasoning_content": "The ring at ~(440,320) with a number right of it, partly cut, e.g. \"2,19\"? It shows \"...9\" faint. Likely \"2,19\" partially hidden. I'll answer 2,19|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982084,
+  "id": "202611070021218160559017984b0d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070021218160559017984b0d",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 936
+  }
+}

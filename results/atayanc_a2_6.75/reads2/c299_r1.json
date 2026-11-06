@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,06|pale",
+        "reasoning_content": "Red ring at ~(46,320). Nearest number partially hidden \"…,06\"? To the right of ring there's something like \",06\" at ~(95,320). Also \"3,05\" at ~(370,320). The number at ring seems \"...06\" — digits obscured. Likely \"2,06\" with first digit hidden. Faint first digit; guess \"2,06\". Clarity pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979079,
+  "id": "20261106233115d126a8571c054b43",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233115d126a8571c054b43",
+  "usage": {
+    "completion_tokens": 94,
+    "completion_tokens_details": {
+      "reasoning_tokens": 86
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1014
+  }
+}

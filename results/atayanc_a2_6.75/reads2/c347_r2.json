@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near ring there's a faint number at ~(245,300): \"2,?\" looks like \"2,36\"? The label near ring appears \"2,4?\" Also \"1,07\" nearby at (470,325). The ring at (229,322); nearest label is at (240,300)-ish faint \"2,36\"? It reads \"2,4\"? Hmm. The text next to ring looks like faint \"2,36\" maybe. I'll answer 2,36.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981449,
+  "id": "202611070010459fc9a48a2e25459e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070010459fc9a48a2e25459e",
+  "usage": {
+    "completion_tokens": 115,
+    "completion_tokens_details": {
+      "reasoning_tokens": 107
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 991
+  }
+}

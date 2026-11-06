@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,07|pale",
+        "reasoning_content": "Number near ring appears \"4,07\"? Text next to ring reads \"0,07\"? Likely \"2,07\"? Faint first digit... I'll say 2,07.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981451,
+  "id": "20261107001048eb841161f6fb412c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001048eb841161f6fb412c",
+  "usage": {
+    "completion_tokens": 46,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 922
+  }
+}

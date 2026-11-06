@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,88|cut",
+        "reasoning_content": "Number near ring appears \"3,88\"? Partially hidden by ring: \"...88\" maybe \"3,88\". The ring overlaps first digit. Answer: 3,88|pale? Say \"2,88\"? Likely \"3,88\". Clarity: cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975478,
+  "id": "202611062231121d86646a54d44365",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231121d86646a54d44365",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 57
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 940
+  }
+}

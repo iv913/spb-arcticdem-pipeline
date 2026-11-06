@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,4|pale",
+        "reasoning_content": "Near ring: \"2,64\" maybe? There's \"4,4\" near ring. Text right of ring looks like \"4,4\" or \"2,64\". Small faint. I'll answer 4,4|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979693,
+  "id": "2026110623412879dcf257dff641f5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623412879dcf257dff641f5",
+  "usage": {
+    "completion_tokens": 59,
+    "completion_tokens_details": {
+      "reasoning_tokens": 51
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 979
+  }
+}

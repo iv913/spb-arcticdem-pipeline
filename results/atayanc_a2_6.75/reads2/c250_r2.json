@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,73|pale",
+        "reasoning_content": "Red ring at ~(443,322). Nearby labels: \"2,73\" at (650,378)? \"HH,2012.78\"... near ring there's small text. Distance to \"2,73\" ~ large. Near ring maybe a faint number. Likely answer \"2,73|pale\"? Distance from ring (443,322) to 2,73 at (645,378) ~200px — not near. There's text near ring: possibly \"1,?\" Hard. I'll answer 2,73|pale? Better guess something like \"2,73\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977294,
+  "id": "20261106230130048dd5af86c54207",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230130048dd5af86c54207",
+  "usage": {
+    "completion_tokens": 138,
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1014
+  }
+}

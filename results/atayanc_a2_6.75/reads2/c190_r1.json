@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "The red ring is at (~47,318). No elevation number visible nearby — the area around ring seems blank. Nearby text? Hard to say. Probably NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974876,
+  "id": "202611062221133fbd8ff0e8f44f0e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062221133fbd8ff0e8f44f0e",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 34
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 959
+  }
+}

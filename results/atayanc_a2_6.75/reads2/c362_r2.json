@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,64|pale",
+        "reasoning_content": "Number near ring appears \"2,64\" or similar—faint first digit, likely 2,64.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982041,
+  "id": "20261107002039f2800fd2ec3b4f6e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002039f2800fd2ec3b4f6e",
+  "usage": {
+    "completion_tokens": 31,
+    "completion_tokens_details": {
+      "reasoning_tokens": 23
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 907
+  }
+}

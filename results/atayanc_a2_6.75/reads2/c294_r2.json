@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,80|pale",
+        "reasoning_content": "Near the ring, there's a label to the right (~2,36?) near coordinates around x500,y330 \"2,80\"? Hard. The faint number near ring right side: \"2,36\"? At ~ (505,330) appears \"2,80\"? I'll answer 2,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979065,
+  "id": "20261106233101b5211d2e036141f2",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106233101b5211d2e036141f2",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

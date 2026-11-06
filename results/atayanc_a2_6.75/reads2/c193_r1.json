@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,86|pale",
+        "reasoning_content": "Near the ring there's a small number left of it: appears \"1,86\" or similar at ~(425,312). The ring at ~(443,318). Number to left partially cut by dots. Likely \"1,86\". First digit faint: 1. I'll answer 1,86|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974886,
+  "id": "20261106222122bd4705a4eb5843cd",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222122bd4705a4eb5843cd",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 998
+  }
+}

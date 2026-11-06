@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|pale",
+        "reasoning_content": "No decimal elevation labels visible near ring. Answer NA|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974878,
+  "id": "20261106222115df7b55809fe44f41",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222115df7b55809fe44f41",
+  "usage": {
+    "completion_tokens": 20,
+    "completion_tokens_details": {
+      "reasoning_tokens": 14
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 896
+  }
+}

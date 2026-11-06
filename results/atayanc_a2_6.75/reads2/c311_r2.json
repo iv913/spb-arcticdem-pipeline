@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,47|pale",
+        "reasoning_content": "Number near ring appears \"2,47\"-ish; partially overlapping. It looks like \"2,47\" possibly. I'll answer 2,47|pale? It's faint—say \"2,47|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979702,
+  "id": "2026110623413955d351a5f6cd411e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110623413955d351a5f6cd411e",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 932
+  }
+}

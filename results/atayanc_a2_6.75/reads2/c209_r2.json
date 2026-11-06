@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,96|pale",
+        "reasoning_content": "Near the ring at (445,320), nearby numbers: \"1,96\" at (350,590) is far; near ring at ~(450,318) there seems \"5,90\"? No. There's something right of ring ~ (460,330) maybe \"1,3\". Hard. Nearest printed number appears maybe \"1,96\" distance ~ large. There's text at (480,310) \"Eu\"? Actually near ring there might be a faint number \"1,44\"? at (400,170)? Not near. Likely \"1,96\"? Hmm.\n\nBest guess: number just below-right of ring around (455,335) unreadable → NA? There seems \"1,44\" at top. I'll answer 1,96|pale? Distance ~200px. Alternatively there's a label right at ring. I'll go with 1,96|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975508,
+  "id": "202611062231395be2e2cb53a54726",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062231395be2e2cb53a54726",
+  "usage": {
+    "completion_tokens": 202,
+    "completion_tokens_details": {
+      "reasoning_tokens": 194
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1078
+  }
+}

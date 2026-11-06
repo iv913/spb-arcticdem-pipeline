@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,86|pale",
+        "reasoning_content": "Ring at ~(440,470). Nearby number \"2,86\" at ~(520,478). Looks like \"2,86\". First digit 2 faint? It reads \"· 2,86\". Output 2,86|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984452,
+  "id": "20261107010049e1c0cf2213a34f3e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010049e1c0cf2213a34f3e",
+  "usage": {
+    "completion_tokens": 61,
+    "completion_tokens_details": {
+      "reasoning_tokens": 53
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 981
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,9|clear",
+        "reasoning_content": "Near ring: \"6,9\"? Actually \"6,9\" — but elevations like 2,36. Nearest label \"6,9\" right of ring. Possibly \"3,71\" further. Answer 6,9.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976092,
+  "id": "202611062241281ba2ad7c41ba42ab",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062241281ba2ad7c41ba42ab",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 933
+  }
+}

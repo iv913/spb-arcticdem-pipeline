@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,68|pale",
+        "reasoning_content": "Near the ring there's faint text \"1,68\"? Something like \"1,68\" just left of ring. I'll answer 1,68|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977918,
+  "id": "20261106231156505c6fddcd46433f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106231156505c6fddcd46433f",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 919
+  }
+}

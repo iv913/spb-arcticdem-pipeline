@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,84|pale",
+        "reasoning_content": "Near ring: \"1,84\" to right. Ring at ~(442,320); number \"1,84\" at ~(500,322). Left \"2,?\" at ~390,310. Closest printed number to center: \"1,84\" distance ~55; left one ~50? Left appears \"2,7\"? hard. The right one reads \"1,84\". I'll answer 1,84|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983283,
+  "id": "202611070041181980c7973e894e07",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070041181980c7973e894e07",
+  "usage": {
+    "completion_tokens": 102,
+    "completion_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1022
+  }
+}

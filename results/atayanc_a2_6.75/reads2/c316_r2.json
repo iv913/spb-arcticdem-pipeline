@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,45|pale",
+        "reasoning_content": "Number near ring: \"2,45\" — faint first digit 2.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980254,
+  "id": "202611062350523d908bd494304619",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062350523d908bd494304619",
+  "usage": {
+    "completion_tokens": 24,
+    "completion_tokens_details": {
+      "reasoning_tokens": 16
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 900
+  }
+}

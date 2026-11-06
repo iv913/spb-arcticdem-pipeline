@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,87|pale",
+        "reasoning_content": "The ring is near a number that looks like \"2,87\"? It shows \"2,87\" partially — first digit faint. Likely 2,87.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977319,
+  "id": "20261106230156ecf27d55bf664e92",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230156ecf27d55bf664e92",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}

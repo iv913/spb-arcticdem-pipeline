@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Near ring there's a small number next to it. There's text left of ring \"2,43\"? At (415,325) something like \"2,43\" faint. I'll guess 2,43, pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979705,
+  "id": "20261106234142c49ba034f80b46f6",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106234142c49ba034f80b46f6",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

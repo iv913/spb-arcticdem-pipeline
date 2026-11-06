@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,19|pale",
+        "reasoning_content": "Ring at ~ (442,296). Nearest label: 2,19 at (530,245)? Distance ~100px. There's also 2,22 near (125,410)? Far. So 2,19 — but maybe read as 2,19.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983812,
+  "id": "202611070050073a138069c1064365",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070050073a138069c1064365",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 945
+  }
+}

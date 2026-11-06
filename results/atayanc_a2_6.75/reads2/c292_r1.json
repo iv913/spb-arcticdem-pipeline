@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,25|pale",
+        "reasoning_content": "Ring near \"2,25\" (looks like 2,25 or 2,35). Text \"2,25\" partially overlapped. Likely 2,25.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979058,
+  "id": "202611062330528d95e474067b417f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062330528d95e474067b417f",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 964
+  }
+}

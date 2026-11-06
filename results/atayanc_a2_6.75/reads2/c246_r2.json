@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,3|pale",
+        "reasoning_content": "Near ring right: \"2,3?\" appears \"2,3...\" possibly \"2,3\". Text near ring reads \"2,3\" faint. Answer \"2,3|pale\"? Hard. The label right of ring looks like \"2,3\" with faint digit. I'll answer 2,3|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977280,
+  "id": "20261106230117d7d8fe244f5e4bc1",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106230117d7d8fe244f5e4bc1",
+  "usage": {
+    "completion_tokens": 78,
+    "completion_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 954
+  }
+}

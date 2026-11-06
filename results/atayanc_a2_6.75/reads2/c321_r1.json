@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Ring at ~(444,322). Nearby faint number right of ring appears near (452,320) — hard. Visible numbers: 2,94 at (515,437), 3,52 at (290,555), 4,8 at (238,578), 3,17 at (640,152), 2,66 at (645,575), x,70 at (575,338). Closest to ring seems faint number near ring itself, unclear. Could be \"3,?\" at (450,320) — unreadable? Likely NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980271,
+  "id": "202611062351055fe68bce8b02408f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062351055fe68bce8b02408f",
+  "usage": {
+    "completion_tokens": 135,
+    "completion_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1055
+  }
+}

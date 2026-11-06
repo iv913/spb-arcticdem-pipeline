@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6.95|clear",
+        "reasoning_content": "Near ring: \"6.95\" text at ~500,315 (reads \"6,95\"?). Ring at 440,320. The nearest decimal: \"6.95\" appears just right of ring. Transcribe \"6.95\"|clear? It looks like \"6,95\" or \"6,98\". Text shows \"6.95\". Use 6.95|clear.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983257,
+  "id": "202611070040523183e04ff49a4d55",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070040523183e04ff49a4d55",
+  "usage": {
+    "completion_tokens": 90,
+    "completion_tokens_details": {
+      "reasoning_tokens": 83
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 966
+  }
+}

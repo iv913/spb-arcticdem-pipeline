@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Ring at ~(370,92). Nearest printed number? \"2,36\"? There's \"2,85\" at ~(130,355) far. Near ring, faint small text maybe \"2,36\" at ~(340,95)? Unclear. Answer likely \"2,36\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984430,
+  "id": "202611070100263aee1b2b34d44743",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100263aee1b2b34d44743",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 945
+  }
+}

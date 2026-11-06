@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,92|pale",
+        "reasoning_content": "Nearest label to ring (~440,563): 2,85 at (~680,590)? distance ~240. 2,92 at (~555,395) distance ~215. 2,59 at (~575,125). 2,92 seems closer. Transcribe \"2,92\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982611,
+  "id": "20261107003008ff461dda67f94189",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003008ff461dda67f94189",
+  "usage": {
+    "completion_tokens": 77,
+    "completion_tokens_details": {
+      "reasoning_tokens": 69
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 953
+  }
+}

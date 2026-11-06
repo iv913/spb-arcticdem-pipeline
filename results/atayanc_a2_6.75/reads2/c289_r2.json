@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,07|pale",
+        "reasoning_content": "Ring at (723,322). Nearby label \"5,07\" left of ring? Text \"5,\" at ~700,318 touching ring. Likely 3,07? \"first digit faint\". Answer 3,07.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979035,
+  "id": "202611062330318c4274ac084d49a0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062330318c4274ac084d49a0",
+  "usage": {
+    "completion_tokens": 58,
+    "completion_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 934
+  }
+}

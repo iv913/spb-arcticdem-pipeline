@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,43|pale",
+        "reasoning_content": "Near ring: \"47\" right side? Number near ring appears \"6,43\"? Text left of ring \"G.43\"? Likely \"6,43\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976070,
+  "id": "2026110622410780a8a9af1cfe4e56",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622410780a8a9af1cfe4e56",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 917
+  }
+}

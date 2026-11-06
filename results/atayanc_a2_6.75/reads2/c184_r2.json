@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,22|pale",
+        "reasoning_content": "Number near ring: \"...22\" visible right of ring, likely 3,22? Faint first digit. Answer 3,22.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974855,
+  "id": "20261106222053a99d657941124243",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222053a99d657941124243",
+  "usage": {
+    "completion_tokens": 37,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 913
+  }
+}

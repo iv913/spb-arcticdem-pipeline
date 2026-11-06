@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,03|pale",
+        "reasoning_content": "Ring at ~(470,322). Nearest number appears to the right partially cut \"6,0?\" — seems \"6,0\" possibly cut by ring. Likely \"6,03\" or similar. Hard to read; the text after ring shows faint \"6,0?\" — output 6,03? I'll guess \"6,03\" pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982022,
+  "id": "20261107002018c8554fd0ce28411f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002018c8554fd0ce28411f",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1004
+  }
+}

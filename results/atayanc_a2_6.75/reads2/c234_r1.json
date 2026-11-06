@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Ring at ~ (445,320), overlapping number \"2,45\"? It shows \"2,43\" maybe. Ring overlaps first digit; appears \"2,43\". Digit check: could be 2,43. First digit faint... likely 2,43.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976658,
+  "id": "20261106225056d4ed8fb7dd1e433c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225056d4ed8fb7dd1e433c",
+  "usage": {
+    "completion_tokens": 64,
+    "completion_tokens_details": {
+      "reasoning_tokens": 56
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 984
+  }
+}

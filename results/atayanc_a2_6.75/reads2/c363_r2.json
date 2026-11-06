@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,20|pale",
+        "reasoning_content": "The label under ring: \"2.20\"? Looks like \"2,20\" faint. It reads \"2.20\" — likely \"2,20\". Answer: 2,20|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982044,
+  "id": "202611070020410abdcae6cf9d46bf",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070020410abdcae6cf9d46bf",
+  "usage": {
+    "completion_tokens": 51,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 927
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,43|pale",
+        "reasoning_content": "Ring at ~(445,60). Nearby \"3,43\" to right. Number near ring: \"3,43\"? digits: could be 3,43. Output 3,43|pale? The ring overlaps digits maybe. I'll answer 3,43|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982658,
+  "id": "202611070030564483e8ed2fb947f5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030564483e8ed2fb947f5",
+  "usage": {
+    "completion_tokens": 69,
+    "completion_tokens_details": {
+      "reasoning_tokens": 61
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 989
+  }
+}

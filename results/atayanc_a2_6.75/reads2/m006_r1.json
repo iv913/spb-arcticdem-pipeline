@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,60|pale",
+        "reasoning_content": "Numbers near ring: at (~530,300) \"1,88\"? and near ring (~510,318) there's \"1,6...\"? Text near ring: \"1,60\" at ~505,315 partially. Ring at 440,322. Nearest numbers: \"1,88\" at 530,300 and something at 505,318 — likely \"1,60\". Distance: ring (440,322) to 530,300 ~92; to 505,318 ~65. The one overlapping? There's \"1,8\" cut at 490,318? Hard. I'll answer 1,60|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982639,
+  "id": "202611070030255977fca81fd542a8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030255977fca81fd542a8",
+  "usage": {
+    "completion_tokens": 161,
+    "completion_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1081
+  }
+}

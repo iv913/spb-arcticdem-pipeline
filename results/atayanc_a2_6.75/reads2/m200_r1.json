@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|pale",
+        "reasoning_content": "Near ring: \"2.89\" at right of ring. Distance ~ from ring (445,320) to \"2.89\" (~510,318) ~65px. Also faint \"5\" left of ring at ~480? There's a dot at ~487,322 which may be part of another number. The closest visible is 2,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983814,
+  "id": "2026110700500879f8b9176ed54ac9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700500879f8b9176ed54ac9",
+  "usage": {
+    "completion_tokens": 88,
+    "completion_tokens_details": {
+      "reasoning_tokens": 80
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1008
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,35|pale",
+        "reasoning_content": "Ring at ~(444,320); nearby faint \"3,35\"? label appears right of ring: \",35\" — likely 3,35.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980872,
+  "id": "20261107000109c017163bf26544d9",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000109c017163bf26544d9",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

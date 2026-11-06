@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Near the ring... no visible decimal number near it. \"4 КОМ\" labels around. Answer NA.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982619,
+  "id": "2026110700301718386470f9654c90",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700301718386470f9654c90",
+  "usage": {
+    "completion_tokens": 27,
+    "completion_tokens_details": {
+      "reasoning_tokens": 22
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 903
+  }
+}

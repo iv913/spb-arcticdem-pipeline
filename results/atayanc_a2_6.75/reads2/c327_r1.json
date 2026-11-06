@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "5,37|cut",
+        "reasoning_content": "Ring near (440,320), nearest number appears \"5,37\" partially overlapped? The number next to ring seems \"5,37\" cut by ring. Output 5,37|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980295,
+  "id": "202611062351262219a25378ed4a16",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062351262219a25378ed4a16",
+  "usage": {
+    "completion_tokens": 50,
+    "completion_tokens_details": {
+      "reasoning_tokens": 43
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 970
+  }
+}

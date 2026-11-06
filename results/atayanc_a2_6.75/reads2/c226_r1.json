@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,50|pale",
+        "reasoning_content": "Number near ring: \"4,50\"? It appears as \"? ,50\" — looks like \"1,50\" or \"4,50\". Image shows \"3,50\"? Text near ring: \"…,50\" — likely \"1,50\". Faint first digit; could be \"4,50\". I'll answer 4,50|pale? The visible digits \",50\" clear. First digit faint. Choose 1,50? Hmm. Common elevation values... I'll go 4,50|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976094,
+  "id": "202611062241305eb1a91af7444d1e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062241305eb1a91af7444d1e",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "reasoning_tokens": 111
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1039
+  }
+}

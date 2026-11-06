@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,49|cut",
+        "reasoning_content": "Ring at ~(440,322); nearby \"2.49\" partially overlapped — reads \"2,49\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982084,
+  "id": "20261107002121733afc25306045da",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107002121733afc25306045da",
+  "usage": {
+    "completion_tokens": 32,
+    "completion_tokens_details": {
+      "reasoning_tokens": 25
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 952
+  }
+}

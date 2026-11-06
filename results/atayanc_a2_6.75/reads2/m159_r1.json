@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,80|pale",
+        "reasoning_content": "Ring at ~(440,323). Nearby number \"2,80\" at (~478,368) — closest. Digits: 2,80? Could be 2,60? It reads 2.80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983288,
+  "id": "202611070041255511afe852334873",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070041255511afe852334873",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

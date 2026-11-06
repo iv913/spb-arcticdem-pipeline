@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,72|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearest number \"272.\" at ~(440,385)? That looks like elevation 2,72 written without comma? Actually \"272\" with dot — likely 2,72. Distance ~60px. Check first digit: 2 vs 3 — looks like 2,72.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978440,
+  "id": "20261106232037681af1198de34364",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232037681af1198de34364",
+  "usage": {
+    "completion_tokens": 80,
+    "completion_tokens_details": {
+      "reasoning_tokens": 72
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

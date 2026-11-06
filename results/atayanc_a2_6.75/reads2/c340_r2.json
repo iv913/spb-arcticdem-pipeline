@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,65|pale",
+        "reasoning_content": "Near the ring: labels \"…55\" and \"2,65\" and \"2,60\" left. Nearest seems 2,65? The ring at ~(93,318). Labels: \"…,55\" right of ring, \"2,65\" below-left. Likely 2,65.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981486,
+  "id": "20261107001122be65bddedfe14cb8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001122be65bddedfe14cb8",
+  "usage": {
+    "completion_tokens": 73,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 949
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,05|pale",
+        "reasoning_content": "Ring at (444,462); number to the right \"1,05\"? Text \"1.05\" at ~(470,455). Likely \"1,05\" — faint first digit. Could be 1,05. Answer: 1,05|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982617,
+  "id": "20261107003013fa7ac313507c49d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003013fa7ac313507c49d8",
+  "usage": {
+    "completion_tokens": 68,
+    "completion_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 988
+  }
+}

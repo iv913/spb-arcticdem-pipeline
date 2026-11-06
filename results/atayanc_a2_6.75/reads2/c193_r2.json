@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,36|pale",
+        "reasoning_content": "Near the ring, tiny text to its left seems \"2,36\" faint. Answer 2,36|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793974887,
+  "id": "20261106222125a2ab8b9c7e5a412c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106222125a2ab8b9c7e5a412c",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

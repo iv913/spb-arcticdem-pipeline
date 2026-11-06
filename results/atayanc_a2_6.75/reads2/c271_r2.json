@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,43|pale",
+        "reasoning_content": "Nearest label to red ring: \"2,43\"? It's \".243\"? Shown as \"2,43\" right of ring. Looks like \"2,43\" possibly \"2,45\". First digit faint... it's \".243\"? Actually reads \".243\" — probably \"2,43\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978437,
+  "id": "20261106232033b61cbcfb1aca4ba3",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106232033b61cbcfb1aca4ba3",
+  "usage": {
+    "completion_tokens": 74,
+    "completion_tokens_details": {
+      "reasoning_tokens": 66
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 950
+  }
+}

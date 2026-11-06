@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "20,3|pale",
+        "reasoning_content": "Near ring: \"20,3\" nearby? The label right of circle center: \"20,3\" at (545,230). Near ring at (444,322) there's a tiny mark... \"3,40\" at (600,510)? Distance? Ring ~444,322. Nearest decimal labels: 20,3 (545,230) dist ~140; 3,40 (600,510) dist ~200; \"6,40\"? Possibly \"2,36\"? Hmm. There's faint text near ring at ~430,325 \"3,22\"? Hard. I'll answer 20,3|pale? Actually 20,3 is clear-ish. Answer: 20,3|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977886,
+  "id": "202611062311207c79dcae540a458f",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062311207c79dcae540a458f",
+  "usage": {
+    "completion_tokens": 170,
+    "completion_tokens_details": {
+      "reasoning_tokens": 162
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1046
+  }
+}

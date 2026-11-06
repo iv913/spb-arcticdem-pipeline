@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,25|pale",
+        "reasoning_content": "Near ring: \"1,25\" left of ring. Answer 1,25|clear? Faint first digit maybe. Numbers nearby: 3,25 at (355,300), and one just left of ring faint. Likely \"1,25\" touching ring. Answer: 1,25|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981492,
+  "id": "202611070011273217431e04214d41",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070011273217431e04214d41",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 951
+  }
+}

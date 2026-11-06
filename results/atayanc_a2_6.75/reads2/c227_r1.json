@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,25|pale",
+        "reasoning_content": "Near the ring: faint digits \"...40\" to left? There's \"40\" then ring, then \"2,25\"? Actually text near ring: \"42\" ... \"2,25\". Closest likely \"2,25\"? The ring overlaps digits. Left of ring appears \".42\" and right \"2,25\"? Hard. The nearest number seems \"2,25\"? Could be \"3,25\". I'll answer 2,25|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976640,
+  "id": "2026110622503678cc2b6df72545b5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622503678cc2b6df72545b5",
+  "usage": {
+    "completion_tokens": 104,
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1024
+  }
+}

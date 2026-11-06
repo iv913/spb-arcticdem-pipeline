@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "6,95|pale",
+        "reasoning_content": "Near ring: \"6,95\"? It reads \"69,5\"? Number near ring at ~\"6,95\" — likely \"6,95\". Check first digit 6 vs 8. It appears \"6,95\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983247,
+  "id": "20261107004040f84e68ab8e954248",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004040f84e68ab8e954248",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

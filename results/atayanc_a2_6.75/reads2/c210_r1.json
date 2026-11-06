@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,89|pale",
+        "reasoning_content": "Red ring near number right of it: \"3,89\"? The number appears \"3,89\" at ~(475,320). First digit could be 3. Check 3 vs 1... likely 3,89.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793975507,
+  "id": "20261106223143bc6c599ee8dc43e5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106223143bc6c599ee8dc43e5",
+  "usage": {
+    "completion_tokens": 56,
+    "completion_tokens_details": {
+      "reasoning_tokens": 48
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 976
+  }
+}

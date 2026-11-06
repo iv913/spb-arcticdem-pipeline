@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,33|pale",
+        "reasoning_content": "Ring at ~(440,320). Nearest number: \"3,33\" at ~(320,327)? Distance ~120. There's \"-3,33\" near (325,328). Ring center (440,320) — maybe something closer, like a number at (470,300)? Hard. I'll answer 3,33.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983839,
+  "id": "202611070050349504f8b61af749fe",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070050349504f8b61af749fe",
+  "usage": {
+    "completion_tokens": 84,
+    "completion_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1004
+  }
+}

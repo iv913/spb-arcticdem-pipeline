@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,52|pale",
+        "reasoning_content": "Ring at ~(443,320). Nearby numbers: 2,52 near (520,330)? There's \"4,0\" at (510,328)? Numbers: 2,57 bottom, 2,54, 3,58. Closest to ring seems \"2,52\" at (515,330)? Distance ~75. \"3,58\" at (595,270) ~155. Left \"3,49\" at (230,270) far. So 2,52? The text near ring right says \"4,0\" maybe \"2,52\"? I'll answer 2,52 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984438,
+  "id": "20261107010027ba68464a6d6e4166",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010027ba68464a6d6e4166",
+  "usage": {
+    "completion_tokens": 144,
+    "completion_tokens_details": {
+      "reasoning_tokens": 136
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1064
+  }
+}

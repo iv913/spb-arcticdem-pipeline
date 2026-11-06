@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "Near red ring (~830,325): no decimal label nearby... \"2,36\" top right at ~790,110? \"2,99\" at 550,145. Nothing near ring. Answer NA? Ring at right edge ~830,322. No decimal numbers visible near it. NA|cut? Clarity... NA|pale?",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982627,
+  "id": "20261107003025155f5055db9f4513",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107003025155f5055db9f4513",
+  "usage": {
+    "completion_tokens": 82,
+    "completion_tokens_details": {
+      "reasoning_tokens": 77
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 958
+  }
+}

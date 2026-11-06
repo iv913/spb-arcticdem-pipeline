@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,38|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearest numbers: \"2,38\" at ~(525,285)? and \"2,72\" at ~(385,410). Distances: to 2,38 ~ sqrt(82²+37²)≈90; to 2,72 ~ sqrt(58²+88²)≈105. Closest is 2,38. Check first digit faint: could be 2,38.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984450,
+  "id": "20261107010045f45720be07c44924",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010045f45720be07c44924",
+  "usage": {
+    "completion_tokens": 105,
+    "completion_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1025
+  }
+}

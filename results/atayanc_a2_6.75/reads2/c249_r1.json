@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,03|pale",
+        "reasoning_content": "Ring at ~(443,321). Nearby number appears \"2,03\"? The digits near ring: \"2,13\"? Text near ring shows something like \"2,03\". I'll answer 2,03|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793977288,
+  "id": "202611062301261d3c03dec97d477a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062301261d3c03dec97d477a",
+  "usage": {
+    "completion_tokens": 57,
+    "completion_tokens_details": {
+      "reasoning_tokens": 49
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 977
+  }
+}

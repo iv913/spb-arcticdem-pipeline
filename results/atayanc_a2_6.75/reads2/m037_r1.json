@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,02|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearby there's a faint number just above ring, around (440,305): looks like \"3,0?\" — hard. Possibly \"3,02\"? Text near ring: \"3,0.\" Hard to read. I'll answer 3,02 pale? Guess \"3,02|pale\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983245,
+  "id": "20261107004042a34c24d3c4e04f9a",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004042a34c24d3c4e04f9a",
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 73
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1001
+  }
+}

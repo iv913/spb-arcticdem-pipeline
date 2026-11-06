@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,44|pale",
+        "reasoning_content": "Near ring there's a number at ~(485,315) \"3,4...\"? Looks like \"3,44\" tilted. I'll answer 3,44.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979698,
+  "id": "20261106234136351b62c4bcd6417d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106234136351b62c4bcd6417d",
+  "usage": {
+    "completion_tokens": 44,
+    "completion_tokens_details": {
+      "reasoning_tokens": 36
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 920
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,83|pale",
+        "reasoning_content": "Near ring: \"4.83\" (appears \"4,83\"). First digit faint — likely 4,83.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976679,
+  "id": "2026110622511690806a16c4234a65",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110622511690806a16c4234a65",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

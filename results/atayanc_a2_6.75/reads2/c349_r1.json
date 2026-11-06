@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "NA|cut",
+        "reasoning_content": "No number near the red ring visible clearly. The ring at left edge; nearest number? Possibly none readable. Answer NA|cut? The ring overlaps edge, likely number cut off. Output NA|cut.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981453,
+  "id": "20261107001049c8f4664947574a3c",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107001049c8f4664947574a3c",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 967
+  }
+}

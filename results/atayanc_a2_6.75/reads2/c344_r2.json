@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,33|pale",
+        "reasoning_content": "Near ring at (248,322), there's faint text \"2,23\"? Visible \"…2,3\". Likely \"2,33\" faint. I'll answer 2,33|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981438,
+  "id": "202611070010351eecb7bd0fab4635",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070010351eecb7bd0fab4635",
+  "usage": {
+    "completion_tokens": 53,
+    "completion_tokens_details": {
+      "reasoning_tokens": 45
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 929
+  }
+}

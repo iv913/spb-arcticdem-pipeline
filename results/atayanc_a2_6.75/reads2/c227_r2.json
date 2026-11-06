@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,52|pale",
+        "reasoning_content": "Near ring at (445,322), tiny label \"4,52\"? Looks like \"1,52\" left of ring: \"4,52\" around x≈420,y≈310. The digits before ring: appears \",52\" with faint first digit. Answer 4,52? Given examples, plausible \"4,52\". I'll answer 4,52|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976639,
+  "id": "20261106225036a860d543733a40ac",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106225036a860d543733a40ac",
+  "usage": {
+    "completion_tokens": 89,
+    "completion_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 965
+  }
+}

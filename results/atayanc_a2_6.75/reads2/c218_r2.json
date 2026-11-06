@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,50|pale",
+        "reasoning_content": "Near the ring there's a number just right of it: \"3,50\"-ish. Also \"3,42\" nearby. The ring at ~(444,322); text \"3,50\" at ~(470,310)? Looks like \",50\" partially. Also \"3,42\" at ~(440,410). Nearest seems the one at ring's upper right — likely \"3,50\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976067,
+  "id": "202611062241047d410e2d3a2c4e85",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062241047d410e2d3a2c4e85",
+  "usage": {
+    "completion_tokens": 96,
+    "completion_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 972
+  }
+}

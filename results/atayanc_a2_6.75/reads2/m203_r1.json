@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,06|pale",
+        "reasoning_content": "Ring at ~(440,320). Nearby numbers: \"2,06\" at (565,285)? distance ~130. Also faint text near ring? Nothing closer visible. Closest seems 2,06 but far. There might be a number hidden under ring area... I'll answer 2,06 pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983814,
+  "id": "20261107005012d63a52af395347d8",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005012d63a52af395347d8",
+  "usage": {
+    "completion_tokens": 75,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 995
+  }
+}

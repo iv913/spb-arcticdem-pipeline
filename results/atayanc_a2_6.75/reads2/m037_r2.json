@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,67|pale",
+        "reasoning_content": "Near ring: label just left \"1,67\"? It appears at ~(440,300): \"1,67\"? Faint first digit. Answer 1,67|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983259,
+  "id": "20261107004046eaa40dd99eda4165",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107004046eaa40dd99eda4165",
+  "usage": {
+    "completion_tokens": 47,
+    "completion_tokens_details": {
+      "reasoning_tokens": 39
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 923
+  }
+}

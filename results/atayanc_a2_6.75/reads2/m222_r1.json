@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "-3,51|pale",
+        "reasoning_content": "Ring at ~(440,322). Nearest numbers: \"-1,10\" at (620,335)? No, \"3,54\"? Candidates: \"-3,51\" at (490,368), \"-1,10\" at (620,335), \"-2,75\" at (410,510). Closest likely \"-3,51\". Distance ~ sqrt(50²+46²)=68. \"-1,10\" ~180. So answer -3,51.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983835,
+  "id": "20261107005030fe880b367afd4548",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005030fe880b367afd4548",
+  "usage": {
+    "completion_tokens": 118,
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1038
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,13|pale",
+        "reasoning_content": "Ring at ~(442,322). Nearby numbers: \"4,13\" to the right (partially covered), \"4,02\" below left. The ring overlaps digits near \"?,13\" — likely 4,13. First digit could be 4 vs 2. It appears \"13\" visible with ring over first digit. Nearest is 4,13.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980861,
+  "id": "20261107000058795016b459d14199",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107000058795016b459d14199",
+  "usage": {
+    "completion_tokens": 87,
+    "completion_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1007
+  }
+}

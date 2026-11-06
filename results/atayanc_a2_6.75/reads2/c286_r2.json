@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,39|pale",
+        "reasoning_content": "Numbers near ring: 3,29 (right of ring ~x530,y280), 2,39 (below ~x440,y410), 2,92. Nearest is 2,39.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793979004,
+  "id": "202611062330006e67d3741cd84565",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062330006e67d3741cd84565",
+  "usage": {
+    "completion_tokens": 54,
+    "completion_tokens_details": {
+      "reasoning_tokens": 46
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 930
+  }
+}

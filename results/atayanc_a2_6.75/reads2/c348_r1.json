@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "4,07|pale",
+        "reasoning_content": "Ring at ~ (440,320). Number next to it \"...07\"? Likely \"4,07\"? The digits after ring: \"07\". First digit faint — could be 4? Elevation like 4,07. But could be \"3,07\". Given typical, answer 4,07? The text shows \".07\" overlapping ring. I'll say 4,07|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793981450,
+  "id": "202611070010480972e99e499a4c0e",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070010480972e99e499a4c0e",
+  "usage": {
+    "completion_tokens": 92,
+    "completion_tokens_details": {
+      "reasoning_tokens": 84
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1012
+  }
+}

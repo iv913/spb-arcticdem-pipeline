@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,99|pale",
+        "reasoning_content": "Nearest decimal to ring (~600,320): 2,83 at (845,297)? distance ~250. 2,99 at (555,125) ~260. 3,00 at (335,252) ~275. Likely 2,83. But ring at ~600,325; 2,99... distances: 2,83 ≈ √(245²+25²)=246; 2,99 ≈ √(45²+195²)=200. So 2,99 nearest? Wait 2,99 at ~555,125: dy=200, dx=45 → 205. So 2,99.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980913,
+  "id": "202611070001496c35b997a5d84d23",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070001496c35b997a5d84d23",
+  "usage": {
+    "completion_tokens": 157,
+    "completion_tokens_details": {
+      "reasoning_tokens": 149
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1033
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,43|clear",
+        "reasoning_content": "Ring at ~ (443,365), label \"3,43\" inside circle next to it. Likely \"3,43\".",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982614,
+  "id": "202611070030123130b70349774b37",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030123130b70349774b37",
+  "usage": {
+    "completion_tokens": 34,
+    "completion_tokens_details": {
+      "reasoning_tokens": 27
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 910
+  }
+}

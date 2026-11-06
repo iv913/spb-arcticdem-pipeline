@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,69|pale",
+        "reasoning_content": "Ring at ~(443,322). Nearby: \"2,69\" at ~(600,462) distance ~190. \"3,22\"?? at ~ (650,240) \"3,22\" partial. Distance ~230. 2,69 is nearest.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793978563,
+  "id": "202611062322403669cbe590a14b3b",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611062322403669cbe590a14b3b",
+  "usage": {
+    "completion_tokens": 66,
+    "completion_tokens_details": {
+      "reasoning_tokens": 58
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 942
+  }
+}

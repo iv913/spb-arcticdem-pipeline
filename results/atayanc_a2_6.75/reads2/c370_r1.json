@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,52|pale",
+        "reasoning_content": "The ring is at ~(443,399). Nearest number \"3,52\" to the right, first digit hidden by ring. Likely 3,52.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982608,
+  "id": "202611070030048796c935e3834c0d",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070030048796c935e3834c0d",
+  "usage": {
+    "completion_tokens": 43,
+    "completion_tokens_details": {
+      "reasoning_tokens": 35
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 963
+  }
+}

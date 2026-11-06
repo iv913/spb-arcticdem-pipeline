@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,89|pale",
+        "reasoning_content": "Nearest label to ring: \"2,89\" to the right.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793983812,
+  "id": "20261107005008bc6b2679191a4ec5",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107005008bc6b2679191a4ec5",
+  "usage": {
+    "completion_tokens": 23,
+    "completion_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 899
+  }
+}

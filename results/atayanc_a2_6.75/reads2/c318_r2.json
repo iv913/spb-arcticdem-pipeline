@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,68|pale",
+        "reasoning_content": "Near ring: \"3,68\"? Text to right of ring reads \"2,68\"? Likely \"3,68\". Choose 3,68.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980261,
+  "id": "20261106235059c6f5a87a0d3d4501",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235059c6f5a87a0d3d4501",
+  "usage": {
+    "completion_tokens": 39,
+    "completion_tokens_details": {
+      "reasoning_tokens": 31
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 915
+  }
+}

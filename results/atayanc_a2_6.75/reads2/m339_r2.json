@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,9|pale",
+        "reasoning_content": "Nearest to ring (~283,322): \"2,9\" at (260,438)? distance ~116. \"3,90\" at (460,365) distance ~180. \"2,71\" at (140,235) far. The label near (245,438) reads \"2,9\"? possibly \"2,37\"? Hard. Likely \"2,9\". I'll answer 2,9|pale? Clarity cut by building... The number seems clear enough: 2,9.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984442,
+  "id": "202611070100370abc683d0b724ab0",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "202611070100370abc683d0b724ab0",
+  "usage": {
+    "completion_tokens": 121,
+    "completion_tokens_details": {
+      "reasoning_tokens": 113
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 997
+  }
+}

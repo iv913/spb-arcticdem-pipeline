@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "3,51|pale",
+        "reasoning_content": "Near ring: \"3,31\"? Above ring reads \"3,51\"? Text \"3,51\" appears just above ring. Likely 3,51? It shows \"3.51\" near ring. Answer 3,51|pale.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793984454,
+  "id": "20261107010052d1a74cf228024a31",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261107010052d1a74cf228024a31",
+  "usage": {
+    "completion_tokens": 60,
+    "completion_tokens_details": {
+      "reasoning_tokens": 52
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 936
+  }
+}

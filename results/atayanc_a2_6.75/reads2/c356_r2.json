@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,80|pale",
+        "reasoning_content": "Ring at ~(440,320). Nearest numbers: 2,66 near (360,150)? far. 3,25 at (285,318) — distance ~155. 2,80 at (490,425) — distance ~130. Also \"3,22\" faint near ring? There's \"1,86\"/\"2,26\" at (200,340)? Hard. Closest seems 2,80.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793982014,
+  "id": "2026110700200913d9f80387364754",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "2026110700200913d9f80387364754",
+  "usage": {
+    "completion_tokens": 104,
+    "completion_tokens_details": {
+      "reasoning_tokens": 96
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 980
+  }
+}

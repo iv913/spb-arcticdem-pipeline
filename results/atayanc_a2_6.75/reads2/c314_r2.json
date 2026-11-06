@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "2,09|clear",
+        "reasoning_content": "Nearest to ring (~445,322): numbers: 2,32 top-left far; 2,09 top; 2,50 top-right; 2,89 bottom-left; 2,58 bottom-right. Nearest likely 2,09? Distances: 2,09 at (~490,60) ~265px; 2,50 at (~785,520) far; 2,89 (~165,575) ~400; 2,58 (~780,520). So 2,09.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793980249,
+  "id": "20261106235045c63baaf3625a4bee",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106235045c63baaf3625a4bee",
+  "usage": {
+    "completion_tokens": 124,
+    "completion_tokens_details": {
+      "reasoning_tokens": 117
+    },
+    "prompt_tokens": 876,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1000
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "1,93|pale",
+        "reasoning_content": "Ring at ~(443,320); number \"1,93\"? Text near ring: \"1,93\" appears to right. Answer 1,93.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1793976045,
+  "id": "20261106224043234dd10dff474512",
+  "model": "glm-5.3-flash",
+  "object": "chat.completion",
+  "request_id": "20261106224043234dd10dff474512",
+  "usage": {
+    "completion_tokens": 41,
+    "completion_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "prompt_tokens": 920,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 961
+  }
+}
